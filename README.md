@@ -32,7 +32,8 @@ Python **3.10+**. Standard library only—no third-party packages required.
 python3 -m engine demo  # or: python -m engine demo              # recovers built-in known cases; writes DEMO.md
 python -m unittest discover -s tests -v
 python -m engine analyze "Wkh kdueru ehoo udqj"
-python -m engine solve caesar "Wkh kdueru ehoo udqj"
+python -m engine solve caesar "Wkh kduoru ehoo udqj"
+python -m engine solve keyed-vigenere EMUFPHZLRFAXYUSDJKZLDKRNSHGNFIVJYQTQUXQBQVYUVLLTREVJYQTMKYRDMFD --key PALIMPSEST --alphabet KRYPTOS --index K
 python demos/run_demo.py           # same demo path; rewrites DEMO.md
 ```
 
@@ -44,6 +45,7 @@ python demos/run_demo.py           # same demo path; rewrites DEMO.md
 | --- | --- |
 | Caesar (all shifts + English unigram score) | Decipher Linear A, Indus, Rongorongo, Phaistos, Voynich, … |
 | Vigenère (Kasiski, IC, Friedman, column Caesar + n-grams) | Attack modern cryptography |
+| Keyed Vigenère (keyword-mixed alphabet; known key) — recovers published Kryptos K1, not K4 | Claim Kryptos K4 or any unread passage |
 | Simple substitution (frequency seed + annealing + hill-climb) | Claim a script or language is “solved” |
 | Known-plaintext recovery tests (7) | Invent historical decipherments |
 
@@ -52,7 +54,8 @@ python demos/run_demo.py           # same demo path; rewrites DEMO.md
 | Path | Role |
 | --- | --- |
 | [`engine/`](engine/) | Classical cryptanalysis package + CLI |
-| [`engine/solvers/`](engine/solvers/) | Caesar, Vigenère, substitution |
+| [`engine/solvers/`](engine/solvers/) | Caesar, Vigenère, keyed Vigenère, substitution |
+| [`docs/kryptos-k1.md`](docs/kryptos-k1.md) | Published Kryptos K1 system and the known-key check |
 | [`engine/data/english.txt`](engine/data/english.txt) | Training prose for n-gram model |
 | [`tests/test_recover.py`](tests/test_recover.py) | Round-trip + recovery tests |
 | [`demos/run_demo.py`](demos/run_demo.py) | Demo entry that rewrites `DEMO.md` |
