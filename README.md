@@ -41,6 +41,8 @@ python demos/run_demo.py           # same demo path; rewrites DEMO.md
 
 ## What the engine does / does not
 
+Full inventory of solvers and analysis tools (classical, keyed Vigenère, columnar, crib, German scorer, neural trigram, script tools, EM aligner, clustering, HMM, mutual information, compression score, beam search, mural analyzer, OCR, and helpers): [`docs/CATALOG.md`](docs/CATALOG.md).
+
 | Does | Does not |
 | --- | --- |
 | Caesar (all shifts + English unigram score) | Decipher Linear A, Indus, Rongorongo, Phaistos, Voynich, … |
@@ -55,6 +57,7 @@ python demos/run_demo.py           # same demo path; rewrites DEMO.md
 | --- | --- |
 | [`engine/`](engine/) | Classical cryptanalysis package + CLI |
 | [`engine/solvers/`](engine/solvers/) | Caesar, Vigenère, keyed Vigenère, substitution |
+| [`docs/CATALOG.md`](docs/CATALOG.md) | Deep catalog: every solver and analysis tool (path, role, what tests proved, what it does not do) |
 | [`docs/kryptos-k1.md`](docs/kryptos-k1.md) | Published Kryptos K1 system and the known-key check |
 | [`engine/data/english.txt`](engine/data/english.txt) | Training prose for n-gram model |
 | [`tests/test_recover.py`](tests/test_recover.py) | Round-trip + recovery tests |
