@@ -38,7 +38,10 @@ class BaumWelchRecoveryTest(unittest.TestCase):
         self.assertGreater(accuracy, chance)
         # Margin over the best constant labeling, which is chance on a balanced chain.
         self.assertGreaterEqual(accuracy, chance + 0.2)
-        self.assertGreaterEqual(accuracy, 0.85)
+        # Plain Viterbi on this same fit and corpus scores 494/500. The margin
+        # decoder has to beat that, not merely clear 0.85.
+        self.assertEqual(len(corpus.states), 500)
+        self.assertGreater(accuracy, 494 / 500)
         self.assertEqual(len(fit.states), len(corpus.symbols))
         self.assertTrue(math_is_finite(fit.log_likelihood))
         self.assertAlmostEqual(sum(fit.start), 1.0, places=6)
