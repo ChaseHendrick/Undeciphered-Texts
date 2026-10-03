@@ -1,0 +1,13 @@
+{
+  "cipher_name": "affine",
+  "plaintext": "AFFINECIPHER",
+  "ciphertext": "IHHWVCSWFRCP",
+  "key": "a=5,b=8",
+  "keys": {
+    "a": 5,
+    "b": 8
+  },
+  "source_url": "https://en.wikipedia.org/wiki/Affine_cipher",
+  "plaintext_sha256": "8d0b8c45577e9c795033aecdaf51781118501e1c034739fc61373863aba80d55",
+  "note": "Verification certificate for a published worked example. Checks the published example, not an unknown script. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
