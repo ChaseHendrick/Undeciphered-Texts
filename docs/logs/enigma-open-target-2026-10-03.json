@@ -1,0 +1,488 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-03",
+  "scope": "Source audit and supplied-key controls only; no new historical solution claimed.",
+  "recorded_at_utc": "2026-10-03T06:20:22.846690+00:00",
+  "repo_head": "4e2924f394c12f67faa367b9a5a0eb887fca65ef",
+  "sources": [
+    {
+      "id": "july-messages",
+      "url": "https://cryptocellar.org/bgac/g-army-july-1941.html",
+      "final_url": "https://cryptocellar.org/bgac/g-army-july-1941.html",
+      "retrieved_at_utc": "2026-10-03T06:15:55.723126+00:00",
+      "sha256": "21dc824826a48c453603b9f9797747025ec3a4eb7c637cfb644f3eca5407babf",
+      "bytes": 41593,
+      "content_type": "text/html",
+      "last_modified_header": "Mon, 28 Sep 2026 08:34:50 GMT"
+    },
+    {
+      "id": "july-keys",
+      "url": "https://cryptocellar.org/bgac/e-keys-july-1941.html",
+      "final_url": "https://cryptocellar.org/bgac/e-keys-july-1941.html",
+      "retrieved_at_utc": "2026-10-03T06:15:56.099216+00:00",
+      "sha256": "01492292f3847c2722876fd7c896882aae3aff190599fb26ac26202c440cac50",
+      "bytes": 15963,
+      "content_type": "text/html",
+      "last_modified_header": "Mon, 28 Sep 2026 08:34:40 GMT"
+    },
+    {
+      "id": "master-list",
+      "url": "https://cryptocellar.org/bgac/1941-msg-list.html",
+      "final_url": "https://cryptocellar.org/bgac/1941-msg-list.html",
+      "retrieved_at_utc": "2026-10-03T06:15:56.606696+00:00",
+      "sha256": "00a5c91d649a974bd039a827b27c74d91a8824643007e49eb4b298d09170d2a9",
+      "bytes": 102750,
+      "content_type": "text/html",
+      "last_modified_header": "Wed, 30 Sep 2026 20:42:59 GMT"
+    },
+    {
+      "id": "unbroken-list",
+      "url": "https://cryptocellar.org/bgac/1941-msg-list-unbroken.html",
+      "final_url": "https://cryptocellar.org/bgac/1941-msg-list-unbroken.html",
+      "retrieved_at_utc": "2026-10-03T06:15:57.219292+00:00",
+      "sha256": "088625d910bcc4279767b176ef098c5ce32e7ca104d885cde4c4bfb8f9ec4e0c",
+      "bytes": 4200,
+      "content_type": "text/html",
+      "last_modified_header": "Sat, 19 Sep 2026 12:06:43 GMT"
+    },
+    {
+      "id": "138-in",
+      "url": "https://cryptocellar.org/bgac/spruch/09071941-138-in.pdf",
+      "final_url": "https://cryptocellar.org/bgac/spruch/09071941-138-in.pdf",
+      "retrieved_at_utc": "2026-10-03T06:15:58.283530+00:00",
+      "sha256": "7bad334a7a3ddcea61c628b9733986496ab45001ce9e17fabfd96cc842903617",
+      "bytes": 748736,
+      "content_type": "application/pdf",
+      "last_modified_header": "Wed, 23 Sep 2026 10:46:47 GMT"
+    },
+    {
+      "id": "140-in",
+      "url": "https://cryptocellar.org/bgac/spruch/09071941-140-in.pdf",
+      "final_url": "https://cryptocellar.org/bgac/spruch/09071941-140-in.pdf",
+      "retrieved_at_utc": "2026-10-03T06:15:59.367643+00:00",
+      "sha256": "60d2605805ba42fa06b26165f9cbbbb90d618e0547ea6674bb5f3b3135892398",
+      "bytes": 762716,
+      "content_type": "application/pdf",
+      "last_modified_header": "Wed, 23 Sep 2026 10:46:48 GMT"
+    },
+    {
+      "id": "55-40-out",
+      "url": "https://cryptocellar.org/bgac/spruch/09071941-055-040-out-nf.pdf",
+      "final_url": "https://cryptocellar.org/bgac/spruch/09071941-055-040-out-nf.pdf",
+      "retrieved_at_utc": "2026-10-03T06:16:00.345572+00:00",
+      "sha256": "20376ce598b4d307532bb395cf6bc0fa614203987da7c7524f23359e2e2e54ab",
+      "bytes": 476729,
+      "content_type": "application/pdf",
+      "last_modified_header": "Mon, 27 Jul 2026 14:46:59 GMT"
+    },
+    {
+      "id": "army-messages",
+      "url": "https://cryptocellar.org/bgac/g-army-messages.html",
+      "final_url": "https://cryptocellar.org/bgac/g-army-messages.html",
+      "retrieved_at_utc": "2026-10-03T06:18:01.346002+00:00",
+      "sha256": "0889dbb44b246f7ba7e5587715cd400ee09ac35d6e1513b2f39fddeeae8e31f8",
+      "bytes": 28242,
+      "content_type": "text/html",
+      "last_modified_header": "Wed, 30 Sep 2026 20:37:33 GMT"
+    },
+    {
+      "id": "army-keys",
+      "url": "https://cryptocellar.org/bgac/e-keys-jun-oct-1941.html",
+      "final_url": "https://cryptocellar.org/bgac/e-keys-jun-oct-1941.html",
+      "retrieved_at_utc": "2026-10-03T06:18:01.980945+00:00",
+      "sha256": "e36c96458e0007678f0ffb1098b45b7963e78883cddb92cb540bd46146b417b5",
+      "bytes": 10742,
+      "content_type": "text/html",
+      "last_modified_header": "Sat, 01 Aug 2026 08:35:24 GMT"
+    },
+    {
+      "id": "53-in",
+      "url": "https://cryptocellar.org/bgac/spruch/28061941-053-in.pdf",
+      "final_url": "https://cryptocellar.org/bgac/spruch/28061941-053-in.pdf",
+      "retrieved_at_utc": "2026-10-03T06:18:03.117438+00:00",
+      "sha256": "b5580c5b10d269ba3a85d16439c86e7f0078f46d5d58e55e4bf2ba5a2c529c9c",
+      "bytes": 846915,
+      "content_type": "application/pdf",
+      "last_modified_header": "Wed, 23 Sep 2026 10:50:55 GMT"
+    }
+  ],
+  "controls": [
+    {
+      "kind": "published corrected indicator",
+      "ground": "NUG",
+      "encrypted_indicator": "YKS",
+      "machine_output": "SPE",
+      "independent_arithmetic_matches": true,
+      "published_expected_start": "SPE",
+      "matches_published_start": true
+    },
+    {
+      "kind": "uncorrected Nr. 138 indicator",
+      "ground": "NUG",
+      "encrypted_indicator": "YKI",
+      "machine_output": "SPF",
+      "independent_arithmetic_matches": true,
+      "published_expected_start": "SPE",
+      "matches_published_start": false
+    },
+    {
+      "kind": "uncorrected Nr. 140 indicator",
+      "ground": "NIG",
+      "encrypted_indicator": "IKS",
+      "machine_output": "FWO",
+      "independent_arithmetic_matches": true,
+      "published_expected_start": "SPE",
+      "matches_published_start": false
+    },
+    {
+      "kind": "Nr. 140 raw body replay",
+      "positions": "SPE",
+      "ciphertext": "TCTICBSEYTHDHXOXUSIMIEORHRKVEIXFICQUIMBZIDZMFEQM",
+      "ciphertext_length": 48,
+      "ciphertext_sha256": "6a7b0577ab1880f9f058c3036ebd9d5f2020ed9c6db36d2a2f977840bab04566",
+      "machine_output": "FURHRUNGSSJAFFELINXIUNAKIXIBSALRXROEAXEILSRAJMWN",
+      "machine_output_sha256": "556a042e1f2a00168ea4db9afbed73e7bfc6bb168b7df9f3b8a30644683b1582",
+      "published_expected_stop": "TSA",
+      "actual_stop": "TSA",
+      "matches_published_stop": true,
+      "independent_arithmetic_matches": true,
+      "re_encryption_matches": true,
+      "independent_plaintext_reference_available": false,
+      "full_plaintext_validation": false
+    },
+    {
+      "kind": "Nr. 45 indicator on published 27 June key",
+      "settings": {
+        "rotors": [
+          "III",
+          "V",
+          "II"
+        ],
+        "reflector": "B",
+        "rings": "RGP",
+        "plugboard": [
+          [
+            "A",
+            "V"
+          ],
+          [
+            "B",
+            "G"
+          ],
+          [
+            "C",
+            "H"
+          ],
+          [
+            "E",
+            "N"
+          ],
+          [
+            "F",
+            "U"
+          ],
+          [
+            "K",
+            "O"
+          ],
+          [
+            "M",
+            "S"
+          ],
+          [
+            "P",
+            "X"
+          ],
+          [
+            "R",
+            "Y"
+          ],
+          [
+            "T",
+            "W"
+          ]
+        ]
+      },
+      "ground": "SDG",
+      "encrypted_indicator": "EKN",
+      "machine_output": "LTA",
+      "published_expected_start": "LTA",
+      "matches_published_start": true,
+      "independent_arithmetic_matches": true,
+      "supports_target_28_june_key": false
+    },
+    {
+      "kind": "Nr. 48 indicator on published 27 June key",
+      "settings": {
+        "rotors": [
+          "III",
+          "V",
+          "II"
+        ],
+        "reflector": "B",
+        "rings": "RGP",
+        "plugboard": [
+          [
+            "A",
+            "V"
+          ],
+          [
+            "B",
+            "G"
+          ],
+          [
+            "C",
+            "H"
+          ],
+          [
+            "E",
+            "N"
+          ],
+          [
+            "F",
+            "U"
+          ],
+          [
+            "K",
+            "O"
+          ],
+          [
+            "M",
+            "S"
+          ],
+          [
+            "P",
+            "X"
+          ],
+          [
+            "R",
+            "Y"
+          ],
+          [
+            "T",
+            "W"
+          ]
+        ]
+      },
+      "ground": "BPG",
+      "encrypted_indicator": "KGM",
+      "machine_output": "CSX",
+      "published_expected_start": "CSX",
+      "matches_published_start": true,
+      "independent_arithmetic_matches": true,
+      "supports_target_28_june_key": false
+    },
+    {
+      "kind": "Nr. 51 indicator on published 27 June key",
+      "settings": {
+        "rotors": [
+          "III",
+          "V",
+          "II"
+        ],
+        "reflector": "B",
+        "rings": "RGP",
+        "plugboard": [
+          [
+            "A",
+            "V"
+          ],
+          [
+            "B",
+            "G"
+          ],
+          [
+            "C",
+            "H"
+          ],
+          [
+            "E",
+            "N"
+          ],
+          [
+            "F",
+            "U"
+          ],
+          [
+            "K",
+            "O"
+          ],
+          [
+            "M",
+            "S"
+          ],
+          [
+            "P",
+            "X"
+          ],
+          [
+            "R",
+            "Y"
+          ],
+          [
+            "T",
+            "W"
+          ]
+        ]
+      },
+      "ground": "ZKT",
+      "encrypted_indicator": "HLP",
+      "machine_output": "RPZ",
+      "published_expected_start": "RTZ",
+      "matches_published_start": false,
+      "independent_arithmetic_matches": true,
+      "supports_target_28_june_key": false
+    }
+  ],
+  "implementation": {
+    "engine": "engine/solvers/enigma.py",
+    "engine_sha256": "67336acb67e6b92303a44739d5ee24b4909231616eb8935bcb2f569dfb6b3c93",
+    "independent_oracle": "tests/test_enigma_crib_search.py::_oracle",
+    "oracle_file_sha256": "ed197003edf2520b87ff2c51fae40525090d28dff2b80b2b20e4c4b1893097fd",
+    "independent_oracle_scope": "Literal rotor tables and independent arithmetic without engine machine calls. Agreement checks implementation consistency, not historical plaintext correctness."
+  },
+  "targets": [
+    {
+      "id": "weuwy",
+      "message_number": 138,
+      "source_reported_status": "solved before this attempt",
+      "source_reported_solve_date": "2026-09-26",
+      "source_reported_solver": "Cecile Sakellis with Claude (Anthropic)",
+      "status_source": "master-list",
+      "ciphertext_body": "WCZIEDSYTCDXOI-CDSXOXASIMEIORSRKRISSPCCOUIMDZYDM",
+      "ciphertext_sha256": "ff81772f43a021533f6f074af8f4832802be7d4cc9045c4eca07efb526baf419",
+      "known_letters": 47,
+      "slots": 48,
+      "gap_positions": [
+        14
+      ],
+      "supplied_july9_settings": {
+        "rotors": [
+          "III",
+          "I",
+          "V"
+        ],
+        "reflector": "B",
+        "rings": "NAV",
+        "plugboard": [
+          [
+            "A",
+            "C"
+          ],
+          [
+            "B",
+            "N"
+          ],
+          [
+            "F",
+            "M"
+          ],
+          [
+            "G",
+            "I"
+          ],
+          [
+            "J",
+            "L"
+          ],
+          [
+            "K",
+            "O"
+          ],
+          [
+            "P",
+            "U"
+          ],
+          [
+            "Q",
+            "X"
+          ],
+          [
+            "R",
+            "Z"
+          ],
+          [
+            "T",
+            "V"
+          ]
+        ]
+      },
+      "unknown_start_search_run": false,
+      "reason": "The latest master list already credits a solution. Corrected indicator and Nr. 140 stop reproduce, but complete independent plaintext and details of the reported Nr. 138 correction are absent from the fetched material.",
+      "missing_evidence": [
+        "Published details of the 26 September Nr. 138 puzzle correction",
+        "Independent complete Nr. 140 plaintext reference identifying garbles"
+      ],
+      "claimed_plaintext": null
+    },
+    {
+      "id": "rxpsb",
+      "message_number": 53,
+      "source_reported_status": "publisher unresolved on 30 September master list",
+      "status_source": "master-list",
+      "ciphertext_body": "RDHLUZNUQXTFYJJGX-WEOUBHLKSCGYMUTUPIGYGQGANNMPMQGASEQGTMLGHTUAFAMSNRDDXHXRQOQAZLGWTUHJGPDDFJLUCMXXYMUNU-TED",
+      "ciphertext_sha256": "d09eb206bfff3e95918177d31d04378ab668b96aef8578b83b3e32d715df2620",
+      "known_letters": 105,
+      "slots": 107,
+      "gap_positions": [
+        17,
+        103
+      ],
+      "header_total": 114,
+      "header_implied_body_slots": 109,
+      "old_overview_body_count": 99,
+      "indicator": "ZDN QMF",
+      "tactical_call_sign": "5l8",
+      "related_solved_message": {
+        "number": 51,
+        "designator": "PLDRV",
+        "received_date": "1941-06-28",
+        "source_reported_encipherment_date": "1941-06-27",
+        "key_applicable_date": "1941-06-27",
+        "key_applies_to_target": null
+      },
+      "unknown_start_search_run": false,
+      "reason": "No target-applicable 28 June rotor order, rings, or plugboard is published on the linked key page. Nearby solved 5l8 message uses the previous day key. Transcribed body has two fewer slots than the current header-derived count.",
+      "missing_evidence": [
+        "Verified 28 June daily key or supported alternative encipherment date/network linking Nr. 53 to a known key",
+        "Rotor order, rings, and plugboard checked on an independent matched sibling",
+        "Facsimile transcription reconciled with the 109-slot header-derived count"
+      ],
+      "tentative_cribs": [],
+      "claimed_plaintext": null
+    }
+  ],
+  "cryptanalytic_search": {
+    "invocations": 0,
+    "checks": 0,
+    "start_positions_examined": 0,
+    "search_complete": null,
+    "claimed_plaintext": null,
+    "new_solutions": 0
+  },
+  "validation": {
+    "supplied_key_engine_invocations": 8,
+    "independent_arithmetic_comparisons": 7,
+    "forward_body_replays": 1,
+    "implementation_assertions_passed": true,
+    "all_published_starts_match": false,
+    "observed_source_discrepancy": "Nr. 51 ZKT HLP gives RPZ, while the key table says RTZ. An initial reproduction assertion expecting RTZ failed; the discrepancy is retained rather than normalized away.",
+    "focused_unit_tests": {
+      "command": ".venv/bin/python -m unittest tests.test_enigma_crib_search tests.test_enigma",
+      "tests_run": 17,
+      "elapsed_seconds": 0.288,
+      "status": "passed"
+    },
+    "facsimiles_visually_inspected": [
+      "138-in",
+      "140-in",
+      "55-40-out",
+      "53-in"
+    ]
+  },
+  "next_actions": [
+    "Obtain the published Nr. 138 correction for credited reproduction.",
+    "Audit RXPSB scan and acquire source-backed 28 June key evidence before start-only search.",
+    "Seek complete independent plaintext or held-out evidence; re-encryption and German-looking text are insufficient."
+  ]
+}

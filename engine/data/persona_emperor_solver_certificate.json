@@ -1,0 +1,27 @@
+{
+  "tool_name": "persona-emperor",
+  "persona": "emperor",
+  "controls": [
+    {
+      "construction": "caesar",
+      "ciphertext": "CQNURKAJARJWYUJLNMCQNBNJUNMUNCCNAKNBRMNCQNVJYJWMFJRCNMOXACQNWRPQCCAJRWFQRUNCQNAJRWONUUXWCQNBRUNWCYUJCOXAV",
+      "expected_plaintext": "THELIBRARIANPLACEDTHESEALEDLETTERBESIDETHEMAPANDWAITEDFORTHENIGHTTRAINWHILETHERAINFELLONTHESILENTPLATFORM",
+      "plaintext_sha256": "dfd03a8d93beb3f5ab7952f46661d9f84ba3b5bee885108f8db343826220e74f",
+      "recovered_family": "caesar",
+      "checks": 1462,
+      "key_supplied_to_solver": false,
+      "cribs_supplied_to_solver": false
+    },
+    {
+      "construction": "rail-fence",
+      "ciphertext": "TIRPEELERIHPWERNTIIHILTITTMHLBAINLCDHSAELTEBSDTEAADATDOTEIHTANHLTEANELNHSLNPAFRERAATEDTEEMNIFHGRWERFOEELO",
+      "expected_plaintext": "THELIBRARIANPLACEDTHESEALEDLETTERBESIDETHEMAPANDWAITEDFORTHENIGHTTRAINWHILETHERAINFELLONTHESILENTPLATFORM",
+      "plaintext_sha256": "dfd03a8d93beb3f5ab7952f46661d9f84ba3b5bee885108f8db343826220e74f",
+      "recovered_family": "redefence",
+      "checks": 1462,
+      "key_supplied_to_solver": false,
+      "cribs_supplied_to_solver": false
+    }
+  ],
+  "note": "Original synthetic unknown-key controls, frozen before implementation. Caesar uses direct modular character arithmetic; rail-fence uses the independently specified repeating row sequence 0,1,2,1. Returned Redefence with ordered rows can represent the same rail-fence transformation. Hashes cover actual recovered normalized ASCII plaintext. This is not a historical decipherment or evidence of personality, subjective feelings, or neural-network identity."
+}

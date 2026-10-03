@@ -49,13 +49,16 @@ This is a difficult document-reading project with a supplied key, not a
 ciphertext-only key recovery claim. Generic printed-text OCR success does not
 validate recognition of these manuscript glyphs.
 
-**For the Enigma collection, first inspect WEUWY Nr. 138 and its source conflict.**
-It has a same-day, same-designator message Nr. 140 marked Broken, which is a
-useful comparison. The [July key page](https://cryptocellar.org/bgac/e-keys-july-1941.html),
-also dated 28 September, still says both messages fail its listed 9 July key.
-Obtain the actual Nr. 140 key and compare both facsimiles before searching.
-Shared designators alone do not establish shared message settings or plaintext.
-This is a bounded source-check opportunity, with no expectation of an easy break.
+**WEUWY Nr. 138 is already reported solved.** The publisher's
+[master list, status 30 September 2026](https://cryptocellar.org/bgac/1941-msg-list.html)
+credits its puzzle solution to Cécile Sakellis with Claude on 26 September.
+The older July page and unbroken overview lag that specific report. Master-list
+footnote 44 supplies `NUG YKS`, which reproduces start `SPE` under the
+[published July key](https://cryptocellar.org/bgac/e-keys-july-1941.html).
+The Nr. 140 body also ends at the listed `TSA`, but its raw reading contains
+errors. This is a partial supplied-key reproduction, with no independent complete
+plaintext validation or new-solve claim. Source hashes and remaining gaps are in
+[the dated audit](logs/enigma-open-target-2026-10-03.md).
 
 **For a quick cryptanalytic result in this repository, use a constructed or
 already solved control first.** A long word-separated substitution with a
@@ -66,10 +69,11 @@ archive record into a solved case.
 
 ## Remaining CryptoCellar candidates
 
-The current message pages omit Broken markers for the six entries below. That
-supports a publisher-reported unresolved status on this snapshot. Global
-unsolved status remains unverified. Counts exclude the five-letter designator;
-each printed hyphen is retained as one unknown position.
+The five entries below have no Broken marker on the checked message pages and
+remain unmarked Broken in the 30 September master list. Global unsolved status
+remains unverified. Counts exclude the five-letter designator; each printed
+hyphen is retained as one unknown position. WEUWY is excluded after the dated
+master-list correction above.
 
 | Candidate | Known letters / unknown positions | First useful action |
 |---|---:|---|
@@ -77,7 +81,6 @@ each printed hyphen is retained as one unknown position.
 | RXPSB, 28 June, Nr. 53 | 105 / 2 | Reconcile the current transcription, header and stale table. |
 | KLJBO, 3 July, Nr. 87 | 46 / 4 | Verify the four missing positions on the image. |
 | LXACA, received 5 July, Nr. 100 | 20 / 0 | Check 4 July evidence; the key page suggests the previous day. |
-| WEUWY, 9 July, Nr. 138 | 47 / 1 | Resolve the Nr. 140 key conflict and compare the images. |
 | JBIYH, 20 July, Nr. 242 | 55 / 0 | Look for same-network traffic or external key material. |
 
 Sources: [current June messages](https://cryptocellar.org/bgac/g-army-messages.html)
@@ -110,9 +113,13 @@ evidence; do not silently truncate or invent letters.
 ## What the current engine can test
 
 `engine/solvers/enigma.py` implements supplied-key Enigma I with rotors I-V and
-reflectors B/C. It has no unknown-key Enigma search. Its text normalization also
-removes hyphens, so feeding a damaged intercept directly would lose rotor steps.
-A case adapter must preserve and advance every unknown position first.
+reflectors B/C. Its text normalization removes hyphens. The newer
+`engine/solvers/enigma_crib_search.py` preserves missing slots and tests bounded
+unknown starts for supplied rotor order, rings, reflector, plugboard and cribs.
+It does not recover unknown daily keys. RXPSB lacks a verified applicable key:
+the nearby solved Nr. 51 was enciphered on 27 June, despite reception on 28 June.
+The linked [June-October key page](https://cryptocellar.org/bgac/e-keys-jun-oct-1941.html)
+does not publish a 28 June key. These evidence gaps are recorded in the audit.
 
 `word_pattern` expects A-Z monoalphabetic text with word boundaries and an
 explicit lexicon. Its uniqueness is only within that lexicon and a completed

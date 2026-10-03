@@ -1,0 +1,36 @@
+{
+  "cipher_name": "baconian",
+  "instance": "published_carrier_examples",
+  "mode": "specified_extraction",
+  "plaintext": "SUCCESS",
+  "ciphertext": "Now is a good time to attend college. School work is a good teacher and a good builder of character. Every man should be a student and learn all that there is about a subject.",
+  "key": "extraction=word_initials variant=24",
+  "keys": {"extraction": "word_initials", "variant": "24"},
+  "plaintext_sha256": "e2a8aca48c5b24df14c6e0ab0b30df7ed50fa97bc22fd706c71a7eebe96a8b67",
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Baconian.pdf",
+  "source_pdf_sha256": "9c2d0cb866b831aff2810f08ebdf07f3e98971cb14b4f6944655939d5e137ff6",
+  "source_inspected": "2026-10-03",
+  "vectors": [
+    {
+      "source_section": "Example 1",
+      "extraction": "word_initials",
+      "variant": "24",
+      "ciphertext": "Now is a good time to attend college. School work is a good teacher and a good builder of character. Every man should be a student and learn all that there is about a subject.",
+      "units": "baaabbaabbaaabaaaabaaabaabaaabbaaab",
+      "plaintext": "SUCCESS",
+      "plaintext_sha256": "e2a8aca48c5b24df14c6e0ab0b30df7ed50fa97bc22fd706c71a7eebe96a8b67",
+      "hash_encoding": "uppercase A-Z ASCII plaintext bytes"
+    },
+    {
+      "source_section": "Example 2",
+      "extraction": "every_letter",
+      "variant": "24",
+      "ciphertext": "BOWED ASTER PINED JOKED THEIR BLACK HASTE ARRAY INSET CHEST SLING.",
+      "units": "abbaaabbabbabaaabaaabaaabaaaaaaabbaabbababbabaaabbbaaba",
+      "plaintext": "NOWISAGOODT",
+      "plaintext_sha256": "4289ff99ad3ae6da85be1891dc033c1b5cd2cb9182c5513bd32ba39273664613",
+      "hash_encoding": "uppercase A-Z ASCII plaintext bytes"
+    }
+  ],
+  "note": "Both independent printed ACA carrier examples and a/b code tables were visually checked before implementation. Caller supplies extraction and variant; no carrier detection or font interpretation is inferred. The ACA 24-letter table merges I/J and U/V. Output selects I and U as canonical representatives and reports merged alternatives and lost plaintext spaces. Example 2 certifies only the printed eleven letters NOWISAGOODT; no continuation is invented. The explicit 26-letter implementation variant is covered by synthetic full-alphabet tests, not by these ACA vectors. These examples establish specified textual decoding, not unknown-key recovery or a historical decipherment."
+}

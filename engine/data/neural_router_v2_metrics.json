@@ -1,0 +1,197 @@
+{
+  "format_version": 5,
+  "families": [
+    "caesar",
+    "vigenere",
+    "keyed-vigenere",
+    "substitution",
+    "playfair",
+    "bifid",
+    "two-square",
+    "four-square",
+    "adfgvx",
+    "columnar-transposition",
+    "beaufort",
+    "porta",
+    "enigma",
+    "m209",
+    "keel-sieve",
+    "lumen-braid",
+    "prism-latch",
+    "rail-fence",
+    "affine",
+    "autokey"
+  ],
+  "correct": 428,
+  "total": 480,
+  "accuracy": 0.8916666666666667,
+  "top3_correct": 477,
+  "per_family": {
+    "caesar": {
+      "correct": 24,
+      "total": 24
+    },
+    "vigenere": {
+      "correct": 21,
+      "total": 24
+    },
+    "keyed-vigenere": {
+      "correct": 19,
+      "total": 24
+    },
+    "substitution": {
+      "correct": 24,
+      "total": 24
+    },
+    "playfair": {
+      "correct": 24,
+      "total": 24
+    },
+    "bifid": {
+      "correct": 21,
+      "total": 24
+    },
+    "two-square": {
+      "correct": 16,
+      "total": 24
+    },
+    "four-square": {
+      "correct": 22,
+      "total": 24
+    },
+    "adfgvx": {
+      "correct": 24,
+      "total": 24
+    },
+    "columnar-transposition": {
+      "correct": 23,
+      "total": 24
+    },
+    "beaufort": {
+      "correct": 23,
+      "total": 24
+    },
+    "porta": {
+      "correct": 23,
+      "total": 24
+    },
+    "enigma": {
+      "correct": 12,
+      "total": 24
+    },
+    "m209": {
+      "correct": 12,
+      "total": 24
+    },
+    "keel-sieve": {
+      "correct": 24,
+      "total": 24
+    },
+    "lumen-braid": {
+      "correct": 24,
+      "total": 24
+    },
+    "prism-latch": {
+      "correct": 24,
+      "total": 24
+    },
+    "rail-fence": {
+      "correct": 20,
+      "total": 24
+    },
+    "affine": {
+      "correct": 24,
+      "total": 24
+    },
+    "autokey": {
+      "correct": 24,
+      "total": 24
+    }
+  },
+  "temperature": 1.0,
+  "calibration_nll": 0.3206024960576484,
+  "heldout_nll": 0.3095737009242988,
+  "benchmark_correct": 193,
+  "baseline_correct": 158,
+  "benchmark_total": 204,
+  "promoted": true,
+  "predecessor_comparison": {
+    "correct_before": 411,
+    "correct_after": 428,
+    "total": 480,
+    "families_before": [
+      "caesar",
+      "vigenere",
+      "keyed-vigenere",
+      "substitution",
+      "playfair",
+      "bifid",
+      "two-square",
+      "four-square",
+      "adfgvx",
+      "columnar-transposition",
+      "beaufort",
+      "porta",
+      "enigma",
+      "m209",
+      "keel-sieve",
+      "lumen-braid",
+      "prism-latch",
+      "rail-fence",
+      "affine",
+      "autokey"
+    ],
+    "families_after": [
+      "caesar",
+      "vigenere",
+      "keyed-vigenere",
+      "substitution",
+      "playfair",
+      "bifid",
+      "two-square",
+      "four-square",
+      "adfgvx",
+      "columnar-transposition",
+      "beaufort",
+      "porta",
+      "enigma",
+      "m209",
+      "keel-sieve",
+      "lumen-braid",
+      "prism-latch",
+      "rail-fence",
+      "affine",
+      "autokey"
+    ],
+    "output_class_counts": [
+      20,
+      20
+    ]
+  },
+  "train_per_class": 256,
+  "epochs": 250,
+  "hidden": 96,
+  "ensemble_size": 3,
+  "calibration_sha256": "aa0dc75b524b6ab09fb267780db5e9ed92cd017e3aeb2aed40d0c5f8ee2f7add",
+  "train_sha256": "e5678102f300af1ba71cb63da50c9b037fbed9282c18a2c2369cee0cf5112bcc",
+  "validation_sha256": "fa3e19ce8046fc2d6e7a64c1432d55834313d7e74e1f2a9393a6c0d44a41c02e",
+  "heldout_sha256": "cbee687d0c9465488180c158b20542777681e2b1900ca4015caa9d25aaba162a",
+  "training_types": [
+    "supervised_label_smoothing",
+    "curriculum_hard_examples",
+    "paired_dropout_consistency"
+  ],
+  "elapsed_seconds": 101.96517054107971,
+  "reward": 0.8568772534277381,
+  "reward_scope": "Synthetic family-label ground truth only; wrong labels receive -1 regardless of speed. Reward never overrides promotion.",
+  "model_policy": {
+    "status": "promoted",
+    "action": "replace incumbent",
+    "criterion": "zero additional errors on both fixed benchmarks; speed cannot compensate for incorrect labels"
+  },
+  "model_sha256": "d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825",
+  "artifact_bytes": 2577717,
+  "benchmark_scope": "Reused Doyle development comparisons; labels excluded from gradient updates.",
+  "independent_audit": "neural_router_v2_audit.json",
+  "model_name": "Bob the Neural Net"
+}

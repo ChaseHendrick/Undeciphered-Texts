@@ -1,0 +1,15 @@
+{
+  "cipher_name": "pollux",
+  "name": "pollux",
+  "instance": "aca_published_supplied_map",
+  "plaintext": "LUCK HELPS",
+  "ciphertext": "08639 34257 02417 68596 30414 56234 90874 5360.",
+  "keys": {"key": ".x-..x.--x", "terminal_period": true},
+  "key_digit_order": "0123456789",
+  "plaintext_sha256": "d70cb8c283baca9991182a7d3f09818dc96bbbd4d2155a14c1b0844c431da215",
+  "hash_encoding": "ASCII uppercase decoded text, including recovered word spaces",
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Pollux.pdf",
+  "source_pdf_sha256": "ad777b6e3ed4fe75ddf1f1af148ef12c67ff2287a17743506bc20cc05a4c1405",
+  "source_inspected": "2026-10-03",
+  "note": "The source key is printed in order 1 through 9 then 0; the stored key is reordered to 0 through 9. The literal published ciphertext decodes to LUCK HELPS. The prose sentence's period is absent from its Morse stream; the ciphertext period is framing, accepted only with an explicit option. This is supplied-map decryption, not an unknown-map attack, unknown-script reading, or new historical decipherment."
+}

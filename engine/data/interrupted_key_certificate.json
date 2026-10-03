@@ -1,0 +1,21 @@
+{
+  "cipher_name": "interrupted-key",
+  "fixture_kind": "published ACA Vigenere worksheet",
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/InterruptedKey.pdf",
+  "mode": "unknown_keyword_supplied_reset_pattern",
+  "ciphertext": "HYIFQZPUKVQRBSEIJEQKZTVOBPOSZVSGSIICUIPY",
+  "plaintext": "THISCIPHERCANBEUSEDWITHANYOFTHEPERIODICS",
+  "plaintext_sha256": "6156df5e3f4aaf3b53e8c9c6b3731b70ce8d67498c61909f53c489726532cc10",
+  "held_out_plaintext_sha256": "5a31e7e06b0c50f0737982b05ca1370a59620628427bfaf73f8d776d3b2d7330",
+  "held_out_rule": "normalized plaintext positions outside the supplied offset4 length6 crib, concatenated in order",
+  "segment_lengths": [4, 6, 2, 3, 4, 3, 1, 1, 5, 1, 2, 3, 5],
+  "cribs": [{"offset": 4, "plaintext": "CIPHER"}],
+  "inference_parameters": {
+    "keyword_length": 6,
+    "max_checks": 4096
+  },
+  "recovered_keyword": "ORANGE",
+  "checked_equations": 6,
+  "search_complete": true,
+  "note": "Literal published ciphertext, plaintext and key-stream diagram independently inspected. No keyword is passed to inference. The supplied reset pattern and six-letter crib recover the keyword, predict all 40 letters, and match the published text. This is conditional unknown-key recovery with a supplied reset pattern, not recovery of arbitrary unknown interruptions or a historical unsolved message."
+}

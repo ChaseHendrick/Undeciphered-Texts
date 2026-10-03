@@ -1,0 +1,33 @@
+{
+  "cipher_name": "homophonic",
+  "instance": "published_four_row_worked_example",
+  "mode": "supplied_key",
+  "plaintext": "WORDDIVISIONSMAYBEKEPT",
+  "ciphertext": "16 26 11 99 69 46 33 03 88 79 54 83 12 06 38 94 67 24 04 00 27 89.",
+  "keys": {
+    "key": "GOLF",
+    "terminal_period": true
+  },
+  "plaintext_sha256": "4737bf8ff27c6c85e4bba3f1071ff5c7a5261a6ef596d81d1b7ec47dee14d365",
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Homophonic.pdf",
+  "source_pdf_sha256": "38a99de52c2c07f1985b98735b6d152e60895e1e42f635f321611f96b8c06df8",
+  "source_inspected": "2026-10-03",
+  "hash_encoding": "normalized uppercase ASCII letters, I/J merged and no word spaces",
+  "note": "The ACA sheet prints all four cyclic numeric rows, keyword GOLF, aligned plaintext and literal ciphertext. Code00 denotes the hundredth row entry. The exact ciphertext uses supplied per-letter row choices. Decryption drops code grouping and cannot reconstruct word boundaries. This is the ACA structured four-row construction, not arbitrary homophonic substitution. Supplied-key worked-example recovery is distinct from the aligned-crib control below.",
+  "unknown_key_control": {
+    "ciphertext": "16 26 11 99 69 46 33 03 88 79 54 83 12 06 38 94 67 24 04 00 27 89.",
+    "cribs": [
+      {
+        "offset": 0,
+        "plaintext": "WORDD"
+      }
+    ],
+    "max_checks": 100,
+    "terminal_period": true,
+    "inferred_key": "GOLF",
+    "known_positions": 5,
+    "predicted_plaintext": "WORDDIVISIONSMAYBEKEPT",
+    "predicted_plaintext_sha256": "4737bf8ff27c6c85e4bba3f1071ff5c7a5261a6ef596d81d1b7ec47dee14d365",
+    "note": "Only the literal ciphertext and first five known plaintext letters enter inference, not the keyword or remaining seventeen letters. Testing each of25 shifts in each independent row recovers the keyword and predicts the suffix under this family assumption. No independent historical solve is claimed."
+  }
+}

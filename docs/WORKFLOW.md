@@ -74,6 +74,18 @@ The report distinguishes `candidates`, `failed` (no compatible model in the comp
 
 ## Compare a supplied candidate with heldout evidence
 
+For a combined investigation with optional confirmed cribs, run:
+
+```sh
+python3 -m engine.case_workflow investigate cases/my-case --max-checks 5000 --max-candidates 20
+```
+
+This calls the [investigation planner](solver-reasoning.md), tests crib-compatible models or finite affine keys, then shares the remaining budget across transposition families. Neural family probabilities are optional advice. The case path requires a declared Latin alphabet and 4 through 512 A-Z letters. Tentative cribs, heldout cribs, and reference hashes never enter this search. Direct `python3 -m engine investigate` also supports numeric Morse input with a lexicon or aligned evidence; its decoded-character coordinates include spaces and require their own interpretation.
+
+The ledger records premises, executed tools, rejected transforms, missing evidence and next actions. Simulated affect is display telemetry; unknown historical correctness earns no happiness reward. A partial search remains incomplete and every candidate remains unverified. When neural advice is used, the exact router artifact is saved in `snapshot/router_weights.json` with its SHA-256. A model changing during the run prevents publication of a mismatched snapshot. Workflow version 1.1 also records NumPy's distribution version and all engine/solver source hashes.
+
+Add `--solver-profile council` to run the complementary [persona strategies](persona-solvers.md) under the same budget and source/model snapshot rules. Only confirmed training cribs are passed to the council; tentative cribs, reserved validation cribs and the expected plaintext hash remain outside that run. Use `verify` separately for case evidence. The separate neural router is Bob the Neural Net; persona labels do not change its identity or correctness criteria.
+
 Reserve independent cribs in `validation.heldout_cribs` before fitting models. They use the same fields as training cribs and are never passed to inference. Confirmed heldout cribs are compared independently; tentative entries are excluded. For Latin normalization, positions refer to A-Z candidate letters. For cases without Latin normalization, positions refer to unchanged Unicode code points, including whitespace.
 
 For an independently published complete plaintext, set `validation.known_plaintext_url` and `validation.expected_plaintext_sha256`. The hash must describe exact candidate UTF-8 bytes, including capitalization, spaces, and final newline. A declared expected hash requires a reference URL. Then supply a candidate file:

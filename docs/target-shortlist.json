@@ -87,6 +87,13 @@
       "source_updated_on": null,
       "checked_on": "2026-10-03",
       "kind": "2022 primary research paper by database authors"
+    },
+    {
+      "id": "cryptocellar-master-list",
+      "url": "https://cryptocellar.org/bgac/1941-msg-list.html",
+      "source_updated_on": "2026-09-30",
+      "checked_on": "2026-10-03",
+      "kind": "primary publisher master status list"
     }
   ],
   "targets": [
@@ -136,12 +143,13 @@
       "message_date": "1941-07-09",
       "message_number": 138,
       "status": {
-        "value": "publisher_unresolved",
-        "evidence": "No Broken marker on the current message page.",
-        "confidence": "high for the page snapshot; global unsolved status unverified",
-        "checked_on": "2026-10-03"
+        "value": "publisher_solved",
+        "evidence": "The master list credits the Nr. 138 puzzle solution to Cecile Sakellis with Claude on 26 September 2026. Older July and unbroken pages lag this specific report.",
+        "confidence": "high for the first-party dated status; full reported correction not independently reproduced here",
+        "checked_on": "2026-10-03",
+        "source_reported_solve_date": "2026-09-26"
       },
-      "priority": "source_check",
+      "priority": "defer",
       "easy_claim": false,
       "length": {
         "unit": "body positions after removing five-letter designator",
@@ -152,24 +160,26 @@
       "evidence_sources": [
         "cryptocellar-july",
         "cryptocellar-july-keys",
-        "cryptocellar-old-overview"
+        "cryptocellar-old-overview",
+        "cryptocellar-master-list"
       ],
-      "first_step": "Obtain the verified key for solved Nr. 140 and compare both facsimiles. Resolve the message-page/key-table conflict before testing a key.",
+      "first_step": "Treat as already solved material. Obtain the reported Nr. 138 correction and complete independent plaintext as reproduction references; see docs/logs/enigma-open-target-2026-10-03.md.",
       "repo_compatibility": {
-        "module": "engine/solvers/enigma.py",
+        "module": "engine/solvers/enigma_crib_search.py",
         "direct_attack_ready": false,
-        "supported": "Supplied-key Enigma I with three distinct rotors I-V, reflector B/C.",
+        "supported": "Bounded unknown starts under supplied daily settings and aligned cribs; missing slots step the machine and remain unknown.",
         "missing": [
-          "Unknown-key Enigma search",
-          "External historical key validation",
-          "Adapter preserving an unknown position and advancing the machine for every printed gap"
+          "Complete independently published Nr. 140 plaintext control with garbles identified",
+          "Published details of the reported Nr. 138 puzzle correction"
         ],
-        "language_model": "A German historical language model is needed for any future unknown-key attack."
+        "language_model": "No language score or new-solution claim was used in this source audit. Unknown daily-key recovery remains outside this start-only helper."
       },
       "evidence_notes": [
-        "Nr. 140 on the same day has the same designator and is marked Broken.",
-        "The current key table still says both Nr. 138 and Nr. 140 fail its listed 9 July key.",
-        "Shared designator does not prove identical message settings or plaintext."
+        "The master list, status 30 September 2026, overrides the older unresolved markers for target selection.",
+        "Master-list footnote 44 gives corrected indicator NUG YKS, reproducing SPE under the published 9 July key. The Nr. 140 body ends at the published TSA but remains garbled.",
+        "The July key table note still reports both Nr. 138 and Nr. 140 failing its key; its corrected-indicator details are on the newer master list.",
+        "The publisher reports matching plaintext for Nr. 138 and Nr. 140; this audit did not independently verify a full plaintext reference.",
+        "No target search or new historical solution is claimed by this repository."
       ]
     },
     {

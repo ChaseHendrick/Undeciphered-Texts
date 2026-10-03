@@ -5,6 +5,11 @@ module picks the peaceful sentence over a violent one using a small word list
 (peace, calm, garden versus attack, war, kill). It is a preference among
 candidates, not a decipherment of army message Nr. 86, Kryptos K4, or an
 unknown script.
+
+The separate investigate_pacifist API exhaustively tests a finite affine
+model using aligned caller cribs. It does not use the legacy preference
+scores or a language model, and it requires complete enumeration before
+reporting conditional key uniqueness or forced plaintext consensus.
 """
 
 from __future__ import annotations
@@ -14,6 +19,8 @@ from collections.abc import Sequence
 
 from engine.alphabet import letters_only, reinject, to_ints, from_ints
 from engine.result import SolveResult
+from engine.persona_solver_common import make_report, validate_inputs
+from engine.solvers.affine import affine_decrypt, affine_encrypt
 
 METHOD_NAME = "pacifist_preference"
 
@@ -112,6 +119,88 @@ def solve_pacifist(
     )
 
 
+def investigate_pacifist(text, *, cribs=(), max_checks=5000, max_candidates=20):
+    """Exhaust all 312 invertible A-Z affine keys with no semantic ranking.
+
+    Every key trial is one check. Retention never terminates enumeration,
+    and consensus includes every compatible key. Incomplete searches expose
+    literal witnesses without claiming an exact count or forced prediction.
+    """
+    cipher, _, known = validate_inputs(text, cribs, max_checks, max_candidates)
+    multipliers = (1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25)
+    candidates = []
+    consensus = None
+    compatible = checks = 0
+    for multiplier in multipliers:
+        for shift in range(26):
+            if checks >= max_checks:
+                break
+            checks += 1
+            plain = affine_decrypt(cipher, multiplier, shift)
+            if not all(plain[i] == letter for i, letter in known.items()):
+                continue
+            if affine_encrypt(plain, multiplier, shift) != cipher:
+                raise RuntimeError("Pacifist affine witness failed forward verification")
+            compatible += 1
+            if consensus is None:
+                consensus = list(plain)
+            else:
+                for i, letter in enumerate(plain):
+                    if consensus[i] != letter:
+                        consensus[i] = "?"
+            if len(candidates) < max_candidates:
+                candidates.append({"plaintext": plain, "family": "affine",
+                    "key": {"a": multiplier, "b": shift}, "score": 0.0,
+                    "forward_consistent": True, "crib_match": True, "evidence": {
+                    "method": "exact invertible affine enumeration with caller aligned cribs",
+                    "known_positions": len(known), "predicted_letters_beyond_crib": len(cipher) - len(known),
+                    "semantic_ranking_used": False, "independently_verified": False,
+                    "witness_is_forced_by_itself": False}})
+        if checks >= max_checks:
+            break
+
+    complete = checks == 312
+    forced = "".join(consensus) if complete and consensus is not None else "?" * len(cipher)
+    unique_key = compatible == 1 if complete else None
+    unique_plaintext = "?" not in forced if complete and compatible else False if complete else None
+    if not complete:
+        next_actions = ["Finish the remaining affine key checks before interpreting counts, uniqueness or consensus."]
+    elif not known:
+        next_actions = ["Supply independently justified aligned plaintext cribs; all 312 affine keys remain compatible."]
+    elif compatible == 0:
+        next_actions = ["Review the transcription, crib alignment and affine model assumption; no tested key fits."]
+    elif compatible == 1:
+        next_actions = ["Test independent heldout plaintext or a cited reference before treating the conditional candidate as verified."]
+    else:
+        next_actions = ["Seek another independent aligned letter to distinguish the remaining keys.",
+                        "Use consensus only as a consequence of the declared affine model and supplied cribs."]
+    contradictions = (["No invertible affine key satisfies the supplied aligned cribs."]
+                      if complete and compatible == 0 else [])
+    report = make_report("pacifist", "conservative exact affine constraints without semantic scoring", candidates,
+        checks, max_checks, complete, "completed" if complete else "check_budget",
+        [{"branch": "affine", "declared_keys": 312, "checks": checks, "search_complete": complete,
+          "retained_witnesses": len(candidates), "ranking": "literal multiplier-then-shift enumeration order"}],
+        ["Ciphertext is an invertible affine substitution over normalized A-Z letters.",
+         "Caller cribs are aligned hard constraints, not independently verified by this search.",
+         "Consensus uses all compatible keys; retained witness storage does not affect it.",
+         "No peace, violence, English-language score or persona preference selects a key.",
+         "Complete affine enumeration does not test other cipher families or prove historical correctness."],
+        contradictions)
+    report.update({"compatible_key_count": compatible if complete else None,
+        "compatible_keys_found": compatible, "compatibility_count_is_exact": complete,
+        "unique_key_within_model": unique_key, "plaintext_unique_within_model": unique_plaintext,
+        "consensus_plaintext": forced, "consensus_complete": complete and compatible > 0,
+        "consensus_scope": "all compatible keys after complete affine enumeration" if complete else "withheld until complete enumeration",
+        "known_positions": len(known), "known_evidence_count": len(known),
+        "provided_crib_mask": "".join(known.get(i, "?") for i in range(len(cipher))),
+        "abstained": not bool(complete and known and unique_plaintext),
+        "untested_keys": 312 - checks, "candidates_truncated": compatible > len(candidates),
+        "ranking": "none; literal key witnesses only", "semantic_confidence": None,
+        "next_actions": next_actions})
+    report["thought"]["next_action"] = next_actions[0]
+    return report
+
+
 __all__ = [
     "CAESAR_SHIFT",
     "CANDIDATE_PLAINTEXTS",
@@ -125,4 +214,5 @@ __all__ = [
     "known_caesar_ciphertext",
     "pacifist_score",
     "solve_pacifist",
+    "investigate_pacifist",
 ]

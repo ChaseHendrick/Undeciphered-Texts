@@ -1,0 +1,16 @@
+{
+  "cipher_name": "morbit",
+  "name": "morbit",
+  "instance": "aca_published_supplied_key",
+  "plaintext": "ONCE UPON A TIME",
+  "ciphertext": "27435 88151 28274 65679 378.",
+  "keys": {"key": "WISECRACK", "terminal_period": true},
+  "ranked_key": "958427136",
+  "morse_pair_order": ["..", ".-", ".x", "-.", "--", "-x", "x.", "x-", "xx"],
+  "plaintext_sha256": "d07e370bed2a813e9389f407c2d81fd24adf4111b731c9f5bba1ebb197227961",
+  "hash_encoding": "ASCII uppercase decoded text, including recovered word spaces",
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Morbit.pdf",
+  "source_pdf_sha256": "0c3877ad5188e5972f44110a45677030e1f0ea25020ff3927494a07d381ff998",
+  "source_inspected": "2026-10-03",
+  "note": "The ACA sheet prints the keyword ranks, Morse pairs, and this literal ciphertext. Its prose plaintext has a final period, but the printed Morse and digit streams omit that punctuation and append one padding divider. The ciphertext's final printed period is explicit framing. Recovered text is ONCE UPON A TIME, including Morse word divisions, with no invented period. This is supplied-key recovery, not unknown-key recovery, an unknown-script reading, or a new historical decipherment."
+}

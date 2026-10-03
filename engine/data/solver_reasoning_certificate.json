@@ -1,0 +1,17 @@
+{
+  "tool_name": "solver-reasoning",
+  "fixture_kind": "constructed existing repository harbor prose",
+  "ciphertext": "ESPSLCMZCMPWWCLYREHTNPMPQZCPOLHYLYOESPDXLWWMZLEDWPQEESPBFLJHTESYPEDQZWOPOZYESPOPNVLESTYXTDESTOESPQLCDSZCPMFEESPNCPHVYPHESPNSLYYPWMJESPDZFYOZQHLEPCLRLTYDEDEZYP",
+  "plaintext": "THEHARBORBELLRANGTWICEBEFOREDAWNANDTHESMALLBOATSLEFTTHEQUAYWITHNETSFOLDEDONTHEDECKATHINMISTHIDTHEFARSHOREBUTTHECREWKNEWTHECHANNELBYTHESOUNDOFWATERAGAINSTSTONE",
+  "plaintext_sha256": "7797601744519bec546b76f20b9f50c5bd154afc8a1414e989266c46b252e418",
+  "search_limits": {
+    "max_checks": 5000,
+    "max_candidates": 20,
+    "temperament": "balanced"
+  },
+  "checks": 1448,
+  "search_complete": true,
+  "objective": "seek independently verifiable solutions to unresolved ciphers",
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Redefence.pdf",
+  "note": "Repository-specific composition of existing tested cipher models and the trained router, not a new historical algorithm or historical solve. Literal constructed Caesar fixture supplied without its key, plaintext, or cribs. SHA-256 hashes the actual top recovered candidate. The external fixture comparison validates this control only; runtime correctness remains unknown without independent case evidence."
+}

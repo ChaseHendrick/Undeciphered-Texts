@@ -1,0 +1,14 @@
+{
+  "cipher_name": "redefence",
+  "plaintext": "CIVILWARFIELDCIPHER",
+  "ciphertext": "IIWRILCPECLFDHVAEIR",
+  "keys": {
+    "key": "213",
+    "offset": 0
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Redefence.pdf",
+  "source_checked_on": "2026-10-03",
+  "plaintext_sha256": "698e043259da660266ffaf8c3d1c7c36659693be6795cb8da90631ef7f4060d6",
+  "mode": "supplied_key",
+  "note": "Literal published ACA worked example, diagram inspected. SHA-256 is computed from actual recovered A-Z output. This is supplied-key decryption, not an unknown-key historical solve."
+}

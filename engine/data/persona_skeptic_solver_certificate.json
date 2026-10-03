@@ -1,0 +1,31 @@
+{
+  "module": "engine.solvers.persona_skeptic",
+  "api": "investigate_skeptic",
+  "fixture_kind": "independently constructed unknown-key search followed by reserved evidence comparison",
+  "ciphertext": "AOLOLPYYLHKAOLZLHSLKSLAALYHUKTVCLKAOLNVSKAVAOLLZAHALILMVYLZBUYPZL",
+  "training_cribs": [
+    {
+      "offset": 0,
+      "plaintext": "THE"
+    }
+  ],
+  "verification_cribs": [
+    {
+      "offset": 11,
+      "plaintext": "THESEALEDLETTER"
+    }
+  ],
+  "expected_plaintext": "THEHEIRREADTHESEALEDLETTERANDMOVEDTHEGOLDTOTHEESTATEBEFORESUNRISE",
+  "plaintext_sha256": "c418192d13583f9b0d4f482baad3cbbc210d8746b76b0f232aa1697f9469b432",
+  "encoding": "ASCII normalized A-Z plaintext",
+  "expected_construction_key": {
+    "affine_multiplier": 1,
+    "offset": 7
+  },
+  "key_supplied_to_search": false,
+  "reference_used_for_generation": false,
+  "construction": "Literal ciphertext generated before implementation by separate modular addition. Three training letters constrain generation. Fifteen distinct reserved letters and the reference hash are compared only after the investigator returns.",
+  "claimed_plaintext": null,
+  "scope": "Constructed recovery and post-generation comparison against caller-supplied reference evidence. The reference is not authenticated by this program; no historical verification is claimed.",
+  "tool_name": "persona-skeptic"
+}

@@ -29,7 +29,7 @@ from urllib.parse import urlparse
 from engine.reverse_engineer import Crib, infer_cipher_models
 from engine.stats import column_mean_ic, friedman_period, index_of_coincidence, kasiski_factors, ngram_counts
 
-WORKFLOW_VERSION = "1.0"
+WORKFLOW_VERSION = "1.1"
 MAX_SOURCE_BYTES = 1_048_576
 MAX_INFERENCE_LETTERS = 512
 MAX_BASELINE_LETTERS = 8192
@@ -344,12 +344,19 @@ def _runtime_versions() -> dict:
         z3_version = None
     return {"python_implementation": sys.implementation.name,
             "python_version": ".".join(str(value) for value in sys.version_info[:3]),
-            "z3_solver_distribution": z3_version}
+            "z3_solver_distribution": z3_version,
+            "numpy_distribution": _distribution_version("numpy")}
+
+
+def _distribution_version(name):
+    try:
+        return importlib.metadata.version(name)
+    except importlib.metadata.PackageNotFoundError:
+        return None
 
 
 def _code_hashes() -> dict:
-    paths = (Path(__file__), _REPO / "engine/reverse_engineer.py", _REPO / "engine/cipher_synthesis.py",
-             _REPO / "engine/stats.py", _REPO / "engine/alphabet.py")
+    paths = sorted(set((_REPO / "engine").glob("*.py")) | set((_REPO / "engine/solvers").glob("*.py")))
     return {str(path.relative_to(_REPO)): _sha(path.read_bytes()) for path in paths if path.is_file()}
 
 
@@ -359,7 +366,7 @@ def _certificate_hash() -> str:
 
 
 def _save_run(inputs: tuple, operation: str, report: dict, parameters: dict, stage: str,
-              *, candidate: bytes | None = None) -> Path:
+              *, candidate: bytes | None = None, model_snapshot: bytes | None = None) -> Path:
     directory, case, case_bytes, source, intake_bytes = inputs
     runs = _child(directory, "runs")
     runs.mkdir(exist_ok=True)
@@ -384,6 +391,10 @@ def _save_run(inputs: tuple, operation: str, report: dict, parameters: dict, sta
         manifest.update({"candidate_sha256": _sha(candidate), "candidate_bytes": len(candidate),
                          "candidate_snapshot_path": "snapshot/plaintext-candidate.txt", "candidate_encoding": "utf-8"})
         _atomic_write(run / "snapshot/plaintext-candidate.txt", candidate, readonly=True)
+    if model_snapshot is not None:
+        manifest.update({"model_snapshot_sha256": _sha(model_snapshot),
+                         "model_snapshot_path": "snapshot/router_weights.json"})
+        _atomic_write(run / "snapshot/router_weights.json", model_snapshot, readonly=True)
     _atomic_write(run / "report.json", _json_bytes(report), readonly=True)
     # The manifest is published last, marking a completed artifact set.
     _atomic_write(run / "manifest.json", _json_bytes(manifest), readonly=True)
@@ -506,6 +517,55 @@ def reverse_case(
     return _save_run(inputs, "reverse-symbolic" if symbolic else "reverse-baseline", report, parameters, "hypotheses")
 
 
+def investigate_case(case_directory: Path, *, max_checks: int = 5000, max_candidates: int = 20,
+                     temperament: str = "balanced", solver_profile: str = "planner") -> Path:
+    """Connect bounded searches; hold validation evidence out of hypothesis fitting."""
+    inputs = _validated(case_directory)
+    if solver_profile not in ("planner", "council"):
+        raise ValueError("solver_profile must be planner or council")
+    _, case, _, source, _ = inputs
+    if case["alphabet"]["kind"] != "latin" or case["alphabet"]["normalization"] != "ascii_letters":
+        raise ValueError("investigation requires an explicitly Latin alphabet with ascii_letters normalization")
+    cipher = _latin_stream(_decode(source))
+    if not 4 <= len(cipher) <= MAX_INFERENCE_LETTERS:
+        raise ValueError(f"case investigation requires 4..{MAX_INFERENCE_LETTERS} A-Z letters")
+    from engine.solver_reasoning import investigate_cipher
+    confirmed = [crib for crib in case["cribs"] if crib["status"] == "confirmed"]
+    cribs = [Crib(crib["offset"], crib["plaintext"]) for crib in confirmed]
+    # Snapshot before execution, then require report identity to match these bytes.
+    WEIGHTS_PATH = _REPO / "engine/data/neural_router_v2_weights.json"
+    model = None
+    if WEIGHTS_PATH.is_file():
+        with WEIGHTS_PATH.open("rb") as handle:
+            model = handle.read(4 * 1024 * 1024 + 1)
+        if len(model) > 4 * 1024 * 1024:
+            raise ValueError("router artifact exceeds 4 MiB")
+    if solver_profile == "council":
+        from engine.persona_solvers import investigate_personas
+        result = investigate_personas(cipher, cribs=cribs, max_checks=max_checks,
+                                      max_candidates=max_candidates)
+    else:
+        result = investigate_cipher(cipher, cribs=cribs, max_checks=max_checks,
+                                    max_candidates=max_candidates, temperament=temperament).to_dict()
+    routing = result.get("neural_advice") or {}
+    model_hash = routing.get("model_sha256")
+    if model_hash is not None and (model is None or _sha(model) != model_hash):
+        raise RuntimeError("router changed during investigation; retry with a stable model")
+    report = {"report_version":1, "operation":"investigate", "executed":True,
+              "incomplete":result.get("search_complete") is not True, "claimed_plaintext":None,
+              "verification_status":"unverified", "result":result,
+              "confirmed_crib_count":len(confirmed),
+              "tentative_crib_count_excluded":len(case["cribs"]) - len(confirmed),
+              "heldout_crib_count_not_fitted":len(case["validation"]["heldout_cribs"]),
+              "scope":"Research candidates and explicit checks only; independent validation is a separate operation."}
+    parameters = {"max_checks":max_checks, "max_candidates":max_candidates,
+                  "temperament":temperament, "solver_profile":solver_profile,
+                  "confirmed_cribs_only":True,
+                  "max_inference_letters":MAX_INFERENCE_LETTERS}
+    return _save_run(inputs, "investigate", report, parameters, "hypotheses",
+                     model_snapshot=model if model_hash is not None else None)
+
+
 def verify_case(case_directory: Path, *, candidate_file: Path) -> Path:
     """Compare a supplied candidate against declared independent references.
 
@@ -564,7 +624,7 @@ def main(argv: list[str] | None = None) -> int:
     intake.add_argument("--ciphertext-file", type=Path, required=True)
     intake.add_argument("--source-url", required=True)
     intake.add_argument("--root", type=Path, default=Path("cases"))
-    for name in ("validate", "analyze", "reverse", "verify"):
+    for name in ("validate", "analyze", "reverse", "investigate", "verify"):
         command = commands.add_parser(name)
         command.add_argument("case_directory", type=Path)
         if name == "analyze":
@@ -579,6 +639,11 @@ def main(argv: list[str] | None = None) -> int:
             command.add_argument("--columnar-width", action="append", type=int)
         if name == "verify":
             command.add_argument("--candidate-file", type=Path, required=True)
+        if name == "investigate":
+            command.add_argument("--max-checks", type=int, default=5000)
+            command.add_argument("--max-candidates", type=int, default=20)
+            command.add_argument("--temperament", choices=("balanced", "cautious", "curious"), default="balanced")
+            command.add_argument("--solver-profile", choices=("planner", "council"), default="planner")
     args = parser.parse_args(argv)
     try:
         if args.command == "reverse" and not args.symbolic and any(
@@ -597,6 +662,10 @@ def main(argv: list[str] | None = None) -> int:
                 run = analyze_case(args.case_directory, max_period=args.max_period)
             elif args.command == "verify":
                 run = verify_case(args.case_directory, candidate_file=args.candidate_file)
+            elif args.command == "investigate":
+                run = investigate_case(args.case_directory, max_checks=args.max_checks,
+                                       max_candidates=args.max_candidates, temperament=args.temperament,
+                                       solver_profile=args.solver_profile)
             else:
                 run = reverse_case(args.case_directory, symbolic=args.symbolic, max_period=args.max_period,
                                    timeout_seconds=5.0 if args.timeout is None else args.timeout,

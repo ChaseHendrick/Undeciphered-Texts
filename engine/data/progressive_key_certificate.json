@@ -1,0 +1,30 @@
+{
+  "cipher_name": "progressive_key",
+  "instance": "published_worked_example_prefix",
+  "mode": "known_key",
+  "plaintext": "THISCIPHERCANBEUSEDWITHANYOFTH",
+  "ciphertext": "ZYIHGNGBMKJSORJAKZMQQMJRTFHBDC",
+  "key": "keyword=GRAPEFRUIT progression=1",
+  "keys": {"keyword": "GRAPEFRUIT", "progression": 1},
+  "period": 10,
+  "initial_progression": 0,
+  "plaintext_sha256": "3d91a46b1143796e579cf3390b2acc351144d971a98535e84c3ae4f71324ad89",
+  "hash_encoding": "normalized uppercase A-Z letters, ASCII bytes",
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/ProgressiveKey.pdf",
+  "source_pdf_sha256": "87e7f9561b8da2d5f14dd37e68331ed89a2d9a2d331f474d171f98e5e6778270",
+  "source_inspected": "2026-10-03",
+  "note": "The ACA sheet independently prints only 30 aligned plaintext letters in its table, with progressive group shifts A, B, C and keyword GRAPEFRUIT. Its final ciphertext line contains 40 letters. This certificate deliberately covers the printed 30-letter plaintext/ciphertext prefix only. No inferred answer for the remaining ten letters is certified. The helper uses the supplied key; the separate fixture below tests bounded candidate inference without supplying a keyword.",
+  "unknown_key_fixture": {
+    "instance": "synthetic",
+    "plaintext": "THEQUICKBROWNFOXJUMPSOVERTHELAZYDOGPACKMYBOXWITHFIVEDOZENLIQUORJUGS",
+    "ciphertext": "ELQEHANDWLNONHPDIBVXFUJUGNUZIWASFSJXBLVWNJEPNEIEEGYAHUEOQWVCLYJDNEJ",
+    "cribs": [{"offset": 0, "plaintext": "THEQUICKBROWNFOX"}],
+    "max_period": 8,
+    "progressions": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25],
+    "expected_keyword": "LEMON",
+    "expected_period": 5,
+    "expected_progression": 7,
+    "plaintext_sha256": "a0874878cc6b6a17ee431aa326c464a0405bb98c941ec38ea69ccde670b95573",
+    "note": "Literal ciphertext constructed independently with modular arithmetic before implementation. Only the first 16 plaintext letters and finite search bounds are supplied to inference. The sole compatible candidate in these bounds predicts the remaining 51 letters. This is a synthetic test of a restricted cipher family, not a named historical recovery."
+  }
+}

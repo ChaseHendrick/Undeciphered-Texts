@@ -25,14 +25,14 @@ OK
 
 ## Commands
 
-From the repository root. On this box the binary is `python3`. A venv named `python` is what the README assumes.
+From the repository root, use Python 3.10 or newer. Local validation on 2026-10-03 uses `.venv/bin/python` (Python 3.12); the system Python may be older than the package requirement. Create a virtual environment with a supported interpreter if one is not present.
 
 ```bash
-python3 -m pip install Pillow numpy
-python3 -m unittest discover -s tests -v
-python3 -m engine demo
-python3 demos/run_demo.py
-python3 -m unittest tests.test_ocr tests.test_errors tests.test_recover -v
+.venv/bin/python -m pip install Pillow numpy
+.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python -m engine demo
+.venv/bin/python demos/run_demo.py
+.venv/bin/python -m unittest tests.test_ocr tests.test_errors tests.test_recover -v
 ```
 
 Pillow and NumPy are required by full discovery of the existing image and neural tests. Core cipher routines and the recovery demo remain usable without them. Install `requirements-synthesis.txt` for exact symbolic checks and a local OCR backend for the real image roundtrip; absent optional engines are reported as skips.
@@ -72,7 +72,7 @@ python3 -c "p=open('docs/assets/readme-hero.jpg','rb').read(3); print(p.hex()); 
 
 ## Adding a solver
 
-1. Put it in `engine/solvers/`. Register a text-only unknown-key search in `SOLVERS` when the CLI can invoke it. Supplied-key helpers such as the Quagmires stay outside that registry.
+1. Put it in `engine/solvers/`. `SOLVERS` contains the existing text-only unknown-key searches. Supplied-key helpers such as the Quagmires stay outside that registry. An explicit `engine/tool_registry.py` adapter may expose a helper or bounded search with its required parameters, input encoding and mode.
 2. Add a known-plaintext test that fails before the solver works.
 3. If it joins the demo, regenerate `DEMO.md` by running the demo, and commit that file.
 4. Do not assert a stub, and do not decrypt with a key the test already used to build the ciphertext and then call that a recovery.
@@ -91,8 +91,9 @@ These checks cover supplied-key encryption and decryption, not a search for an u
 
 - Linear A, Indus, Rongorongo, Voynich, Iberian, Meroitic, Etruscan meaning.
 - Herculaneum CT, ink models, or Greek transcription.
-- Production AES, production RSA, live TLS, Enigma, single-square Playfair. A synthetic textbook-weak e=3 RSA broadcast known-answer check lives in `tests/test_rsa_broadcast.py`. Two-square keyword recovery is covered in `tests/test_two_square.py`; wartime Truppenschlüssel Nr. 86 is logged as failed, not as a recovered plaintext.
-- Timing. The demo prints seconds. They are not a gate.
+- Breaks of secure production AES, production RSA or live TLS. Modern primitive vectors and explicitly weak RSA instances have separate tests; a synthetic textbook-weak e=3 RSA broadcast check lives in `tests/test_rsa_broadcast.py`.
+- General Enigma rotor, ring and plugboard key recovery. Known-key Enigma vectors and conditional start recovery under supplied machine settings are covered. Published Playfair and two-square controls are covered; wartime Truppenschlüssel Nr. 86 is logged as failed, not as a recovered plaintext.
+- Wall-time performance guarantees. The demo's printed seconds are local measurements, not such a guarantee.
 - The stale commands in `docs/engine.md`.
 
 ## CI
@@ -110,3 +111,58 @@ python3 -m unittest tests.test_word_pattern tests.test_reverse_engineer tests.te
 AES and ChaCha20 match official published vectors using supplied keys. RSA checks exercise the stated weak-instance preconditions and rejection paths. Word-pattern search is also compared with an exhaustive small-instance oracle. Reverse-engineering checks predict letters beyond supplied cribs; symbolic checks distinguish satisfying examples from forced letters and keep timeout or check exhaustion incomplete. Case tests use temporary directories for source preservation, tamper detection, path restrictions, snapshots, and candidate classifications. No private intake source is a test fixture.
 
 Without Z3, dependency validation still runs and the exact symbolic integration tests skip. No skip is reported as symbolic recovery. The core cipher package, baseline inference, and case intake remain usable without Z3.
+
+## Sourced expansion and connected tools
+
+```bash
+.venv/bin/python -m unittest tests.test_baconian tests.test_condi tests.test_progressive_key tests.test_periodic_gromark -v
+.venv/bin/python -m unittest tests.test_monome_dinome tests.test_morbit tests.test_pollux tests.test_numbered_key tests.test_redefence tests.test_sequence_transposition tests.test_rsa_wiener -v
+.venv/bin/python -m unittest tests.test_checkerboard tests.test_homophonic tests.test_interrupted_key -v
+.venv/bin/python -m unittest tests.test_morse_constraints tests.test_transposition_ensemble tests.test_tool_registry tests.test_solver_reasoning tests.test_cli_controls -v
+.venv/bin/python -m unittest tests.test_connected_helpers tests.test_case_investigation -v
+.venv/bin/python -m unittest tests.test_autokey_inference -v
+.venv/bin/python -m unittest tests.test_enigma_crib_search tests.test_enigma -v
+.venv/bin/python -m unittest tests.test_hill_inference -v
+.venv/bin/python -m unittest tests.test_persona_emperor_solver tests.test_persona_inheritance_solver tests.test_persona_hallucinogens_solver tests.test_persona_pacifist_solver -v
+.venv/bin/python -m unittest tests.test_persona_detective_solver tests.test_persona_cartographer_solver tests.test_persona_mechanic_solver tests.test_persona_normal_man_solver tests.test_persona_adversary_solver tests.test_persona_skeptic_solver -v
+.venv/bin/python -m unittest tests.test_persona_solver_common tests.test_persona_council tests.test_persona_council_audit tests.test_case_investigation -v
+.venv/bin/python -m unittest tests.test_neural_training tests.test_neural_router_v2 tests.test_neural_lookahead -v
+.venv/bin/python -m unittest tests.test_neural_m209_features tests.test_neural_audit tests.test_neural_exclusions tests.test_neural_artifact -v
+```
+
+The thirteen new classical helpers replay literal ACA examples with their published parameters. RSA Wiener instead uses an independently published weak key and a clearly labeled synthetic message. Recovered output is hashed, including only the bytes or letters declared by each certificate. Progressive Key certifies the printed 30-letter prefix; Baconian's second carrier certifies eleven printed letters. No missing continuation is invented.
+
+Unknown-key checks are separate. Condi receives a bounded keyword list and cribs; Progressive Key infers period, progression and key slots from cribs; Redefence enumerates a declared key range. Homophonic infers independent numeric-row shifts while retaining unobserved rows. Interrupted Key receives a reset pattern and fits unknown keyword slots without pretending to search all interruptions. Plaintext-autokey inference tests bounded primer lengths, separates exact crib-forced values from scored examples, and validates NumPy and standard-library feature calculations against an independent modular oracle using caller training tables. Morse map inference receives a lexicon or cribs, checks complete combinatorial counts and keeps unresolved ambiguity on exhaustion. Morse crib offsets include decoded spaces, unlike letter-only Latin coordinates. The transposition portfolio shares a budget across families and checks each inverse against its forward transform. English rank, a compatible key, and reencryption are not independent historical verification.
+
+Hill inference receives aligned letters instead of an encryption matrix. Its
+printed four-letter control checks matrix recovery; a separate literal
+28-letter constructed vector predicts 21 letters beyond a seven-letter crib.
+Tests independently enumerate all 456,976 possible 2 by 2 encryption matrices
+for a sparse case, compare conditional consensus across all accepted keys,
+and prevent incomplete budget prefixes from asserting uniqueness or forced
+plaintext. Retained candidate caps do not truncate the consensus calculation.
+
+Registry and investigation tests check JSON parameter contracts, required keys, binary encodings, typed crib coordinates, global check accounting, rejected contradictory premises, forward mismatch detection, neural-unavailable behavior, and unverified candidate status. Case integration preserves original input snapshots, records operation bounds and runtime versions, excludes tentative or heldout cribs from fitting, and verifies candidate files in a separate run.
+
+Neural objective tests use central finite differences for label-smoothed weighted cross-entropy and paired-view consistency, including shared pairs and zero supervised weights. They check normalized curricula, a valid 11,776-row two-view batch, rejected limits, and the control that a faster wrong answer earns no positive reward. Residual-router tests check exact derivatives, repeatable fitting, numerical stability, class-order and artifact validation, and promotion gates. The shipped model uses disclosed synthetic family labels and separate training/selection/calibration slices. The fixed Doyle source was initially heldout; repeated model comparisons now make its reported scores development-benchmark results. An untouched source is required for an independent final generalization audit. Benchmark comparisons must replay the same ciphertexts and state the output class counts; adding classes changes the problem and does not justify comparing unmatched aggregate accuracies.
+
+Training augmentation and dropout views are not repairs of an unknown transcription. Family ranking is advisory. Simulated reward and investigation control states describe numerical behavior, not feelings or consciousness. Timing is local evidence only; independent correctness gates determine promotion. Final run counts, optional skips and current benchmark results are recorded in [logs/solver-expansion-2026-10-03.md](logs/solver-expansion-2026-10-03.md).
+
+The final separate Wells audit uses a frozen model and source-hashed previously unused prose, checks corpus separation, and records fresh synthetic-key results without fitting or calibration. Current counts and source files are in [neural-upgrades.md](neural-upgrades.md). It remains a family-classification audit, not a test of historical decipherment. The Enigma start search preserves each lost-letter slot across rotor steps and independently checks both work budgets and start ambiguity under supplied machine settings.
+
+Persona solver tests are `tests/test_persona_*_solver.py`, with shared input and council tests alongside them. Legacy sentence-preference tests remain separate. New APIs recover literal unknown-key controls, preserve exact budgets, and keep incomplete consensus unknown. The council's heterogeneous-score regression failed before a single shared score replaced sum/mean comparisons. Case integration tests confirm the council receives no reserved evidence; standalone Skeptic review uses that evidence only after candidate generation.
+
+The ten-policy council tests selected lazy loading, evidence overlap rejection,
+reserved-reference review after generation, and rejection without silently
+backfilling an unreviewed lower-ranked answer. Normal Human Man tests only 26
+Caesar shifts and fence heights 2 through 7. Its narration and the other
+persona names do not alter correctness requirements or Bob's family labels.
+
+The `tools` command reports signature-required fields, which do not describe
+every runtime evidence constraint. A Hill call still needs a nonempty crib;
+Morse inference needs a lexicon or decoded-text crib. CLI checks should include
+`--help`, JSON discovery, a literal published supplied-key example, and clean
+rejection of omitted required keys. A successful invocation or printed
+candidate does not establish a historical solution. Record the actual command,
+bounded checks and output contract; remote CI and final full-suite counts must
+come from completed runs.

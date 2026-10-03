@@ -1,0 +1,18 @@
+{
+  "tool_name": "morse-constraints",
+  "name": "morse-constraints",
+  "instance": "published_morbit_unknown_map_with_supplied_lexicon",
+  "input_digits": "27435 88151 28274 65679 378.",
+  "lexicon": ["ONCE", "UPON", "A", "TIME"],
+  "families": ["morbit"],
+  "max_maps": 400000,
+  "timeout_seconds": 60,
+  "terminal_period_is_framing": true,
+  "expected_plaintext": "ONCE UPON A TIME",
+  "expected_plaintext_sha256": "d07e370bed2a813e9389f407c2d81fd24adf4111b731c9f5bba1ebb197227961",
+  "hash_encoding": "ASCII uppercase decoded text, including recovered word spaces",
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Morbit.pdf",
+  "source_pdf_sha256": "0c3877ad5188e5972f44110a45677030e1f0ea25020ff3927494a07d381ff998",
+  "source_inspected": "2026-10-03",
+  "note": "The literal ciphertext and expected answer come from the ACA sheet. The inference receives the ciphertext and an explicit four-word lexicon, not the source keyword or digit map. This deliberately strong lexicon is an input assumption and does not model unrestricted English. Search enumerates the full 9! map space. The composition of strict Morse parsing, map enumeration, evidence filters, and bounded ranking is a repository tool, with no historical or priority novelty claim. Tool-specific fields prevent a new neural cipher-family class."
+}

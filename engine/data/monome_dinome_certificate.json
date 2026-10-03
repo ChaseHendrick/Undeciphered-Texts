@@ -1,0 +1,17 @@
+{
+  "cipher_name": "monome-dinome",
+  "name": "monome-dinome",
+  "instance": "aca_published_supplied_key",
+  "plaintext": "HIGHFREQUENCYKEYSSHORTENCIPHERTEXT",
+  "ciphertext": "60067 60627 53932 51683 46553 44460 87951 68038 60579 5359.",
+  "keys": {"key": "NOTARIES", "digit_order": "6318927054", "terminal_period": true},
+  "keyed_alphabet": "NOTARIESBCDFGHKLMPQUVWXY",
+  "letter_merges": {"J": "I", "Z": "Y"},
+  "plaintext_sha256": "23c54132c70576c5ab476933e65c5988a4db208af48be4bb4b5cba6db4191283",
+  "hash_encoding": "ASCII uppercase normalized letters, no word spaces",
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/MonomeDinome.pdf",
+  "source_pdf_sha256": "77445627e00e37c1dbfd8b6c569a1dad5a0ea39d071501f10bd27b262bad726c",
+  "source_section": "printed page 55",
+  "source_inspected": "2026-10-03",
+  "note": "The sheet independently prints the complete 3 by 8 box, digit labels, plaintext letters, per-letter codes, and grouped ciphertext. The first two digit-order entries label rows and the remaining eight label columns. I/J and Y/Z share entries. Word spaces and original choices within merged pairs are unrecoverable. The printed ciphertext period is explicitly permitted framing. This is supplied-key recovery, not unknown-key recovery, an unknown-script reading, or a new historical decipherment."
+}

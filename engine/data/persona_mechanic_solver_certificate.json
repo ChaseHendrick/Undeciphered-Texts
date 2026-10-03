@@ -1,0 +1,80 @@
+{
+  "tool_name": "persona-mechanic",
+  "persona": "mechanic",
+  "vectors": [
+    {
+      "family": "progressive-key",
+      "ciphertext": "FBWGFATJPCQLYOOWHJJPOMJOJHTCYKPIVUHAULALRXZJBGHAOZZZMLFFEQEFSF",
+      "cribs": [
+        {
+          "offset": 0,
+          "plaintext": "THECLOCKSTRU"
+        }
+      ],
+      "expected_plaintext": "THECLOCKSTRUCKMIDNIGHTANDTHEKEEPEROPENEDTHEGATEFORTHELASTTRAIN",
+      "plaintext_sha256": "f343705a264cf187cc55bf463d4265d84c8006897b3a1a4ccb136491050c8275",
+      "recovered_key": {
+        "keyword": "MUSEUM",
+        "period": 6,
+        "progression": 5
+      },
+      "checks": 1800,
+      "key_supplied_to_solver": false
+    },
+    {
+      "family": "autokey",
+      "ciphertext": "FBWGFAVRWVCIEUEBUHKQTBDALZOXKRHILVYTICIUHWITEWXMSXTAIQOJMAVLIF",
+      "cribs": [
+        {
+          "offset": 0,
+          "plaintext": "THECLO"
+        }
+      ],
+      "expected_plaintext": "THECLOCKSTRUCKMIDNIGHTANDTHEKEEPEROPENEDTHEGATEFORTHELASTTRAIN",
+      "plaintext_sha256": "f343705a264cf187cc55bf463d4265d84c8006897b3a1a4ccb136491050c8275",
+      "recovered_key": {
+        "keyword": "MUSEUM",
+        "period": 6
+      },
+      "checks": 1800,
+      "key_supplied_to_solver": false
+    },
+    {
+      "family": "hill",
+      "ciphertext": "DRPAHAQIGCJIPJWBGHQVDBBIUIPG",
+      "cribs": [
+        {
+          "offset": 0,
+          "plaintext": "HELP"
+        }
+      ],
+      "expected_plaintext": "HELPTHESMALLBOATSLEFTATDAWNX",
+      "plaintext_sha256": "8f78639259095f323de302f9543f8157195ba6b347ccd0e89beb5d619c26b87a",
+      "recovered_key": {
+        "matrix": [
+          [
+            7,
+            8
+          ],
+          [
+            11,
+            11
+          ]
+        ],
+        "inverse_matrix": [
+          [
+            25,
+            22
+          ],
+          [
+            1,
+            23
+          ]
+        ]
+      },
+      "checks": 1797,
+      "key_supplied_to_solver": false
+    }
+  ],
+  "note": "Original synthetic literal controls frozen before implementation using direct modular arithmetic for Progressive Key, shifted-plaintext autokey, and column-vector Hill. Caller cribs are premises; no selected keyword, primer, progression or matrix is supplied. Hashes cover actual recovered full ASCII plaintext. This verifies bounded model composition, not any historical decipherment."
+}

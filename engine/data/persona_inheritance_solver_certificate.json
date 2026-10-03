@@ -1,0 +1,109 @@
+{
+  "module": "engine.solvers.persona_inheritance",
+  "api": "investigate_inheritance",
+  "fixture_kind": "independently constructed unknown-selected-key controls",
+  "encoding": "ASCII normalized A-Z plaintext letters",
+  "claimed_plaintext": null,
+  "correctness_scope": "Actual fixture recovery using caller-supplied finite clues. No historical or unknown-script solution is certified.",
+  "construction": "Literal ciphertexts were generated before implementation with separate modular arithmetic: Vigenere adds a repeating keyword, plaintext autokey adds keyword followed by plaintext, Condi uses deduplicated CABINET plus unused A-Z rotated left 7 and one-based plaintext feedback starting at 9. Substitution reverses A-Z. Expected keys are validation data and are not selected inputs to the investigator.",
+  "vectors": [
+    {
+      "name": "word-pattern substitution",
+      "family": "substitution",
+      "ciphertext": "GSV SVRI SRW GSV WVVW",
+      "lexicon": [
+        "THE",
+        "HEIR",
+        "HID",
+        "DEED",
+        "CAT",
+        "ROAD",
+        "BIRD"
+      ],
+      "max_checks": 5000,
+      "plaintext": "THEHEIRHIDTHEDEED",
+      "plaintext_sha256": "d7869e9622a7aec94580ce945c88fc611848d306684fb0141f535a7959279279"
+    },
+    {
+      "name": "keyword-guess Vigenere",
+      "family": "vigenere",
+      "ciphertext": "XZXHXMVJXAWXLWLETPIVEEMXIJTNWQSNXDMLIYHLWXSLAEXWXSMEUIJGKELYRJBSX",
+      "keywords": [
+        "FORTUNE",
+        "CABINET",
+        "ESTATE"
+      ],
+      "cribs": [
+        {
+          "offset": 0,
+          "plaintext": "THEHEIR"
+        }
+      ],
+      "max_checks": 5000,
+      "plaintext": "THEHEIRREADTHESEALEDLETTERANDMOVEDTHEGOLDTOTHEESTATEBEFORESUNRISE",
+      "plaintext_sha256": "c418192d13583f9b0d4f482baad3cbbc210d8746b76b0f232aa1697f9469b432",
+      "expected_keyword": "ESTATE"
+    },
+    {
+      "name": "keyword-guess plaintext autokey",
+      "family": "autokey",
+      "ciphertext": "XZXHXMKYIHHBYVWEDELHDITEIULRWFSMEQWTSBSOWASZVPHLHTAIFWYOKITYSFZWW",
+      "keywords": [
+        "FORTUNE",
+        "CABINET",
+        "ESTATE"
+      ],
+      "cribs": [
+        {
+          "offset": 0,
+          "plaintext": "THEHEIR"
+        }
+      ],
+      "max_checks": 5000,
+      "plaintext": "THEHEIRREADTHESEALEDLETTERANDMOVEDTHEGOLDTOTHEESTATEBEFORESUNRISE",
+      "plaintext_sha256": "c418192d13583f9b0d4f482baad3cbbc210d8746b76b0f232aa1697f9469b432",
+      "expected_keyword": "ESTATE"
+    },
+    {
+      "name": "crib-only exact plaintext-autokey propagation",
+      "family": "autokey",
+      "ciphertext": "XZXHXMKYIHHBYVWEDELHDITEIULRWFSMEQWTSBSOWASZVPHLHTAIFWYOKITYSFZWW",
+      "cribs": [
+        {
+          "offset": 0,
+          "plaintext": "THEHEIR"
+        }
+      ],
+      "max_checks": 32,
+      "plaintext": "THEHEIRREADTHESEALEDLETTERANDMOVEDTHEGOLDTOTHEESTATEBEFORESUNRISE",
+      "plaintext_sha256": "c418192d13583f9b0d4f482baad3cbbc210d8746b76b0f232aa1697f9469b432",
+      "expected_keyword": "ESTATE",
+      "expected_period": 6,
+      "known_positions": 7,
+      "predicted_letters_beyond_crib": 58
+    },
+    {
+      "name": "keyword-guess Condi settings",
+      "family": "condi",
+      "ciphertext": "OHGGGBONQCBDHGRRCFKTMKETEQLZEOXNUTDHGFRWMDOOHGNRSAAEAADQAQRDRPOPR",
+      "keywords": [
+        "FORTUNE",
+        "CABINET",
+        "ESTATE"
+      ],
+      "cribs": [
+        {
+          "offset": 0,
+          "plaintext": "THEHEIRREAD"
+        }
+      ],
+      "max_checks": 5000,
+      "plaintext": "THEHEIRREADTHESEALEDLETTERANDMOVEDTHEGOLDTOTHEESTATEBEFORESUNRISE",
+      "plaintext_sha256": "c418192d13583f9b0d4f482baad3cbbc210d8746b76b0f232aa1697f9469b432",
+      "expected_keyword": "CABINET",
+      "expected_alphabet_shift": 7,
+      "expected_initial_offset": 9
+    }
+  ],
+  "tool_name": "persona-inheritance"
+}

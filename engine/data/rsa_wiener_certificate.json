@@ -1,0 +1,17 @@
+{
+  "attack_name": "rsa_wiener",
+  "vector_kind": "published_key_with_synthetic_message",
+  "source_url": "https://www.jannaud.fr/static/download/Travail/wiener.pdf#page=4",
+  "modulus": 8927,
+  "exponent": 2621,
+  "published_private_exponent": 5,
+  "published_factors": [
+    79,
+    113
+  ],
+  "ciphertext_integer": 1511,
+  "plaintext_length": 2,
+  "plaintext_hex": "0041",
+  "plaintext_sha256": "c00b4d3c929cb5cc316691ed4636f634576f2c9b2954767234c5274e9dde185d",
+  "note": "Section V publishes the key parameters. The message integer65 and ciphertext1511 are synthetic controls, not a published plaintext. Public n,e,c only enter recovery; no factors or private exponent are supplied. Hash covers raw recovered bytes. Not a general RSA break."
+}

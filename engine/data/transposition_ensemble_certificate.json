@@ -1,0 +1,17 @@
+{
+  "tool_name": "transposition-ensemble",
+  "fixture_kind": "constructed existing repository harbor prose",
+  "ciphertext": "HROLRTIEOANTELBSEHQWTTFEOEETISHHFHRTHEKTENETENOTRISOEHBNEENMATANLTKMDRBCEHBOWGSTBLWFWHLLEISDDHTEOTWHNHDENNEAREAGCBRDADSAOTFTUYHEODNHCANIITASEUERNWCALYSUFAAATT",
+  "plaintext": "THEHARBORBELLRANGTWICEBEFOREDAWNANDTHESMALLBOATSLEFTTHEQUAYWITHNETSFOLDEDONTHEDECKATHINMISTHIDTHEFARSHOREBUTTHECREWKNEWTHECHANNELBYTHESOUNDOFWATERAGAINSTSTONE",
+  "plaintext_sha256": "7797601744519bec546b76f20b9f50c5bd154afc8a1414e989266c46b252e418",
+  "search_limits": {
+    "max_candidates": 20,
+    "max_checks": 5000,
+    "max_width": 8,
+    "max_rails": 5
+  },
+  "keys_examined": 1136,
+  "search_complete": true,
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Redefence.pdf",
+  "note": "Repository-specific composition of existing transforms, not historical algorithm novelty. Literal independent Redefence fixture supplied without its key or plaintext to the portfolio. SHA-256 hashes actual score-ranked recovered output; forward consistency is not independent historical verification."
+}

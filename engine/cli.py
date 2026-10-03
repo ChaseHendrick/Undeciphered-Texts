@@ -81,6 +81,32 @@ def build_parser() -> argparse.ArgumentParser:
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
+    sub.add_parser("tools", help="list connected tools, modes, and required parameters as JSON")
+    invoke = sub.add_parser("run", help="invoke a connected tool with explicit JSON parameters")
+    invoke.add_argument("tool")
+    invoke.add_argument("text", nargs="?", help="input text, hex, or integer; omit to read stdin")
+    invoke.add_argument("--params", default="{}", help="JSON object of the selected tool's parameters")
+    route = sub.add_parser("route", help="rank trained cipher families with the calibrated neural ensemble")
+    route.add_argument("text", nargs="?", help="A-Z ciphertext; omit to read stdin")
+    investigate = sub.add_parser("investigate", help="record bounded hypotheses, evidence, and a research plan")
+    investigate.add_argument("text", nargs="?")
+    investigate.add_argument("--crib", action="append", default=[], metavar="OFFSET:TEXT")
+    investigate.add_argument("--max-checks", type=int, default=5000)
+    investigate.add_argument("--max-candidates", type=int, default=20)
+    investigate.add_argument("--lexicon", type=Path, help="UTF-8 word list for numeric Morse inference")
+    investigate.add_argument("--temperament", choices=("balanced", "cautious", "curious"), default="balanced")
+    train = sub.add_parser("train-router", help="run one bounded local residual-router training pass")
+    train.add_argument("--epochs", type=int, default=200)
+    train.add_argument("--samples", type=int, default=128, help="training samples per generated family")
+    train.add_argument("--expanded-families", action="store_true", help="also evaluate Condi, Progressive Key and Redefence classes")
+    train.add_argument("--hidden", type=int, default=64, help="residual layer width, 2..256")
+    train.add_argument("--ensemble-size", type=int, default=3, help="independent seeded members, 1..5")
+    train.add_argument("--warm-start", action="store_true",
+                       help="start from the compatible incumbent with unchanged families, hidden width, ensemble size and training tables")
+    train.add_argument("--learning-rate", type=float, default=.01,
+                       help="maximum cosine-schedule rate, finite and in (0,0.1] (default:0.01)")
+    train.add_argument("--dry-run", action="store_true", help="evaluate without writing artifacts")
+
     analyze = sub.add_parser("analyze", help="IC, Friedman, Kasiski, and n-gram counts")
     analyze.add_argument("text", nargs="?", help="ciphertext; omit to read stdin")
     analyze.add_argument("--max-period", type=int, default=16)
@@ -141,6 +167,61 @@ def main(argv: list[str] | None = None) -> int:
         from engine.demo import run_demo
 
         return run_demo(args.out)
+    if args.command == "tools":
+        from engine.tool_registry import list_tools
+        print(json.dumps(list_tools(), indent=2))
+        return 0
+    if args.command == "train-router":
+        try:
+            from engine.neural_router_v2 import train_router
+            print(json.dumps(train_router(epochs=args.epochs, train_per_class=args.samples,
+                                          write=not args.dry_run, expanded_families=args.expanded_families,
+                                          hidden=args.hidden, ensemble_size=args.ensemble_size,
+                                          warm_start=args.warm_start, learning_rate=args.learning_rate), indent=2))
+            return 0
+        except (ValueError, TypeError, ImportError, OSError) as exc:
+            print(str(exc), file=sys.stderr)
+            return 2
+    if args.command in {"run", "route", "investigate"}:
+        try:
+            text = args.text if args.text is not None else sys.stdin.read(8193)
+            if len(text) > 8192:
+                raise ValueError("input exceeds8192 characters")
+            if args.command == "investigate":
+                from engine.solver_reasoning import investigate_cipher
+                from engine.reverse_engineer import Crib
+                cribs = []
+                for value in args.crib:
+                    offset, separator, plaintext = value.partition(":")
+                    if not separator:
+                        raise ValueError("crib must be OFFSET:TEXT")
+                    cribs.append(Crib(int(offset), plaintext))
+                lexicon = None
+                if args.lexicon is not None:
+                    with args.lexicon.open(encoding="utf-8") as handle:
+                        lexicon_text = handle.read(1_048_577)
+                    if len(lexicon_text) > 1_048_576:
+                        raise ValueError("lexicon exceeds 1 MiB")
+                    lexicon = lexicon_text.split()
+                output = investigate_cipher(text, cribs=cribs, lexicon=lexicon,
+                    max_checks=args.max_checks, max_candidates=args.max_candidates,
+                    temperament=args.temperament).to_dict()
+            elif args.command == "route":
+                from engine.neural_router_v2 import route_probabilities
+                output = route_probabilities(text)
+            else:
+                from engine.tool_registry import TOOLS, run_tool
+                if len(args.params) > 65536:
+                    raise ValueError("parameter JSON exceeds64 KiB")
+                params = json.loads(args.params)
+                if args.tool in TOOLS and TOOLS[args.tool].encoding == "integer":
+                    text = int(text)
+                output = run_tool(args.tool, text, params=params)
+            print(json.dumps(output, indent=2, allow_nan=False))
+            return 0
+        except (ValueError, TypeError, ImportError, OSError) as exc:
+            print(str(exc), file=sys.stderr)
+            return 2
     text = _read_text(args.text)
     if args.command == "word-pattern":
         from engine.solvers.word_pattern import solve_word_pattern

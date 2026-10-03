@@ -1,0 +1,15 @@
+{
+  "cipher_name": "sequence_transposition",
+  "plaintext": "THEEARLYBIRDGETSTHEWORM",
+  "ciphertext": "YHOMARTBDETHIGWLRESEERT",
+  "keys": {
+    "keyword": "GUMMYBEARS",
+    "primer": "69315",
+    "check_digit": "9"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/SequenceTransposition.pdf",
+  "source_checked_on": "2026-10-03",
+  "plaintext_sha256": "a505f303c5da8ee269a16cbe6f271d38739abdcdcbf1ead383ba0468b2b231d7",
+  "mode": "supplied_key",
+  "note": "Literal published ACA worked example, diagram inspected. SHA-256 is computed from actual recovered A-Z output. This is supplied-key decryption, not an unknown-key historical solve."
+}

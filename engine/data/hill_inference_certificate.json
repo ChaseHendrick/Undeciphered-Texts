@@ -1,0 +1,59 @@
+{
+  "tool_name": "hill-inference",
+  "source_url": "https://www.math.auckland.ac.nz/~slinko/Talks/AfC.pdf",
+  "source_pdf_sha256": "7df1a64fedf7b9047dbc521483ed8a59eff522bc74d2f895af8a678ddec1df33",
+  "source_pages": "zero-based PDF pages21 through24; example2 on physical page25",
+  "vectors": [
+    {
+      "kind": "published",
+      "ciphertext": "HIAT",
+      "cribs": [
+        {
+          "offset": 0,
+          "plaintext": "HELP"
+        }
+      ],
+      "expected_plaintext": "HELP",
+      "plaintext_sha256": "37a6760fa43caf5b1ea02f22251b1456c39e060a4918ba3e963dbde336f16148",
+      "recovered_matrix": [
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "matrix_supplied_to_solver": false,
+      "checks": 1353,
+      "search_complete": true
+    },
+    {
+      "kind": "original synthetic held-out suffix",
+      "ciphertext": "DRPAHAQIGCJIPJWBGHQVDBBIUIPG",
+      "cribs": [
+        {
+          "offset": 1,
+          "plaintext": "ELPTHES"
+        }
+      ],
+      "expected_plaintext": "HELPTHESMALLBOATSLEFTATDAWNX",
+      "plaintext_sha256": "8f78639259095f323de302f9543f8157195ba6b347ccd0e89beb5d619c26b87a",
+      "recovered_matrix": [
+        [
+          7,
+          8
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "matrix_supplied_to_solver": false,
+      "checks": 1354,
+      "search_complete": true
+    }
+  ],
+  "note": "Aligned plaintext cribs are supplied; encryption matrices are not supplied to inference. Published HELP vector verifies source convention. The suffix control is synthetic, independently constructed with direct column-vector modular arithmetic and frozen before implementation. Hashes cover actual recovered ASCII bytes, including trailing X. Conditional 2x2 Hill inference only, not a historical decipherment."
+}

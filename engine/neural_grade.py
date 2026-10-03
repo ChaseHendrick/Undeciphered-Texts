@@ -135,20 +135,26 @@ def assert_split(train_letters: str, held_letters: str, width: int = OVERLAP_WID
 
 
 def certificate_letter_strings(min_length: int = 16) -> list[str]:
-    """Plaintext or known-text fields from engine/data/*_certificate.json."""
+    """Complete known-answer text, including nested certificate controls."""
     found: list[str] = []
     for path in sorted(_DATA.glob("*_certificate.json")):
         if path.name == CERTIFICATE_PATH.name:
             continue
         payload = json.loads(path.read_text(encoding="utf-8"))
-        for key in ("plaintext", "known_text"):
-            value = payload.get(key)
-            if not isinstance(value, str):
-                continue
-            folded = letters_az(value)
-            if len(folded) >= min_length:
-                found.append(folded)
-    return found
+        pending = [payload]
+        while pending:
+            item = pending.pop()
+            if isinstance(item, list):
+                pending.extend(item)
+            elif isinstance(item, dict):
+                for key, value in item.items():
+                    if isinstance(value, (dict, list)):
+                        pending.append(value)
+                    elif key in ("plaintext", "known_text", "expected_plaintext", "predicted_plaintext") and isinstance(value, str) and "?" not in value:
+                        folded = letters_az(value)
+                        if len(folded) >= min_length:
+                            found.append(folded)
+    return list(dict.fromkeys(found))
 
 
 def assert_certificate_plaintexts_excluded(*letter_strings: str) -> None:

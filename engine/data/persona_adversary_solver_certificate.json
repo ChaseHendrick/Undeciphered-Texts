@@ -1,0 +1,19 @@
+{
+  "module": "engine.solvers.persona_adversary",
+  "api": "investigate_adversary",
+  "fixture_kind": "independently constructed unknown-key alternative witness control",
+  "ciphertext": "AOLOLPYYLHKAOLZLHSLKSLAALYHUKTVCLKAOLNVSKAVAOLLZAHALILMVYLZBUYPZL",
+  "proposed_plaintext": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "expected_plaintext": "THEHEIRREADTHESEALEDLETTERANDMOVEDTHEGOLDTOTHEESTATEBEFORESUNRISE",
+  "plaintext_sha256": "c418192d13583f9b0d4f482baad3cbbc210d8746b76b0f232aa1697f9469b432",
+  "encoding": "ASCII normalized A-Z plaintext",
+  "expected_construction_key": {
+    "affine_multiplier": 1,
+    "offset": 7
+  },
+  "key_supplied_to_search": false,
+  "construction": "Literal ciphertext generated before implementation by separate modular addition. Search receives no selected key or expected plaintext; the proposed wrong text is excluded after candidate generation.",
+  "claimed_plaintext": null,
+  "scope": "Known constructed recovery and concrete alternative witnesses in declared finite models. No exhaustive all-cipher uniqueness or historical solution claim.",
+  "tool_name": "persona-adversary"
+}

@@ -1,0 +1,31 @@
+{
+  "cipher_name": "condi",
+  "instance": "published_worked_example",
+  "mode": "known_key",
+  "plaintext": "OURSISAVERYGREENPASTIMETHEWIDEVARIETYOFCIPHERSWEUSECANALLBESOLVEDWITHPENCILANDPAPER",
+  "ciphertext": "MORCPPDNBKEDJKPMRTDBQCRJPXCKTVBNHUYJGVBYSFDXKCRCESIUOJJYFRQIXIMBVHKQPDNMPSBYJQBTTNK",
+  "formatted_plaintext": "OURS IS A VERY GREEN PASTIME. THE WIDE VARIETY OF CIPHERS WE USE CAN ALL BE SOLVED WITH PENCIL AND PAPER.",
+  "formatted_ciphertext": "MORC PP D NBKE DJKPM RTDBQCR. JPX CKTV BNHUYJG VB YSFDXKC RC ESI UOJ JYF RQ IXIMBV HKQP DNMPSB YJQ BTTNK.",
+  "key": "keyword=STRANGE initial_offset=25 alphabet_shift=21",
+  "keys": {"keyword": "STRANGE", "initial_offset": 25, "alphabet_shift": 21},
+  "alphabet": "VWXYZSTRANGEBCDFHIJKLMOPQU",
+  "feedback_position_encoding": "one-based positions 1 through 26",
+  "plaintext_sha256": "c89fe9a82899b646c7ba6a8e2c0452ecfb0961515efce00a9e5affcd055e0eab",
+  "hash_encoding": "normalized uppercase A-Z letters, ASCII bytes",
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Condi.pdf",
+  "source_pdf_sha256": "7a1bb5f1b64b8fedb20c09864535804ea83f53078426480808060eefa27156c8",
+  "source_inspected": "2026-10-03",
+  "note": "Complete independently printed 83-letter worked example, visually checked against the ACA sheet before implementation. Keyword deduplication then left rotation by 21 produces the printed alphabet. Initial offset is 25; each recovered plaintext letter's one-based position becomes the next offset. Punctuation and word divisions are retained. This certifies supplied-key decryption, not unknown keyword recovery or a historical decipherment.",
+  "unknown_key_fixture": {
+    "instance": "synthetic_finite_dictionary",
+    "plaintext": "MEETINGATDAWNUSETHEWESTGATETOMORROWBRINGONLYTHESEALEDLETTER",
+    "ciphertext": "YHWZGVQFRABVBTLVZFAOOVYDFRZZMSSLSLDWRFVQUEYBWFAVVSKGCMGZCZY",
+    "keywords": ["PLANET", "SECRET", "CIPHER"],
+    "cribs": [{"offset": 0, "plaintext": "MEETINGATDAWNUS"}],
+    "expected_keyword": "SECRT",
+    "expected_alphabet_shift": 7,
+    "expected_initial_offset": 9,
+    "plaintext_sha256": "8771ad6aee7ff8435ea59ae7740da63deef259dcfeefe2c2eed48c8d71401ae4",
+    "note": "Literal ciphertext constructed independently with one-based modular feedback before candidate search was implemented. Only the finite keyword dictionary and first 15 plaintext letters are supplied to inference. Alphabet shifts and initial offsets range from 0 through 25. Recovery is conditional on this dictionary and construction, not all possible alphabets."
+  }
+}

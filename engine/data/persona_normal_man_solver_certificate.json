@@ -1,0 +1,32 @@
+{
+  "tool_name": "persona-normal-man",
+  "persona": "normal-man",
+  "display_name": "Normal Human Man",
+  "controls": [
+    {
+      "construction": "caesar",
+      "ciphertext": "CQNURKAJARJWYUJLNMCQNBNJUNMUNCCNAKNBRMNCQNVJYJWMFJRCNMOXACQNWRPQCCAJRWFQRUNCQNAJRWONUUXWCQNBRUNWCYUJCOXAV",
+      "expected_plaintext": "THELIBRARIANPLACEDTHESEALEDLETTERBESIDETHEMAPANDWAITEDFORTHENIGHTTRAINWHILETHERAINFELLONTHESILENTPLATFORM",
+      "plaintext_sha256": "dfd03a8d93beb3f5ab7952f46661d9f84ba3b5bee885108f8db343826220e74f",
+      "recovered_family": "caesar",
+      "checks": 32,
+      "key_supplied_to_solver": false,
+      "cribs_supplied_to_solver": false,
+      "recovered_plaintext_sha256": "dfd03a8d93beb3f5ab7952f46661d9f84ba3b5bee885108f8db343826220e74f",
+      "search_complete": true
+    },
+    {
+      "construction": "rail-fence",
+      "ciphertext": "TIRPEELERIHPWERNTIIHILTITTMHLBAINLCDHSAELTEBSDTEAADATDOTEIHTANHLTEANELNHSLNPAFRERAATEDTEEMNIFHGRWERFOEELO",
+      "expected_plaintext": "THELIBRARIANPLACEDTHESEALEDLETTERBESIDETHEMAPANDWAITEDFORTHENIGHTTRAINWHILETHERAINFELLONTHESILENTPLATFORM",
+      "plaintext_sha256": "dfd03a8d93beb3f5ab7952f46661d9f84ba3b5bee885108f8db343826220e74f",
+      "recovered_family": "rail-fence",
+      "checks": 32,
+      "key_supplied_to_solver": false,
+      "cribs_supplied_to_solver": false,
+      "recovered_plaintext_sha256": "dfd03a8d93beb3f5ab7952f46661d9f84ba3b5bee885108f8db343826220e74f",
+      "search_complete": true
+    }
+  ],
+  "note": "Shared frozen synthetic controls, recovered by all 26 Caesar shifts and six rail-fence heights without a supplied key or crib. Same controls are shared with Emperor and do not constitute independent historical evidence. The fictional human voice never changes arithmetic or validity checks."
+}

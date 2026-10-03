@@ -1,0 +1,59 @@
+{
+  "cipher_name": "checkerboard",
+  "instance": "published_simple_and_complex_coordinate_examples",
+  "mode": "supplied_key",
+  "plaintext": "NUMBERSCANALSOBEUSEDASCOORDINATES",
+  "ciphertext": "BH AT CW CE KI LI LT KE AE BH AE KW LT AW CE KI AT LT KI KT AE LT KE AW AW LI KT BI BH AE LE KI LT.",
+  "keys": {
+    "square": "KNIGHPQRSTOYZUAMXWVBLFEDC",
+    "row_labels": [
+      "BLACK"
+    ],
+    "column_labels": [
+      "WHITE"
+    ],
+    "terminal_period": true
+  },
+  "plaintext_sha256": "bd60223e9334785caa05cdf140e6761d9c6a3e63b6ddefdb2ac7d78e4ae45137",
+  "vectors": [
+    {
+      "name": "simple",
+      "plaintext": "NUMBERSCANALSOBEUSEDASCOORDINATES",
+      "ciphertext": "BH AT CW CE KI LI LT KE AE BH AE KW LT AW CE KI AT LT KI KT AE LT KE AW AW LI KT BI BH AE LE KI LT.",
+      "keys": {
+        "square": "KNIGHPQRSTOYZUAMXWVBLFEDC",
+        "row_labels": [
+          "BLACK"
+        ],
+        "column_labels": [
+          "WHITE"
+        ],
+        "terminal_period": true
+      },
+      "plaintext_sha256": "bd60223e9334785caa05cdf140e6761d9c6a3e63b6ddefdb2ac7d78e4ae45137"
+    },
+    {
+      "name": "complex",
+      "plaintext": "NUMBERSCANALSOBEUSEDASCOORDINATES",
+      "ciphertext": "HR RY CG SS EA LA OT KS RS BR AS EG LY AG CS EI AT LT KA ET RE OY EE RG AG LA KY HI HH RS OS EI LY.",
+      "keys": {
+        "square": "KNIGHPQRSTOYZUAMXWVBLFEDC",
+        "row_labels": [
+          "HORSE",
+          "BLACK"
+        ],
+        "column_labels": [
+          "GRAYS",
+          "WHITE"
+        ],
+        "terminal_period": true
+      },
+      "plaintext_sha256": "bd60223e9334785caa05cdf140e6761d9c6a3e63b6ddefdb2ac7d78e4ae45137"
+    }
+  ],
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Checkerboard.pdf",
+  "source_pdf_sha256": "50985f757976ec9e62b44a5361597ff1a41daca1f185599da5f7637eb7a06e8a",
+  "source_inspected": "2026-10-03",
+  "hash_encoding": "normalized uppercase ASCII letters, I/J merged and no word spaces",
+  "note": "The ACA sheet independently prints the square, single and double coordinate labels, aligned plaintext and both literal ciphertexts. Coordinates are row then column. The complex example selects different coordinate homophones; decryption requires labels and square, while exact encryption also requires its per-letter choices. No square-generation convention is inferred from this diagram. Numeric labels are supported by separate controls. Supplied-key coordinate decoding only; not straddling checkerboard or a historical decipherment."
+}

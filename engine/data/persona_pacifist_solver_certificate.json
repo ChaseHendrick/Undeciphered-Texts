@@ -1,0 +1,59 @@
+{
+  "module": "engine.solvers.pacifist",
+  "api": "investigate_pacifist",
+  "fixture_kind": "primary published affine vectors with unknown key and aligned plaintext cribs",
+  "encoding": "ASCII normalized A-Z plaintext letters",
+  "claimed_plaintext": null,
+  "scope": "Unknown-key recovery and exact conditional consensus within 312 invertible affine keys. Published expected keys are validation fields, never inference inputs. No unknown-script or historical breakthrough claim.",
+  "vectors": [
+    {
+      "name": "WCSU Section 6.2.2 published long affine message",
+      "source_url": "https://sites.wcsu.edu/mbxml/html/affine_section.html",
+      "source_section": "Subsection 6.2.2 Affine Cipher: Decryption, literal grouped ciphertext and deciphered message",
+      "fetched_on": "2026-10-03",
+      "ciphertext": "DZIUIUDZYHILUDOHHIBYGITZYLSYUUOQYDZODEYEIJJPYGLWTDIDEOUYBGITZYLYPEIDZOAYWKHBIBYHKLDZYSMJDITJIYLOBPHKMLDYYBHKLDZYUZIHDUIBGYIDIUOSKBKOJTZOXYDIGEYGOBODDOGAIDEIDZXOUIGHLYCMYBGWOBOJWUIUXMDEYGOBOJUKMUYDZODOBOJWUIUDKLYGKVYLDZYKLIQIBOJAYWUKDZODEYGOBPYGITZYLDZYSYUUOQY",
+      "cribs": [
+        {
+          "offset": 0,
+          "plaintext": "T"
+        },
+        {
+          "offset": 3,
+          "plaintext": "S"
+        }
+      ],
+      "plaintext": "THISISTHEFIRSTAFFINECIPHERMESSAGETHATWEWILLDECRYPTITWASENCIPHEREDWITHAKEYOFNINEFORTHEMULTIPLIERANDFOURTEENFORTHESHIFTSINCEITISAMONOALPHABETICWECANATTACKITWITHBASICFREQUENCYANALYSISBUTWECANALSOUSETHATANALYSISTORECOVERTHEORIGINALKEYSOTHATWECANDECIPHERTHEMESSAGE",
+      "plaintext_sha256": "e6094739a4960582ee94c971cd7c7ec9bbef87480c4bde60ae5cd6449359c849",
+      "expected_key": {
+        "a": 9,
+        "b": 14
+      },
+      "known_positions": 2,
+      "predicted_letters_beyond_crib": 257,
+      "required_checks": 312
+    },
+    {
+      "name": "Al-Mustaqbal University affine worksheet printed example",
+      "source_url": "https://uomus.edu.iq/img/lectures21/MUCLecture_2024_11830114.pdf",
+      "source_page": 1,
+      "fetched_on": "2026-10-03",
+      "ciphertext": "IHHWVC SWFRCP",
+      "cribs": [
+        {
+          "offset": 0,
+          "plaintext": "AF"
+        }
+      ],
+      "plaintext": "AFFINECIPHER",
+      "plaintext_sha256": "8d0b8c45577e9c795033aecdaf51781118501e1c034739fc61373863aba80d55",
+      "expected_key": {
+        "a": 5,
+        "b": 8
+      },
+      "known_positions": 2,
+      "predicted_letters_beyond_crib": 10,
+      "required_checks": 312
+    }
+  ],
+  "tool_name": "persona-pacifist"
+}

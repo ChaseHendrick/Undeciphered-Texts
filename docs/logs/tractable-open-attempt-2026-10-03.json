@@ -1,0 +1,2043 @@
+{
+  "schema_version": 1,
+  "experiment": "tractable_open_source_gate_and_k4_composition",
+  "date": "2026-10-03",
+  "started_at_utc": "2026-10-03T06:36:21.294975+00:00",
+  "completed_at_utc": "2026-10-03T06:36:21.697682+00:00",
+  "elapsed_seconds": 0.4025646250229329,
+  "objective": "Seek independently verifiable new readings of unresolved public ciphertexts.",
+  "status": "not_solved",
+  "claimed_plaintext": null,
+  "new_verified_plaintext": false,
+  "sources": [
+    {
+      "id": "master",
+      "url": "https://cryptocellar.org/bgac/1941-msg-list.html",
+      "retrieved_at_utc": "2026-10-03T06:27:21.550672+00:00",
+      "sha256": "00a5c91d649a974bd039a827b27c74d91a8824643007e49eb4b298d09170d2a9",
+      "bytes": 102750,
+      "content_type": "text/html",
+      "last_modified_header": "Wed, 30 Sep 2026 20:42:59 GMT"
+    },
+    {
+      "id": "july-messages",
+      "url": "https://cryptocellar.org/bgac/g-army-july-1941.html",
+      "retrieved_at_utc": "2026-10-03T06:27:22.308292+00:00",
+      "sha256": "21dc824826a48c453603b9f9797747025ec3a4eb7c637cfb644f3eca5407babf",
+      "bytes": 41593,
+      "content_type": "text/html",
+      "last_modified_header": "Mon, 28 Sep 2026 08:34:50 GMT"
+    },
+    {
+      "id": "july-keys",
+      "url": "https://cryptocellar.org/bgac/e-keys-july-1941.html",
+      "retrieved_at_utc": "2026-10-03T06:27:22.900295+00:00",
+      "sha256": "01492292f3847c2722876fd7c896882aae3aff190599fb26ac26202c440cac50",
+      "bytes": 15963,
+      "content_type": "text/html",
+      "last_modified_header": "Mon, 28 Sep 2026 08:34:40 GMT"
+    },
+    {
+      "id": "june-oct-keys",
+      "url": "https://cryptocellar.org/bgac/e-keys-jun-oct-1941.html",
+      "retrieved_at_utc": "2026-10-03T06:27:23.509213+00:00",
+      "sha256": "e36c96458e0007678f0ffb1098b45b7963e78883cddb92cb540bd46146b417b5",
+      "bytes": 10742,
+      "content_type": "text/html",
+      "last_modified_header": "Sat, 01 Aug 2026 08:35:24 GMT"
+    },
+    {
+      "id": "lxaca-scan",
+      "url": "https://cryptocellar.org/bgac/spruch/05071941-100-in.pdf",
+      "retrieved_at_utc": "2026-10-03T06:27:24.497369+00:00",
+      "sha256": "3863a24758f7c1e113e3e5aa8e6b9f2366b02b9361315b0048b79b3bffb05608",
+      "bytes": 820160,
+      "content_type": "application/pdf",
+      "last_modified_header": "Wed, 23 Sep 2026 10:48:56 GMT"
+    },
+    {
+      "id": "jbiyh-scan",
+      "url": "https://cryptocellar.org/bgac/spruch/20071941-242-in.pdf",
+      "retrieved_at_utc": "2026-10-03T06:27:25.149581+00:00",
+      "sha256": "97ed34ac0fa197a6893f947b1c6994ce5f01da81ba2f9a1cdee3eafe1dc236ac",
+      "bytes": 770179,
+      "content_type": "application/pdf",
+      "last_modified_header": "Wed, 23 Sep 2026 10:50:14 GMT"
+    },
+    {
+      "id": "supplement",
+      "url": "https://cryptocellar.org/enigma/enigma-modern-breaking.html",
+      "retrieved_at_utc": "2026-10-03T06:30:39.836010+00:00",
+      "sha256": "175a73cdf6e105f0f2af333adeeb658996f893a773187cafdf48a18cde772c5a",
+      "bytes": 32977,
+      "content_type": "text/html",
+      "last_modified_header": "Tue, 24 May 2022 11:23:39 GMT"
+    },
+    {
+      "id": "army-messages",
+      "url": "https://cryptocellar.org/bgac/g-army-messages.html",
+      "retrieved_at_utc": "2026-10-03T06:30:40.479031+00:00",
+      "sha256": "0889dbb44b246f7ba7e5587715cd400ee09ac35d6e1513b2f39fddeeae8e31f8",
+      "bytes": 28242,
+      "content_type": "text/html",
+      "last_modified_header": "Wed, 30 Sep 2026 20:37:33 GMT"
+    },
+    {
+      "id": "kljbo-scan",
+      "url": "https://cryptocellar.org/bgac/spruch/03071941-087-in.pdf",
+      "retrieved_at_utc": "2026-10-03T06:33:44.469239+00:00",
+      "sha256": "e61641c35220125df30dc0b615c6f9d98e3dbe79d961f27c171ebf45609f78cd",
+      "bytes": 823602,
+      "content_type": "application/pdf",
+      "last_modified_header": "Wed, 23 Sep 2026 10:48:13 GMT"
+    },
+    {
+      "id": "cia-kryptos",
+      "url": "https://www.cia.gov/legacy/headquarters/kryptos-sculpture/",
+      "retrieved_at_utc": "2026-10-03T06:33:44.729847+00:00",
+      "sha256": "3067b304e1fbb9bd04a634a39203216bb6e587a2f2fe9cdea83cb83423100b60",
+      "bytes": 555465,
+      "content_type": "text/html",
+      "last_modified_header": "Fri, 02 Oct 2026 18:12:23 GMT"
+    },
+    {
+      "id": "elonka-kryptos",
+      "url": "https://www.elonka.com/kryptos/",
+      "retrieved_at_utc": "2026-10-03T06:33:45.393550+00:00",
+      "sha256": "a5aa7aeba372978785b10217b21e878aaf2b34851e720d06e39f9dc80fdba3cf",
+      "bytes": 48919,
+      "content_type": "text/html",
+      "last_modified_header": "Fri, 15 Aug 2025 00:06:12 GMT"
+    },
+    {
+      "id": "elonka-transcript",
+      "url": "https://www.elonka.com/kryptos/transcript.html",
+      "retrieved_at_utc": "2026-10-03T06:33:45.728793+00:00",
+      "sha256": "4ce3ce302046b85612c5fcd119ab57cbe4bc9ddf291d234d90aee3a6bbdf0aae",
+      "bytes": 4050,
+      "content_type": "text/html",
+      "last_modified_header": "Sat, 24 Apr 2021 04:28:16 GMT"
+    },
+    {
+      "id": "rr-auction",
+      "url": "https://content.rrauction.com/jim-sanborns-complete-kryptos-archive-sells-for-962500-at-auction/",
+      "retrieved_at_utc": "2026-10-03T06:33:47.302839+00:00",
+      "sha256": "5a9bd760e257f08ad9955bc667743e43f7e4933f6ce19b7f73c6d77a4ccf26cf",
+      "bytes": 141367,
+      "content_type": "text/html",
+      "last_modified_header": "Sat, 03 Oct 2026 06:33:47 GMT"
+    }
+  ],
+  "enigma_source_audit": {
+    "open_master_entries": [
+      {
+        "designator": "EHSTQ",
+        "master_row": "22.06.1941 3 EHSTQ 57 / 52",
+        "source_id": "master",
+        "status_date": "2026-09-30",
+        "status": "highlighted_open_in_publisher_master_list"
+      },
+      {
+        "designator": "RXPSB",
+        "master_row": "28.06.1941 53 RXPSB 114 / 109",
+        "source_id": "master",
+        "status_date": "2026-09-30",
+        "status": "highlighted_open_in_publisher_master_list"
+      },
+      {
+        "designator": "KLJBO",
+        "master_row": "03.07.1941 87 KLJBO 55 / 50",
+        "source_id": "master",
+        "status_date": "2026-09-30",
+        "status": "highlighted_open_in_publisher_master_list"
+      },
+      {
+        "designator": "LXACA",
+        "master_row": "05.07.1941 100 LXACA 25 / 20 Fails",
+        "source_id": "master",
+        "status_date": "2026-09-30",
+        "status": "highlighted_open_in_publisher_master_list"
+      },
+      {
+        "designator": "JBIYH",
+        "master_row": "20.07.1941 242 JBIYH 60 / 55",
+        "source_id": "master",
+        "status_date": "2026-09-30",
+        "status": "highlighted_open_in_publisher_master_list"
+      }
+    ],
+    "targets": [
+      {
+        "designator": "LXACA",
+        "number": 100,
+        "received_date": "1941-07-05",
+        "received_time": "0445",
+        "header_time": "2340",
+        "indicator": "OGD PKN",
+        "ciphertext": "ZIXAGNQRKOHBPNKXRLFU",
+        "ciphertext_slots": 20,
+        "missing_slots": [],
+        "prospective_key_date": "1941-07-04",
+        "date_is_inferred": true,
+        "eligibility": "no_source_backed_applicable_daily_key",
+        "missing_evidence": "July 4 rotor order, reflector, rings and plugboard; a solved same-network July 4 Enigma control.",
+        "reason": "The publisher says the message probably belongs to the previous day and does not break on July 5 settings.",
+        "source_ids": [
+          "master",
+          "july-messages",
+          "july-keys",
+          "lxaca-scan"
+        ],
+        "facsimile_observation": "The short handwritten annotation below the ciphertext was visually inspected but its reading and meaning are uncertain; it is not a sourced key or plaintext clue."
+      },
+      {
+        "designator": "JBIYH",
+        "number": 242,
+        "received_date": "1941-07-20",
+        "received_time": "2337",
+        "header_time": "2245",
+        "indicator": "BSB NTK",
+        "ciphertext": "NVYMIVLOGGKTDKKOYXWRDLBHRRZYPILVVXOGBEFXAXCWBNGILRWARXO",
+        "ciphertext_slots": 55,
+        "missing_slots": [],
+        "prospective_key_date": "1941-07-20",
+        "date_is_inferred": false,
+        "eligibility": "no_source_backed_applicable_daily_key",
+        "missing_evidence": "July 20 rotor order, reflector, rings and plugboard; a solved same-network July 20 Enigma control.",
+        "reason": "July 20 is absent from the linked July daily-key table and no applicable key was found in the checked author supplement.",
+        "source_ids": [
+          "master",
+          "july-messages",
+          "july-keys",
+          "jbiyh-scan",
+          "supplement"
+        ],
+        "facsimile_observation": "The received-message form was visually inspected. It provides ciphertext and header information, not a printed plaintext or daily-key chart."
+      },
+      {
+        "designator": "KLJBO",
+        "number": 87,
+        "received_date": "1941-07-03",
+        "received_time": "2211",
+        "header_time": "2150",
+        "indicator": "RGN KUI",
+        "ciphertext": "YNGZOWCIRESGVEVKFGCNXDTLIKINLBOYL?NTNYBD?NWK?A?UVV",
+        "ciphertext_slots": 50,
+        "missing_slots": [
+          33,
+          40,
+          44,
+          46
+        ],
+        "prospective_key_date": "1941-07-03",
+        "date_is_inferred": false,
+        "eligibility": "no_source_backed_applicable_daily_key",
+        "missing_evidence": "July 3 rotor order, reflector, rings and plugboard; a solved same-network July 3 Enigma control.",
+        "reason": "July 3 is absent from the linked July daily-key table. Neighboring solved July 3 and July 4 records are labelled TS hand cipher, so they cannot validate Enigma settings.",
+        "source_ids": [
+          "master",
+          "july-messages",
+          "july-keys",
+          "kljbo-scan",
+          "supplement"
+        ],
+        "facsimile_observation": "The damaged received-message form was visually inspected. The publisher's four missing body-letter slots are retained as question marks; no replacement letters are guessed."
+      },
+      {
+        "designator": "EHSTQ",
+        "number": 3,
+        "received_date": "1941-06-22",
+        "ciphertext_slots": 52,
+        "prospective_key_date": "1941-06-22",
+        "eligibility": "no_source_backed_applicable_daily_key",
+        "missing_evidence": "June 22 rotor order, reflector, rings and plugboard; a solved same-network June 22 Enigma control.",
+        "source_ids": [
+          "master",
+          "army-messages",
+          "june-oct-keys"
+        ]
+      },
+      {
+        "designator": "RXPSB",
+        "number": 53,
+        "received_date": "1941-06-28",
+        "publisher_master_body_length": 109,
+        "actual_transcribed_slots": 107,
+        "eligibility": "no_source_backed_applicable_daily_key",
+        "missing_evidence": "Applicable June 28 settings, or affirmative proof of another enciphering date/network; reconciliation of the 109 versus 107 body-slot discrepancy.",
+        "reason": "The earlier source audit found two explicit gaps but no June 28 key. Same-call-sign Nr51 is explicitly enciphered on June 27 and cannot establish the target date.",
+        "prior_audit": "docs/logs/enigma-open-target-2026-10-03.json",
+        "source_ids": [
+          "master",
+          "army-messages",
+          "june-oct-keys"
+        ]
+      }
+    ],
+    "july_key_dates_present": [
+      "01.07.1941",
+      "05.07.1941",
+      "06.07.1941",
+      "07.07.1941",
+      "08.07.1941",
+      "09.07.1941",
+      "10.07.1941",
+      "11.07.1941",
+      "12.07.1941",
+      "13.07.1941",
+      "14.07.1941",
+      "18.07.1941",
+      "25.07.1941",
+      "28.07.1941",
+      "29.07.1941",
+      "31.07.1941"
+    ],
+    "june_oct_key_dates_present": [
+      "27.06.1941",
+      "08.07.1941",
+      "13.08.1941",
+      "19.08.1941",
+      "28.08.1941",
+      "09.09.1941",
+      "16.09.1941",
+      "27.09.1941",
+      "02.10.1941",
+      "03.10.1941"
+    ],
+    "source_search_scope": "Publisher master list, linked incoming-message and daily-key pages, three target facsimiles, and the author's supplemental modern-breaking page. Missing keys are absent from these checked sources; their worldwide absence is not asserted.",
+    "same_day_key_controls": [
+      {
+        "number": 99,
+        "designator": "XTMSY",
+        "key_date": "1941-07-05",
+        "settings": {
+          "rotors": [
+            "III",
+            "V",
+            "IV"
+          ],
+          "reflector": "B",
+          "rings": "WHJ",
+          "plugboard": [
+            "BI",
+            "CW",
+            "EQ",
+            "FX",
+            "HZ",
+            "JN",
+            "KY",
+            "MT",
+            "OV",
+            "PR"
+          ]
+        },
+        "indicator_start": "QCB",
+        "indicator_cipher": "NSR",
+        "published_start": "SIM",
+        "actual_start": "SIM",
+        "published_stop": "SOM",
+        "actual_stop": "SOM",
+        "ciphertext": "TWDAZYHQMHTJWVBDYLISJUWPLZELISGDPHRHJUYHXLBGHPGWZHWVRYGTGLXPEWPHAPGOIIVDBENMGMAGHRHUDDIFHFMLYODVLEBTZTHAKGPUCMQMAENSPNOSXXSKKTIDTSOIUZLYAWEJNXLEVZHZVZOMDZNW",
+        "ciphertext_length": 156,
+        "raw_machine_output": "MUNITIONFUERLEXGROSZFRIEDRIQXHEIMRIQXEINSAQTNIQTXUTENAULENAXSONDERRGROPZANTONXMARTAXLUDWIOXDESARMXOBEJKOMXEINSSFPIWQSTLXSTROPISTRIQSEESTROPIGTRIQGEEXABHOLEN",
+        "raw_output_sha256": "8c6cbc69daabdbbcec5def9a83a322176631ee99e088876e1480fe94bd56c1d5",
+        "arithmetic_oracle_agrees": true,
+        "full_ciphertext_replay_matches": true,
+        "independent_full_plaintext_reference_found": false,
+        "scope": "Published indicator and stop control plus transform consistency; raw garbles are not rewritten.",
+        "source_ids": [
+          "july-messages",
+          "july-keys",
+          "master"
+        ]
+      },
+      {
+        "number": 101,
+        "designator": "DEROP",
+        "key_date": "1941-07-05",
+        "settings": {
+          "rotors": [
+            "III",
+            "V",
+            "IV"
+          ],
+          "reflector": "B",
+          "rings": "WHJ",
+          "plugboard": [
+            "BI",
+            "CW",
+            "EQ",
+            "FX",
+            "HZ",
+            "JN",
+            "KY",
+            "MT",
+            "OV",
+            "PR"
+          ]
+        },
+        "indicator_start": "AIK",
+        "indicator_cipher": "SUD",
+        "published_start": "WER",
+        "actual_start": "WER",
+        "published_stop": "WLN",
+        "actual_stop": "WLN",
+        "ciphertext": "AQDEGMQTRRJYMHBITNRQOXTCSNFSLVNPDLRVDRRPTZXFRCWMIDYQDSEXLJIKAKCWGMIQCPNEQEVDNMSLDSSWIOKEIBKPYJDPRNKHKSYNOOMGZENLBCNSLHNXOCSEBLWEBMJDRSFGJQVHFQXTUBWYFRBYKYPLCEDFJILLVYKQTIKNPDDTDO",
+        "ciphertext_length": 178,
+        "raw_machine_output": "BETRIEBSSPRUQXKUPPLUNGSBELAGZERSTOIRTMCESSENWARTENBISIRGENDEINXIDAXTRUPPMITERSATZOEILENKOMMTSTRNDORTXFUSNFXKMXHUFLARSQSTRAHSEVORXRUNDANIXRUNDANIXWEGEGABELNAQXLISOVAXLISOVAXGANAHL",
+        "raw_output_sha256": "0ed760d4e408c4b4d3610ff0cdeb14e6212c107e233630442784a1ea22c7c235",
+        "arithmetic_oracle_agrees": true,
+        "full_ciphertext_replay_matches": true,
+        "independent_full_plaintext_reference_found": false,
+        "scope": "Published indicator and stop control plus transform consistency; raw garbles are not rewritten.",
+        "source_ids": [
+          "july-messages",
+          "july-keys",
+          "master"
+        ]
+      }
+    ],
+    "rejected_key_transfer": {
+      "target": "LXACA",
+      "indicator_start": "OGD",
+      "indicator_cipher": "PKN",
+      "output_under_july5_settings": "LXI",
+      "arithmetic_oracle_agrees": true,
+      "eligible_key": false,
+      "reason": "Decoding any indicator under a supplied key does not validate that key's date/network. The publisher explicitly rejects July 5 for LXACA; no target-body search was run."
+    },
+    "eligible_open_targets": 0,
+    "unknown_start_searches": 0,
+    "engine_process_calls": 7,
+    "independent_arithmetic_oracle_calls": 7,
+    "facsimiles_visually_inspected": [
+      "lxaca-scan",
+      "jbiyh-scan",
+      "kljbo-scan"
+    ],
+    "excluded_targets": [
+      "Nr. 86",
+      "WEUWY Nr. 138 already solved in current master list"
+    ]
+  },
+  "k4": {
+    "ciphertext": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+    "ciphertext_length": 97,
+    "ciphertext_sha256": "eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab",
+    "independent_transcriptions_match": [
+      "cia-kryptos",
+      "elonka-transcript"
+    ],
+    "status_boundary": "Public cryptanalytic recovery attempt, not verified worldwide nobody-knows status: a first-party November 21, 2025 auction record says the transferred private archive included K4 plaintext and its coding system. No public full text or mechanism was obtained from the checked sources.",
+    "source_ids": [
+      "cia-kryptos",
+      "elonka-kryptos",
+      "elonka-transcript",
+      "rr-auction"
+    ],
+    "clue_coordinates": "Zero-based normalized plaintext offsets. NORTHEAST 25, BERLINCLOCK 63.",
+    "reserved_unused_clue": "EAST was neither fitted nor used to filter results.",
+    "hypothesis": "Plaintext = affine_inverse(permutation(ciphertext)), with identity, reversal, or left rotation by 1 through 32. Each affine multiplier is a unit modulo 26; additive key is 0 through 25. These guesses are not attributed to the artist.",
+    "model_transform_count": 34,
+    "requested_compositions_per_fold": 10608,
+    "bounds_per_fold": {
+      "max_checks": 5000,
+      "max_candidates": 20,
+      "max_rotations": 32
+    },
+    "folds": [
+      {
+        "tool_name": "persona-hallucinogens",
+        "elapsed_seconds": 0.28793633286841214,
+        "training_cribs": [
+          {
+            "offset": 25,
+            "plaintext": "NORTHEAST"
+          }
+        ],
+        "heldout_cribs": [
+          {
+            "offset": 63,
+            "plaintext": "BERLINCLOCK"
+          }
+        ],
+        "heldout_entered_search": false,
+        "heldout_evaluations": [],
+        "heldout_candidates_examined": 0,
+        "heldout_exact_matches": 0,
+        "remaining_requested_checks": 5608,
+        "report": {
+          "persona": "hallucinogens",
+          "strategy": "bounded_reverse_rotation_affine_composition",
+          "candidates": [],
+          "checks": 5000,
+          "max_checks": 5000,
+          "search_complete": false,
+          "stop_reason": "check_limit",
+          "coordinate_system": "zero-based A-Z plaintext letters after removing spaces and punctuation",
+          "actions": [
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "identity",
+                "offset": 0
+              },
+              "checks": 148,
+              "crib_rejections": 148,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "reverse",
+                "offset": 0
+              },
+              "checks": 148,
+              "crib_rejections": 148,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 1
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 2
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 3
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 4
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 5
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 6
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 7
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 8
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 9
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 10
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 11
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 12
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 13
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 14
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 15
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 16
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 17
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 18
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 19
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 20
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 21
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 22
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 23
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 24
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 25
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 26
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 27
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 28
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 29
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 30
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 31
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 32
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            }
+          ],
+          "assumptions": [
+            "Normalized A-Z text is an affine substitution composed with one requested permutation.",
+            "English scoring orders hypotheses, not independent correctness or probability.",
+            "Original plaintext crib coordinates are fixed; supplied cribs are not independent validation.",
+            "Equivalent compositions are alternate witnesses for the same text, not independent agreement."
+          ],
+          "contradictions": [],
+          "thought": {
+            "kind": "program-generated search summary",
+            "strategy": "bounded_reverse_rotation_affine_composition",
+            "tested_checks": 5000,
+            "candidate_count": 0,
+            "next_action": "review evidence and untested models"
+          },
+          "claimed_plaintext": null,
+          "correctness_known": false,
+          "happiness": null,
+          "solved_status": "unverified",
+          "scope": "Repository-specific search composition. Personality, agreement, English scores and re-encryption are not independent evidence of a historical decipherment. No unknown-script reading or Nr. 86 solution is claimed.",
+          "ciphertext_length": 97,
+          "known_positions": 9,
+          "cribs": [
+            {
+              "offset": 25,
+              "plaintext": "NORTHEAST"
+            }
+          ],
+          "bounds": {
+            "max_checks": 5000,
+            "max_candidates": 20,
+            "max_rotations": 32,
+            "effective_rotation_offsets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32
+            ],
+            "total_requested_checks": 10608,
+            "max_equivalent_composition_witnesses": 4
+          },
+          "transform_checks": [
+            {
+              "transform": {
+                "kind": "identity",
+                "offset": 0
+              },
+              "checks": 148
+            },
+            {
+              "transform": {
+                "kind": "reverse",
+                "offset": 0
+              },
+              "checks": 148
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 1
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 2
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 3
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 4
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 5
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 6
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 7
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 8
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 9
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 10
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 11
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 12
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 13
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 14
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 15
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 16
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 17
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 18
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 19
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 20
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 21
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 22
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 23
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 24
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 25
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 26
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 27
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 28
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 29
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 30
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 31
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 32
+              },
+              "checks": 147
+            }
+          ],
+          "accepted_unique_plaintexts": 0,
+          "duplicate_candidates": 0,
+          "crib_rejections": 5000,
+          "forward_mismatches": 0,
+          "candidates_truncated": false,
+          "unique_plaintext_established": false,
+          "ranking": "existing English language score descending, then plaintext; not a probability"
+        }
+      },
+      {
+        "tool_name": "persona-hallucinogens",
+        "elapsed_seconds": 0.09926662500947714,
+        "training_cribs": [
+          {
+            "offset": 63,
+            "plaintext": "BERLINCLOCK"
+          }
+        ],
+        "heldout_cribs": [
+          {
+            "offset": 25,
+            "plaintext": "NORTHEAST"
+          }
+        ],
+        "heldout_entered_search": false,
+        "heldout_evaluations": [],
+        "heldout_candidates_examined": 0,
+        "heldout_exact_matches": 0,
+        "remaining_requested_checks": 5608,
+        "report": {
+          "persona": "hallucinogens",
+          "strategy": "bounded_reverse_rotation_affine_composition",
+          "candidates": [],
+          "checks": 5000,
+          "max_checks": 5000,
+          "search_complete": false,
+          "stop_reason": "check_limit",
+          "coordinate_system": "zero-based A-Z plaintext letters after removing spaces and punctuation",
+          "actions": [
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "identity",
+                "offset": 0
+              },
+              "checks": 148,
+              "crib_rejections": 148,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "reverse",
+                "offset": 0
+              },
+              "checks": 148,
+              "crib_rejections": 148,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 1
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 2
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 3
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 4
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 5
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 6
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 7
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 8
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 9
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 10
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 11
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 12
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 13
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 14
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 15
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 16
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 17
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 18
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 19
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 20
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 21
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 22
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 23
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 24
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 25
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 26
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 27
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 28
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 29
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 30
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 31
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            },
+            {
+              "stage": "composition",
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 32
+              },
+              "checks": 147,
+              "crib_rejections": 147,
+              "forward_mismatches": 0
+            }
+          ],
+          "assumptions": [
+            "Normalized A-Z text is an affine substitution composed with one requested permutation.",
+            "English scoring orders hypotheses, not independent correctness or probability.",
+            "Original plaintext crib coordinates are fixed; supplied cribs are not independent validation.",
+            "Equivalent compositions are alternate witnesses for the same text, not independent agreement."
+          ],
+          "contradictions": [],
+          "thought": {
+            "kind": "program-generated search summary",
+            "strategy": "bounded_reverse_rotation_affine_composition",
+            "tested_checks": 5000,
+            "candidate_count": 0,
+            "next_action": "review evidence and untested models"
+          },
+          "claimed_plaintext": null,
+          "correctness_known": false,
+          "happiness": null,
+          "solved_status": "unverified",
+          "scope": "Repository-specific search composition. Personality, agreement, English scores and re-encryption are not independent evidence of a historical decipherment. No unknown-script reading or Nr. 86 solution is claimed.",
+          "ciphertext_length": 97,
+          "known_positions": 11,
+          "cribs": [
+            {
+              "offset": 63,
+              "plaintext": "BERLINCLOCK"
+            }
+          ],
+          "bounds": {
+            "max_checks": 5000,
+            "max_candidates": 20,
+            "max_rotations": 32,
+            "effective_rotation_offsets": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32
+            ],
+            "total_requested_checks": 10608,
+            "max_equivalent_composition_witnesses": 4
+          },
+          "transform_checks": [
+            {
+              "transform": {
+                "kind": "identity",
+                "offset": 0
+              },
+              "checks": 148
+            },
+            {
+              "transform": {
+                "kind": "reverse",
+                "offset": 0
+              },
+              "checks": 148
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 1
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 2
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 3
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 4
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 5
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 6
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 7
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 8
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 9
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 10
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 11
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 12
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 13
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 14
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 15
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 16
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 17
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 18
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 19
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 20
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 21
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 22
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 23
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 24
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 25
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 26
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 27
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 28
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 29
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 30
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 31
+              },
+              "checks": 147
+            },
+            {
+              "transform": {
+                "kind": "rotate_left",
+                "offset": 32
+              },
+              "checks": 147
+            }
+          ],
+          "accepted_unique_plaintexts": 0,
+          "duplicate_candidates": 0,
+          "crib_rejections": 5000,
+          "forward_mismatches": 0,
+          "candidates_truncated": false,
+          "unique_plaintext_established": false,
+          "ranking": "existing English language score descending, then plaintext; not a probability"
+        }
+      }
+    ],
+    "recorded_target_checks": 10000,
+    "preliminary_identical_smoke": {
+      "checks": 10000,
+      "folds": 2,
+      "candidates": 0,
+      "search_complete": false,
+      "same_bounds_and_cribs": true,
+      "fold_elapsed_seconds": [
+        0.32908,
+        0.09915
+      ],
+      "scope": "A preliminary console smoke preceded the recorded run; its checks are additional executions, not additional model coverage."
+    },
+    "total_target_check_executions_this_task": 20000,
+    "accepted_candidates": 0,
+    "heldout_candidates_examined": 0,
+    "scope": "Only the 5,000 tested pairs per fold are rejected by that fitted clue. The remaining 5,608 pairs per fold are untested. No heldout candidate or complete recovered plaintext exists."
+  },
+  "provenance": {
+    "python": "3.12.14",
+    "git_head": "4e2924f394c12f67faa367b9a5a0eb887fca65ef",
+    "git_status_at_start": [
+      " M README.md",
+      " M docs/CATALOG.md",
+      " M docs/HANDOFF.md",
+      " M docs/TESTING.md",
+      " M docs/WORKFLOW.md",
+      " M docs/persona-preferences.md",
+      " M docs/target-shortlist.json",
+      " M docs/target-triage.md",
+      " M docs/verification-certificates.md",
+      " M engine/case_workflow.py",
+      " M engine/cli.py",
+      " M engine/neural_grade.py",
+      " M engine/solvers/pacifist.py",
+      " M engine/solvers/persona_court_notice.py",
+      " M engine/solvers/persona_hallucinogens.py",
+      " M engine/solvers/persona_inheritance.py",
+      " M tests/test_cli_controls.py",
+      "?? docs/autokey-inference.md",
+      "?? docs/baconian.md",
+      "?? docs/checkerboard.md",
+      "?? docs/condi.md",
+      "?? docs/enigma-crib-search.md",
+      "?? docs/hill-inference.md",
+      "?? docs/homophonic.md",
+      "?? docs/interrupted-key.md",
+      "?? docs/logs/easy-recovery-2026-10-03.json",
+      "?? docs/logs/easy-recovery-2026-10-03.md",
+      "?? docs/logs/enigma-open-target-2026-10-03.json",
+      "?? docs/logs/enigma-open-target-2026-10-03.md",
+      "?? docs/logs/open-target-attempt-2026-10-03.json",
+      "?? docs/logs/open-target-attempt-2026-10-03.md",
+      "?? docs/logs/solver-expansion-2026-10-03.md",
+      "?? docs/monome-dinome.md",
+      "?? docs/morbit.md",
+      "?? docs/morse-constraints.md",
+      "?? docs/neural-m209-features.md",
+      "?? docs/neural-training.md",
+      "?? docs/neural-upgrades.md",
+      "?? docs/numbered-key.md",
+      "?? docs/periodic-gromark.md",
+      "?? docs/persona-cartographer-solver.md",
+      "?? docs/persona-detective-solver.md",
+      "?? docs/persona-emperor-solver.md",
+      "?? docs/persona-hallucinogens-solver.md",
+      "?? docs/persona-inheritance-solver.md",
+      "?? docs/persona-mechanic-solver.md",
+      "?? docs/persona-pacifist-solver.md",
+      "?? docs/persona-solvers.md",
+      "?? docs/pollux.md",
+      "?? docs/progressive-key.md",
+      "?? docs/redefence.md",
+      "?? docs/rsa-wiener.md",
+      "?? docs/sequence-transposition.md",
+      "?? docs/solver-reasoning.md",
+      "?? docs/tool-interface.md",
+      "?? docs/transposition-ensemble.md",
+      "?? engine/data/autokey_inference_certificate.json",
+      "?? engine/data/baconian_certificate.json",
+      "?? engine/data/checkerboard_certificate.json",
+      "?? engine/data/condi_certificate.json",
+      "?? engine/data/enigma_crib_search_certificate.json",
+      "?? engine/data/hill_inference_certificate.json",
+      "?? engine/data/homophonic_certificate.json",
+      "?? engine/data/interrupted_key_certificate.json",
+      "?? engine/data/monome_dinome_certificate.json",
+      "?? engine/data/morbit_certificate.json",
+      "?? engine/data/morse_constraints_certificate.json",
+      "?? engine/data/neural_audit_wells.txt",
+      "?? engine/data/neural_audit_wells_source.json",
+      "?? engine/data/neural_router_v2_audit.json",
+      "?? engine/data/neural_router_v2_metrics.json",
+      "?? engine/data/neural_router_v2_weights.json",
+      "?? engine/data/numbered_key_certificate.json",
+      "?? engine/data/periodic_gromark_certificate.json",
+      "?? engine/data/persona_adversary_solver_certificate.json",
+      "?? engine/data/persona_cartographer_solver_certificate.json",
+      "?? engine/data/persona_detective_solver_certificate.json",
+      "?? engine/data/persona_emperor_solver_certificate.json",
+      "?? engine/data/persona_hallucinogens_solver_certificate.json",
+      "?? engine/data/persona_inheritance_solver_certificate.json",
+      "?? engine/data/persona_mechanic_solver_certificate.json",
+      "?? engine/data/persona_pacifist_solver_certificate.json",
+      "?? engine/data/persona_skeptic_solver_certificate.json",
+      "?? engine/data/pollux_certificate.json",
+      "?? engine/data/progressive_key_certificate.json",
+      "?? engine/data/redefence_certificate.json",
+      "?? engine/data/rsa_wiener_certificate.json",
+      "?? engine/data/sequence_transposition_certificate.json",
+      "?? engine/data/solver_reasoning_certificate.json",
+      "?? engine/data/transposition_ensemble_certificate.json",
+      "?? engine/neural_m209_features.py",
+      "?? engine/neural_router_v2.py",
+      "?? engine/neural_training.py",
+      "?? engine/persona_solver_common.py",
+      "?? engine/persona_solvers.py",
+      "?? engine/solver_reasoning.py",
+      "?? engine/solvers/autokey_inference.py",
+      "?? engine/solvers/baconian.py",
+      "?? engine/solvers/checkerboard.py",
+      "?? engine/solvers/condi.py",
+      "?? engine/solvers/enigma_crib_search.py",
+      "?? engine/solvers/hill_inference.py",
+      "?? engine/solvers/homophonic.py",
+      "?? engine/solvers/interrupted_key.py",
+      "?? engine/solvers/monome_dinome.py",
+      "?? engine/solvers/morbit.py",
+      "?? engine/solvers/morse_constraints.py",
+      "?? engine/solvers/numbered_key.py",
+      "?? engine/solvers/periodic_gromark.py",
+      "?? engine/solvers/persona_adversary.py",
+      "?? engine/solvers/persona_cartographer.py",
+      "?? engine/solvers/persona_detective.py",
+      "?? engine/solvers/persona_mechanic.py",
+      "?? engine/solvers/persona_skeptic.py",
+      "?? engine/solvers/pollux.py",
+      "?? engine/solvers/progressive_key.py",
+      "?? engine/solvers/redefence.py",
+      "?? engine/solvers/rsa_wiener.py",
+      "?? engine/solvers/sequence_transposition.py",
+      "?? engine/tool_registry.py",
+      "?? engine/transposition_ensemble.py",
+      "?? tests/test_autokey_inference.py",
+      "?? tests/test_baconian.py",
+      "?? tests/test_case_investigation.py",
+      "?? tests/test_checkerboard.py",
+      "?? tests/test_condi.py",
+      "?? tests/test_connected_helpers.py",
+      "?? tests/test_enigma_crib_search.py",
+      "?? tests/test_hill_inference.py",
+      "?? tests/test_homophonic.py",
+      "?? tests/test_interrupted_key.py",
+      "?? tests/test_monome_dinome.py",
+      "?? tests/test_morbit.py",
+      "?? tests/test_morse_constraints.py",
+      "?? tests/test_neural_artifact.py",
+      "?? tests/test_neural_audit.py",
+      "?? tests/test_neural_exclusions.py",
+      "?? tests/test_neural_lookahead.py",
+      "?? tests/test_neural_m209_features.py",
+      "?? tests/test_neural_router_v2.py",
+      "?? tests/test_neural_training.py",
+      "?? tests/test_numbered_key.py",
+      "?? tests/test_periodic_gromark.py",
+      "?? tests/test_persona_adversary_solver.py",
+      "?? tests/test_persona_cartographer_solver.py",
+      "?? tests/test_persona_council.py",
+      "?? tests/test_persona_detective_solver.py",
+      "?? tests/test_persona_emperor_solver.py",
+      "?? tests/test_persona_hallucinogens_solver.py",
+      "?? tests/test_persona_inheritance_solver.py",
+      "?? tests/test_persona_mechanic_solver.py",
+      "?? tests/test_persona_pacifist_solver.py",
+      "?? tests/test_persona_skeptic_solver.py",
+      "?? tests/test_persona_solver_common.py",
+      "?? tests/test_pollux.py",
+      "?? tests/test_progressive_key.py",
+      "?? tests/test_redefence.py",
+      "?? tests/test_rsa_wiener.py",
+      "?? tests/test_sequence_transposition.py",
+      "?? tests/test_solver_reasoning.py",
+      "?? tests/test_tool_registry.py",
+      "?? tests/test_transposition_ensemble.py"
+    ],
+    "code_and_data_sha256": {
+      "engine/solvers/persona_hallucinogens.py": "7159cf8295a9f2a4277cf978a24c2d115447281fe3ecf76fe8f097a52b42a9b0",
+      "engine/persona_solver_common.py": "0e447932f896011b9a43721daec6ab94cd1ad482e590a5646c01eda76a9b1b58",
+      "engine/solvers/affine.py": "b5ae983cca7157668b785aeed5a7d0bd2b7e3c513afc163601ce8a64e901f9f4",
+      "engine/language.py": "779e12207fd3f9e79369f236b38138e0eb6b7d4473c00024146ed7813f4c56a3",
+      "engine/data/english.txt": "829344587eacb985b89bba373a6ffd8059710373f2509a85587e02ad2ff16903",
+      "engine/alphabet.py": "b499b27b3a7303984f35f585166087da896156f62b77be5d0271f9978a54f09d",
+      "engine/reverse_engineer.py": "0af970b7aafa5784929878d1ed7700b664d582be8bc5ecebc816f1226f3d6741",
+      "engine/solvers/enigma.py": "67336acb67e6b92303a44739d5ee24b4909231616eb8935bcb2f569dfb6b3c93",
+      "engine/solvers/k4_attempt.py": "6c806ac6cd39b418cf212054c99b33f8b6473cb771549a5e1635b4dfc951a058",
+      "tests/test_enigma_crib_search.py": "ed197003edf2520b87ff2c51fae40525090d28dff2b80b2b20e4c4b1893097fd",
+      "work/tractable-open-attempt-2026-10-03/run_attempt.py": "77e0bf085036cf8d8411643fe475b3a9fc3e97fdf064df4fd8ad57cb4d4ecbba"
+    },
+    "hashes_unchanged_during_run": true,
+    "execution_script": "work/tractable-open-attempt-2026-10-03/run_attempt.py",
+    "execution_source": "\"\"\"Freeze source gates, reproduce July controls, then test two K4 folds.\"\"\"\nfrom pathlib import Path\nfrom html.parser import HTMLParser\nfrom datetime import datetime, timezone\nimport hashlib\nimport json\nimport platform\nimport re\nimport subprocess\nimport time\n\nfrom engine.reverse_engineer import Crib\nfrom engine.solvers.enigma import EnigmaMachine\nfrom engine.solvers.k4_attempt import K4_CIPHERTEXT\nfrom engine.solvers.persona_hallucinogens import investigate_hallucinogens\nfrom tests.test_enigma_crib_search import _oracle\n\nROOT = Path.cwd()\nWORK = ROOT / \"work/tractable-open-attempt-2026-10-03\"\nOUTPUT = ROOT / \"docs/logs/tractable-open-attempt-2026-10-03.json\"\n\n\ndef digest(path):\n    return hashlib.sha256(path.read_bytes()).hexdigest()\n\n\nclass Text(HTMLParser):\n    def __init__(self):\n        super().__init__()\n        self.parts = []\n        self.hidden = 0\n\n    def handle_starttag(self, tag, attrs):\n        if tag in (\"script\", \"style\"):\n            self.hidden += 1\n\n    def handle_endtag(self, tag):\n        if tag in (\"script\", \"style\"):\n            self.hidden -= 1\n\n    def handle_data(self, data):\n        if not self.hidden:\n            self.parts.append(data)\n\n\ndef text(name):\n    parser = Text()\n    parser.feed((WORK / (name + \".html\")).read_text())\n    return \" \".join(parser.parts)\n\n\nsources = json.loads((WORK / \"sources.json\").read_text())\nfor source in sources:\n    suffix = \".pdf\" if source[\"id\"].endswith(\"scan\") else \".html\"\n    assert digest(WORK / (source[\"id\"] + suffix)) == source[\"sha256\"]\n\ncode_paths = (\n    \"engine/solvers/persona_hallucinogens.py\", \"engine/persona_solver_common.py\",\n    \"engine/solvers/affine.py\", \"engine/language.py\", \"engine/data/english.txt\",\n    \"engine/alphabet.py\", \"engine/reverse_engineer.py\", \"engine/solvers/enigma.py\",\n    \"engine/solvers/k4_attempt.py\", \"tests/test_enigma_crib_search.py\",\n    \"work/tractable-open-attempt-2026-10-03/run_attempt.py\",\n)\nhashes_before = {path: digest(ROOT / path) for path in code_paths}\ngit_head = subprocess.check_output((\"git\", \"rev-parse\", \"HEAD\"), text=True, timeout=5).strip()\ngit_status = subprocess.check_output((\"git\", \"status\", \"--short\"), text=True, timeout=5).splitlines()\nstarted = datetime.now(timezone.utc).isoformat()\nclock_start = time.perf_counter()\n\nmaster_raw = (WORK / \"master.html\").read_text()\nassert \"Status on: 30 September 2026\" in master_raw\nopen_entries = []\nfor designator in (\"EHSTQ\", \"RXPSB\", \"KLJBO\", \"LXACA\", \"JBIYH\"):\n    mark = next(match.group(1) for match in re.finditer(r\"<mark>(.*?)</mark>\", master_raw, re.S)\n                if designator in match.group(1))\n    parser = Text()\n    parser.feed(mark)\n    row = \" \".join(\" \".join(parser.parts).split())\n    assert \"Broken\" not in row\n    open_entries.append({\"designator\": designator, \"master_row\": row,\n                         \"source_id\": \"master\", \"status_date\": \"2026-09-30\",\n                         \"status\": \"highlighted_open_in_publisher_master_list\"})\n\njuly_key_text = text(\"july-keys\")\nother_key_text = text(\"june-oct-keys\")\njuly_dates = re.findall(r\"Enigma keys for\\s+(\\d{2}\\.\\d{2}\\.1941)\", july_key_text)\nother_dates = re.findall(r\"Enigma keys for\\s+(\\d{2}\\.\\d{2}\\.1941)\", other_key_text)\nassert july_dates\nassert other_dates\nfor date in (\"03.07.1941\", \"04.07.1941\", \"20.07.1941\"):\n    assert date not in july_dates\nfor date in (\"22.06.1941\", \"28.06.1941\"):\n    assert date not in other_dates\n\nLXACA = \"ZIXAGNQRKOHBPNKXRLFU\"\nJBIYH = \"NVYMIVLOGGKTDKKOYXWRDLBHRRZYPILVVXOGBEFXAXCWBNGILRWARXO\"\nKLJBO = \"YNGZOWCIRESGVEVKFGCNXDTLIKINLBOYL?NTNYBD?NWK?A?UVV\"\nassert len(LXACA) == 20\nassert len(JBIYH) == 55\nassert len(KLJBO) == 50 and KLJBO.count(\"?\") == 4\ntargets = [\n    {\"designator\": \"LXACA\", \"number\": 100, \"received_date\": \"1941-07-05\",\n     \"received_time\": \"0445\", \"header_time\": \"2340\", \"indicator\": \"OGD PKN\",\n     \"ciphertext\": LXACA, \"ciphertext_slots\": 20, \"missing_slots\": [],\n     \"prospective_key_date\": \"1941-07-04\", \"date_is_inferred\": True,\n     \"eligibility\": \"no_source_backed_applicable_daily_key\",\n     \"missing_evidence\": \"July 4 rotor order, reflector, rings and plugboard; a solved same-network July 4 Enigma control.\",\n     \"reason\": \"The publisher says the message probably belongs to the previous day and does not break on July 5 settings.\",\n     \"source_ids\": [\"master\", \"july-messages\", \"july-keys\", \"lxaca-scan\"],\n     \"facsimile_observation\": \"The short handwritten annotation below the ciphertext was visually inspected but its reading and meaning are uncertain; it is not a sourced key or plaintext clue.\"},\n    {\"designator\": \"JBIYH\", \"number\": 242, \"received_date\": \"1941-07-20\",\n     \"received_time\": \"2337\", \"header_time\": \"2245\", \"indicator\": \"BSB NTK\",\n     \"ciphertext\": JBIYH, \"ciphertext_slots\": 55, \"missing_slots\": [],\n     \"prospective_key_date\": \"1941-07-20\", \"date_is_inferred\": False,\n     \"eligibility\": \"no_source_backed_applicable_daily_key\",\n     \"missing_evidence\": \"July 20 rotor order, reflector, rings and plugboard; a solved same-network July 20 Enigma control.\",\n     \"reason\": \"July 20 is absent from the linked July daily-key table and no applicable key was found in the checked author supplement.\",\n     \"source_ids\": [\"master\", \"july-messages\", \"july-keys\", \"jbiyh-scan\", \"supplement\"],\n     \"facsimile_observation\": \"The received-message form was visually inspected. It provides ciphertext and header information, not a printed plaintext or daily-key chart.\"},\n    {\"designator\": \"KLJBO\", \"number\": 87, \"received_date\": \"1941-07-03\",\n     \"received_time\": \"2211\", \"header_time\": \"2150\", \"indicator\": \"RGN KUI\",\n     \"ciphertext\": KLJBO, \"ciphertext_slots\": 50,\n     \"missing_slots\": [i for i, letter in enumerate(KLJBO) if letter == \"?\"],\n     \"prospective_key_date\": \"1941-07-03\", \"date_is_inferred\": False,\n     \"eligibility\": \"no_source_backed_applicable_daily_key\",\n     \"missing_evidence\": \"July 3 rotor order, reflector, rings and plugboard; a solved same-network July 3 Enigma control.\",\n     \"reason\": \"July 3 is absent from the linked July daily-key table. Neighboring solved July 3 and July 4 records are labelled TS hand cipher, so they cannot validate Enigma settings.\",\n     \"source_ids\": [\"master\", \"july-messages\", \"july-keys\", \"kljbo-scan\", \"supplement\"],\n     \"facsimile_observation\": \"The damaged received-message form was visually inspected. The publisher's four missing body-letter slots are retained as question marks; no replacement letters are guessed.\"},\n    {\"designator\": \"EHSTQ\", \"number\": 3, \"received_date\": \"1941-06-22\",\n     \"ciphertext_slots\": 52, \"prospective_key_date\": \"1941-06-22\",\n     \"eligibility\": \"no_source_backed_applicable_daily_key\",\n     \"missing_evidence\": \"June 22 rotor order, reflector, rings and plugboard; a solved same-network June 22 Enigma control.\",\n     \"source_ids\": [\"master\", \"army-messages\", \"june-oct-keys\"]},\n    {\"designator\": \"RXPSB\", \"number\": 53, \"received_date\": \"1941-06-28\",\n     \"publisher_master_body_length\": 109, \"actual_transcribed_slots\": 107,\n     \"eligibility\": \"no_source_backed_applicable_daily_key\",\n     \"missing_evidence\": \"Applicable June 28 settings, or affirmative proof of another enciphering date/network; reconciliation of the 109 versus 107 body-slot discrepancy.\",\n     \"reason\": \"The earlier source audit found two explicit gaps but no June 28 key. Same-call-sign Nr51 is explicitly enciphered on June 27 and cannot establish the target date.\",\n     \"prior_audit\": \"docs/logs/enigma-open-target-2026-10-03.json\",\n     \"source_ids\": [\"master\", \"army-messages\", \"june-oct-keys\"]},\n]\n\nsettings = {\"rotors\": (\"III\", \"V\", \"IV\"), \"reflector\": \"B\", \"rings\": \"WHJ\",\n            \"plugboard\": tuple(\"BI CW EQ FX HZ JN KY MT OV PR\".split())}\nplugs = tuple(tuple(pair) for pair in settings[\"plugboard\"])\ncontrols = []\nvectors = (\n    (99, \"XTMSY\", \"QCB\", \"NSR\", \"SIM\", \"SOM\",\n     \"TWDAZ YHQMH TJWVB DYLIS JUWPL ZELIS GDPHR HJUYH XLBGH PGWZH WVRYG TGLXP EWPHA PGOII VDBEN MGMAG HRHUD DIFHF MLYOD VLEBT ZTHAK GPUCM QMAEN SPNOS XXSKK TIDTS OIUZL YAWEJ NXLEV ZHZVZ OMDZN W\"),\n    (101, \"DEROP\", \"AIK\", \"SUD\", \"WER\", \"WLN\",\n     \"AQDEG MQTRR JYMHB ITNRQ OXTCS NFSLV NPDLR VDRRP TZXFR CWMID YQDSE XLJIK AKCWG MIQCP NEQEV DNMSL DSSWI OKEIB KPYJD PRNKH KSYNO OMGZE NLBCN SLHNX OCSEB LWEBM JDRSF GJQVH FQXTU BWYFR BYKYP LCEDF JILLV YKQTI KNPDD TDO\"),\n)\nengine_calls = 0\noracle_calls = 0\nfor number, designator, indicator_start, indicator_cipher, expected_start, expected_stop, grouped in vectors:\n    cipher = \"\".join(grouped.split())\n    machine = EnigmaMachine(settings[\"rotors\"], \"B\", \"WHJ\", indicator_start, plugs)\n    decoded_start = machine.process(indicator_cipher)\n    engine_calls += 1\n    oracle_start = _oracle(indicator_cipher, indicator_start, rotors=settings[\"rotors\"], rings=\"WHJ\", plugs=plugs)\n    oracle_calls += 1\n    assert decoded_start == oracle_start == expected_start\n    machine = EnigmaMachine(settings[\"rotors\"], \"B\", \"WHJ\", decoded_start, plugs)\n    raw_plaintext = machine.process(cipher)\n    engine_calls += 1\n    oracle_plaintext = _oracle(cipher, decoded_start, rotors=settings[\"rotors\"], rings=\"WHJ\", plugs=plugs)\n    oracle_calls += 1\n    assert raw_plaintext == oracle_plaintext\n    assert machine.windows() == expected_stop\n    replay = EnigmaMachine(settings[\"rotors\"], \"B\", \"WHJ\", decoded_start, plugs).process(raw_plaintext)\n    engine_calls += 1\n    oracle_replay = _oracle(raw_plaintext, decoded_start, rotors=settings[\"rotors\"], rings=\"WHJ\", plugs=plugs)\n    oracle_calls += 1\n    assert replay == oracle_replay == cipher\n    controls.append({\"number\": number, \"designator\": designator, \"key_date\": \"1941-07-05\",\n                     \"settings\": settings, \"indicator_start\": indicator_start, \"indicator_cipher\": indicator_cipher,\n                     \"published_start\": expected_start, \"actual_start\": decoded_start,\n                     \"published_stop\": expected_stop, \"actual_stop\": machine.windows(),\n                     \"ciphertext\": cipher, \"ciphertext_length\": len(cipher),\n                     \"raw_machine_output\": raw_plaintext,\n                     \"raw_output_sha256\": hashlib.sha256(raw_plaintext.encode(\"ascii\")).hexdigest(),\n                     \"arithmetic_oracle_agrees\": True, \"full_ciphertext_replay_matches\": True,\n                     \"independent_full_plaintext_reference_found\": False,\n                     \"scope\": \"Published indicator and stop control plus transform consistency; raw garbles are not rewritten.\",\n                     \"source_ids\": [\"july-messages\", \"july-keys\", \"master\"]})\n\nprospective = EnigmaMachine(settings[\"rotors\"], \"B\", \"WHJ\", \"OGD\", plugs).process(\"PKN\")\nengine_calls += 1\nprospective_oracle = _oracle(\"PKN\", \"OGD\", rotors=settings[\"rotors\"], rings=\"WHJ\", plugs=plugs)\noracle_calls += 1\nassert prospective == prospective_oracle == \"LXI\"\nnegative_transfer = {\"target\": \"LXACA\", \"indicator_start\": \"OGD\", \"indicator_cipher\": \"PKN\",\n                     \"output_under_july5_settings\": prospective,\n                     \"arithmetic_oracle_agrees\": True, \"eligible_key\": False,\n                     \"reason\": \"Decoding any indicator under a supplied key does not validate that key's date/network. The publisher explicitly rejects July 5 for LXACA; no target-body search was run.\"}\n\nassert len(K4_CIPHERTEXT) == 97\nassert hashlib.sha256(K4_CIPHERTEXT.encode(\"ascii\")).hexdigest() == \"eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab\"\nfor name in (\"cia-kryptos\", \"elonka-transcript\"):\n    rendered = text(name)\n    index = rendered.index(\"OBKR\")\n    tail = \"\".join(letter for letter in rendered[index:] if letter in \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\")[:97]\n    assert tail == K4_CIPHERTEXT\nassert K4_CIPHERTEXT[25:34] == \"QQPRNGKSS\"\nassert K4_CIPHERTEXT[63:74] == \"NYPVTTMZFPK\"\n\nfolds = []\nfor train, heldout in ((Crib(25, \"NORTHEAST\"), Crib(63, \"BERLINCLOCK\")),\n                       (Crib(63, \"BERLINCLOCK\"), Crib(25, \"NORTHEAST\"))):\n    fold_start = time.perf_counter()\n    report = investigate_hallucinogens(K4_CIPHERTEXT, cribs=(train,),\n                                      max_checks=5000, max_candidates=20, max_rotations=32)\n    elapsed = time.perf_counter() - fold_start\n    assert report[\"checks\"] == 5000\n    assert not report[\"search_complete\"] and report[\"stop_reason\"] == \"check_limit\"\n    assert report[\"bounds\"][\"total_requested_checks\"] == 10608\n    assert report[\"claimed_plaintext\"] is None and not report[\"correctness_known\"]\n    assert report[\"accepted_unique_plaintexts\"] == 0 and not report[\"candidates\"]\n    assert report[\"crib_rejections\"] == 5000\n    counts = [item[\"checks\"] for item in report[\"transform_checks\"]]\n    assert sum(counts) == 5000 and max(counts) - min(counts) == 1\n    evaluations = []\n    for candidate in report[\"candidates\"]:\n        prediction = candidate[\"plaintext\"][heldout.offset:heldout.offset + len(heldout.plaintext)]\n        evaluations.append({\"plaintext_sha256\": hashlib.sha256(candidate[\"plaintext\"].encode(\"ascii\")).hexdigest(),\n                            \"reserved_prediction\": prediction, \"matches_reserved_clue\": prediction == heldout.plaintext,\n                            \"scope\": \"A second public clue is a heldout consistency check, not full plaintext verification.\"})\n    folds.append({\"tool_name\": \"persona-hallucinogens\", \"elapsed_seconds\": elapsed,\n                  \"training_cribs\": [{\"offset\": train.offset, \"plaintext\": train.plaintext}],\n                  \"heldout_cribs\": [{\"offset\": heldout.offset, \"plaintext\": heldout.plaintext}],\n                  \"heldout_entered_search\": False, \"heldout_evaluations\": evaluations,\n                  \"heldout_candidates_examined\": len(evaluations),\n                  \"heldout_exact_matches\": sum(item[\"matches_reserved_clue\"] for item in evaluations),\n                  \"remaining_requested_checks\": 10608 - report[\"checks\"], \"report\": report})\n\nhashes_after = {path: digest(ROOT / path) for path in code_paths}\nassert hashes_before == hashes_after\nrecord = {\n    \"schema_version\": 1, \"experiment\": \"tractable_open_source_gate_and_k4_composition\",\n    \"date\": \"2026-10-03\", \"started_at_utc\": started,\n    \"completed_at_utc\": datetime.now(timezone.utc).isoformat(),\n    \"elapsed_seconds\": time.perf_counter() - clock_start,\n    \"objective\": \"Seek independently verifiable new readings of unresolved public ciphertexts.\",\n    \"status\": \"not_solved\", \"claimed_plaintext\": None, \"new_verified_plaintext\": False,\n    \"sources\": sources,\n    \"enigma_source_audit\": {\"open_master_entries\": open_entries, \"targets\": targets,\n                            \"july_key_dates_present\": july_dates,\n                            \"june_oct_key_dates_present\": other_dates,\n                            \"source_search_scope\": \"Publisher master list, linked incoming-message and daily-key pages, three target facsimiles, and the author's supplemental modern-breaking page. Missing keys are absent from these checked sources; their worldwide absence is not asserted.\",\n                            \"same_day_key_controls\": controls, \"rejected_key_transfer\": negative_transfer,\n                            \"eligible_open_targets\": 0, \"unknown_start_searches\": 0,\n                            \"engine_process_calls\": engine_calls, \"independent_arithmetic_oracle_calls\": oracle_calls,\n                            \"facsimiles_visually_inspected\": [\"lxaca-scan\", \"jbiyh-scan\", \"kljbo-scan\"],\n                            \"excluded_targets\": [\"Nr. 86\", \"WEUWY Nr. 138 already solved in current master list\"]},\n    \"k4\": {\"ciphertext\": K4_CIPHERTEXT, \"ciphertext_length\": 97,\n           \"ciphertext_sha256\": hashlib.sha256(K4_CIPHERTEXT.encode(\"ascii\")).hexdigest(),\n           \"independent_transcriptions_match\": [\"cia-kryptos\", \"elonka-transcript\"],\n           \"status_boundary\": \"Public cryptanalytic recovery attempt, not verified worldwide nobody-knows status: a first-party November 21, 2025 auction record says the transferred private archive included K4 plaintext and its coding system. No public full text or mechanism was obtained from the checked sources.\",\n           \"source_ids\": [\"cia-kryptos\", \"elonka-kryptos\", \"elonka-transcript\", \"rr-auction\"],\n           \"clue_coordinates\": \"Zero-based normalized plaintext offsets. NORTHEAST 25, BERLINCLOCK 63.\",\n           \"reserved_unused_clue\": \"EAST was neither fitted nor used to filter results.\",\n           \"hypothesis\": \"Plaintext = affine_inverse(permutation(ciphertext)), with identity, reversal, or left rotation by 1 through 32. Each affine multiplier is a unit modulo 26; additive key is 0 through 25. These guesses are not attributed to the artist.\",\n           \"model_transform_count\": 34, \"requested_compositions_per_fold\": 10608,\n           \"bounds_per_fold\": {\"max_checks\": 5000, \"max_candidates\": 20, \"max_rotations\": 32},\n           \"folds\": folds, \"recorded_target_checks\": sum(fold[\"report\"][\"checks\"] for fold in folds),\n           \"preliminary_identical_smoke\": {\"checks\": 10000, \"folds\": 2, \"candidates\": 0,\n                                            \"search_complete\": False, \"same_bounds_and_cribs\": True,\n                                            \"fold_elapsed_seconds\": [0.329080, 0.099150],\n                                            \"scope\": \"A preliminary console smoke preceded the recorded run; its checks are additional executions, not additional model coverage.\"},\n           \"total_target_check_executions_this_task\": 20000,\n           \"accepted_candidates\": 0, \"heldout_candidates_examined\": 0,\n           \"scope\": \"Only the 5,000 tested pairs per fold are rejected by that fitted clue. The remaining 5,608 pairs per fold are untested. No heldout candidate or complete recovered plaintext exists.\"},\n    \"provenance\": {\"python\": platform.python_version(), \"git_head\": git_head,\n                   \"git_status_at_start\": git_status,\n                   \"code_and_data_sha256\": hashes_before, \"hashes_unchanged_during_run\": True,\n                   \"execution_script\": \"work/tractable-open-attempt-2026-10-03/run_attempt.py\",\n                   \"execution_source\": Path(__file__).read_text()},\n    \"next_actions\": [\"Obtain an applicable daily key and independently solved same-network sibling before any of the audited Enigma start searches.\",\n                     \"Reconcile damaged intercept lengths and indicator readings without inventing letters.\",\n                     \"For K4, justify a new mechanism from independent evidence or explicitly complete the remaining bounded models; no candidate or new clue was produced here.\"],\n}\nOUTPUT.write_text(json.dumps(record, indent=2) + \"\\n\")\nprint(json.dumps({\"status\": record[\"status\"], \"open_enigma_sources\": len(open_entries),\n                  \"eligible_enigma_targets\": 0, \"enigma_process_calls\": engine_calls,\n                  \"arithmetic_oracle_calls\": oracle_calls, \"recorded_k4_checks\": 10000,\n                  \"additional_preliminary_checks\": 10000, \"candidates\": 0,\n                  \"heldout_examined\": 0, \"primary_sources\": len(sources),\n                  \"elapsed_seconds\": round(record[\"elapsed_seconds\"], 6)}))\n"
+  },
+  "next_actions": [
+    "Obtain an applicable daily key and independently solved same-network sibling before any of the audited Enigma start searches.",
+    "Reconcile damaged intercept lengths and indicator readings without inventing letters.",
+    "For K4, justify a new mechanism from independent evidence or explicitly complete the remaining bounded models; no candidate or new clue was produced here."
+  ],
+  "verification": {
+    "focused_test_command": ".venv/bin/python -m unittest tests.test_persona_hallucinogens_solver tests.test_persona_preferences tests.test_enigma_crib_search tests.test_enigma",
+    "focused_tests": 30,
+    "focused_test_elapsed_seconds": 0.872,
+    "focused_test_result": "OK",
+    "full_suite_run_by_this_agent": false,
+    "source_hashes_checked": 13,
+    "bounds_and_input_checks": "passed",
+    "heldout_entered_search": false
+  }
+}

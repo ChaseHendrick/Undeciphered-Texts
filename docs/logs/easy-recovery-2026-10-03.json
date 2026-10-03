@@ -1,0 +1,1014 @@
+{
+  "kind": "blind search on a published known-answer control",
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Redefence.pdf",
+  "ciphertext": "IIWRILCPECLFDHVAEIR",
+  "search_input": {
+    "max_checks": 5000,
+    "max_candidates": 20,
+    "cribs": [],
+    "supplied_key": false,
+    "supplied_plaintext": false
+  },
+  "search": {
+    "persona": "emperor",
+    "strategy": "systematic constraint fitting and finite affine/transposition enumeration",
+    "candidates": [
+      {
+        "plaintext": "IVILWARFIELDCIPHERC",
+        "family": "redefence",
+        "key": {
+          "ranks": "213",
+          "offset": 1
+        },
+        "score": -45.121383805822035,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "CIVILWARFIELDCIPHER",
+        "family": "redefence",
+        "key": {
+          "ranks": "213",
+          "offset": 0
+        },
+        "score": -45.294360296740564,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "IVCAILDCWELIRPHEIRF",
+        "family": "redefence",
+        "key": {
+          "ranks": "35124",
+          "offset": 6
+        },
+        "score": -46.411039293851914,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "IDLICHILWVPREARFIEC",
+        "family": "redefence",
+        "key": {
+          "ranks": "31425",
+          "offset": 1
+        },
+        "score": -47.24128759703898,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "IVLDCAILWEPHEIRFIRC",
+        "family": "redefence",
+        "key": {
+          "ranks": "31524",
+          "offset": 1
+        },
+        "score": -47.51716934966646,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "CIVLDCAILWEPHEIRFIR",
+        "family": "redefence",
+        "key": {
+          "ranks": "31524",
+          "offset": 0
+        },
+        "score": -47.54271985091364,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "WVCLICLAREFPIEDIIRH",
+        "family": "redefence",
+        "key": {
+          "ranks": "13452",
+          "offset": 4
+        },
+        "score": -47.72604536967103,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "IVPAILLFWEEIRDCHIRC",
+        "family": "redefence",
+        "key": {
+          "ranks": "24153",
+          "offset": 2
+        },
+        "score": -48.007952158441796,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "IFEDIPLEWHIVRCCLIAR",
+        "family": "redefence",
+        "key": {
+          "ranks": "23145",
+          "offset": 2
+        },
+        "score": -48.22240313823995,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "CIVPAILLFWEEIRDCHIR",
+        "family": "redefence",
+        "key": {
+          "ranks": "24153",
+          "offset": 1
+        },
+        "score": -48.28528398168311,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "IVLAILEFWECIRDCHIRP",
+        "family": "redefence",
+        "key": {
+          "ranks": "25143",
+          "offset": 6
+        },
+        "score": -48.62451560558793,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "CIVWALLIFCERIPDIHER",
+        "family": "redefence",
+        "key": {
+          "ranks": "14352",
+          "offset": 1
+        },
+        "score": -48.69167313197416,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "CVILDCIALEWPHERIFRI",
+        "family": "redefence",
+        "key": {
+          "ranks": "35124",
+          "offset": 0
+        },
+        "score": -48.8602245369895,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "IVILCIPFWARDERCHIEL",
+        "family": "redefence",
+        "key": {
+          "ranks": "41325",
+          "offset": 7
+        },
+        "score": -48.9207937163035,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "CIDLICHILWVPREARFIE",
+        "family": "redefence",
+        "key": {
+          "ranks": "31425",
+          "offset": 0
+        },
+        "score": -48.94559306048811,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "ILIELFIDCIPHWVERCAR",
+        "family": "redefence",
+        "key": {
+          "ranks": "1324",
+          "offset": 0
+        },
+        "score": -49.23518679101707,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "LVWACLIFPERIEDIHCRI",
+        "family": "redefence",
+        "key": {
+          "ranks": "14352",
+          "offset": 2
+        },
+        "score": -49.63804776756116,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "VILDCIALEWPHERIFRIC",
+        "family": "redefence",
+        "key": {
+          "ranks": "35124",
+          "offset": 1
+        },
+        "score": -49.65097141515757,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "IEIFACEDWCRHIPRVILL",
+        "family": "redefence",
+        "key": {
+          "ranks": "25413",
+          "offset": 3
+        },
+        "score": -49.66044021368137,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      },
+      {
+        "plaintext": "DWPIERHIVICILLARECF",
+        "family": "redefence",
+        "key": {
+          "ranks": "13245",
+          "offset": 5
+        },
+        "score": -49.78810852921665,
+        "forward_consistent": true,
+        "crib_match": true,
+        "evidence": {
+          "forward_transform": "re-encryption compared with normalized ciphertext",
+          "supplied_cribs": 0,
+          "score_scope": "repository English quadgram ranking, not correctness",
+          "neural_probability": null,
+          "independent_correctness": false
+        }
+      }
+    ],
+    "checks": 1444,
+    "max_checks": 5000,
+    "search_complete": true,
+    "stop_reason": "complete",
+    "coordinate_system": "zero-based A-Z plaintext letters after removing spaces and punctuation",
+    "actions": [
+      {
+        "tool": "affine_key_enumeration",
+        "checks": 312,
+        "models_requested": 312,
+        "search_complete": true,
+        "reason": "Finite invertible affine keys include every Caesar shift"
+      },
+      {
+        "tool": "transposition_ensemble",
+        "checks": 1132,
+        "models_requested": 1132,
+        "search_complete": true,
+        "family_checks": {
+          "rail-fence": 4,
+          "route": 0,
+          "columnar": 0,
+          "redefence": 1128
+        },
+        "reason": "Test alternative order-changing models against the same constraints"
+      }
+    ],
+    "assumptions": [
+      "ASCII A-Z plaintext coordinates; formatting is removed",
+      "Supplied cribs are premises, not independent validation",
+      "all invertible affine keys and the default finite transposition portfolio; with cribs, also substitution and repeating Vigenere/Beaufort periods through min(16, length)",
+      "English scoring and neural family advice cannot prove a decipherment"
+    ],
+    "contradictions": [],
+    "thought": {
+      "kind": "program-generated search summary",
+      "strategy": "systematic constraint fitting and finite affine/transposition enumeration",
+      "tested_checks": 1444,
+      "candidate_count": 20,
+      "next_action": "independently verify candidates"
+    },
+    "claimed_plaintext": null,
+    "correctness_known": false,
+    "happiness": null,
+    "solved_status": "unverified",
+    "scope": "Repository-specific search composition. Personality, agreement, English scores and re-encryption are not independent evidence of a historical decipherment. No unknown-script reading or Nr. 86 solution is claimed.",
+    "ledger": {
+      "input_kind": "latin",
+      "coordinate_system": "zero-based A-Z plaintext letters after removing spaces and punctuation",
+      "candidates": [
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "213",
+            "offset": 1
+          },
+          "plaintext": "IVILWARFIELDCIPHERC",
+          "score": -45.121383805822035,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "213",
+            "offset": 0
+          },
+          "plaintext": "CIVILWARFIELDCIPHER",
+          "score": -45.294360296740564,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "35124",
+            "offset": 6
+          },
+          "plaintext": "IVCAILDCWELIRPHEIRF",
+          "score": -46.411039293851914,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "31425",
+            "offset": 1
+          },
+          "plaintext": "IDLICHILWVPREARFIEC",
+          "score": -47.24128759703898,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "31524",
+            "offset": 1
+          },
+          "plaintext": "IVLDCAILWEPHEIRFIRC",
+          "score": -47.51716934966646,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "31524",
+            "offset": 0
+          },
+          "plaintext": "CIVLDCAILWEPHEIRFIR",
+          "score": -47.54271985091364,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "13452",
+            "offset": 4
+          },
+          "plaintext": "WVCLICLAREFPIEDIIRH",
+          "score": -47.72604536967103,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "24153",
+            "offset": 2
+          },
+          "plaintext": "IVPAILLFWEEIRDCHIRC",
+          "score": -48.007952158441796,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "23145",
+            "offset": 2
+          },
+          "plaintext": "IFEDIPLEWHIVRCCLIAR",
+          "score": -48.22240313823995,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "24153",
+            "offset": 1
+          },
+          "plaintext": "CIVPAILLFWEEIRDCHIR",
+          "score": -48.28528398168311,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "25143",
+            "offset": 6
+          },
+          "plaintext": "IVLAILEFWECIRDCHIRP",
+          "score": -48.62451560558793,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "14352",
+            "offset": 1
+          },
+          "plaintext": "CIVWALLIFCERIPDIHER",
+          "score": -48.69167313197416,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "35124",
+            "offset": 0
+          },
+          "plaintext": "CVILDCIALEWPHERIFRI",
+          "score": -48.8602245369895,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "41325",
+            "offset": 7
+          },
+          "plaintext": "IVILCIPFWARDERCHIEL",
+          "score": -48.9207937163035,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "31425",
+            "offset": 0
+          },
+          "plaintext": "CIDLICHILWVPREARFIE",
+          "score": -48.94559306048811,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "1324",
+            "offset": 0
+          },
+          "plaintext": "ILIELFIDCIPHWVERCAR",
+          "score": -49.23518679101707,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "14352",
+            "offset": 2
+          },
+          "plaintext": "LVWACLIFPERIEDIHCRI",
+          "score": -49.63804776756116,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "35124",
+            "offset": 1
+          },
+          "plaintext": "VILDCIALEWPHERIFRIC",
+          "score": -49.65097141515757,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "25413",
+            "offset": 3
+          },
+          "plaintext": "IEIFACEDWCRHIPRVILL",
+          "score": -49.66044021368137,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "13245",
+            "offset": 5
+          },
+          "plaintext": "DWPIERHIVICILLARECF",
+          "score": -49.78810852921665,
+          "neural_probability": null,
+          "re_encryption_matches": true,
+          "constraints_match": true
+        }
+      ],
+      "hypotheses": [],
+      "checks": 1444,
+      "consistency_checks": 1444,
+      "search_complete": true,
+      "stop_reason": "complete",
+      "elapsed_seconds": 0.41508316597901285,
+      "bounds": {
+        "max_checks": 5000,
+        "max_candidates": 20,
+        "max_symbols": 512,
+        "max_period": 16,
+        "transposition_max_width": 8,
+        "transposition_max_rails": 5,
+        "morse_timeout_seconds": null,
+        "check_unit": "one tested key or model setting, with applicable forward consistency comparison",
+        "completion_scope": "all invertible affine keys and the default finite transposition portfolio; with cribs, also substitution and repeating Vigenere/Beaufort periods through min(16, length)",
+        "numeric_terminal_period_is_framing": null,
+        "neural_inference_is_advisory_overhead": true
+      },
+      "neural_advice": {
+        "kind": "family_ranking",
+        "claimed_plaintext": null,
+        "candidates": [
+          {
+            "family": "m209",
+            "probability": 0.23750538319945513
+          },
+          {
+            "family": "enigma",
+            "probability": 0.18561204200152812
+          },
+          {
+            "family": "substitution",
+            "probability": 0.11523712692373664
+          },
+          {
+            "family": "two-square",
+            "probability": 0.11350477160207356
+          },
+          {
+            "family": "affine",
+            "probability": 0.06279935924351565
+          },
+          {
+            "family": "rail-fence",
+            "probability": 0.05987787306707419
+          },
+          {
+            "family": "porta",
+            "probability": 0.04628373741861593
+          },
+          {
+            "family": "four-square",
+            "probability": 0.04357712968587173
+          },
+          {
+            "family": "beaufort",
+            "probability": 0.035631474157485285
+          },
+          {
+            "family": "keel-sieve",
+            "probability": 0.02010170683826088
+          },
+          {
+            "family": "caesar",
+            "probability": 0.01926566210263168
+          },
+          {
+            "family": "vigenere",
+            "probability": 0.013394883220896991
+          },
+          {
+            "family": "adfgvx",
+            "probability": 0.011762027989851207
+          },
+          {
+            "family": "prism-latch",
+            "probability": 0.008672247251094656
+          },
+          {
+            "family": "columnar-transposition",
+            "probability": 0.008666606121718283
+          },
+          {
+            "family": "playfair",
+            "probability": 0.008240166979088786
+          },
+          {
+            "family": "lumen-braid",
+            "probability": 0.006416364425345814
+          },
+          {
+            "family": "autokey",
+            "probability": 0.003192630153037582
+          },
+          {
+            "family": "bifid",
+            "probability": 0.0002580008077013865
+          },
+          {
+            "family": "keyed-vigenere",
+            "probability": 8.06811016340855e-07
+          }
+        ],
+        "uncertain": true,
+        "uncertainty_policy": "fixed probability and margin heuristics, not an OOD detector",
+        "model_sha256": "d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825",
+        "scope": "Ranks trained known cipher families only. A family probability does not validate a plaintext.",
+        "status": "available"
+      },
+      "premises": [
+        {
+          "kind": "input",
+          "alphabet": "latin",
+          "symbols": 19,
+          "coordinates": "zero-based A-Z plaintext letters after removing spaces and punctuation"
+        },
+        {
+          "kind": "constraints",
+          "known_positions": 0,
+          "lexicon_words": null,
+          "independent_validation": false,
+          "scope": "Supplied premises constrain the search and are not held-out evidence."
+        },
+        {
+          "kind": "objective",
+          "value": "seek independently verifiable solutions to unresolved ciphers"
+        },
+        {
+          "kind": "neural_advice",
+          "status": "available",
+          "validation_evidence": false
+        }
+      ],
+      "actions": [
+        {
+          "tool": "affine_key_enumeration",
+          "checks": 312,
+          "models_requested": 312,
+          "search_complete": true,
+          "reason": "Finite invertible affine keys include every Caesar shift"
+        },
+        {
+          "tool": "transposition_ensemble",
+          "checks": 1132,
+          "models_requested": 1132,
+          "search_complete": true,
+          "family_checks": {
+            "rail-fence": 4,
+            "route": 0,
+            "columnar": 0,
+            "redefence": 1128
+          },
+          "reason": "Test alternative order-changing models against the same constraints"
+        }
+      ],
+      "results": [
+        {
+          "tool": "affine_key_enumeration",
+          "crib_rejections": 0
+        },
+        {
+          "tool": "transposition_ensemble",
+          "crib_rejections": 0,
+          "duplicate_plaintexts": 567
+        },
+        {
+          "kind": "candidate_summary",
+          "retained": 20,
+          "partial_hypotheses_retained": 0,
+          "consistency_checks": 1444,
+          "correctness_known": false,
+          "independent_cases": 0
+        }
+      ],
+      "contradictions": [],
+      "next_actions": [
+        {
+          "stage": "verify_case",
+          "reason": "Seek an independent key, archival plaintext, or held-out evidence that was not supplied to candidate generation"
+        }
+      ],
+      "simulated_affect": {
+        "simulated": true,
+        "literal_feelings_or_sentience": false,
+        "temperament": "balanced",
+        "states": {
+          "curiosity": 0.5,
+          "caution": 1.0,
+          "frustration": 0.2
+        },
+        "happiness": null,
+        "meaning": "Display-only control telemetry, with no verified reward until independent correctness evidence exists."
+      },
+      "thought": {
+        "kind": "program_generated_plan_summary",
+        "literal_private_thought": false,
+        "plan": [
+          "verify_case"
+        ],
+        "basis": "Recorded constraints, bounded model results, missing independent evidence, and alternative explanations."
+      },
+      "evaluation": {
+        "independent_cases": 0,
+        "correct": null,
+        "failures": null,
+        "accuracy": null,
+        "eligible": null,
+        "recommendation": "collect_independent_cases",
+        "policy": {
+          "min_cases": 20,
+          "min_accuracy": 0.8,
+          "max_failures": 5
+        },
+        "scope": "Caller-supplied independent evaluations only; unresolved searches do not count as wrong answers."
+      },
+      "objective": "seek independently verifiable solutions to unresolved ciphers",
+      "correctness_known": false,
+      "happiness": null,
+      "claimed_plaintext": null,
+      "solved_status": "unverified",
+      "ranking": "English quadgram score, then available neural family probability as advice; neither is correctness",
+      "scope": "Repository-specific investigative composition of bounded known cipher models. Supplied constraints, English scores, neural family advice, and re-encryption do not independently verify a decipherment. No unknown-script reading or solution to army message Nr. 86 is claimed."
+    },
+    "hypotheses": [],
+    "conditional_predictions": [],
+    "prediction_scope": "Partial hypotheses keep unknown positions; complete witnesses are conditional on their cipher model",
+    "neural_advice": {
+      "kind": "family_ranking",
+      "claimed_plaintext": null,
+      "candidates": [
+        {
+          "family": "m209",
+          "probability": 0.23750538319945513
+        },
+        {
+          "family": "enigma",
+          "probability": 0.18561204200152812
+        },
+        {
+          "family": "substitution",
+          "probability": 0.11523712692373664
+        },
+        {
+          "family": "two-square",
+          "probability": 0.11350477160207356
+        },
+        {
+          "family": "affine",
+          "probability": 0.06279935924351565
+        },
+        {
+          "family": "rail-fence",
+          "probability": 0.05987787306707419
+        },
+        {
+          "family": "porta",
+          "probability": 0.04628373741861593
+        },
+        {
+          "family": "four-square",
+          "probability": 0.04357712968587173
+        },
+        {
+          "family": "beaufort",
+          "probability": 0.035631474157485285
+        },
+        {
+          "family": "keel-sieve",
+          "probability": 0.02010170683826088
+        },
+        {
+          "family": "caesar",
+          "probability": 0.01926566210263168
+        },
+        {
+          "family": "vigenere",
+          "probability": 0.013394883220896991
+        },
+        {
+          "family": "adfgvx",
+          "probability": 0.011762027989851207
+        },
+        {
+          "family": "prism-latch",
+          "probability": 0.008672247251094656
+        },
+        {
+          "family": "columnar-transposition",
+          "probability": 0.008666606121718283
+        },
+        {
+          "family": "playfair",
+          "probability": 0.008240166979088786
+        },
+        {
+          "family": "lumen-braid",
+          "probability": 0.006416364425345814
+        },
+        {
+          "family": "autokey",
+          "probability": 0.003192630153037582
+        },
+        {
+          "family": "bifid",
+          "probability": 0.0002580008077013865
+        },
+        {
+          "family": "keyed-vigenere",
+          "probability": 8.06811016340855e-07
+        }
+      ],
+      "uncertain": true,
+      "uncertainty_policy": "fixed probability and margin heuristics, not an OOD detector",
+      "model_sha256": "d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825",
+      "scope": "Ranks trained known cipher families only. A family probability does not validate a plaintext.",
+      "status": "available"
+    },
+    "next_actions": [
+      {
+        "stage": "verify_case",
+        "reason": "Seek an independent key, archival plaintext, or held-out evidence that was not supplied to candidate generation"
+      }
+    ],
+    "bounds": {
+      "max_checks": 5000,
+      "max_candidates": 20,
+      "max_symbols": 512,
+      "max_period": 16,
+      "transposition_max_width": 8,
+      "transposition_max_rails": 5,
+      "morse_timeout_seconds": null,
+      "check_unit": "one tested key or model setting, with applicable forward consistency comparison",
+      "completion_scope": "all invertible affine keys and the default finite transposition portfolio; with cribs, also substitution and repeating Vigenere/Beaufort periods through min(16, length)",
+      "numeric_terminal_period_is_framing": null,
+      "neural_inference_is_advisory_overhead": true
+    },
+    "legacy_preference_scope": "These are preferences among candidates, not decipherments of Nr. 86, K4, or an unknown script."
+  },
+  "independent_post_search_comparison": {
+    "published_plaintext": "CIVILWARFIELDCIPHER",
+    "recovered_rank": 2,
+    "recovered_sha256": "698e043259da660266ffaf8c3d1c7c36659693be6795cb8da90631ef7f4060d6",
+    "matches_published_reference": true
+  },
+  "new_historical_solution": false
+}

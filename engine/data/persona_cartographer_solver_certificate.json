@@ -1,0 +1,17 @@
+{
+  "tool_name": "persona-cartographer",
+  "fixture_kind": "shared constructed repository harbor-prose control",
+  "ciphertext": "HROLRTIEOANTELBSEHQWTTFEOEETISHHFHRTHEKTENETENOTRISOEHBNEENMATANLTKMDRBCEHBOWGSTBLWFWHLLEISDDHTEOTWHNHDENNEAREAGCBRDADSAOTFTUYHEODNHCANIITASEUERNWCALYSUFAAATT",
+  "plaintext": "THEHARBORBELLRANGTWICEBEFOREDAWNANDTHESMALLBOATSLEFTTHEQUAYWITHNETSFOLDEDONTHEDECKATHINMISTHIDTHEFARSHOREBUTTHECREWKNEWTHECHANNELBYTHESOUNDOFWATERAGAINSTSTONE",
+  "plaintext_sha256": "7797601744519bec546b76f20b9f50c5bd154afc8a1414e989266c46b252e418",
+  "search_limits": {
+    "max_width": 32,
+    "max_rails": 5,
+    "max_checks": 5000,
+    "max_candidates": 20
+  },
+  "checks": 1136,
+  "search_complete": true,
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Redefence.pdf",
+  "note": "Layout-focused composition of the existing transposition portfolio. No key or plaintext is passed to search. The original synthetic fixture is shared with other tests, so agreement is not independent evidence of historical correctness."
+}

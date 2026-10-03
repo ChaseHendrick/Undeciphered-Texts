@@ -1,0 +1,22 @@
+{
+  "cipher_name": "periodic_gromark",
+  "instance": "published_worked_example",
+  "mode": "known_key",
+  "plaintext": "WINTRYSHOWERSWILLCONTINUEFORTHENEXTFEWDAYSACCORDINGTOTHEFORECAST",
+  "ciphertext": "RHNAAXNRUZBNIUARXCRTPATBRLIGDSVCIRCVOYPVRAAZZMUSREQYEVMMURGWTLUD",
+  "printed_ciphertext": "264351 RHNAAX NRUZBN IUARXC RTPATB RLIGDS VCIRCV OYPVRA AZZMUS REQYEV MMURGW TLUD 4.",
+  "key": "ENIGMA",
+  "keys": {"keyword": "ENIGMA"},
+  "period": 6,
+  "derived_primer": "264351",
+  "ciphertext_alphabet": "AJRXEBKSYGFPVIDOUMHQWNCLTZ",
+  "keyword_group_offsets": [4, 21, 13, 9, 17, 0],
+  "running_key": "2643518078698754575299227181498995377848045228497402361425975674",
+  "final_check_digit": "4",
+  "plaintext_sha256": "ff83a6edb6991e71843fc902be3c83e96c7afff3dfa0af5f84bff6dbf1ea8d90",
+  "hash_encoding": "normalized uppercase A-Z letters, ASCII bytes",
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/PeriodicGromark.pdf",
+  "source_pdf_sha256": "0c9e566b76a61af11d36572560a468550cf7b49501150c8523e06091436e7a13",
+  "source_inspected": "2026-10-03",
+  "note": "Complete independently printed 64-letter ACA worked example, visually checked before implementation. ENIGMA's alphabetical column ranks generate the primer, which is extended by adjacent chain addition modulo ten. Each six-letter group starts the mixed cipher alphabet at its next keyword letter. The printed leading primer and trailing check digit are framing, not encrypted letters. This certifies supplied-key decryption only. The implementation explicitly supports keywords with 2 through 9 distinct letters and assumes no convention for wider decimal ranks."
+}

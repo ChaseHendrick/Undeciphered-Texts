@@ -1,0 +1,100 @@
+{
+  "kind": "independent_corpus_family_audit",
+  "claimed_plaintext": null,
+  "correct": 429,
+  "total": 480,
+  "accuracy": 0.89375,
+  "top3_correct": 476,
+  "nll": 0.2780028082902963,
+  "seed": 20262003,
+  "samples_per_class": 24,
+  "corpus_sha256": "4331cc10d4e0f3015b9c06a411f6521e57a71a8fb87726a1986dd006200d1e2f",
+  "model_sha256": "d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825",
+  "elapsed_seconds": 3.353814666857943,
+  "per_family": {
+    "caesar": {
+      "correct": 24,
+      "total": 24
+    },
+    "vigenere": {
+      "correct": 22,
+      "total": 24
+    },
+    "keyed-vigenere": {
+      "correct": 20,
+      "total": 24
+    },
+    "substitution": {
+      "correct": 24,
+      "total": 24
+    },
+    "playfair": {
+      "correct": 23,
+      "total": 24
+    },
+    "bifid": {
+      "correct": 24,
+      "total": 24
+    },
+    "two-square": {
+      "correct": 22,
+      "total": 24
+    },
+    "four-square": {
+      "correct": 23,
+      "total": 24
+    },
+    "adfgvx": {
+      "correct": 24,
+      "total": 24
+    },
+    "columnar-transposition": {
+      "correct": 20,
+      "total": 24
+    },
+    "beaufort": {
+      "correct": 23,
+      "total": 24
+    },
+    "porta": {
+      "correct": 22,
+      "total": 24
+    },
+    "enigma": {
+      "correct": 7,
+      "total": 24
+    },
+    "m209": {
+      "correct": 12,
+      "total": 24
+    },
+    "keel-sieve": {
+      "correct": 24,
+      "total": 24
+    },
+    "lumen-braid": {
+      "correct": 24,
+      "total": 24
+    },
+    "prism-latch": {
+      "correct": 24,
+      "total": 24
+    },
+    "rail-fence": {
+      "correct": 19,
+      "total": 24
+    },
+    "affine": {
+      "correct": 24,
+      "total": 24
+    },
+    "autokey": {
+      "correct": 24,
+      "total": 24
+    }
+  },
+  "scope": "One fixed model on previously unused prose and fresh synthetic keys; conditional on the disclosed family generators.",
+  "source_metadata": "neural_audit_wells_source.json",
+  "role": "Final audit after model selection; not used in this run to train, select or calibrate.",
+  "model_name": "Bob the Neural Net"
+}

@@ -1,0 +1,17 @@
+{
+  "tool_name": "persona-detective",
+  "persona": "detective",
+  "ciphertext": "HYEYOFFRRVGRDCAPKHHYEFKEZVDYKXHVROKWWUEGNIARPNTHKRIGKHTFRGNIBZGUZXFRIACLWCEGNIFRIALIZCOAZLSJIYKRHGLNZJCIM",
+  "crib": "LETTERBESIDE",
+  "expected_plaintext": "THELIBRARIANPLACEDTHESEALEDLETTERBESIDETHEMAPANDWAITEDFORTHENIGHTTRAINWHILETHERAINFELLONTHESILENTPLATFORM",
+  "plaintext_sha256": "dfd03a8d93beb3f5ab7952f46661d9f84ba3b5bee885108f8db343826220e74f",
+  "recovered_key": {
+    "keyword": "ORANGE",
+    "period": 6,
+    "crib_offset": 27
+  },
+  "checks": 940,
+  "key_supplied_to_solver": false,
+  "crib_offset_supplied_to_solver": false,
+  "note": "Original synthetic literal Vigenere control frozen before implementation, encrypted with direct modular arithmetic. Only twelve crib letters are provided, with no key or offset. The method recovers the remaining plaintext within its repeating-key assumptions. Hash covers actual recovered ASCII plaintext. No historical decipherment or independent correctness from crib fit is claimed."
+}

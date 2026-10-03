@@ -1,5 +1,8 @@
 # Persona preferences among candidates
 
+The three personas also have separate [ciphertext solver APIs](persona-solvers.md).
+The older `choose` and `covers` interfaces documented here remain sentence preferences.
+
 Three small solvers each see two candidate sentences and keep the one that
 matches a fixed word list. The kept sentence is a sentence written for this
 repository. The other sentence is a plain alternative that does not use those

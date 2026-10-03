@@ -1,0 +1,33 @@
+{
+  "tool_name": "persona-hallucinogens",
+  "kind": "constructed composition fixture, not a historical solve",
+  "source_urls": [
+    "https://en.wikipedia.org/wiki/Affine_cipher"
+  ],
+  "algorithm_reference": "Existing engine/solvers/affine.py and docs/affine.md; reversal composition is repository-specific.",
+  "persona": "hallucinogens",
+  "ciphertext": "FQXGZGZQHDTDSFGDBMXYQNXZFAGPKCFQQDARFAGBFQVBFSRFAGGNKFSXAZSDMFAGYHAGZHJQHAGDVRFYFAGQXYFYCXMZGFQAGHBPDNLFAGGMFCZGDXKCCDJZFAGYQDQBDYFSXMFKFRHBGTQDSCCFKSXKSDAFAG",
+  "search_limits": {
+    "max_checks": 5000,
+    "max_candidates": 20,
+    "max_rotations": 0
+  },
+  "plaintext_sha256": "7797601744519bec546b76f20b9f50c5bd154afc8a1414e989266c46b252e418",
+  "recovered_key": {
+    "transform": {
+      "kind": "reverse",
+      "offset": 0
+    },
+    "affine": {
+      "a": 7,
+      "b": 3
+    }
+  },
+  "checks": 624,
+  "search_complete": true,
+  "forward_consistent": true,
+  "cribs_supplied": false,
+  "key_supplied": false,
+  "claimed_plaintext": null,
+  "scope": "Blind candidate recovery for one literal independently constructed affine-then-reversal fixture. English ranking is not independent correctness; no historical novelty or solution claim."
+}
