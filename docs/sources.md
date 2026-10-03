@@ -83,3 +83,8 @@
 - https://www.cryptogram.org/downloads/aca.info/ciphers/CMBifid.pdf
 - https://www.cryptogram.org/downloads/aca.info/ciphers/Bifid.pdf
 - See [cm-bifid.md](cm-bifid.md)
+
+## Seriated Playfair (ACA known keyword and period; not an unknown script)
+- https://www.cryptogram.org/downloads/aca.info/ciphers/SeriatedPlayfair.pdf
+- https://www.cryptogram.org/downloads/aca.info/ciphers/Playfair.pdf
+- See [seriated-playfair.md](seriated-playfair.md)

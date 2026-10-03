@@ -1,0 +1,18 @@
+{
+  "cipher_name": "seriated_playfair",
+  "name": "seriated_playfair",
+  "plaintext": "COMEQUICKLYWENEEDHXELPIMMEDIATELYTOM",
+  "ciphertext": "NLBCSPCDFGXZQQCDCMGCGQTBHCFTRHFGWHGB",
+  "key": "LOGARITHM",
+  "keys": {
+    "keyword": "LOGARITHM",
+    "period": 6,
+    "sentence": "Come quickly we need help immediately. tom.",
+    "square": "LOGARITHMBCDEFKNPQSUVWXYZ"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/SeriatedPlayfair.pdf",
+  "source_pdf_sha256": "8cce8115f416d4a6b8d133190cd26e0ca4aea3332ae432f0a366b66db08da94d",
+  "message": "Come quickly we need help immediately. tom.",
+  "plaintext_sha256": "358e92b93bd1ba7e431af4d52e89802773480e2dbc2591abeab272b452e68101",
+  "note": "Verification certificate for the ACA seriated Playfair sheet worked example. Keyword LOGARITHM (5x5 square omitting J). Period 6. The sheet prints the plaintext as 'Come quickly we need help immediately. tom.' and the ciphertext as NLBCS PCDFG XZQQC DCMGC GQTBH CFTRH FGWHG B. A null X is inserted where a vertical pair would be a double letter (the E of help under the E that starts the second group) and that X is included in plaintext. Spaces and the five-letter grouping are not enciphered. plaintext_sha256 is the SHA-256 of COMEQUICKLYWENEEDHXELPIMMEDIATELYTOM. source_pdf_sha256 is the SHA-256 of the fetched PDF. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, Zodiac, Beale, McCormick, or army message Nr. 86."
+}
