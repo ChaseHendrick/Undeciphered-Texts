@@ -1,0 +1,30 @@
+{
+  "disclaimer": "Lookup of published Oracc Sign List readings for a few known signs. This is not a decipherment of undeciphered or unknown tablets.",
+  "source": {
+    "title": "Oracc Sign List (osl.asl)",
+    "url": "https://github.com/oracc/osl/blob/master/00lib/osl.asl",
+    "pinned_url": "https://github.com/oracc/osl/blob/dcee28e57d9387638c122e3435a98ceb6ea9e5e2/00lib/osl.asl",
+    "commit": "dcee28e57d9387638c122e3435a98ceb6ea9e5e2",
+    "commit_date": "2026-09-16",
+    "project": "http://oracc.org/osl/",
+    "format": "http://oracc.org/osl/asloslfileformat/",
+    "unicode_note": "https://www.unicode.org/reports/tr56/",
+    "license": "CC BY-SA (The OSL Project)"
+  },
+  "signs": [
+    {
+      "name": "A",
+      "unicode": "U+12000",
+      "character": "𐌀",
+      "uname": "CUNEIFORM SIGN A",
+      "values": ["a"]
+    },
+    {
+      "name": "AN",
+      "unicode": "U+1202D",
+      "character": "𐌭",
+      "uname": "CUNEIFORM SIGN AN",
+      "values": ["an", "dingir"]
+    }
+  ]
+}
