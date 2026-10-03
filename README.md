@@ -32,7 +32,7 @@ Python **3.10+**. Standard library only—no third-party packages required.
 python3 -m engine demo  # or: python -m engine demo              # recovers built-in known cases; writes DEMO.md
 python -m unittest discover -s tests -v
 python -m engine analyze "Wkh kdueru ehoo udqj"
-python -m engine solve caesar "Wkh kduor ehoo udqj"
+python -m engine solve caesar "Wkh kdueru ehoo udqj"
 python -m engine solve keyed-vigenere EMUFPHZLRFAXYUSDJKZLDKRNSHGNFIVJYQTQUXQBQVYUVLLTREVJYQTMKYRDMFD --key PALIMPSEST --alphabet KRYPTOS --index K
 python demos/run_demo.py           # same demo path; rewrites DEMO.md
 ```
