@@ -1,0 +1,632 @@
+{
+  "schema_version": 1,
+  "audit": "k4-public-technical-evidence",
+  "checked_date": "2026-10-03",
+  "completed_at_utc": "2026-10-03T07:52:39.395252+00:00",
+  "historical_solution_claimed": false,
+  "claimed_plaintext": null,
+  "new_verified_plaintext": false,
+  "new_model_experiments_executed_in_this_audit": false,
+  "scope_exclusions": [
+    "Private archival plaintext inspection",
+    "Reference verifier submissions or fees",
+    "Nr. 86",
+    "Claiming absence of public disclosure proves nobody solved K4"
+  ],
+  "status": {
+    "reference_text": "Private archival reconstruction and artist-supplied verifier reported by identified participants",
+    "public_reproducible_full_method": "Not established by checked sources",
+    "current_custodian": "Paradigm, self-identified 2026-06-12",
+    "current_custodian_label": "Unsolved on checked K4 page",
+    "limits": "Source-bounded status; no independent audit of answer custody, verifier implementation or underlying auction charts",
+    "sources": [
+      "k4-auction-discovery",
+      "k4-auction-lot",
+      "k4-auction-sale",
+      "k4-paradigm-announcement",
+      "k4-paradigm-current"
+    ]
+  },
+  "ciphertext": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+  "ciphertext_length": 97,
+  "ciphertext_encoding": "ASCII",
+  "ciphertext_hash_definition": "SHA-256 of exact 97 ASCII uppercase letter bytes; no whitespace or newline",
+  "ciphertext_sha256": "eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab",
+  "transcription_proofs": [
+    {
+      "source_url": "https://www.cia.gov/legacy/headquarters/kryptos-sculpture/",
+      "source_body_sha256": "3067b304e1fbb9bd04a634a39203216bb6e587a2f2fe9cdea83cb83423100b60",
+      "source_body_bytes": 555465,
+      "extracted_length": 97,
+      "extracted_sha256": "eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab",
+      "method": "visible HTML tail OBKR through KCAR after stripping markup and whitespace",
+      "tls": "default verified HTTPS; no unverified context"
+    },
+    {
+      "source_url": "https://www.elonka.com/kryptos/transcript.html",
+      "source_body_sha256": "4ce3ce302046b85612c5fcd119ab57cbe4bc9ddf291d234d90aee3a6bbdf0aae",
+      "source_body_bytes": 4050,
+      "extracted_length": 97,
+      "extracted_sha256": "eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab",
+      "method": "visible HTML tail OBKR through KCAR after stripping markup and whitespace",
+      "tls": "default verified HTTPS; no unverified context"
+    },
+    {
+      "source_url": "https://www.paradigm.xyz/kryptos/k4",
+      "source_body_sha256": "4fb3f8dd4950cb30f9d961025fcec8a02a85397888e457ccf69106c7294ff264",
+      "source_body_bytes": 51371,
+      "extracted_length": 97,
+      "extracted_sha256": "eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab",
+      "method": "visible standalone letter followed by numbered cell index 1 through 97",
+      "tls": "default verified HTTPS; no unverified context"
+    }
+  ],
+  "physical_tail_rows": [
+    "OBKR",
+    "UOXOGHULBSOLIFBBWFLRVQQPRNGKSSO",
+    "TWTQSJQSSEKZZWATJKLUDIAWINFBNYP",
+    "VTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR"
+  ],
+  "physical_tail_row_lengths": [
+    4,
+    31,
+    31,
+    31
+  ],
+  "coordinates": "Original plaintext letter positions; zero-based offsets and exclusive ends; one-based inclusive ranges supplied separately. Published cribs must pass through a candidate permutation, not be silently realigned.",
+  "question_mark": "Immediately preceding question mark excluded from 97-letter K4 stream; no inserted/deleted letters assumed",
+  "clues": [
+    {
+      "plaintext": "EAST",
+      "offset_zero_based": 21,
+      "end_zero_based_exclusive": 25,
+      "start_one_based": 22,
+      "end_one_based_inclusive": 25,
+      "ciphertext": "FLRV",
+      "private_disclosure": "2020-04",
+      "public_authorization": "2020-08",
+      "date_precision": "month",
+      "sources": [
+        "k4-participant-clues"
+      ],
+      "evidence_grade": "participant_report_of_artist_email; original email not inspected"
+    },
+    {
+      "plaintext": "NORTHEAST",
+      "offset_zero_based": 25,
+      "end_zero_based_exclusive": 34,
+      "start_one_based": 26,
+      "end_one_based_inclusive": 34,
+      "ciphertext": "QQPRNGKSS",
+      "public_report_date": "2020-01-29",
+      "date_precision": "day_reported_by_participant_bibliography",
+      "sources": [
+        "k4-participant-clues"
+      ],
+      "unavailable_primary_url": "https://www.nytimes.com/interactive/2020/01/29/climate/kryptos-sculpture-final-clue.html"
+    },
+    {
+      "plaintext": "BERLIN",
+      "offset_zero_based": 63,
+      "end_zero_based_exclusive": 69,
+      "start_one_based": 64,
+      "end_one_based_inclusive": 69,
+      "ciphertext": "NYPVTT",
+      "announcement_date": "2010-11-20",
+      "contemporary_report_date": "2010-11-21",
+      "date_precision": "day; report explicitly says Saturday",
+      "sources": [
+        "k4-berlin-contemporary",
+        "k4-participant-clues"
+      ]
+    },
+    {
+      "plaintext": "CLOCK",
+      "offset_zero_based": 69,
+      "end_zero_based_exclusive": 74,
+      "start_one_based": 70,
+      "end_one_based_inclusive": 74,
+      "ciphertext": "MZFPK",
+      "public_report_date": "2014-11-20",
+      "date_precision": "day",
+      "sources": [
+        "k4-clock-interview",
+        "k4-participant-clues"
+      ]
+    }
+  ],
+  "known_letter_count": 24,
+  "construction_statements": [
+    {
+      "statement": "English and additional masking reported, but no key schedule or formula specified",
+      "source": "k4-scheidt-interview",
+      "grade": "First-person edited interview; final artist changes uncertain"
+    },
+    {
+      "statement": "Artist says he modified and developed systems",
+      "source": "k4-sanborn-interview",
+      "grade": "First-person edited interview; no replayable recipe"
+    },
+    {
+      "statement": "Substitution/transposition demonstrations and masking discussion",
+      "source": "k4-pbs-transcript",
+      "grade": "Broadcast testimony; presenter vowel/phonetic examples and Gillogly conjecture not artist constraints"
+    },
+    {
+      "statement": "World Clock identified; Egypt 1986 and Wall fall 1989 implicated; message-delivery theme",
+      "source": "k4-november-talk",
+      "grade": "First-hand talk coverage; linked original letter not examined",
+      "aligned_plaintext": false
+    },
+    {
+      "statement": "Secrecy/power semantic hint",
+      "source": "k4-august-artist-letter",
+      "grade": "Artist authored letter; no new aligned crib"
+    }
+  ],
+  "derived_constraints": [
+    {
+      "id": "direct-single-substitution",
+      "type": "derived_conditional_exclusion",
+      "positions_one_based": [
+        26,
+        27
+      ],
+      "ciphertext": "QQ",
+      "plaintext": "NO",
+      "result": "No direct one-to-one fixed substitution can satisfy both",
+      "assumptions": [
+        "Published clue alignment",
+        "No intervening permutation"
+      ],
+      "sources": [
+        "k4-participant-clues"
+      ]
+    },
+    {
+      "id": "self-encipherment",
+      "type": "derived_conditional_exclusion",
+      "position_one_based": 74,
+      "ciphertext": "K",
+      "plaintext": "K",
+      "result": "No direct transform forbidding self-encipherment can satisfy this position",
+      "assumptions": [
+        "Published clue alignment",
+        "No intervening permutation"
+      ],
+      "sources": [
+        "k4-clock-interview"
+      ]
+    },
+    {
+      "id": "alphabet-cardinality",
+      "type": "derived_conditional_exclusion",
+      "distinct_ciphertext_letters": 26,
+      "result": "A literal 25-symbol output alphabet requires an explicit exception or changed transcription",
+      "assumptions": [
+        "Exact observed Latin-letter transcription"
+      ],
+      "sources": [
+        "k4-cia",
+        "k4-participant-transcription",
+        "k4-paradigm-current"
+      ]
+    },
+    {
+      "id": "length",
+      "type": "verified_input_constraint",
+      "length": 97,
+      "prime": true,
+      "result": "A complete unpadded rectangle of this stream has no nontrivial integer width",
+      "assumptions": [
+        "No null insertion/removal or padding"
+      ],
+      "sources": [
+        "k4-cia",
+        "k4-participant-transcription"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Character count",
+      "conflicting_sources": {
+        "k4-scheidt-interview": 98,
+        "k4-pbs-transcript": 98,
+        "k4-november-talk": 79
+      },
+      "resolution": "Keep verified 97-byte input; discrepancies do not authorize edits"
+    },
+    {
+      "topic": "Scheidt final-method knowledge",
+      "sources": [
+        "k4-auction-discovery",
+        "k4-scheidt-interview",
+        "k4-sanborn-interview"
+      ],
+      "resolution": "Later auction asserts knowledge; older direct interviews express uncertainty. Private present knowledge not determined."
+    },
+    {
+      "topic": "Archive closure scope",
+      "sources": [
+        "k4-auction-discovery",
+        "k4-smithsonian-finding-aid"
+      ],
+      "resolution": "2025 commercial account reports 50-year seal; revised 2026 custodian finding aid lists collection access conditions. Item restrictions not determined."
+    },
+    {
+      "topic": "Berlin clock identity",
+      "sources": [
+        "k4-clock-interview",
+        "k4-november-talk"
+      ],
+      "resolution": "Do not carry earlier Binninger speculation into a required mechanism; newer talk identifies World Clock."
+    },
+    {
+      "topic": "Artist page status freshness",
+      "source": "k4-artist-current-page",
+      "resolution": "Undated legacy future-sale prose coexists with newer custodian link; not a new global-status assertion."
+    }
+  ],
+  "unavailable_originals": [
+    {
+      "url": "https://www.nytimes.com/2010/11/21/us/21code.html",
+      "result": "web tool unavailable; original article not examined"
+    },
+    {
+      "url": "https://www.nytimes.com/interactive/2020/01/29/climate/kryptos-sculpture-final-clue.html",
+      "result": "web tool unavailable and verified HTTPS HTTP 403"
+    },
+    {
+      "url": "https://jimsanborn.net/assets/press/NYTIMES_2020_This_Sculpture_Holds_a_Decades-Old_C.I.A._Mystery._And_Now,_Another_Clue._-_The_New_York_Times.html",
+      "result": "web tool unavailable and verified HTTPS HTTP 403"
+    },
+    {
+      "url": "https://www.documentcloud.org/documents/26229389-adobe-scan-nov-12-2025/",
+      "result": "web tool and verified HTTPS HTTP 403; original scan not examined"
+    }
+  ],
+  "hypothesis_priority_criterion": "Testability, finite free parameters, available controls; not likelihood or closeness to a historical solve",
+  "proposed_models": [
+    {
+      "priority": 1,
+      "model": "selected ragged-layout plus periodic/feedback composition",
+      "historical_probability_rank": false,
+      "bounds": {
+        "new_model_checks": 10000,
+        "max_period": 32,
+        "max_width": 32
+      },
+      "fixed_alphabets": [
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "KRYPTOSABCDEFGHIJLMNQUVWXZ"
+      ],
+      "missing_evidence": [
+        "Layer order",
+        "Alphabet",
+        "Route"
+      ],
+      "status": "New relative to earlier direct/pure runs; sampled in contemporary composition log, not exhausted",
+      "why_testable": "Exact propagation and retained unknowns; complete keys forward replayed",
+      "source_basis": [
+        "k4-scheidt-interview",
+        "k4-pbs-transcript"
+      ],
+      "source_endorses_formula": false
+    },
+    {
+      "priority": 2,
+      "model": "stream resets only at original physical row boundaries",
+      "bounds": {
+        "model_checks": 5000,
+        "periods": [
+          1,
+          16
+        ],
+        "boundary_offsets_zero_based": [
+          4,
+          35,
+          66
+        ],
+        "policies": [
+          "continuous",
+          "reset_at_all_three_boundaries"
+        ]
+      },
+      "families": [
+        "repeating",
+        "beaufort",
+        "plaintext_autokey"
+      ],
+      "missing_evidence": [
+        "No source confirms row resets"
+      ],
+      "status": "Proposed, not executed in this audit",
+      "why_testable": "Finite observed boundaries; synthetic controls must span reset",
+      "source_basis": [
+        "k4-cia",
+        "k4-participant-transcription"
+      ],
+      "source_endorses_formula": false
+    },
+    {
+      "priority": 3,
+      "model": "running key from frozen public K2/K3 recovered texts",
+      "bounds": {
+        "model_checks": 5000,
+        "window_length": 97,
+        "directions": [
+          "forward",
+          "reverse"
+        ],
+        "families": [
+          "vigenere",
+          "beaufort"
+        ]
+      },
+      "donors": "Cited repo certificate texts; preserve deliberate spelling and X separators; no repeated short donor or unrelated book",
+      "missing_evidence": [
+        "No confirmed donor",
+        "No confirmed offset"
+      ],
+      "status": "Proposed, not executed in this audit",
+      "why_testable": "Finite windows and donor hashes frozen before fitting",
+      "source_basis": [
+        "k4-sanborn-interview",
+        "k4-november-talk"
+      ],
+      "source_endorses_formula": false
+    },
+    {
+      "priority": 4,
+      "model": "two fixed-alphabet substitution layers with unknown primers",
+      "bounds": {
+        "model_checks": 10000,
+        "timeout_seconds": 10,
+        "per_layer_periods": [
+          1,
+          8
+        ]
+      },
+      "fixed_alphabets": [
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "KRYPTOSABCDEFGHIJLMNQUVWXZ"
+      ],
+      "missing_evidence": [
+        "No confirmed layer count",
+        "Potential excessive key freedom"
+      ],
+      "status": "Proposed, not executed in this audit",
+      "why_testable": "Exact equations with forced predictions or explicit unknowns; collapse equal-alphabet equivalent repeating layers",
+      "source_basis": [
+        "k4-scheidt-interview",
+        "k4-sanborn-interview"
+      ],
+      "source_endorses_formula": false
+    }
+  ],
+  "deferred_model": {
+    "model": "World Clock generated keystream",
+    "why_deferred": "Landmark alone specifies no reference time, date, city order, route or alphabet conversion. Do not derive new cribs or a numeric key from themes."
+  },
+  "validation_protocol": [
+    "Freeze formula, domains, check unit and stopping rules before fitting",
+    "Fit one disclosed group and reserve the other; reciprocal exploratory folds are not perpetually untouched validation",
+    "Synthetic unknown-key controls before target search",
+    "Forward reconstruction for complete keys; forced equations and nulls for partials",
+    "Report contradictions, exact reserved predictions and unknowns separately",
+    "Historical recovery needs complete text, reproducible transformation and independent evidence"
+  ],
+  "related_reports": [
+    "../logs/open-target-attempt-2026-10-03.md",
+    "model-experiments-2026-10-03.md"
+  ],
+  "sources": [
+    {
+      "id": "k4-auction-discovery",
+      "case": "kryptos-k4",
+      "title": "RR Auction account of K4 archival discovery",
+      "url": "https://content.rrauction.com/kryptos-k4-discovered-not-solved-heres-what-actually-happened/",
+      "publication_date": "2025-10-23",
+      "primary_role": "Auction participant reporting archival discovery and artist comments",
+      "extraction": "full_html_read",
+      "supports": "Archival text recovery distinguished from method/key recovery",
+      "limitations": "Interested commercial participant; attributed account rather than direct inspection of underlying documents"
+    },
+    {
+      "id": "k4-auction-sale",
+      "case": "kryptos-k4",
+      "title": "RR Auction record of Sanborn archive sale",
+      "url": "https://content.rrauction.com/jim-sanborns-complete-kryptos-archive-sells-for-962500-at-auction/",
+      "publication_date": "2025-11-21",
+      "primary_role": "First-party auction sale record",
+      "extraction": "full_html_read",
+      "supports": "Transferred private archive described as including K4 plaintext and coding system",
+      "limitations": "Does not publish full K4 text or a replayable transformation; no inference about later disclosures"
+    },
+    {
+      "id": "k4-cia",
+      "case": "kryptos-k4",
+      "title": "CIA headquarters sculpture description and transcription",
+      "url": "https://www.cia.gov/legacy/headquarters/kryptos-sculpture/",
+      "publication_date": null,
+      "primary_role": "Physical-site custodian",
+      "extraction": "full_html_read",
+      "supports": "Printed sculpture ciphertext",
+      "limitations": "Undated legacy unsolved wording is not a current worldwide-status certificate"
+    },
+    {
+      "id": "k4-participant-transcription",
+      "case": "kryptos-k4",
+      "title": "Elonka Dunin's sculpture transcription",
+      "url": "https://www.elonka.com/kryptos/transcript.html",
+      "publication_date": null,
+      "primary_role": "Research participant's transcription",
+      "extraction": "full_text_read",
+      "supports": "Independent printed K4 tail for transcription comparison",
+      "limitations": "Not a full K4 plaintext or method"
+    },
+    {
+      "id": "k4-smithsonian-finding-aid",
+      "case": "kryptos-k4",
+      "title": "Archives of American Art: Jim Sanborn papers finding aid",
+      "url": "https://sirismm.si.edu/EADpdfs/AAA.sanbojim.pdf",
+      "publication_date": "2024-02-12",
+      "displayed_revision_date": "2026-05-06",
+      "primary_role": "Archive custodian's collection and access description",
+      "extraction": "pdf_text_read",
+      "supports": "Kryptos files listed; research appointment/access-copy conditions",
+      "limitations": "Finding aid inspected, not underlying archival pages; collection-level access does not settle every item's restrictions"
+    },
+    {
+      "id": "k4-auction-lot",
+      "case": "kryptos-k4",
+      "title": "RR Auction lot 2001, auction 730",
+      "url": "https://www.rrauction.com/auctions/lot-detail/350761607302001-the-complete-secrets-of-kryptos-jim-sanborns-private-archive/?cat=0",
+      "publication_date": null,
+      "primary_role": "Auction participant inventory and disclaimer",
+      "extraction": "full_html_read",
+      "supports": "Lot closed 2025-11-20; archive description attributed to artist",
+      "limitations": "Auctioneer says contents were not received, independently examined or verified"
+    },
+    {
+      "id": "k4-participant-clues",
+      "case": "kryptos-k4",
+      "title": "Dunin participant clue chronology and aligned mask",
+      "url": "https://www.elonka.com/kryptos/",
+      "publication_date": null,
+      "primary_role": "Participant clue documentation",
+      "extraction": "full_html_read",
+      "supports": "Four published spans and their date precision",
+      "limitations": "EAST email not inspected; January 2020 primary article unavailable; August 2025 status is stale"
+    },
+    {
+      "id": "k4-berlin-contemporary",
+      "case": "kryptos-k4",
+      "title": "Contemporary BERLIN announcement coverage",
+      "url": "https://www.wired.com/2010/11/clue-kryptos/",
+      "publication_date": "2010-11-21",
+      "primary_role": "Reporter who interviewed Sanborn",
+      "extraction": "full_html_read",
+      "supports": "NYPVTT at 64 through 69; Saturday announcement 2010-11-20",
+      "limitations": "Announcement day and article publication day differ"
+    },
+    {
+      "id": "k4-clock-interview",
+      "case": "kryptos-k4",
+      "title": "CLOCK disclosure and artist interview",
+      "url": "https://www.wired.com/2014/11/second-kryptos-clue/",
+      "publication_date": "2014-11-20",
+      "primary_role": "Contemporary artist interview",
+      "extraction": "full_html_read",
+      "supports": "CLOCK follows BERLIN at positions 70 through 74",
+      "limitations": "Binninger clock discussion does not establish a cipher mechanism"
+    },
+    {
+      "id": "k4-scheidt-interview",
+      "case": "kryptos-k4",
+      "title": "Edited Scheidt interview",
+      "url": "https://www.wired.com/2005/01/inside-info-on-kryptos-codes/",
+      "publication_date": "2005-01-21",
+      "primary_role": "First-person construction account",
+      "extraction": "full_html_read",
+      "supports": "English, masking, uncertain final artist modifications",
+      "limitations": "No formula; historical status and 98-character comment are not current constraints"
+    },
+    {
+      "id": "k4-sanborn-interview",
+      "case": "kryptos-k4",
+      "title": "Edited Sanborn interview",
+      "url": "https://www.wired.com/2005/01/questions-for-kryptos-creator/",
+      "publication_date": "2005-01-20",
+      "primary_role": "Artist first-person construction account",
+      "extraction": "full_html_read",
+      "supports": "Modified cryptographic systems; text and interpretation distinguishable",
+      "limitations": "No executable K4 construction published"
+    },
+    {
+      "id": "k4-pbs-transcript",
+      "case": "kryptos-k4",
+      "title": "PBS NOVA transcript",
+      "url": "https://www.pbs.org/wgbh/nova/transcripts/3411_sciencen.html",
+      "publication_date": "2007-07-24",
+      "primary_role": "Broadcast interviews with construction participants",
+      "extraction": "full_html_read",
+      "supports": "Classical techniques and masking discussed",
+      "limitations": "Presenter examples and Gillogly conjecture are not confirmed K4 recipe; count discrepancy"
+    },
+    {
+      "id": "k4-august-artist-letter",
+      "case": "kryptos-k4",
+      "title": "Artist August 2025 letter hosted by participant",
+      "url": "https://www.elonka.com/kryptos/OpenLetterAug2025.html",
+      "publication_date": "2025-08-14",
+      "primary_role": "Artist authored public statement",
+      "extraction": "full_html_read",
+      "supports": "97-character K4 and semantic secrecy hint",
+      "limitations": "No aligned additional word or formula"
+    },
+    {
+      "id": "k4-november-talk",
+      "case": "kryptos-k4",
+      "title": "First-hand report of Sanborn museum talk",
+      "url": "https://www.scientificamerican.com/article/cia-kryptos-puzzle-creator-releases-final-clues/",
+      "publication_date": "2025-11-12",
+      "primary_role": "Reporter present at artist talk",
+      "extraction": "full_html_read",
+      "supports": "World Clock referent; Egypt 1986 and Wall fall 1989 themes",
+      "limitations": "Linked original letter unavailable; article includes inconsistent 79-letter description"
+    },
+    {
+      "id": "k4-november-letter-unavailable",
+      "case": "kryptos-k4",
+      "title": "Linked November artist letter scan",
+      "url": "https://www.documentcloud.org/documents/26229389-adobe-scan-nov-12-2025/",
+      "publication_date": "2025-11-12",
+      "primary_role": "Original artist document linked by talk reporter",
+      "extraction": "unavailable_http_403",
+      "supports": "None: contents not examined",
+      "limitations": "HTTP 403 from document page, public metadata and linked asset attempt"
+    },
+    {
+      "id": "k4-artist-current-page",
+      "case": "kryptos-k4",
+      "title": "Artist Kryptos page",
+      "url": "https://jimsanborn.net/content.html",
+      "publication_date": null,
+      "primary_role": "Artist website",
+      "extraction": "normal_https_html_read",
+      "supports": "Links to newer custodian presentation",
+      "limitations": "Contains stale pre-November-2025 auction prose beside later link; no fresh status date"
+    },
+    {
+      "id": "k4-paradigm-announcement",
+      "case": "kryptos-k4",
+      "title": "Paradigm custodian announcement",
+      "url": "https://www.paradigm.xyz/writing/kryptos",
+      "publication_date": "2026-06-12",
+      "primary_role": "First-party custodian",
+      "extraction": "normal_https_html_read",
+      "supports": "Buyer identity, self-reported reference verifier and unsolved status",
+      "limitations": "Verifier not independently audited; not a public cipher method; no submission made"
+    },
+    {
+      "id": "k4-paradigm-current",
+      "case": "kryptos-k4",
+      "title": "Paradigm numbered K4 display",
+      "url": "https://www.paradigm.xyz/kryptos/k4",
+      "publication_date": null,
+      "primary_role": "Current custodian public interface",
+      "extraction": "normal_https_html_read",
+      "supports": "97 numbered letters and visible unsolved label",
+      "limitations": "Point-in-time display, not proof of universal absence of solutions"
+    }
+  ],
+  "audit_checks": {
+    "three_transcriptions_exact_match": true,
+    "all_four_ciphertext_spans_exact": true,
+    "known_crib_overlap_conflicts": false,
+    "source_registry_ids_unique": true,
+    "unicode_em_en_dashes": false
+  }
+}

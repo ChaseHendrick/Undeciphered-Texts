@@ -20,6 +20,10 @@ Before using the paper's transcription, freeze its version and identify ambiguou
 
 These are proposed budgets, not measured performance. A target score above a null does not establish correctness; score selection also spends evidence and must be recorded.
 
+## Executed bounded follow-up
+
+The [3 October open-target attempt](../easy-unsolved-attempt-2026-10-03.md) acquired the author's literal 87-label transcription from the [archived HistoCrypt code/data deposit](https://doi.org/10.5281/zenodo.4819086), then ran a frequency baseline, bijective annealing and relaxed homophonic annealing. No verified reading was recovered. Longer controls succeeded, but matched-length controls recovered only 80/87 and 34/87 positions; conflicting target outputs and absent independent historical plaintext prevent a solution claim. The [JSON record](../easy-unsolved-attempt-2026-10-03.json) preserves hashes, seeds, actual work counts and conditional replay limits. This smaller executed comparison does not complete the larger proposed experiment above.
+
 ## Evidence standard
 
 A proposed reading should account for all positions with one disclosed method, key and spacing rule, and re-create the glyph sequence without undisclosed exceptions. Independent Elgar cryptographic material, if authenticated and not used to fit the target, could provide stronger external evidence. A personal-sounding sentence or a composer's musical vocabulary is not a reference plaintext.

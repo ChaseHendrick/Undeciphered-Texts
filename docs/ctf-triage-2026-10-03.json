@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-03",
+  "triage": "Paradigm Kryptos CTF public puzzle availability",
+  "source_checked_at_utc": "2026-10-03T07:54:46Z",
+  "completed_at_utc": "2026-10-03T07:57:39.451870+00:00",
+  "new_open_target_identified": false,
+  "new_solve_claimed": false,
+  "claimed_plaintext": null,
+  "correctness_known": false,
+  "status_scope": "All ten have first-solve records in organizer feed and independently rendered leaderboard; judging and prize payouts not independently audited",
+  "puzzle_count": 10,
+  "official_first_solve_count": 10,
+  "remaining_without_record": 0,
+  "inventory": [
+    {
+      "slug": "pk1",
+      "length": 192,
+      "ciphertext_sha256": "86748db025480f076695474ee4a94da721ad7435f84a3f7a1186548b3ee9ff8c",
+      "official_first_solve_at_utc": "2026-06-12T14:17:32.361Z",
+      "organizer_status": "first solve recorded",
+      "prize_payment_audited": false
+    },
+    {
+      "slug": "pk2",
+      "length": 350,
+      "ciphertext_sha256": "0375f7b9424af17807ef1e3b56fb3e7ce3036d97210b142413ae21d07d6ef5b2",
+      "official_first_solve_at_utc": "2026-06-12T14:30:02.872Z",
+      "organizer_status": "first solve recorded",
+      "prize_payment_audited": false
+    },
+    {
+      "slug": "pk3",
+      "length": 280,
+      "ciphertext_sha256": "660ff56d93e5b99dc02823a360d7d2e8ac1fbf232fc07f22e5efa7adbc76fb84",
+      "official_first_solve_at_utc": "2026-06-12T14:54:56.232Z",
+      "organizer_status": "first solve recorded",
+      "prize_payment_audited": false
+    },
+    {
+      "slug": "pk4",
+      "length": 224,
+      "ciphertext_sha256": "ac6d7b965c127836cded98e59e444a63c22b244f89ede1de7206f81dab9b11cd",
+      "official_first_solve_at_utc": "2026-06-12T14:56:44.261Z",
+      "organizer_status": "first solve recorded",
+      "prize_payment_audited": false
+    },
+    {
+      "slug": "pk5",
+      "length": 272,
+      "ciphertext_sha256": "a8b7e3d4843c5673d301e08dd9426aad11bb202af09028ffa3470adfab3260cc",
+      "official_first_solve_at_utc": "2026-06-12T15:53:09.119Z",
+      "organizer_status": "first solve recorded",
+      "prize_payment_audited": false
+    },
+    {
+      "slug": "pk6",
+      "length": 315,
+      "ciphertext_sha256": "de078ec465a3732f26ea70374b098a9191e41821c3a84bfb795097085c02575c",
+      "official_first_solve_at_utc": "2026-06-12T17:43:18.626Z",
+      "organizer_status": "first solve recorded",
+      "prize_payment_audited": false
+    },
+    {
+      "slug": "pk7",
+      "length": 279,
+      "ciphertext_sha256": "4304a0c0606ea8a1d26acdc838c65c6cd09d4b0cc42e79a697097fcccd1b85ec",
+      "official_first_solve_at_utc": "2026-06-13T12:27:15.920Z",
+      "organizer_status": "first solve recorded",
+      "prize_payment_audited": false
+    },
+    {
+      "slug": "pk8",
+      "length": 153,
+      "ciphertext_sha256": "2f1beecf4f84ba9d4cf20afd7c9887825d49b0eab6887c6d81a1960e602ba676",
+      "official_first_solve_at_utc": "2026-09-06T18:20:58.332Z",
+      "organizer_status": "first solve recorded",
+      "prize_payment_audited": false
+    },
+    {
+      "slug": "pk9",
+      "length": 144,
+      "ciphertext_sha256": "4871cfc214984051f09982d000af4fec8a6deea66458776e3a6af0bfd0abaa1e",
+      "official_first_solve_at_utc": "2026-10-02T22:29:29.926Z",
+      "organizer_status": "first solve recorded",
+      "prize_payment_audited": false
+    },
+    {
+      "slug": "pk10",
+      "length": 504,
+      "ciphertext_sha256": "4589907a83641e8ff5390ef3672f6ad7892b3e293797e25ff8bc0be470fb06e9",
+      "official_first_solve_at_utc": "2026-10-02T22:52:01.808Z",
+      "organizer_status": "first solve recorded",
+      "prize_payment_audited": false
+    }
+  ],
+  "source_status_pitfall": "All static puzzle definitions initialize status Unsolved; UI public first-solve overlay supplies current organizer status. Static defaults are not open-target evidence.",
+  "public_fixture_scope": "Literal 144..504 A-Z letter strings in publicly loaded asset, within repo 512-letter browser guard. No authenticated answer, key or method extracted.",
+  "network_actions": {
+    "methods": [
+      "GET"
+    ],
+    "authenticated_requests": 0,
+    "submissions": 0,
+    "payments": 0,
+    "prize_actions": 0,
+    "private_reference_calls": 0
+  },
+  "source_retrieval_limit": {
+    "public_asset_count": 9,
+    "asset_per_response_byte_cap": 1500000,
+    "per_request_timeout_seconds": 12,
+    "purpose": "Read normal page-loaded resources and public leaderboard only"
+  },
+  "local_trial": {
+    "label": "already-solved control, not new open-target recovery",
+    "input_slug": "pk2",
+    "ciphertext": "HNETIOCOIOISNNENEELOWYTTLQUBDBTHTEOTRRASAHCDSEETONVRCESHRRETUPCITEWIGNIUNIGANLHJRAHMSRUINHERAEEAEAJEEEEKEEDATIIAONIXRNRHCNTLGLOIIUNSEESEGNBANTVTCSFREDIUROTNENHMRIIEROLTLSDAOOAEQIEOAPUHITHAIKHTIEUHGSLAFFSNVRSRHNNSMASTIPIAHAOEEUDESSOEONCDHAOTOOEOTSEECLADNHNTOUVSGAGTATSNEWHSATEUEETEURTRNEOGITREHMPPROBEOETOERICETGSMTEITENNSGSDRNOVTTFBTTATMLOSOPLSTARATE",
+    "ciphertext_encoding": "ASCII uppercase letters, no newline",
+    "result": {
+      "purpose": "already-solved public CTF control; no new open-target solve",
+      "tool": "engine.transposition_ensemble.search_transposition_ensemble",
+      "parameters": {
+        "max_checks": 500,
+        "max_width": 32,
+        "max_rails": 4,
+        "max_candidates": 3,
+        "cribs": []
+      },
+      "checks": 225,
+      "requested_total_checks": 225,
+      "search_complete": true,
+      "stop_reason": "complete",
+      "family_checks": {
+        "rail-fence": 3,
+        "route": 12,
+        "columnar": 42,
+        "redefence": 168
+      },
+      "elapsed_seconds": 0.1994962920434773,
+      "candidate_summary": [
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "2143",
+            "offset": 0
+          },
+          "score": -1167.2661809591416,
+          "plaintext_sha256": "38a24de4e6bed2681faae7bcd79ac77f440bc3748526918981300f01f3acf0bf",
+          "plaintext_length": 350,
+          "excerpt_first_64_letters": "NHCQDNREHIATHIOETOCCOOOONIEAOOTITPSSLNEUENGECHLNLEAIDEOLNTHOIWNH",
+          "repo_forward_match": true,
+          "independent_forward_match": true,
+          "historical_reference_match": null
+        },
+        {
+          "family": "route",
+          "key": {
+            "width": 5,
+            "fill": "rows",
+            "route": "spiral-cw-top-right"
+          },
+          "score": -1183.2895823118065,
+          "plaintext_sha256": "15f55654a8550cf8093f9832374fb91ba4bdeaa383c75a4a288a4aa7e1a681f1",
+          "plaintext_length": 350,
+          "excerpt_first_64_letters": "VTCSHTTRFNNRNREAUEETBEODINTGIOGEIUCEETROSUROIEEETOETHNISAMESNSPN",
+          "repo_forward_match": true,
+          "independent_forward_match": true,
+          "historical_reference_match": null
+        },
+        {
+          "family": "redefence",
+          "key": {
+            "ranks": "132",
+            "offset": 3
+          },
+          "score": -1188.1339495644404,
+          "plaintext_sha256": "eb52fa7ed23865428c6e21a3519eea4f28f6136ad9b04acbb6e8e8c56130777c",
+          "plaintext_length": 350,
+          "excerpt_first_64_letters": "EHQNINEHOEAEPTURHIIATOHEACIEKOHATIIEEOUAHIGJSSLEANFEFNSENEVERNSK",
+          "repo_forward_match": true,
+          "independent_forward_match": true,
+          "historical_reference_match": null
+        }
+      ],
+      "python_version": "3.12.14",
+      "ciphertext_sha256": "0375f7b9424af17807ef1e3b56fb3e7ce3036d97210b142413ae21d07d6ef5b2",
+      "repo_source_sha256": "7f43fabbd540b8ecb769d17e7c6778b4413bd7cf680817f041f92d22c03edcf0",
+      "columnar_source_sha256": "d1ccfc21ef567cb4e6215f6209b547013a3e90bf9c60308dec0e4b24ca63f63e",
+      "git_head": "c3c9bbb6f69c4f4584767eae11df1782b01507c8",
+      "independent_replay_comparisons": 3,
+      "total_local_model_and_replay_checks": 228,
+      "independent_oracle": "Ranked zigzag buckets from explicit triangle walk; spiral perimeter traversal from rectangle edges, independently coded without repo forward helper imports."
+    },
+    "authenticated_reference_available": false,
+    "verified_plaintext": null,
+    "scope": "Search completion covers only 225 declared finite transposition hypotheses. Three independent forward replays confirm transform consistency only."
+  },
+  "reproduction": {
+    "command": ".venv/bin/python -m engine transposition-ensemble --help",
+    "python_api": "from engine.transposition_ensemble import search_transposition_ensemble; report = search_transposition_ensemble(ciphertext, max_checks=500, max_width=32, max_rails=4, max_candidates=3, cribs=())",
+    "independent_replay": "For Redefence, collect characters on an explicit up/down rail cycle and concatenate buckets by rank. For row-filled route, traverse each shrinking rectangular perimeter from top-right downward. Compare exact ciphertext bytes."
+  },
+  "limitations": [
+    "No organizer submission made; no reference correctness established",
+    "English ranking and reversible transforms are not a solution certificate",
+    "Public first-solver timestamps do not establish actual prize payment",
+    "No blanket claim about availability of later challenges or unpublished references"
+  ],
+  "sources": [
+    {
+      "id": "ctf-root",
+      "url": "https://www.paradigm.xyz/kryptos-ctf",
+      "body_bytes": 15104,
+      "body_sha256": "1a08f55899859c34e71fc9092e5e1aeee6efac235ffe5d12b820c7edbff9b001",
+      "method": "Unauthenticated public GET; verified HTTPS default certificate checks",
+      "supports": "Public CTF title and loaded source asset URLs"
+    },
+    {
+      "id": "ctf-leaderboard",
+      "url": "https://www.paradigm.xyz/kryptos-ctf/leaderboard",
+      "body_bytes": 181649,
+      "body_sha256": "56ee9d00adf3919f31c9482b5cf1f5b5fdc213e120137f6ebf32bb94c133444b",
+      "method": "Unauthenticated public GET; verified HTTPS default certificate checks",
+      "supports": "Rendered official first-solver table for all ten puzzles"
+    },
+    {
+      "id": "ctf-first-solves",
+      "url": "https://www.paradigm.xyz/kryptos-ctf/api/first-solves",
+      "body_bytes": 945,
+      "body_sha256": "083af556c7b272608d79a8da6e6b5526f050ae7351b98443577dd8e8effe4799",
+      "method": "Unauthenticated public GET; verified HTTPS default certificate checks",
+      "supports": "Public first-solve timestamps used by normal interface; endpoint observed in loaded source"
+    },
+    {
+      "id": "ctf-rules",
+      "url": "https://www.paradigm.xyz/kryptos-ctf/rules",
+      "body_bytes": 39160,
+      "body_sha256": "9a270e73d9873af4c8fd7d6d66315ae01322093660dd8d682687dc25b48a0cb4",
+      "method": "Unauthenticated public GET; verified HTTPS default certificate checks",
+      "supports": "Current event rules; contest exercise distinct from K4"
+    },
+    {
+      "id": "ctf-pk10",
+      "url": "https://www.paradigm.xyz/kryptos-ctf/pk10",
+      "body_bytes": 17007,
+      "body_sha256": "870c2ca220caf275d34678a138d680cca0d08c8e0bfa4a13eeba53c96a87fd7c",
+      "method": "Unauthenticated public GET; verified HTTPS default certificate checks",
+      "supports": "Public puzzle route and loaded source assets"
+    },
+    {
+      "id": "ctf-fixtures",
+      "url": "https://www.paradigm.xyz/kryptos-ctf/_next/static/chunks/0h1ap~1.6ljs6.js",
+      "body_bytes": 37700,
+      "body_sha256": "e2dc3db8f5debbdff264a5b8bbbf544c1fcf25f25d9bbd737e97721578ef0f31",
+      "method": "Unauthenticated public GET; verified HTTPS default certificate checks",
+      "supports": "Literal public puzzle definitions; stale defaults separated from live status"
+    }
+  ],
+  "checks": {
+    "all_ten_official_records": true,
+    "fixtures_unique_slugs": true,
+    "fixtures_ascii_uppercase": true,
+    "local_search_complete": true,
+    "three_independent_forward_replays": true,
+    "global_local_check_bound": true
+  }
+}

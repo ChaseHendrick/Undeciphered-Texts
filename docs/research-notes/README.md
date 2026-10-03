@@ -23,7 +23,11 @@ Follow [AI-AGENTS](../AI-AGENTS.md), [QUALITY](../QUALITY.md), [WORKFLOW](../WOR
 
 ## Experiment standards
 
-All experiments proposed in these notes are **not executed in this research pass**. K4 has an explicitly linked, earlier dated run. An experiment becomes a result only when a separate run record contains the actual inputs, output and checks.
+The larger experiments proposed in these notes remain plans. Separately,
+the [K4 composition run](../k4-focus/model-experiments-2026-10-03.md) and
+[Dorabella attempt](../easy-unsolved-attempt-2026-10-03.md) contain executed
+inputs, controls, output and limits. Neither recovered a verified historical
+reading. These narrower runs do not complete the proposed experiments.
 
 Before fitting a model, freeze source URLs and retrieval date, lawful corpus access, object and transcription versions, raw SHA-256, normalization rules, duplicate groups, train/validation/test split, model family, search caps and random seeds. Save disagreements instead of resolving them in favor of an attractive answer. Split entire related objects or folios when line-level splits could leak shared material.
 

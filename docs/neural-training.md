@@ -78,6 +78,23 @@ errors, and an analytical one-step AdamW control for two supplied rates.
 Their gradients are mocked in the step control, so those tests do not constitute
 an accuracy experiment.
 
+## Optional frozen teacher
+
+A compatible warm start can add a temperature-scaled KL term against the frozen
+incumbent ensemble. The teacher sees generated Austen training rows only; the
+known synthetic labels retain their full supervised weight. The default
+strength is zero and preserves the prior training path. Positive strength
+requires a compatible warm start and does not relax the promotion gates.
+
+```sh
+python3 -m engine train-router --warm-start --hidden 96 --ensemble-size 3 --learning-rate .0003 --distillation-strength .1 --distillation-temperature 2 --dry-run
+```
+
+The [dated implementation and trial record](bob-distillation-2026-10-03.md)
+documents the exact objective, gradient controls, provenance, and actual outcome.
+An optional training method is not an accuracy improvement until its measured
+candidate passes the fixed incumbent comparisons.
+
 ## Simulated performance signal
 
 ```python

@@ -45,7 +45,7 @@ python3 -m engine investigate LXFOPVEFRNHR --crib 0:ATTACK --max-checks 5000
 
 `tools` lists connected helpers and searches with their required parameters. `run` accepts JSON parameters, explicit hexadecimal inputs for AES/ChaCha20, and integer inputs for RSA attacks. Supplied keys, supplied extraction rules, bounded unknown-key searches, and model inference have distinct modes. See the [tool interface](docs/tool-interface.md).
 
-The [neural router](docs/neural-upgrades.md), **Bob the Neural Net**, ranks known cipher families using residual networks and bounded cryptanalytic trial features. Training combines supervised label smoothing, hard-example curriculum weights, and paired dropout consistency. A worse candidate fails promotion. Its development benchmark and artifact-specific audit are recorded separately; family recognition does not establish a plaintext. The [primary-source Bob research plan](docs/bob-research-2026-10-03.md) proposes further experiments rather than claiming an implemented upgrade.
+The [neural router](docs/neural-upgrades.md), **Bob the Neural Net**, ranks known cipher families using residual networks and bounded cryptanalytic trial features. Training combines supervised label smoothing, hard-example curriculum weights, and paired dropout consistency. Compatible warm starts can also use [frozen-teacher distillation](docs/bob-distillation-2026-10-03.md) on generated training examples. A worse candidate fails promotion. Its development benchmark and artifact-specific audit are recorded separately; family recognition does not establish a plaintext. The [primary-source Bob research plan](docs/bob-research-2026-10-03.md) proposes further experiments rather than claiming those proposed upgrades are implemented.
 
 The [investigation planner](docs/solver-reasoning.md) connects crib inference, affine search, transposition search, and numeric Morse constraints. It records premises, checks, contradictions and next actions under one search budget. Curiosity, caution, frustration and happiness are explicitly simulated telemetry. Correctness stays unknown until independent evidence exists; speed earns a bonus only on independently correct evaluations.
 
@@ -70,6 +70,13 @@ python3 -m engine.case_workflow verify cases/archive-letter --candidate-file pro
 ```
 
 Cases progress through intake, transcription review, analysis, bounded hypotheses, and independent validation. Runs keep source and manifest snapshots, SHA-256 hashes, settings, code versions, and explicit completion status. Search output never marks a case solved. Raw case files stay local by default; publish a reviewed, reproducible result separately.
+
+K4 is one research objective alongside broader open targets and Bob development.
+The [new conditional composition run](docs/k4-focus/model-experiments-2026-10-03.md)
+tests autokey and periodic models around ragged transpositions, with a disclosed
+clue reserved for verification. The [smaller-target attempt](docs/easy-unsolved-attempt-2026-10-03.md)
+records executed attacks and their limits. Neither English plausibility nor a
+forward replay establishes an unknown historical reading.
 
 For exact constraints and compositions, install the optional [symbolic engine](docs/cipher-synthesis.md):
 
@@ -123,6 +130,9 @@ Full inventory of solvers and analysis tools (classical, keyed Vigenère, column
 | [`docs/puzzles.md`](docs/puzzles.md) | Bounded Sudoku, word search, and anagrams |
 | [`docs/target-triage.md`](docs/target-triage.md), [`target-shortlist.json`](docs/target-shortlist.json) | Dated source research and feasibility judgments for open targets |
 | [`docs/research-notes/README.md`](docs/research-notes/README.md) | Eight dated primary-source case notes, corpus limits and proposed experiments for undeciphered scripts and historical ciphers |
+| [`docs/k4-focus/evidence-2026-10-03.md`](docs/k4-focus/evidence-2026-10-03.md), [`model-experiments-2026-10-03.md`](docs/k4-focus/model-experiments-2026-10-03.md) | K4 source and clue audit, current custody, and executed bounded composition tests |
+| [`docs/easy-unsolved-attempt-2026-10-03.md`](docs/easy-unsolved-attempt-2026-10-03.md) | Reproducible smaller open-target attacks, controls, ambiguity and verification limits |
+| [`docs/ctf-triage-2026-10-03.md`](docs/ctf-triage-2026-10-03.md) | Public puzzle fixtures and organizer first-solve records; all ten already recorded solved at this check |
 | [`engine/data/english.txt`](engine/data/english.txt) | Training prose for n-gram model |
 | [`tests/test_recover.py`](tests/test_recover.py) | Round-trip + recovery tests |
 | [`demos/run_demo.py`](demos/run_demo.py) | Demo entry that rewrites `DEMO.md` |

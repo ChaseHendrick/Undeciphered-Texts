@@ -105,6 +105,10 @@ def build_parser() -> argparse.ArgumentParser:
                        help="start from the compatible incumbent with unchanged families, hidden width, ensemble size and training tables")
     train.add_argument("--learning-rate", type=float, default=.01,
                        help="maximum cosine-schedule rate, finite and in (0,0.1] (default:0.01)")
+    train.add_argument("--distillation-strength", type=float, default=0.0,
+                       help="optional frozen-incumbent teacher KL weight; requires --warm-start (default:0)")
+    train.add_argument("--distillation-temperature", type=float, default=2.0,
+                       help="teacher/student softening temperature (default:2)")
     train.add_argument("--dry-run", action="store_true", help="evaluate without writing artifacts")
 
     analyze = sub.add_parser("analyze", help="IC, Friedman, Kasiski, and n-gram counts")
@@ -174,10 +178,15 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "train-router":
         try:
             from engine.neural_router_v2 import train_router
+            teacher_options = {}
+            if args.distillation_strength != 0.0 or args.distillation_temperature != 2.0:
+                teacher_options = {"distillation_strength": args.distillation_strength,
+                                   "distillation_temperature": args.distillation_temperature}
             print(json.dumps(train_router(epochs=args.epochs, train_per_class=args.samples,
                                           write=not args.dry_run, expanded_families=args.expanded_families,
                                           hidden=args.hidden, ensemble_size=args.ensemble_size,
-                                          warm_start=args.warm_start, learning_rate=args.learning_rate), indent=2))
+                                          warm_start=args.warm_start, learning_rate=args.learning_rate,
+                                          **teacher_options), indent=2))
             return 0
         except (ValueError, TypeError, ImportError, OSError) as exc:
             print(str(exc), file=sys.stderr)

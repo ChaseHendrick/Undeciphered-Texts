@@ -59,6 +59,7 @@ TOOLS.update({
     "inheritance": Tool("engine.solvers.persona_inheritance", "investigate_inheritance", "clue-based-persona-search"),
     "hallucinogens": Tool("engine.solvers.persona_hallucinogens", "investigate_hallucinogens", "bounded-composition-persona-search"),
     "persona-council": Tool("engine.persona_solvers", "investigate_personas", "shared-budget-persona-search"),
+    "k4-models": Tool("engine.k4_models", "search_k4_models", "conditional-crib-model-compositions"),
     "pacifist": Tool("engine.solvers.pacifist", "investigate_pacifist", "conservative-exact-persona-search"),
     "cartographer": Tool("engine.solvers.persona_cartographer", "investigate_cartographer", "layout-persona-search"),
     "detective": Tool("engine.solvers.persona_detective", "investigate_detective", "unplaced-crib-persona-search"),

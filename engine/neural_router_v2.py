@@ -6,6 +6,7 @@ unchanged legacy benchmark keep family ranking distinct from decipherment.
 Modern optimizer and calibration references:
 https://arxiv.org/abs/1711.05101
 https://proceedings.mlr.press/v70/guo17a.html
+Optional frozen-teacher distillation: https://arxiv.org/abs/1503.02531
 """
 
 from __future__ import annotations
@@ -66,8 +67,10 @@ def residual_parameters(width, hidden, classes, *, seed):
 
 
 def residual_gradients(parameters, x, labels, *, smoothing=.03, dropout=0., rng=None,
-                       sample_weights=None, paired_rows=(), consistency_weight=0.):
+                       sample_weights=None, paired_rows=(), consistency_weight=0.,
+                       teacher_probabilities=None, distillation_strength=0., distillation_temperature=2.):
     """Cross-entropy and exact backpropagation, before optimizer weight decay."""
+    _validate_distillation(distillation_strength, distillation_temperature)
     x = np.asarray(x, dtype=np.float64)
     labels = np.asarray(labels)
     p = parameters
@@ -79,6 +82,11 @@ def residual_gradients(parameters, x, labels, *, smoothing=.03, dropout=0., rng=
     logits = a1 @ p["w2"] + p["b2"]
     loss, delta, _ = classification_objective(logits, labels, smoothing=smoothing,
         sample_weights=sample_weights, paired_rows=paired_rows, consistency_weight=consistency_weight)
+    if distillation_strength:
+        teacher_loss, teacher_delta = teacher_kl_objective(logits, teacher_probabilities,
+            strength=distillation_strength, temperature=distillation_temperature)
+        loss += teacher_loss
+        delta += teacher_delta
     da1 = delta @ p["w2"].T
     dz1 = da1 * (1 - h1 * h1)
     dz0 = (da1 + dz1 @ p["w1"].T) * mask * (1 - h0 * h0)
@@ -150,10 +158,90 @@ def _validate_learning_rate(learning_rate):
         raise ValueError("learning_rate must be finite, positive and at most0.1")
 
 
+def _validate_distillation(strength, temperature):
+    if (isinstance(strength, bool) or not isinstance(strength, (int, float))
+            or not 0 <= strength <= 1 or not math.isfinite(strength)):
+        raise ValueError("distillation_strength must be finite and between 0 and 1")
+    if (isinstance(temperature, bool) or not isinstance(temperature, (int, float))
+            or not .5 <= temperature <= 10 or not math.isfinite(temperature)):
+        raise ValueError("distillation_temperature must be finite and between 0.5 and 10")
+
+
+def teacher_kl_objective(logits, teacher_probabilities, *, strength=.1, temperature=2.):
+    """Return strength*T**2*mean KL(q || softmax(logits/T)) and its logit gradient.
+
+    Teacher targets are fixed distributions, not updated by backpropagation.
+    The exact derivative is strength*T*(p*sum(q)-q)/rows. Supplied rows must
+    already sum to one within roundoff; normalization removes that roundoff.
+    No logarithm of a zero teacher probability is evaluated.
+    """
+    _validate_distillation(strength, temperature)
+    try:
+        student, teacher = np.asarray(logits), np.asarray(teacher_probabilities)
+        if (student.ndim != 2 or not 1 <= len(student) <= 20_000
+                or not 2 <= student.shape[1] <= 128 or student.dtype.kind not in "fiu"
+                or teacher.shape != student.shape or teacher.dtype.kind not in "fiu"):
+            raise ValueError("teacher and student must be bounded equal-shape numeric matrices")
+        student, teacher = student.astype(np.float64), teacher.astype(np.float64)
+        if (not np.all(np.isfinite(student)) or not np.all(np.isfinite(teacher))
+                or np.any(teacher < 0) or np.any(teacher > 1)
+                or not np.allclose(teacher.sum(axis=1), 1., rtol=0., atol=1e-10)):
+            raise ValueError("teacher targets must be finite probability distributions and logits finite")
+        if strength == 0:
+            return 0., np.zeros_like(student)
+        with np.errstate(over="raise", invalid="raise", divide="raise", under="ignore"):
+            teacher = teacher / teacher.sum(axis=1, keepdims=True)
+            shifted = (student - student.max(axis=1, keepdims=True)) / temperature
+            exponentials = np.exp(shifted)
+            totals = exponentials.sum(axis=1, keepdims=True)
+            probabilities = exponentials / totals
+            log_probabilities = shifted - np.log(totals)
+            log_teacher = np.zeros_like(teacher)
+            np.log(teacher, out=log_teacher, where=teacher > 0)
+            loss = strength * temperature**2 * float(np.sum(teacher * (log_teacher - log_probabilities)) / len(student))
+            gradient = strength * temperature * (
+                probabilities * teacher.sum(axis=1, keepdims=True) - teacher) / len(student)
+        if not math.isfinite(loss) or not np.all(np.isfinite(gradient)):
+            raise ValueError("teacher objective exceeds representable float64 arithmetic")
+        return loss, gradient
+    except (TypeError, OverflowError, FloatingPointError) as exc:
+        raise ValueError("teacher objective requires representable finite numeric inputs") from exc
+
+
+def _frozen_teacher_probabilities(train_x, models, *, input_width, hidden, classes, temperature):
+    """Evaluate frozen incumbent models on training features only, with no labels."""
+    if not isinstance(models, (list, tuple)) or not 1 <= len(models) <= 5:
+        raise ValueError("teacher must contain between 1 and 5 incumbent models")
+    checked, width = [], None
+    for model in models:
+        try:
+            validated = warm_start_model(model, model["mean"], model["scale"])
+        except (KeyError, TypeError) as exc:
+            raise ValueError("teacher requires valid incumbent residual models") from exc
+        current_width = len(validated["mean"])
+        if (current_width != input_width or current_width > train_x.shape[1]
+                or (width is not None and current_width != width)
+                or len(validated["parameters"]["b0"]) != hidden
+                or len(validated["parameters"]["b2"]) != classes):
+            raise ValueError("teacher must preserve incumbent input width, hidden width and output classes")
+        width = current_width
+        checked.append(validated)
+    logits = np.mean([network_logits(train_x[:, :width], model) for model in checked], axis=0)
+    if not np.all(np.isfinite(logits)):
+        raise ValueError("teacher logits must remain finite")
+    probabilities = calibrated_probabilities(logits, temperature)
+    probabilities.setflags(write=False)
+    return probabilities
+
+
 def fit_residual_network(train_x, train_y, validation_x, validation_y, *, hidden=64, epochs=160, seed=20261003,
-                         initial_model=None, learning_rate=.01):
+                         initial_model=None, learning_rate=.01, teacher_models=None,
+                         distillation_strength=0., distillation_temperature=2.):
     """Supervised, curriculum and paired-dropout training with validation checkpoints."""
     _validate_learning_rate(learning_rate)
+    _validate_distillation(distillation_strength, distillation_temperature)
+    if distillation_strength and initial_model is None:
+        raise ValueError("positive distillation requires an incumbent warm start")
     x, v = np.asarray(train_x, dtype=np.float64), np.asarray(validation_x, dtype=np.float64)
     y, vy = np.asarray(train_y), np.asarray(validation_y)
     if y.ndim != 1 or vy.ndim != 1 or y.dtype.kind not in "iu" or vy.dtype.kind not in "iu":
@@ -193,12 +281,20 @@ def fit_residual_network(train_x, train_y, validation_x, validation_y, *, hidden
     views = np.concatenate((normalized, normalized))
     view_labels = np.concatenate((y, y))
     pairs = [(i, i + len(x)) for i in range(len(x))]
+    teacher_options = {}
+    if distillation_strength:
+        teacher_models = [initial_model] if teacher_models is None else teacher_models
+        teacher = _frozen_teacher_probabilities(x, teacher_models, input_width=len(initial_model["mean"]), hidden=hidden,
+            classes=classes, temperature=distillation_temperature)
+        teacher_options = {"teacher_probabilities": np.concatenate((teacher, teacher)),
+            "distillation_strength": distillation_strength, "distillation_temperature": distillation_temperature}
     for epoch in range(1, epochs + 1):
         a0 = np.tanh(normalized @ parameters["w0"] + parameters["b0"])
         clean_logits = (np.tanh(a0 @ parameters["w1"] + parameters["b1"]) + a0) @ parameters["w2"] + parameters["b2"]
         weights = curriculum_weights(y, clean_logits, epoch=epoch, total_epochs=epochs)
         _, gradients = residual_gradients(parameters, views, view_labels, dropout=.05, rng=rng,
-            sample_weights=np.concatenate((weights, weights)), paired_rows=pairs, consistency_weight=.15)
+            sample_weights=np.concatenate((weights, weights)), paired_rows=pairs, consistency_weight=.15,
+            **teacher_options)
         rate = (learning_rate / .01) * (.001 + .009 * .5 * (1 + math.cos(math.pi * (epoch - 1) / epochs)))
         for name, parameter in parameters.items():
             moments[name] = .9 * moments[name] + .1 * gradients[name]
@@ -213,13 +309,18 @@ def fit_residual_network(train_x, train_y, validation_x, validation_y, *, hidden
             correct = int((probabilities.argmax(axis=1) == vy).sum())
             if (correct, -loss) > (best_correct, -best_loss):
                 best_loss, best_correct, best, best_epoch = loss, correct, model, epoch
-    return {**best, "optimizer": "adamw", "hidden": hidden, "epochs": epochs,
+    result = {**best, "optimizer": "adamw", "hidden": hidden, "epochs": epochs,
             "checkpoint_epoch": best_epoch, "validation_nll": best_loss,
             "validation_correct": best_correct, "validation_total": len(vy),
             "checkpoint_policy": "maximize correct validation labels, then minimize NLL; earliest exact tie",
             "training_types": ["supervised_label_smoothing", "curriculum_hard_examples", "paired_dropout_consistency"],
             "consistency_weight": .15, "label_smoothing": .03, "dropout": .05, "seed": seed,
             "warm_start": initial is not None, "optimizer_state": "fresh", "learning_rate": learning_rate}
+    if distillation_strength:
+        result["training_types"] = result["training_types"] + ["frozen_incumbent_teacher_kl"]
+        result.update(distillation_strength=distillation_strength, distillation_temperature=distillation_temperature,
+            teacher_scope="generated training rows only", teacher_ensemble_size=len(teacher_models))
+    return result
 
 
 def cryptanalytic_features(text, tables):
@@ -362,12 +463,16 @@ def promotion_allowed(benchmark_accuracy, baseline_accuracy, overall_accuracy, p
 
 
 def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WEIGHTS_PATH,
-                 expanded_families=False, hidden=64, ensemble_size=3, warm_start=False, learning_rate=.01):
+                 expanded_families=False, hidden=64, ensemble_size=3, warm_start=False, learning_rate=.01,
+                 distillation_strength=0., distillation_temperature=2.):
     """One local pass. Hyperparameters and calibration never use Doyle scores."""
     started = time.perf_counter()
     _validate_learning_rate(learning_rate)
+    _validate_distillation(distillation_strength, distillation_temperature)
     if not isinstance(warm_start, bool):
         raise ValueError("warm_start must be an explicit boolean")
+    if distillation_strength and not warm_start:
+        raise ValueError("positive distillation requires warm_start=True")
     if not isinstance(epochs, int) or isinstance(epochs, bool) or not 1 <= epochs <= 1000:
         raise ValueError("epochs must be between 1 and 1000")
     if not isinstance(hidden, int) or isinstance(hidden, bool) or not 2 <= hidden <= 256:
@@ -389,7 +494,17 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
     extra = EXTRA_FAMILIES if expanded_families else EXTRA_FAMILIES[:3]
     families = [name for name in (*FAMILIES, *extra) if name in certified]
     destination = Path(weights_path)
+    incumbent_bytes = None
+    if distillation_strength and destination.is_file():
+        if destination.stat().st_size > 4 * 1024 * 1024:
+            raise ValueError("incumbent artifact exceeds the 4 MiB bound")
+        incumbent_bytes = destination.read_bytes()
     previous = load_router(destination) if destination.is_file() else None
+    teacher_sha256 = None
+    if incumbent_bytes is not None:
+        if destination.read_bytes() != incumbent_bytes:
+            raise ValueError("incumbent changed while loading the frozen teacher")
+        teacher_sha256 = hashlib.sha256(incumbent_bytes).hexdigest()
     if previous is not None and previous["families"] != families[:len(previous["families"])]:
         raise ValueError("incumbent families must be a prefix of candidate families; use matching expanded settings or a separate artifact path")
     if warm_start:
@@ -408,9 +523,13 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
             raise ValueError("warm start must preserve hidden width")
     x, y = _samples(training, families, train_per_class, ROUTER_SEED, english, tables)
     vx, vy = _samples(validation, families, 24, ROUTER_SEED + 101, english, tables)
+    teacher_options = {}
+    if distillation_strength:
+        teacher_options = {"teacher_models": previous["models"], "distillation_strength": distillation_strength,
+            "distillation_temperature": distillation_temperature}
     models = [fit_residual_network(x, y, vx, vy, hidden=hidden, epochs=epochs, seed=ROUTER_SEED + i * 997,
                                   initial_model=previous["models"][i] if warm_start else None,
-                                  learning_rate=learning_rate)
+                                  learning_rate=learning_rate, **teacher_options)
               for i in range(ensemble_size)]
     cx, cy = _samples(calibration, families, 24, ROUTER_SEED + 303, english, tables)
     c_logits = np.mean([network_logits(cx, model) for model in models], axis=0)
@@ -488,6 +607,14 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
                "calibration_sha256": payload["calibration_sha256"],
                "train_sha256": payload["train_sha256"], "validation_sha256": payload["validation_sha256"], "heldout_sha256": payload["heldout_sha256"]}
     metrics["training_types"] = models[0]["training_types"]
+    if distillation_strength:
+        teacher_record = {"strength": distillation_strength, "temperature": distillation_temperature,
+            "source_model_sha256": teacher_sha256,
+            "feature_version": previous["feature_version"], "ensemble_size": len(previous["models"]),
+            "scope": "generated training rows only", "objective": "T^2 KL(teacher || student)",
+            "teacher": "frozen mean-logit incumbent ensemble", "synthetic_labels": "retained at full supervised weight"}
+        payload["distillation"] = teacher_record
+        metrics["distillation"] = teacher_record
     metrics["elapsed_seconds"] = time.perf_counter() - started
     metrics["reward"] = float(np.mean([correctness_speed_reward(bool(ok), metrics["elapsed_seconds"] / len(hy))
         for ok in (probs.argmax(axis=1) == hy)]))
@@ -502,6 +629,8 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
         metrics["promoted"] = False
         metrics["model_policy"].update(status="rejected", action="retain incumbent; candidate exceeds artifact size bound")
     if write and metrics["promoted"]:
+        if distillation_strength and hashlib.sha256(destination.read_bytes()).hexdigest() != teacher_sha256:
+            raise ValueError("incumbent changed during training; refusing to replace a newer artifact")
         _atomic_json(destination, payload, compact=True)
         metrics_stem = (destination.stem.replace("weights", "metrics")
                         if "weights" in destination.stem else destination.stem + ".metrics")

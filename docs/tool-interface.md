@@ -8,6 +8,7 @@ python3 -m engine run transposition-ensemble AIVLHCEWPFIDRIRLE --params '{"max_c
 python3 -m engine run rsa-wiener 1511 --params '{"modulus":8927,"exponent":2621,"plaintext_length":2}'
 python3 -m engine run rsa-common-modulus 2790 --params '{"c2":1317,"e1":17,"e2":7,"n":3233}'
 python3 -m engine run morse-constraints 0 --params '{"families":["pollux"],"lexicon":["E"],"max_maps":1000}'
+python3 -m engine run k4-models EHPFSFEBHMHPF --params '{"cribs":[{"offset":4,"plaintext":"O"}],"families":["plaintext-autokey"],"alphabets":["ABCDEFGHIJKLMNOPQRSTUVWXYZ"],"orders":["substitute-then-transpose"],"max_period":1}'
 python3 -m engine investigate LXFOPVEFRNHR --crib 0:ATTACK --max-checks 5000
 ```
 
@@ -18,3 +19,13 @@ These invocations illustrate explicit parameter contracts. Consult the selected 
 The adapter caps raw input at 8,192 characters, RSA values at 4,096 bits, parameter JSON at 64 KiB, nesting at eight levels, strings at 8,192 characters, sequences at 1,000 entries and mappings at 100 fields. Individual tools impose narrower bounds. It also caps restarts, iteration counts and requested byte lengths. These constraints bound local invocation rather than establishing a hard wall-time limit for every function.
 
 Some repository experiments accept callbacks, lists of ciphertexts or physical-device signals; those require their documented Python APIs. They are not silently forced into a text invocation. `run` reports successful execution under the selected tool's assumptions. A recovered candidate, score, crib fit or reencryption check still requires independent evidence before a historical solve claim.
+
+`k4-models` is a conditional composition tester usable on any 4 through 512
+ASCII-letter input, despite its K4 research origin. It requires at least one
+aligned crib and tests repeating, Beaufort, plaintext-autokey and
+ciphertext-autokey recurrences with ragged layouts in both composition orders.
+Periods and widths stop at 32; at most 10,000 model checks are allowed. Unknown
+key slots remain `null` and unknown plaintext positions remain `?`. Candidate
+storage limits do not imply search completion. It never claims a historical
+plaintext. Reserve verification clues outside inference and evaluate them after
+the search; see the [executed experiment and complete reproduction record](k4-focus/model-experiments-2026-10-03.md).
