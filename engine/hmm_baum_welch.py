@@ -81,6 +81,42 @@ class HMMFit:
         return len(self.start)
 
 
+def generate_two_state_corpus(
+    length: int = 800,
+    seed: int = 0,
+    alphabet: Sequence[str] = ("A", "B", "C", "D"),
+) -> SyntheticTwoStateCorpus:
+    """Draw a sticky two-state symbol sequence with separated emissions.
+
+    State 0 prefers the early alphabet symbols; state 1 prefers the later
+    ones. Transitions stay in the current state most of the time so the
+    hidden path is recoverable by a first-order HMM and is roughly balanced.
+    """
+    if length < 2:
+        raise ValueError("length must be at least 2")
+    symbols_alpha = tuple(alphabet)
+    if len(symbols_alpha) < 2 or len(set(symbols_alpha)) != len(symbols_alpha):
+        raise ValueError("alphabet must be at least two distinct symbols")
+    rng = random.Random(seed)
+    n_sym = len(symbols_alpha)
+    # Hand-built, complementary emission rows. Not estimated from data.
+    emit = [_complementary_row(n_sym, favor="early"), _complementary_row(n_sym, favor="late")]
+    trans = ((0.97, 0.03), (0.04, 0.96))
+    state = 0 if rng.random() < 0.5 else 1
+    states: list[int] = []
+    observations: list[str] = []
+    for _ in range(length):
+        states.append(state)
+        observations.append(symbols_alpha[_sample_index(rng, emit[state])])
+        state = _sample_index(rng, trans[state])
+    return SyntheticTwoStateCorpus(
+        symbols=tuple(observations),
+        states=tuple(states),
+        alphabet=symbols_alpha,
+        seed=seed,
+    )
+
+
 def fit_baum_welch(
     symbols: Sequence[str],
     n_states: int = 2,
