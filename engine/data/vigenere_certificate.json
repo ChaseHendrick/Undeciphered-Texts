@@ -1,0 +1,10 @@
+{
+  "cipher_name": "vigenere",
+  "plaintext": "A printer on Oak Street kept the presses running after dark whenever a ship brought fresh paper. He mixed the ink himself and checked each sheet against the copy the editor had marked. Customers wanted notices of auctions, lists of timber prices, and the names of passengers who had booked a cabin. The apprentice learned to lock the type tightly so the lines would not dance. When the last form was washed the room smelled of oil and wet rag paper, and the printer walked home along the canal with ink still on his cuffs.",
+  "ciphertext": "H pijbklr fo Crr Skssva kvqh koe gssjzej sieuieh owaei eoir wyfbvcei b gypp ssclnhk gfvzh gbdvy. Hv nwold kis zuk yjajllw bbu jhvdyvk erdv joevu oxhieth koe tpdp ahv frzaoi iou tailsu. Jujucdlrj xoeaeu ockpcvt cw hutuwfus, cjgkz ow uwdiei qfzjej, bbu ahv oodls fg drzsvouvys nic yhd spcbld r dospn. Kis rwpifbkpcv msrynve hf sotl hyl tpqs kpgyuzp zo kis cpnvt kfblu ock kaeds. Noee uvv saju tfym nbg nhsyfr koe ipcd zmvmzvk ow pwc hnu xsk yax qoglr, ror koe gsweaei xocreu icdl acpbx ahv doehl njhy pnb thzsl fo vzz clgtj.",
+  "keys": {
+    "key": "HARBOR"
+  },
+  "plaintext_sha256": "0301581ffbdb8200eb0fea9628267c3938449f1bb21fa26dc5dd791bd466a632",
+  "note": "Verification certificate for a repository fixture plaintext recovered by the solver. Checks the published example / fixture, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

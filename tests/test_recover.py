@@ -4,6 +4,9 @@ from __future__ import annotations
 
 import random
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from engine.alphabet import letters_only
 from engine.ciphers import (
@@ -87,6 +90,44 @@ class RecoveryTest(unittest.TestCase):
         random.Random(0).shuffle(shuffled)
         self.assertGreater(model.score(seq), model.score(shuffled))
         self.assertGreater(index_of_coincidence(letters), 0.06)
+
+
+
+CAESAR_CERT = Path(__file__).resolve().parents[1] / "engine" / "data" / "caesar_certificate.json"
+VIGENERE_CERT = Path(__file__).resolve().parents[1] / "engine" / "data" / "vigenere_certificate.json"
+SUBSTITUTION_CERT = Path(__file__).resolve().parents[1] / "engine" / "data" / "substitution_certificate.json"
+
+
+class ClassicalFixtureCertificateTest(unittest.TestCase):
+    """Certificates check fixture plaintexts recovered by solvers, not unknown scripts."""
+
+    def _check(self, path: Path, cipher_name: str, decrypt_fn) -> None:
+        cert = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(cert["cipher_name"], cipher_name)
+        plaintext = cert["plaintext"]
+        ciphertext = cert["ciphertext"]
+        digest = hashlib.sha256(plaintext.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, cert["plaintext_sha256"])
+        self.assertEqual(decrypt_fn(cert), plaintext)
+        self.assertIn("not an unknown script", cert["note"].lower())
+
+    def test_caesar_certificate(self) -> None:
+        def dec(cert):
+            return caesar_decrypt(cert["ciphertext"], cert["keys"]["shift"])
+        self._check(CAESAR_CERT, "caesar", dec)
+        cert = json.loads(CAESAR_CERT.read_text(encoding="utf-8"))
+        result = solve_caesar(cert["ciphertext"])
+        self.assertTrue(_same(result.plaintext, cert["plaintext"]))
+
+    def test_vigenere_certificate(self) -> None:
+        def dec(cert):
+            return vigenere_decrypt(cert["ciphertext"], cert["keys"]["key"])
+        self._check(VIGENERE_CERT, "vigenere", dec)
+
+    def test_substitution_certificate(self) -> None:
+        def dec(cert):
+            return substitution_decrypt(cert["ciphertext"], cert["keys"]["key"])
+        self._check(SUBSTITUTION_CERT, "substitution", dec)
 
 
 if __name__ == "__main__":

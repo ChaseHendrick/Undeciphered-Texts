@@ -8,6 +8,9 @@ glossed "human, person" on the Wiktionary page for that spelling
 from __future__ import annotations
 
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from engine.coptic_letters import ROME, ROME_CAPITAL, lookup, read_letters, read_word
 
@@ -75,6 +78,26 @@ class CopticLetterReaderTest(unittest.TestCase):
         reading = read_word("?")
         self.assertIsNone(reading.lexeme)
         self.assertFalse(reading.all_letters_known)
+
+
+
+CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "coptic_letters_certificate.json"
+
+
+class CopticCertificateTest(unittest.TestCase):
+    """Certificate checks a cited known text/gloss, not an unknown script."""
+
+    def test_certificate_matches_known_text_hash(self) -> None:
+        cert = json.loads(CERT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(cert["tool_name"], "coptic-letters")
+        known = cert["known_text"]
+        digest = hashlib.sha256(known.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, cert["known_text_sha256"])
+        reading = read_word(cert["input"])
+        assert reading.lexeme is not None
+        self.assertEqual(reading.lexeme.gloss, known)
+        self.assertEqual(reading.lexeme.source_url, cert["source_url"])
+        self.assertIn("not an unknown script", cert["note"].lower())
 
 
 if __name__ == "__main__":

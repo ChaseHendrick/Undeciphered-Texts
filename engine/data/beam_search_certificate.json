@@ -1,0 +1,10 @@
+{
+  "cipher_name": "beam-search-substitution",
+  "plaintext": "The quiet harbor kept every small boat safe while the morning tide lifted the wooden pier and the gulls cried over the gray water. A fisher mended nets beside a red shed and told his friend that the catch would improve once the wind shifted to the west. Children raced along the dock, counted the painted buoys, and begged for a story about a brave captain who guided a crowded ship through fog. Later the shops closed, lamps glowed in the windows, and the slow bell in the square marked the end of a long calm day.",
+  "ciphertext": "Zit jxotz iqkwgk athz tctkn ldqss wgqz lqyt viost zit dgkfofu zort soyztr zit vggrtf hotk qfr zit uxssl ekotr gctk zit ukqn vqztk. Q yolitk dtfrtr ftzl wtlort q ktr litr qfr zgsr iol ykotfr ziqz zit eqzei vgxsr odhkgct gfet zit vofr lioyztr zg zit vtlz. Eiosrktf kqetr qsgfu zit rgea, egxfztr zit hqofztr wxgnl, qfr wtuutr ygk q lzgkn qwgxz q wkqct eqhzqof vig uxortr q ekgvrtr lioh zikgxui ygu. Sqztk zit lighl esgltr, sqdhl usgvtr of zit vofrgvl, qfr zit lsgv wtss of zit ljxqkt dqkatr zit tfr gy q sgfu eqsd rqn.",
+  "keys": {
+    "substitution_key": "QWERTYUIOPASDFGHJKLZXCVBNM"
+  },
+  "plaintext_sha256": "e887d96307f36befb1d5d298cae54b355ec50a4ec95ba39d6ec3092b27273dd0",
+  "note": "Verification certificate for a repository fixture plaintext recovered by the solver. Checks the published example / fixture, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

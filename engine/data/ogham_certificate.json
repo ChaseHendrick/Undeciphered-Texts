@@ -1,0 +1,8 @@
+{
+  "tool_name": "ogham-lookup",
+  "input": "ᚁ",
+  "known_text": "OGHAM LETTER BEITH",
+  "source_url": "https://unicode.org/Public/18.0.0/charts/nameslist/1680/",
+  "known_text_sha256": "fc2bb6775561a56333b70aa99da787aee09fd103a4a024142b7e393491ada55f",
+  "note": "Verification certificate for a published worked example or cited known text. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

@@ -1,0 +1,10 @@
+{
+  "cipher_name": "caesar",
+  "plaintext": "The harbor bell rang twice before dawn, and the small boats left the quay with nets folded on the deck. A thin mist hid the far shore, but the crew knew the channel by the sound of water against stone.",
+  "ciphertext": "Esp slcmzc mpww clyr ehtnp mpqzcp olhy, lyo esp dxlww mzled wpqe esp bflj htes yped qzwopo zy esp opnv. L esty xtde sto esp qlc dszcp, mfe esp ncph vyph esp nslyypw mj esp dzfyo zq hlepc lrltyde dezyp.",
+  "keys": {
+    "shift": 11
+  },
+  "plaintext_sha256": "5c6928140fc1abdf9c2b04f69858867a0be3fa4a85bac5442d24df7dd3357635",
+  "note": "Verification certificate for a repository fixture plaintext recovered by the solver. Checks the published example / fixture, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

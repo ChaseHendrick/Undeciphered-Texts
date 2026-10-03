@@ -13,6 +13,9 @@ known-cipher check, not a reading of an unknown script.
 from __future__ import annotations
 
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from engine.solvers import SOLVERS
 from engine.solvers.playfair import (
@@ -85,6 +88,28 @@ class PlayfairWikipediaExampleTest(unittest.TestCase):
         self.assertIn("known-cipher", doc)
         self.assertIn("does **not** read an unknown script", doc)
         self.assertIn(WIKIPEDIA_SOURCE_URL, doc)
+
+
+
+CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "playfair_certificate.json"
+
+
+class PlayfairCertificateTest(unittest.TestCase):
+    """Certificate checks the published Wikipedia example, not an unknown script."""
+
+    def setUp(self) -> None:
+        self.cert = json.loads(CERT_PATH.read_text(encoding="utf-8"))
+
+    def test_certificate_decrypts_and_matches_plaintext_hash(self) -> None:
+        self.assertEqual(self.cert["cipher_name"], "playfair")
+        plaintext = self.cert["plaintext"]
+        ciphertext = self.cert["ciphertext"]
+        keyword = self.cert["keys"]["keyword"]
+        digest = hashlib.sha256(plaintext.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, self.cert["plaintext_sha256"])
+        self.assertEqual(playfair_decrypt(ciphertext, keyword), plaintext)
+        self.assertEqual(self.cert["source_url"], WIKIPEDIA_SOURCE_URL)
+        self.assertIn("not an unknown script", self.cert["note"].lower())
 
 
 if __name__ == "__main__":

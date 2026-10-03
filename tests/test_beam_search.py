@@ -7,6 +7,8 @@ from __future__ import annotations
 
 import random
 import unittest
+import hashlib
+import json
 from pathlib import Path
 
 from engine.ciphers import substitution_decrypt, substitution_encrypt
@@ -72,6 +74,30 @@ class BeamSearchDecipherTest(unittest.TestCase):
     def test_short_ciphertext_is_rejected(self) -> None:
         with self.assertRaises(ValueError):
             beam_search_decipher("Too short.")
+
+
+
+BEAM_CERT_PATH = Path(__file__).resolve().parent.parent / "engine" / "data" / "beam_search_certificate.json"
+
+
+class BeamSearchCertificateTest(unittest.TestCase):
+    """Certificate checks the synthetic beam-search fixture, not an unknown script."""
+
+    def test_certificate_decrypts_and_matches_plaintext_hash(self) -> None:
+        cert = json.loads(BEAM_CERT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(cert["cipher_name"], "beam-search-substitution")
+        plaintext = cert["plaintext"]
+        ciphertext = cert["ciphertext"]
+        digest = hashlib.sha256(plaintext.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, cert["plaintext_sha256"])
+        # Known-key decrypt path for the certificate ciphertext.
+        self.assertEqual(
+            substitution_decrypt(ciphertext, cert["keys"]["substitution_key"]),
+            plaintext,
+        )
+        result = beam_search_decipher(ciphertext, beam_width=40)
+        self.assertEqual(result.plaintext, plaintext)
+        self.assertIn("not an unknown script", cert["note"].lower())
 
 
 if __name__ == "__main__":

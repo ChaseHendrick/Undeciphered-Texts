@@ -8,6 +8,9 @@ This is a known-script dictionary test, not a decipherment claim.
 from __future__ import annotations
 
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from engine.egyptian import (
     UnknownSignError,
@@ -73,6 +76,24 @@ class EgyptianVerifiedPhraseTest(unittest.TestCase):
         self.assertIn("M17:", reading.gloss)
         self.assertIn("Y5:", reading.gloss)
         self.assertIn("N35:", reading.gloss)
+
+
+
+CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "egyptian_certificate.json"
+
+
+class EgyptianCertificateTest(unittest.TestCase):
+    """Certificate checks a cited known text/gloss, not an unknown script."""
+
+    def test_certificate_matches_known_text_hash(self) -> None:
+        cert = json.loads(CERT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(cert["tool_name"], "egyptian-hieroglyph-reader")
+        known = cert["known_text"]
+        digest = hashlib.sha256(known.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, cert["known_text_sha256"])
+        reading = read_hieroglyphs(cert["input"])
+        self.assertEqual(reading.transliteration, known)
+        self.assertIn("not an unknown script", cert["note"].lower())
 
 
 if __name__ == "__main__":

@@ -1,0 +1,14 @@
+{
+  "cipher_name": "adfgvx",
+  "plaintext": "ATTACKAT1200AM",
+  "ciphertext": "DGDDDAGDDGAFADDFDADVDVFAADVX",
+  "keys": {
+    "transposition_key": "PRIVACY",
+    "fractionation_keyword": "nachtbommenwerper",
+    "square": "NA1C3H8TB2OME5WRPD4F6G7I9J0KLQSUVXYZ"
+  },
+  "source_url": "https://en.wikipedia.org/wiki/ADFGVX_cipher",
+  "message": "attack at 1200am",
+  "plaintext_sha256": "4909a40aebf59631f61a5e049ad8346f41c3580e51ba7511bf7973cfc258e4db",
+  "note": "Verification certificate for a published worked example or cited known text. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

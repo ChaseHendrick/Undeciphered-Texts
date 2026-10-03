@@ -1,0 +1,9 @@
+{
+  "tool_name": "ancient-greek-lookup",
+  "input": "ἄνθρωπος",
+  "known_text": "man, both as a generic term and of individuals",
+  "lemma": "ἄνθρωπος",
+  "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0057:entry=a)/nqrwpos",
+  "known_text_sha256": "e11d4485a2461024ddd9fa85e99b6a704b547759222d4f7902eac64ae0cecd16",
+  "note": "Verification certificate for a published worked example or cited known text. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

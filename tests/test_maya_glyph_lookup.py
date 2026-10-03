@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from engine.maya_glyph_lookup import (
     DOES_NOT_DECIPHER_UNDECIPHERED_MAYA_PASSAGES,
@@ -34,6 +37,27 @@ class MayaGlyphLookupTest(unittest.TestCase):
         )
         self.assertTrue(DOES_NOT_DECIPHER_UNDECIPHERED_MAYA_PASSAGES)
         self.assertIsNone(lookup("T544 T544 undeciphered passage"))
+
+
+
+CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "maya_glyph_certificate.json"
+
+
+class MayaGlyphCertificateTest(unittest.TestCase):
+    """Certificate checks a cited known text/gloss, not an unknown script."""
+
+    def test_certificate_matches_known_text_hash(self) -> None:
+        cert = json.loads(CERT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(cert["tool_name"], "maya-glyph-lookup")
+        known = cert["known_text"]
+        digest = hashlib.sha256(known.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, cert["known_text_sha256"])
+        row = lookup(cert["input"])
+        self.assertIsNotNone(row)
+        assert row is not None
+        self.assertEqual(row.gloss, known)
+        self.assertEqual(row.source_url, cert["source_url"])
+        self.assertIn("not an unknown script", cert["note"].lower())
 
 
 if __name__ == "__main__":

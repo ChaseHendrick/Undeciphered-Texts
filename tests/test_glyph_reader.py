@@ -8,6 +8,9 @@ Indus script, or Teotihuacan signs.
 from __future__ import annotations
 
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from glyph_reader import (
     DISCLAIMER,
@@ -76,6 +79,26 @@ class SyntheticGlyphReaderTest(unittest.TestCase):
         self.assertEqual(set(templates), set(inventory_labels()))
         values = list(templates.values())
         self.assertEqual(len(values), len(set(values)))
+
+
+
+GLYPH_CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "glyph_reader_certificate.json"
+
+
+class GlyphReaderCertificateTest(unittest.TestCase):
+    """Certificate checks planted synthetic labels, not an unknown script."""
+
+    def test_certificate_matches_known_text_hash(self) -> None:
+        cert = json.loads(GLYPH_CERT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(cert["tool_name"], "glyph-reader")
+        known = cert["known_text"]
+        digest = hashlib.sha256(known.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, cert["known_text_sha256"])
+        labels = known.split()
+        image = render_synthetic_sheet(tuple(labels), columns=5)
+        report = analyze_glyphs(image)
+        self.assertEqual([g.label for g in report.glyphs], labels)
+        self.assertIn("not an unknown script", cert["note"].lower())
 
 
 if __name__ == "__main__":

@@ -1,0 +1,7 @@
+{
+  "tool_name": "ocr",
+  "input": "THE HARBOR BELL RANG",
+  "known_text": "THEHARBORBELLRANG",
+  "known_text_sha256": "2ddc6861073b47b339ed638e3292c05b697646a7efe1f8cccc3a78816cf7a91f",
+  "note": "Verification certificate for a repository fixture plaintext recovered by the solver. Checks the published example / fixture, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86. Synthetic PNG rendered in the unit test."
+}

@@ -1,0 +1,9 @@
+{
+  "tool_name": "maya-glyph-lookup",
+  "input": "T544",
+  "known_text": "day; sun; calendar unit k’in, 1st (lowest) position in the LC = 1 day",
+  "reading": "K'IN",
+  "source_url": "https://mayaglyphs.org/CWLhtml/K%27INlogo.html",
+  "known_text_sha256": "706f8b06fec85df87b6b16225d74f6c181b183f261f2393142fedc407492c1f6",
+  "note": "Verification certificate for a published worked example or cited known text. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

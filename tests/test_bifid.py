@@ -9,6 +9,9 @@ ancient-script or unknown-language reading.
 from __future__ import annotations
 
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from engine.solvers.bifid import (
     PRACTICAL_CRYPTOGRAPHY_CIPHER,
@@ -99,6 +102,31 @@ class BifidHelpersTest(unittest.TestCase):
 
     def test_j_folds_to_i(self) -> None:
         self.assertEqual(bifid_letters("Jazz"), "IAZZ")
+
+
+
+CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "bifid_certificate.json"
+
+
+class BifidCertificateTest(unittest.TestCase):
+    """Certificate checks the published Practical Cryptography example, not an unknown script."""
+
+    def setUp(self) -> None:
+        self.cert = json.loads(CERT_PATH.read_text(encoding="utf-8"))
+
+    def test_certificate_decrypts_and_matches_plaintext_hash(self) -> None:
+        self.assertEqual(self.cert["cipher_name"], "bifid")
+        plaintext = self.cert["plaintext"]
+        ciphertext = self.cert["ciphertext"]
+        keys = self.cert["keys"]
+        digest = hashlib.sha256(plaintext.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, self.cert["plaintext_sha256"])
+        self.assertEqual(
+            bifid_decrypt(ciphertext, keys["square"], keys["period"]),
+            plaintext,
+        )
+        self.assertEqual(self.cert["source_url"], PRACTICAL_CRYPTOGRAPHY_URL)
+        self.assertIn("not an unknown script", self.cert["note"].lower())
 
 
 if __name__ == "__main__":

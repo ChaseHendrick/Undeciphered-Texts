@@ -12,6 +12,9 @@ This test does not claim an unknown script was read.
 from __future__ import annotations
 
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from engine.latin_reader import NOT_A_DECIPHERMENT, read_latin
 from engine.roman_text import to_classical, to_epigraphic
@@ -87,6 +90,24 @@ class LatinReaderTest(unittest.TestCase):
         self.assertEqual(unknown.glosses[0].known, False)
         self.assertIsNone(unknown.glosses[0].gloss)
         self.assertIn("not a decipherment", unknown.note)
+
+
+
+CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "latin_roman_certificate.json"
+
+
+class LatinRomanCertificateTest(unittest.TestCase):
+    """Certificate checks a cited known text/gloss, not an unknown script."""
+
+    def test_certificate_matches_known_text_hash(self) -> None:
+        cert = json.loads(CERT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(cert["tool_name"], "latin-roman-reader")
+        known = cert["known_text"]
+        digest = hashlib.sha256(known.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, cert["known_text_sha256"])
+        reading = read_latin(cert["input"])
+        self.assertEqual(reading.classical, known)
+        self.assertIn("not an unknown script", cert["note"].lower())
 
 
 if __name__ == "__main__":

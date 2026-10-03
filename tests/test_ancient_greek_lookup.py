@@ -7,6 +7,9 @@ Not a decipherment test. The expected lemma and gloss are sense A of
 from __future__ import annotations
 
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from engine.ancient_greek_lookup import (
     DOES_NOT_DECIPHER_LINEAR_B_OR_UNKNOWN_GREEK,
@@ -43,6 +46,27 @@ class AncientGreekLookupTest(unittest.TestCase):
         self.assertEqual(letter.unicode_name, "GREEK CAPITAL LETTER ALPHA")
         self.assertEqual(letter.codepoint, "U+0391")
         self.assertEqual(letter.character, "\u0391")
+
+
+
+CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "ancient_greek_certificate.json"
+
+
+class AncientGreekCertificateTest(unittest.TestCase):
+    """Certificate checks a cited known text/gloss, not an unknown script."""
+
+    def test_certificate_matches_known_text_hash(self) -> None:
+        cert = json.loads(CERT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(cert["tool_name"], "ancient-greek-lookup")
+        known = cert["known_text"]
+        digest = hashlib.sha256(known.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, cert["known_text_sha256"])
+        row = lookup_word(cert["input"])
+        self.assertIsNotNone(row)
+        assert row is not None
+        self.assertEqual(row.gloss, known)
+        self.assertEqual(cert["source_url"], WORD_SOURCE_URL)
+        self.assertIn("not an unknown script", cert["note"].lower())
 
 
 if __name__ == "__main__":

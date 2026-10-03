@@ -9,8 +9,10 @@ from __future__ import annotations
 
 import re
 import unittest
-import urllib.request
+import hashlib
+import json
 from pathlib import Path
+import urllib.request
 
 from engine.known_language_reader import (
     NOT_A_DECIPHERMENT,
@@ -194,6 +196,30 @@ class KnownLanguageReaderTest(unittest.TestCase):
         self.assertIn("water", n35.gloss.casefold())
         self.assertIn("List_of_Egyptian_hieroglyphs", n35.source_url)
         self.assertTrue(n35.source_url.startswith("https://"))
+
+
+
+KL_CERT_PATH = ROOT / "engine" / "data" / "known_language_reader_certificate.json"
+
+
+class KnownLanguageReaderCertificateTest(unittest.TestCase):
+    """Certificate checks a cited known-language phrase, not an unknown script."""
+
+    def test_certificate_matches_known_text_hash(self) -> None:
+        cert = json.loads(KL_CERT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(cert["tool_name"], "known-language-reader")
+        known = cert["known_text"]
+        digest = hashlib.sha256(known.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, cert["known_text_sha256"])
+        self.assertEqual(cert["input"], known)
+        report = gloss_phrase(
+            cert["language"],
+            cert["input"],
+            phrase_citation=cert["source_url"],
+        )
+        self.assertEqual(report.language, "latin")
+        self.assertTrue(any("Gaul" in (e.gloss or "") for e in report.entries))
+        self.assertIn("not an unknown script", cert["note"].lower())
 
 
 if __name__ == "__main__":

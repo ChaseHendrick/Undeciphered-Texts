@@ -1,0 +1,8 @@
+{
+  "tool_name": "latin-roman-reader",
+  "input": "GALLIA·EST·OMNIS·DIVISA·IN·PARTES·TRES",
+  "known_text": "GALLIA EST OMNIS DIVISA IN PARTES TRES",
+  "source_url": "https://dcc.dickinson.edu/caesar/book-1/chapter-1-1",
+  "known_text_sha256": "24e9755f2a920970b2cd7c818597bdb03a2c3d6df307c26f0d1b14333ea2bf5a",
+  "note": "Verification certificate for a published worked example or cited known text. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

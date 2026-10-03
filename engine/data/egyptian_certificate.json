@@ -1,0 +1,8 @@
+{
+  "tool_name": "egyptian-hieroglyph-reader",
+  "input": "M17 Y5 N35",
+  "known_text": "jmn",
+  "source_url": "https://en.wiktionary.org/wiki/jmn",
+  "known_text_sha256": "4bcce7eb463b576d851ffdf38b1900208a4e08149e326f06ecd68e4cb022fa2d",
+  "note": "Verification certificate for a published worked example or cited known text. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

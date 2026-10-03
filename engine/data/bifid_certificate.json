@@ -1,0 +1,12 @@
+{
+  "cipher_name": "bifid",
+  "plaintext": "DEFENDTHEEASTWALLOFTHECASTLE",
+  "ciphertext": "FFYHMKHYCPLIASHADTRLHCCHLBLR",
+  "keys": {
+    "square": "PHQGMEAYLNOFDXKRCVSZWBUTI",
+    "period": 5
+  },
+  "source_url": "http://practicalcryptography.com/ciphers/bifid-cipher/",
+  "plaintext_sha256": "9b25bd513ba6e14f1c4fc35515eba9ef622b7c3db15fb4e39d118411135872ca",
+  "note": "Verification certificate for a published worked example or cited known text. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

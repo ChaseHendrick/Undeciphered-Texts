@@ -15,6 +15,9 @@ K4 is out of scope. Nothing here is a K4 claim.
 from __future__ import annotations
 
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from engine.alphabet import letters_only
 from engine.ciphers import vigenere_decrypt, vigenere_encrypt
@@ -211,6 +214,51 @@ class KeyedVigenereGeneralTest(unittest.TestCase):
         self.assertEqual(cipher[2], ",")
         self.assertEqual(cipher[-1], ".")
         self.assertEqual(keyed_vigenere_decrypt(cipher, "K", "KRYPTOS", "K"), plain)
+
+
+
+K1_CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "kryptos_k1_certificate.json"
+K2_CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "kryptos_k2_certificate.json"
+
+
+class KryptosCertificateTest(unittest.TestCase):
+    """Certificates check published K1/K2 plaintexts, not K4 or an unknown script."""
+
+    def test_k1_certificate_decrypts_and_matches_plaintext_hash(self) -> None:
+        cert = json.loads(K1_CERT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(cert["cipher_name"], "keyed-vigenere")
+        self.assertEqual(cert["passage"], "K1")
+        plaintext = cert["plaintext"]
+        ciphertext = cert["ciphertext"]
+        keys = cert["keys"]
+        digest = hashlib.sha256(plaintext.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, cert["plaintext_sha256"])
+        result = solve_keyed_vigenere(
+            ciphertext,
+            key=keys["key"],
+            alphabet_keyword=keys["alphabet_keyword"],
+            index_letter=keys["index_letter"],
+        )
+        self.assertEqual(result.plaintext, plaintext)
+        self.assertIn("not an unknown script", cert["note"].lower())
+
+    def test_k2_certificate_decrypts_and_matches_plaintext_hash(self) -> None:
+        cert = json.loads(K2_CERT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(cert["cipher_name"], "keyed-vigenere")
+        self.assertEqual(cert["passage"], "K2")
+        plaintext = cert["plaintext"]
+        ciphertext = cert["ciphertext"]
+        keys = cert["keys"]
+        digest = hashlib.sha256(plaintext.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, cert["plaintext_sha256"])
+        result = solve_keyed_vigenere(
+            ciphertext,
+            key=keys["key"],
+            alphabet_keyword=keys["alphabet_keyword"],
+            index_letter=keys["index_letter"],
+        )
+        self.assertEqual(result.plaintext, plaintext)
+        self.assertIn("not an unknown script", cert["note"].lower())
 
 
 if __name__ == "__main__":

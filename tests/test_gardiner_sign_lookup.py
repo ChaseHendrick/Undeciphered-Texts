@@ -8,6 +8,9 @@ This is a known-sign dictionary check, not a decipherment claim.
 from __future__ import annotations
 
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from engine.gardiner_sign_lookup import (
     KNOWN_SIGN_LOOKUP_ONLY,
@@ -50,6 +53,25 @@ class GardinerSignLookupTest(unittest.TestCase):
     def test_unknown_sign_raises(self) -> None:
         with self.assertRaises(UnknownGardinerSignError):
             lookup("ZZ99")
+
+
+
+CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "gardiner_sign_certificate.json"
+
+
+class GardinerCertificateTest(unittest.TestCase):
+    """Certificate checks a cited known text/gloss, not an unknown script."""
+
+    def test_certificate_matches_known_text_hash(self) -> None:
+        cert = json.loads(CERT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(cert["tool_name"], "gardiner-sign-lookup")
+        known = cert["known_text"]
+        digest = hashlib.sha256(known.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, cert["known_text_sha256"])
+        entry = lookup(cert["input"])
+        self.assertEqual(entry.gloss, known)
+        self.assertEqual(cert["source_url"], source_url())
+        self.assertIn("not an unknown script", cert["note"].lower())
 
 
 if __name__ == "__main__":

@@ -15,6 +15,9 @@ an unknown script.
 from __future__ import annotations
 
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from engine.solvers import SOLVERS
 from engine.solvers.adfgvx import (
@@ -121,6 +124,35 @@ class AdfgvxWikipediaExampleTest(unittest.TestCase):
         self.assertIn("known-cipher", doc)
         self.assertIn("does **not** read an unknown script", doc)
         self.assertIn(WIKIPEDIA_SOURCE_URL, doc)
+
+
+
+CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "adfgvx_certificate.json"
+
+
+class AdfgvxCertificateTest(unittest.TestCase):
+    """Certificate checks the published Wikipedia example, not an unknown script."""
+
+    def setUp(self) -> None:
+        self.cert = json.loads(CERT_PATH.read_text(encoding="utf-8"))
+
+    def test_certificate_decrypts_and_matches_plaintext_hash(self) -> None:
+        self.assertEqual(self.cert["cipher_name"], "adfgvx")
+        plaintext = self.cert["plaintext"]
+        ciphertext = self.cert["ciphertext"]
+        keys = self.cert["keys"]
+        digest = hashlib.sha256(plaintext.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, self.cert["plaintext_sha256"])
+        self.assertEqual(
+            adfgvx_decrypt(
+                ciphertext,
+                keys["transposition_key"],
+                fractionation_keyword=keys["fractionation_keyword"],
+            ),
+            plaintext,
+        )
+        self.assertEqual(self.cert["source_url"], WIKIPEDIA_SOURCE_URL)
+        self.assertIn("not an unknown script", self.cert["note"].lower())
 
 
 if __name__ == "__main__":

@@ -1,0 +1,9 @@
+{
+  "tool_name": "elder-futhark",
+  "input": "ᚠ",
+  "known_text": "*fehu",
+  "transliteration": "f",
+  "source_url": "https://en.wikipedia.org/wiki/Elder_Futhark",
+  "known_text_sha256": "16a02726086899ed0ce6fdf874f9a688a4c3e443eb768ac848a834d2d2e82a4e",
+  "note": "Verification certificate for a published worked example or cited known text. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

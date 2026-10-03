@@ -1,0 +1,9 @@
+{
+  "tool_name": "coptic-letters",
+  "input": "ⲣⲱⲙⲉ",
+  "known_text": "human, person",
+  "romanization": "rōme",
+  "source_url": "https://en.wiktionary.org/wiki/ⲣⲱⲙⲉ",
+  "known_text_sha256": "c59b1ca2f48c90e430acf8596dd5be92c2e43a2e1836c20e32ec4be379d6893d",
+  "note": "Verification certificate for a published worked example or cited known text. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

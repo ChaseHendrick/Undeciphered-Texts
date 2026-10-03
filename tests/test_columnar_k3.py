@@ -10,6 +10,9 @@ does not modify the keyed Vigenère K1/K2 tests.
 from __future__ import annotations
 
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from engine.alphabet import letters_only
 from engine.solvers.columnar import (
@@ -75,6 +78,28 @@ class KryptosK3Test(unittest.TestCase):
         result = solve_columnar(KRYPTOS_K3_CIPHERTEXT, 21, 28)
         self.assertEqual(result.plaintext, KRYPTOS_K3_PLAINTEXT)
         self.assertEqual(result.details["widths"], (21, 28))
+
+
+
+K3_CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "kryptos_k3_certificate.json"
+
+
+class KryptosK3CertificateTest(unittest.TestCase):
+    """Certificate checks the published K3 plaintext, not K4 or an unknown script."""
+
+    def setUp(self) -> None:
+        self.cert = json.loads(K3_CERT_PATH.read_text(encoding="utf-8"))
+
+    def test_certificate_decrypts_and_matches_plaintext_hash(self) -> None:
+        self.assertEqual(self.cert["cipher_name"], "columnar-transposition")
+        plaintext = self.cert["plaintext"]
+        ciphertext = self.cert["ciphertext"]
+        digest = hashlib.sha256(plaintext.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, self.cert["plaintext_sha256"])
+        result = solve_kryptos_k3(ciphertext)
+        self.assertEqual(result.plaintext, plaintext)
+        self.assertIn("not an unknown script", self.cert["note"].lower())
+        self.assertIn("not k4", self.cert["note"].lower())
 
 
 if __name__ == "__main__":

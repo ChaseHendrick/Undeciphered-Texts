@@ -1,0 +1,8 @@
+{
+  "tool_name": "gardiner-sign-lookup",
+  "input": "A1",
+  "known_text": "seated man; classifier human being",
+  "source_url": "https://www.unicode.org/charts/PDF/U13000.pdf",
+  "known_text_sha256": "d3a3c1617014e180da810b15bf5ddeab33e4446fdb5a78b07479a6aca059e318",
+  "note": "Verification certificate for a published worked example or cited known text. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from engine.alphabet import letters_only
 from engine.ciphers import vigenere_encrypt
@@ -36,6 +39,28 @@ class VigenereCribTest(unittest.TestCase):
         for hit in hits:
             self.assertNotEqual(letters_only(hit.plaintext), letters_only(VIGENERE_PLAIN))
             self.assertNotEqual(hit.key, VIGENERE_KEY)
+
+
+
+CRIB_CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "crib_certificate.json"
+
+
+class CribCertificateTest(unittest.TestCase):
+    """Certificate checks the fixture Vigenère recovery, not an unknown script."""
+
+    def test_certificate_recovers_and_matches_plaintext_hash(self) -> None:
+        cert = json.loads(CRIB_CERT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(cert["cipher_name"], "vigenere-crib")
+        plaintext = cert["plaintext"]
+        ciphertext = cert["ciphertext"]
+        crib = cert["keys"]["crib"]
+        digest = hashlib.sha256(plaintext.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, cert["plaintext_sha256"])
+        hits = search_vigenere_crib(ciphertext, crib, max_period=12)
+        self.assertTrue(hits)
+        self.assertEqual(hits[0].key, cert["keys"]["expected_key"])
+        self.assertEqual(letters_only(hits[0].plaintext), letters_only(plaintext))
+        self.assertIn("not an unknown script", cert["note"].lower())
 
 
 if __name__ == "__main__":

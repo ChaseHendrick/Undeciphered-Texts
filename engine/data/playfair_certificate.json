@@ -1,0 +1,12 @@
+{
+  "cipher_name": "playfair",
+  "plaintext": "HIDETHEGOLDINTHETREXESTUMP",
+  "ciphertext": "BMODZBXDNABEKUDMUIXMMOUVIF",
+  "keys": {
+    "keyword": "playfair example"
+  },
+  "source_url": "https://en.wikipedia.org/wiki/Playfair_cipher",
+  "message": "hide the gold in the tree stump",
+  "plaintext_sha256": "e1ae0bbbcf66097d415d4b0c1605ddfaca5c060f8ded649a8801e99e52f4dbb1",
+  "note": "Verification certificate for a published worked example or cited known text. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

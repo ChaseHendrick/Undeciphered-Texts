@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 import unittest
+import hashlib
+import json
+from pathlib import Path
 
 from engine.alphabet import letters_only
 from engine.ciphers import (
@@ -154,6 +157,29 @@ class TwoSquareNr86ExperimentTest(unittest.TestCase):
         booklet = "FEINDLIQERANGRIFFAUFSTRASZEADORFSTRIQBEHAUSENABGEWEHRT"
         self.assertNotEqual(result.plaintext, booklet)
         self.assertNotEqual(len(result.plaintext), len(booklet))
+
+
+
+TWO_SQUARE_CERT_PATH = Path(__file__).resolve().parents[1] / "engine" / "data" / "two_square_certificate.json"
+
+
+class TwoSquareCertificateTest(unittest.TestCase):
+    """Certificate checks synthetic two-square recovery, not army message Nr. 86."""
+
+    def test_certificate_decrypts_and_matches_plaintext_hash(self) -> None:
+        cert = json.loads(TWO_SQUARE_CERT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual(cert["cipher_name"], "two-square")
+        plaintext = cert["plaintext"]
+        ciphertext = cert["ciphertext"]
+        keys = cert["keys"]
+        digest = hashlib.sha256(plaintext.encode("utf-8")).hexdigest()
+        self.assertEqual(digest, cert["plaintext_sha256"])
+        self.assertEqual(
+            two_square_decrypt(ciphertext, keys["left_square"], keys["right_square"]),
+            plaintext,
+        )
+        self.assertIn("not an unknown script", cert["note"].lower())
+        self.assertIn("nr. 86", cert["note"].lower())
 
 
 if __name__ == "__main__":

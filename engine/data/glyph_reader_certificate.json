@@ -1,0 +1,7 @@
+{
+  "tool_name": "glyph-reader",
+  "input": "bar peak bar cross ring corner peak stem ring stem",
+  "known_text": "bar peak bar cross ring corner peak stem ring stem",
+  "known_text_sha256": "a18398b676adde62634e08a42191dc3c6f5d8adff6f900471d8d726a52a22036",
+  "note": "Verification certificate for a repository fixture plaintext recovered by the solver. Checks the published example / fixture, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86. Synthetic planted inventory labels only."
+}

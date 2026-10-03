@@ -1,0 +1,9 @@
+{
+  "tool_name": "known-language-reader",
+  "input": "Gallia est omnis divisa in partes tres",
+  "known_text": "Gallia est omnis divisa in partes tres",
+  "language": "latin",
+  "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0002:book=1:chapter=1",
+  "known_text_sha256": "04aa0efa571a7ed6ca1810f935fbda33a3e2c296da4ccae827254cbf5715073a",
+  "note": "Verification certificate for a published worked example or cited known text. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

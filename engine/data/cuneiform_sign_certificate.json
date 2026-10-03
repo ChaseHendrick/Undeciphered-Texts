@@ -1,0 +1,9 @@
+{
+  "tool_name": "cuneiform-sign-lookup",
+  "input": "AN",
+  "known_text": "an",
+  "character": "𒀭",
+  "source_url": "https://github.com/oracc/osl/blob/dcee28e57d9387638c122e3435a98ceb6ea9e5e2/00lib/osl.asl",
+  "known_text_sha256": "ea325d761f98c6b73320e442b67f2a3574d9924716d788ddc0dbbdcaca853fe7",
+  "note": "Verification certificate for a published worked example or cited known text. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

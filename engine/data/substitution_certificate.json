@@ -1,0 +1,10 @@
+{
+  "cipher_name": "substitution",
+  "plaintext": "Geologists followed the creek upstream until the gravel turned from gray river stone to a band of red shale. They measured the dip of each layer and wrote the numbers in a field book before the rain could smear them. One outcrop showed ripples that had hardened when the water was shallow and warm. Another held broken shells the size of a thumbnail. The party ate lunch on a flat boulder and argued, without any heat, about whether the ridge had been a beach or a delta. By late afternoon they had samples enough to justify the long walk back to the wagon. A quick extra box of quartz fixed the last gap in the section.",
+  "ciphertext": "Utgsguolzl ygssgvtr zit ektta xhlzktqd xfzos zit ukqcts zxkftr ykgd ukqn koctk lzgft zg q wqfr gy ktr liqst. Zitn dtqlxktr zit roh gy tqei sqntk qfr vkgzt zit fxdwtkl of q yotsr wgga wtygkt zit kqof egxsr ldtqk zitd. Gft gxzekgh ligvtr kohhstl ziqz iqr iqkrtftr vitf zit vqztk vql liqssgv qfr vqkd. Qfgzitk itsr wkgatf litssl zit lomt gy q zixdwfqos. Zit hqkzn qzt sxfei gf q ysqz wgxsrtk qfr qkuxtr, vozigxz qfn itqz, qwgxz vitzitk zit korut iqr wttf q wtqei gk q rtszq. Wn sqzt qyztkfggf zitn iqr lqdhstl tfgxui zg pxlzoyn zit sgfu vqsa wqea zg zit vqugf. Q jxoea tbzkq wgb gy jxqkzm yobtr zit sqlz uqh of zit ltezogf.",
+  "keys": {
+    "key": "QWERTYUIOPASDFGHJKLZXCVBNM"
+  },
+  "plaintext_sha256": "26ed3a6ac53d8c326a988b8bfbd4d0fd780eeda5e3bf7859471162fb0a132d70",
+  "note": "Verification certificate for a repository fixture plaintext recovered by the solver. Checks the published example / fixture, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
