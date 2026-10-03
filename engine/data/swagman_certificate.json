@@ -1,0 +1,12 @@
+{
+  "cipher_name": "swagman",
+  "plaintext": "DONTBEAFRAIDTOTAKEABIGLEAPIFONEISINDICATEDYOUCANNOTCROSSARIVERORACHASMINTWOSMALLJUMPS",
+  "ciphertext": "ENDSCMORDANIBOISICTNASTGBLTEWAOAREEFSAIDVPYRMOEAIAFUILRLDOCOTJNRAAENOUNCMITSOAPHSKATI",
+  "key": "32145 15324 24531 53412 41253",
+  "keys": {
+    "key": "32145 15324 24531 53412 41253"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Swagman.pdf",
+  "plaintext_sha256": "edc272cc0c7c5f622c6beb40f74025292e80aaddf671cd09988bcd821ff7f718",
+  "note": "Verification certificate for a published worked example of the Swagman cipher (American Cryptogram Association cipher sheet: 5 by 5 numeric key square). Known-cipher solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
