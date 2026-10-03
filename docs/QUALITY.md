@@ -15,7 +15,7 @@
 - Runtime: Python 3.10+, **stdlib only** for solvers / tests / demo.
 - `python -m unittest discover -s tests` must pass.
 - `python -m engine demo` must rewrite `DEMO.md` with recovered PT matching fixtures.
-- Passing tests means recovery of **classical** ciphers in this set only—not modern crypto, not ancient scripts.
+- Passing tests means recovery of **classical** ciphers in this set only, not modern crypto, not ancient scripts.
 
 ## Docs
 

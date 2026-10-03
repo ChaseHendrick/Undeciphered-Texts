@@ -1,7 +1,7 @@
 """Held-out grade for the trigram letter model and a cipher-family router.
 
 The letter model is the same network as engine.neural. It is fit only on
-Jane Austen, Pride and Prejudice, chapters I–III. It is scored on a
+Jane Austen, Pride and Prejudice, chapters I-III. It is scored on a
 different book: the opening of Arthur Conan Doyle, "A Scandal in Bohemia."
 A German contrast comes from Grimm, "Der Wolf und die sieben jungen
 Geißlein," which is not the Froschkönig excerpt used by engine.german.
@@ -90,7 +90,7 @@ FAMILIES = (
 
 
 def letters_az(text: str) -> str:
-    """A–Z only. Umlauts are not folded; use german_letters for German."""
+    """A-Z only. Umlauts are not folded; use german_letters for German."""
     return "".join(ch for ch in letters_only(text) if "A" <= ch <= "Z")
 
 
@@ -254,7 +254,7 @@ def _index_of_coincidence(counts: list[int], n: int) -> float:
 
 
 def ciphertext_features(text: str, english: list[float]) -> list[float]:
-    """Fixed features of an A–Z ciphertext. english is the training unigram."""
+    """Fixed features of an A-Z ciphertext. english is the training unigram."""
     letters = letters_az(text)
     n = len(letters)
     if n < 16:

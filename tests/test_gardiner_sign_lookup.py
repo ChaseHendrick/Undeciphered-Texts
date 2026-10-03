@@ -1,7 +1,7 @@
 """Gardiner-sign lookup: one known Unicode chart sign.
 
 Tests A1 (U+13000, seated man) against the cited Unicode Egyptian Hieroglyphs
-chart. No multi-sign phrase is verified here — only single-sign table lookup.
+chart. No multi-sign phrase is verified here, only single-sign table lookup.
 This is a known-sign dictionary check, not a decipherment claim.
 """
 
@@ -35,7 +35,7 @@ class GardinerSignLookupTest(unittest.TestCase):
         self.assertIn("U13000", url)
 
     def test_a1_seated_man_from_unicode_chart(self) -> None:
-        # Unicode chart: U+13000 EGYPTIAN HIEROGLYPH A001 — seated man.
+        # Unicode chart: U+13000 EGYPTIAN HIEROGLYPH A001, seated man.
         entry = lookup("A1")
         self.assertEqual(entry.code, "A1")
         self.assertEqual(entry.unicode_hex, "U+13000")

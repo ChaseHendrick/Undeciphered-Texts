@@ -17,7 +17,7 @@ Primary source (fetched 2026-10-02, America/New_York):
 
 The article's **Example** section uses keyword `playfair example` (I and J
 interchangeable). The 5×5 square, filled keyword-first then the remaining
-letters of A–Z omitting J, is:
+letters of A-Z omitting J, is:
 
 ```
 P L A Y F

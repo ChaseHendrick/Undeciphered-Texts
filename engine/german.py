@@ -2,7 +2,7 @@
 
 The sample is the opening of Grimm, "Der Froschkönig oder der eiserne Heinrich"
 (Project Gutenberg eBook #77905). It is not the Truppenschlüssel ciphertext and
-not a proposed plaintext. Umlauts are folded into A–Z (ä→ae, ö→oe, ü→ue, ß→ss)
+not a proposed plaintext. Umlauts are folded into A-Z (ä→ae, ö→oe, ü→ue, ß→ss)
 before counts are taken, so the model is a 26-letter Latin scorer, not a full
 German orthography model.
 
@@ -54,7 +54,7 @@ def load_training_prose(path: Path | None = None) -> str:
 
 
 def german_letters(text: str) -> str:
-    """Fold German spelling into an A–Z stream. Non-letters are dropped."""
+    """Fold German spelling into an A-Z stream. Non-letters are dropped."""
     folded = text.translate(_FOLD)
     return "".join(ch for ch in folded.upper() if "A" <= ch <= "Z")
 

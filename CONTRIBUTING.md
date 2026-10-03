@@ -7,7 +7,7 @@ Thanks for interest in **undeciphered-texts**. Please read [`docs/AI-AGENTS.md`]
 1. **No invented decipherments** of unknown scripts or languages.
 2. **Cite URLs** for historical claims.
 3. **Classical solvers** need known-plaintext tests (`docs/TESTING.md`).
-4. **One engine** — extend `engine/`; do not add a second competing package.
+4. **One engine**. Extend `engine/`; do not add a second competing package.
 5. **Binaries:** commit real image blobs with git (`FF D8 FF` for JPEG). Do not upload images through tools that store base64 as text.
 
 ## Practical workflow

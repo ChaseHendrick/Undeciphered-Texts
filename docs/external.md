@@ -32,7 +32,7 @@ We **do not vendor** these codebases. Use them directly; cite authors. This repo
 
 ## Image→plaintext research (Copiale case studies)
 
-Pointers only—different problem than classical substitution annealing:
+Pointers only, different problem than classical substitution annealing:
 
 - https://github.com/leitro/Decipher-from-Pixels-Copiale (HistoCrypt 2026)
 - https://github.com/marinocom/Direct-Image-Decryption-Copiale
@@ -48,7 +48,7 @@ Pointers only—different problem than classical substitution annealing:
 
 ## Architecture reference (non-crypto)
 
-- [GENChase](https://github.com/ChaseHendrick/GENChase) — quality bar for CLI/tests/docs honesty; **not** a cipher engine; do not copy domain code.
+- [GENChase](https://github.com/ChaseHendrick/GENChase), quality bar for CLI/tests/docs honesty; **not** a cipher engine; do not copy domain code.
 
 ## How to use these with this repo
 
@@ -58,7 +58,7 @@ Pointers only—different problem than classical substitution annealing:
 4. Keep ancient-script work in corpus/statistics land unless you have specialist training.
 
 
-## Additions from the 2023–2026 audit
+## Additions from the 2023-2026 audit
 
 ### Herculaneum
 

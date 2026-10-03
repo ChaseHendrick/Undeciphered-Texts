@@ -97,7 +97,7 @@ class CompressionScoreTest(unittest.TestCase):
         # The source file itself is UTF-8, not a mis-decoded byte string.
         source = Path(compression_score.__file__).read_text(encoding="utf-8")
         self.assertIn("entziffert keine antiken Schriften", source)
-        self.assertIn("\u2014", source)
+        self.assertIn("Schriften, nur ein Kompressionsmaß", source)
 
 
 if __name__ == "__main__":

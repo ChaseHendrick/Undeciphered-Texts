@@ -7,25 +7,25 @@
 Research notes and a **classical cipher engine**.
 
 **This repository does not claim any new decipherment of ancient scripts or unknown languages.**  
-The `engine/` package recovers *known* classical ciphers (Caesar, Vigenère, monoalphabetic substitution) with tests and fixtures. Famous undeciphered systems are documented for context and realistic contribution paths—not as overnight puzzles.
+The `engine/` package recovers *known* classical ciphers (Caesar, Vigenère, monoalphabetic substitution) with tests and fixtures. Famous undeciphered systems are documented for context and realistic contribution paths, not as overnight puzzles.
 
 Inspired by amateur / hobby recovery of old German coded messages (see Crypto Cellar Enigma work) and by published historical breaks such as Copiale and Zodiac Z340.
 
-Layout and honesty bar take cues from [JustLetMeRead](https://github.com/ChaseHendrick/JustLetMeRead) (docs clarity) and [GENChase](https://github.com/ChaseHendrick/GENChase) (CLI / tests / architecture)—**structure only**. Domain content here is original classical crypto and sourced research; nothing from genart/simulation code is imported.
+Layout and honesty bar take cues from [JustLetMeRead](https://github.com/ChaseHendrick/JustLetMeRead) (docs clarity) and [GENChase](https://github.com/ChaseHendrick/GENChase) (CLI / tests / architecture), **structure only**. Domain content here is original classical crypto and sourced research; nothing from genart/simulation code is imported.
 
 ## Start here (recommendation)
 
-Work **digitized historical ciphertexts in known languages** first—not Linear A or Voynich.
+Work **digitized historical ciphertexts in known languages** first, not Linear A or Voynich.
 
-1. [DECODE / DECRYPT](https://de-crypt.org/) — archival cipher images, keys, transcription / cryptanalysis tools.
-2. [Crypto Cellar — Breaking German Army Ciphers](https://cryptocellar.org/bgac/) — remaining public Enigma / Wehrmacht challenges.
+1. [DECODE / DECRYPT](https://de-crypt.org/), archival cipher images, keys, transcription / cryptanalysis tools.
+2. [Crypto Cellar, Breaking German Army Ciphers](https://cryptocellar.org/bgac/), remaining public Enigma / Wehrmacht challenges.
 3. Early-modern diplomatic / nomenclator letters marked non-decrypted in DECODE (and community catalogues built on it).
 
 See [`docs/starter-projects.md`](docs/starter-projects.md) for concrete URLs and scoped projects.
 
 ## Quick start (engine)
 
-Python **3.10+**. Standard library only—no third-party packages required.
+Python **3.10+**. Standard library only, no third-party packages required.
 
 ```bash
 # from repo root
@@ -47,7 +47,7 @@ Full inventory of solvers and analysis tools (classical, keyed Vigenère, column
 | --- | --- |
 | Caesar (all shifts + English unigram score) | Decipher Linear A, Indus, Rongorongo, Phaistos, Voynich, … |
 | Vigenère (Kasiski, IC, Friedman, column Caesar + n-grams) | Attack modern cryptography |
-| Keyed Vigenère (keyword-mixed alphabet; known key) — recovers published Kryptos K1, not K4 | Claim Kryptos K4 or any unread passage |
+| Keyed Vigenère (keyword-mixed alphabet; known key), recovers published Kryptos K1, not K4 | Claim Kryptos K4 or any unread passage |
 | Simple substitution (frequency seed + annealing + hill-climb) | Claim a script or language is “solved” |
 | Known-plaintext recovery tests (7) | Invent historical decipherments |
 
@@ -97,13 +97,13 @@ Full inventory of solvers and analysis tools (classical, keyed Vigenère, column
 
 ## Guidelines
 
-- [`docs/AI-AGENTS.md`](docs/AI-AGENTS.md) — cite URLs; no invented decipherments; logs ≠ claims; solvers need tests.
-- [`docs/QUALITY.md`](docs/QUALITY.md) — every historical claim needs a source; mark hypotheses; verify image magic bytes.
-- [`docs/TESTING.md`](docs/TESTING.md) — unittest + demo witness.
-- [`docs/UI-UX.md`](docs/UI-UX.md) — CLI and docs presentation.
-- [`CONTRIBUTING.md`](CONTRIBUTING.md) — PR ground rules.
-- [`docs/NOVELTY.md`](docs/NOVELTY.md) — claim labels; no hallucinated readings.
-- [`docs/ERROR-LOG.md`](docs/ERROR-LOG.md) / [`docs/logs/errors.md`](docs/logs/errors.md) — real failures only.
+- [`docs/AI-AGENTS.md`](docs/AI-AGENTS.md), cite URLs; no invented decipherments; logs ≠ claims; solvers need tests.
+- [`docs/QUALITY.md`](docs/QUALITY.md), every historical claim needs a source; mark hypotheses; verify image magic bytes.
+- [`docs/TESTING.md`](docs/TESTING.md), unittest + demo witness.
+- [`docs/UI-UX.md`](docs/UI-UX.md), CLI and docs presentation.
+- [`CONTRIBUTING.md`](CONTRIBUTING.md), PR ground rules.
+- [`docs/NOVELTY.md`](docs/NOVELTY.md), claim labels; no hallucinated readings.
+- [`docs/ERROR-LOG.md`](docs/ERROR-LOG.md) / [`docs/logs/errors.md`](docs/logs/errors.md), real failures only.
 
 ## License note
 

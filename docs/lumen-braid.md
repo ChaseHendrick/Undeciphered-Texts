@@ -10,7 +10,7 @@ This is not a reading of an ancient script. It is not a reading of army message 
 
 ## Rule
 
-Letters are taken as A–Z and put in rows of five. Even rows are read in column order 0, 2, 4, 1, 3. Odd rows are read in column order 3, 1, 4, 2, 0. Each complete trio `(a, b, c)` of that stream is replaced by `((a+c), (a+b+c), (a+b))` modulo 26. A leftover pair `(a, b)` becomes `(a+b, a+2b)` modulo 26, and a leftover single `p` becomes `(3p+1)` modulo 26. Those three maps are invertible, and the row read is a permutation, so decrypt undoes the sums and then undoes the braid. Characters that are not ASCII letters stay in place, and letter case follows the original skeleton.
+Letters are taken as A-Z and put in rows of five. Even rows are read in column order 0, 2, 4, 1, 3. Odd rows are read in column order 3, 1, 4, 2, 0. Each complete trio `(a, b, c)` of that stream is replaced by `((a+c), (a+b+c), (a+b))` modulo 26. A leftover pair `(a, b)` becomes `(a+b, a+2b)` modulo 26, and a leftover single `p` becomes `(3p+1)` modulo 26. Those three maps are invertible, and the row read is a permutation, so decrypt undoes the sums and then undoes the braid. Characters that are not ASCII letters stay in place, and letter case follows the original skeleton.
 
 ## How to run
 

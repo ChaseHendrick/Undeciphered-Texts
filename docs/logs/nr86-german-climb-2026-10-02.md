@@ -1,4 +1,4 @@
-# Nr. 86 German-scored two-square climb — 2026-10-02 (EDT)
+# Nr. 86 German-scored two-square climb, 2026-10-02 (EDT)
 
 Not a decipherment. Funkspruch Nr. 86 was not solved. No plaintext is claimed.
 

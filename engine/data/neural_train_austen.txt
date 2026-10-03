@@ -1,5 +1,5 @@
 # Public-domain training prose only. Jane Austen, Pride and Prejudice,
-# chapters I–III (Project Gutenberg eBook #1342).
+# chapters I-III (Project Gutenberg eBook #1342).
 # Source text: https://www.gutenberg.org/cache/epub/1342/pg1342.txt
 # Catalog: https://www.gutenberg.org/ebooks/1342
 # Illustration blocks and the 1894 George Allen copyright lines inside

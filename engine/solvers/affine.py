@@ -1,6 +1,6 @@
 """Affine known-key solver: E(x) = (a*x + b) mod 26.
 
-Each A–Z letter is a number 0..25. Encryption is the affine map
+Each A-Z letter is a number 0..25. Encryption is the affine map
 E(x) = (a*x + b) mod 26. Decryption multiplies by the modular inverse
 of a: D(y) = a^{-1} * (y - b) mod 26. a must be coprime to 26.
 

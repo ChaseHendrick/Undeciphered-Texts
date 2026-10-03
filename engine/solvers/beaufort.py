@@ -34,7 +34,7 @@ _SCOPE = (
 
 
 def beaufort_key(key: str) -> str:
-    """A–Z keyword. Non-letters are dropped. At least one letter is required."""
+    """A-Z keyword. Non-letters are dropped. At least one letter is required."""
     cleaned = letters_only(key)
     if not cleaned:
         raise ValueError("Beaufort key must contain at least one letter")
@@ -42,7 +42,7 @@ def beaufort_key(key: str) -> str:
 
 
 def beaufort_substitute(letter: str, key_letter: str) -> str:
-    """Map one A–Z letter by (key - letter) mod 26. The map is an involution."""
+    """Map one A-Z letter by (key - letter) mod 26. The map is an involution."""
     plain = letters_only(letter)
     key = letters_only(key_letter)
     if len(plain) != 1 or len(key) != 1:

@@ -13,7 +13,7 @@ were abhorrent to his cold, precise but admirably balanced mind. He
 was, I take it, the most perfect reasoning and observing machine that
 the world has seen, but as a lover he would have placed himself in a
 false position. He never spoke of the softer passions, save with a gibe
-and a sneer. They were admirable things for the observer—excellent for
+and a sneer. They were admirable things for the observer, excellent for
 drawing the veil from men’s motives and actions. But for the trained
 reasoner to admit such intrusions into his own delicate and finely
 adjusted temperament was to introduce a distracting factor which might
@@ -43,7 +43,7 @@ successfully for the reigning family of Holland. Beyond these signs of
 his activity, however, which I merely shared with all the readers of
 the daily press, I knew little of my former friend and companion.
 
-One night—it was on the twentieth of March, 1888—I was returning from a
+One night, it was on the twentieth of March, 1888, I was returning from a
 journey to a patient (for I had now returned to civil practice), when
 my way led me through Baker Street. As I passed the well-remembered
 door, which must always be associated in my mind with my wooing, and
@@ -158,7 +158,7 @@ endeavouring to imitate my companion’s processes. “Such paper could not
 be bought under half a crown a packet. It is peculiarly strong and
 stiff.”
 
-“Peculiar—that is the very word,” said Holmes. “It is not an English
+“Peculiar, that is the very word,” said Holmes. “It is not an English
 paper at all. Hold it up to the light.”
 
 I did so, and saw a large “E” with a small “g,” a “P,” and a large “G”
@@ -172,8 +172,8 @@ with a small “t” woven into the texture of the paper.
 which is the German for ‘Company.’ It is a customary contraction like
 our ‘Co.’ ‘P,’ of course, stands for ‘Papier.’ Now for the ‘Eg.’ Let us
 glance at our Continental Gazetteer.” He took down a heavy brown volume
-from his shelves. “Eglow, Eglonitz—here we are, Egria. It is in a
-German-speaking country—in Bohemia, not far from Carlsbad. ‘Remarkable
+from his shelves. “Eglow, Eglonitz, here we are, Egria. It is in a
+German-speaking country, in Bohemia, not far from Carlsbad. ‘Remarkable
 as being the scene of the death of Wallenstein, and for its numerous
 glass-factories and paper-mills.’ Ha, ha, my boy, what do you make of
 that?” His eyes sparkled, and he sent up a great blue triumphant cloud
@@ -182,7 +182,7 @@ from his cigarette.
 “The paper was made in Bohemia,” I said.
 
 “Precisely. And the man who wrote the note is a German. Do you note the
-peculiar construction of the sentence—‘This account of you we have from
+peculiar construction of the sentence, ‘This account of you we have from
 all quarters received.’ A Frenchman or Russian could not have written
 that. It is the German who is so uncourteous to his verbs. It only
 remains, therefore, to discover what is wanted by this German who

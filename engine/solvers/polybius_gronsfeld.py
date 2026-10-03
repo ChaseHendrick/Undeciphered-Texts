@@ -1,7 +1,7 @@
 """Polybius square plus digit Gronsfeld, with the null periods named in Codes and Ciphers.
 
 Alexander D'Agapeyeff's 1939 challenge is a digit cryptogram. The same book
-shows a Polybius square (coordinates A–E) and, on p. 111, says a dummy may be
+shows a Polybius square (coordinates A-E) and, on p. 111, says a dummy may be
 inserted at every third, fourth, or fifth letter after a message is enciphered.
 Wikipedia quotes both and still calls the challenge unsolved:
 
@@ -44,7 +44,7 @@ DAGAPEYEFF_GROUPED = (
 DAGAPEYEFF_SOURCE = "https://en.wikipedia.org/wiki/D%27Agapeyeff_cipher"
 
 # Worked Polybius example on the same page (letter coordinates, not the challenge).
-# Square rows A–E, columns A–E. Blank cells are the page's asterisks.
+# Square rows A-E, columns A-E. Blank cells are the page's asterisks.
 BOOK_POLYBIUS_SQUARE = (
     ("S", "D", "U", "M", "I"),
     ("F", "W", "A", "O", "Y"),
@@ -164,7 +164,7 @@ def decrypt_book_polybius(text: str) -> str:
         row = _COORD.get(letters[index])
         col = _COORD.get(letters[index + 1])
         if row is None or col is None:
-            raise ValueError("book Polybius coordinates must be letters A–E")
+            raise ValueError("book Polybius coordinates must be letters A-E")
         cell = BOOK_POLYBIUS_SQUARE[row][col]
         if cell is None:
             raise ValueError(f"pair {letters[index:index + 2]} hits an empty cell")

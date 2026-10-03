@@ -1,6 +1,6 @@
-# First-order HMM (Baum–Welch)
+# First-order HMM (Baum-Welch)
 
-`engine/hmm_baum_welch.py` fits a small first-order hidden Markov model to a sequence of discrete symbols. Parameters (start, transition, emission) are estimated by Baum–Welch (expectation–maximization) from the symbols alone. Several random restarts are kept by observation log-likelihood. The returned state path is not raw Viterbi: it walks the smoothed posterior from left to right and switches only when another state's posterior is at least 0.6. State labels are arbitrary, so a two-state path is scored after the better of the two label flips. `viterbi` is still in the module for the joint MAP path.
+`engine/hmm_baum_welch.py` fits a small first-order hidden Markov model to a sequence of discrete symbols. Parameters (start, transition, emission) are estimated by Baum-Welch (expectation-maximization) from the symbols alone. Several random restarts are kept by observation log-likelihood. The returned state path is not raw Viterbi: it walks the smoothed posterior from left to right and switches only when another state's posterior is at least 0.6. State labels are arbitrary, so a two-state path is scored after the better of the two label flips. `viterbi` is still in the module for the joint MAP path.
 
 **This tool does not decipher ancient scripts.** It does not read Linear A, the Voynich manuscript, Rongorongo, the Indus script, the Phaistos disk, or any other undeciphered text. A recovered state sequence is a clustering of positions under a first-order Markov assumption. It is not a translation, a phonetic value, or evidence about a historical inscription.
 
@@ -17,10 +17,10 @@ On `generate_two_state_corpus(length=500, seed=0)`, fit with `n_iter=30`, `resta
 | Decoder | Agreement with the generating states |
 | --- | --- |
 | Constant majority label (chance on this draw) | 293/500 |
-| Viterbi, or posterior mode at 0.5, on the Baum–Welch fit | 494/500 |
+| Viterbi, or posterior mode at 0.5, on the Baum-Welch fit | 494/500 |
 | Posterior hysteresis, switch only at posterior ≥ 0.6 | 496/500 |
 
-The two extra agreements are one boundary. There the smoothed posterior for the entering state is only about 0.55 for two symbols, and Viterbi switches early. Requiring 0.6 keeps those symbols in the previous state. Four other positions stay wrong; the margin does not fix them. The same corpus and seed are unchanged. The observation log-likelihood is still the Baum–Welch figure; the margin changes the path, not the fitted parameters.
+The two extra agreements are one boundary. There the smoothed posterior for the entering state is only about 0.55 for two symbols, and Viterbi switches early. Requiring 0.6 keeps those symbols in the previous state. Four other positions stay wrong; the margin does not fix them. The same corpus and seed are unchanged. The observation log-likelihood is still the Baum-Welch figure; the margin changes the path, not the fitted parameters.
 
 The unit test requires accuracy strictly above 494/500 and still above the constant-state baseline (including a 0.2 margin over that baseline).
 

@@ -92,7 +92,7 @@ TWO_SQUARE_ALPHABET = "ABCDEFGHIKLMNOPQRSTUVWXYZ"
 
 
 def two_square_letters(text: str) -> str:
-    """A–Z stream for two-square: J folded to I, non-letters dropped."""
+    """A-Z stream for two-square: J folded to I, non-letters dropped."""
     out: list[str] = []
     for ch in text:
         if not ch.isalpha():
@@ -122,7 +122,7 @@ def square_from_keyword(keyword: str) -> str:
 def _parse_square(square: str) -> list[str]:
     cells = two_square_letters(square)
     if len(cells) != 25 or len(set(cells)) != 25:
-        raise ValueError("two-square square must be a permutation of A–Z without J")
+        raise ValueError("two-square square must be a permutation of A-Z without J")
     if "J" in cells:
         raise ValueError("two-square square must omit J")
     return list(cells)

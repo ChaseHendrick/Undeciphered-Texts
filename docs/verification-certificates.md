@@ -10,8 +10,8 @@ These certificates check a **published worked example**, a **cited dictionary gl
 
 ## Existing original-method certificates
 
-- `lumen_braid_certificate.json` — original lumen-braid method
-- `prism_latch_certificate.json` — original prism-latch method
+- `lumen_braid_certificate.json`, original lumen-braid method
+- `prism_latch_certificate.json`, original prism-latch method
 
 ## Classical solvers with published or fixture examples
 

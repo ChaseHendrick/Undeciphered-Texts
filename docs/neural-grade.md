@@ -12,7 +12,7 @@ Training and evaluation prose are different public-domain books. Attribution lin
 
 | Role | Text | File | URL |
 | --- | --- | --- | --- |
-| Train | Jane Austen, *Pride and Prejudice*, chapters I–III. Illustration blocks and the 1894 George Allen copyright lines inside those blocks are removed. | `engine/data/neural_train_austen.txt` | [eBook 1342](https://www.gutenberg.org/ebooks/1342), [UTF-8 text](https://www.gutenberg.org/cache/epub/1342/pg1342.txt) |
+| Train | Jane Austen, *Pride and Prejudice*, chapters I-III. Illustration blocks and the 1894 George Allen copyright lines inside those blocks are removed. | `engine/data/neural_train_austen.txt` | [eBook 1342](https://www.gutenberg.org/ebooks/1342), [UTF-8 text](https://www.gutenberg.org/cache/epub/1342/pg1342.txt) |
 | Held-out English | Arthur Conan Doyle, "A Scandal in Bohemia," opening, in *The Adventures of Sherlock Holmes*, through the paragraph that ends "to resolve all our doubts." Gutenberg italic markers were removed. | `engine/data/neural_heldout_doyle.txt` | [eBook 1661](https://www.gutenberg.org/ebooks/1661), [UTF-8 text](https://www.gutenberg.org/cache/epub/1661/pg1661.txt) |
 | Held-out German | Jacob and Wilhelm Grimm, "Der Wolf und die sieben jungen Geißlein," in *Deutsche Märchen* (eBook 77905). This is not the Froschkönig excerpt in `engine/data/german_excerpt.txt`. Umlauts are folded (ä→ae, ö→oe, ü→ue, ß→ss) before scoring. | `engine/data/neural_heldout_grimm_wolf.txt` | [eBook 77905](https://www.gutenberg.org/ebooks/77905), [UTF-8 text](https://www.gutenberg.org/cache/epub/77905/pg77905.txt) |
 
@@ -50,7 +50,7 @@ Two routers are scored. Neither is edited inside `engine/solver_net.py`.
 
 `engine/neural_grade.py` fits a tanh hidden layer of 40 units on fixed ciphertext features (index of coincidence, letter entropy, agreement with the Austen unigram under the best Caesar shift, digraph and period statistics, alphabet shape). Training ciphertexts are generated from the Austen letters (20 plaintexts per family, 180 letters, fresh keys, seed 20261002). Evaluation ciphertexts are generated from the Doyle letters (12 per family, seed 20261003). The plaintext is not a certificate plaintext.
 
-Families are the certified systems with an A–Z forward map: caesar, vigenère, keyed Vigenère, substitution, Playfair, bifid, two-square, four-square, ADFGVX, columnar transposition, Beaufort, Porta, Enigma, M-209, keel-sieve, lumen-braid, and prism-latch. Beam-search and the Vigenère crib are search procedures for families already in that list, not extra classes. The Polybius-Gronsfeld module searches one digit cryptogram; it is not an A–Z family in this router.
+Families are the certified systems with an A-Z forward map: caesar, vigenère, keyed Vigenère, substitution, Playfair, bifid, two-square, four-square, ADFGVX, columnar transposition, Beaufort, Porta, Enigma, M-209, keel-sieve, lumen-braid, and prism-latch. Beam-search and the Vigenère crib are search procedures for families already in that list, not extra classes. The Polybius-Gronsfeld module searches one digit cryptogram; it is not an A-Z family in this router.
 
 Chance for a uniform guess among 17 families is 1/17 = **0.058824**.
 
@@ -78,7 +78,7 @@ Held-out accuracy: **126/204 = 0.617647**.
 
 Keyed Vigenère, Beaufort, Enigma, and M-209 are the weak rows (2/12). They are easy to confuse with each other because several of them are polyalphabetic. 2/12 is still above 1/17 on this draw, and the 17-way accuracy is 0.617647. A correct family label is not plaintext and is not a key recovery.
 
-M-209 samples use the published pin and lug list from the known-key certificate and a fresh 6-letter external key drawn from each wheel's alphabet. Enigma samples use rotor orders I–III, reflector B, an empty plugboard, and fresh ring and window letters. They do not reuse a certificate plaintext.
+M-209 samples use the published pin and lug list from the known-key certificate and a fresh 6-letter external key drawn from each wheel's alphabet. Enigma samples use rotor orders I-III, reflector B, an empty plugboard, and fresh ring and window letters. They do not reuse a certificate plaintext.
 
 ### Shipped solver net
 

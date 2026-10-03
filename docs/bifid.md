@@ -6,7 +6,7 @@ This is a **known classical-cipher** helper. It does **not** claim a reading of 
 
 ## Published worked example (fetched)
 
-Source: [Practical Cryptography — Bifid cipher](http://practicalcryptography.com/ciphers/bifid-cipher/)
+Source: [Practical Cryptography, Bifid cipher](http://practicalcryptography.com/ciphers/bifid-cipher/)
 
 | Field | Value |
 | --- | --- |

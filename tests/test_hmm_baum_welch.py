@@ -1,4 +1,4 @@
-"""Baum–Welch recovers a synthetic two-state path better than chance.
+"""Baum-Welch recovers a synthetic two-state path better than chance.
 
 This is not a decipherment test. No ancient script is an input.
 """

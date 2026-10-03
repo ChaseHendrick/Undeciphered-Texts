@@ -8,7 +8,7 @@ Nothing below is a claim that AI “translated” or “deciphered” a lost lan
 
 - The library was excavated from the Villa of the Papyri (Herculaneum). Hundreds of rolls and fragments are in Naples (Biblioteca Nazionale, the PHerc. series) and a smaller set at the Institut de France in Paris (PHerc.Paris).
 - 18th- and 19th-century mechanical unrolling, and later attempts (including work on PHerc. 1667 in 1969 and the 1980s), destroyed outer layers of many rolls. What remains of some “scrolls” is a compact inner core.
-- PHerc. 1667, called Scroll 4 in the challenge, survives as about 8 cm of an original height of roughly 19–24 cm. The 2026 read is of that **surviving** core, not of a complete ancient book. Source: [Vesuvius Challenge, first full scroll](https://scrollprize.org/firstscroll).
+- PHerc. 1667, called Scroll 4 in the challenge, survives as about 8 cm of an original height of roughly 19-24 cm. The 2026 read is of that **surviving** core, not of a complete ancient book. Source: [Vesuvius Challenge, first full scroll](https://scrollprize.org/firstscroll).
 - The 2023 grand-prize text is from **PHerc.Paris 4**, one of the Institut de France rolls, still rolled. Source: [UK Research on the grand prize](https://research.uky.edu/news/grand-prize-discovery-made-2000-year-old-herculaneum-scrolls) and [the prize announcement](https://scrollprize.org/grandprize).
 
 ## What the pipeline actually does

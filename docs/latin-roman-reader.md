@@ -8,7 +8,7 @@ Latin is a known language. These modules do not decipher unknown texts.
 
 Epigraphic form (`to_epigraphic`):
 
-- letters become A–Z capitals
+- letters become A-Z capitals
 - U becomes V, and J becomes I
 - inscription word-dots become spaces: `·` U+00B7, and the other dots listed in `INTERPUNCTS`
 - macrons are removed (`dīvīsa` → `DIVISA`)

@@ -1,4 +1,4 @@
-# D'Agapeyeff cipher — 2026-10-02 (EDT)
+# D'Agapeyeff cipher, 2026-10-02 (EDT)
 
 Not a decipherment. No plaintext of the 1939 challenge is claimed.
 
@@ -10,9 +10,9 @@ Not a decipherment. No plaintext of the 1939 challenge is claimed.
 
 ## Family that was tested
 
-Polybius coordinates 1–5 (5×5 keyword square, J folded into I), then a repeating digit key added modulo 10, then an optional null in one residue of every 3rd, 4th, or 5th position. The null periods are the ones the book names on p. 111, quoted on the Wikipedia page. The keyword list is the straight alphabet plus the 641 words of at least four letters in `engine/data/english.txt` (631 distinct squares).
+Polybius coordinates 1-5 (5×5 keyword square, J folded into I), then a repeating digit key added modulo 10, then an optional null in one residue of every 3rd, 4th, or 5th position. The null periods are the ones the book names on p. 111, quoted on the Wikipedia page. The keyword list is the straight alphabet plus the 641 words of at least four letters in `engine/data/english.txt` (631 distinct squares).
 
-The solver is not given the keyword, the numeric key, or the null phase. A stream counts only when every undone digit is in 1–5. Survivors are ranked by the repo English quadgram model.
+The solver is not given the keyword, the numeric key, or the null phase. A stream counts only when every undone digit is in 1-5. Survivors are ranked by the repo English quadgram model.
 
 This is one family. It is not a search over every square, every transposition, or every cipher in the 1939 book.
 
@@ -20,16 +20,16 @@ This is one family. It is not a search over every square, every transposition, o
 
 `tests/test_polybius_gronsfeld.py`
 
-- `test_search_recovers_constructed_plaintext` — plaintext `MEET AT THE HARBOR AFTER THE BELL RINGS AT DAWN`, keyword `alphabet`, key `2718`, null every 5th digit (phase 4, dummy 9). Search returns `MEETATTHEHARBORAFTERTHEBELLRINGSATDAWN`, key `2718`, keyword `alphabet`. Mean quadgram −1.980.
-- `test_book_polybius_example_matches_printed_square` — the page's 178-letter A–E example and the printed square. Row then column. Faithful reading, 89 letters: `THENEWPLANOFATTACKINCLUDESOPERATIONSBYTHREEBOMBRSQUDRONSOVERFACTORYARYASOUTHWESTOTHERIVER`. It starts `THENEWPLANOFATTACK` and contains `ARYA`, not `AREA`. The page's prose gloss is three letters longer (`BOMBER`, `SQUADRONS`, `OF`) and is not what those printed pairs produce. The page itself says the exercise contains a mis-encoding.
+- `test_search_recovers_constructed_plaintext`, plaintext `MEET AT THE HARBOR AFTER THE BELL RINGS AT DAWN`, keyword `alphabet`, key `2718`, null every 5th digit (phase 4, dummy 9). Search returns `MEETATTHEHARBORAFTERTHEBELLRINGSATDAWN`, key `2718`, keyword `alphabet`. Mean quadgram −1.980.
+- `test_book_polybius_example_matches_printed_square`, the page's 178-letter A-E example and the printed square. Row then column. Faithful reading, 89 letters: `THENEWPLANOFATTACKINCLUDESOPERATIONSBYTHREEBOMBRSQUDRONSOVERFACTORYARYASOUTHWESTOTHERIVER`. It starts `THENEWPLANOFATTACK` and contains `ARYA`, not `AREA`. The page's prose gloss is three letters longer (`BOMBER`, `SQUADRONS`, `OF`) and is not what those printed pairs produce. The page itself says the exercise contains a mis-encoding.
 
 Command: `python3 -m unittest tests.test_polybius_gronsfeld -v` → 4 tests, OK (about 0.8s).
 
 ## Failed search on the challenge
 
-Same function, `max_key_len=4`, null periods 0 and 3–5, every phase.
+Same function, `max_key_len=4`, null periods 0 and 3-5, every phase.
 
-The 196 pairs are not a mixed digit string. Even positions are only `{0,6,7,8,9}` (one `0`). Odd positions are only `{1,2,3,4,5}`. Subtracting `5,0` on repeat therefore lands in 1–5 for every digit. Keys of length ≤4 with that property: `50`, `4050`, `5050`. That is a partition of the digits, not English. Straight-alphabet reading under `50`, 196 letters, mean quadgram −4.143:
+The 196 pairs are not a mixed digit string. Even positions are only `{0,6,7,8,9}` (one `0`). Odd positions are only `{1,2,3,4,5}`. Subtracting `5,0` on repeat therefore lands in 1-5 for every digit. Keys of length ≤4 with that property: `50`, `4050`, `5050`. That is a partition of the digits, not English. Straight-alphabet reading under `50`, 196 letters, mean quadgram −4.143:
 
 `KBMPQBQDLDQIPODIIMONLCLLIIMBDKNMOQKIENKKKSCEELCLKPKKDBMRPICMKINLELOPDPDPPCMGBNBLLGLDCKMLDNCMPLCCCYILQQOCPOEDPEBTBBPQPQIQGKDEKFENBDILMOBMDQLSEBDOOQNPIQLEGINNPMNDBGBEBNKRGCMMGGNMPOKMLNGOBMNKLDKIPLBR`
 

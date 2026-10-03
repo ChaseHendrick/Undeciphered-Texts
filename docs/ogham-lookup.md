@@ -11,7 +11,7 @@ repeats published character identities.
 ## Source
 
 Fetched 2026-10-02 from the Unicode 18.0.0 Ogham names list (block
-U+1680–U+169F, assigned characters through U+169C):
+U+1680-U+169F, assigned characters through U+169C):
 
 https://unicode.org/Public/18.0.0/charts/nameslist/1680/
 

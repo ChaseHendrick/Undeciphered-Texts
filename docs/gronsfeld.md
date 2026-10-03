@@ -8,7 +8,7 @@ Polybius-plus-Gronsfeld (`engine/solvers/polybius_gronsfeld.py`) is a different 
 
 ## Published worked example (fetched)
 
-Source: [CaesarCipher.org — Gronsfeld cipher](https://caesarcipher.org/learn/gronsfeld-cipher-numeric-key-vigenere-variant-guide) (fetched 2026-10-02).
+Source: [CaesarCipher.org, Gronsfeld cipher](https://caesarcipher.org/learn/gronsfeld-cipher-numeric-key-vigenere-variant-guide) (fetched 2026-10-02).
 
 The page encrypts the message "ATTACK AT DAWN" with numeric key `3 1 4 1 5`. Step 1 removes spaces, then each letter is shifted by the repeating digits (A=0). The table prints:
 
@@ -22,7 +22,7 @@ The page also groups the ciphertext as `DUXBH NBXEF ZO`. The first row of the ta
 
 ## What the engine does
 
-- Drop non-letters. Repeat the digits 0–9 across the remaining letters.
+- Drop non-letters. Repeat the digits 0-9 across the remaining letters.
 - Each ciphertext letter is `(plaintext letter + key digit) mod 26`. Decrypt subtracts the digit.
 - `solve_gronsfeld(ciphertext, key=...)` returns a `SolveResult` whose plaintext is those recovered letters (spaces in the ciphertext skeleton are kept).
 - No blind key search is registered. Supply the key.

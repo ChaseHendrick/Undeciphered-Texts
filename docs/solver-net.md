@@ -24,7 +24,7 @@ It does **not** decipher Kryptos K4, army message Nr. 86, Linear A, the Indus sc
 
 Crib rides on the Vigenère family. The crib certificate ciphertext is the same string as the Vigenère certificate, so features cannot tell them apart. A Vigenère route names crib as a related solver. The crib solver still needs the crib string from its own certificate; the feature net does not invent one.
 
-Beam search has its own certificate ciphertext, so it is its own class. It is still only a monoalphabetic search over A–Z, not a reader of an unknown script.
+Beam search has its own certificate ciphertext, so it is its own class. It is still only a monoalphabetic search over A-Z, not a reader of an unknown script.
 
 ## What the classifier uses
 

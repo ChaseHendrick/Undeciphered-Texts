@@ -1,4 +1,4 @@
-"""Slide a known crib through a standard A–Z Vigenère ciphertext.
+"""Slide a known crib through a standard A-Z Vigenère ciphertext.
 
 At each alignment the crib implies a keystream. A period is kept only when
 those shifts agree with each other and every key position is filled at least

@@ -31,7 +31,7 @@ PRACTICAL_CRYPTOGRAPHY_URL = "http://practicalcryptography.com/ciphers/bifid-cip
 
 
 def bifid_letters(text: str) -> str:
-    """A–Z stream for Bifid: non-letters dropped, J folded to I."""
+    """A-Z stream for Bifid: non-letters dropped, J folded to I."""
     out: list[str] = []
     for ch in text:
         if not ch.isalpha():

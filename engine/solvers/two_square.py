@@ -77,7 +77,7 @@ def _english_trigram_table() -> tuple[int, ...]:
 
 
 def trigram_count_score(text: str, table: tuple[int, ...] | None = None) -> int:
-    """Sum of English trigram counts on an A–Z stream (J already folded)."""
+    """Sum of English trigram counts on an A-Z stream (J already folded)."""
     stream = two_square_letters(text)
     if len(stream) < 3:
         return 0

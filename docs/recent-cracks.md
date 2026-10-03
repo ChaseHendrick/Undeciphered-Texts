@@ -1,4 +1,4 @@
-# Recent and famous cracks — methods that worked
+# Recent and famous cracks, methods that worked
 
 Only cases with public documentation. **No new breaks claimed by this repo.**
 
@@ -16,17 +16,17 @@ Only cases with public documentation. **No new breaks claimed by this repo.**
 - **Lesson:** Hybrid cipher types need hybrid attacks; community tooling matters.
 - **Source:** https://blog.wolfram.com/2021/03/24/the-solution-of-the-zodiac-killers-340-character-cipher/
 
-## Zodiac Z408 (1969) — contrast
-- Solved quickly by the Hardens as homophonic substitution—shows Z340’s transposition layer was the extra trap.
+## Zodiac Z408 (1969), contrast
+- Solved quickly by the Hardens as homophonic substitution, shows Z340’s transposition layer was the extra trap.
 
-## German WWII Enigma — hobby / distributed era
+## German WWII Enigma, hobby / distributed era
 - **M4 project (2006):** Stefan Krah + distributed home PCs broke U-boat Enigma traffic that wartime and early hobby efforts had left.  
   Sources: BBC / Times reporting on amateur grids (historical).
 - **Crypto Cellar BGAC:** Ongoing break of German Army Enigma messages from archival forms; honours roll of amateur breakers.  
   https://cryptocellar.org/bgac/ · https://cryptocellar.org/bgac/honours-roll.html
 - **MVUEH (Sept 2026):** Carter Leffen + GPT-6 Astra; crib from related SIPVX plaintext (ROSENOW); Enigma simulator/bombe search; **validated by Frode Weierud**. Transcription errors and rare left-wheel turnover had blocked earlier attempts.  
   https://www.cryptocellar.org/bgac/the-mvueh-break.html
-- **Related 2026 work:** Additional July 1941 messages (e.g. reports around AWTZK/ZNLZT, FMNGI) discussed on Crypto Cellar—always prefer Weierud’s pages over social media alone.
+- **Related 2026 work:** Additional July 1941 messages (e.g. reports around AWTZK/ZNLZT, FMNGI) discussed on Crypto Cellar, always prefer Weierud’s pages over social media alone.
 
 ## Mary Queen of Scots letters (2023)
 - Lasry, Biermann, Tomokiyo recovered and deciphered lost letters using homophonic/nomenclator cryptanalysis (DECRYPT-adjacent community).  
@@ -34,13 +34,13 @@ Only cases with public documentation. **No new breaks claimed by this repo.**
   Research: Cryptologia DOI https://doi.org/10.1080/01611194.2022.2160677
 
 ## Kryptos (CIA sculpture)
-- **K1–K3:** Solved (Sanborn sculpture; public plaintexts known).
+- **K1-K3:** Solved (Sanborn sculpture; public plaintexts known).
 - **K4:** Still unsolved as of public consensus; Sanborn has released cribs (e.g. EASTNORTHEAST, BERLINCLOCK). Treat new “K4 solutions” as unverified unless Sanborn/community consensus agrees.
 - **Lesson:** Partial cribs ≠ full break.
 
 ## Beale ciphers
 - **B2** (Declaration of Independence book cipher) long solved; automatic homophonic-style attacks have recovered B2 in NLP papers.
-- **B1 / B3:** Still generally considered unsolved; may be flawed/hoax components—controversy persists.
+- **B1 / B3:** Still generally considered unsolved; may be flawed/hoax components. Controversy persists.
 
 ## Dorabella Cipher
 - Elgar’s 1897 letter to Dora Penny; many proposed solutions, **no consensus**. Short ciphertext → underdetermined.
@@ -53,7 +53,7 @@ Only cases with public documentation. **No new breaks claimed by this repo.**
   https://www.bbc.co.uk/news/uk-20456782 · GCHQ PDF summary · practicalcryptography.com analysis
 
 ## Smithfield / newspaper cryptograms
-- Newspaper aristocrats/cryptograms are usually short monoalphabetic or simple puzzles—good **training**, rarely “lost history.” Prefer DECODE for archival substance.
+- Newspaper aristocrats/cryptograms are usually short monoalphabetic or simple puzzles, good **training**, rarely “lost history.” Prefer DECODE for archival substance.
 
 ## Pattern across successes
 1. Accurate transcription of originals.  
@@ -67,15 +67,15 @@ Only cases with public documentation. **No new breaks claimed by this repo.**
 
 ### Silk dress cryptogram (solved 2023, not a murder cipher)
 
-Sara Rivers-Cofield found two sheets of apparent ciphertext in a silk dress. Wayne S. Chan showed they are U.S. Army Signal Service **weather telegrams** for 27 May 1888, using the 1887 weather code. Cryptologia 48(5): 387–426. DOI [10.1080/01611194.2023.2223562](https://doi.org/10.1080/01611194.2023.2223562). NOAA summary: [noaa.gov heritage story](https://www.noaa.gov/heritage/stories/cryptogram-in-silk-dress-tells-weather-story). Klaus Schmeh’s 2017 “top 50” still lists this as unsolved; that page is a snapshot, not a live status: [Cipherbrain top 50](https://scienceblogs.de/klausis-krypto-kolumne/the-top-50-unsolved-encrypted-messages/).
+Sara Rivers-Cofield found two sheets of apparent ciphertext in a silk dress. Wayne S. Chan showed they are U.S. Army Signal Service **weather telegrams** for 27 May 1888, using the 1887 weather code. Cryptologia 48(5): 387-426. DOI [10.1080/01611194.2023.2223562](https://doi.org/10.1080/01611194.2023.2223562). NOAA summary: [noaa.gov heritage story](https://www.noaa.gov/heritage/stories/cryptogram-in-silk-dress-tells-weather-story). Klaus Schmeh’s 2017 “top 50” still lists this as unsolved; that page is a snapshot, not a live status: [Cipherbrain top 50](https://scienceblogs.de/klausis-krypto-kolumne/the-top-50-unsolved-encrypted-messages/).
 
 ### Kryptos K4 (2025): plaintext found, method not
 
-See the update in [closest.md](closest.md). Do not describe the Smithsonian find as an amateur cryptanalytic solve. K2’s public ending was corrected in 2006 to “X LAYER TWO” after a missing ciphertext S: [Elonka Dunin](https://www.elonka.com/kryptos/CorrectedK2Announcement.html). Gillogly’s public K1–K3 solution was 1999; David Stein at CIA had them in 1998 ([FAQ](https://elonka.com/kryptos/faq.html)).
+See the update in [closest.md](closest.md). Do not describe the Smithsonian find as an amateur cryptanalytic solve. K2’s public ending was corrected in 2006 to “X LAYER TWO” after a missing ciphertext S: [Elonka Dunin](https://www.elonka.com/kryptos/CorrectedK2Announcement.html). Gillogly’s public K1-K3 solution was 1999; David Stein at CIA had them in 1998 ([FAQ](https://elonka.com/kryptos/faq.html)).
 
 ### Papal ciphers and Mary Stuart’s circle of methods
 
-Lasry, Megyesi, and Kopal, “Deciphering papal ciphers from the 16th to the 18th Century,” Cryptologia 45(6): 479–540 (2021). Hundreds of Vatican ciphertexts, keys recovered with DECRYPT/CrypTool-style search. Mary Stuart’s 57 letters (1578–1584) are the better-known amateur-team paper: Lasry, Biermann, Tomokiyo, Cryptologia 47(2), 2023, DOI [10.1080/01611194.2022.2160677](https://doi.org/10.1080/01611194.2022.2160677). Biermann had earlier solved three of Giovan Battista Bellaso’s 1555 challenges (Cryptologia 2018, DOI [10.1080/01611194.2017.1422050](https://doi.org/10.1080/01611194.2017.1422050)).
+Lasry, Megyesi, and Kopal, “Deciphering papal ciphers from the 16th to the 18th Century,” Cryptologia 45(6): 479-540 (2021). Hundreds of Vatican ciphertexts, keys recovered with DECRYPT/CrypTool-style search. Mary Stuart’s 57 letters (1578-1584) are the better-known amateur-team paper: Lasry, Biermann, Tomokiyo, Cryptologia 47(2), 2023, DOI [10.1080/01611194.2022.2160677](https://doi.org/10.1080/01611194.2022.2160677). Biermann had earlier solved three of Giovan Battista Bellaso’s 1555 challenges (Cryptologia 2018, DOI [10.1080/01611194.2017.1422050](https://doi.org/10.1080/01611194.2017.1422050)).
 
 ### German Army manual ciphers and ADFGVX
 

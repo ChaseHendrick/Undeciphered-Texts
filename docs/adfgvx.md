@@ -17,8 +17,8 @@ Primary source (fetched 2026-10-02, America/New_York):
 
 The article's **ADFGVX** section (the June 1918 6×6 cipher, not the earlier
 5×5 ADFGX example) codes the square with the Dutch keyword
-`nachtbommenwerper`. Unique keyword letters, then the rest of A–Z, give
-`NACHTBOMEWRPDFGIJKLQSUVXYZ`. Digits are inserted after the first A–J
+`nachtbommenwerper`. Unique keyword letters, then the rest of A-Z, give
+`NACHTBOMEWRPDFGIJKLQSUVXYZ`. Digits are inserted after the first A-J
 (A→1, B→2, … I→9, J→0). The square, rows and columns labeled `ADFGVX`, is:
 
 ```
@@ -77,7 +77,7 @@ a key from ciphertext alone. This one is given `nachtbommenwerper` and
 
 ## Scope
 
-- Classical ADFGVX only (6×6 Polybius square over A–Z and 0–9, then one
+- Classical ADFGVX only (6×6 Polybius square over A-Z and 0-9, then one
   columnar transposition).
 - Both keys required.
 - Not a decipherment of Linear A, Indus, Voynich, Rongorongo, or any other

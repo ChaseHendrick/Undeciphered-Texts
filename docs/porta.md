@@ -6,7 +6,7 @@ This is a **known classical-cipher** solver. It is **not** an unknown-script rea
 
 ## Published worked example (fetched)
 
-Source: [Boxentriq — Porta cipher](https://www.boxentriq.com/ciphers/porta-cipher) (fetched 2026-10-02).
+Source: [Boxentriq, Porta cipher](https://www.boxentriq.com/ciphers/porta-cipher) (fetched 2026-10-02).
 
 | Field | Value |
 | --- | --- |
@@ -21,7 +21,7 @@ The same letters are the Practical Cryptography Porta example (`FORTIFICATION` /
 ## What the engine does
 
 - Drop non-letters. A and B select row 0, C and D row 1, through Y and Z on row 12.
-- A–M maps to N–Z rotated by the row; N–Z is the inverse, so encrypt and decrypt are the same function.
+- A-M maps to N-Z rotated by the row; N-Z is the inverse, so encrypt and decrypt are the same function.
 - `solve_porta(ciphertext, key=...)` returns a `SolveResult` whose plaintext is those recovered letters (spaces in the ciphertext skeleton are kept).
 - No blind keyword search is registered. Supply the key.
 

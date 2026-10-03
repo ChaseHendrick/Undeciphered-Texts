@@ -1,4 +1,4 @@
-"""Gronsfeld known-key solver: Vigenère shifts restricted to digits 0–9.
+"""Gronsfeld known-key solver: Vigenère shifts restricted to digits 0-9.
 
 With A=0 … Z=25 and a repeating numeric key,
 
@@ -40,7 +40,7 @@ _SCOPE = (
 
 
 def gronsfeld_key(key: str) -> tuple[int, ...]:
-    """Digits 0–9. Spaces and other separators are ignored. At least one digit is required.
+    """Digits 0-9. Spaces and other separators are ignored. At least one digit is required.
 
     Letters are rejected so a Vigenère keyword is not silently treated as a Gronsfeld key.
     """
@@ -53,7 +53,7 @@ def gronsfeld_key(key: str) -> tuple[int, ...]:
 
 
 def gronsfeld_substitute(letter: str, digit: int, *, decrypt: bool = False) -> str:
-    """Shift one A–Z letter by a digit 0–9. Decrypt subtracts; encrypt adds."""
+    """Shift one A-Z letter by a digit 0-9. Decrypt subtracts; encrypt adds."""
     plain = letters_only(letter)
     if len(plain) != 1:
         raise ValueError("Gronsfeld substitute expects one A-Z letter")

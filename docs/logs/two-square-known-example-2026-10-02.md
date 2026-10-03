@@ -1,4 +1,4 @@
-# Two-square known example — 2026-10-02 (EDT)
+# Two-square known example, 2026-10-02 (EDT)
 
 Run after syncing to `origin/main` (`7b575c7` plus this change). This note records one passing recovery and one honest failure. It does not replace `docs/logs/two-square-2026-10-02.md`. That earlier Nr. 86 experiment stays a **failure**.
 
@@ -32,7 +32,7 @@ Result: `Ran 8 tests` / `OK` (exit 0), including `test_recovers_constructed_fros
 
 Novelty label: **already published method** (keyword two-square plus an English n-gram score) on a fixture made for the test.
 
-## Nr. 86 — still failed
+## Nr. 86, still failed
 
 Source fetched 2026-10-02: https://cryptocellar.org/bgac/g-army-ts-messages.html (“Messages That We Have Failed to Break”, page updated 27 July 2026). Funkspruch Nr. 86 (FBOIQ), received 03.07.1941 1435, has **no** “Broken on” note. Ciphertext, 46 letters:
 

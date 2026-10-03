@@ -1,4 +1,4 @@
-# Two-square solver — 2026-10-02 (EDT)
+# Two-square solver, 2026-10-02 (EDT)
 
 Run at 2026-10-02 22:45 EDT from a checkout of `1f55e89` plus the new two-square files. Nothing below is a decipherment of an unsolved message.
 
@@ -11,7 +11,7 @@ Run at 2026-10-02 22:45 EDT from a checkout of `1f55e89` plus the new two-square
 - Result: `Ran 7 tests` / `OK` (exit 0). `test_keyword_solver_recovers_synthetic_plaintext` returned keywords `HARBOR`/`CANAL` and the synthetic letter stream.
 - Novelty label: **already published method** (keyword two-square + trigram scoring on a fixture made for the test).
 
-## 2. Experiment — German Army Truppenschlüssel, 3 July 1941, Nr. 86 (FBOIQ)
+## 2. Experiment, German Army Truppenschlüssel, 3 July 1941, Nr. 86 (FBOIQ)
 
 - Source URL: https://cryptocellar.org/bgac/g-army-ts-messages.html (page “Messages That We Have Failed to Break”, updated 27 July 2026). Nr. 86 has no “Broken on” note.
 - Cipher description: two 5×5 squares, J omitted, single-stage digraph substitution. Ostwald & Weierud, “Modern Cryptanalysis of the Truppenschlüssel,” https://cryptocellar.org/pubs/mcts.pdf
@@ -21,7 +21,7 @@ Run at 2026-10-02 22:45 EDT from a checkout of `1f55e89` plus the new two-square
   2. Shotgun hill-climb (`climb_two_square`, restarts=4, kicks=8, seed=86) scored by English trigram counts.
 - German scores use `engine.german` (Grimm excerpt). Higher (closer to zero) mean quadgram is more like that fairy tale. It is not a decipherment test.
 - Held-out probe (different Grimm tale, umlaut-folded): mean quadgram ≈ −2.325.
-- Climb best mean ≈ −3.487 (preview begins `UTGSANDTHEREODCLISATTVDENTHAORETIDNVPXGANDTHEW` — English-looking fragments from an English trigram objective).
+- Climb best mean ≈ −3.487 (preview begins `UTGSANDTHEREODCLISATTVDENTHAORETIDNVPXGANDTHEW`, English-looking fragments from an English trigram objective).
 - Keyword best (`NORTH`/`SOUTH`) mean ≈ −3.900.
 - Raw ciphertext mean ≈ −4.102.
 - The paper’s booklet example plaintext is 54 letters (`FEINDLIQERANGRIFFAUFSTRASZEADORFSTRIQBEHAUSENABGEWEHRT`) and cannot be this 46-letter message. No climb or keyword string equals that sentence.

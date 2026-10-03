@@ -1,6 +1,6 @@
 {
   "source_url": "https://www.unicode.org/charts/PDF/U13000.pdf",
-  "notes": "Tiny Gardiner-code → Unicode subset from the Unicode Egyptian Hieroglyphs code chart. Known-sign dictionary lookup only — not a new decipherment.",
+  "notes": "Tiny Gardiner-code → Unicode subset from the Unicode Egyptian Hieroglyphs code chart. Known-sign dictionary lookup only, not a new decipherment.",
   "signs": [
     {
       "code": "A1",

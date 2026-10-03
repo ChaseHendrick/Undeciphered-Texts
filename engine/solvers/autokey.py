@@ -39,7 +39,7 @@ _SCOPE = (
 
 
 def autokey_key(key: str) -> str:
-    """A–Z primer keyword. Non-letters are dropped. At least one letter is required."""
+    """A-Z primer keyword. Non-letters are dropped. At least one letter is required."""
     cleaned = letters_only(key)
     if not cleaned:
         raise ValueError("Autokey primer must contain at least one letter")

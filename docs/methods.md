@@ -46,12 +46,12 @@ Linear Elamite in 2022 is in the same procedural position as Isthmian in 1993: a
 |---|---|---|
 | Egyptian hieroglyphs | Rosetta Stone (Greek parallel), cartouches as names, Coptic as the later form of the language. Champollion 1822 | Treating every sign as a pure idea-picture |
 | Old Persian cuneiform | Known royal names and a repeating formula (“X, great king, king of kings…”), then Rawlinson’s longer Bisotun text | Waiting for a bilingual of the whole inscription |
-| Ugaritic | About 30 signs, so an alphabet; Semitic language guess; names and word patterns confirmed within months (1930–31) | Corpus size. The tablets are long, but the *script type* was what made speed possible |
-| Cypriot syllabary | Phoenician–Greek bilingual (Idalion) plus Greek as the target | Comparison with Linear A, which came later and did not drive the reading |
+| Ugaritic | About 30 signs, so an alphabet; Semitic language guess; names and word patterns confirmed within months (1930-31) | Corpus size. The tablets are long, but the *script type* was what made speed possible |
+| Cypriot syllabary | Phoenician-Greek bilingual (Idalion) plus Greek as the target | Comparison with Linear A, which came later and did not drive the reading |
 | Maya | Knorozov’s argument that signs are phonetic as well as logographic; Landa’s “alphabet” used critically, not literally; Proskouriakoff showing that Classic texts are history; modern Mayan languages as the target | Any single “Rosetta” monument |
 | Anatolian hieroglyphs | Seals and texts that also exist in Hittite cuneiform; Luwian as the language | Pure pictographic guessing |
 | Carian | Egyptian bilinguals and names, late 20th century (Adiego, Schürr, and others) | The assumption that a Greek-looking alphabet must write Greek |
-| Meroitic script | Egyptian spellings of Kushite kings. Griffith 1909–1911 | A literary bilingual, which still does not exist |
+| Meroitic script | Egyptian spellings of Kushite kings. Griffith 1909-1911 | A literary bilingual, which still does not exist |
 | Linear B | Internal grid, then Greek, then ideogram check | Ventris’s original Etruscan hunch |
 | NE Iberian | Coin legends: the same name in Iberian and in Latin or Greek. Gómez-Moreno | A theory of Basque |
 
@@ -96,7 +96,7 @@ The order that produces progress:
 5. Only then a **hypothesis** with a fixed mapping.
 6. Only then a **prediction**.
 
-Computational clustering is part of step 2, not a replacement for steps 5–6. Useful examples that know their place:
+Computational clustering is part of step 2, not a replacement for steps 5-6. Useful examples that know their place:
 
 - Proto-Elamite sign and topic clustering as corpus description, not translation: https://aclanthology.org/W19-2516.pdf
 - Numeral-system disambiguation: https://arxiv.org/html/2502.00090v1
@@ -109,7 +109,7 @@ Harmful pattern, visible in Linear A and Indus papers every year: take a convent
 
 ## 6. Why short logosyllabic corpora stall
 
-A syllabary of 80–100 signs needs a lot of repeated words with inflection or a bilingual. Linear B had the repetitions. Linear A has about 7,400 signs spread over 1,400 objects, many of them one to five signs long (Corazza’s discussion of signs-per-document: https://cris.unibo.it/retrieve/90a2e16b-e280-42ac-92f1-a9961ef98ca6/d-2-402-corazza-computational-methods.pdf). Cypro-Minoan is worse: on the order of 21 inscriptions longer than ten signs.
+A syllabary of 80-100 signs needs a lot of repeated words with inflection or a bilingual. Linear B had the repetitions. Linear A has about 7,400 signs spread over 1,400 objects, many of them one to five signs long (Corazza’s discussion of signs-per-document: https://cris.unibo.it/retrieve/90a2e16b-e280-42ac-92f1-a9961ef98ca6/d-2-402-corazza-computational-methods.pdf). Cypro-Minoan is worse: on the order of 21 inscriptions longer than ten signs.
 
 Indus is the extreme case. Five-sign texts do not contain enough syntax to identify a language, and the same five signs can be parsed as logograms, syllables, or a non-linguistic code. Adding the 3,000th seal of length five improves the **frequency table** and does not create a sentence.
 
@@ -140,7 +140,7 @@ Epigraphy fails before linguistics when the picture is wrong.
 - Barthel’s drawings and Fischer’s drawings disagree on real lines. A model trained on one is not a reading of the wood.
 - The Phaistos Disc’s authenticity is supported by parallels discovered after 1908, and it has still never been thermoluminescence-dated. Both facts belong in the data sheet.
 - Cascajal was not excavated scientifically. Later lab work on the stone can support authenticity and still leave the provenance weaker than a stratified tablet. https://www.science.org/doi/10.1126/science.1131492
-- Radiocarbon dates the **support**. The 2024 rongorongo dates (one tablet’s wood in 1493–1509, three later) are about the history of writing on Rapa Nui, not about glyph values. https://www.nature.com/articles/s41598-024-53063-7
+- Radiocarbon dates the **support**. The 2024 rongorongo dates (one tablet’s wood in 1493-1509, three later) are about the history of writing on Rapa Nui, not about glyph values. https://www.nature.com/articles/s41598-024-53063-7
 - The Dispilio date is a Neolithic lakeshore date. The paper does not claim a decipherment. https://www.cambridge.org/core/journals/radiocarbon/article/abs/radiocarbon-dating-of-the-neolithic-lakeside-settlement-of-dispilio-kastoria-northern-greece/759AA29502776E142883F1971293BEB1
 
 ---

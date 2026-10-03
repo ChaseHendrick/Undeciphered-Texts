@@ -9,7 +9,7 @@ and a noisy channel from letters to unknown signs is what gets learned.
 1. Fit an English letter bigram on plaintext you already know.
 2. Build a synthetic sign text by replacing each letter of a *different*
    English passage with one sign from a random bijection. Signs are labels
-   such as `U+E00A`, not A–Z.
+   such as `U+E00A`, not A-Z.
 3. Run Baum-Welch. The bigram stays fixed. Only P(sign | letter) moves.
 4. Read the map off the posterior: each observed sign goes to its most likely
    letter.

@@ -5,7 +5,7 @@ This is a **lookup**, not a decipherment.
 It repeats two things that are already published:
 
 - the Greek-alphabet letter alpha, as named on the Unicode 18.0.0 names list
-- one Liddell–Scott–Jones gloss of the Classical Greek word ἄνθρωπος
+- one Liddell-Scott-Jones gloss of the Classical Greek word ἄνθρωπος
 
 **It does not decipher Linear B.** Linear B is a separate Mycenaean syllabary. This table has no Linear B signs, no syllabic values, and no tablet readings. A query that is not a single catalog key returns nothing.
 

@@ -8,7 +8,7 @@ Giving it a block, a collocation, a codex sentence, or any string that is not a 
 
 ## What was fetched
 
-On 2026-10-02 the Learner's Maya Glyph Guide grid at <https://mayaglyphs.org/CMGGgrid.html> (Sim Lee and John Pedersen, April 2026; HTML version of Sim Lee, *Classic Maya Glyph Guide*, Amsterdam: self-published, 2023–2026) labels the sign **K'IN** and lists Thompson numbers **T544**, T755, and T1010abc on that same label. The grid writes the glottal as the HTML character reference `&#x27;` (U+0027 APOSTROPHE).
+On 2026-10-02 the Learner's Maya Glyph Guide grid at <https://mayaglyphs.org/CMGGgrid.html> (Sim Lee and John Pedersen, April 2026; HTML version of Sim Lee, *Classic Maya Glyph Guide*, Amsterdam: self-published, 2023-2026) labels the sign **K'IN** and lists Thompson numbers **T544**, T755, and T1010abc on that same label. The grid writes the glottal as the HTML character reference `&#x27;` (U+0027 APOSTROPHE).
 
 The linked entry <https://mayaglyphs.org/CWLhtml/K%27INlogo.html> says, in the Translation line:
 

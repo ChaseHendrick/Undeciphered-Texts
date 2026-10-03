@@ -82,7 +82,7 @@ Signary dispute: https://www.academia.edu/130061000/Polig_Donnelly_Between_Frust
 **Data.** https://cris.unibo.it/handle/11585/743571 and the related script-comparison paper https://cris.unibo.it/handle/11585/722704  
 **Difficulty.** B.
 
-### A8. Phaistos sign–object parallels, after 1908
+### A8. Phaistos sign-object parallels, after 1908
 
 **Do.** A table of the 45 disc signs (use the standard Evans/Godart numbering) against parallels that were excavated **after** the disc was found: the 1955 sealing, the 1965 bowl’s comb-like potmark, impressed fine ware, Arkalochori. Date each parallel.
 
@@ -133,7 +133,7 @@ Variant database notice (2025): https://orbi.uliege.be/handle/2268/333157
 
 ### B4. Keep the two scripts apart
 
-**Do.** A short public note, with a map and a timeline, of every popular source that treats proto-Elamite tablets and Linear Elamite monuments as one script. Include the dates (c. 3100–2900 vs c. 2300–1880) and the object types.
+**Do.** A short public note, with a map and a timeline, of every popular source that treats proto-Elamite tablets and Linear Elamite monuments as one script. Include the dates (c. 3100-2900 vs c. 2300-1880) and the object types.
 
 **Done.** A confusion list. Useful, and not a decipherment.
 
@@ -156,7 +156,7 @@ Structural paper that states it uses Mahadevan’s IDF-80: https://www.nature.co
 
 ### C2. Length histogram and the “writing” debate, without picking a winner
 
-**Do.** From Mahadevan’s published totals (2,906 objects, 13,372 signs), plot approximate lengths. State the mean near 4–5. Then summarize, in their own claims, Farmer/Sproat/Witzel 2004 and Rao et al. *Science* 2009, including Sproat’s later objections. No new entropy “proof.”
+**Do.** From Mahadevan’s published totals (2,906 objects, 13,372 signs), plot approximate lengths. State the mean near 4-5. Then summarize, in their own claims, Farmer/Sproat/Witzel 2004 and Rao et al. *Science* 2009, including Sproat’s later objections. No new entropy “proof.”
 
 **Done.** A briefing a non-specialist can trust.
 
@@ -247,7 +247,7 @@ Rilly’s survey: https://escholarship.org/uc/item/3128r3sw
 
 **Do.** Two columns, Rilly (East Sudanic: SOV, postpositions, genitive order) vs Rowan (Afroasiatic-like phonotactics). No winner unless you have a new argument; the project is to stop papers from citing only one side.
 
-**Data.** UCLA article above; Rowan’s working paper is the 2006 SOAS piece “Meroitic – An Afroasiatic Language?” (cited throughout the specialist literature; check eprints.soas.ac.uk).  
+**Data.** UCLA article above; Rowan’s working paper is the 2006 SOAS piece “Meroitic, An Afroasiatic Language?” (cited throughout the specialist literature; check eprints.soas.ac.uk).  
 **Difficulty.** A.
 
 ### D8. Funerary-formula slots
@@ -356,7 +356,7 @@ Corpus description and the reason both transcriptions exist: https://en.wikipedi
 
 ### H1. Voynich transcription diff
 
-**Do.** Diff two IVTFF files (for example Zandbergen–Landini vs Takahashi) by folio. Report where the *words* change, not a language.
+**Do.** Diff two IVTFF files (for example Zandbergen-Landini vs Takahashi) by folio. Report where the *words* change, not a language.
 
 **Done.** A disagreement map of Currier A vs B pages and of the herbal labels.
 
@@ -388,7 +388,7 @@ A natural-language claim to test against, not to adopt: https://www.tandfonline.
 
 ### H4. Rohonc prediction test
 
-**Do.** If you use the Király–Tokai proposal, freeze the mapping on the pages they used to define it, then apply it to pages you held out. Score exact string matches only. Láng 2010 is the problem statement, not a solution.
+**Do.** If you use the Király-Tokai proposal, freeze the mapping on the pages they used to define it, then apply it to pages you held out. Score exact string matches only. Láng 2010 is the problem statement, not a solution.
 
 **Data.** https://www.tandfonline.com/doi/full/10.1080/01611191003605587  
 The codex images, if used, must come from the holding library’s terms, not from a random PDF.

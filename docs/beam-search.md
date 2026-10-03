@@ -8,11 +8,11 @@ This beam search **does not decipher ancient scripts**. It does not read Linear 
 
 ## Model
 
-`engine/data/beam_english.txt` is original English prose included with this solver (UTF-8). The fitter counts A–Z unigrams and word-internal bigrams and stores add-k smoothed log probabilities. Accented letters are treated as separators so they never enter the 26-letter tables.
+`engine/data/beam_english.txt` is original English prose included with this solver (UTF-8). The fitter counts A-Z unigrams and word-internal bigrams and stores add-k smoothed log probabilities. Accented letters are treated as separators so they never enter the 26-letter tables.
 
 ## Search
 
-1. Split the ciphertext into A–Z words. Spaces and punctuation stay in the skeleton and are written back into the plaintext.
+1. Split the ciphertext into A-Z words. Spaces and punctuation stay in the skeleton and are written back into the plaintext.
 2. Extend a partial cipher-to-plain key one ciphertext symbol at a time, most frequent symbol first. Each symbol receives a still-unused plaintext letter.
 3. Score a partial key by the English unigram of every mapped letter plus the conditional bigram of every word-internal pair whose two symbols are both mapped. At a given depth every beam has mapped the same ciphertext symbols, so the scores are comparable.
 4. Keep the `beam_width` best partial keys and repeat until every symbol that occurs in the text is mapped.

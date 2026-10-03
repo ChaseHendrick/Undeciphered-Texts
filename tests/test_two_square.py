@@ -78,7 +78,7 @@ class TwoSquareRecoveryTest(unittest.TestCase):
     def test_keyword_solver_recovers_synthetic_plaintext(self) -> None:
         expect = TWO_SQUARE_PLAIN if len(TWO_SQUARE_PLAIN) % 2 == 0 else TWO_SQUARE_PLAIN + "X"
         cipher = two_square_encrypt(expect, TWO_SQUARE_LEFT, TWO_SQUARE_RIGHT)
-        # Solver is not handed the squares—only a word list that contains them.
+        # Solver is not handed the squares, only a word list that contains them.
         result = solve_two_square(cipher, keywords=DEFAULT_KEYWORDS)
         self.assertEqual(result.details["left_keyword"], TWO_SQUARE_LEFT_KW)
         self.assertEqual(result.details["right_keyword"], TWO_SQUARE_RIGHT_KW)

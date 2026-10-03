@@ -29,12 +29,12 @@ WIKIPEDIA_PLAINTEXT = "HELPMEOBIWANKENOBI"
 WIKIPEDIA_CIPHERTEXT = "FYGMKYHOBXMFKKKIMD"
 WIKIPEDIA_MESSAGE = "he lp me ob iw an ke no bi"
 
-# Plaintext squares: a–z with Q omitted, row-major, as printed on Wikipedia.
+# Plaintext squares: a-z with Q omitted, row-major, as printed on Wikipedia.
 PLAIN_ALPHABET = "ABCDEFGHIJKLMNOPRSTUVWXYZ"
 
 
 def four_square_letters(text: str) -> str:
-    """A–Z stream with Q removed. Four-square here follows Wikipedia and omits Q."""
+    """A-Z stream with Q removed. Four-square here follows Wikipedia and omits Q."""
     return "".join(ch for ch in letters_only(text) if ch != "Q")
 
 

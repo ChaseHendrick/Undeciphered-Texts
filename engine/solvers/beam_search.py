@@ -6,7 +6,7 @@ English unigram and bigram model. Scores use only A-Z letters. Word spaces in
 the ciphertext are preserved and bigrams are counted inside words, not across
 spaces.
 
-This beam search does not decipher ancient scripts — it does not read Linear A,
+This beam search does not decipher ancient scripts, it does not read Linear A,
 the Indus script, Rongorongo, the Voynich manuscript, or any other unknown
 writing system. A high score only means the Latin-letter string looks more
 like English under this model than the alternatives in the beam.

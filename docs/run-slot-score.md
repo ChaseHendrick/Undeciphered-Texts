@@ -1,6 +1,6 @@
 # Run-slot score
 
-Unsupervised description of a transcription. New files only: `engine/run_slot_score.py` and `tests/test_run_slot_score.py`. This note does not change solvers, image assets, or other experiments. The README hero JPEG is not part of this change. These files are UTF-8 text — plain Unicode, not base64.
+Unsupervised description of a transcription. New files only: `engine/run_slot_score.py` and `tests/test_run_slot_score.py`. This note does not change solvers, image assets, or other experiments. The README hero JPEG is not part of this change. These files are UTF-8 text, plain Unicode, not base64.
 
 ## Original to this repository
 

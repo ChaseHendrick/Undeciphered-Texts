@@ -11,7 +11,7 @@ A hit means the spelling is one of the three rows below, copied from a public pa
 Names are the Unicode character names.
 
 - Coptic block: https://www.unicode.org/charts/PDF/U2C80.pdf
-- Coptic letters still encoded in the Greek and Coptic block (U+03E2–U+03EF): https://www.unicode.org/charts/PDF/U0370.pdf
+- Coptic letters still encoded in the Greek and Coptic block (U+03E2-U+03EF): https://www.unicode.org/charts/PDF/U0370.pdf
 
 ## Lexicon
 

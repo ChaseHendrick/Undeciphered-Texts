@@ -2,10 +2,10 @@
 
 `engine/pattern_mood.py` looks at a sign stream or a simple drawn sheet and reports visual structure:
 
-- **Repeat rhythm** — the best fraction of marks that show up again one step to the right or below. Empty cells do not count, so a blank page is not "rhythmic" just because the background matches.
-- **Symmetry** — the fraction of marks that also sit on the left-right mirror or the top-bottom mirror, whichever axis is stronger.
-- **Spacing** — the mean distance from each mark to its nearest neighbor, in cell units.
-- **Mood** — a label computed only from those measurements.
+- **Repeat rhythm**, the best fraction of marks that show up again one step to the right or below. Empty cells do not count, so a blank page is not "rhythmic" just because the background matches.
+- **Symmetry**, the fraction of marks that also sit on the left-right mirror or the top-bottom mirror, whichever axis is stronger.
+- **Spacing**, the mean distance from each mark to its nearest neighbor, in cell units.
+- **Mood**, a label computed only from those measurements.
 
 | Mood | Rule | What it suggests |
 |---|---|---|

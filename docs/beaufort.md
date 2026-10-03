@@ -6,7 +6,7 @@ This is a **known classical-cipher** solver. It is **not** an unknown-script rea
 
 ## Published worked example (fetched)
 
-Source: [Practical Cryptography — Beaufort cipher](http://practicalcryptography.com/ciphers/beaufort-cipher/) (fetched 2026-10-02).
+Source: [Practical Cryptography, Beaufort cipher](http://practicalcryptography.com/ciphers/beaufort-cipher/) (fetched 2026-10-02).
 
 | Field | Value |
 | --- | --- |

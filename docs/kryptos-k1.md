@@ -21,7 +21,7 @@ The paper prints that plain component as:
 KRYPTOSABCDEFGHIJLMNQUVWXZ
 ```
 
-That is the keyword `KRYPTOS` followed by the unused letters of A–Z in order. `C` stays. `K`, `R`, `Y`, `P`, `T`, `O`, and `S` are not written a second time.
+That is the keyword `KRYPTOS` followed by the unused letters of A-Z in order. `C` stays. `K`, `R`, `Y`, `P`, `T`, `O`, and `S` are not written a second time.
 
 Each cipher alphabet is that sequence rotated so the current key letter sits in the column of the index letter `K`. The ten rows for `PALIMPSEST` in the paper are:
 

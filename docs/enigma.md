@@ -2,11 +2,11 @@
 
 `engine/solvers/enigma.py` decrypts a **known** three-rotor Enigma key. `tests/test_enigma.py` checks that this recovers a published worked example letter for letter.
 
-This is a **known-key historical machine**. It is the three-rotor Enigma I (the military form of the commercial Enigma): three rotors chosen from I–V, a fixed reflector B or C, the military identity entry wheel, and an optional plugboard. The key is supplied. It is **not** a break of an unsolved intercept. It is **not** a claim about army message Nr. 86 or Kryptos K4, and it does not read Linear A, the Indus script, the Voynich manuscript, or rongorongo.
+This is a **known-key historical machine**. It is the three-rotor Enigma I (the military form of the commercial Enigma): three rotors chosen from I-V, a fixed reflector B or C, the military identity entry wheel, and an optional plugboard. The key is supplied. It is **not** a break of an unsolved intercept. It is **not** a claim about army message Nr. 86 or Kryptos K4, and it does not read Linear A, the Indus script, the Voynich manuscript, or rongorongo.
 
 ## Published worked example (fetched)
 
-Source: [Wikipedia — Enigma rotor details](https://en.wikipedia.org/wiki/Enigma_rotor_details) (fetched 2026-10-02). The machine itself is described in [Enigma machine](https://en.wikipedia.org/wiki/Enigma_machine).
+Source: [Wikipedia, Enigma rotor details](https://en.wikipedia.org/wiki/Enigma_rotor_details) (fetched 2026-10-02). The machine itself is described in [Enigma machine](https://en.wikipedia.org/wiki/Enigma_machine).
 
 The rotor-details page states: with the rotors I, II and III (from left to right), wide B-reflector, all ring settings in A-position, and start position AAA, typing AAAAA produces BDZGO. No plugboard pairs are used.
 

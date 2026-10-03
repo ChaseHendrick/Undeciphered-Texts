@@ -9,7 +9,7 @@ The ranking uses six tests.
 1. **Script vs language.** If the signs are already read, you are doing lexicography, which is slow but real. If the signs are not read, you need a grid that predicts new text.
 2. **Independent check.** Linear B was confirmed when Greek readings matched ideograms Ventris had not designed the grid around. A breakthrough that cannot be checked on a withheld inscription is not a breakthrough.
 3. **Text length.** Mean length of four or five signs (Indus, most Cypro-Minoan, most Linear A tablets) cannot uniquely fix a syllabary.
-4. **Parallel or bilingual text.** Even a bad bilingual (Pyrgi, Amathus, Khitan epitaphs, the short Linear Elamite–Akkadian overlaps) beats a wordlist search.
+4. **Parallel or bilingual text.** Even a bad bilingual (Pyrgi, Amathus, Khitan epitaphs, the short Linear Elamite-Akkadian overlaps) beats a wordlist search.
 5. **Agreed edition.** You cannot decipher a moving sign list. Proto-Elamite, Cypro-Minoan, and rongorongo still lose information at the “what is a sign?” step.
 6. **Language anchor.** A known family (Khitan and Mongolic/para-Mongolic comparisons, Meroitic and East Sudanic, Iberian at least *segmentable*) is an anchor. “Try every family in a database” is not.
 
@@ -17,9 +17,9 @@ Claimed decipherments are placed by whether the claim has survived contact with 
 
 ---
 
-## Rank 1 — Meroitic (the language)
+## Rank 1, Meroitic (the language)
 
-**Why it is first.** The script has been transliterable since Griffith’s work of 1909–1911. The corpus is large (about 2,000 texts in and around REM), repetitive (funerary formulae), and under active grammatical description. Claude Rilly’s Northern East Sudanic comparison gives a method that can be wrong in detail and still generate glosses other scholars can reject one word at a time. That is what progress looks like. UCLA Encyclopedia statement of where the field actually is: https://escholarship.org/uc/item/3128r3sw
+**Why it is first.** The script has been transliterable since Griffith’s work of 1909-1911. The corpus is large (about 2,000 texts in and around REM), repetitive (funerary formulae), and under active grammatical description. Claude Rilly’s Northern East Sudanic comparison gives a method that can be wrong in detail and still generate glosses other scholars can reject one word at a time. That is what progress looks like. UCLA Encyclopedia statement of where the field actually is: https://escholarship.org/uc/item/3128r3sw
 
 **Why it is not “about to be finished.”** There is still no long bilingual. Verbal morphology is the acknowledged weak point. The Afroasiatic counter-hypothesis (Rowan, Lipiński) means even the family is not settled. Funerary formulae will keep yielding; royal narrative will not suddenly become transparent.
 
@@ -29,7 +29,7 @@ Claimed decipherments are placed by whether the claim has survived contact with 
 
 ---
 
-## Rank 2 — Etruscan (the language)
+## Rank 2, Etruscan (the language)
 
 **Why.** Alphabet solved, corpus very large, grammar of names and epitaphs already good, Tyrsenian comparison (Raetic, Lemnian) already doing real work. The Liber Linteus is long enough to test syntax (about 1,300 tokens). Pyrgi showed both the value and the limit of a short bilingual: https://www.museoetru.it/masterpieces/lamine-doro-da-pyrgi
 
@@ -39,7 +39,7 @@ Claimed decipherments are placed by whether the claim has survived contact with 
 
 ---
 
-## Rank 3 — Northeastern Iberian (the language, not the script)
+## Rank 3, Northeastern Iberian (the language, not the script)
 
 **Why.** Gómez-Moreno’s semi-syllabic reading has been stable for a century. Hesperia has thousands of inscriptions in a script epigraphers actually use (http://hesperia.ucm.es/). Edge morphology is visible. Coin legends give proper names. This is a better position than Linear A.
 
@@ -49,7 +49,7 @@ Claimed decipherments are placed by whether the claim has survived contact with 
 
 ---
 
-## Rank 4 — Khitan large script
+## Rank 4, Khitan large script
 
 **Why it outranks the famous undeciphered scripts.** The language is not a blank: the small script is substantially read, Chinese parallel epitaphs exist, and the historical context is known. The bottleneck is graphic (thousands of large-script characters, many poorly attested), not “which continent’s language is this?” Kane’s synthesis and the Unicode proposal state the imbalance plainly: https://www.unicode.org/wg2/docs/n5319-KhitanLargeScriptEncoding.pdf . Small-script phonetic work continues (e.g. https://akjournals.com/view/journals/062/70/2/article-p109.xml).
 
@@ -59,7 +59,7 @@ Claimed decipherments are placed by whether the claim has survived contact with 
 
 ---
 
-## Rank 5 — Linear Elamite, conditional on the 2022 claim
+## Rank 5, Linear Elamite, conditional on the 2022 claim
 
 **Why it is this high.** Desset, Tabibzadeh, Kervran, Basello, and Marchesi put a full syllabic decipherment in *Zeitschrift für Assyriologie* (2022), using a corpus of about 40 inscriptions and overlaps with Akkadian for names and titles. PDF: https://orbi.uliege.be/bitstream/2268/334018/1/The%20decipherment%20of%20Linear%20Elamite.pdf . If the grid is right, the breakthrough has already happened and the remaining work is translation and peer acceptance.
 
@@ -69,9 +69,9 @@ Claimed decipherments are placed by whether the claim has survived contact with 
 
 ---
 
-## Rank 6 — Southwestern Paleohispanic (the script)
+## Rank 6, Southwestern Paleohispanic (the script)
 
-**Why.** This is one of the few **scripts** (not just languages) where values are still moving in public epigraphy and the sign count is small enough that one good abecedary or one bilingual name would lock a row of the grid. Roughly 90–100 stelae; a core of signs already conventional; a residue still marked hypothetical. https://en.wikipedia.org/wiki/Southwest_Paleohispanic_script and https://dialnet.unirioja.es/descarga/articulo/3339686.pdf
+**Why.** This is one of the few **scripts** (not just languages) where values are still moving in public epigraphy and the sign count is small enough that one good abecedary or one bilingual name would lock a row of the grid. Roughly 90-100 stelae; a core of signs already conventional; a residue still marked hypothetical. https://en.wikipedia.org/wiki/Southwest_Paleohispanic_script and https://dialnet.unirioja.es/descarga/articulo/3339686.pdf
 
 **Limit.** Even a finished signary may yield a language as opaque as Iberian. Cracking the script is not reading the stelae.
 
@@ -79,7 +79,7 @@ Claimed decipherments are placed by whether the claim has survived contact with 
 
 ---
 
-## Rank 7 — Cypro-Minoan
+## Rank 7, Cypro-Minoan
 
 **Why it is the highest unread Aegean script.** It has a **daughter** with known values, the Iron Age Cypriot syllabary, and a small set of long tablets (CM 2). Valério’s comparisons are the right *kind* of hypothesis: sign shape plus later value, then a check against spelling patterns. Example: https://cris.unibo.it/handle/11585/743571 . Unicode encoding fixed a catalogue so people can at least cite signs (proposal: https://www.unicode.org/wg2/docs/n5135-cyprominoan.pdf).
 
@@ -89,7 +89,7 @@ Claimed decipherments are placed by whether the claim has survived contact with 
 
 ---
 
-## Rank 8 — Proto-Elamite (semantics, not phonetics)
+## Rank 8, Proto-Elamite (semantics, not phonetics)
 
 **Why.** This is the unread script where the largest fraction of each tablet is already interpretable: sexagesimal, decimal, bisexagesimal, and capacity systems, plus some commodity signs tied to those systems. Englund’s essay is still the status report: https://www.mpiwg-berlin.mpg.de/Preprints/P183.PDF . CDLI is an open corpus: https://cdli.earth/search . A 2025 methods paper on numeral sequences is aimed at the part that can be finished: https://arxiv.org/html/2502.00090v1
 
@@ -99,7 +99,7 @@ Claimed decipherments are placed by whether the claim has survived contact with 
 
 ---
 
-## Rank 9 — Zapotec (calendar layer only)
+## Rank 9, Zapotec (calendar layer only)
 
 Calendar signs and some lunar or day counts are real epigraphy (Urcid 2001; the Monte Albán lunar-count paper in *Latin American Antiquity*). Narrative signs are not read. Progress looks like Isthmian’s calendar layer before 1993: secure, local, and not a syllabary. FAMSI materials: https://www.famsi.org/zapotecwriting/zapotec_text.pdf
 
@@ -107,7 +107,7 @@ A breakthrough in the Maya sense needs either a much larger phonetic grid anchor
 
 ---
 
-## Rank 10 — Isthmian, as a hypothesis to test, not as a result
+## Rank 10, Isthmian, as a hypothesis to test, not as a result
 
 Justeson and Kaufman 1993 (*Science*: https://www.science.org/doi/10.1126/science.259.5102.1703) is the rare undeciphered-script paper that made a linguistic claim precise enough to fail. A later column on La Mojarra was offered as a successful prediction. Houston and Coe’s mask text was offered as a failed one (https://www.baltimoresun.com/2004/02/09/a-translation-unmasked/). Both cannot be shrugged off. The corpus is a handful of monuments, so **two** careful epigraphers can still read the same grooves differently.
 
@@ -115,7 +115,7 @@ Justeson and Kaufman 1993 (*Science*: https://www.science.org/doi/10.1126/scienc
 
 ---
 
-## Rank 11 — Linear A
+## Rank 11, Linear A
 
 This is where popular lists put “closest,” because Linear B was deciphered and the signs look alike. That is a misunderstanding of why Linear B fell.
 
@@ -130,13 +130,13 @@ This is where popular lists put “closest,” because Linear B was deciphered a
 
 ---
 
-## Rank 12 — Cretan Hieroglyphic
+## Rank 12, Cretan Hieroglyphic
 
 Same civilization, less text, worse documentation of which seal-face is a “word.” The live breakthrough is Ferrara, Montecchi, and Valério’s sign-list cleanup (*Kadmos* 2021), which is epigraphy. It does not point at a language.
 
 ---
 
-## Rank 13 — Rongorongo
+## Rank 13, Rongorongo
 
 **What is real.** The Mamari (tablet C) lunar sequence; the H/P/Q parallel text; Barthel’s catalogue; a basic-glyph count somewhere near 120 plus ligatures; 2024 proof that at least one piece of inscribed wood predates European contact (https://www.nature.com/articles/s41598-024-53063-7).
 
@@ -146,13 +146,13 @@ Same civilization, less text, worse documentation of which seal-face is a “wor
 
 ---
 
-## Rank 14 — Indus
+## Rank 14, Indus
 
 Large catalogue, excellent digitization prospects, famous prize (Tamil Nadu, 2025, one million dollars). Still the wrong shape for a decipherment:
 
-- Mean inscription about 4–5 signs (Mahadevan’s concordance and every later study).
+- Mean inscription about 4-5 signs (Mahadevan’s concordance and every later study).
 - No bilingual.
-- Sign count itself depends on the editor (417 in Mahadevan 1977 vs 600–700 in Wells/ICIT).
+- Sign count itself depends on the editor (417 in Mahadevan 1977 vs 600-700 in Wells/ICIT).
 - A serious “not linguistic” argument has never been killed (Farmer, Sproat, Witzel 2004), even though many epigraphers still treat the signs as logo-syllabic. Entropy papers did not end that fight.
 
 Structural results (direction, terminal signs, numeral strokes) are already the breakthrough, and they are modest on purpose. See https://www.nature.com/articles/s41599-019-0274-1 and the edition history in https://www.imsc.res.in/~sitabhra/meetings/bitsscripts24/C_Subramanian_Lecture.pdf
@@ -161,19 +161,19 @@ Structural results (direction, terminal signs, numeral strokes) are already the 
 
 ---
 
-## Rank 15 — Byblos pseudo-hieroglyphic
+## Rank 15, Byblos pseudo-hieroglyphic
 
 About 14 inscriptions, sign count in the syllabic range, date possibly Middle Bronze or possibly early 1st millennium (Sass 2019: https://www.academia.edu/38559714/). No bilingual. Any full decipherment from this pile is underdetermined. The Leiden thesis is the modern description, not a reading: https://scholarlypublications.universiteitleiden.nl/access/item%3A3732020/view
 
 ---
 
-## Rank 16 — Singapore Stone
+## Rank 16, Singapore Stone
 
 In a different world this would rank near the top: the comparison is with **Kawi**, and the language may be Sanskrit or a known Austronesian written language (https://www.mdpi.com/2409-9252/3/3/18 , museum object https://www.roots.gov.sg/Collection-Landing/listing/1148198). The British destruction of 1843 left one fragment of a ~50-line text. The bottleneck is lost stone, not lack of cleverness. Stroke recovery is legitimate. Restoring the missing lines with a language model is fiction.
 
 ---
 
-## Rank 17 — Phaistos Disc
+## Rank 17, Phaistos Disc
 
 242 tokens, 45 signs, one disc, stamps that were never used on a second published text (https://anetoday.org/phaistos-disk/). Authenticity is no longer the main objection in archaeology. Uniqueness is. Information theory is not required to see that 45 unknown types cannot be fixed by one inscription. The Arkalochori axe is not “text 2” until the signs are shown to be the same system (Ferrara, Montecchi, Streccioni 2024: https://cris.unibo.it/handle/11585/975345).
 
@@ -181,13 +181,13 @@ Every complete translation of the disc should be presumed false.
 
 ---
 
-## Rank 18 — Cascajal
+## Rank 18, Cascajal
 
 One block, 62 signs, probable Olmec date, authenticity strengthened by archaeometry but not by an excavation context (*Science* 2006: https://www.science.org/doi/10.1126/science.1131492 ; later imaging paper in *Ancient Mesoamerica*). Individual signs can be matched to Olmec iconography. That is not a script decipherment. Rank would jump only if a second block appeared.
 
 ---
 
-## Rank 19 — Voynich manuscript
+## Rank 19, Voynich manuscript
 
 Best images, best transcriptions, best statistical literature, worst path to a unique solution.
 
@@ -197,9 +197,9 @@ Bowern and Lindemann 2021 make a strong case that the text is language-like and 
 
 ---
 
-## Rank 20 — Rohonc Codex
+## Rank 20, Rohonc Codex
 
-Láng 2010 showed it is worth treating as a deliberate system: https://www.tandfonline.com/doi/full/10.1080/01611191003605587 . The Király–Tokai biblical decipherment is a claim, not a result. It could fall quickly to a cryptanalytic test (does the proposed code predict text on pages whose pictures were not used to define the code?). Until that test is public and passed, it stays near the bottom.
+Láng 2010 showed it is worth treating as a deliberate system: https://www.tandfonline.com/doi/full/10.1080/01611191003605587 . The Király-Tokai biblical decipherment is a claim, not a result. It could fall quickly to a cryptanalytic test (does the proposed code predict text on pages whose pictures were not used to define the code?). Until that test is public and passed, it stays near the bottom.
 
 ---
 

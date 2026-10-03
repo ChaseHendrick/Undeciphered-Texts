@@ -31,7 +31,7 @@ _SCOPE = (
 
 
 def porta_key(key: str) -> str:
-    """A–Z keyword. Non-letters are dropped. At least one letter is required."""
+    """A-Z keyword. Non-letters are dropped. At least one letter is required."""
     cleaned = letters_only(key)
     if not cleaned:
         raise ValueError("Porta key must contain at least one letter")
@@ -47,9 +47,9 @@ def porta_row(key_letter: str) -> int:
 
 
 def porta_substitute(letter: str, key_letter: str) -> str:
-    """Map one A–Z letter through the Porta row selected by key_letter.
+    """Map one A-Z letter through the Porta row selected by key_letter.
 
-    First half A–M goes to N–Z rotated by the row; second half is the inverse,
+    First half A-M goes to N-Z rotated by the row; second half is the inverse,
     so the map is an involution. Row 0 (A/B) is the familiar A↔N … M↔Z slide.
     """
     row = porta_row(key_letter)

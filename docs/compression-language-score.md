@@ -12,6 +12,6 @@ A real English or German passage should score above a shuffle of its own charact
 
 **This tool does not decipher ancient scripts.** It does not read Linear A, the Voynich manuscript, Rongorongo, the Indus script, Phaistos, or any other undeciphered writing system. Beating a shuffle only shows that the original string had compressible order. It is not a translation, not a language identification, and not evidence that an unknown text has been solved.
 
-Dieses Werkzeug entziffert keine antiken Schriften — nur ein Kompressionsmaß.
+Dieses Werkzeug entziffert keine antiken Schriften, nur ein Kompressionsmaß.
 
 The idea that compressors notice language-like redundancy is old and public (see Benedetto, Caglioti, and Loreto, “Language Trees and Zipping,” *Physical Review Letters* 88, 048702, 2002, https://doi.org/10.1103/PhysRevLett.88.048702). That paper sorts known languages. It is not a method for reading an undeciphered script, and neither is this module.

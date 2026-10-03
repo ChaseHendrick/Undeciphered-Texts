@@ -2,13 +2,13 @@
 
 `engine/mural_analyzer.py` measures flat RGB structure on a raster:
 
-- **Dominant colors** — quantized RGB histogram
-- **Connected regions** — 4-connected same-color components
-- **Motif repeat** — whether two or more same-color regions share a shape signature
+- **Dominant colors**, quantized RGB histogram
+- **Connected regions**, 4-connected same-color components
+- **Motif repeat**, whether two or more same-color regions share a shape signature
 
 ## What it does not do
 
-**It does not read Teotihuacan glyphs or any ancient painting.** It does not OCR, decipher, transliterate, or claim a glyph reading. It is not a Mesoamerican epigraphy tool. Feed it a photo of an ancient mural and you still only get color buckets and blobs — not names, sounds, or meanings.
+**It does not read Teotihuacan glyphs or any ancient painting.** It does not OCR, decipher, transliterate, or claim a glyph reading. It is not a Mesoamerican epigraphy tool. Feed it a photo of an ancient mural and you still only get color buckets and blobs, not names, sounds, or meanings.
 
 ## Technique note (GENChase)
 

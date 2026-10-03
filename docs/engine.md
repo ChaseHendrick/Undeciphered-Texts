@@ -27,7 +27,7 @@ Also included, as measurements rather than decipherments:
 
 - Index of coincidence, letter frequencies, n-gram counts (`engine.cli stats`)
 - Crib dragging for an additive cipher (`engine.cli crib`)
-- `engine.cli unsupervised` — the same English substitution search, explicitly assuming English monoalphabetic plaintext
+- `engine.cli unsupervised`, the same English substitution search, explicitly assuming English monoalphabetic plaintext
 
 The CLI is `python -m engine.cli` with explicit subcommands (`caesar`, `vigenere`, `substitution`, `stats`, `crib`, `unsupervised`, `demo`). Known fixtures live in `demos/fixtures/`. The demo prints the recovered plaintext and exits non-zero if a known case is not recovered.
 
@@ -40,7 +40,7 @@ These are the usual published techniques (Friedman, Kasiski, chi-squared column 
 
 The model is a trigram net. The two previous letters are one-hot vectors, a tanh hidden layer of 32 units mixes them, and a 26-way softmax predicts the next letter. Weights start random and are fit by gradient descent on next-letter cross-entropy, so the parameters are learned rather than copied from a published frequency table. Numpy does the matrix updates when it is installed; otherwise the same updates run in the standard library. No GPU and no downloaded checkpoint.
 
-Training text is Jane Austen, *Pride and Prejudice*, chapters I–III (Project Gutenberg eBook 1342), in `engine/data/neural_train_austen.txt`. Attribution lines in that file are not trained on. The excerpt is not the demo plaintext, not the plaintext in `engine/fixtures.py`, and not the held-out Doyle passage. `tests/test_neural.py` checks that the fitted model prefers a held-out English sentence over a random letter string of the same length, and that training loss fell. Held-out counts against a different book, a German tale, and a cipher-family router are in [neural-grade.md](neural-grade.md). The older Alice excerpt remains at `engine/data/alice_excerpt.txt` and is not the fit.
+Training text is Jane Austen, *Pride and Prejudice*, chapters I-III (Project Gutenberg eBook 1342), in `engine/data/neural_train_austen.txt`. Attribution lines in that file are not trained on. The excerpt is not the demo plaintext, not the plaintext in `engine/fixtures.py`, and not the held-out Doyle passage. `tests/test_neural.py` checks that the fitted model prefers a held-out English sentence over a random letter string of the same length, and that training loss fell. Held-out counts against a different book, a German tale, and a cipher-family router are in [neural-grade.md](neural-grade.md). The older Alice excerpt remains at `engine/data/alice_excerpt.txt` and is not the fit.
 
 Limits of this fitness function:
 
@@ -124,8 +124,8 @@ Limits:
 
 Fixtures (invented labels `SX##`, not a historical script):
 
-- `engine/data/synthetic_sign_corpus.txt` — small whitespace-tokenized corpus for inventory and repeats
-- `engine/data/synthetic_bilingual.json` — tiny bilingual with a correct map, a deliberately wrong map, a word list, and five inscriptions
+- `engine/data/synthetic_sign_corpus.txt`, small whitespace-tokenized corpus for inventory and repeats
+- `engine/data/synthetic_bilingual.json`, tiny bilingual with a correct map, a deliberately wrong map, a word list, and five inscriptions
 
 `tests/test_script_tools.py` checks that the inventory ranks the fixture's frequent signs, that `SX02 SX03` is found as a repeat, that the correct map matches every known word, and that the wrong map is rejected (mismatches, `all_matched` is false).
 

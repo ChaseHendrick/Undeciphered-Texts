@@ -2,7 +2,7 @@
 
 The two previous letters are one-hot encoded, passed through a tanh hidden
 layer, and scored with a 26-way softmax. Weights are fit by gradient descent
-on next-letter cross-entropy. The training prose is Jane Austen, Pride and Prejudice, chapters I–III
+on next-letter cross-entropy. The training prose is Jane Austen, Pride and Prejudice, chapters I-III
 (Project Gutenberg eBook 1342), not the held-out Doyle passage and not the
 demo or test plaintext. Held-out numbers are in docs/neural-grade.md.
 

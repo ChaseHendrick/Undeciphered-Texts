@@ -6,7 +6,7 @@ This is a **known classical-cipher** solver. It is **not** an unknown-script rea
 
 ## Published worked example (fetched)
 
-Source: [ACA cipher types — Bazeries](https://www.cryptogram.org/downloads/aca.info/ciphers/Bazeries.pdf) (page 35, fetched 2026-10-02).
+Source: [ACA cipher types, Bazeries](https://www.cryptogram.org/downloads/aca.info/ciphers/Bazeries.pdf) (page 35, fetched 2026-10-02).
 
 | Field | Value |
 | --- | --- |

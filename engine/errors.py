@@ -16,7 +16,7 @@ def append_error(command: str, failure: str, retried: str) -> Path:
     """Append one entry. `retried` is "no" or a short description of the retry."""
     stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     block = (
-        f"\n### {stamp} ET — solver failure\n\n"
+        f"\n### {stamp} ET, solver failure\n\n"
         f"- **date:** {stamp} (ET)\n"
         f"- **command:** {command}\n"
         f"- **failure:** {failure}\n"

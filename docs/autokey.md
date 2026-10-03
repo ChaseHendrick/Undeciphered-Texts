@@ -6,7 +6,7 @@ This is a **known classical-cipher** solver. It is **not** an unknown-script rea
 
 ## Published worked example (fetched)
 
-Source: [Practical Cryptography — Autokey cipher](http://practicalcryptography.com/ciphers/autokey-cipher/) (fetched 2026-10-02).
+Source: [Practical Cryptography, Autokey cipher](http://practicalcryptography.com/ciphers/autokey-cipher/) (fetched 2026-10-02).
 
 | Field | Value |
 | --- | --- |

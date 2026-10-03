@@ -6,7 +6,7 @@ Linear A, the Indus script, Rongorongo, the Phaistos Disc, and the Voynich manus
 
 ## Contrast: Linear B was not an AI result
 
-Michael Ventris, with John Chadwick, showed in 1952–53 that Linear B writes Mycenaean Greek. The work was cryptographic and philological: sign grids, place names, and then language identification. There was no machine learning and no large computer search. It is the calibration case for later papers that **re-predict** Linear B cognates because Greek is already known.
+Michael Ventris, with John Chadwick, showed in 1952-53 that Linear B writes Mycenaean Greek. The work was cryptographic and philological: sign grids, place names, and then language identification. There was no machine learning and no large computer search. It is the calibration case for later papers that **re-predict** Linear B cognates because Greek is already known.
 
 - Chadwick, *The Decipherment of Linear B* (Cambridge).
 - Automatic **re-decipherment** experiments below are tests of algorithms on a solved problem. They did not discover that Linear B was Greek.
@@ -63,7 +63,7 @@ Cuneiform is deciphered. The bottleneck is specialist labor: sign photos, polyva
 ### Akkadian to English
 
 - Gutherz, Gordin, Sáenz, Levy, Berant, “Translating Akkadian to English with neural machine translation,” PNAS Nexus 2(5), 2023, pgad096. DOI [10.1093/pnasnexus/pgad096](https://doi.org/10.1093/pnasnexus/pgad096). Open copy: [PMC10153418](https://pmc.ncbi.nlm.nih.gov/articles/PMC10153418/).
-- They report BLEU-4 of **36.52** (cuneiform to English) and **37.47** (transliteration to English), above a translation-memory baseline. Best on short and medium sentences. BLEU in the mid-30s is a draft aid, not a publishable translation. The authors describe a human–machine pipeline (the “Babylonian Engine”), not a replacement for an Assyriologist.
+- They report BLEU-4 of **36.52** (cuneiform to English) and **37.47** (transliteration to English), above a translation-memory baseline. Best on short and medium sentences. BLEU in the mid-30s is a draft aid, not a publishable translation. The authors describe a human-machine pipeline (the “Babylonian Engine”), not a replacement for an Assyriologist.
 
 Proto-Elamite and Linear Elamite are different problems. Linear Elamite’s 2022 sign readings (Desset and colleagues, *Zeitschrift für Assyriologie*) are philological, not a neural translation. Proto-Elamite remains mostly unread except for numerals. Do not cite Akkademia or DeepScribe as progress on Proto-Elamite.
 
@@ -109,18 +109,18 @@ Kevin Knight, Beáta Megyesi, and Christiane Schaefer transcribed a mid-18th-cen
 | Nuhn, Schamper, Ney, ACL 2013, beam search for substitution | Better symbol error on substitution benchmarks than the 2011 Bayesian system (they report 2.0% vs 2.2% in one comparison) | [aclanthology.org/P13-1154/](https://aclanthology.org/P13-1154/) |
 | Snyder, Barzilay, Knight, ACL 2010 | Statistical cognate model; Ugaritic aligned to Hebrew. Ugaritic was already deciphered in 1929. This is a method test | [aclanthology.org/P10-1107/](https://aclanthology.org/P10-1107/) |
 | Berg-Kirkpatrick and Klein, EMNLP 2011 | Coordinate descent over alphabet and lexicon matchings; same family of tests | [aclanthology.org/D11-1029/](https://aclanthology.org/D11-1029/) |
-| Luo, Cao, Barzilay, ACL 2019, neural minimum-cost flow | +5.5 points absolute on noisy Ugaritic–Hebrew cognate ID vs prior work; **67.3%** of Linear B–Greek cognates on their names subset. Again a solved language | [aclanthology.org/P19-1303/](https://aclanthology.org/P19-1303/) |
+| Luo, Cao, Barzilay, ACL 2019, neural minimum-cost flow | +5.5 points absolute on noisy Ugaritic-Hebrew cognate ID vs prior work; **67.3%** of Linear B-Greek cognates on their names subset. Again a solved language | [aclanthology.org/P19-1303/](https://aclanthology.org/P19-1303/) |
 | Knight, Nair, Rathod, Yamada, COLING-ACL 2006 | Unsupervised EM-style analysis for decipherment problems | [aclanthology.org/P06-2065.pdf](https://aclanthology.org/P06-2065.pdf) |
 
 Code that implements the classical search, not those papers line-for-line:
 
-- [github.com/jameslyons/pycipher](https://github.com/jameslyons/pycipher) — encrypt/decrypt classical ciphers (Caesar, Vigenère, ADFGVX, Enigma). It does not break them. Docs: [pycipher.readthedocs.io](http://pycipher.readthedocs.io/en/master/).
-- [github.com/theikkila/substitution-cipher-SA-solver](https://github.com/theikkila/substitution-cipher-SA-solver) — simulated annealing with trigram scores.
-- [github.com/perrygeo/simanneal](https://github.com/perrygeo/simanneal) — the generic Python annealer people wrap around a substitution fitness function.
-- [github.com/Nickory/SABCA---Simulated-Annealing-Based-Cipher-Analysis](https://github.com/Nickory/SABCA---Simulated-Annealing-Based-Cipher-Analysis) — monoalphabetic annealing.
-- [github.com/doranchak/azdecrypt](https://github.com/doranchak/azdecrypt) — Jarl Van Eycke’s hill climber (homophonic, transposition, many hybrids). This is the tool that made the 2020 Z340 search practical.
-- [github.com/matthewdgreen/decipher](https://github.com/matthewdgreen/decipher) — annealing stack aimed at historical manuscripts, including a Copiale benchmark route.
-- [github.com/CrypToolProject/CrypTool-2](https://github.com/CrypToolProject/CrypTool-2) and [CrypToolProject/CTTS](https://github.com/CrypToolProject/CTTS) — the academic historical-cipher workbench (Lasry and the CrypTool group). CTTS was used on the Mary Stuart letters.
+- [github.com/jameslyons/pycipher](https://github.com/jameslyons/pycipher), encrypt/decrypt classical ciphers (Caesar, Vigenère, ADFGVX, Enigma). It does not break them. Docs: [pycipher.readthedocs.io](http://pycipher.readthedocs.io/en/master/).
+- [github.com/theikkila/substitution-cipher-SA-solver](https://github.com/theikkila/substitution-cipher-SA-solver), simulated annealing with trigram scores.
+- [github.com/perrygeo/simanneal](https://github.com/perrygeo/simanneal), the generic Python annealer people wrap around a substitution fitness function.
+- [github.com/Nickory/SABCA---Simulated-Annealing-Based-Cipher-Analysis](https://github.com/Nickory/SABCA---Simulated-Annealing-Based-Cipher-Analysis), monoalphabetic annealing.
+- [github.com/doranchak/azdecrypt](https://github.com/doranchak/azdecrypt), Jarl Van Eycke’s hill climber (homophonic, transposition, many hybrids). This is the tool that made the 2020 Z340 search practical.
+- [github.com/matthewdgreen/decipher](https://github.com/matthewdgreen/decipher), annealing stack aimed at historical manuscripts, including a Copiale benchmark route.
+- [github.com/CrypToolProject/CrypTool-2](https://github.com/CrypToolProject/CrypTool-2) and [CrypToolProject/CTTS](https://github.com/CrypToolProject/CTTS), the academic historical-cipher workbench (Lasry and the CrypTool group). CTTS was used on the Mary Stuart letters.
 
 ### Human-plus-solver historical breaks (computation required, neural nets optional)
 

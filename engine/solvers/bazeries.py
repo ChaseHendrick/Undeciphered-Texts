@@ -119,7 +119,7 @@ def _under_one_thousand(number: int) -> str:
 
 
 def _fold(text: str) -> str:
-    """A–Z stream with J folded into I. Empty input is an error."""
+    """A-Z stream with J folded into I. Empty input is an error."""
     folded = letters_only(text).replace("J", "I")
     if not folded:
         raise ValueError("text has no letters")

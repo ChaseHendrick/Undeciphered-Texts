@@ -1,4 +1,4 @@
-"""Playfair (Wheatstone–Playfair) known-key digraph solver.
+"""Playfair (Wheatstone-Playfair) known-key digraph solver.
 
 Uses one 5×5 square that omits J (I and J share a cell). Encipherment follows
 the four rules in the Wikipedia worked example for keyword ``playfair example``

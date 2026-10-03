@@ -14,7 +14,7 @@ language identification, and not evidence that an unknown text has been
 solved. Shuffling destroys order; beating a shuffle only shows that the
 original string had compressible order.
 
-Dieses Werkzeug entziffert keine antiken Schriften — nur ein Kompressionsmaß.
+Dieses Werkzeug entziffert keine antiken Schriften, nur ein Kompressionsmaß.
 """
 
 from __future__ import annotations
@@ -30,7 +30,7 @@ DOES_NOT_DECIPHER = (
     "Rongorongo, Indus, Phaistos, or any other undeciphered writing."
 )
 
-HONESTY_DE = "Dieses Werkzeug entziffert keine antiken Schriften — nur ein Kompressionsmaß."
+HONESTY_DE = "Dieses Werkzeug entziffert keine antiken Schriften, nur ein Kompressionsmaß."
 
 
 def _utf8(text: str) -> bytes:

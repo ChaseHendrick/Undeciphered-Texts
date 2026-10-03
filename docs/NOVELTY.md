@@ -6,10 +6,10 @@ Every substantive claim in this repository should carry one of these labels (in 
 | --- | --- | --- |
 | **Sourced fact** | Checkable against a cited URL (museum, archive, peer-reviewed, or project page) | `docs/landscape.md`, `closest.md`, `recent-cracks.md`, `sources.md` |
 | **Specialist consensus** | Widely taught status (e.g. Linear B deciphered; Linear A not) with citations | Landscape / closest |
-| **Live hypothesis** | A published proposal that is not established (Dravidian Indus, Tyrsenian, etc.) | Landscape / closest — must say *hypothesis* |
-| **Contested** | Serious specialists disagree in print | Landscape / closest — summarize both sides + URLs |
+| **Live hypothesis** | A published proposal that is not established (Dravidian Indus, Tyrsenian, etc.) | Landscape / closest, must say *hypothesis* |
+| **Contested** | Serious specialists disagree in print | Landscape / closest, summarize both sides + URLs |
 | **Engine result** | Known-plaintext recovery from `engine/` with a passing test | `DEMO.md`, test output, README does/does-not |
-| **Untested idea** | Speculative note without a cite | **Only** `docs/logs/YYYY-MM-DD.md` — not rankings |
+| **Untested idea** | Speculative note without a cite | **Only** `docs/logs/YYYY-MM-DD.md`, not rankings |
 | **Not a decipherment** | Ink recovery, OCR of known Latin, CT unwrapping, etc. | `vesuvius-scrolls.md`, `image-reading.md`, `ai-already-helped.md` |
 
 ## Hard bans

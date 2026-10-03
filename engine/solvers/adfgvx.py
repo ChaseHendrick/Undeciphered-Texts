@@ -1,7 +1,7 @@
 """ADFGVX known-key fractionating transposition solver.
 
 Decrypts the World War I ADFGVX field cipher when both keys are supplied:
-a 6×6 substitution square (A–Z and digits 0–9, labeled by A D F G V X) and
+a 6×6 substitution square (A-Z and digits 0-9, labeled by A D F G V X) and
 a columnar transposition keyword.
 
 The worked example is the Wikipedia **ADFGVX** section (not the earlier
@@ -46,8 +46,8 @@ def _letters(keyword: str) -> str:
 def square_from_fractionation_keyword(keyword: str) -> str:
     """Build the 36-cell square the Wikipedia ADFGVX example describes.
 
-    Unique keyword letters, then the unused letters of A–Z. Digits are then
-    inserted after the first A–J: A→1, B→2, … I→9, J→0. That is the filling
+    Unique keyword letters, then the unused letters of A-Z. Digits are then
+    inserted after the first A-J: A→1, B→2, … I→9, J→0. That is the filling
     rule stated for ``nachtbommenwerper``, not a second historical cipher.
     """
     cleaned = _letters(keyword)
@@ -79,7 +79,7 @@ def _require_square(square: str) -> str:
     if len(cells) != 36 or len(set(cells)) != 36:
         raise ValueError("ADFGVX square must be 36 distinct letters and digits")
     if any(ch not in _SQUARE_ALPHABET for ch in cells):
-        raise ValueError("ADFGVX square must use A–Z and 0–9 only")
+        raise ValueError("ADFGVX square must use A-Z and 0-9 only")
     return cells
 
 

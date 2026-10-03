@@ -30,11 +30,11 @@ Secondary syntheses (Wikipedia and museum pages) are cited only where they usefu
 
 ## 1. Aegean and Cyprus
 
-### 1.1 Cretan Hieroglyphic — undeciphered script, unknown language
+### 1.1 Cretan Hieroglyphic, undeciphered script, unknown language
 
 **What.** The earliest writing on Crete. Arthur Evans grouped it apart from the later “linear” scripts. Signs are pictorial and appear mostly on seals and sealings, plus a smaller set of clay administrative documents (notably at Malia, Quartier Mu, and Petras). It is not Egyptian hieroglyphic and is not a parent that has been read through Egyptian.
 
-**Date.** Protopalatial, roughly MM I–MM III (about 2000/1900–1700/1600 BCE). The open-access Cambridge volume treats it as predating Linear A and Linear B and still undeciphered.
+**Date.** Protopalatial, roughly MM I-MM III (about 2000/1900-1700/1600 BCE). The open-access Cambridge volume treats it as predating Linear A and Linear B and still undeciphered.
 
 **Corpus.** The standard edition is Jean-Pierre Olivier and Louis Godart, *Corpus Hieroglyphicarum Inscriptionum Cretae* (CHIC, 1996), with Jean-Claude Poursat. CHIC’s sign inventory is 144 signs, conventionally broken into syllabograms, logograms, fractions, numerals, and punctuation. A 2021 reassessment (Ferrara, Montecchi, Valério) starts from that list and argues for removals and reclassifications (including treating some signs as Linear A, and dropping a sign whose only attestation is a lost object). Most inscriptions are very short.
 
@@ -51,15 +51,15 @@ Secondary syntheses (Wikipedia and museum pages) are cited only where they usefu
 - Ferrara, Montecchi, Valério, “Rationalizing the Cretan Hieroglyphic sign list,” *Kadmos* 2021 (PDF): https://cris.unibo.it/retrieve/handle/11585/881988/e1dcb33a-1c02-7715-e053-1705fe0a6cc9/Ferrara-Montecchi-Val%c3%a9rio_Kadmos_2021.pdf
 - Civitillo, Ferrara, Meissner (eds.), *Cretan Hieroglyphic* (Cambridge; introduction, open access): https://cris.unibo.it/retrieve/e402b108-7d20-4ae3-b3e5-79c872eb53e4/Cretan%20Hieroglyphic_CUP.pdf
 
-### 1.2 Linear A — undeciphered script, unknown language; some ideograms constrained
+### 1.2 Linear A, undeciphered script, unknown language; some ideograms constrained
 
 **What.** Logo-syllabic administrative and votive script of Minoan Crete, also found on Aegean islands and at a few overseas sites. Clay tablets, roundels, sealings, stone libation tables, metal, and pottery. Evans named it “linear” to separate it from Cretan Hieroglyphic. Linear B is its daughter script and writes Greek; that does **not** make Linear A Greek.
 
-**Date.** Accepted chronology about 1800–1450 BCE (Corazza, summarizing the standard view).
+**Date.** Accepted chronology about 1800-1450 BCE (Corazza, summarizing the standard view).
 
-**Corpus.** Standard print edition: Godart and Olivier, *Recueil des inscriptions en linéaire A* (GORILA, 1976–1985). Counts that get cited:
+**Corpus.** Standard print edition: Godart and Olivier, *Recueil des inscriptions en linéaire A* (GORILA, 1976-1985). Counts that get cited:
 
-- Petrolito et al. 2015, citing John Younger: **1,427 documents** and **7,362–7,396 signs**, against Linear B “more than 4,600 documents” and **57,398 signs**. https://aclanthology.org/W15-3715.pdf
+- Petrolito et al. 2015, citing John Younger: **1,427 documents** and **7,362-7,396 signs**, against Linear B “more than 4,600 documents” and **57,398 signs**. https://aclanthology.org/W15-3715.pdf
 - A 2024 computational survey: “about 7150 signs inscribed on 1427 artefacts.” https://www.mdpi.com/2078-2489/15/2/73
 - Corazza: about **1,500 documents** and **over 7,000 signs**, with **over 100 syllabograms**. https://cris.unibo.it/retrieve/90a2e16b-e280-42ac-92f1-a9961ef98ca6/d-2-402-corazza-computational-methods.pdf
 - Mavridaki et al. 2025: a database of up to **1,486** inscribed objects, of which they judge only a small subset long enough to be useful for language comparison. https://www.iaras.org/iaras/filedownloads/ijc/2025/006-0024(2025).pdf
@@ -79,11 +79,11 @@ The open paleographic database SigLA (https://sigla.phis.me/) is a research tool
 
 **Data.** SigLA https://sigla.phis.me/ and https://sigla.phis.me/browse.html . Younger’s phonetic transcriptions were taken off the Kansas server in 2024; copies exist on the Internet Archive (https://web.archive.org/web/20210415092941/http://www.people.ku.edu/~jyounger/LinearA/) and on his Academia.edu page (https://kansas.academia.edu/JYounger). Those transcriptions **assume** B-values. GORILA itself is a print edition.
 
-### 1.3 Linear B — solved contrast
+### 1.3 Linear B, solved contrast
 
 **What.** Logo-syllabic script used on Crete and the Mycenaean mainland (Knossos, Pylos, Mycenae, Thebes, Tiryns, Chania, and others) for palace accounts.
 
-**Date.** Roughly 15th–13th centuries BCE.
+**Date.** Roughly 15th-13th centuries BCE.
 
 **Decipherment.** Michael Ventris, building on Emmett Bennett’s sign classification and Alice Kober’s work on inflection (the “triplets” and the grid), circulated Work Note 20, “Are the Knossos and Pylos tablets written in Greek?”, on 1 June 1952. He had expected Etruscan or a relative, not Greek. A BBC announcement followed on 1 July 1952. John Chadwick then helped test and publish it.
 
@@ -93,29 +93,29 @@ The open paleographic database SigLA (https://sigla.phis.me/) is a research tool
 
 **What Linear B does not give Linear A.** A daughter script can suggest values for shared signs. It cannot identify the Minoan language, and it cannot turn a four-sign tablet into syntax.
 
-### 1.4 Phaistos Disc — one authentic-looking object, unique sign set, undeciphered
+### 1.4 Phaistos Disc, one authentic-looking object, unique sign set, undeciphered
 
 **What.** A fired clay disc, about 16 cm across, found in 1908 by Luigi Pernier at Phaistos. Both sides carry a spiral of signs **stamped** with punches, not drawn freehand. Total **242 impressions of 45 distinct signs**.
 
-**Date.** Archaeological context has been argued for a century. Yves Duhoux used Pernier’s report to put it in MM III (about 1850–1600 BCE). Godart was much wider (anywhere Middle–Late Minoan). Militello’s work on the pottery context points to early MM IIIA. A current archaeological statement (Ancient Near East Today, summarizing that work) prefers the start of the Neopalatial period, around 1750 BCE, without excluding MM IIB. It has never had a published thermoluminescence date. Forgery arguments have not gone away, but the mainstream archaeological view is that it is Minoan: motifs match objects found **after** 1908 (a 1955 sealing, a 1965 bowl, impressed fine ware), which a 1908 forger could not have copied. https://anetoday.org/phaistos-disk/ and https://en.wikipedia.org/wiki/Phaistos_Disc (the wiki page is useful for the sign count and the history of the forgery debate; the ANE Today piece is the better context summary).
+**Date.** Archaeological context has been argued for a century. Yves Duhoux used Pernier’s report to put it in MM III (about 1850-1600 BCE). Godart was much wider (anywhere Middle-Late Minoan). Militello’s work on the pottery context points to early MM IIIA. A current archaeological statement (Ancient Near East Today, summarizing that work) prefers the start of the Neopalatial period, around 1750 BCE, without excluding MM IIB. It has never had a published thermoluminescence date. Forgery arguments have not gone away, but the mainstream archaeological view is that it is Minoan: motifs match objects found **after** 1908 (a 1955 sealing, a 1965 bowl, impressed fine ware), which a 1908 forger could not have copied. https://anetoday.org/phaistos-disk/ and https://en.wikipedia.org/wiki/Phaistos_Disc (the wiki page is useful for the sign count and the history of the forgery debate; the ANE Today piece is the better context summary).
 
 **Relation to other writing.** Some signs resemble signs on the Arkalochori axe. Ferrara, Montecchi, and Streccioni (2024) treat both objects as real inscriptions but say it is still disputed whether they are the same script, and they argue the disc’s repertoire is not a simple Linear A offspring. https://cris.unibo.it/handle/11585/975345
 
 **How close.** Not close, and not closeable from this object alone. One text, however long internally (242 tokens), cannot uniquely determine 45 unknown signs. Every “full translation” of the disc fails the prediction test because there is no second text to predict.
 
-### 1.5 Cypro-Minoan — undeciphered; daughter script is solved
+### 1.5 Cypro-Minoan, undeciphered; daughter script is solved
 
-**What.** Bronze Age Cypriot logo-syllabic tradition, usually divided CM 0 / CM 1 / CM 2 / CM 3 following Émilia Masson and Jean-Pierre Olivier. Supports include clay tablets, cylinders, boules (small balls), metal, stone, and pottery. CM 2 is a small set of long, paleographically coherent tablets (on the order of 1,300–1,500 signs in the Unicode working-group summary). CM 3 is the material from Ugarit (Ras Shamra).
+**What.** Bronze Age Cypriot logo-syllabic tradition, usually divided CM 0 / CM 1 / CM 2 / CM 3 following Émilia Masson and Jean-Pierre Olivier. Supports include clay tablets, cylinders, boules (small balls), metal, stone, and pottery. CM 2 is a small set of long, paleographically coherent tablets (on the order of 1,300-1,500 signs in the Unicode working-group summary). CM 3 is the material from Ugarit (Ras Shamra).
 
-**Date.** About the 16th–11th centuries BCE, more than 500 years (Ferrara, as reviewed in *AJA*).
+**Date.** About the 16th-11th centuries BCE, more than 500 years (Ferrara, as reviewed in *AJA*).
 
 **Corpus.**
 
 - Olivier, *Édition holistique des textes chypro-minoens* (HoChyMin, 2007): **217** inscriptions. https://www.unicode.org/wg2/docs/n5135-cyprominoan.pdf
 - Ferrara’s analysis volume works with **243** (BMCR review) or 217 plus further texts (*AJA* review: 217 documents and an additional 26). Reviews: https://bmcr.brynmawr.edu/2013/2013.02.04/ and https://ajaonline.org/book-review/2169/
-- Later counts used by paleographers: about **251–258** objects, most of them very short. One ductus study: only **21** inscriptions longer than 10 signs; the rest average about four. https://www.academia.edu/130061000/Polig_Donnelly_Between_Frustration_and_Progress_An_Integrated_Cypro_Minoan_Signary_and_Its_Paleographic_Diversity
+- Later counts used by paleographers: about **251-258** objects, most of them very short. One ductus study: only **21** inscriptions longer than 10 signs; the rest average about four. https://www.academia.edu/130061000/Polig_Donnelly_Between_Frustration_and_Progress_An_Integrated_Cypro_Minoan_Signary_and_Its_Paleographic_Diversity
 
-**Signary.** Not agreed. Olivier’s list (96 signs in the usual citation of his figures) is the practical reference and the basis of the Unicode repertoire, which was encoded as a **catalogue**, not as a decipherment. The proposal says so explicitly. Masson had used a different classification. Polig and Donnelly (work circulating 2022–2025) still describe the signary as unsettled: disagreements are about how many shapes are independent signs and whether CM 1/2/3 are separate scripts.
+**Signary.** Not agreed. Olivier’s list (96 signs in the usual citation of his figures) is the practical reference and the basis of the Unicode repertoire, which was encoded as a **catalogue**, not as a decipherment. The proposal says so explicitly. Masson had used a different classification. Polig and Donnelly (work circulating 2022-2025) still describe the signary as unsettled: disagreements are about how many shapes are independent signs and whether CM 1/2/3 are separate scripts.
 
 **Hypotheses about sound.** Miguel Valério has compared signs with Linear A and with the later Cypriot syllabary and proposed values for dozens of forms, with only a small subset presented as secure. Those papers are hypotheses (e.g. https://cris.unibo.it/handle/11585/743571). They are not a decipherment.
 
@@ -133,11 +133,11 @@ A bronze axe from the Arkalochori cave with incised signs, some of which resembl
 
 These are not the same writing system and are separated by centuries. Conflating them is the usual popular error.
 
-### 2.1 Proto-Elamite — undeciphered logosyllabary; numbers partly read
+### 2.1 Proto-Elamite, undeciphered logosyllabary; numbers partly read
 
 **What.** The earliest writing on the Iranian plateau, centered on Susa, used for accounts. Tablets look a little like contemporary proto-cuneiform from Mesopotamia and share ideas about numerals, but the non-numerical signs are a different system. It is not cuneiform, and it has not been shown to be a direct parent of Linear Elamite in a way specialists agree on.
 
-**Date.** About 3100–2900 BCE in CDLI’s current framing; some surveys stretch the invention back toward 3300 BCE. Encyclopaedia Iranica’s “Elam iii. Proto-Elamite” is the handbook entry: https://www.iranicaonline.org/articles/elam-iii/
+**Date.** About 3100-2900 BCE in CDLI’s current framing; some surveys stretch the invention back toward 3300 BCE. Encyclopaedia Iranica’s “Elam iii. Proto-Elamite” is the handbook entry: https://www.iranicaonline.org/articles/elam-iii/
 
 **Corpus.** About **1,600** tablets was the long-standing CDLI/Englund figure, with **more than 10,000 lines**. CDLI’s public search has since listed on the order of **1,750** proto-Elamite records (the live count moves as fragments are catalogued): https://cdli.earth/search . Sign-frequency note and Englund’s decipherment essay:
 
@@ -153,15 +153,15 @@ Dahl’s later sign lists (often cited from his 2019 work on the Louvre tablets)
 
 **How close.** Closest of the fully unread **scripts** to a *semantic* partial decipherment, and not close to a phonetic one. Englund’s position, still the sober one, is that the accounting notation is partly understood and the rest is not.
 
-### 2.2 Linear Elamite — a 2022 decipherment claim, not yet consensus
+### 2.2 Linear Elamite, a 2022 decipherment claim, not yet consensus
 
 **What.** A script of southern Iran (Susa, Fars, Kerman) in the later 3rd millennium, known from royal and other inscriptions, visually unrelated to the proto-Elamite tablet hand.
 
-**Date and size.** Desset and colleagues date its use to roughly **2300–1880 BCE**. As of 2021 their corpus was about **40 inscriptions** (an interview figure of about 43 is also cited). Their sign list is on the order of 80–110 graphemes once variants are grouped, drawn from a few hundred glyph tokens. Primary paper: François Desset, Kambiz Tabibzadeh, Matthieu Kervran, Gian Pietro Basello, Gianni Marchesi, “The Decipherment of Linear Elamite Writing,” *Zeitschrift für Assyriologie* 2022. Author PDF: https://orbi.uliege.be/bitstream/2268/334018/1/The%20decipherment%20of%20Linear%20Elamite.pdf . Popular summary by the authors: https://anetoday.org/desset-irans-linear-elamite-deciphered/
+**Date and size.** Desset and colleagues date its use to roughly **2300-1880 BCE**. As of 2021 their corpus was about **40 inscriptions** (an interview figure of about 43 is also cited). Their sign list is on the order of 80-110 graphemes once variants are grouped, drawn from a few hundred glyph tokens. Primary paper: François Desset, Kambiz Tabibzadeh, Matthieu Kervran, Gian Pietro Basello, Gianni Marchesi, “The Decipherment of Linear Elamite Writing,” *Zeitschrift für Assyriologie* 2022. Author PDF: https://orbi.uliege.be/bitstream/2268/334018/1/The%20decipherment%20of%20Linear%20Elamite.pdf . Popular summary by the authors: https://anetoday.org/desset-irans-linear-elamite-deciphered/
 
 **The claim.** A syllabic reading that would write an early Elamite language, helped by a small number of inscriptions that can be compared with Akkadian texts (names and titles).
 
-**The criticism.** Not universally accepted. Jacob Dahl has rejected the proto-Elamite linkage and questioned the purely syllabic model. Reporting in 2023–2025 still calls the result debated or premature (National Geographic; Tom Stevenson, *London Review of Books*, 27 February 2025: https://www.lrb.co.uk/the-paper/v47/n04/tom-stevenson/beyond-mesopotamia). By 2025 the proposing team was publishing a graphic-variation database and still describing translation as incomplete (Hatamti Linear Elamite Database notice: https://orbi.uliege.be/handle/2268/333157).
+**The criticism.** Not universally accepted. Jacob Dahl has rejected the proto-Elamite linkage and questioned the purely syllabic model. Reporting in 2023-2025 still calls the result debated or premature (National Geographic; Tom Stevenson, *London Review of Books*, 27 February 2025: https://www.lrb.co.uk/the-paper/v47/n04/tom-stevenson/beyond-mesopotamia). By 2025 the proposing team was publishing a graphic-variation database and still describing translation as incomplete (Hatamti Linear Elamite Database notice: https://orbi.uliege.be/handle/2268/333157).
 
 **How close.** This is the only script in this dump where a full phonetic decipherment is on the table in a refereed journal **and** still properly described as unconfirmed. Until independent tests on inscriptions that were not used to build the grid are generally accepted, it belongs with “partly / claimed,” not with Linear B.
 
@@ -169,9 +169,9 @@ Dahl’s later sign lists (often cited from his 2019 work on the Louvre tablets)
 
 ## 3. Levant
 
-### 3.1 Byblos syllabary (pseudo-hieroglyphic) — undeciphered, tiny corpus
+### 3.1 Byblos syllabary (pseudo-hieroglyphic), undeciphered, tiny corpus
 
-**What.** A distinctive sign system on stone and metal from Byblos, Lebanon, excavated by Maurice Dunand and published in *Byblia Grammata* (1945), with later additions. Often called a syllabary because the sign count (roughly 90–114, depending on variant-merging) is too big for an alphabet and too small for a pure logography. That is an inference, not a decipherment.
+**What.** A distinctive sign system on stone and metal from Byblos, Lebanon, excavated by Maurice Dunand and published in *Byblia Grammata* (1945), with later additions. Often called a syllabary because the sign count (roughly 90-114, depending on variant-merging) is too big for an alphabet and too small for a pure logography. That is an inference, not a decipherment.
 
 **Corpus.** On the order of **14** securely identified inscriptions. Leiden dissertation (open): https://scholarlypublications.universiteitleiden.nl/access/item%3A3732020/view
 
@@ -185,7 +185,7 @@ Dahl’s later sign lists (often cited from his 2019 work on the Louvre tablets)
 
 **What.** Short sequences of signs on seals, sealings, tablets, and pottery of the Indus (Harappan) civilization, also on a few objects found in Mesopotamia. First published seal: 1875. Direction of most inscriptions is agreed to be right to left. Some stroke signs behave like numerals. Certain signs prefer the end of an inscription.
 
-**Date.** Mature Harappan inscriptions concentrate about **2600–1900 BCE**. The civilization is longer than the inscribed corpus.
+**Date.** Mature Harappan inscriptions concentrate about **2600-1900 BCE**. The civilization is longer than the inscribed corpus.
 
 **Corpus and sign counts (do not collapse these).**
 
@@ -195,7 +195,7 @@ Dahl’s later sign lists (often cited from his 2019 work on the Louvre tablets)
 | Parpola and colleagues, photographic CISI | on the order of 3,000 objects across the volumes | ~394 in one earlier list |
 | Wells / Fuls, Interactive Corpus of Indus Texts | growing; a 2023-era snapshot cited in surveys is several thousand artifacts and a sign list in the high 600s to low 700s | not the same segmentation as Mahadevan |
 
-Average text length is about **4–5 signs**. That number is the whole problem.
+Average text length is about **4-5 signs**. That number is the whole problem.
 
 Survey of the editions: https://www.imsc.res.in/~sitabhra/meetings/bitsscripts24/C_Subramanian_Lecture.pdf  
 Mahadevan-based structural study (open): https://www.nature.com/articles/s41599-019-0274-1  
@@ -211,7 +211,7 @@ ICIT entry point: https://www.epigraphica.de/indus/menueindus.htm
 
 ## 5. Scripts that are read, languages that are not
 
-### 5.1 Etruscan — script solved, language partial
+### 5.1 Etruscan, script solved, language partial
 
 **What.** The language of Etruria, written in an alphabet derived from a western Greek alphabet. Inscriptions run from the late 8th/7th century BCE into the early Roman Empire. The **letters are not in doubt**. Reading a text aloud is usually possible. Understanding it is not.
 
@@ -219,7 +219,7 @@ ICIT entry point: https://www.epigraphica.de/indus/menueindus.htm
 
 **Longest texts.** The Liber Linteus (the Zagreb mummy wrapping) is the longest, on the order of 1,300 word-tokens, generally taken as a ritual calendar. BMCR on a monograph: https://bmcr.brynmawr.edu/2011/2011.01.36/ . Other long pieces include the Tabula Capuana and the Cippus Perusinus. Most inscriptions are ownership formulas (“I am of X”) and funerary phrases.
 
-**Bilinguals.** The Pyrgi tablets (found 1964) are the famous Etruscan–Phoenician set: two gold plaques in Etruscan and one in Phoenician, dedications to Uni / Astarte. They are **not** a Rosetta Stone. The versions correspond in outline and differ in detail, so they anchored some words and did not deliver the grammar. Museum summary: https://www.museoetru.it/masterpieces/lamine-doro-da-pyrgi . Linguistic discussion: http://smea.isma.cnr.it/wp-content/uploads/2015/05/Szemer%C3%A9nyi_Linguistic-comments.pdf
+**Bilinguals.** The Pyrgi tablets (found 1964) are the famous Etruscan-Phoenician set: two gold plaques in Etruscan and one in Phoenician, dedications to Uni / Astarte. They are **not** a Rosetta Stone. The versions correspond in outline and differ in detail, so they anchored some words and did not deliver the grammar. Museum summary: https://www.museoetru.it/masterpieces/lamine-doro-da-pyrgi . Linguistic discussion: http://smea.isma.cnr.it/wp-content/uploads/2015/05/Szemer%C3%A9nyi_Linguistic-comments.pdf
 
 **Classification.** Non-Indo-European. The Tyrsenian hypothesis (Etruscan with Raetic and Lemnian) is the standard working comparison, associated especially with Helmut Rix, and it rests on a small shared morphological and lexical set, not on a family grammar like Romance.
 
@@ -227,7 +227,7 @@ ICIT entry point: https://www.epigraphica.de/indus/menueindus.htm
 
 **How close.** Closest *language* in Europe to further incremental reading, and not waiting on a script breakthrough. There will not be a Ventris moment. There can be better editions and a slower dictionary.
 
-### 5.2 Iberian — northeastern script largely read since 1922; language largely not
+### 5.2 Iberian, northeastern script largely read since 1922; language largely not
 
 **What.** A non-Indo-European language of the eastern and southern Iberian Peninsula in the second half of the 1st millennium BCE, written in Paleohispanic scripts. The **northeastern** (Levantine) script is semi-syllabic: some signs are syllabic (stop+vowel), others alphabetic. Manuel Gómez-Moreno established this in the 1920s (the 1922 formulation is the usual citation), using coin legends that pair Iberian and Latin/Greek names, not by guessing a language family.
 
@@ -236,14 +236,14 @@ ICIT entry point: https://www.epigraphica.de/indus/menueindus.htm
 **The other scripts.**
 
 - **Southeastern** Iberian script: same language is assumed, script less completely read.
-- **Southwestern** (often called Tartessian) script: a different and only **partly** deciphered signary. On the order of 90–100 inscriptions, mostly stelae in southern Portugal and neighboring Spain. By the mid-2010s about 20 signs had values most epigraphers would use and more than 10 were still hypothetical. Overview: https://en.wikipedia.org/wiki/Southwest_Paleohispanic_script and de Hoz’s developmental paper https://dialnet.unirioja.es/descarga/articulo/3339686.pdf . The Espanca signary is a 27-sign abecedary-like slate; it is a teaching or ordering document, not a bilingual.
+- **Southwestern** (often called Tartessian) script: a different and only **partly** deciphered signary. On the order of 90-100 inscriptions, mostly stelae in southern Portugal and neighboring Spain. By the mid-2010s about 20 signs had values most epigraphers would use and more than 10 were still hypothetical. Overview: https://en.wikipedia.org/wiki/Southwest_Paleohispanic_script and de Hoz’s developmental paper https://dialnet.unirioja.es/descarga/articulo/3339686.pdf . The Espanca signary is a 27-sign abecedary-like slate; it is a teaching or ordering document, not a bilingual.
 - Celtiberian is a different language (Celtic) written in a related script and **is** understood as Indo-European. Do not mix it into “Iberian is undeciphered.”
 
 **Language.** Agglutinative morphology is visible once the NE script is read (segments recur at word edges). Genetic affiliation is unknown. A relationship to Basque is a recurring hypothesis and is **not** demonstrated. Longer texts (lead plaques) can be segmented and still not translated.
 
 **How close.** The NE script does not need deciphering. The language needs texts with more repetition in known contexts, or a real bilingual longer than coin names. Computational “Basque = Iberian” demos are not that bilingual.
 
-### 5.3 Meroitic — script solved in 1909–1911; language partial
+### 5.3 Meroitic, script solved in 1909-1911; language partial
 
 **What.** Language of the kingdom of Kush (Meroë), attested in writing from about the 3rd century BCE, with the kingdom’s end around 350 CE and some use after that. Two graphic forms of one system: hieroglyphic (monumental) and cursive (ostraca, graffiti, papyri). Francis Llewellyn Griffith deciphered the **script** by 1911, largely from Egyptian transcriptions of Kushite royal names. Signs can be transliterated. That is not the same as translating the texts.
 
@@ -254,7 +254,7 @@ ICIT entry point: https://www.epigraphica.de/indus/menueindus.htm
 **Classification, still disputed.**
 
 - Claude Rilly argues Meroitic is Northern East Sudanic (Nilo-Saharan), on syntax (SOV, postpositions, genitive before noun) and a growing comparative lexicon. UCLA Encyclopedia of Egyptology, “Meroitic” (2016): https://escholarship.org/uc/item/3128r3sw . Book: Rilly and de Voogt, *The Meroitic Language and Writing System* (Cambridge, 2012).
-- Kirsty Rowan argues the phonotactics look Afroasiatic and unlike typical Nilo-Saharan patterns. Working paper: https://eprints.soas.ac.uk/ (her 2006 SOAS paper “Meroitic – An Afroasiatic Language?” is the usual cite; a copy is referenced from the Wikipedia bibliography).
+- Kirsty Rowan argues the phonotactics look Afroasiatic and unlike typical Nilo-Saharan patterns. Working paper: https://eprints.soas.ac.uk/ (her 2006 SOAS paper “Meroitic, An Afroasiatic Language?” is the usual cite; a copy is referenced from the Wikipedia bibliography).
 - Edward Lipiński has also argued an Afroasiatic connection from vocabulary.
 
 **Secure lexicon is small.** Handbooks agree on items such as *qore* “ruler,” *kdi* “woman,” *mk* “god,” *ato* “water,” and a few kinship and grammatical suffixes. Funerary formulae can be parsed further than literary or administrative prose. A 2025 ACL-style paper on computational Meroitic is an experiment, not a translation: https://aclanthology.org/2025.alp-1.11.pdf
@@ -267,7 +267,7 @@ ICIT entry point: https://www.epigraphica.de/indus/menueindus.htm
 
 ### 6.1 Khitan small script vs Khitan large script
 
-The Khitan (Liao, 907–1125) wrote two scripts. The **small script** is a small-unit phonetic system and is far ahead: Chinese-parallel epitaphs, a reconstructed phonology, and a large fraction of the lexicon read. The **large script** looks more logographic, has a sign inventory in the thousands, and as of Kane’s 2009 synthesis only a small minority of characters had readings. Unicode document N5319 summarizes that imbalance and proposes the large script as a catalogue: https://www.unicode.org/wg2/docs/n5319-KhitanLargeScriptEncoding.pdf . A 2017 survey of small-script phonetic revisions: https://akjournals.com/view/journals/062/70/2/article-p109.xml
+The Khitan (Liao, 907-1125) wrote two scripts. The **small script** is a small-unit phonetic system and is far ahead: Chinese-parallel epitaphs, a reconstructed phonology, and a large fraction of the lexicon read. The **large script** looks more logographic, has a sign inventory in the thousands, and as of Kane’s 2009 synthesis only a small minority of characters had readings. Unicode document N5319 summarizes that imbalance and proposes the large script as a catalogue: https://www.unicode.org/wg2/docs/n5319-KhitanLargeScriptEncoding.pdf . A 2017 survey of small-script phonetic revisions: https://akjournals.com/view/journals/062/70/2/article-p109.xml
 
 **How close.** Large script is a real partial decipherment with bilinguals, which already puts it ahead of every Aegean unread script. It is not “done.” Small script should not be listed as undeciphered.
 
@@ -279,29 +279,29 @@ Tangut (Xixia) is largely deciphered from bilingual glossaries and phonological 
 
 ## 7. The Americas
 
-### 7.1 Isthmian (Epi-Olmec) — claimed decipherment, not consensus
+### 7.1 Isthmian (Epi-Olmec), claimed decipherment, not consensus
 
 **What.** A small logo-syllabic tradition of the Gulf Coast, best known from La Mojarra Stela 1 and the Tuxtla Statuette, plus a handful of other short texts. Long counted dates in the Mesoamerican calendar are the one transparent subsystem (the bar-and-dot numbers and day glyphs overlap Maya practice).
 
-**The claim.** John Justeson and Terrence Kaufman, “A Decipherment of Epi-Olmec Hieroglyphic Writing,” *Science* 259 (1993): 1703–1711. https://www.science.org/doi/10.1126/science.259.5102.1703 . They argue the language is pre-proto-Zoquean. In 1997 a newly recovered column on La Mojarra was reported as matching predictions from the 1993 model (the paper is the right kind of test even if critics dispute the result).
+**The claim.** John Justeson and Terrence Kaufman, “A Decipherment of Epi-Olmec Hieroglyphic Writing,” *Science* 259 (1993): 1703-1711. https://www.science.org/doi/10.1126/science.259.5102.1703 . They argue the language is pre-proto-Zoquean. In 1997 a newly recovered column on La Mojarra was reported as matching predictions from the 1993 model (the paper is the right kind of test even if critics dispute the result).
 
-**The objection.** Stephen Houston and Michael Coe published a text on a Teotihuacan-style mask that they argued the Justeson–Kaufman grid does not read, and more generally that the corpus is too small to pin down a full syllabary. Press account of that dispute: https://www.baltimoresun.com/2004/02/09/a-translation-unmasked/ . Later alternative decipherments exist (including a 2020 proto-Huastecan proposal) and are not consensus either. https://bonndoc.ulb.uni-bonn.de/xmlui/bitstream/handle/20.500.11811/1429/2020_Vonk_Yet_another_decipherment_of_the_Isthmian_Writing2_System.pdf
+**The objection.** Stephen Houston and Michael Coe published a text on a Teotihuacan-style mask that they argued the Justeson-Kaufman grid does not read, and more generally that the corpus is too small to pin down a full syllabary. Press account of that dispute: https://www.baltimoresun.com/2004/02/09/a-translation-unmasked/ . Later alternative decipherments exist (including a 2020 proto-Huastecan proposal) and are not consensus either. https://bonndoc.ulb.uni-bonn.de/xmlui/bitstream/handle/20.500.11811/1429/2020_Vonk_Yet_another_decipherment_of_the_Isthmian_Writing2_System.pdf
 
 **How close.** Methodologically the most interesting American case after Maya, because a linguistic hypothesis was published and then faced a hostile new text. Empirically still unresolved. The corpus is a few monuments. Treat published “translations” of La Mojarra as hypotheses.
 
-### 7.2 Cascajal Block — probable early Olmec notation, one object, unread
+### 7.2 Cascajal Block, probable early Olmec notation, one object, unread
 
-**What.** A serpentine block from the Cascajal area, Veracruz, with **62** incised signs in a structured layout. Reported by Rodríguez Martínez, Ortíz Ceballos, Coe, Diehl, Houston, Taube, and Calderón, *Science* 313 (2006): https://www.science.org/doi/10.1126/science.1131492 . Associated ceramics are San Lorenzo phase; the usual date is about 1000–800 BCE, often cited near 900 BCE. If it is writing, it is the earliest known in the Americas.
+**What.** A serpentine block from the Cascajal area, Veracruz, with **62** incised signs in a structured layout. Reported by Rodríguez Martínez, Ortíz Ceballos, Coe, Diehl, Houston, Taube, and Calderón, *Science* 313 (2006): https://www.science.org/doi/10.1126/science.1131492 . Associated ceramics are San Lorenzo phase; the usual date is about 1000-800 BCE, often cited near 900 BCE. If it is writing, it is the earliest known in the Americas.
 
 **Authenticity.** It was not found in a controlled excavation, which fueled doubt. A later archaeometric and imaging study argued the stone, weathering, and engraving are consistent with an ancient Olmec object: https://www.cambridge.org/core/journals/ancient-mesoamerica/article/digital-imaging-and-archaeometric-analysis-of-the-cascajal-block-establishing-context-and-authenticity-for-the-earliest-known-olmec-text/42B1EB580DAA062892886EA04F115046 . Reading order is still debated (Mora-Marín 2020 and later notes: https://davidmm.web.unc.edu/wp-content/uploads/sites/400/2025/09/Mora-Marin-2020-Cascajal-Block-Print-Edition.pdf).
 
 **How close.** Iconographic identifications of individual signs can be real. A decipherment cannot be. There is no second text.
 
-### 7.3 Zapotec — calendar readable, narratives not
+### 7.3 Zapotec, calendar readable, narratives not
 
 **What.** A logo-syllabic tradition centered on Monte Albán and other Oaxacan sites, from the late Middle Formative into the Classic period. Javier Urcid’s *Zapotec Hieroglyphic Writing* (2001) is the standard monograph; FAMSI hosts related material, including https://www.famsi.org/zapotecwriting/zapotec_text.pdf
 
-**Known.** Many calendar signs and some day-counts. A lunar-count study has put certain early texts in 496–221 BCE: https://www.cambridge.org/core/journals/latin-american-antiquity/article/lunar-day-count-at-monte-alban-and-the-chronology-of-early-and-middle-preclassic-zapotec-hieroglyphic-texts-ca-496221-bce/DB892A3F96BB78AA2356046A35B7B547
+**Known.** Many calendar signs and some day-counts. A lunar-count study has put certain early texts in 496-221 BCE: https://www.cambridge.org/core/journals/latin-american-antiquity/article/lunar-day-count-at-monte-alban-and-the-chronology-of-early-and-middle-preclassic-zapotec-hieroglyphic-texts-ca-496221-bce/DB892A3F96BB78AA2356046A35B7B547
 
 **Unknown.** Most personal names, places, and any narrative syntax. There is no bilingual.
 
@@ -311,11 +311,11 @@ Tangut (Xixia) is largely deciphered from bilingual glossaries and phonological 
 
 ## 8. Pacific
 
-### 8.1 Rongorongo — undeciphered; one calendrical passage identified; may not be full writing
+### 8.1 Rongorongo, undeciphered; one calendrical passage identified; may not be full writing
 
 **What.** Glyphic texts on wooden objects from Rapa Nui (Easter Island), in reverse boustrophedon. Surviving secure corpus: about **26** wooden texts (Barthel’s 24 plus two), of very unequal length, none still on the island. Total simple glyphs and compound components: **over 15,000**. The Santiago staff alone has about 2,320. Objects include tablets, a staff, two reimiro ornaments, a birdman statuette, and a snuffbox made from tablet wood. Several texts are suspected forgeries or late tourist work (steel-cut, non-boustrophedon, poor provenance) and should not be used to build a signary. Summary with the object list: https://en.wikipedia.org/wiki/Rongorongo
 
-**Date.** The **wood** is not the inscription, but it is all that can be dated. Orliac identified some tablets as Pacific rosewood and others as European or South African timber (so those inscriptions are post-contact). Tablet Q’s earlier radiocarbon result only said “after 1680.” In 2024 Ferrara and colleagues published radiocarbon dates on four Rome tablets in *Scientific Reports*: three fall in the 18th–19th centuries; tablet D (Échancrée) calibrates to **1493–1509**, before the first European visit in 1722. That is evidence the practice **can** predate contact, not proof every tablet does, and not a reading. https://www.nature.com/articles/s41598-024-53063-7
+**Date.** The **wood** is not the inscription, but it is all that can be dated. Orliac identified some tablets as Pacific rosewood and others as European or South African timber (so those inscriptions are post-contact). Tablet Q’s earlier radiocarbon result only said “after 1680.” In 2024 Ferrara and colleagues published radiocarbon dates on four Rome tablets in *Scientific Reports*: three fall in the 18th-19th centuries; tablet D (Échancrée) calibrates to **1493-1509**, before the first European visit in 1722. That is evidence the practice **can** predate contact, not proof every tablet does, and not a reading. https://www.nature.com/articles/s41598-024-53063-7
 
 **Signary.** Barthel 1958 assigned about 600 numeric codes, explicitly merging variants, and later claimed a much smaller set of basic glyphs (around 120), never fully published. Pozdniakov and Pozdniakov (2007) similarly argue for a basic inventory on that order, covering almost all of the non-staff texts. Ligatures make the practical inventory larger. Fischer 1997 redrew the corpus and disagrees with Barthel in places; the two transcriptions are not interchangeable.
 
@@ -331,19 +331,19 @@ Tangut (Xixia) is largely deciphered from bilingual glossaries and phonological 
 
 ## 9. Manuscripts that are not ancient scripts of a known civilization
 
-### 9.1 Voynich manuscript (Beinecke MS 408) — unread; language-like statistics; no accepted solution
+### 9.1 Voynich manuscript (Beinecke MS 408), unread; language-like statistics; no accepted solution
 
 **What.** A vellum codex, usually counted as about **116 folios** (around 232 pages, with some leaves missing), in an otherwise unknown script of roughly two dozen common glyphs. Sections are conventionally herbal, astronomical/cosmological, balneological (naked figures in fluids), pharmaceutical, and a recipes section of short paragraphs. The drawing style and the script are internal; there is no external genre label in a known language except later owner marks.
 
-**Date.** Radiocarbon dating of the vellum (University of Arizona, 2009) gives **1404–1438** at 95% probability. That dates the parchment, not the moment of writing, but it kills “modern forgery of the whole book” theories that need 16th-century or later blank vellum. Overview: https://voynich.nu/origin.html . Yale’s images and catalogue are the primary open facsimile (Beinecke MS 408).
+**Date.** Radiocarbon dating of the vellum (University of Arizona, 2009) gives **1404-1438** at 95% probability. That dates the parchment, not the moment of writing, but it kills “modern forgery of the whole book” theories that need 16th-century or later blank vellum. Overview: https://voynich.nu/origin.html . Yale’s images and catalogue are the primary open facsimile (Beinecke MS 408).
 
-**Size of the text.** On the order of **35,000–38,000 word tokens** and about **8,000–9,000** word types in standard EVA transcriptions. Zandbergen’s word statistics: https://www.voynich.nu/a4_word.html . Transcriptions (IVTFF): https://voynich.nu/extra/sp_transcr.html including the Zandbergen–Landini file https://voynich.nu/data/ZL3a-n.txt
+**Size of the text.** On the order of **35,000-38,000 word tokens** and about **8,000-9,000** word types in standard EVA transcriptions. Zandbergen’s word statistics: https://www.voynich.nu/a4_word.html . Transcriptions (IVTFF): https://voynich.nu/extra/sp_transcr.html including the Zandbergen-Landini file https://voynich.nu/data/ZL3a-n.txt
 
 **What the statistics support.** Claire Bowern and Luke Lindemann, “The Linguistics of the Voynich Manuscript” (*TACL* 2021; PDF: https://alumniacademy.yale.edu/sites/default/files/2021-07/The%20Linguistics%20of%20the%20Voynich%20Manuscript.pdf), argue the text is patterned like natural language at word and page level, with two dialects (Currier A and B) and non-random topic structure. A Cryptologia paper (2024/2025) similarly argues for a single natural language: https://www.tandfonline.com/doi/full/10.1080/01611194.2024.2414128 . The opposite result also exists: human-produced meaningless text can match many of the same regularities (https://ceur-ws.org/Vol-3313/paper4.pdf). Gordon Rugg’s Cardan-grille hoax demonstration showed one way to *generate* Voynich-like strings; it did not show that this manuscript was made that way.
 
 **How close.** Not close. This is the best-digitized unsolved **text** in the world and a graveyard of announced solutions (Hebrew, Latin, Nahuatl, proto-Romance, and so on). A real solution would have to map the whole manuscript, both Currier hands, the label words next to drawings, and the odd word grammar (very low entropy, repetitive morphology), and then say something independently checkable about a plant or a star. None has.
 
-### 9.2 Rohonc Codex — probably a cipher or constructed script; no accepted reading
+### 9.2 Rohonc Codex, probably a cipher or constructed script; no accepted reading
 
 **What.** A paper codex, long in the Hungarian Academy of Sciences, written in an unknown signary and illustrated with Christian-looking scenes. It surfaced in the 19th century among the Rohonc/Rechnitz Batthyány books. Script and language are both unknown. Benedek Láng, “Why Don’t We Decipher an Outdated Cipher System? The Codex of Rohonc,” *Cryptologia* 34 (2010), argues it is a real encoded text rather than empty decoration, and does not claim to have read it: https://www.tandfonline.com/doi/full/10.1080/01611191003605587
 
@@ -355,13 +355,13 @@ Tangut (Xixia) is largely deciphered from bilingual glossaries and phonological 
 
 ## 10. Southeast Asia
 
-### 10.1 Singapore Stone — known script family suspected; almost all the text is destroyed
+### 10.1 Singapore Stone, known script family suspected; almost all the text is destroyed
 
 **What.** A sandstone monolith at the mouth of the Singapore River, noted in 1819, blown up in 1843 during British works. One fragment is in the National Museum of Singapore. Other recovered pieces are lost. The original face is said to have carried on the order of **50 lines**. The surviving fragment preserves a much smaller block of them. Museum record: https://www.roots.gov.sg/Collection-Landing/listing/1148198 . History: https://www.mdpi.com/2409-9252/3/3/19
 
 **Script.** Compared with Kawi, especially later Kawi, and sometimes with the Calcutta Stone. Language guesses include Sanskrit or an Old Malay / Old Javanese written form. None is secure, because the surviving string is short and worn. Comparative paper: https://www.mdpi.com/2409-9252/3/3/18 . Date guesses run from the 10th to the 14th century.
 
-**How close.** Ironically high *if the rest of the stone existed*, because Kawi and Sanskrit/Old Malay are known. With one fragment, image enhancement can recover strokes and cannot recover a text. A 2024–2026 “prediction” reconstruction of missing lines is a model, not a decipherment. Do not quote it as what the stone says.
+**How close.** Ironically high *if the rest of the stone existed*, because Kawi and Sanskrit/Old Malay are known. With one fragment, image enhancement can recover strokes and cannot recover a text. A 2024-2026 “prediction” reconstruction of missing lines is a model, not a decipherment. Do not quote it as what the stone says.
 
 ---
 
@@ -371,13 +371,13 @@ Decipherment assumes a writing system. These objects are in the dump because the
 
 ### 11.1 Vinča signs and the Tărtăria tablets
 
-The Vinča (Old European) communities of the Balkans, 6th–5th millennia BCE, used a recurring set of incised and painted signs on pottery and figurines. Shan Winn’s corpus work showed the repertoire is structured across many sites. That is compatible with ownership marks, ritual signs, or proto-writing. It is not a demonstration of sentences. The three Tărtăria tablets (Romania) are the usual “earliest writing” exhibit. Their excavation context is disputed, they cannot be directly radiocarbon dated because they were baked after discovery, and the signs do not form a repeated textual corpus. Survey of the over-claim: https://journals.uni-lj.si/DocumentaPraehistorica/article/download/32.19/1882/3526 . Background: https://en.wikipedia.org/wiki/Vin%C4%8Da_symbols and https://en.wikipedia.org/wiki/T%C4%83rt%C4%83ria_tablets
+The Vinča (Old European) communities of the Balkans, 6th-5th millennia BCE, used a recurring set of incised and painted signs on pottery and figurines. Shan Winn’s corpus work showed the repertoire is structured across many sites. That is compatible with ownership marks, ritual signs, or proto-writing. It is not a demonstration of sentences. The three Tărtăria tablets (Romania) are the usual “earliest writing” exhibit. Their excavation context is disputed, they cannot be directly radiocarbon dated because they were baked after discovery, and the signs do not form a repeated textual corpus. Survey of the over-claim: https://journals.uni-lj.si/DocumentaPraehistorica/article/download/32.19/1882/3526 . Background: https://en.wikipedia.org/wiki/Vin%C4%8Da_symbols and https://en.wikipedia.org/wiki/T%C4%83rt%C4%83ria_tablets
 
 **How close.** Wrong question. A sign catalogue is useful. A translation is not available and probably not possible.
 
 ### 11.2 Dispilio tablet
 
-A wooden object from the Neolithic lakeside settlement at Dispilio, Kastoria, northern Greece, with incised lines. Facorellis, Sofronidou, and Hourmouziadis, *Radiocarbon* 56 (2014), date the settlement sequence and discuss a sample whose radiocarbon age is given as 5202 ± 123 BP, calibrated to about 5324–5079 cal BCE. The paper’s wording is conditional: **if** the marks were a primary writing system, the history of writing would need revision. That condition has not been met. There is one object, no repeated texts, and no accepted sign list. https://www.cambridge.org/core/journals/radiocarbon/article/abs/radiocarbon-dating-of-the-neolithic-lakeside-settlement-of-dispilio-kastoria-northern-greece/759AA29502776E142883F1971293BEB1
+A wooden object from the Neolithic lakeside settlement at Dispilio, Kastoria, northern Greece, with incised lines. Facorellis, Sofronidou, and Hourmouziadis, *Radiocarbon* 56 (2014), date the settlement sequence and discuss a sample whose radiocarbon age is given as 5202 ± 123 BP, calibrated to about 5324-5079 cal BCE. The paper’s wording is conditional: **if** the marks were a primary writing system, the history of writing would need revision. That condition has not been met. There is one object, no repeated texts, and no accepted sign list. https://www.cambridge.org/core/journals/radiocarbon/article/abs/radiocarbon-dating-of-the-neolithic-lakeside-settlement-of-dispilio-kastoria-northern-greece/759AA29502776E142883F1971293BEB1
 
 ### 11.3 A note on Chinese Neolithic signs
 
@@ -398,7 +398,7 @@ Jiahu and Banpo marks are sometimes put in the same popular list. They are not a
 | Paleohispanic “unreadable” coin marks and single signs | Often not texts | Noise in Hesperia if you don’t filter by length |
 | Anatolian (Luwian) hieroglyphs | **Largely deciphered** in the 20th century | Solved contrast: bilinguals with cuneiform, then a syllabary |
 | Carian, Lydian, Lycian | **Scripts deciphered** (Carian late, from Egyptian bilinguals) | Solved contrasts for “alphabet you cannot read yet” |
-| Ugaritic cuneiform alphabet | **Deciphered** in 1930–31 | Solved contrast: 30 letters, Semitic language guess, rapid confirmation |
+| Ugaritic cuneiform alphabet | **Deciphered** in 1930-31 | Solved contrast: 30 letters, Semitic language guess, rapid confirmation |
 | Maya | **Largely deciphered** | Solved logosyllabic contrast |
 | Proto-Sinaitic / Wadi el-Hol | Very early alphabetic attempts, partly interpretable as Semitic | Not a large unread corpus; the disagreement is historical linguistics of the alphabet, not a lost library |
 

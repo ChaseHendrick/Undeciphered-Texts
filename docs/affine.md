@@ -6,7 +6,7 @@ This is a **known classical-cipher** solver. It is **not** an unknown-script rea
 
 ## Published worked example (fetched)
 
-Source: [Wikipedia — Affine cipher](https://en.wikipedia.org/wiki/Affine_cipher) (fetched 2026-10-02).
+Source: [Wikipedia, Affine cipher](https://en.wikipedia.org/wiki/Affine_cipher) (fetched 2026-10-02).
 
 | Field | Value |
 | --- | --- |
