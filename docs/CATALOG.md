@@ -150,3 +150,52 @@ CLI registration: only `caesar`, `vigenere`, and `substitution` sit in `engine.s
 | **What it does not do** | Does not decipher ancient scripts; not language ID; not a translation. See [`docs/compression-language-score.md`](compression-language-score.md). |
 
 ---
+
+## Unknown-script / sign-stream analysis (not decipherment)
+
+### Script tools (inventory, repeats, bilingual crib check)
+
+| | |
+| --- | --- |
+| **Path** | [`engine/script_tools.py`](../engine/script_tools.py) |
+| **What it does** | Tokenize sign corpora; frequency inventory; find repeated n-grams; apply a supplied sign→gloss map and check a bilingual crib against a synthetic lexicon (`engine/data/synthetic_sign_corpus.txt`, `engine/data/synthetic_bilingual.json`). |
+| **What the test proved** | `tests/test_script_tools.py`: fixture inventory/frequencies; tokenizer skips comments/commas; finds repeated bigrams; correct map matches synthetic lexicon and wrong map is rejected; unmapped signs skipped; fixture files are UTF-8. |
+| **What it does not do** | Does not decipher Linear A, Voynich, Rongorongo, Indus, or any other undeciphered script. Measurements are only vs inputs you supply. |
+
+### EM sign-to-letter aligner
+
+| | |
+| --- | --- |
+| **Path** | [`engine/solvers/em_sign_aligner.py`](../engine/solvers/em_sign_aligner.py) |
+| **What it does** | Knight-style EM: fixed English bigram source; learn P(sign|letter) by Baum–Welch; map signs (labels like `U+E00A`) to letters. Requires numpy. |
+| **What the test proved** | `tests/test_em_sign_aligner.py`: scope string names scripts it does not read; recovers most of a random synthetic sign map held back from the aligner (may skip without numpy). |
+| **What it does not do** | Does not read Linear A, Indus, or Voynich; not in `SOLVERS`; synthetic-map accuracy is not a historical decipherment. See [`docs/em-sign-aligner.md`](em-sign-aligner.md). |
+
+### Sign clustering
+
+| | |
+| --- | --- |
+| **Path** | [`engine/sign_cluster.py`](../engine/sign_cluster.py) |
+| **What it does** | Co-occurrence vectors; k-means and average-linkage hierarchical clustering of symbols by neighbor context. Numpy required. |
+| **What the test proved** | `tests/test_sign_cluster.py`: disclaimer present; k-means and hierarchical partitions beat chance on a synthetic vowel/consonant alternating corpus; same seed is repeatable; class labels unused by the clusterer. |
+| **What it does not do** | A cluster is not a sound, word, or reading of Linear A / Indus / Rongorongo / Phaistos / Voynich. See [`docs/sign-clustering.md`](sign-clustering.md). |
+
+### First-order HMM (Baum–Welch)
+
+| | |
+| --- | --- |
+| **Path** | [`engine/hmm_baum_welch.py`](../engine/hmm_baum_welch.py) |
+| **What it does** | Fit a small discrete first-order HMM by Baum–Welch; Viterbi path; synthetic two-state corpus generator; accuracy after best label flip. |
+| **What the test proved** | `tests/test_hmm_baum_welch.py`: recovered states beat constant-majority chance on a synthetic two-state draw; module documents non-decipherment; rejects short/unknown symbol inputs. |
+| **What it does not do** | Does not decipher ancient scripts; state path ≠ translation or phonetic values. See [`docs/hmm-baum-welch.md`](hmm-baum-welch.md). |
+
+### Pairwise mutual information
+
+| | |
+| --- | --- |
+| **Path** | [`engine/pairwise_mutual_information.py`](../engine/pairwise_mutual_information.py) |
+| **What it does** | Ranks ordered adjacent sign pairs by PMI (and contribution to MI); grouped spans avoid cross-boundary pairs. |
+| **What the test proved** | `tests/test_pairwise_mutual_information.py`: planted pair ranks first and stays stable across seeds; short stream empty; independent pair PMI ~ 0; grouped spans do not cross boundaries; module states it does not decipher. |
+| **What it does not do** | Does not decipher ancient scripts; top pair is a count, not a word or sound. See [`docs/pairwise-mutual-information.md`](pairwise-mutual-information.md). |
+
+---
