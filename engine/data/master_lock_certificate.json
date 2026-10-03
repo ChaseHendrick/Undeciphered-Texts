@@ -1,0 +1,9 @@
+{
+  "method": "master_lock_1500",
+  "known_combination": "7-9-19",
+  "third_number": 19,
+  "candidate_count": 100,
+  "source_url": "https://jonwestfall.com/wp-content/uploads/2007/08/mlock1.pdf",
+  "combination_sha256": "8c4c5edd9993ad880fa51ba55ffce586255ef15ee963cf1c21bfd22a7d046ca8",
+  "note": "Published math reduction for the Master Lock 1500-style dial family, checked on one known combination (7-9-19, third number 19) from Jon Westfall's 2007 guide. Candidate count is the published set of 100, not the full 64,000 dial triples. Not instructions for a specific physical lock and not a claim about Nr. 86."
+}
