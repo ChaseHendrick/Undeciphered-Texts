@@ -1,0 +1,15 @@
+{
+  "method": "sim_safe_lock",
+  "combination": "19-73-41",
+  "numbers": [
+    19,
+    73,
+    41
+  ],
+  "dial_min": 0,
+  "dial_max": 99,
+  "wheels": 3,
+  "space_size": 1000000,
+  "combination_sha256": "3f9db2266b1c34b4473d8da4f0ed3bf9e8e8b69dfdf2b979a095cedbc7de0791",
+  "note": "One combination planted in an in-process three-number dial (0 through 99). The simulator returns only whether a try matches. The search recovers that combination from the boolean answers. This cracks only the simulated lock inside the test, not a real safe. Not a procedure for a physical lock and not a claim about Nr. 86."
+}
