@@ -68,3 +68,8 @@
 - https://archive.org/stream/KryptosSculptureFOIACIADocumentation/Kryptos%20Sculpture%20FOIA%20CIA%20Documentation%20_djvu.txt
 - https://en.wikipedia.org/wiki/Kryptos
 - See [kryptos-k1.md](kryptos-k1.md)
+
+## FBI one-letter shift (known-answer check; not an unsolved text)
+- https://web.archive.org/web/20110405112022/http://www.fbi.gov/news/stories/2011/march/cryptanalysis_032911
+- http://www.fbi.gov/news/stories/2011/march/cryptanalysis_032911
+- See [fbi-letter-shift.md](fbi-letter-shift.md)

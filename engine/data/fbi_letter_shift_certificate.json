@@ -1,0 +1,13 @@
+{
+  "cipher_name": "fbi-letter-shift",
+  "name": "fbi-letter-shift",
+  "plaintext": "Meet me at the park at noon",
+  "ciphertext": "Nffu nf bu uif qbsl bu oppo",
+  "key": "1",
+  "keys": {
+    "shift_right": 1
+  },
+  "source_url": "https://web.archive.org/web/20110405112022/http://www.fbi.gov/news/stories/2011/march/cryptanalysis_032911",
+  "plaintext_sha256": "a0eda78ea68c184a509379e3b9aba7bdfa96bf9044e51cfdc24503a3e273395d",
+  "note": "Verification certificate for a published worked example of the FBI one-letter right shift (Help Solve an Open Murder Case, Part 2, Internet Archive capture of the 2011-04-05 FBI page: ciphertext Nffu nf bu uif qbsl bu oppo, every character shifted one letter to the right, plaintext Meet me at the park at noon). Known-answer check only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86. Not a reading of the unsolved notes in the same FBI article."
+}
