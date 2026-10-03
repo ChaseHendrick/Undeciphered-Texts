@@ -1,0 +1,22 @@
+{
+  "cipher_name": "hill",
+  "plaintext": "HELP",
+  "ciphertext": "HIAT",
+  "key": "3 3 2 5",
+  "keys": {
+    "key": "3 3 2 5",
+    "matrix": [
+      [
+        3,
+        3
+      ],
+      [
+        2,
+        5
+      ]
+    ]
+  },
+  "source_url": "https://www.math.auckland.ac.nz/~slinko/Talks/AfC.pdf",
+  "plaintext_sha256": "37a6760fa43caf5b1ea02f22251b1456c39e060a4918ba3e963dbde336f16148",
+  "note": "Verification certificate for a published worked example of the 2x2 Hill cipher (Slinko, Algebra for Cryptology, University of Auckland, 6 April 2013). Known-cipher solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
