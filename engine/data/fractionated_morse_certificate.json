@@ -1,0 +1,12 @@
+{
+  "cipher_name": "fractionated_morse",
+  "plaintext": "DEFEND THE EAST",
+  "ciphertext": "ESOAVVLJRSSTRX",
+  "key": "ROUNDTABLECFGHIJKMPQSVWXYZ",
+  "keys": {
+    "key": "ROUNDTABLECFGHIJKMPQSVWXYZ"
+  },
+  "source_url": "http://practicalcryptography.com/ciphers/fractionated-morse-cipher/",
+  "plaintext_sha256": "14d79c0ebf42c0c9dd8a22fb77f9202d31a2641efd3d0ee32090574283ce3e5d",
+  "note": "Verification certificate for a published worked example of the fractionated Morse cipher (Practical Cryptography). The page prints defend the east in lowercase; the recovered plaintext is DEFEND THE EAST, with the word spaces kept. Known-cipher solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
