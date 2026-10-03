@@ -1,0 +1,13 @@
+{
+  "cipher_name": "digrafid",
+  "plaintext": "THISISTHEFORESTPRI",
+  "ciphertext": "HJMXWSWJADWGFCSPYI",
+  "keys": {
+    "horizontal": "KEYWORDABCFGHIJLMNPQSTUVXZ#",
+    "vertical": "VERTICALBDFGHJKMNOPQSUWXYZ#",
+    "period": 3
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Digrafid.pdf",
+  "plaintext_sha256": "e4d42d517a9783a89cd16f629a021e70ad861015cd5b03a4e8b57720542eb6e2",
+  "note": "Verification certificate for the ACA Digrafid sheet worked example (fractionation 3). The sheet prints the plaintext as 'This is the forest pri'. Spaces are not enciphered. plaintext_sha256 is the SHA-256 of the 18 uppercase letters THISISTHEFORESTPRI with no spaces. The sheet groups the ciphertext as HJMXWS WJADWG FCSPYI; those spaces are not in the ciphertext field. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
