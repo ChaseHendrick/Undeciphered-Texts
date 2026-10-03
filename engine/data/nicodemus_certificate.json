@@ -1,0 +1,12 @@
+{
+  "cipher_name": "nicodemus",
+  "plaintext": "THEEARLYBIRDGETSTHEWORM",
+  "ciphertext": "HAYREVGNKIXKUWMTWMUGTAH",
+  "key": "CAT",
+  "keys": {
+    "key": "CAT"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Nicodemus.pdf",
+  "plaintext_sha256": "a505f303c5da8ee269a16cbe6f271d38739abdcdcbf1ead383ba0468b2b231d7",
+  "note": "Verification certificate for a published worked example of the Nicodemus cipher (American Cryptogram Association cipher sheet: plaintext sentence \"the early bird gets the worm\", key CAT, ciphertext HAYRE VGNKI XKUWM TWMUG TAH.). Known-cipher solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
