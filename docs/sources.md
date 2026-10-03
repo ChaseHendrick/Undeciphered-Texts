@@ -88,3 +88,7 @@
 - https://www.cryptogram.org/downloads/aca.info/ciphers/SeriatedPlayfair.pdf
 - https://www.cryptogram.org/downloads/aca.info/ciphers/Playfair.pdf
 - See [seriated-playfair.md](seriated-playfair.md)
+
+## Nihilist transposition (ACA known numeric key; not an unknown script)
+- https://www.cryptogram.org/downloads/aca.info/ciphers/NihilistTransposition.pdf
+- See [nihilist-transposition.md](nihilist-transposition.md)

@@ -1,0 +1,13 @@
+{
+  "cipher_name": "nihilist_transposition",
+  "plaintext": "SQUARENEEDEDHERE",
+  "ciphertext": "EQDER SEHNU EREAD E",
+  "key": "2134",
+  "keys": {
+    "numeric_key": "2134",
+    "takeoff": "columns"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/NihilistTransposition.pdf",
+  "plaintext_sha256": "052d45da82fda7bac5eee5617656a06e9ba2c155245bb261a18e0b541579e134",
+  "note": "Verification certificate for a published worked example of Nihilist transposition on the American Cryptogram Association Nihilist Transposition sheet. The sheet prints the key as 2134 and the plaintext as 'square needed here'. Spaces and case are not enciphered, so the stored plaintext is the 16 uppercase letters SQUARENEEDEDHERE. The sheet prints two ciphertexts from the same square: C1 taken off by columns is EQDER SEHNU EREAD E, and C2 taken off by rows is ERNEQ SUADE EDEHR E. Each printed line ends with a period; the period is not a letter and is not in the ciphertext field. This certificate stores the column takeoff (C1). plaintext_sha256 is the SHA-256 of those 16 letters. Known-key solver only (taking-out key, same row and column permutation). Not an unknown-script reading. Not the Nihilist substitution cipher. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, the Zodiac ciphers, the Beale ciphers, the McCormick cipher, or army message Nr. 86."
+}
