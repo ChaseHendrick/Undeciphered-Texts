@@ -122,6 +122,7 @@ Full inventory of solvers and analysis tools (classical, keyed Vigenère, column
 | [`docs/ocr-backends.md`](docs/ocr-backends.md) | Local image transcription backends and setup |
 | [`docs/puzzles.md`](docs/puzzles.md) | Bounded Sudoku, word search, and anagrams |
 | [`docs/target-triage.md`](docs/target-triage.md), [`target-shortlist.json`](docs/target-shortlist.json) | Dated source research and feasibility judgments for open targets |
+| [`docs/research-notes/README.md`](docs/research-notes/README.md) | Eight dated primary-source case notes, corpus limits and proposed experiments for undeciphered scripts and historical ciphers |
 | [`engine/data/english.txt`](engine/data/english.txt) | Training prose for n-gram model |
 | [`tests/test_recover.py`](tests/test_recover.py) | Round-trip + recovery tests |
 | [`demos/run_demo.py`](demos/run_demo.py) | Demo entry that rewrites `DEMO.md` |
