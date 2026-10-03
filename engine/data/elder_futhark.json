@@ -1,0 +1,202 @@
+{
+  "source_url": "https://en.wikipedia.org/wiki/Elder_Futhark",
+  "source_retrieved": "2026-10-02",
+  "script": "Elder Futhark",
+  "purpose": "lookup",
+  "not_a_decipherment": true,
+  "note": "Conventional published inventory of the 24 Elder Futhark runes. A lookup of known signs. Not a decipherment of unknown inscriptions.",
+  "runes": [
+    {
+      "rune": "ᚠ",
+      "unicode": "U+16A0",
+      "transliteration": "f",
+      "ipa": "/ɸ/, /f/",
+      "name": "*fehu",
+      "meaning": "cattle, wealth"
+    },
+    {
+      "rune": "ᚢ",
+      "unicode": "U+16A2",
+      "transliteration": "u",
+      "ipa": "/u(ː)/",
+      "name": "?*ūruz",
+      "meaning": "aurochs"
+    },
+    {
+      "rune": "ᚦ",
+      "unicode": "U+16A6",
+      "transliteration": "þ",
+      "ipa": "/θ/, /ð/",
+      "name": "?*þurisaz",
+      "meaning": "giant, monster"
+    },
+    {
+      "rune": "ᚨ",
+      "unicode": "U+16A8",
+      "transliteration": "a",
+      "ipa": "/a(ː)/",
+      "name": "*ansuz",
+      "meaning": "god"
+    },
+    {
+      "rune": "ᚱ",
+      "unicode": "U+16B1",
+      "transliteration": "r",
+      "ipa": "/r/",
+      "name": "*raidō",
+      "meaning": "ride, journey"
+    },
+    {
+      "rune": "ᚲ",
+      "unicode": "U+16B2",
+      "transliteration": "k",
+      "ipa": "/k/",
+      "name": "?*kauną",
+      "meaning": "boil"
+    },
+    {
+      "rune": "ᚷ",
+      "unicode": "U+16B7",
+      "transliteration": "g",
+      "ipa": "/ɡ/",
+      "name": "*gebō",
+      "meaning": "gift"
+    },
+    {
+      "rune": "ᚹ",
+      "unicode": "U+16B9",
+      "transliteration": "w",
+      "ipa": "/w/",
+      "name": "*wunjō",
+      "meaning": "joy"
+    },
+    {
+      "rune": "ᚺ",
+      "unicode": "U+16BA",
+      "transliteration": "h",
+      "ipa": "/h/",
+      "name": "*hagalaz",
+      "meaning": "hail"
+    },
+    {
+      "rune": "ᚾ",
+      "unicode": "U+16BE",
+      "transliteration": "n",
+      "ipa": "/n/",
+      "name": "*naudiz",
+      "meaning": "need, affliction"
+    },
+    {
+      "rune": "ᛁ",
+      "unicode": "U+16C1",
+      "transliteration": "i",
+      "ipa": "/i(ː)/",
+      "name": "*īsaz",
+      "meaning": "ice"
+    },
+    {
+      "rune": "ᛃ",
+      "unicode": "U+16C3",
+      "transliteration": "j",
+      "ipa": "/j/",
+      "name": "*jēra-",
+      "meaning": "year, good year, harvest"
+    },
+    {
+      "rune": "ᛇ",
+      "unicode": "U+16C7",
+      "transliteration": "ï",
+      "ipa": "?/æː/",
+      "name": "?*ī(h)waz",
+      "meaning": "yew-tree"
+    },
+    {
+      "rune": "ᛈ",
+      "unicode": "U+16C8",
+      "transliteration": "p",
+      "ipa": "/p/",
+      "name": "?*perþō",
+      "meaning": "Unknown"
+    },
+    {
+      "rune": "ᛉ",
+      "unicode": "U+16C9",
+      "transliteration": "z",
+      "ipa": "/z/",
+      "name": "?*algiz",
+      "meaning": "elk"
+    },
+    {
+      "rune": "ᛊ",
+      "unicode": "U+16CA",
+      "transliteration": "s",
+      "ipa": "/s/",
+      "name": "*sōwilō",
+      "meaning": "sun"
+    },
+    {
+      "rune": "ᛏ",
+      "unicode": "U+16CF",
+      "transliteration": "t",
+      "ipa": "/t/",
+      "name": "*tīwaz",
+      "meaning": "Tiwaz"
+    },
+    {
+      "rune": "ᛒ",
+      "unicode": "U+16D2",
+      "transliteration": "b",
+      "ipa": "/b/",
+      "name": "*berkanan",
+      "meaning": "birch"
+    },
+    {
+      "rune": "ᛖ",
+      "unicode": "U+16D6",
+      "transliteration": "e",
+      "ipa": "/e(ː)/",
+      "name": "*ehwaz",
+      "meaning": "horse"
+    },
+    {
+      "rune": "ᛗ",
+      "unicode": "U+16D7",
+      "transliteration": "m",
+      "ipa": "/m/",
+      "name": "*mannaz",
+      "meaning": "man, human"
+    },
+    {
+      "rune": "ᛚ",
+      "unicode": "U+16DA",
+      "transliteration": "l",
+      "ipa": "/l/",
+      "name": "?*laguz",
+      "meaning": "water, liquid"
+    },
+    {
+      "rune": "ᛜ",
+      "unicode": "U+16DC",
+      "transliteration": "ŋ",
+      "ipa": "/ŋ/",
+      "name": "*ingwaz",
+      "meaning": "Ing"
+    },
+    {
+      "rune": "ᛞ",
+      "unicode": "U+16DE",
+      "transliteration": "d",
+      "ipa": "/d/",
+      "name": "*dagaz",
+      "meaning": "day"
+    },
+    {
+      "rune": "ᛟ",
+      "unicode": "U+16DF",
+      "transliteration": "o",
+      "ipa": "/o(ː)/",
+      "name": "*ōþala-",
+      "meaning": "inheritance, household"
+    }
+  ]
+}
