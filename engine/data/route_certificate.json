@@ -1,0 +1,15 @@
+{
+  "cipher_name": "route",
+  "plaintext": "BRIGHTONANDHOVE",
+  "ciphertext": "ITAHEVONOGBRHND",
+  "key": "width=3;fill=rows;route=spiral-cw-top-right",
+  "keys": {
+    "key": "width=3;fill=rows;route=spiral-cw-top-right",
+    "width": 3,
+    "fill": "rows",
+    "route": "spiral-cw-top-right"
+  },
+  "source_url": "http://www.crypto-it.net/eng/simple/route-cipher.html",
+  "plaintext_sha256": "5134160896ef22b89fa2dabca3c82ab404b1495373db707cb183f1ee2c51ce14",
+  "note": "Verification certificate for a published worked example of the route transposition cipher. Known-cipher solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
