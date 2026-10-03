@@ -78,3 +78,8 @@
 - https://www.cryptogram.org/downloads/aca.info/ciphers/Slidefair.pdf
 - https://sites.google.com/site/cryptocrackprogram/user-guide/cipher-types/substitution/slidefair
 - See [slidefair.md](slidefair.md)
+
+## CM Bifid (ACA known squares; not an unknown script)
+- https://www.cryptogram.org/downloads/aca.info/ciphers/CMBifid.pdf
+- https://www.cryptogram.org/downloads/aca.info/ciphers/Bifid.pdf
+- See [cm-bifid.md](cm-bifid.md)

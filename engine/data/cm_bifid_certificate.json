@@ -1,0 +1,22 @@
+{
+  "cipher_name": "cm_bifid",
+  "name": "cm_bifid",
+  "plaintext": "ODDPERIODSAREPOPULAR",
+  "ciphertext": "FANXZEXFENUKKRBYNKAK",
+  "key": "EXTRAORDINARY:clockwise_spiral/NOVELTY:alternating_verticals/7",
+  "keys": {
+    "plain_keyword": "EXTRAORDINARY",
+    "plain_route": "clockwise_spiral",
+    "plain_square": "EXTRAKLMPOHWZQDGVUSIFCBYN",
+    "cipher_keyword": "NOVELTY",
+    "cipher_route": "alternating_verticals",
+    "cipher_square": "NCDRSOBFQUVAGPWEYHMXLTIKZ",
+    "period": 7
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/CMBifid.pdf",
+  "source_sha256": "90d3e1133e00d1100fbee3e3b188cdb621cf4282b415a38cab3b4acf5b2dfd89",
+  "plain_square_source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Bifid.pdf",
+  "message": "Odd periods are popular.",
+  "plaintext_sha256": "e078e1ef836782ba6c0558f7ae96f5f4e499efdb3512133edf0bd3b11dec5c8f",
+  "note": "Verification certificate for the ACA CM Bifid (Conjugated Matrix Bifid) sheet worked example, sheet page 42. The sheet prints the plaintext as 'Odd periods are popular.' Spaces are not enciphered and are not included in plaintext or in plaintext_sha256. That hash is SHA-256 of ODDPERIODSAREPOPULAR. The sheet prints the ciphertext as FANXZEX FENUKKR BYNKAK. Those spaces are period groups only and are not in the ciphertext field. The ciphertext square keyword is NOVELTY, written in alternating verticals (row-major NCDRSOBFQUVAGPWEYHMXLTIKZ). The plaintext square printed on the sheet is row-major EXTRAKLMPOHWZQDGVUSIFCBYN. The sheet says See: BIFID. The Bifid sheet names that square as keyword EXTRAORDINARY written in a clockwise spiral and states period 7 for this plaintext. The CM sheet's first two period groups have 7 letters. source_sha256 is the SHA-256 of the fetched CMBifid.pdf. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, Zodiac, Beale, McCormick, or army message Nr. 86."
+}
