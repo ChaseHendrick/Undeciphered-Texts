@@ -1,0 +1,15 @@
+{
+  "cipher_name": "solitaire",
+  "plaintext": "SOLITAIREX",
+  "ciphertext": "KIRAK SFJAN",
+  "key": "CRYPTONOMICON",
+  "keys": {
+    "passphrase": "CRYPTONOMICON",
+    "message": "SOLITAIRE",
+    "filler": "X",
+    "deck_keying": "passphrase"
+  },
+  "source_url": "https://www.schneier.com/academic/solitaire/",
+  "plaintext_sha256": "cfc32fade35e468dfcb9ce361741b31116ac012f38540db765db0f30843f06f9",
+  "note": "Verification certificate for a published worked example of Solitaire (Pontifex) on Bruce Schneier's Solitaire page, version 1.2 (26 May 1999). Sample 3 uses keying method 3 with the passphrase CRYPTONOMICON. The message is SOLITAIRE. The page fills the last five-character group with X, so the letters actually enciphered are SOLITAIREX and the ciphertext is KIRAK SFJAN. The optional joker-placement step is not used. plaintext_sha256 is the SHA-256 of SOLITAIREX, including that filler X. Sample 1 on the same page is checked in the unit tests and is not this hash: an unkeyed bridge-order deck encrypts AAAAA AAAAA to EXKYI ZSGEH. Sample 2, passphrase FOO, encrypts fifteen As to ITHZU JIWGR FARMW. Known-deck or known-passphrase solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, the Zodiac ciphers, the Beale ciphers, the McCormick cipher, or army message Nr. 86."
+}

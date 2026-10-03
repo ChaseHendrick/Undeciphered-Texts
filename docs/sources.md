@@ -100,3 +100,7 @@
 ## Tri-square (ACA known squares; not an unknown script)
 - https://www.cryptogram.org/downloads/aca.info/ciphers/TriSquare.pdf
 - See [tri-square.md](tri-square.md)
+
+## Solitaire / Pontifex (Schneier known deck or passphrase; not an unknown script)
+- https://www.schneier.com/academic/solitaire/
+- See [solitaire.md](solitaire.md)
