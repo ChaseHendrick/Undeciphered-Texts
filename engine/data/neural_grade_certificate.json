@@ -1,0 +1,6 @@
+{
+  "metrics_file": "engine/data/neural_grade_metrics.json",
+  "metrics_sha256": "a40cefa442cd691848ac86a36c14e71eda58ca442de9c2b2e006bfd8c2d7e84c",
+  "name": "neural-grade",
+  "note": "SHA-256 of the raw bytes of neural_grade_metrics.json. Held-out grade of a letter model and a cipher-family router. Not a decipherment of Kryptos K4, army message Nr. 86, or an unknown script."
+}

@@ -2,9 +2,9 @@
 
 The two previous letters are one-hot encoded, passed through a tanh hidden
 layer, and scored with a 26-way softmax. Weights are fit by gradient descent
-on next-letter cross-entropy. The training prose is a short public-domain
-excerpt (Lewis Carroll, Alice's Adventures in Wonderland, chapter I), not the
-demo or test plaintext.
+on next-letter cross-entropy. The training prose is Jane Austen, Pride and Prejudice, chapters I–III
+(Project Gutenberg eBook 1342), not the held-out Doyle passage and not the
+demo or test plaintext. Held-out numbers are in docs/neural-grade.md.
 
 The substitution solver still searches with the quadgram model. This network
 is a second opinion on a candidate decipherment. A higher score means the
@@ -24,10 +24,10 @@ from pathlib import Path
 
 from engine.alphabet import letters_only
 
-_DATA = Path(__file__).resolve().parent / "data" / "alice_excerpt.txt"
+_DATA = Path(__file__).resolve().parent / "data" / "neural_train_austen.txt"
 
 HIDDEN = 32
-NUMPY_EPOCHS = 40
+NUMPY_EPOCHS = 200
 PURE_EPOCHS = 24
 SEED = 20261002
 

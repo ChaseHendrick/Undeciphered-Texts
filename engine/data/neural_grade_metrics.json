@@ -1,0 +1,237 @@
+{
+  "language_scorer": {
+    "backend": "numpy",
+    "beats_german": 36,
+    "beats_shuffled": 38,
+    "chance_baseline": 0.333333,
+    "german_accuracy": 0.947368,
+    "german_chance_baseline": 0.5,
+    "heldout_english_letters_sha256": "cbee687d0c9465488180c158b20542777681e2b1900ca4015caa9d25aaba162a",
+    "heldout_english_source": {
+      "author": "Arthur Conan Doyle",
+      "file": "engine/data/neural_heldout_doyle.txt",
+      "span": "A Scandal in Bohemia, opening, through the paragraph ending with doubts.",
+      "text_url": "https://www.gutenberg.org/cache/epub/1661/pg1661.txt",
+      "title": "The Adventures of Sherlock Holmes",
+      "url": "https://www.gutenberg.org/ebooks/1661"
+    },
+    "heldout_german_letters_sha256": "79de3a80fc0640613c39877d2fa4e9b8931c56646a57a3345a15c9fb0f556b0b",
+    "heldout_german_source": {
+      "author": "Jacob Grimm and Wilhelm Grimm",
+      "collection": "Deutsche M\u00e4rchen, Project Gutenberg eBook 77905",
+      "file": "engine/data/neural_heldout_grimm_wolf.txt",
+      "note": "Not the Froschk\u00f6nig excerpt in engine/data/german_excerpt.txt.",
+      "text_url": "https://www.gutenberg.org/cache/epub/77905/pg77905.txt",
+      "title": "Der Wolf und die sieben jungen Gei\u00dflein",
+      "url": "https://www.gutenberg.org/ebooks/77905"
+    },
+    "mean_log_loss_english": 2.581298,
+    "mean_log_loss_german": 2.794671,
+    "mean_log_loss_shuffled": 3.230853,
+    "model": "trigram tanh hidden softmax, engine.neural.NeuralLetterModel",
+    "preference_accuracy": 0.947368,
+    "preference_correct": 36,
+    "shuffled_accuracy": 1.0,
+    "shuffled_chance_baseline": 0.5,
+    "train_events": 12471,
+    "train_letters_sha256": "da910590e36633f59366139f327ae72b3cd3a82d3510f1ad173881b4a944ad28",
+    "train_source": {
+      "author": "Jane Austen",
+      "file": "engine/data/neural_train_austen.txt",
+      "span": "Chapters I-III, illustration blocks removed",
+      "text_url": "https://www.gutenberg.org/cache/epub/1342/pg1342.txt",
+      "title": "Pride and Prejudice",
+      "url": "https://www.gutenberg.org/ebooks/1342"
+    },
+    "window_letters": 120,
+    "windows": 38
+  },
+  "not_a_decipherment": "Does not decipher Kryptos K4, Truppenschl\u00fcssel Nr. 86, or unknown scripts.",
+  "shipped_solver_net": {
+    "accuracy": 0.593182,
+    "chance_baseline": 0.083333,
+    "correct": 261,
+    "edited": false,
+    "evaluated_families": [
+      "caesar",
+      "vigenere",
+      "keyed-vigenere",
+      "substitution",
+      "playfair",
+      "bifid",
+      "adfgvx",
+      "columnar",
+      "two-square",
+      "lumen-braid",
+      "prism-latch"
+    ],
+    "heldout_plaintext_sha256": "cbee687d0c9465488180c158b20542777681e2b1900ca4015caa9d25aaba162a",
+    "module": "engine.solver_net",
+    "output_families": [
+      "caesar",
+      "vigenere",
+      "keyed-vigenere",
+      "substitution",
+      "playfair",
+      "bifid",
+      "adfgvx",
+      "columnar",
+      "two-square",
+      "beam-search",
+      "lumen-braid",
+      "prism-latch"
+    ],
+    "per_family": {
+      "adfgvx": {
+        "correct": 40,
+        "total": 40
+      },
+      "bifid": {
+        "correct": 4,
+        "total": 40
+      },
+      "caesar": {
+        "correct": 34,
+        "total": 40
+      },
+      "columnar": {
+        "correct": 40,
+        "total": 40
+      },
+      "keyed-vigenere": {
+        "correct": 32,
+        "total": 40
+      },
+      "lumen-braid": {
+        "correct": 2,
+        "total": 40
+      },
+      "playfair": {
+        "correct": 26,
+        "total": 40
+      },
+      "prism-latch": {
+        "correct": 23,
+        "total": 40
+      },
+      "substitution": {
+        "correct": 5,
+        "total": 40
+      },
+      "two-square": {
+        "correct": 26,
+        "total": 40
+      },
+      "vigenere": {
+        "correct": 29,
+        "total": 40
+      }
+    },
+    "total": 440,
+    "train_source": "engine/data/english.txt plus certificate ciphertext exemplars"
+  },
+  "solver_router": {
+    "accuracy": 0.617647,
+    "backend": "numpy",
+    "chance_baseline": 0.058824,
+    "correct": 126,
+    "families": [
+      "caesar",
+      "vigenere",
+      "keyed-vigenere",
+      "substitution",
+      "playfair",
+      "bifid",
+      "two-square",
+      "four-square",
+      "adfgvx",
+      "columnar-transposition",
+      "beaufort",
+      "porta",
+      "enigma",
+      "m209",
+      "keel-sieve",
+      "lumen-braid",
+      "prism-latch"
+    ],
+    "heldout_ciphertexts": "generated from the Doyle held-out passage, not from certificate plaintexts",
+    "heldout_plaintext_sha256": "cbee687d0c9465488180c158b20542777681e2b1900ca4015caa9d25aaba162a",
+    "model": "ciphertext-feature tanh hidden softmax in engine.neural_grade",
+    "note": "Separate from engine.solver_net, which is not edited. Covers certified families that module does not route.",
+    "per_family": {
+      "adfgvx": {
+        "correct": 11,
+        "total": 12
+      },
+      "beaufort": {
+        "correct": 2,
+        "total": 12
+      },
+      "bifid": {
+        "correct": 11,
+        "total": 12
+      },
+      "caesar": {
+        "correct": 12,
+        "total": 12
+      },
+      "columnar-transposition": {
+        "correct": 12,
+        "total": 12
+      },
+      "enigma": {
+        "correct": 2,
+        "total": 12
+      },
+      "four-square": {
+        "correct": 12,
+        "total": 12
+      },
+      "keel-sieve": {
+        "correct": 5,
+        "total": 12
+      },
+      "keyed-vigenere": {
+        "correct": 2,
+        "total": 12
+      },
+      "lumen-braid": {
+        "correct": 6,
+        "total": 12
+      },
+      "m209": {
+        "correct": 2,
+        "total": 12
+      },
+      "playfair": {
+        "correct": 11,
+        "total": 12
+      },
+      "porta": {
+        "correct": 5,
+        "total": 12
+      },
+      "prism-latch": {
+        "correct": 4,
+        "total": 12
+      },
+      "substitution": {
+        "correct": 11,
+        "total": 12
+      },
+      "two-square": {
+        "correct": 9,
+        "total": 12
+      },
+      "vigenere": {
+        "correct": 9,
+        "total": 12
+      }
+    },
+    "test_per_class": 12,
+    "total": 204,
+    "train_ciphertexts": "generated from Austen chapters I-III, not from certificate plaintexts",
+    "train_per_class": 20,
+    "train_plaintext_sha256": "da910590e36633f59366139f327ae72b3cd3a82d3510f1ad173881b4a944ad28"
+  }
+}
