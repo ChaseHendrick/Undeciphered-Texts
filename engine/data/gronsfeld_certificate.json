@@ -1,0 +1,12 @@
+{
+  "cipher_name": "gronsfeld",
+  "plaintext": "ATTACKATDAWN",
+  "ciphertext": "DUXBHNBXEFZO",
+  "key": "31415",
+  "keys": {
+    "key": "31415"
+  },
+  "source_url": "https://caesarcipher.org/learn/gronsfeld-cipher-numeric-key-vigenere-variant-guide",
+  "plaintext_sha256": "393dfae2845abf5cb0d599ccd1189f57ef56b3fa104e0ae71844d78bccd4e5d2",
+  "note": "Verification certificate for a published worked example. The page encrypts \"ATTACK AT DAWN\" with numeric key 3 1 4 1 5; after spaces are removed the letter stream is ATTACKATDAWN and the ciphertext letter stream is DUXBHNBXEFZO (also printed as \"DUXBH NBXEF ZO\"). Checks the published example, not an unknown script. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
