@@ -1,0 +1,14 @@
+{
+  "cipher_name": "gromark",
+  "plaintext": "THEREAREUPTOTENSUBSTITUTESPERLETTER",
+  "ciphertext": "NFYCKBTIJCNWZYCACJNAYNLQPWWSTWPJQFL",
+  "key": "ENIGMA 23452",
+  "keys": {
+    "key": "ENIGMA 23452",
+    "keyword": "ENIGMA",
+    "primer": "23452"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Gromark.pdf",
+  "plaintext_sha256": "4973fc09eabc5d3d3609cc12e3cd44d29f0367d15c51979b750c7421b8db5621",
+  "note": "Verification certificate for a published worked example of the Gromark cipher (American Cryptogram Association cipher sheet: keyword ENIGMA, primer 23452). Known-cipher solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
