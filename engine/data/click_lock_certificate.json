@@ -1,0 +1,7 @@
+{
+  "method": "synthetic_click_lock",
+  "combination": "22-15-8",
+  "combination_sha256": "6f73af2c12a890670c618d9dbd1e5e6f498ecf9b448a96f7e23b6b23e539c17d",
+  "signal_kind": "synthetic_clicks",
+  "note": "Verification certificate for one planted three number combination recovered from a synthetic click train generated in code. The signals are synthetic and this does not open a real safe. Not instructions for a specific physical lock and not a claim about Nr. 86."
+}

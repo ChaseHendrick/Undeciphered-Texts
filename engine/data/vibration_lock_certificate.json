@@ -1,0 +1,7 @@
+{
+  "method": "synthetic_vibration_lock",
+  "combination": "11-4-36",
+  "combination_sha256": "94877bbe9569ad810912bf75a1380cb7b8332f842a418fb92e44f528ca99cde9",
+  "signal_kind": "synthetic_vibration",
+  "note": "Verification certificate for one planted three number combination recovered from a synthetic vibration trace generated in code. The signals are synthetic and this does not open a real safe. Not instructions for a specific physical lock and not a claim about Nr. 86."
+}
