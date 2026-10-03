@@ -18,7 +18,9 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.10'
-      - name: Standard library tests
+      - name: Install test dependencies
+        run: python -m pip install Pillow numpy
+      - name: Tests without symbolic dependency
         run: python -m unittest discover -s tests -v
       - name: Recovery demo
         run: python -m engine demo --out "$RUNNER_TEMP/cipher-demo.md"

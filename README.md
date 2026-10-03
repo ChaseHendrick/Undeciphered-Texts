@@ -28,6 +28,7 @@ Python **3.10+**. Core cipher routines use the standard library. Symbolic revers
 ```bash
 # from repo root
 python3 -m engine demo  # or: python -m engine demo              # recovers built-in known cases; writes DEMO.md
+python -m pip install Pillow numpy  # required by the full image and neural test suite
 python -m unittest discover -s tests -v
 python -m engine analyze "Wkh kdueru ehoo udqj"
 python -m engine solve caesar "Wkh kdueru ehoo udqj"

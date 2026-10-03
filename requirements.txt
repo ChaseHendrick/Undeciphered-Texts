@@ -4,3 +4,4 @@
 # Optional symbolic cipher inference: pip install -r requirements-synthesis.txt.
 # Optional: numpy speeds training in engine/neural.py.
 # The same letter network trains with the standard library if numpy is absent.
+# Full test discovery also exercises image and neural modules: install Pillow numpy.

@@ -5,6 +5,7 @@ Started from verified commit `1ce3727dd419c80fd7983f2a81cc0621943633f0`. Added s
 ## Executed local checks
 
 - Python 3.12.14 full discovery: 747 tests in 21.360 seconds, exit 0, `OK`, no skips. Optional Z3 and real Tesseract OCR were available.
+- Follow-up discovery without Z3, with Pillow, NumPy, and local Tesseract available: 747 tests in 20.800 seconds, exit 0, `OK (skipped=12)`. Those twelve skips are exact symbolic checks.
 - Recovery demo to a temporary witness: exit 0, no fixture failures. The existing checked-in witness was preserved.
 - Actual case CLI: intake, structure validation, explicit Latin baseline, symbolic candidates, and independent heldout comparison passed. Saved report hashes matched manifests; case status remained unsolved and claimed plaintext remained null.
 - Forty independent exhaustive affine/layout comparisons matched symbolic consensus. Peer audits also checked randomized Sudoku, word search, anagram, word-pattern, and Quagmire examples against independent oracles. These are bounded fixture checks, not historical decipherments.
@@ -20,4 +21,4 @@ Tesseract 5.5.3 recovered the actual generated PNG phrase under the normal execu
 
 The [target triage](../target-triage.md) checked current primary pages and records source conflicts. No checked named unresolved target was established as easy. No unknown historical plaintext, script reading, or language identification is claimed.
 
-The new GitHub workflow has core and extended jobs. Local results above do not establish a remote CI result; inspect the run after pushing.
+The [first remote run](https://github.com/ChaseHendrick/Undeciphered-Texts/actions/runs/37099839729) passed the extended Python 3.12 suite and recovery demo. Core Python 3.10 reached test execution but failed because its initial setup omitted Pillow and NumPy, which the existing image and neural tests require. The workflow now installs both in core as well. Inspect the corrected run before claiming a complete CI pass.

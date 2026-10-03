@@ -28,11 +28,14 @@ OK
 From the repository root. On this box the binary is `python3`. A venv named `python` is what the README assumes.
 
 ```bash
+python3 -m pip install Pillow numpy
 python3 -m unittest discover -s tests -v
 python3 -m engine demo
 python3 demos/run_demo.py
 python3 -m unittest tests.test_ocr tests.test_errors tests.test_recover -v
 ```
+
+Pillow and NumPy are required by full discovery of the existing image and neural tests. Core cipher routines and the recovery demo remain usable without them. Install `requirements-synthesis.txt` for exact symbolic checks and a local OCR backend for the real image roundtrip; absent optional engines are reported as skips.
 
 `demo` rewrites `DEMO.md` and returns 1 if any fixture misses. It appends [logs/errors.md](logs/errors.md) only in that failure case. Do not run a deliberately broken demo against the real log.
 
@@ -59,13 +62,13 @@ Fixtures are in `engine/fixtures.py`. Ciphertext is built inside the test. The s
 
 ## Image bytes
 
-There is no unit test for the hero JPEG. Check it by hand before trusting a render:
+`tests/test_assets.py` checks the hero JPEG magic and SVG fallback. Also compare the JPEG's bytes with the starting commit before landing unrelated changes:
 
 ```bash
 python3 -c "p=open('docs/assets/readme-hero.jpg','rb').read(3); print(p.hex()); assert p==bytes.fromhex('ffd8ff')"
 ```
 
-`FF D8 FF` is the JPEG start. If the file begins with `iVBOR` or `/9j/` or another base64 alphabet, the upload stored text. Do not commit that. PNG magic, if you add one, is `89 50 4E 47`. The README hero that must render is the SVG, which is text and starts with `<svg`.
+`FF D8 FF` is the JPEG start. If the file begins with `iVBOR` or `/9j/` or another base64 alphabet, the upload stored text. Do not commit that. PNG magic, if you add one, is `89 50 4E 47`. The README displays the preserved JPEG; its SVG fallback is text and starts with `<svg`.
 
 ## Adding a solver
 
@@ -94,7 +97,7 @@ These checks cover supplied-key encryption and decryption, not a search for an u
 
 ## CI
 
-`.github/workflows/check.yml` runs standard-library tests and the recovery demo on Python 3.10. An extended Python 3.12 job installs Z3, Pillow, NumPy, Tesseract, and a demo font, then runs the full suite and demo. Demo output goes to the runner's temporary directory. These jobs run on pull requests, main pushes, or manual dispatch. Adding a workflow does not establish a remote CI pass; inspect the completed run.
+`.github/workflows/check.yml` installs Pillow and NumPy for the existing image and neural tests, then runs test discovery and the recovery demo on Python 3.10 without Z3. Exact symbolic tests report optional skips in that job. An extended Python 3.12 job installs Z3, Pillow, NumPy, Tesseract, and a demo font, then runs the full suite and demo. Demo output goes to the runner's temporary directory. These jobs run on pull requests, main pushes, or manual dispatch. Adding a workflow does not establish a remote CI pass; inspect the completed run.
 
 ## Modern helpers, constraints, and case records
 
