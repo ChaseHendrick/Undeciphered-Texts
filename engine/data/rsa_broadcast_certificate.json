@@ -1,0 +1,30 @@
+{
+  "cipher_name": "rsa_broadcast",
+  "name": "rsa_broadcast",
+  "attack": "boneh_hastad_low_exponent_broadcast",
+  "e": 3,
+  "n": [
+    "85070591730234638555338862520692053003",
+    "85070591730234640621374198776162121539",
+    "85070591730234642502942094294536669823"
+  ],
+  "ciphertext": [
+    "64274844664854671026954882268024026781",
+    "5594213272610162248389733474821484004",
+    "58620680488843068566786338515411794190"
+  ],
+  "plaintext": "ATTACK AT DAWN",
+  "plaintext_integer": "1325037865527344434240272969324366",
+  "keys": {
+    "e": 3,
+    "n": [
+      "85070591730234638555338862520692053003",
+      "85070591730234640621374198776162121539",
+      "85070591730234642502942094294536669823"
+    ]
+  },
+  "source_url": "https://crypto.stanford.edu/~dabo/papers/RSA-survey.pdf",
+  "instance": "synthetic",
+  "plaintext_sha256": "11e35eb1a2d18f4e2bfc43a1483c6b2b0f3ba4d6eb8b937278d3c9ab6897f4b8",
+  "note": "Verification certificate for a synthetic textbook-weak RSA broadcast instance (Boneh / Hastad low-exponent broadcast, e=3, three pairwise-coprime moduli). The moduli, exponent, ciphertexts, and plaintext are printed in this file so the test is reproducible. Recovered by Chinese Remainder Theorem plus an integer cube root. Known-answer only. Not an attack on a real key, a live server, TLS, or a padding oracle. Not a reading of an unknown script. Not a claim about Kryptos K4, Zodiac, Beale, McCormick, Voynich, or army message Nr. 86. Attack description: Dan Boneh, Twenty Years of Attacks on the RSA Cryptosystem, Notices of the AMS 46(2), 1999, section on low public exponent attacks / Hastad; https://crypto.stanford.edu/~dabo/papers/RSA-survey.pdf"
+}

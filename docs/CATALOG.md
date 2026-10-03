@@ -59,9 +59,11 @@ Companion notes: [beam-search.md](beam-search.md), [em-sign-aligner.md](em-sign-
 | `engine/solvers/myszkowski.py` | Myszkowski transposition known-key decrypt. Same-numbered columns are read by rows. | `tests/test_myszkowski.py`: test_encrypt_matches_published_ciphertext, test_decrypt_recovers_published_letters, test_solver_recovers_published_plaintext_exactly, test_certificate_decrypts_and_matches_plaintext_hash | Known keyword only. Not in SOLVERS. Does not claim Kryptos K4, Zodiac, Beale, McCormick, Voynich, or army message Nr. 86. |
 | `engine/solvers/portax.py` | Portax (digraphic Porta) known-key decrypt: keyword slide, vertical pairs, row readout. | `tests/test_portax.py`: test_encrypt_matches_published_ciphertext, test_decrypt_recovers_published_plaintext_exactly, test_solver_recovers_published_plaintext_exactly, test_certificate_decrypts_and_matches_plaintext_hash | Known keyword only. Not in SOLVERS. Does not read Linear A, Indus, Voynich, rongorongo, Kryptos K4, Zodiac, Beale, McCormick, or army message Nr. 86. |
 
+| `engine/solvers/rsa_broadcast.py` | Boneh / Hastad low-exponent RSA broadcast (e=3, three coprime moduli, CRT plus integer cube root) on a synthetic textbook-weak instance printed in the certificate. | `tests/test_rsa_broadcast.py`: test_encrypt_matches_printed_ciphertexts, test_crt_and_cube_root_recover_plaintext_integer, test_solver_recovers_published_plaintext_exactly, test_certificate_recovers_and_matches_plaintext_hash | Known-answer only. Not an attack on a real key, live server, TLS, or padding oracle. Not in SOLVERS. Does not claim Kryptos K4, Zodiac, Beale, McCormick, Voynich, or army message Nr. 86. |
+
 ## Out of scope
 
-Linear A, Indus, Rongorongo, Phaistos, Voynich, Kryptos K4, AES/RSA/Enigma breaks, Vesuvius ink models are **not** claimed solved by any module above.
+Linear A, Indus, Rongorongo, Phaistos, Voynich, Kryptos K4, production AES, production RSA, live TLS, Enigma breaks, and Vesuvius ink models are **not** claimed solved by any module above. The `rsa_broadcast` helper is a known-answer textbook-weak e=3 broadcast check only.
 
 **Do not modify** the README hero JPEG (`docs/assets/readme-hero.jpg`).
 

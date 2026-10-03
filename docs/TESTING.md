@@ -78,7 +78,7 @@ python3 -c "p=open('docs/assets/readme-hero.jpg','rb').read(3); print(p.hex()); 
 
 - Linear A, Indus, Rongorongo, Voynich, Iberian, Meroitic, Etruscan meaning.
 - Herculaneum CT, ink models, or Greek transcription.
-- AES, RSA, Enigma, single-square Playfair. Two-square keyword recovery is covered in `tests/test_two_square.py`; wartime Truppenschlüssel Nr. 86 is logged as failed, not as a recovered plaintext.
+- Production AES, production RSA, live TLS, Enigma, single-square Playfair. A synthetic textbook-weak e=3 RSA broadcast known-answer check lives in `tests/test_rsa_broadcast.py`. Two-square keyword recovery is covered in `tests/test_two_square.py`; wartime Truppenschlüssel Nr. 86 is logged as failed, not as a recovered plaintext.
 - Timing. The demo prints seconds. They are not a gate.
 - The stale commands in `docs/engine.md`.
 
