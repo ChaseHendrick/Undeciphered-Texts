@@ -63,4 +63,11 @@ The new test file first failed with `ModuleNotFoundError: engine.k4_models`. Aft
 
 The JSON embeds the execution script. Its K4 calls use `search_k4_models(ciphertext, cribs=(fitted_group,), max_checks=4916, max_period=32, max_width=32, max_candidates=10000)`, followed by a separate reserved-span comparison over all returned hypotheses. Source hashes were unchanged during execution. The helper does not read a historical plaintext reference, weights or corpus. Nr. 86 is outside this work.
 
+The exact recorded implementation bytes are available at commit
+[`e20800b`](https://github.com/ChaseHendrick/Undeciphered-Texts/tree/e20800b16d0c6a184ce6c01ca9e1c9b215e1fc25),
+with SHA-256 values in the JSON. For another checkout, save the embedded script
+to a file, set `REPO` to that checkout and choose a separate `out` path when
+preserving the original dated record. Later whitespace-only source cleanup
+preserves the algorithm but has distinct file hashes.
+
 The useful result is a reproducible bounded rejection and an explicit set of unresolved constraints. Further work should predeclare a materially justified construction or finish a chosen finite model space with fresh verification evidence. This run does not reject untested combinations, other alphabets, arbitrary column permutations, additional layers, altered clue coordinates, running keys or other mechanisms.

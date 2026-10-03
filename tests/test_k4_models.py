@@ -151,4 +151,3 @@ class K4ModelsTest(unittest.TestCase):
             opts = {"cribs": (Crib(0, "A"),), **options}
             with self.subTest(text=text, opts=opts), self.assertRaises((ValueError, TypeError)):
                 search_k4_models(text, **opts)
-

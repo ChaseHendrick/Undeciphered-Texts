@@ -323,4 +323,3 @@ def search_k4_models(text, *, cribs, max_checks=10000, max_period=32,
             "ranking": "forced positions then stable labels; no language, clue holdout or neural score",
             "key_completions_enumerated": False, "claimed_plaintext": None,
             "scope": "Conditional models only. Search completion is bounded model coverage, not unique key or historical plaintext. No nulls, padding, errors or letters invented."}
-

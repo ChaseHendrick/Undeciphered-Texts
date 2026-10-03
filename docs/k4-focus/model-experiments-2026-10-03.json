@@ -6746,5 +6746,6 @@
       "Dependency-free modular algebra"
     ],
     "novel_algorithm_or_historical_priority_claimed": false
-  }
+  },
+  "recorded_implementation_commit": "e20800b16d0c6a184ce6c01ca9e1c9b215e1fc25"
 }
