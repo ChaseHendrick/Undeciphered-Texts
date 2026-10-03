@@ -1,0 +1,14 @@
+{
+  "cipher_name": "tridigital",
+  "plaintext": "THE IDES OF MARCH",
+  "ciphertext": "03095607958910773",
+  "key": "NOVELCRAFT|DRAGONFLY",
+  "keys": {
+    "digit_keyword": "NOVELCRAFT",
+    "alphabet_keyword": "DRAGONFLY",
+    "digit_key": "6703528149"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Tridigital.pdf",
+  "plaintext_sha256": "47a1d43d7fc3f44a58ad159c10595dc75f5bae00b618e82f95408908aa0ff396",
+  "note": "Verification certificate for a published worked example of the Tridigital cipher (American Cryptogram Association cipher sheet: plaintext sentence \"the ides of march\", digit keyword NOVELCRAFT, alphabet keyword DRAGONFLY, ciphertext 03095 60795 89107 73.). Known-cipher solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
