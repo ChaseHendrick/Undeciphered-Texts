@@ -62,3 +62,9 @@
 - https://github.com/doranchak/azdecrypt
 - https://github.com/CrypToolProject/CrypTool-2
 - https://github.com/mittagessen/kraken
+
+## Kryptos K1 (keyed Vigenère; not K4)
+- https://www.nsa.gov/portals/75/documents/news-features/declassified-documents/cia-kryptos-sculpture/doc_1.pdf
+- https://archive.org/stream/KryptosSculptureFOIACIADocumentation/Kryptos%20Sculpture%20FOIA%20CIA%20Documentation%20_djvu.txt
+- https://en.wikipedia.org/wiki/Kryptos
+- See [kryptos-k1.md](kryptos-k1.md)
