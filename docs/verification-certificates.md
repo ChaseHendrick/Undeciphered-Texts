@@ -15,7 +15,7 @@ These certificates check a **published worked example**, a **cited dictionary gl
 
 ## Classical solvers with published or fixture examples
 
-bifid, digrafid (ACA fractionation example), playfair, adfgvx, columnar (Kryptos K3), keyed Vigenère (Kryptos K1 and K2), caesar, vigenère, substitution, crib, beam-search, two-square (synthetic English only).
+bifid, digrafid (ACA fractionation example), playfair, adfgvx, columnar (Kryptos K3), keyed Vigenère (Kryptos K1 and K2), caesar, vigenère, substitution, crib, beam-search, two-square (synthetic English only), ragbaby (ACA sheet, keyword GROSBEAK).
 
 ## Lookups and readers with a cited known text
 

@@ -48,6 +48,7 @@ Companion notes: [beam-search.md](beam-search.md), [em-sign-aligner.md](em-sign-
 | `engine/stats.py` | Index of coincidence, Friedman estimate, n-gram counts, and Kasiski. | `tests/test_recover.py` (via Vigenère Kasiski) | Does not alone recover plaintext. |
 | `engine/stroke_geometry.py` | Stroke geometry and letter-shape comparison. | `tests/test_stroke_geometry.py`: print/cursive/slant/flip/shape | Not forensic ID; not manuscript reading. |
 | `glyph_reader.py` | Segment ink marks and match repeats to a small synthetic sign inventory. | `tests/test_glyph_reader.py`: recovers planted labels | Synthetic inventory match only; not Linear A/Indus/Teotihuacan. |
+| `engine/solvers/ragbaby.py` | Ragbaby known-key decrypt on the ACA 24-letter alphabet (I/J and W/X paired). | `tests/test_ragbaby.py`: test_keyed_alphabet_matches_the_published_block, test_encrypt_matches_published_ciphertext, test_solver_recovers_published_plaintext_exactly, test_certificate_decrypts_and_matches_plaintext_hash | Known keyword only. Not in SOLVERS. Does not read Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86. |
 
 ## Out of scope
 

@@ -1,0 +1,13 @@
+{
+  "cipher_name": "ragbaby",
+  "plaintext": "WORD DIVISIONS ARE KEPT.",
+  "ciphertext": "YBBL HNGQDUFGL DEF HFYR.",
+  "key": "GROSBEAK",
+  "keys": {
+    "keyword": "GROSBEAK",
+    "keyed_alphabet": "GROSBEAKCDFHILMNPQTUVWYZ"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Ragbaby.pdf",
+  "plaintext_sha256": "2a5106a9c1bdf2daa32494c02712b14e90e5aedd182898108d20a5ba0e0f1226",
+  "note": "Verification certificate for a published worked example of the Ragbaby cipher (American Cryptogram Association cipher sheet: plaintext sentence \"Word divisions are kept.\", keyword GROSBEAK, 24-letter keyed alphabet GROSBEAKCDFHILMNPQTUVWYZ, ciphertext YBBL HNGQDUFGL DEF HFYR.). Known-cipher solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
