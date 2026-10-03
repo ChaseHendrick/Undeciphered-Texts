@@ -6,6 +6,7 @@ from collections.abc import Callable
 
 from engine.result import SolveResult
 from engine.solvers.caesar import solve_caesar
+from engine.solvers.keyed_vigenere import solve_keyed_vigenere
 from engine.solvers.substitution import solve_substitution
 from engine.solvers.vigenere import solve_vigenere
 
@@ -20,6 +21,7 @@ SOLVERS: dict[str, Solver] = {
 __all__ = [
     "SOLVERS",
     "solve_caesar",
+    "solve_keyed_vigenere",
     "solve_substitution",
     "solve_vigenere",
 ]
