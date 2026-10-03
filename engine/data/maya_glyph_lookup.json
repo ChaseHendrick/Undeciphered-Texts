@@ -1,0 +1,26 @@
+{
+  "disclaimer": "This file repeats one published reading of an already-deciphered Classic Maya sign. It does not decipher undeciphered Maya passages.",
+  "source": {
+    "title": "Learner's Maya Glyph Guide",
+    "authors": "Sim Lee and John Pedersen",
+    "dated": "April 2026",
+    "work": "HTML version of Sim Lee, Classic Maya Glyph Guide (Amsterdam: self-published, 2023-2026)",
+    "grid_url": "https://mayaglyphs.org/CMGGgrid.html",
+    "fetched": "2026-10-02"
+  },
+  "glyphs": [
+    {
+      "thompson": "T544",
+      "also_listed_as": [
+        "T755",
+        "T1010abc"
+      ],
+      "reading": "K'IN",
+      "reading_codepoints": "The grid label is the HTML character reference &#x27; (U+0027 APOSTROPHE) in K'IN.",
+      "part_of_speech": "Noun",
+      "gloss": "day; sun; calendar unit k’in, 1st (lowest) position in the LC = 1 day",
+      "gloss_note": "The entry page writes the vowel in k’in with U+2019 RIGHT SINGLE QUOTATION MARK.",
+      "source_url": "https://mayaglyphs.org/CWLhtml/K%27INlogo.html"
+    }
+  ]
+}
