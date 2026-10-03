@@ -116,6 +116,7 @@ Full inventory of solvers and analysis tools (classical, keyed Vigenère, column
 | [`docs/cipher-synthesis.md`](docs/cipher-synthesis.md) | Optional Z3 constraints and conditional plaintext consensus |
 | [`docs/tool-interface.md`](docs/tool-interface.md), [`solver-reasoning.md`](docs/solver-reasoning.md) | Connected solver invocation and bounded investigative planning |
 | [`docs/neural-upgrades.md`](docs/neural-upgrades.md), [`neural-training.md`](docs/neural-training.md) | Family recognition, training objectives, benchmarks and quality gates |
+| [`docs/cross-repo-learning.md`](docs/cross-repo-learning.md) | Verified cross-repository audit and optional Fins-inspired council budget allocation |
 | [`docs/WORKFLOW.md`](docs/WORKFLOW.md), [`cases/README.md`](cases/README.md) | Intake, provenance, bounded runs, and review of unsolved cases |
 | [`schemas/cipher-case.schema.json`](schemas/cipher-case.schema.json), [`templates/unsolved-case.json`](templates/unsolved-case.json) | Machine-readable case format and editable template |
 | [`docs/ocr-backends.md`](docs/ocr-backends.md) | Local image transcription backends and setup |

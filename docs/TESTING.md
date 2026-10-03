@@ -126,9 +126,18 @@ Without Z3, dependency validation still runs and the exact symbolic integration 
 .venv/bin/python -m unittest tests.test_persona_emperor_solver tests.test_persona_inheritance_solver tests.test_persona_hallucinogens_solver tests.test_persona_pacifist_solver -v
 .venv/bin/python -m unittest tests.test_persona_detective_solver tests.test_persona_cartographer_solver tests.test_persona_mechanic_solver tests.test_persona_normal_man_solver tests.test_persona_adversary_solver tests.test_persona_skeptic_solver -v
 .venv/bin/python -m unittest tests.test_persona_solver_common tests.test_persona_council tests.test_persona_council_audit tests.test_case_investigation -v
+.venv/bin/python -m unittest tests.test_solver_scheduler tests.test_persona_adaptive_schedule -v
 .venv/bin/python -m unittest tests.test_neural_training tests.test_neural_router_v2 tests.test_neural_lookahead -v
 .venv/bin/python -m unittest tests.test_neural_m209_features tests.test_neural_audit tests.test_neural_exclusions tests.test_neural_artifact -v
 ```
+
+The optional council scheduler has 17 policy and integration controls. They check
+correctness before check cost, baseline-relative evidence gates, exact budgets,
+minimum exploration, current-input exclusion and isolation of prior outcomes
+from plaintext fitting. Without a profile the original council allocation stays
+unchanged. Full local discovery on 2026-10-03 passed 1078 tests in 37.108 seconds
+with NumPy, Pillow, Z3 and a detected local OCR backend, without skips. This is a
+local tested result; inspect CI separately. See [cross-repository learning](cross-repo-learning.md).
 
 The thirteen new classical helpers replay literal ACA examples with their published parameters. RSA Wiener instead uses an independently published weak key and a clearly labeled synthetic message. Recovered output is hashed, including only the bytes or letters declared by each certificate. Progressive Key certifies the printed 30-letter prefix; Baconian's second carrier certifies eleven printed letters. No missing continuation is invented.
 

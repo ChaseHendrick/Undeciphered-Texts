@@ -6,6 +6,7 @@ plaintext reference or rename the separate neural router.
 from __future__ import annotations
 
 from collections.abc import Sequence
+from hashlib import sha256
 import importlib
 import math
 from engine.language import get_model
@@ -31,14 +32,17 @@ def _strategies():
 def investigate_personas(text, *, cribs=(), lexicon=None, keywords=None,
                         max_checks=9000, max_candidates=20, max_rotations=8,
                         personas=None, unplaced_crib=None, verification_cribs=(),
-                        expected_plaintext_sha256=None, proposed_plaintext=None):
+                        expected_plaintext_sha256=None, proposed_plaintext=None,
+                        adaptive_profile=None):
     """Run systematic, clue-based and compositional search without hidden keys.
 
 Each successive policy receives a share of the remaining work. Unspent work
 is reallocated. Check units remain tool-specific bounded operations, not a
 wall-clock guarantee. No claim of independent evidence follows from votes.
+An optional prior calibration profile gates the initial budget plan. Its
+current ciphertext is excluded and its outcomes never enter plaintext fitting.
     """
-    _, cribs, known = validate_inputs(text, cribs, max_checks, max_candidates)
+    normalized, cribs, known = validate_inputs(text, cribs, max_checks, max_candidates)
     _, _, heldout = validate_inputs(text,verification_cribs,max_checks,max_candidates)
     if set(known) & set(heldout):
         raise ValueError("reserved verification cribs overlap training positions")
@@ -57,12 +61,28 @@ wall-clock guarantee. No claim of independent evidence follows from votes.
         raise ValueError("reserved verification evidence requires the Skeptic persona")
     if not isinstance(max_rotations, int) or isinstance(max_rotations, bool) or not 0 <= max_rotations <= 32:
         raise ValueError("max_rotations must be an integer in 0..32")
+    schedule = None
+    if adaptive_profile is not None:
+        from engine.solver_scheduler import allocate_solver_budget
+        schedule = allocate_solver_budget(selected, max_checks=max_checks,
+            adaptive_profile=adaptive_profile,
+            ciphertext_sha256=sha256(normalized.encode("ascii")).hexdigest())
     strategies = _strategies()
     spent, reports, actions, merged = 0, {}, [], {}
+    planned_so_far = 0
     review_shortlist = None
     for index, persona in enumerate(selected):
         remaining = max_checks - spent
-        allocation = (remaining + len(selected) - index - 1) // (len(selected) - index)
+        modes_left = len(selected) - index
+        if schedule is None:
+            allocation = (remaining + modes_left - 1) // modes_left
+        else:
+            planned = schedule["allocations"][persona]
+            # Share unused earlier checks across the remaining policies while
+            # preserving their initial allocations and the total work cap.
+            carry = planned_so_far - spent
+            allocation = planned + (carry + modes_left - 1) // modes_left
+            planned_so_far += planned
         params = dict(cribs=cribs, max_checks=allocation, max_candidates=max_candidates)
         if persona == "inheritance":
             params.update(lexicon=lexicon, keywords=keywords)
@@ -151,6 +171,8 @@ wall-clock guarantee. No claim of independent evidence follows from votes.
                   candidate_count_before_cap=len(merged), retained_candidates=len(candidates),
                   bounds={"max_checks": max_checks, "max_candidates": max_candidates,
                           "max_rotations": max_rotations, "max_letters": 512})
+    if schedule is not None:
+        result["budget_schedule"] = schedule
     return result
 
 
