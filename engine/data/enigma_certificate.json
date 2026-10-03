@@ -1,0 +1,16 @@
+{
+  "cipher_name": "enigma",
+  "plaintext": "AAAAA",
+  "ciphertext": "BDZGO",
+  "key_settings": {
+    "rotors": ["I", "II", "III"],
+    "rotor_order": "left to right",
+    "reflector": "B",
+    "rings": "AAA",
+    "positions": "AAA",
+    "plugboard": []
+  },
+  "source_url": "https://en.wikipedia.org/wiki/Enigma_rotor_details",
+  "plaintext_sha256": "11770b3ea657fe68cba19675143e4715c8de9d763d3c21a85af6b7513d43997d",
+  "note": "Verification certificate for a published worked example of the known-key historical three-rotor Enigma (Enigma I, the military form of the commercial Enigma). Rotors I II III, wide B reflector, rings AAA, start AAA, empty plugboard, as printed on Wikipedia's Enigma rotor details page. Not a break of an unsolved intercept. Not a claim about army message Nr. 86 or Kryptos K4."
+}
