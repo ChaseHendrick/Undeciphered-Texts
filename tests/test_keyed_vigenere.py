@@ -1,9 +1,13 @@
-"""Known-key keyed Vigenère, pinned to the published Kryptos K1 reading.
+"""Known-key keyed Vigenère, pinned to the published Kryptos K1 and K2 readings.
 
-The expected plaintext is the letter-by-letter decrypt in the NSA FOIA paper
+K1's expected plaintext is the letter-by-letter decrypt in the NSA FOIA paper
 (DOCID 4051151), which Wikipedia's "Solution of passage 1" also prints with
 spaces. The prose line in that memo that says ILLUSION is a respacing, not
-the letter groups. This test fails if those groups are "corrected".
+the letter groups. That test fails if those groups are "corrected".
+
+K2's expected plaintext is Wikipedia's "Solution of passage 2", which Sanborn
+confirmed in 2006. The same NSA memo reads the panel as cut and ends
+IDBYROWS. That ending is not the published K2 plaintext.
 
 K4 is out of scope. Nothing here is a K4 claim.
 """
@@ -99,6 +103,95 @@ class KryptosK1Test(unittest.TestCase):
 
     def test_not_registered_as_a_blind_solver(self) -> None:
         self.assertNotIn("keyed-vigenere", SOLVERS)
+
+
+# Sculpture K2 (Wikipedia note, the twelve lines after K1) plus the one
+# ciphertext S Sanborn said was left off the panel. That S is the ninth
+# character from the end, between E and W of ...PLGEWJLLAETG. Wikipedia,
+# "Solution of passage 2" (fetched 2026-10-02), and the 2006 Sanborn
+# confirmation print the plaintext this insertion recovers. The 1992 NSA
+# FOIA memo (DOCID 4051151) uses the same key ABSCISSA, the same KRYPTOS
+# alphabet, and index letter K, but it reads the panel as cut, so its
+# letter groups end IDBYROWS and its prose prints UNDERGROUND,
+# TRANSMISSION, and SEVENTY-SEVEN MINUTES. Those are not this plaintext.
+PUBLISHED_K2_PANEL = (
+    "VFPJUDEEHZWETZYVGWHKKQETGFQJNCE"
+    "GGWHKK?DQMCPFQZDQMMIAGPFXHQRLG"
+    "TIMVMZJANQLVKQEDAGDVFRPJUNGEUNA"
+    "QZGZLECGYUXUEENJTBJLBQCRTBJDFHRR"
+    "YIZETKZEMVDUFKSJHKFWHKUWQLSZFTI"
+    "HHDDDUVH?DWKBFUFPWNTDFIYCUQZERE"
+    "EVLDKFEZMOQQJLTTUGSYQPFEUNLAVIDX"
+    "FLGGTEZ?FKZBSFDQVGOGIPUFXHHDRKF"
+    "FHQNTGPUAECNUVPDJMQCLQUMUNEDFQ"
+    "ELZZVRRGKFFVOEEXBDMVPNFQXEZLGRE"
+    "DNQFMPNZGLFLPMRJQYALMGNUVPDXVKP"
+    "DQUMEBEDMHDAFMJGZNUPLGEWJLLAETG"
+)
+PUBLISHED_K2_CIPHERTEXT = PUBLISHED_K2_PANEL.replace("PLGEWJLLAETG", "PLGESWJLLAETG", 1)
+PUBLISHED_K2_PLAINTEXT = (
+    "ITWASTOTALLYINVISIBLEHOWSTHATPOSSIBLE?THEYUSEDTHEEARTHSMAGNETICFIELDX"
+    "THEINFORMATIONWASGATHEREDANDTRANSMITTEDUNDERGRUUNDTOANUNKNOWNLOCATIONX"
+    "DOESLANGLEYKNOWABOUTTHIS?THEYSHOULDITSBURIEDOUTTHERESOMEWHEREX"
+    "WHOKNOWSTHEEXACTLOCATION?ONLYWWTHISWASHISLASTMESSAGEX"
+    "THIRTYEIGHTDEGREESFIFTYSEVENMINUTESSIXPOINTFIVESECONDSNORTH"
+    "SEVENTYSEVENDEGREESEIGHTMINUTESFORTYFOURSECONDSWESTXLAYERTWO"
+)
+PUBLISHED_K2_SPACED = (
+    "IT WAS TOTALLY INVISIBLE HOWS THAT POSSIBLE ? THEY USED THE EARTHS "
+    "MAGNETIC FIELD X THE INFORMATION WAS GATHERED AND TRANSMITTED "
+    "UNDERGRUUND TO AN UNKNOWN LOCATION X DOES LANGLEY KNOW ABOUT THIS ? "
+    "THEY SHOULD ITS BURIED OUT THERE SOMEWHERE X WHO KNOWS THE EXACT "
+    "LOCATION ? ONLY WW THIS WAS HIS LAST MESSAGE X THIRTY EIGHT DEGREES "
+    "FIFTY SEVEN MINUTES SIX POINT FIVE SECONDS NORTH SEVENTY SEVEN DEGREES "
+    "EIGHT MINUTES FORTY FOUR SECONDS WEST X LAYER TWO"
+)
+
+
+class KryptosK2Test(unittest.TestCase):
+    def test_recovers_published_k2_plaintext_exactly(self) -> None:
+        result = solve_keyed_vigenere(
+            PUBLISHED_K2_CIPHERTEXT,
+            key="ABSCISSA",
+            alphabet_keyword="KRYPTOS",
+            index_letter="K",
+        )
+        self.assertEqual(result.plaintext, PUBLISHED_K2_PLAINTEXT)
+        self.assertEqual(letters_only(result.plaintext), letters_only(PUBLISHED_K2_SPACED))
+        self.assertIn("UNDERGRUUND", result.plaintext)
+        self.assertNotIn("UNDERGROUND", result.plaintext)
+        self.assertTrue(result.plaintext.endswith("WESTXLAYERTWO"))
+        self.assertNotIn("IDBYROWS", result.plaintext)
+        self.assertEqual(result.plaintext.count("?"), 3)
+        self.assertEqual(result.key, "ABSCISSA")
+        self.assertEqual(result.details["alphabet"], PUBLISHED_ALPHABET)
+        self.assertEqual(result.details["index_letter"], "K")
+        self.assertEqual(result.details["period"], 8)
+        self.assertNotIn("k4 plaintext", result.details["scope"].lower())
+        panel = solve_keyed_vigenere(
+            PUBLISHED_K2_PANEL,
+            key="ABSCISSA",
+            alphabet_keyword="KRYPTOS",
+            index_letter="K",
+        )
+        self.assertNotEqual(panel.plaintext, PUBLISHED_K2_PLAINTEXT)
+        self.assertTrue(panel.plaintext.endswith("WESTIDBYROWS"))
+
+    def test_encrypt_published_plaintext_reproduces_ciphertext(self) -> None:
+        cipher = keyed_vigenere_encrypt(
+            PUBLISHED_K2_PLAINTEXT,
+            key="ABSCISSA",
+            alphabet_keyword="KRYPTOS",
+            index_letter="K",
+        )
+        self.assertEqual(cipher, PUBLISHED_K2_CIPHERTEXT)
+        again = keyed_vigenere_decrypt(
+            cipher,
+            key="abscissa",
+            alphabet_keyword="Kryptos",
+            index_letter="k",
+        )
+        self.assertEqual(again, PUBLISHED_K2_PLAINTEXT)
 
 
 class KeyedVigenereGeneralTest(unittest.TestCase):
