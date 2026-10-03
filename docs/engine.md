@@ -65,3 +65,35 @@ Reasons, not missing polish:
 Short ciphertext is also a hard limit. Caesar needs enough letters for a frequency peak. Vigenère on this engine wants on the order of a few dozen letters per key column. Simple substitution wants roughly 80 letters and is aimed at a few hundred; below that the search is not reliable. German and Spanish are supported for Caesar and Vigenère unigram scoring only. Substitution fitness is English.
 
 Nothing here claims a new historical decipherment.
+
+
+## German letter and quadgram score
+
+`engine/german.py` is a fitness function for **Latin letters that might be German**. It is not wired into Caesar, Vigenère, or substitution search, and it does not decrypt anything.
+
+The sample is a short public-domain excerpt, not an unsolved ciphertext: the opening of Jacob and Wilhelm Grimm, "Der Froschkönig oder der eiserne Heinrich," from *Deutsche Märchen gesammelt durch die Brüder Grimm*, ed. M. Thilo-Luyken (Ebenhausen: Wilhelm Langewiesche-Brandt, 1921), Project Gutenberg eBook #77905, in `engine/data/german_excerpt.txt`. Attribution lines in that file are not counted. After umlaut folding the sample is 1938 letters. Smoothed unigram rates from that count (highest first) begin E, N, I, S, D, R, A, H, T, L. Quadgrams use the same backoff log-likelihood as `LanguageModel`, fit on the folded excerpt.
+
+`tests/test_german.py` holds out a sentence from a different tale in the same edition ("Der Wolf und die sieben jungen Geißlein"). That sentence is not in the excerpt. On the run recorded here its quadgram sum was about −288.9 against about −629.3 for a same-length random string (seed 86), and its chi-square against the excerpt unigrams was about 22.7 against about 7829 for that random string. Higher quadgram and unigram log-likelihood, and lower chi-square, means "more like this fairy tale," not "this is the plaintext."
+
+### Truppenschlüssel Nr. 86, logged failures only
+
+The 3 July 1941 Funkspruch Nr. 86 (FBOIQ, 46 letters) is still unsolved here. The strings below are the Caesar, Vigenère, and substitution dumps already logged as **failed** in `docs/logs/attempt-2026-10-02.md`. They were not re-solved, and no German plaintext was written for them. Mean quadgram is the sum divided by (letters − 3), so the 46-letter dumps can be set next to the longer probe (probe mean about −2.05):
+
+| Stream | Mean quadgram | Quadgram sum | Unigram log | Chi-square |
+|---|---:|---:|---:|---:|
+| Held-out Grimm sentence | −2.05 | −288.9 | −383.1 | 22.7 |
+| Logged substitution dump | −3.33 | −143.3 | −159.3 | 241.8 |
+| Logged Caesar dump (shift 4) | −3.50 | −150.5 | −170.5 | 1113.1 |
+| Logged Vigenère dump (key `FTTA`) | −3.74 | −161.0 | −157.4 | 206.2 |
+| Undecrypted ciphertext | −4.10 | −176.4 | −169.8 | 503.2 |
+| Random 46 letters (seed 86) | −4.64 | −199.4 | −216.7 | 3140.4 |
+
+All three failed dumps sit below the German sentence. The substitution dump is the least bad of them and beats the raw ciphertext, which is what an English letter search does: it pushes the string toward English-looking fragments. That is not German and not a reading of the message.
+
+Limits:
+
+- The excerpt is nineteenth-century literary German, a few thousand letters, not 1941 military prose. Letter habits the tale barely has (J, Q, X, Y) stay near the smoothing floor, so chi-square on a short string is unstable and is not a verdict.
+- ä, ö, ü, and ß are expanded to AE, OE, UE, and SS. The model never sees those characters as their own letters.
+- Forty-six letters is too short for a quadgram score to identify a plaintext. A better score is still only resemblance to this sample.
+- Truppenschlüssel is a manual digraph cipher on two 5×5 squares (J omitted). This score does not implement that cipher. Running it on a Caesar, Vigenère, or monoalphabetic dump does not turn the dump into German.
+- Nothing here is a historical decipherment. The Nr. 86 message remains unbroken.
