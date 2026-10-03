@@ -33,6 +33,24 @@ The CLI is `python -m engine.cli` with explicit subcommands (`caesar`, `vigenere
 
 These are the usual published techniques (Friedman, Kasiski, chi-squared column shifts, quadgram hill-climbing, Metropolis annealing). The code is local; it is not a copy of another solver project.
 
+
+## Learned fitness function
+
+`engine/neural.py` trains a small character-level network and uses it as a **second opinion** beside the quadgram score. Substitution search itself is unchanged: `solve_substitution` still maximises quadgram log-likelihood from `engine/language.py`. After a candidate key is chosen, the network's log-likelihood is stored on the result as `details["neural_score"]` (`details["second_opinion"]` is `neural_trigram`).
+
+The model is a trigram net. The two previous letters are one-hot vectors, a tanh hidden layer of 32 units mixes them, and a 26-way softmax predicts the next letter. Weights start random and are fit by gradient descent on next-letter cross-entropy, so the parameters are learned rather than copied from a published frequency table. Numpy does the matrix updates when it is installed; otherwise the same updates run in the standard library. No GPU and no downloaded checkpoint.
+
+Training text is a short public-domain excerpt: Lewis Carroll, *Alice's Adventures in Wonderland*, chapter I (Project Gutenberg eBook 11), in `engine/data/alice_excerpt.txt`. Attribution lines in that file are not trained on. The excerpt is not the demo plaintext and not the plaintext in `engine/fixtures.py`. `tests/test_neural.py` checks that the fitted model prefers a held-out English sentence over a random letter string of the same length, and that training loss fell.
+
+Limits of this fitness function:
+
+- A higher neural score means "these Latin letters look more like the Alice excerpt." It does not mean the candidate is the correct plaintext, and it does not identify an unknown language.
+- It does not decipher Linear A, the Voynich manuscript, the Vesuvius scrolls, or any other undeciphered script. Putting those signs through the model only measures a forced resemblance to one English sample.
+- It is not the search objective. Quadgrams can prefer a key that the network likes less, and the reverse. The two numbers check each other; together they are still only English-letter fitness.
+- The sample is short and literary. Letter habits that the excerpt barely contains stay weak. German, Spanish, and non-Latin scripts are outside this model.
+- Nothing here is a historical decipherment.
+
+
 ## What it cannot do
 
 **Linear A, Voynich, Rongorongo, the Indus script, the Phaistos disc, and other undeciphered writing systems are out of scope.** The engine will not produce a reading of them.
