@@ -97,3 +97,26 @@ Limits:
 - Forty-six letters is too short for a quadgram score to identify a plaintext. A better score is still only resemblance to this sample.
 - Truppenschlüssel is a manual digraph cipher on two 5×5 squares (J omitted). This score does not implement that cipher. Running it on a Caesar, Vigenère, or monoalphabetic dump does not turn the dump into German.
 - Nothing here is a historical decipherment. The Nr. 86 message remains unbroken.
+
+## Unknown-script analysis tools (not decipherment)
+
+`engine/script_tools.py` adds measurements for a **transcribed sign corpus**. These are ordinary corpus statistics and a crib consistency check. **They do not read Linear A, the Voynich manuscript, Rongorongo, Indus, the Phaistos disc, or any other undeciphered writing system.** Running them on a real undeciphered transcription only reports frequencies, repeats, and whether a *proposed* sign-to-sound map hits a word list you already supplied.
+
+| Tool | What it does | Module entry |
+|---|---|---|
+| Sign inventory | Count distinct signs and report relative frequencies | `sign_inventory`, `load_sign_corpus` |
+| Repeated-sequence finder | List n-sign sequences that appear at least twice, with positions | `find_repeated_sequences` |
+| Bilingual crib checker | Apply a proposed sign→sound map to word-length sign sequences; report matches, mismatches, and unmapped skips against a known word list | `check_bilingual_crib` |
+
+Fixtures (invented labels `SX##`, not a historical script):
+
+- `engine/data/synthetic_sign_corpus.txt` — small whitespace-tokenized corpus for inventory and repeats
+- `engine/data/synthetic_bilingual.json` — tiny bilingual with a correct map, a deliberately wrong map, a word list, and five inscriptions
+
+`tests/test_script_tools.py` checks that the inventory ranks the fixture's frequent signs, that `SX02 SX03` is found as a repeat, that the correct map matches every known word, and that the wrong map is rejected (mismatches, `all_matched` is false).
+
+Limits:
+
+- Inventory and repeats need a transcription you trust. Bad segmentation produces a bad table.
+- The crib checker only tests consistency with the lexicon you pass in. A perfect score on a synthetic list is not a historical decipherment.
+- Nothing in this section claims a reading of Linear A or Voynich.
