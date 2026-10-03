@@ -1,0 +1,14 @@
+{
+  "cipher_name": "amsco",
+  "name": "amsco",
+  "plaintext": "INCOMPLETECOLUMNARWITHALTERNATINGSINGLELETTERSANDDIGRAPHS",
+  "ciphertext": "CECRTEGLENPHPLUTNANTEIOMOWIRSITDDSINTNALINESAALEMHATGLRGR",
+  "key": "41325/digraph",
+  "keys": {
+    "numeric_key": "41325",
+    "start": "digraph"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Amsco.pdf",
+  "plaintext_sha256": "63e21d7c7358cdd382592555bdb4e3e5046fca26b1f7a34948828acc1054e13e",
+  "note": "Verification certificate for the ACA AMSCO sheet worked example. Numeric key 41325. The first cell is a digraph. The sheet prints the plaintext as 'Incomplete columnar with alternating single letters and digraphs.' Spaces are not enciphered and are not included in plaintext or in plaintext_sha256. That hash is SHA-256 of INCOMPLETECOLUMNARWITHALTERNATINGSINGLELETTERSANDDIGRAPHS (57 letters). The sheet groups the ciphertext in blocks of five as CECRT EGLEN PHPLU TNANT EIOMO WIRSI TDDSI NTNAL INESA ALEMH ATGLR GR. Those spaces and the final period are not in the ciphertext field. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, Zodiac Z13, Zodiac Z32, the Beale ciphers, the McCormick cipher, or army message Nr. 86."
+}
