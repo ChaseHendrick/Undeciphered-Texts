@@ -92,3 +92,7 @@
 ## Nihilist transposition (ACA known numeric key; not an unknown script)
 - https://www.cryptogram.org/downloads/aca.info/ciphers/NihilistTransposition.pdf
 - See [nihilist-transposition.md](nihilist-transposition.md)
+
+## Chaocipher (Programming Praxis known alphabets; not Byrne's exhibits)
+- https://programmingpraxis.com/2010/07/06/chaocipher/
+- See [chaocipher.md](chaocipher.md)

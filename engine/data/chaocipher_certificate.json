@@ -1,0 +1,14 @@
+{
+  "cipher_name": "chaocipher",
+  "name": "chaocipher",
+  "plaintext": "WELLDONEISBETTERTHANWELLSAID",
+  "ciphertext": "OAHQHCNYNXTSZJRRHJBYHQKSOUJY",
+  "key": "HXUCZVAMDSLKPEFJRIGTWOBNYQ|PTLNBQDEOYSFAVZKGJRIHWXUMC",
+  "keys": {
+    "left": "HXUCZVAMDSLKPEFJRIGTWOBNYQ",
+    "right": "PTLNBQDEOYSFAVZKGJRIHWXUMC"
+  },
+  "source_url": "https://programmingpraxis.com/2010/07/06/chaocipher/",
+  "plaintext_sha256": "be91ac6de51f638d35b91f35313a9c14b89cfd34145c5a950977f00a60f23885",
+  "note": "Verification certificate for the Programming Praxis Chaocipher worked example (6 July 2010). Left ciphertext alphabet HXUCZVAMDSLKPEFJRIGTWOBNYQ. Right plaintext alphabet PTLNBQDEOYSFAVZKGJRIHWXUMC. Plaintext WELLDONEISBETTERTHANWELLSAID. Ciphertext OAHQHCNYNXTSZJRRHJBYHQKSOUJY. plaintext_sha256 is the SHA-256 of WELLDONEISBETTERTHANWELLSAID. This is the revealed algorithm's published test vector. Not a claim that Byrne's challenge exhibits are solved. Not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, Zodiac, Beale, McCormick, or army message Nr. 86."
+}
