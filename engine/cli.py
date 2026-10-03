@@ -7,6 +7,7 @@ import sys
 
 from engine.alphabet import letters_only
 from engine.solvers import SOLVERS
+from engine.solvers.keyed_vigenere import solve_keyed_vigenere
 from engine.stats import (
     column_mean_ic,
     friedman_period,
@@ -47,6 +48,18 @@ def _cmd_analyze(text: str, max_period: int) -> int:
 
 
 def _cmd_solve(method: str, text: str, args: argparse.Namespace) -> int:
+    if method == "keyed-vigenere":
+        if not args.key or args.alphabet is None:
+            print("keyed-vigenere requires --key and --alphabet", file=sys.stderr)
+            return 2
+        result = solve_keyed_vigenere(
+            text,
+            key=args.key,
+            alphabet_keyword=args.alphabet,
+            index_letter=args.index,
+        )
+        print(result.summary())
+        return 0
     solver = SOLVERS[method]
     if method == "vigenere":
         result = solver(text, max_period=args.max_period)
@@ -70,12 +83,21 @@ def build_parser() -> argparse.ArgumentParser:
     analyze.add_argument("--max-period", type=int, default=16)
 
     solve = sub.add_parser("solve", help="recover plaintext")
-    solve.add_argument("method", choices=sorted(SOLVERS))
+    solve.add_argument("method", choices=sorted([*SOLVERS, "keyed-vigenere"]))
     solve.add_argument("text", nargs="?", help="ciphertext; omit to read stdin")
     solve.add_argument("--max-period", type=int, default=12)
     solve.add_argument("--restarts", type=int, default=10)
     solve.add_argument("--steps", type=int, default=4000)
     solve.add_argument("--seed", type=int, default=20261002)
+    solve.add_argument("--key", help="repeating key for keyed-vigenere")
+    solve.add_argument(
+        "--alphabet",
+        help="alphabet keyword for keyed-vigenere (keyword, then remaining A-Z)",
+    )
+    solve.add_argument(
+        "--index",
+        help="index letter for keyed-vigenere (default: first letter of the mixed alphabet)",
+    )
 
     demo = sub.add_parser("demo", help="encrypt known text, solve it, write DEMO.md")
     demo.add_argument("--out", default="DEMO.md")
