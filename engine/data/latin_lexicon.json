@@ -1,0 +1,128 @@
+{
+  "note": "Small sourced lexicon for a known language. Not a decipherment of unknown texts. Gloss strings are copied from the cited page. The forms list is a reader index so an inflected token can point at that headword; it is not a morphological parse.",
+  "license": "Dickinson College Commentaries Latin Core Vocabulary is CC BY-SA 3.0. The Gallia line is quoted from the DCC Caesar commentary vocabulary on the same site.",
+  "sources": [
+    {
+      "id": "dcc-core",
+      "url": "https://dcc.dickinson.edu/latin-core-list1",
+      "title": "Latin Core Vocabulary"
+    },
+    {
+      "id": "dcc-caesar",
+      "url": "https://dcc.dickinson.edu/caesar/book-1/chapter-1-1",
+      "title": "Caesar, Gallic War 1.1, vocabulary"
+    }
+  ],
+  "entries": [
+    {
+      "lemma": "sum",
+      "headword": "sum esse fuī futūrum",
+      "gloss": "be, exist; fut. infin. often = fore, impf. subj. often = forem for essem",
+      "part_of_speech": "Verb: Irregular",
+      "semantic_group": "Life and Being",
+      "frequency_rank": 2,
+      "source_url": "https://dcc.dickinson.edu/latin-core-list1",
+      "forms": ["sum", "est", "esse"]
+    },
+    {
+      "lemma": "in",
+      "headword": "in",
+      "gloss": "in, on (+ abl.); into, onto (+ acc)",
+      "part_of_speech": "Preposition",
+      "semantic_group": "Place",
+      "frequency_rank": 5,
+      "source_url": "https://dcc.dickinson.edu/latin-core-list1",
+      "forms": ["in"]
+    },
+    {
+      "lemma": "omnis",
+      "headword": "omnis -e",
+      "gloss": "all, every, as a whole",
+      "part_of_speech": "Adjective: 3rd Declension",
+      "semantic_group": "Measurement",
+      "frequency_rank": 18,
+      "source_url": "https://dcc.dickinson.edu/latin-core-list1",
+      "forms": ["omnis"]
+    },
+    {
+      "lemma": "divido",
+      "headword": "dīvidō -ere dīvīsī dīvīsum",
+      "gloss": "divide, separate",
+      "part_of_speech": "Verb: 3rd Conjugation -ō",
+      "semantic_group": "Making/Doing",
+      "frequency_rank": 628,
+      "source_url": "https://dcc.dickinson.edu/latin-core-list1",
+      "forms": ["divido", "divisa"]
+    },
+    {
+      "lemma": "pars",
+      "headword": "pars partis f.",
+      "gloss": "part",
+      "part_of_speech": "Noun: 3rd Declension",
+      "semantic_group": "Measurement",
+      "frequency_rank": 65,
+      "source_url": "https://dcc.dickinson.edu/latin-core-list1",
+      "forms": ["pars", "partes"]
+    },
+    {
+      "lemma": "tres",
+      "headword": "trēs tria",
+      "gloss": "three",
+      "part_of_speech": "Adjective: Numeral",
+      "semantic_group": "Measurement",
+      "frequency_rank": 533,
+      "source_url": "https://dcc.dickinson.edu/latin-core-list1",
+      "forms": ["tres", "tria"]
+    },
+    {
+      "lemma": "senatus",
+      "headword": "senātus -ūs m.",
+      "gloss": "senate",
+      "part_of_speech": "Noun: 4th Declension",
+      "semantic_group": "The City",
+      "frequency_rank": 329,
+      "source_url": "https://dcc.dickinson.edu/latin-core-list1",
+      "forms": ["senatus"]
+    },
+    {
+      "lemma": "populus",
+      "headword": "populus -ī m.",
+      "gloss": "people",
+      "part_of_speech": "Noun: 2nd Declension",
+      "semantic_group": "The City",
+      "frequency_rank": 122,
+      "source_url": "https://dcc.dickinson.edu/latin-core-list1",
+      "forms": ["populus"]
+    },
+    {
+      "lemma": "que",
+      "headword": "que",
+      "gloss": "and (postpositive enclitic)",
+      "part_of_speech": "Conjunction",
+      "semantic_group": "Conjunctions/Adverbs",
+      "frequency_rank": 4,
+      "source_url": "https://dcc.dickinson.edu/latin-core-list1",
+      "forms": ["que"]
+    },
+    {
+      "lemma": "et",
+      "headword": "et",
+      "gloss": "and",
+      "part_of_speech": "Conjunction",
+      "semantic_group": "Conjunctions/Adverbs",
+      "frequency_rank": 1,
+      "source_url": "https://dcc.dickinson.edu/latin-core-list1",
+      "forms": ["et"]
+    },
+    {
+      "lemma": "gallia",
+      "headword": "Gallia, -ae, f.",
+      "gloss": "Gaul, roughly equivalent to modern France",
+      "part_of_speech": "Noun: 1st Declension",
+      "semantic_group": null,
+      "frequency_rank": null,
+      "source_url": "https://dcc.dickinson.edu/caesar/book-1/chapter-1-1",
+      "forms": ["gallia"]
+    }
+  ]
+}
