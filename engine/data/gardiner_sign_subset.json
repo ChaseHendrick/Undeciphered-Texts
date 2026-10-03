@@ -1,0 +1,34 @@
+{
+  "source_url": "https://www.unicode.org/charts/PDF/U13000.pdf",
+  "notes": "Tiny Gardiner-code → Unicode subset from the Unicode Egyptian Hieroglyphs code chart. Known-sign dictionary lookup only — not a new decipherment.",
+  "signs": [
+    {
+      "code": "A1",
+      "unicode": "𓀀",
+      "unicode_hex": "U+13000",
+      "name": "EGYPTIAN HIEROGLYPH A001",
+      "gloss": "seated man; classifier human being"
+    },
+    {
+      "code": "N35",
+      "unicode": "𓈖",
+      "unicode_hex": "U+13216",
+      "name": "EGYPTIAN HIEROGLYPH N035",
+      "gloss": "ripple of water; phonemogram n"
+    },
+    {
+      "code": "M17",
+      "unicode": "𓇋",
+      "unicode_hex": "U+131CB",
+      "name": "EGYPTIAN HIEROGLYPH M017",
+      "gloss": "reed; phonemogram i/j"
+    },
+    {
+      "code": "Y5",
+      "unicode": "𓏠",
+      "unicode_hex": "U+133E0",
+      "name": "EGYPTIAN HIEROGLYPH Y005",
+      "gloss": "game board; phonemogram mn"
+    }
+  ]
+}
