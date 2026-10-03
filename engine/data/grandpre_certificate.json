@@ -1,0 +1,23 @@
+{
+  "cipher_name": "grandpre",
+  "name": "grandpre",
+  "plaintext": "THEFIRSTCOLUMNISTHEKEYWORD",
+  "ciphertext": "8427823456717726445464637852666584278236618873547113",
+  "key": "LADYBUGS|AZIMUTHS|CALFSKIN|QUACKISH|UNJOVIAL|EVULSION|ROWDYISM|SEXTUPLY",
+  "keys": {
+    "words": [
+      "LADYBUGS",
+      "AZIMUTHS",
+      "CALFSKIN",
+      "QUACKISH",
+      "UNJOVIAL",
+      "EVULSION",
+      "ROWDYISM",
+      "SEXTUPLY"
+    ],
+    "keyword": "LACQUERS"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Grandpre.pdf",
+  "plaintext_sha256": "bc5d477bcc9640a5ad381e97dc1f38f1dc7e41cb3a872a0e41999f0ebde4b181",
+  "note": "Verification certificate for a published worked example of the Grandpre cipher (American Cryptogram Association cipher sheet: 8x8 square whose first column is LACQUERS, plaintext sentence \"The first column is the keyword.\", ciphertext 84 27 82 34 56 71 77 26 44 54 64 63 78 52 66 65 84 27 82 36 61 88 73 54 71 13). Spaces are not encrypted, so the recovered plaintext is THEFIRSTCOLUMNISTHEKEYWORD. Known-cipher solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
