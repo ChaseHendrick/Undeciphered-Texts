@@ -1,0 +1,14 @@
+{
+  "cipher_name": "portax",
+  "name": "portax",
+  "plaintext": "THEEARLYBIRDGETSTHEWORMX",
+  "ciphertext": "NIJAMPBGQCWKHQJEUIKYMPAT",
+  "key": "EASY",
+  "keys": {
+    "key": "EASY"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Portax.pdf",
+  "message": "the early bird gets the worm",
+  "plaintext_sha256": "8fafdb9ec85c4fcae82ac9a7910fb5c3a5b7144d0d8bb674968cddd9a94690b1",
+  "note": "Verification certificate for the ACA Portax sheet worked example. Keyword EASY. The sheet prints the plaintext as 'the early bird gets the worm' and the ciphertext as NIJAM PBGQC WKHQJ EUIKY MPAT. The final x on the sheet fills the last period group (o r m x) and is included in plaintext. Spaces in the printed sentence and the five-letter ciphertext groups are not enciphered. plaintext_sha256 is the SHA-256 of THEEARLYBIRDGETSTHEWORMX. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, Zodiac, Beale, McCormick, or army message Nr. 86."
+}
