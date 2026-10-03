@@ -1,0 +1,53 @@
+{
+  "cipher_name": "M-209 (Hagelin C-38)",
+  "plaintext": "ATTACKZATZDAWN",
+  "ciphertext": "WUHDUAJRJQTLRG",
+  "key_settings": {
+    "machine": "M-209 (Hagelin C-38)",
+    "external_key": "PEOPLE",
+    "indicator": "LP",
+    "manual": "TM 11-380 (1944), cipher-key indicator LP",
+    "pins": [
+      "AB_D___HI_K_MN____ST_VW___",
+      "A__DE_G__JKL__O__RS_U_X__",
+      "AB____GH_J_LMN___RSTU_X",
+      "__C_EF_HI___MN_P__STU",
+      "_B_DEF_HI___MN_P__S",
+      "AB_D___H__K__NO_Q"
+    ],
+    "lugs": [
+      "3-6",
+      "0-6",
+      "1-6",
+      "1-5",
+      "4-5",
+      "0-4",
+      "0-4",
+      "0-4",
+      "0-4",
+      "2-0",
+      "2-0",
+      "2-0",
+      "2-0",
+      "2-0",
+      "2-0",
+      "2-0",
+      "2-0",
+      "2-0",
+      "2-0",
+      "2-5",
+      "2-5",
+      "0-5",
+      "0-5",
+      "0-5",
+      "0-5",
+      "0-5",
+      "0-5"
+    ],
+    "message": "Attack at dawn",
+    "space_letter": "Z"
+  },
+  "source_url": "http://www.jfbouch.fr/crypto/m209/WORK/index.html",
+  "plaintext_sha256": "cb6748951c9a0e5f8d7febe89f8f80d750f838875776401c7ced27eff02cd509",
+  "note": "Verification certificate for a published known-key worked example of the historical M-209 (Hagelin C-38). The pins and lugs are the TM 11-380 indicator LP settings printed with external key PEOPLE. This checks that known-key decrypt, not a break of an unsolved intercept. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
