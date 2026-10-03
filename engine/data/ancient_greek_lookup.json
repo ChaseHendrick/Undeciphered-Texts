@@ -1,0 +1,30 @@
+{
+  "disclaimer": "Lookup of one published Greek-alphabet letter and one already-published LSJ gloss of a known Classical Greek word. Not a decipherment of Linear B. Not a decipherment of unknown Greek.",
+  "fetched": "2026-10-02",
+  "letters": [
+    {
+      "codepoint": "U+0391",
+      "character": "Α",
+      "unicode_name": "GREEK CAPITAL LETTER ALPHA",
+      "ancient_name": "ἄλφα",
+      "source_url": "https://unicode.org/Public/18.0.0/charts/nameslist/0370/",
+      "ancient_name_source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0057:entry=a)/lfa"
+    },
+    {
+      "codepoint": "U+03B1",
+      "character": "α",
+      "unicode_name": "GREEK SMALL LETTER ALPHA",
+      "ancient_name": "ἄλφα",
+      "source_url": "https://unicode.org/Public/18.0.0/charts/nameslist/0370/",
+      "ancient_name_source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0057:entry=a)/lfa"
+    }
+  ],
+  "words": [
+    {
+      "lemma": "ἄνθρωπος",
+      "gloss": "man, both as a generic term and of individuals",
+      "sense": "A",
+      "source_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0057:entry=a)/nqrwpos"
+    }
+  ]
+}
