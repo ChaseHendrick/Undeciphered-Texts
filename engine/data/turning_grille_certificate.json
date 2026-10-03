@@ -1,0 +1,14 @@
+{
+  "cipher_name": "turning_grille",
+  "plaintext": "THETURNINGGRILLE",
+  "ciphertext": "TILUN RGHGE LTENI R",
+  "key": "1 8 10 12",
+  "keys": {
+    "stencil": "1 8 10 12",
+    "side": 4,
+    "direction": "clockwise"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Grille.pdf",
+  "plaintext_sha256": "5a7a241ee19286a907935cfbf7dbedd5b009be11b3a939579ac0a94437ce1327",
+  "note": "Verification certificate for a published worked example of the turning grille (Fleissner) cipher on the American Cryptogram Association Grille sheet. The sheet prints the plaintext as \"the turning grille\" and the stencil as \"1 8 10 12\" on a 4 by 4 square. Spaces and case are not enciphered, so the stored plaintext is the 16 uppercase letters THETURNINGGRILLE. The sheet prints the ciphertext in groups of five as TILUN RGHGE LTENI R followed by a period; the period is not a cell. Known-stencil solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
