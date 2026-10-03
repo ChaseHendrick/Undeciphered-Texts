@@ -1,0 +1,46 @@
+# Sources (URLs)
+
+## Overviews
+- https://www.history.com/articles/ancient-writing-systems-never-decoded
+- https://languagelog.ldc.upenn.edu/nll/?p=73606
+- https://en.wikipedia.org/wiki/Undeciphered_writing_systems
+
+## Corpora & tools
+- https://de-crypt.org/
+- https://de-crypt.org/decrypt-web/
+- https://phis.me/sigla/
+- https://sigla.phis.me/paper.html
+- http://kohaumotu.org/rongorongo_org/corpus/digit.html
+- https://beinecke.library.yale.edu/beinecke/collections/beinecke-cipher-voynich-manuscript
+- https://dbourdeau.github.io/cyphersolver/catalogue.html
+
+## Crypto Cellar / Enigma hobby
+- https://cryptocellar.org/bgac/
+- https://cryptocellar.org/bgac/1941-msg-list-unbroken.html
+- https://www.cryptocellar.org/bgac/the-mvueh-break.html
+- https://cryptocellar.org/bgac/honours-roll.html
+
+## Famous cracks
+- https://www.eurekalert.org/news-releases/845343
+- https://blog.wolfram.com/2021/03/24/the-solution-of-the-zodiac-killers-340-character-cipher/
+- https://doi.org/10.1080/01611194.2022.2160677
+- https://www.bbc.co.uk/news/uk-20456782
+
+## Aegean / Cyprus computational
+- https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0269544
+- https://aclanthology.org/2024.cl-2.7.pdf
+
+## Indus stats
+- https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009506
+
+## Mesoamerica
+- https://www.mesoweb.com/reports/Cascajal.pdf
+- https://en.wikipedia.org/wiki/Isthmian_script
+
+## External software (not vendored)
+- https://github.com/CrypToolProject/CrypTool-2
+- https://github.com/CrypToolProject/CTTS
+- https://github.com/leitro/Decipher-from-Pixels-Copiale
+- https://github.com/marinocom/Direct-Image-Decryption-Copiale
+- https://aclanthology.org/P06-2065.pdf
+- See also [external.md](external.md)
