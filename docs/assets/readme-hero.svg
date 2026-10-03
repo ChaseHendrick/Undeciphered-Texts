@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#241f1c"/>
+  <rect x="40" y="40" width="1120" height="550" fill="#302a24" stroke="#b4965a" stroke-width="3"/>
+  <rect x="70" y="70" width="1060" height="490" fill="none" stroke="#786446" stroke-width="1"/>
+  <g fill="none" stroke="#c8aa6e" stroke-width="2">
+    <rect x="120" y="180" width="50" height="80"/><rect x="200" y="180" width="50" height="80"/>
+    <rect x="280" y="180" width="50" height="80"/><rect x="360" y="180" width="50" height="80"/>
+    <rect x="440" y="180" width="50" height="80"/><rect x="520" y="180" width="50" height="80"/>
+    <rect x="600" y="180" width="50" height="80"/><rect x="680" y="180" width="50" height="80"/>
+    <rect x="760" y="180" width="50" height="80"/><rect x="840" y="180" width="50" height="80"/>
+    <rect x="920" y="180" width="50" height="80"/><rect x="1000" y="180" width="50" height="80"/>
+  </g>
+  <text x="120" y="360" fill="#ebdcb4" font-family="Georgia, serif" font-size="54">UNDECIPHERED TEXTS</text>
+  <text x="120" y="420" fill="#aa9b82" font-family="Georgia, serif" font-size="24">Research notes · Classical cipher engine · No fake decipherments</text>
+  <text x="120" y="480" fill="#8c7d64" font-family="Georgia, serif" font-size="20">Chase Hendrick / Sharpie</text>
+</svg>
