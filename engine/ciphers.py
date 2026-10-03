@@ -78,3 +78,101 @@ def substitution_decrypt(text: str, key: str) -> str:
     for plain_i, cipher_ch in enumerate(cipher_alpha):
         inverse[ord(cipher_ch) - 65] = ALPHABET[plain_i]
     return substitution_encrypt(text, "".join(inverse))
+
+
+# --- Two-square / Truppenschlüssel (double Playfair, single stage) ---
+# Alphabet omits J. Plaintext J is written as II before encipherment.
+# First plaintext letter is found in the left square, second in the right.
+# Different rows: take the other corners of the rectangle, reading the
+# ciphertext letter from the right square first, then from the left.
+# Same row: take the right-hand neighbour in each square (wrap), again
+# right-square letter first. See Ostwald & Weierud, Cryptologia / mcts.pdf.
+
+TWO_SQUARE_ALPHABET = "ABCDEFGHIKLMNOPQRSTUVWXYZ"
+
+
+def two_square_letters(text: str) -> str:
+    """A–Z stream for two-square: J folded to I, non-letters dropped."""
+    out: list[str] = []
+    for ch in text:
+        if not ch.isalpha():
+            continue
+        up = ch.upper()
+        out.append("I" if up == "J" else up)
+    return "".join(out)
+
+
+def square_from_keyword(keyword: str) -> str:
+    """Build one 5×5 square string (25 letters, no J) from a keyword."""
+    cleaned = two_square_letters(keyword)
+    seen: set[str] = set()
+    cells: list[str] = []
+    for ch in cleaned:
+        if ch not in seen:
+            seen.add(ch)
+            cells.append(ch)
+    for ch in TWO_SQUARE_ALPHABET:
+        if ch not in seen:
+            cells.append(ch)
+    if len(cells) != 25:
+        raise ValueError("two-square square must contain 25 distinct letters")
+    return "".join(cells)
+
+
+def _parse_square(square: str) -> list[str]:
+    cells = two_square_letters(square)
+    if len(cells) != 25 or len(set(cells)) != 25:
+        raise ValueError("two-square square must be a permutation of A–Z without J")
+    if "J" in cells:
+        raise ValueError("two-square square must omit J")
+    return list(cells)
+
+
+def _square_positions(cells: list[str]) -> dict[str, int]:
+    return {ch: i for i, ch in enumerate(cells)}
+
+
+def two_square_encrypt(text: str, left: str, right: str) -> str:
+    """Encrypt with two 5×5 squares (Truppenschlüssel single-stage rule)."""
+    left_cells = _parse_square(left)
+    right_cells = _parse_square(right)
+    left_pos = _square_positions(left_cells)
+    right_pos = _square_positions(right_cells)
+    stream = two_square_letters(text)
+    if len(stream) % 2 == 1:
+        stream += "X"
+    out: list[str] = []
+    for i in range(0, len(stream), 2):
+        p1, p2 = stream[i], stream[i + 1]
+        r1, c1 = divmod(left_pos[p1], 5)
+        r2, c2 = divmod(right_pos[p2], 5)
+        if r1 != r2:
+            out.append(right_cells[r1 * 5 + c2])
+            out.append(left_cells[r2 * 5 + c1])
+        else:
+            out.append(right_cells[r1 * 5 + (c2 + 1) % 5])
+            out.append(left_cells[r1 * 5 + (c1 + 1) % 5])
+    return "".join(out)
+
+
+def two_square_decrypt(text: str, left: str, right: str) -> str:
+    """Decrypt with two 5×5 squares (inverse of two_square_encrypt)."""
+    left_cells = _parse_square(left)
+    right_cells = _parse_square(right)
+    left_pos = _square_positions(left_cells)
+    right_pos = _square_positions(right_cells)
+    stream = two_square_letters(text)
+    if len(stream) % 2 == 1:
+        raise ValueError("two-square ciphertext length must be even")
+    out: list[str] = []
+    for i in range(0, len(stream), 2):
+        c1, c2 = stream[i], stream[i + 1]
+        r1, c1p = divmod(right_pos[c1], 5)
+        r2, c2p = divmod(left_pos[c2], 5)
+        if r1 != r2:
+            out.append(left_cells[r1 * 5 + c2p])
+            out.append(right_cells[r2 * 5 + c1p])
+        else:
+            out.append(left_cells[r1 * 5 + (c2p - 1) % 5])
+            out.append(right_cells[r1 * 5 + (c1p - 1) % 5])
+    return "".join(out)
