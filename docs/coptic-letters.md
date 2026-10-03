@@ -17,13 +17,13 @@ Names are the Unicode character names.
 
 Checked against the live pages on 2026-10-02 (ET).
 
-| Spelling | Romanization | Gloss | Source |
-|---|---|---|---|
-| ⲓⲱⲙⲉ | rōme | human, person (noun) | https://en.wiktionary.org/wiki/ⲓⲱⲙⲉ |
-| ⲁⲛⲟⲕ | anok | I (pronoun) | https://en.wiktionary.org/wiki/ⲁⲛⲟⲕ |
-| ⲥⲛⲁⲩ | snau | two (numeral) | https://en.wiktionary.org/wiki/ⲥⲛⲁⲩ |
+| Spelling | Code points | Romanization | Gloss | Source |
+|---|---|---|---|---|
+| ⲣⲱⲙⲉ | U+2CA3 U+2CB1 U+2C99 U+2C89 | rōme | human, person (noun) | https://en.wiktionary.org/wiki/ⲣⲱⲙⲉ |
+| ⲁⲛⲟⲕ | U+2C81 U+2C9B U+2C9F U+2C95 | anok | I (pronoun) | https://en.wiktionary.org/wiki/ⲁⲛⲟⲕ |
+| ⲥⲛⲁⲩ | U+2CA5 U+2C9B U+2C81 U+2CA9 | snau | two (numeral) | https://en.wiktionary.org/wiki/ⲥⲛⲁⲩ |
 
-Wiktionary points ⲓⲱⲙⲉ at Crum 1939, page 294, and ⲁⲛⲟⲕ at page 11:
+Wiktionary points ⲣⲱⲙⲉ at Crum 1939, page 294, and ⲁⲛⲟⲕ at page 11:
 
 - http://coptot.manuscriptroom.com/crum-coptic-dictionary/?pageID=294
 - http://coptot.manuscriptroom.com/crum-coptic-dictionary/?pageID=11
@@ -36,7 +36,7 @@ Those links are bibliography. This module does not OCR the scan.
 python3 -m unittest tests.test_coptic_letters -v
 ```
 
-`test_rome_letters_and_gloss` requires the four letter names of ⲓⲱⲙⲉ and the gloss "human, person".
+`test_rome_letters_and_gloss` requires the four letter names of ⲣⲱⲙⲉ (RO, OOU, MI, EIE) and the gloss "human, person".
 
 ## What this does not do
 

@@ -16,6 +16,9 @@ Lexicon rows are Sahidic (or shared-dialect) headwords. Romanization and
 English gloss are taken from the cited page, not invented here. Crum page
 links are the bibliography those Wiktionary entries give; this file does
 not transcribe the scan.
+
+Spellings are written with Unicode escapes so the code points stay obvious:
+the tested noun is U+2CA3 U+2CB1 U+2C99 U+2C89 (RO, OOU, MI, EIE).
 """
 
 from __future__ import annotations
@@ -28,6 +31,12 @@ _COPTIC_RANGES = ((0x03E2, 0x03EF), (0x2C80, 0x2CFF))
 
 UNICODE_COPTIC_CHART = "https://www.unicode.org/charts/PDF/U2C80.pdf"
 UNICODE_GREEK_AND_COPTIC_CHART = "https://www.unicode.org/charts/PDF/U0370.pdf"
+
+# Wiktionary headwords. Escapes are the real letters, not a private cipher.
+ROME = "\u2ca3\u2cb1\u2c99\u2c89"  # ro oou mi eie
+ANOK = "\u2c81\u2c9b\u2c9f\u2c95"
+SNAU = "\u2ca5\u2c9b\u2c81\u2ca9"
+ROME_CAPITAL = "\u2ca2\u2cb0\u2c98\u2c88"
 
 
 @dataclass(frozen=True)
@@ -80,37 +89,34 @@ class WordReading:
 
 
 # Romanization and gloss checked against the live Wiktionary pages on 2026-10-02.
-# ⲓⲱⲙⲉ (rōme) noun "human, person":
-#   https://en.wiktionary.org/wiki/ⲓⲱⲙⲉ
+# ROME noun "human, person": https://en.wiktionary.org/wiki/ + ROME
 #   Crum 1939 p. 294: http://coptot.manuscriptroom.com/crum-coptic-dictionary/?pageID=294
-# ⲁⲛⲟⲕ (anok) pronoun "I":
-#   https://en.wiktionary.org/wiki/ⲁⲛⲟⲕ
-#   Crum 1939 p. 11: http://coptot.manuscriptroom.com/crum-coptic-dictionary/?pageID=11
-# ⲥⲛⲁⲩ (snau) numeral "two":
-#   https://en.wiktionary.org/wiki/ⲥⲛⲁⲩ
+# ANOK pronoun "I": Crum 1939 p. 11
+#   http://coptot.manuscriptroom.com/crum-coptic-dictionary/?pageID=11
+# SNAU numeral "two"
 LEXICON: tuple[Lexeme, ...] = (
     Lexeme(
-        word="ⲓⲱⲙⲉ",
-        romanization="rōme",
+        word=ROME,
+        romanization="r\u014dme",
         gloss="human, person",
         pos="noun",
-        source_url="https://en.wiktionary.org/wiki/ⲓⲱⲙⲉ",
+        source_url="https://en.wiktionary.org/wiki/" + ROME,
         bibliography="http://coptot.manuscriptroom.com/crum-coptic-dictionary/?pageID=294",
     ),
     Lexeme(
-        word="ⲁⲛⲟⲕ",
+        word=ANOK,
         romanization="anok",
         gloss="I",
         pos="pronoun",
-        source_url="https://en.wiktionary.org/wiki/ⲁⲛⲟⲕ",
+        source_url="https://en.wiktionary.org/wiki/" + ANOK,
         bibliography="http://coptot.manuscriptroom.com/crum-coptic-dictionary/?pageID=11",
     ),
     Lexeme(
-        word="ⲥⲛⲁⲩ",
+        word=SNAU,
         romanization="snau",
         gloss="two",
         pos="numeral",
-        source_url="https://en.wiktionary.org/wiki/ⲥⲛⲁⲩ",
+        source_url="https://en.wiktionary.org/wiki/" + SNAU,
         bibliography="",
     ),
 )
