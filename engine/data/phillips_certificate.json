@@ -1,0 +1,12 @@
+{
+  "cipher_name": "phillips",
+  "plaintext": "SQUARESONEANDFIVEARETHESAMEANDSOARETWOANDEIGHT",
+  "ciphertext": "ZXVIYGZIWGIWLGPAVIPVHRTZIKGRWUFIXDGOBIMWLTSQRO",
+  "key": "COMPETE",
+  "keys": {
+    "key": "COMPETE"
+  },
+  "source_url": "https://www.cwu.edu/academics/math/_documents/kryptos-challenges/cwu-kryptos-challenge-phillips-cipher.pdf",
+  "plaintext_sha256": "afc77cf9964d241949a1415b0def8af06fcb35f78f9f7667bdab2959fc42eaf7",
+  "note": "Verification certificate for a published worked example of the Phillips cipher (Central Washington University Kryptos challenge sheet, letter-by-letter rows). Known-cipher solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
