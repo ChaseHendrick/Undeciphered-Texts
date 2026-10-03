@@ -1,0 +1,22 @@
+{
+  "cipher_name": "quagmire-i",
+  "name": "quagmire-i",
+  "plaintext": "THEQUAGONEISAPERIODICCIPHERWITHAKEYEDPLAINALPHABETRUNAGAINSTASTRAIGHTCIPHERALPHABET",
+  "ciphertext": "QPMGQRBUJUYIFDMPYAIFQYYJJJHJYCJLUUTPIDVWYMFSGAESDWHIZRBLIRVCFCZPELBPZYYJJJHWLJJLPUP",
+  "key": "pt=SPRINGFEVER indicator=FLOWER under=A",
+  "keys": {
+    "plaintext_keyword": "SPRINGFEVER",
+    "indicator": "FLOWER",
+    "indicator_under": "A",
+    "plaintext_alphabet": "SPRINGFEVABCDHJKLMOQTUWXYZ",
+    "ciphertext_alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "period": 6,
+    "key": "pt=SPRINGFEVER indicator=FLOWER under=A"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/QuagmireI.pdf",
+  "source_pdf_sha256": "d210a34ebd3cb614cb16861c15218ead70fbe44b6b4658cbf990c0662628eb70",
+  "source_fetched": "2026-10-03",
+  "message": "The Quag One is a periodic cipher with a keyed plain alphabet run against a straight cipher alphabet.",
+  "plaintext_sha256": "737e905bdb89d3ff47b6a3bc265bc4980f9b715ab6dc8721e5c9d56c7af47d43",
+  "note": "Published ACA Quagmire I worked example, page 71. Plaintext keyword SPRINGFEV(ER) normalizes to SPRINGFEVER; repeats are removed when building the alphabet. Indicator FLOWER sits under plaintext A. The ciphertext alphabet is straight A-Z. Spaces, grouping, and punctuation are omitted from the stored letter streams and plaintext hash. Known-key verification only, not an unknown-script reading or a solution of Kryptos K4, Zodiac, Beale, McCormick, Voynich, or army message Nr. 86."
+}

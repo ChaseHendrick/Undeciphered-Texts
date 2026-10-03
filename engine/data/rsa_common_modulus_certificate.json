@@ -1,0 +1,21 @@
+{
+  "cipher_name": "rsa_common_modulus",
+  "name": "rsa_common_modulus",
+  "attack": "rsa_common_modulus_coprime_exponents",
+  "instance": "synthetic",
+  "mode": "public_parameter_attack",
+  "modulus": 340282366920938460843936948965011886881,
+  "public_exponents": [17, 65537],
+  "ciphertext_integers": [124926563412530274107408452482445848228, 214229972888188659887672188139473134959],
+  "plaintext_integer": "1365204392090841280759282713515347",
+  "plaintext_hex": "0000434f4d4d4f4e204d4f44554c5553",
+  "byte_length": 16,
+  "plaintext_sha256": "040df65b22ad3cf66f391a7e44195baa24a7c52954ec2096368291094c1ce9b6",
+  "hash_encoding": "raw_bytes",
+  "storage_encoding": "hex",
+  "source_url": "https://cacr.uwaterloo.ca/hac/about/chap8.pdf",
+  "source_section": "8.2.2(vi), printed page 289",
+  "algorithm_source_url": "https://www.acsu.buffalo.edu/~mblanton/cse664/lecture14.pdf#page=12",
+  "source_inspected": "2026-10-03",
+  "note": "Synthetic textbook RSA common-modulus fixture, not a published historical ciphertext. The same message integer was encrypted with public exponents 17 and 65537 under one modulus. Literal ciphertexts were constructed with Python built-in pow before the attacker was added. Recovery uses only these public integers, extended Euclid, and signed modular powers. The result must reencrypt to both ciphertexts. The original 16-byte encoding includes two leading zero bytes; byte_length records that external encoding information, which RSA integer ciphertexts cannot recover. plaintext_sha256 hashes all 16 recovered raw bytes. No private key is supplied. This certificate does not claim an attack on a configured service, randomized RSA padding, modern cryptography in general, an unknown script, or an unsolved historical challenge."
+}

@@ -1,0 +1,41 @@
+{
+  "cipher_name": "aes",
+  "name": "aes",
+  "encoding": "hex",
+  "hash_encoding": "raw_bytes",
+  "plaintext_hex": "00112233445566778899aabbccddeeff",
+  "ciphertext_hex": "69c4e0d86a7b0430d8cdb78070b4c55a",
+  "key_hex": "000102030405060708090a0b0c0d0e0f",
+  "plaintext_sha256": "a8faed6abbf35c12a4b26e40f6feb19d736d90045c83b9f9a31f638d323e6811",
+  "source_url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197.pdf",
+  "algorithm_source_url": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197-upd1.pdf",
+  "source_checked": "2026-10-03",
+  "source_pdf_sha256": "251dfe0b5dc283abaf364adf586f7ec6dc4e495335d48dd5ee0fee6c5961da8a",
+  "vectors": [
+    {
+      "section": "Appendix C.1",
+      "key_bits": 128,
+      "key_hex": "000102030405060708090a0b0c0d0e0f",
+      "plaintext_hex": "00112233445566778899aabbccddeeff",
+      "ciphertext_hex": "69c4e0d86a7b0430d8cdb78070b4c55a",
+      "plaintext_sha256": "a8faed6abbf35c12a4b26e40f6feb19d736d90045c83b9f9a31f638d323e6811"
+    },
+    {
+      "section": "Appendix C.2",
+      "key_bits": 192,
+      "key_hex": "000102030405060708090a0b0c0d0e0f1011121314151617",
+      "plaintext_hex": "00112233445566778899aabbccddeeff",
+      "ciphertext_hex": "dda97ca4864cdfe06eaf70a0ec0d7191",
+      "plaintext_sha256": "a8faed6abbf35c12a4b26e40f6feb19d736d90045c83b9f9a31f638d323e6811"
+    },
+    {
+      "section": "Appendix C.3",
+      "key_bits": 256,
+      "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "plaintext_hex": "00112233445566778899aabbccddeeff",
+      "ciphertext_hex": "8ea2b7ca516745bfeafc49904b496089",
+      "plaintext_sha256": "a8faed6abbf35c12a4b26e40f6feb19d736d90045c83b9f9a31f638d323e6811"
+    }
+  ],
+  "note": "Official NIST FIPS 197 Appendix C AES-128, AES-192, and AES-256 known-answer vectors, using the supplied published keys. The original 2001 document is archived; NIST's 2023 replacement makes no technical algorithm changes. Top-level fields repeat the AES-128 vector. Each plaintext_sha256 hashes the recovered 16 raw bytes, not the 32 hexadecimal characters. Binary fields intentionally omit text plaintext/ciphertext fields so a text-only neural router does not treat these vectors as language. These checks do not recover unknown AES keys, validate a production implementation, or claim any unresolved historical decipherment."
+}

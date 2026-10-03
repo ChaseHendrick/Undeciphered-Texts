@@ -1,0 +1,36 @@
+{
+  "name": "puzzles",
+  "instance": "published_sudoku",
+  "source_url": "https://www.norvig.com/sudoku.html",
+  "source_title": "Peter Norvig, Solving Every Sudoku Puzzle",
+  "source_inspected": "2026-10-03",
+  "vectors": [
+    {
+      "kind": "sudoku",
+      "source_section": "Sudoku Notation and Preliminary Notions, displayed puzzle and solution; grid2",
+      "grid": "4.....8.5.3..........7......2.....6.....8.4......1.......6.3.7.5..2.....1.4......",
+      "solution": "417369825632158947958724316825437169791586432346912758289643571573291684164875293",
+      "sha256": "55c0b3434cfb2aeb07caece44e8d3a69856f6d95e22c5e61ec7e46075fc5e5e6",
+      "hash_encoding": "ASCII row-major digits, exactly 81 bytes, no whitespace",
+      "max_nodes": 10000,
+      "observed_nodes": 101,
+      "status": "solved",
+      "uniqueness": "unique",
+      "search_complete": true
+    },
+    {
+      "kind": "sudoku",
+      "source_section": "Constraint Propagation, grid1 and displayed completion",
+      "grid": "003020600900305001001806400008102900700000008006708200002609500800203009005010300",
+      "solution": "483921657967345821251876493548132976729564138136798245372689514814253769695417382",
+      "sha256": "3369c193529786cda0f22384b1a11bdff9f3b3a45666f55f51a49aacce1acc21",
+      "hash_encoding": "ASCII row-major digits, exactly 81 bytes, no whitespace",
+      "max_nodes": 1,
+      "observed_nodes": 1,
+      "status": "solved",
+      "uniqueness": "unique",
+      "search_complete": true
+    }
+  ],
+  "scope": "Published Sudoku examples only. The literal answers were transcribed from the source before implementation. Every row, column, box, and given clue is checked in tests. Uniqueness is reported only after exhaustive bounded search with one completion; two distinct completions establish nonuniqueness. Budget exhaustion remains incomplete, even if one completion has been found. These puzzle fields are not language ciphertext/plaintext pairs and are excluded from the neural text router. Word search and anagrams use general synthetic tests and supplied inputs, not historical decipherment certificates."
+}

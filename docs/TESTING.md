@@ -1,6 +1,6 @@
 # Testing
 
-A passing run means the solvers recovered **known English plaintext** from ciphertext they were not given the key for, and, if Tesseract is installed, that OCR read a PNG the test itself drew. It does not mean an ancient script, a scroll, or a modern cipher was broken.
+A passing run means the tested cipher routines matched their known answers and the workflow respected its input and result contracts. Some tests recover an unknown key; others decrypt a published worked example with its supplied key. With a local OCR backend, the image test reads a PNG drawn by the test itself. Symbolic checks require the optional Z3 dependency. It does not mean an ancient script, a scroll, or secure modern cryptography was broken.
 
 ## What “ALL PASS” means
 
@@ -19,7 +19,7 @@ OK
 
 1. The process exit status is **0**.
 2. The last line is `OK`, not `FAILED (failures=…)` or `FAILED (errors=…)`.
-3. The `Ran N tests` line matches the tests you think you ran. Today that is the recovery file plus `tests/test_ocr.py` and `tests/test_errors.py` when those files are collected.
+3. The `Ran N tests` line matches the tests you think you ran. Report optional dependency skips separately.
 
 `discover -s tests` collects every `test*.py`. A run that only executes `tests/test_recover.py` and says `Ran 7 tests` / `OK` is a pass of the classical set only. Say which command you ran.
 
@@ -54,7 +54,7 @@ Fixtures are in `engine/fixtures.py`. Ciphertext is built inside the test. The s
 
 ## OCR and the error writer
 
-- `tests/test_ocr.py` skips if `tesseract` is not on `PATH`. When it runs, it draws `THE HARBOR BELL RANG` and requires those letters back, spaces ignored. A skip is not a pass of OCR. Report the skip.
+- `tests/test_ocr.py` tests backend selection and error controls without native dependencies. Its image integration test detects system or local Tesseract, then optional macOS Vision. When it runs, it draws `THE HARBOR BELL RANG` and requires those letters back, spaces ignored. A detected backend that fails OCR makes the test fail. A missing-backend skip is not a pass of OCR.
 - `tests/test_errors.py` points the writer at a temporary file. It must not create an entry in `docs/logs/errors.md`.
 
 ## Image bytes
@@ -69,10 +69,20 @@ python3 -c "p=open('docs/assets/readme-hero.jpg','rb').read(3); print(p.hex()); 
 
 ## Adding a solver
 
-1. Put it in `engine/solvers/` and register it in `SOLVERS`.
+1. Put it in `engine/solvers/`. Register a text-only unknown-key search in `SOLVERS` when the CLI can invoke it. Supplied-key helpers such as the Quagmires stay outside that registry.
 2. Add a known-plaintext test that fails before the solver works.
 3. If it joins the demo, regenerate `DEMO.md` by running the demo, and commit that file.
 4. Do not assert a stub, and do not decrypt with a key the test already used to build the ciphertext and then call that a recovery.
+
+## Quagmire published examples
+
+The Quagmire I, II, III, and IV tests use ciphertext printed on the ACA sheets and the published keywords. The certificate checks hash the recovered plaintext. Run this set with:
+
+```bash
+python3 -m unittest discover -s tests -p 'test_quagmire_*.py' -v
+```
+
+These checks cover supplied-key encryption and decryption, not a search for an unknown Quagmire key.
 
 ## What these tests do not cover
 
@@ -84,4 +94,16 @@ python3 -c "p=open('docs/assets/readme-hero.jpg','rb').read(3); print(p.hex()); 
 
 ## CI
 
-There is no workflow in the tree. A minimal job is `python3 -m unittest discover -s tests -v` on Python 3.10 or newer. Optional second step: `python3 -m engine demo` and `git diff --exit-code DEMO.md` if the witness must stay frozen. OCR belongs in the same job only on an image that also installs `tesseract-ocr` and `python3-pil`.
+`.github/workflows/check.yml` runs standard-library tests and the recovery demo on Python 3.10. An extended Python 3.12 job installs Z3, Pillow, NumPy, Tesseract, and a demo font, then runs the full suite and demo. Demo output goes to the runner's temporary directory. These jobs run on pull requests, main pushes, or manual dispatch. Adding a workflow does not establish a remote CI pass; inspect the completed run.
+
+## Modern helpers, constraints, and case records
+
+```bash
+python3 -m pip install -r requirements-synthesis.txt
+python3 -m unittest tests.test_aes tests.test_chacha20 tests.test_rsa_common_modulus tests.test_rsa_fermat -v
+python3 -m unittest tests.test_word_pattern tests.test_reverse_engineer tests.test_cipher_synthesis tests.test_case_workflow -v
+```
+
+AES and ChaCha20 match official published vectors using supplied keys. RSA checks exercise the stated weak-instance preconditions and rejection paths. Word-pattern search is also compared with an exhaustive small-instance oracle. Reverse-engineering checks predict letters beyond supplied cribs; symbolic checks distinguish satisfying examples from forced letters and keep timeout or check exhaustion incomplete. Case tests use temporary directories for source preservation, tamper detection, path restrictions, snapshots, and candidate classifications. No private intake source is a test fixture.
+
+Without Z3, dependency validation still runs and the exact symbolic integration tests skip. No skip is reported as symbolic recovery. The core cipher package, baseline inference, and case intake remain usable without Z3.

@@ -1,92 +1,46 @@
-# UI / UX
+# UI and CLI
 
-This repository is a terminal and a set of Markdown files. There is no web app. “UI” means what a person sees when they run `python -m engine`, and what GitHub renders from the README.
+The product is a terminal package and Markdown documentation. There is no web app. This note describes the command surface checked on 2026-10-03.
 
-Checked against the code on 2026-10-02 (ET). `docs/engine.md` still describes a different CLI (`python -m engine.cli`, `stats`, `crib`, `unsupervised`). That file is stale. The help text below is what the process prints.
+## Command surfaces
 
-## Hero
+Use Python 3.10 or newer. Depending on the environment the executable is named `python` or `python3`.
 
-README line 3 is `![Hero](docs/assets/readme-hero.svg)`.
+| Command | Result | Important inputs |
+| --- | --- | --- |
+| `python3 -m engine analyze` | Letter statistics and possible periods | Ciphertext argument or stdin; `--max-period` |
+| `python3 -m engine solve` | Registered recovery result or keyed Vigenere plaintext | Method, ciphertext; keyed helper requires its supplied key and alphabet |
+| `python3 -m engine reverse-engineer` | JSON of compatible cipher models | Repeated aligned `--crib OFFSET:TEXT`; optional `--symbolic` and explicit bounds |
+| `python3 -m engine word-pattern` | JSON with candidate count, completion, and conditional recovery | Word-separated ciphertext, `--lexicon`, node and candidate limits |
+| `python3 -m engine.case_workflow` | Intake, source validation, saved analysis and hypothesis runs | See [WORKFLOW.md](WORKFLOW.md) for the case schema and commands |
+| `python3 -m engine.ocr` | Locally recognized image text | Image path, backend, page segmentation, timeout |
+| `python3 -m engine.puzzles` | Structured results for supported word and grid puzzles | See [puzzles.md](puzzles.md) |
+| `python3 -m engine demo` | Generated recovery witness | `--out` chooses the witness file |
 
-The SVG is 1,366 bytes of XML: a dark panel, twelve outlined rectangles, and the words “UNDECIPHERED TEXTS”. GitHub renders SVG in a README. It does not depend on a binary upload.
+Main commands that take optional text arguments read stdin when the argument is omitted. Use the topical documents for complete API details and `--help` for current flags.
 
-`docs/assets/readme-hero.jpg` is a real JPEG beside it (53,643 bytes, magic `FF D8 FF E0`, `JFIF`). The README does **not** link it, because an MCP upload of that file can store base64 text instead of the blob. A base64 `.jpg` does not render. See [logs/errors.md](logs/errors.md). Do not point the hero at a file whose first bytes are not `FF D8 FF` (JPEG) or `<svg` / the PNG magic `89 50 4E 47`.
+## Result meaning
 
-The picture is ornament. It is not a decipherment and not a scroll.
+Recovery commands preserve readable text output. Search and constraint tools use JSON so results can be saved and inspected. Unknown symbols and unresolved key slots remain explicit. A compatible model, a satisfying example key, or a language score does not establish a historical decipherment. See [reverse-engineering.md](reverse-engineering.md), [cipher-synthesis.md](cipher-synthesis.md), and [word-pattern.md](word-pattern.md).
 
-## One entry point
+Case reports record observations, candidate hypotheses, failed model fits, and incomplete searches separately. Optional dependencies that are unavailable cannot be reported as an executed successful search. Source bytes and candidate predictions have separate snapshots and hashes. Intake material and runtime downloads remain ignored by Git by default.
 
-```text
-usage: python -m engine [-h] {analyze,solve,demo} ...
+## Errors
 
-Recover classical ciphers with IC, Kasiski, n-grams, and search.
-```
+Invalid arguments use exit status 2 with a concise stderr explanation. Main solve input validation returns that status without a Python traceback. Symbolic-only options require `--symbolic`, including when an explicitly supplied value happens to equal the default. Missing Z3 reports its setup file.
 
-Subcommands, from `python3 -m engine --help` on this machine (`python` itself was not on `PATH`; see the error log):
+OCR empty output uses exit status 3. Backend, compiler, image, and timeout failures use status 2. An explicitly selected OCR backend never silently switches after an error. A detected backend that fails native execution is a real failure. [ocr-backends.md](ocr-backends.md) records the tested Tesseract path and the unvalidated native Vision path on this desktop.
 
-| Command | Help line | Defaults |
-|---|---|---|
-| `analyze` | IC, Friedman, Kasiski, and n-gram counts | `--max-period` 16. Text argument optional; omitted means stdin |
-| `solve` | recover plaintext | method is `caesar`, `substitution`, or `vigenere`. `--max-period` 12, `--restarts` 10, `--steps` 4000, `--seed` 20261002 |
-| `demo` | encrypt known text, solve it, write DEMO.md | `--out` `DEMO.md` (resolved from the repo root, not the cwd) |
+The recovery demo returns status 1 if a fixture misses and records a real error. Tests and deliberate failure checks use temporary files so they do not write invented failures into the repository log.
 
-There is no color. Correctness does not depend on a wide terminal. Lines are `key: value` and then `plaintext:`.
+## Generated witnesses and images
 
-### What a successful Caesar solve looks like
+`DEMO.md` is generated by the demo and includes variable timings. Never hand-edit it as if it were execution output. CI writes its demo to a temporary file rather than treating timing differences as a failure.
 
-`python3 -m engine solve caesar "Wkh kdueru ehoo udqj"` (the README sample). Captured output:
+README uses the existing `docs/assets/readme-hero.jpg`. Verify JPEG magic `FF D8 FF` and preserve that blob. The picture is ornament. It is not evidence of a decipherment or a scroll reading. Do not upload images through APIs that store base64 text instead of binary data.
 
-```text
-method: caesar
-key: 3
-score: -49.6062
-shift: 3
-chi_square: 27.277
-letters: 17
-trials: 26
-plaintext:
-The harbor bell rang
-```
+## Documentation and checks
 
-Stdout is the product. There is no “done” with an empty screen.
+README links the engine, the case workflow, target triage, and topical solver notes. [CATALOG.md](CATALOG.md) gives scope and evidence; [TESTING.md](TESTING.md) defines what passing checks mean. The GitHub workflow checks both core Python 3.10 and extended Python 3.12 with optional dependencies. Local passes and remote CI results must be reported separately.
 
-### Errors a person will actually see
-
-| Input | Exit | What is printed |
-|---|---|---|
-| `python -m engine` with no subcommand | 2 | argparse: `the following arguments are required: command` |
-| `solve rot13 ...` | 2 | `invalid choice: 'rot13' (choose from caesar, substitution, vigenere)` |
-| `analyze` of `123 !!!` or empty stdin | 2 | stderr: `no letters in input` |
-| `solve caesar` of `123 !!!` | 1 | A traceback ending in `ValueError: ciphertext has no letters`. Analyze guards this; solve does not. That inconsistency is a gap, not a feature |
-| `demo` when a fixture is not recovered | 1 | `DEMO.md` is still rewritten, with `failures:` naming the cipher, and `engine/errors.py` appends [logs/errors.md](logs/errors.md). A success does not append |
-| `python -m engine.ocr` with no arguments | 2 | `give an image path or --render TEXT` |
-| OCR stdout empty | 3 | stderr: `ocr returned no text` |
-
-Do not print “deciphering Linear A” or a progress bar for an ancient script. The solvers only claim Caesar, Vigenère, and simple substitution of English.
-
-## Demo witness
-
-`python -m engine demo` overwrites `DEMO.md` with ciphertext, recovered plaintext, shift or key, and timings. The checked-in file is a previous run (overall about 3.6 seconds, failures none, substitution exact match). Re-running changes the timings. Do not hand-edit it and leave it looking like a run.
-
-`python demos/run_demo.py` calls the same function.
-
-## OCR surface
-
-Separate from the solvers. `python3 -m engine.ocr --render "THE HARBOR BELL RANG"` writes a PNG and prints the line Tesseract read. Documented in [image-reading.md](image-reading.md). It must not be described as reading a photograph of a scroll.
-
-## Docs presentation
-
-- README leads with the limit (no new decipherment) and a start-here path (DECODE, Crypto Cellar), then the engine.
-- Rankings live in [closest.md](closest.md) with criteria. Logs are not rankings.
-- Tables for layout. Long arguments stay in the topical file.
-- Research logs and the error log are visually separate from landscape claims.
-
-## Gaps that still show up in the checklist
-
-- `docs/engine.md` documents commands and files that are not in the tree (`engine.cli`, `engine/ic.py`, `en_quadgrams.json.gz`, `demos/fixtures/`, `tests/test_solvers`, German and Spanish Caesar). Trust this file and [TESTING.md](TESTING.md) until that page is rewritten.
-- `docs/external.md` still says `python -m engine.cli demo`.
-- README’s layout table does not yet list every doc (`next.md`, `image-reading.md`, `UI-UX.md`, `TESTING.md`, `ERROR-LOG.md`).
-- No `.github` workflow runs the tests.
-- No `LICENSE` file. The README says personal research notes.
-- Solve’s no-letter path is a traceback; analyze’s is a one-line error. They should match, and they do not.
-- `python` versus `python3` is undocumented in the README.
+Historical rankings require dated sources and explicit criteria. [target-triage.md](target-triage.md) concerns tractable cipher work. [closest.md](closest.md) concerns script and language research and is a separate question. Research logs remain separate from confirmed claims.

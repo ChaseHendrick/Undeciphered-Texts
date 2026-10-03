@@ -20,6 +20,7 @@ python -m engine demo
 - Docs-only PRs: keep landscape / closest conservative and sourced.
 - Speculative notes belong in `docs/logs/YYYY-MM-DD.md`, not promoted to rankings without sources.
 - UI/CLI expectations: `docs/UI-UX.md`.
+- New unsolved material follows [the case workflow](docs/WORKFLOW.md). Check current status and data access using [target triage](docs/target-triage.md) before investing in a search. Raw intake files and runtime downloads stay local by default.
 
 ## Scope that fits
 

@@ -1,0 +1,15 @@
+{
+  "tool_name": "cipher-synthesis",
+  "name": "cipher-synthesis",
+  "instance": "synthetic",
+  "plaintext": "ATTACKATDAWNRETREATATDUSK",
+  "ciphertext": "GUEXZIZICPZCPVOIXZIGSIZZI",
+  "cribs": [{"offset": 0, "plaintext": "ATTACK"}],
+  "models": ["affine"],
+  "max_period": 1,
+  "layouts": ["identity", "reverse"],
+  "example_construction": "Reverse the 25 plaintext letters, then apply c = (5*p + 8) mod 26 to A-Z values. The key is not supplied to synthesis.",
+  "plaintext_sha256": "0fbe564bcddfa2bf7ab1f648fec2ea6254f6895ff6cf6f4f144b6beea3d8c24b",
+  "source_url": "https://z3prover.github.io/api/html/classz3py_1_1_solver.html",
+  "note": "Synthetic conditional verification fixture for exact SMT cipher-model synthesis. Only six original-position plaintext letters are supplied. Identity layout is unsatisfiable under affine constraints; reverse followed by affine has a satisfying model. Alternate-value UNSAT queries prove the remaining plaintext letters within that tested model class. The SHA-256 checks the complete predicted A-Z vector, not a historical decipherment. Example parameters remain examples, model scope is finite and explicit, and claimed_plaintext remains null. This tool certificate has no cipher_name so it does not become a classical cipher router class."
+}

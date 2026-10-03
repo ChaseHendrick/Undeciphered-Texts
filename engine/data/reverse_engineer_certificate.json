@@ -1,0 +1,18 @@
+{
+  "name": "reverse-engineer",
+  "plaintext": "INTHEVIGENERECEQUALSKPLUSPWHEREAISZEROBISONEETC",
+  "ciphertext": "XBEFEGXNEOIKMETEFYLDZWLVWIEJTFPYIDOLRPFBAQCSPRC",
+  "cribs": [
+    {
+      "offset": 0,
+      "plaintext": "INTHEVIGENERECEQUALSKPLUSPWH"
+    }
+  ],
+  "max_period": 14,
+  "family": "vigenere",
+  "period": 14,
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Vigenere.pdf",
+  "plaintext_sha256": "6f7783c13932145eab8feb1825b9e0a2fe4865a8d04c57df0edf733f9d5750e7",
+  "note": "ACA Vigenere printed worked example. Only the first 28 plaintext letters are supplied as a crib; the inferred rule must predict the remaining letters. The known key is not supplied to inference. Exact compatibility is conditional on the Vigenere family and period bound. The report keeps claimed_plaintext null even when the published verification vector matches.",
+  "tool_name": "reverse-engineer"
+}

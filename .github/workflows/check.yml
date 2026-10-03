@@ -1,0 +1,42 @@
+name: Cipher checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.10'
+      - name: Standard library tests
+        run: python -m unittest discover -s tests -v
+      - name: Recovery demo
+        run: python -m engine demo --out "$RUNNER_TEMP/cipher-demo.md"
+
+  extended:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Install OCR and symbolic dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr fonts-dejavu-core
+          python -m pip install -r requirements-synthesis.txt Pillow numpy
+      - name: Full tests with optional engines
+        run: python -m unittest discover -s tests -v
+      - name: Recovery demo
+        run: python -m engine demo --out "$RUNNER_TEMP/cipher-demo.md"

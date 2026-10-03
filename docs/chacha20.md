@@ -1,0 +1,7 @@
+# ChaCha20 with a supplied key
+
+`engine/solvers/chacha20.py` implements the RFC 8439 stream cipher in the Python standard library. Its block function follows [section 2.3](https://www.rfc-editor.org/rfc/rfc8439.html#section-2.3), and its XOR encryption and decryption follow [section 2.4](https://www.rfc-editor.org/rfc/rfc8439.html#section-2.4). Each call requires a 32-byte key, a 12-byte nonce, and a 32-bit initial counter. Partial blocks and empty byte strings are supported. Counter overflow is rejected before producing output.
+
+The tests use independent literal vectors from [section 2.3.2](https://www.rfc-editor.org/rfc/rfc8439.html#section-2.3.2) and [section 2.4.2](https://www.rfc-editor.org/rfc/rfc8439.html#section-2.4.2). The latter has 114 plaintext bytes and requires two keystream blocks. `engine/data/chacha20_certificate.json` records the public test key, nonce, ciphertext, plaintext, and block vector. Its SHA-256 hashes the recovered raw plaintext bytes. Hex is a storage encoding; hashing that hex text would give a different digest.
+
+`solve_chacha20` explicitly requires the supplied key and returns hex plaintext with encoding metadata. This is an educational known-key implementation, with no unknown-key attack. It provides no Poly1305 authentication or protocol integration. A matching vector does not establish production security, constant-time execution, or a modern cryptographic break. Applications must manage nonce uniqueness as described in [RFC 8439 section 4](https://www.rfc-editor.org/rfc/rfc8439.html#section-4).

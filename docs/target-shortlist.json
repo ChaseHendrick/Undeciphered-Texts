@@ -1,0 +1,494 @@
+{
+  "schema_version": 1,
+  "title": "Historical cipher target triage",
+  "checked_on": "2026-10-03",
+  "scope": "Research candidates and evidence acquisition; no historical decipherment claimed.",
+  "conclusion": "No checked named target is established to be easy. Prefer verified archival text, known language, and keys or deciphered siblings.",
+  "priority_meaning": {
+    "source_check": "Resolve conflicting source or key evidence first.",
+    "document_reading": "A key exists but reliable transcription/decoding is the main work.",
+    "needs_more_evidence": "Gather constraints before committing to an attack.",
+    "defer": "Not a quick-win target under current evidence and engine capabilities."
+  },
+  "sources": [
+    {
+      "id": "cryptocellar-army",
+      "url": "https://cryptocellar.org/bgac/g-army-messages.html",
+      "source_updated_on": "2026-09-30",
+      "checked_on": "2026-10-03",
+      "kind": "primary publisher page"
+    },
+    {
+      "id": "cryptocellar-july",
+      "url": "https://cryptocellar.org/bgac/g-army-july-1941.html",
+      "source_updated_on": "2026-09-28",
+      "checked_on": "2026-10-03",
+      "kind": "primary publisher page"
+    },
+    {
+      "id": "cryptocellar-july-keys",
+      "url": "https://cryptocellar.org/bgac/e-keys-july-1941.html",
+      "source_updated_on": "2026-09-28",
+      "checked_on": "2026-10-03",
+      "kind": "primary publisher page"
+    },
+    {
+      "id": "cryptocellar-old-overview",
+      "url": "https://cryptocellar.org/bgac/1941-msg-list-unbroken.html",
+      "source_updated_on": "2026-09-19",
+      "checked_on": "2026-10-03",
+      "kind": "primary publisher page"
+    },
+    {
+      "id": "cryptocellar-ultimate",
+      "url": "https://cryptocellar.org/bgac/ultimate-enigma.html",
+      "source_updated_on": "2026-07-27",
+      "checked_on": "2026-10-03",
+      "kind": "primary publisher page"
+    },
+    {
+      "id": "cryptiana-list",
+      "url": "https://cryptiana.web.fc2.com/code/unsolved.htm",
+      "source_updated_on": "2026-10-03",
+      "checked_on": "2026-10-03",
+      "kind": "researcher primary catalog; read directly when browser fetch failed"
+    },
+    {
+      "id": "bourdeau-catalog",
+      "url": "https://dbourdeau.github.io/cyphersolver/writeups.html",
+      "source_updated_on": "2026-10-02",
+      "checked_on": "2026-10-03",
+      "kind": "researcher firsthand results catalog"
+    },
+    {
+      "id": "bourdeau-desportes-notes",
+      "url": "https://raw.githubusercontent.com/dbourdeau/cyphersolver/main/targets/sega1593/NOTES.md",
+      "checked_on": "2026-10-03",
+      "kind": "researcher firsthand working notes; date of reported session",
+      "evidence_date": "2026-09-17"
+    },
+    {
+      "id": "bourdeau-sp53-notes",
+      "url": "https://raw.githubusercontent.com/dbourdeau/cyphersolver/main/targets/sp53/NOTES.md",
+      "checked_on": "2026-10-03",
+      "kind": "researcher firsthand working notes; date of last reported session",
+      "evidence_date": "2026-09-16"
+    },
+    {
+      "id": "bourdeau-percy",
+      "url": "https://dbourdeau.github.io/cyphersolver/percy1559.html",
+      "source_updated_on": "2026-09-24",
+      "checked_on": "2026-10-03",
+      "kind": "researcher firsthand examination"
+    },
+    {
+      "id": "decode-v2",
+      "url": "https://ecp.ep.liu.se/index.php/histocrypt/article/download/397/355/298",
+      "source_updated_on": null,
+      "checked_on": "2026-10-03",
+      "kind": "2022 primary research paper by database authors"
+    }
+  ],
+  "targets": [
+    {
+      "id": "desportes-1593",
+      "label": "Baudouin-Desportes to Aldobrandini and Frachetta, BnF fr. 3984 ff. 186 and 189",
+      "category": "unread archival letters with a published polyphonic key",
+      "message_date": "1593-07-22",
+      "status": {
+        "value": "researcher_unread",
+        "evidence": "Both target leaves reported unread after sibling-controlled transcription attempts.",
+        "confidence": "high for the reported result; global unread status unverified",
+        "checked_on": "2026-10-03"
+      },
+      "priority": "document_reading",
+      "easy_claim": false,
+      "evidence_sources": [
+        "cryptiana-list",
+        "bourdeau-desportes-notes",
+        "bourdeau-catalog"
+      ],
+      "useful_constraints": [
+        "Published key",
+        "Same-hand deciphered siblings",
+        "Clear French opening on f. 186"
+      ],
+      "first_step": "Blindly transcribe a short held-out portion of the deciphered sibling f. 188v, then check its glyph sequence and decoded text against ff. 184-185. Expand only after passing this control.",
+      "repo_compatibility": {
+        "direct_attack_ready": false,
+        "supported": "Local OCR can assist ordinary printed text; case sources can preserve manuscript images.",
+        "missing": [
+          "Checked glyph transcription",
+          "Polyphonic decoding and period French model"
+        ],
+        "scope": "This is document reading with a published key; not a ciphertext-only key recovery claim."
+      },
+      "evidence_notes": [
+        "The firsthand notes report that their glyph pipeline failed held-out sibling controls.",
+        "A published deciphered sibling need not repeat the target text.",
+        "No transcription or native manuscript OCR result is claimed by this repository."
+      ]
+    },
+    {
+      "id": "weuwy",
+      "label": "WEUWY, 1941-07-09, Nr. 138",
+      "category": "three-rotor Enigma intercept",
+      "message_date": "1941-07-09",
+      "message_number": 138,
+      "status": {
+        "value": "publisher_unresolved",
+        "evidence": "No Broken marker on the current message page.",
+        "confidence": "high for the page snapshot; global unsolved status unverified",
+        "checked_on": "2026-10-03"
+      },
+      "priority": "source_check",
+      "easy_claim": false,
+      "length": {
+        "unit": "body positions after removing five-letter designator",
+        "known_letters": 47,
+        "printed_unknown_positions": 1,
+        "transcribed_positions": 48
+      },
+      "evidence_sources": [
+        "cryptocellar-july",
+        "cryptocellar-july-keys",
+        "cryptocellar-old-overview"
+      ],
+      "first_step": "Obtain the verified key for solved Nr. 140 and compare both facsimiles. Resolve the message-page/key-table conflict before testing a key.",
+      "repo_compatibility": {
+        "module": "engine/solvers/enigma.py",
+        "direct_attack_ready": false,
+        "supported": "Supplied-key Enigma I with three distinct rotors I-V, reflector B/C.",
+        "missing": [
+          "Unknown-key Enigma search",
+          "External historical key validation",
+          "Adapter preserving an unknown position and advancing the machine for every printed gap"
+        ],
+        "language_model": "A German historical language model is needed for any future unknown-key attack."
+      },
+      "evidence_notes": [
+        "Nr. 140 on the same day has the same designator and is marked Broken.",
+        "The current key table still says both Nr. 138 and Nr. 140 fail its listed 9 July key.",
+        "Shared designator does not prove identical message settings or plaintext."
+      ]
+    },
+    {
+      "id": "ehstq",
+      "label": "EHSTQ, 1941-06-22, Nr. 3",
+      "category": "three-rotor Enigma intercept",
+      "message_date": "1941-06-22",
+      "message_number": 3,
+      "status": {
+        "value": "publisher_unresolved",
+        "evidence": "No Broken marker on the current message page.",
+        "confidence": "high for the page snapshot; global unsolved status unverified",
+        "checked_on": "2026-10-03"
+      },
+      "priority": "needs_more_evidence",
+      "easy_claim": false,
+      "length": {
+        "unit": "body positions after removing five-letter designator",
+        "known_letters": 52,
+        "printed_unknown_positions": 0,
+        "transcribed_positions": 52
+      },
+      "evidence_sources": [
+        "cryptocellar-army"
+      ],
+      "first_step": "Verify the image, indicator and network, then seek same-network traffic or external key evidence.",
+      "repo_compatibility": {
+        "module": "engine/solvers/enigma.py",
+        "direct_attack_ready": false,
+        "supported": "Supplied-key Enigma I with three distinct rotors I-V, reflector B/C.",
+        "missing": [
+          "Unknown-key Enigma search",
+          "External historical key validation"
+        ],
+        "language_model": "A German historical language model is needed for any future unknown-key attack."
+      },
+      "evidence_notes": [
+        "The source heading identifies Nr. 3; the transcribed form contains Funkspruch Nr. 45. Preserve both identifiers."
+      ]
+    },
+    {
+      "id": "rxpsb",
+      "label": "RXPSB, 1941-06-28, Nr. 53",
+      "category": "three-rotor Enigma intercept",
+      "message_date": "1941-06-28",
+      "message_number": 53,
+      "status": {
+        "value": "publisher_unresolved",
+        "evidence": "No Broken marker on the current message page.",
+        "confidence": "high for the page snapshot; global unsolved status unverified",
+        "checked_on": "2026-10-03"
+      },
+      "priority": "source_check",
+      "easy_claim": false,
+      "length": {
+        "unit": "body positions after removing five-letter designator",
+        "known_letters": 105,
+        "printed_unknown_positions": 2,
+        "transcribed_positions": 107
+      },
+      "evidence_sources": [
+        "cryptocellar-army",
+        "cryptocellar-old-overview"
+      ],
+      "first_step": "Audit the facsimile against the current transcription and both published length statements. Preserve missing positions and conflicting counts.",
+      "repo_compatibility": {
+        "module": "engine/solvers/enigma.py",
+        "direct_attack_ready": false,
+        "supported": "Supplied-key Enigma I with three distinct rotors I-V, reflector B/C.",
+        "missing": [
+          "Unknown-key Enigma search",
+          "External historical key validation",
+          "Adapter preserving an unknown position and advancing the machine for every printed gap"
+        ],
+        "language_model": "A German historical language model is needed for any future unknown-key attack."
+      },
+      "evidence_notes": [
+        "Current transcription independently recounted as 105 letters plus 2 printed hyphens = 107 body positions.",
+        "Current header total 114 implies 109 body positions after removing the designator.",
+        "Older overview total 104 / body 99 conflicts with the current page; do not use 99 as the current transcription count."
+      ]
+    },
+    {
+      "id": "kljbo",
+      "label": "KLJBO, 1941-07-03, Nr. 87",
+      "category": "three-rotor Enigma intercept",
+      "message_date": "1941-07-03",
+      "message_number": 87,
+      "status": {
+        "value": "publisher_unresolved",
+        "evidence": "No Broken marker on the current message page.",
+        "confidence": "high for the page snapshot; global unsolved status unverified",
+        "checked_on": "2026-10-03"
+      },
+      "priority": "needs_more_evidence",
+      "easy_claim": false,
+      "length": {
+        "unit": "body positions after removing five-letter designator",
+        "known_letters": 46,
+        "printed_unknown_positions": 4,
+        "transcribed_positions": 50
+      },
+      "evidence_sources": [
+        "cryptocellar-july"
+      ],
+      "first_step": "Verify all four printed missing positions from the facsimile and seek same-network key evidence.",
+      "repo_compatibility": {
+        "module": "engine/solvers/enigma.py",
+        "direct_attack_ready": false,
+        "supported": "Supplied-key Enigma I with three distinct rotors I-V, reflector B/C.",
+        "missing": [
+          "Unknown-key Enigma search",
+          "External historical key validation",
+          "Adapter preserving an unknown position and advancing the machine for every printed gap"
+        ],
+        "language_model": "A German historical language model is needed for any future unknown-key attack."
+      }
+    },
+    {
+      "id": "lxaca",
+      "label": "LXACA, 1941-07-05, Nr. 100",
+      "category": "three-rotor Enigma intercept",
+      "message_date": "1941-07-05",
+      "message_number": 100,
+      "status": {
+        "value": "publisher_unresolved",
+        "evidence": "No Broken marker on the current message page.",
+        "confidence": "high for the page snapshot; global unsolved status unverified",
+        "checked_on": "2026-10-03"
+      },
+      "priority": "defer",
+      "easy_claim": false,
+      "length": {
+        "unit": "body positions after removing five-letter designator",
+        "known_letters": 20,
+        "printed_unknown_positions": 0,
+        "transcribed_positions": 20
+      },
+      "evidence_sources": [
+        "cryptocellar-july",
+        "cryptocellar-july-keys"
+      ],
+      "first_step": "Check the prepared time and 4 July traffic/key evidence before considering a broader search.",
+      "repo_compatibility": {
+        "module": "engine/solvers/enigma.py",
+        "direct_attack_ready": false,
+        "supported": "Supplied-key Enigma I with three distinct rotors I-V, reflector B/C.",
+        "missing": [
+          "Unknown-key Enigma search",
+          "External historical key validation"
+        ],
+        "language_model": "A German historical language model is needed for any future unknown-key attack."
+      },
+      "evidence_notes": [
+        "Received 5 July at 0445 but header 2340; the publisher suggests it originated 4 July.",
+        "Publisher says it does not decrypt on the listed 5 July key.",
+        "Twenty letters provide very few plaintext constraints."
+      ]
+    },
+    {
+      "id": "jbiyh",
+      "label": "JBIYH, 1941-07-20, Nr. 242",
+      "category": "three-rotor Enigma intercept",
+      "message_date": "1941-07-20",
+      "message_number": 242,
+      "status": {
+        "value": "publisher_unresolved",
+        "evidence": "No Broken marker on the current message page.",
+        "confidence": "high for the page snapshot; global unsolved status unverified",
+        "checked_on": "2026-10-03"
+      },
+      "priority": "needs_more_evidence",
+      "easy_claim": false,
+      "length": {
+        "unit": "body positions after removing five-letter designator",
+        "known_letters": 55,
+        "printed_unknown_positions": 0,
+        "transcribed_positions": 55
+      },
+      "evidence_sources": [
+        "cryptocellar-july"
+      ],
+      "first_step": "Find related 20 July traffic or an external key sheet, then validate on a solved sibling before attacking this message.",
+      "repo_compatibility": {
+        "module": "engine/solvers/enigma.py",
+        "direct_attack_ready": false,
+        "supported": "Supplied-key Enigma I with three distinct rotors I-V, reflector B/C.",
+        "missing": [
+          "Unknown-key Enigma search",
+          "External historical key validation"
+        ],
+        "language_model": "A German historical language model is needed for any future unknown-key attack."
+      }
+    },
+    {
+      "id": "sp53-residue",
+      "label": "SP 53/16 nos. 78 and 79",
+      "category": "historical symbol ciphers with unverified design",
+      "status": {
+        "value": "researcher_unread",
+        "evidence": "Firsthand working notes report no reading after several language and design tests.",
+        "confidence": "high for the reported result; global unsolved status unverified",
+        "checked_on": "2026-10-03"
+      },
+      "priority": "defer",
+      "easy_claim": false,
+      "length": {
+        "unit": "researcher transcription tokens",
+        "members": [
+          {
+            "record": "SP 53/16 no. 78",
+            "tokens": 507
+          },
+          {
+            "record": "SP 53/16 no. 79",
+            "tokens": 644
+          }
+        ]
+      },
+      "evidence_sources": [
+        "cryptiana-list",
+        "bourdeau-sp53-notes",
+        "bourdeau-catalog"
+      ],
+      "first_step": "Obtain images, verify distinct glyphs and null/word-code possibilities, and compare candidate period key sheets. Do not pool the letters on an assumed shared key.",
+      "repo_compatibility": {
+        "direct_attack_ready": false,
+        "module": "engine/solvers/homophonic_fixed_temperature.py",
+        "supported": "One symbol to one A-Z letter, space-separated input, English scoring.",
+        "missing": [
+          "Image-checked tokenization",
+          "Appropriate historical language models",
+          "Null, nomenclator or syllabary model if needed"
+        ]
+      },
+      "evidence_notes": [
+        "The researcher withdrew the earlier same-key claim.",
+        "Failure on matched null/nomenclator controls prevents interpreting a negative target run as an exclusion."
+      ]
+    },
+    {
+      "id": "ultimate-enigma",
+      "label": "CryptoCellar Ultimate Enigma Challenge",
+      "category": "unknown historical machine or wiring",
+      "status": {
+        "value": "publisher_unresolved",
+        "evidence": "Publisher reports failed attacks and explicitly questions whether this is standard Wehrmacht Enigma.",
+        "confidence": "high for the publisher statement; machine identity unverified",
+        "checked_on": "2026-10-03"
+      },
+      "priority": "defer",
+      "easy_claim": false,
+      "members": [
+        "QTXMA",
+        "SZAEJ",
+        "BYQMZ",
+        "FKQLZ",
+        "XFEDT"
+      ],
+      "evidence_sources": [
+        "cryptocellar-ultimate",
+        "cryptocellar-army"
+      ],
+      "first_step": "Identify the network and machine from archival evidence before choosing rotor wiring or attempting standard-Enigma search.",
+      "repo_compatibility": {
+        "direct_attack_ready": false,
+        "module": "engine/solvers/enigma.py",
+        "missing": [
+          "Verified machine identity and wiring",
+          "Unknown-key search",
+          "Gap-preserving adapter where needed"
+        ]
+      },
+      "evidence_notes": [
+        "A longer ciphertext does not determine an unknown rotor wiring.",
+        "No machine identity or plaintext is claimed here."
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "id": "nr86",
+      "reason": "Excluded by user request."
+    },
+    {
+      "id": "AWTZK",
+      "reason": "Current July message page marks Broken.",
+      "evidence_sources": [
+        "cryptocellar-july"
+      ]
+    },
+    {
+      "id": "ZNLZT",
+      "reason": "Current July message page marks Broken.",
+      "evidence_sources": [
+        "cryptocellar-july"
+      ]
+    },
+    {
+      "id": "FMNGI",
+      "reason": "Current July message page marks Broken.",
+      "evidence_sources": [
+        "cryptocellar-july"
+      ]
+    },
+    {
+      "id": "percy1559",
+      "reason": "A contemporary decipherment is reported on the TNA original. Archive retrieval is useful but this is not a verified never-solved target.",
+      "evidence_sources": [
+        "bourdeau-percy"
+      ]
+    }
+  ],
+  "selection_rules": [
+    "Check current firsthand outcomes, editions, key sheets and clear duplicates before interpreting catalog metadata as unsolved status.",
+    "Treat named-target tractability as an inference; do not assign numerical success probabilities.",
+    "Preserve each missing position and source conflict rather than guessing or truncating it.",
+    "Require held-out controls matched for language, length, alphabet, damage and cipher design.",
+    "Check language scoring against shuffled controls and retain ambiguous or residual unread symbols.",
+    "Document a reversible transformation and verified key before claiming a decipherment."
+  ]
+}

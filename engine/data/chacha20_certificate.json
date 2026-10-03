@@ -1,0 +1,26 @@
+{
+  "cipher_name": "chacha20",
+  "name": "chacha20",
+  "mode": "known_key",
+  "plaintext_hex": "4c616469657320616e642047656e746c656d656e206f662074686520636c617373206f66202739393a204966204920636f756c64206f6666657220796f75206f6e6c79206f6e652074697020666f7220746865206675747572652c2073756e73637265656e20776f756c642062652069742e",
+  "ciphertext_hex": "6e2e359a2568f98041ba0728dd0d6981e97e7aec1d4360c20a27afccfd9fae0bf91b65c5524733ab8f593dabcd62b3571639d624e65152ab8f530c359f0861d807ca0dbf500d6a6156a38e088a22b65e52bc514d16ccf806818ce91ab77937365af90bbf74a35be6b40b8eedf2785e42874d",
+  "plaintext_sha256": "34dbfcbbe73c59195a7ac563b41b82f334845053c707b83d8179d7b165778b19",
+  "hash_encoding": "raw_bytes",
+  "storage_encoding": "hex",
+  "byte_length": 114,
+  "keys": {
+    "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+    "nonce_hex": "000000000000004a00000000",
+    "counter": 1
+  },
+  "source_url": "https://www.rfc-editor.org/rfc/rfc8439.html#section-2.4.2",
+  "source_inspected": "2026-10-03",
+  "block_vector": {
+    "source_url": "https://www.rfc-editor.org/rfc/rfc8439.html#section-2.3.2",
+    "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+    "nonce_hex": "000000090000004a00000000",
+    "counter": 1,
+    "output_hex": "10f1e7e4d13b5915500fdd1fa32071c4c7d1f4c733c068030422aa9ac3d46c4ed2826446079faa0914c2d705d98b02a2b5129cd1de164eb9cbd083e8a2503c4e"
+  },
+  "note": "Verification certificate for the public RFC 8439 ChaCha20 vectors. Section 2.4.2 supplies the key and recovers 114 raw bytes with counter 1, including a partial second block. Section 2.3.2 checks a separate nonce and the independently printed 64-byte block output. plaintext_sha256 hashes recovered raw bytes, not the hex string. This is supplied-key stream decryption with no Poly1305 authentication and no claim of unknown-key recovery, an attack on a configured service, or a cryptographic break. Binary hex fields are intentionally separate from the classical text router's plaintext and ciphertext fields."
+}

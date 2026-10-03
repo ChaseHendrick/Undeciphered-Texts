@@ -12,10 +12,10 @@
 
 ## Engine
 
-- Runtime: Python 3.10+, **stdlib only** for solvers / tests / demo.
+- Runtime: Python 3.10+. Core cipher routines and the demo use the standard library. Optional symbolic inference uses the pinned `requirements-synthesis.txt`; OCR uses a local backend. Document optional dependencies and test them when that feature changes.
 - `python -m unittest discover -s tests` must pass.
 - `python -m engine demo` must rewrite `DEMO.md` with recovered PT matching fixtures.
-- Passing tests means recovery of **classical** ciphers in this set only, not modern crypto, not ancient scripts.
+- Passing tests verifies the specific vectors, recovery fixtures, and result contracts in this set. It does not establish a break of secure modern cryptography or an ancient-script decipherment.
 
 ## Docs
 

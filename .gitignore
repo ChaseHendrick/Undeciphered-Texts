@@ -9,3 +9,6 @@
 __pycache__/
 engine/data/en_quadgrams.json.gz
 venv/
+/work/
+/cases/*
+!/cases/README.md

@@ -1,0 +1,23 @@
+{
+  "cipher_name": "quagmire-iii",
+  "name": "quagmire-iii",
+  "plaintext": "THESAMEKEYEDALPHABETISUSEDFORPLAINANDCIPHERALPHABETS",
+  "ciphertext": "KRSLWMITJDVIABMRGQMTMLLIVIFUIXRHTNYONVRHHIIIRMCAOVEI",
+  "key": "keyword=AUTOMOBILE indicator=HIGHWAY under=A",
+  "keys": {
+    "keyword": "AUTOMOBILE",
+    "indicator": "HIGHWAY",
+    "indicator_under": "A",
+    "plaintext_alphabet": "AUTOMBILECDFGHJKNPQRSVWXYZ",
+    "ciphertext_alphabet": "AUTOMBILECDFGHJKNPQRSVWXYZ",
+    "period": 7,
+    "key": "keyword=AUTOMOBILE indicator=HIGHWAY under=A"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/QuagmireIII.pdf",
+  "source_sha256": "d8ef8e5f4fd9f9727dcf91a43e2ff279d92622daaf8ce44dd7b17493b154260e",
+  "source_inspected": "2026-10-03",
+  "message": "The same keyed alphabet is used for plain and cipher alphabets.",
+  "printed_ciphertext": "KRSLW MITJD VIABM RGQMT MLLIV IFUIX RHTNY ONVRH HIIIR MCAOV EI",
+  "plaintext_sha256": "1ced15928fbc8f7f0d89781edae7b6d88b1a2a5bc5f7ba6ec8cea4f8761359c7",
+  "note": "Verification certificate for the ACA Quagmire III published worked example. The shared keyed alphabet uses AUTOMOBILE, with the repeated O dropped and unused A-Z letters appended. Indicator HIGHWAY is placed under plaintext A, period 7. Plaintext and ciphertext were transcribed independently from the printed sheet, which was downloaded and visually inspected on source_inspected. source_sha256 records that PDF snapshot. plaintext_sha256 hashes the recovered uppercase A-Z plaintext stream, with spaces and punctuation dropped and no padding. This checks a supplied-key classical example, not an unknown script reading or a solution of Linear A, Indus, Voynich, rongorongo, Kryptos K4, Zodiac, Beale, McCormick, or army message Nr. 86."
+}

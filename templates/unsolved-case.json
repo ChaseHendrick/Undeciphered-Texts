@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "case_id": "unsolved-case",
+  "title": "Unsolved case",
+  "status": "unsolved",
+  "stage": "intake",
+  "provenance": {
+    "source_url": "https://example.org/replace-with-source",
+    "description": "Replace this template by an init-generated case before use.",
+    "accessed_at_utc": "2026-10-03T00:00:00Z",
+    "original_filename": "ciphertext.txt",
+    "references": []
+  },
+  "source": {
+    "path": "source/ciphertext.txt",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "bytes": 1,
+    "encoding": "utf-8"
+  },
+  "language": {
+    "status": "unknown",
+    "value": null,
+    "basis": ""
+  },
+  "alphabet": {
+    "kind": "unknown",
+    "symbols": [],
+    "normalization": "none"
+  },
+  "transcription": {
+    "uncertainty": "unassessed",
+    "notes": "",
+    "alternatives": []
+  },
+  "cribs": [],
+  "validation": {
+    "known_plaintext_url": null,
+    "expected_plaintext_sha256": null,
+    "heldout_cribs": []
+  }
+}

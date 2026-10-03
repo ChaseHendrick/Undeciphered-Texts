@@ -1,0 +1,23 @@
+{
+  "cipher_name": "quagmire-ii",
+  "name": "quagmire-ii",
+  "plaintext": "INTHEQUAGTWOASTRAIGHTPLAINALPHABETISRUNAGAINSTAKEYEDCIPHERALPHABET",
+  "ciphertext": "JICICOSLYKILFVCHEBDXCCORJIOEWAFMWKKTXBGWHRJIBKEDBJWZABUXWHEHUXOXCU",
+  "key": "ct=SPRINGFEVER indicator=FLOWER under=A",
+  "keys": {
+    "ciphertext_keyword": "SPRINGFEVER",
+    "indicator": "FLOWER",
+    "indicator_under": "A",
+    "plaintext_alphabet": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "ciphertext_alphabet": "SPRINGFEVABCDHJKLMOQTUWXYZ",
+    "period": 6,
+    "key": "ct=SPRINGFEVER indicator=FLOWER under=A"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/QuagmireII.pdf",
+  "source_checked": "2026-10-03",
+  "source_pdf_sha256": "9a732261fe24ef967df09f8eda892e10c7f340383f542958cf33189f53e51fbc",
+  "message": "In the Quag Two a straight plain alphabet is run against a keyed cipher alphabet.",
+  "printed_ciphertext": "JICIC OSLYK ILFVC HEBDX CCORJ IOEWA FMWKK TXBGW HRJIB KEDBJ WZABU XWHEH UXOXC U.",
+  "plaintext_sha256": "becf36055e08f7d2235b822c7747b00db755c3314592c32e57cd1222a9122c24",
+  "note": "Verification certificate for the ACA Quagmire II printed worked example. The K2 plan uses a straight plaintext alphabet and a keyed ciphertext alphabet. The sheet prints SPRINGFEV(ER), marking repeated E and R letters, with indicator FLOWER under plaintext A, period 6. The ciphertext and plaintext were transcribed from the published PDF and visually checked. Spaces and the final full stops are omitted from the A-Z streams. plaintext_sha256 hashes the 66-letter recovered plaintext. This checks supplied-key decryption, not unknown-key recovery or an unknown script reading. Not a solution for Linear A, Indus, Voynich, rongorongo, Kryptos K4, Zodiac, Beale, McCormick, or army message Nr. 86."
+}
