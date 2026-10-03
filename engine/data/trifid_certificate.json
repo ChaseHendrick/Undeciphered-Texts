@@ -1,0 +1,14 @@
+{
+  "cipher_name": "trifid",
+  "name": "trifid",
+  "plaintext": "DEFENDTHEEASTWALLOFTHECASTLE.",
+  "ciphertext": "SUEFECPHSEGYYJIXIMFOFOCEJLBSP",
+  "key": "EPSDUCVWYM.ZLKXNBTFGORIJHAQ/5",
+  "keys": {
+    "alphabet": "EPSDUCVWYM.ZLKXNBTFGORIJHAQ",
+    "period": 5
+  },
+  "source_url": "http://practicalcryptography.com/ciphers/trifid-cipher/",
+  "plaintext_sha256": "0c55ecaf63d6c8dd13da4fea38208e8949c11b5ca5f44f18a5f6606188886c1b",
+  "note": "Verification certificate for the Practical Cryptography Trifid worked example. The page prints plaintext as DEFEND THE EAST WALL OF THE CASTLE. Spaces are not enciphered and are not included in plaintext or in plaintext_sha256. That hash is SHA-256 of DEFENDTHEEASTWALLOFTHECASTLE. (28 letters plus the final period, which is a cube symbol). The page prints the ciphertext as SUEFE CPHSE GYYJI XIMFO FOCEJ LBSP. Those spaces are period groups only and are not in the ciphertext field. Key is the 27-symbol cube EPSDUCVWYM.ZLKXNBTFGORIJHAQ and period 5. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

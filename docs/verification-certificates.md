@@ -15,7 +15,7 @@ These certificates check a **published worked example**, a **cited dictionary gl
 
 ## Classical solvers with published or fixture examples
 
-bifid, digrafid (ACA fractionation example), playfair, adfgvx, columnar (Kryptos K3), keyed Vigenère (Kryptos K1 and K2), caesar, vigenère, substitution, crib, beam-search, two-square (synthetic English only), ragbaby (ACA sheet, keyword GROSBEAK), grandpre (ACA sheet, first column LACQUERS), cadenus (ACA sheet, keyword EASY).
+bifid, digrafid (ACA fractionation example), playfair, adfgvx, columnar (Kryptos K3), keyed Vigenère (Kryptos K1 and K2), caesar, vigenère, substitution, crib, beam-search, two-square (synthetic English only), ragbaby (ACA sheet, keyword GROSBEAK), grandpre (ACA sheet, first column LACQUERS), cadenus (ACA sheet, keyword EASY), trifid (Practical Cryptography cube, period 5; spaces are not in the hashed plaintext).
 
 ## Lookups and readers with a cited known text
 
