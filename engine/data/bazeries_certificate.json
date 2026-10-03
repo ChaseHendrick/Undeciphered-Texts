@@ -1,0 +1,12 @@
+{
+  "cipher_name": "bazeries",
+  "plaintext": "SIMPLESUBSTITUTIONPLUSTRANSPOSITION",
+  "ciphertext": "ACYYUXYMRQKXKCKGCRQIYITNKYXKCYGQGCI",
+  "key": "3752",
+  "keys": {
+    "key": "3752"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Bazeries.pdf",
+  "plaintext_sha256": "864b4c4266900c57be0a8dee276228f12edc3347a9cf4eade34829608d8e232f",
+  "note": "Verification certificate for a published worked example. Checks the published example, not an unknown script. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
