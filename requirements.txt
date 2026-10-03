@@ -1,3 +1,5 @@
 # Classical decipherment engine.
 # Runtime: Python 3.10 or newer, standard library only.
 # No third-party packages are required for the solvers, tests, or demo.
+# Optional: numpy speeds training in engine/neural.py.
+# The same letter network trains with the standard library if numpy is absent.
