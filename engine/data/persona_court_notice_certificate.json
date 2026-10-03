@@ -1,0 +1,12 @@
+{
+  "persona": "court notice",
+  "word_list": [
+    "empire",
+    "decree",
+    "throne"
+  ],
+  "chosen_sentence": "The decree still named the throne, though the empire had already split.",
+  "sentence_sha256": "86b4e5dbe1011c8e92379de5a3cbe50dc08fb8a570b8a03c92475ea6ca6226f7",
+  "note": "Preference among candidate sentences. Not a decipherment of Nr. 86, K4, or an unknown script.",
+  "reworded_from": "world emperor"
+}

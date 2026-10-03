@@ -1,0 +1,12 @@
+{
+  "persona": "inheritance",
+  "word_list": [
+    "fortune",
+    "heir",
+    "estate"
+  ],
+  "chosen_sentence": "The heir asked what fortune remained with the estate after the last winter.",
+  "sentence_sha256": "2ea2c849cc35b62be172d29d60eb8f006d8bea4c715b0e145b6ac2f4e3eb6f13",
+  "note": "Preference among candidate sentences. Not a decipherment of Nr. 86, K4, or an unknown script.",
+  "reworded_from": "dying aristocrat"
+}
