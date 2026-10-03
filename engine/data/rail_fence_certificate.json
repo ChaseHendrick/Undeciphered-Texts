@@ -1,0 +1,13 @@
+{
+  "cipher_name": "rail_fence",
+  "plaintext": "DEFENDTHEEASTWALLOFTHECASTLE",
+  "ciphertext": "DNETLHSEEDHESWLOTEATEFTAAFCL",
+  "key": "3",
+  "keys": {
+    "key": "3",
+    "rails": 3
+  },
+  "source_url": "http://practicalcryptography.com/ciphers/classical-era/rail-fence/",
+  "plaintext_sha256": "9b25bd513ba6e14f1c4fc35515eba9ef622b7c3db15fb4e39d118411135872ca",
+  "note": "Verification certificate for a published worked example of the rail-fence (zigzag) transposition cipher. Known-cipher solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
