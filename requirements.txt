@@ -1,0 +1,2 @@
+# Decipherment engine — stdlib-first; numpy optional for convenience
+numpy>=1.24
