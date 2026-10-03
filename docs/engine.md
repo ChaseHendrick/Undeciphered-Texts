@@ -60,7 +60,7 @@ Reasons, not missing polish:
 - Those problems are not “English under a 26-letter substitution.” The language is unknown, the script is not the Latin alphabet, word breaks are uncertain, and there is often no bilingual. A quadgram model of Austen and Darwin cannot identify an unknown language.
 - Running the substitution solver on Voynich-like input will emit *some* Latin-letter string that scores well as English. That string is a forced fit to the fitness function, not a decipherment. Treat it as garbage.
 - IC and frequency tables can describe a corpus. They do not decide whether a sign sequence is a script, a hoax, or which language it records.
-- Homophonic ciphers, nomenclators, Playfair/Hill, Enigma and other machine ciphers, and codes (word lists, codebooks) are not implemented. A Vigenère solver will mis-read them as a repeating keyword and still print “plaintext.”
+- Homophonic ciphers, nomenclators, single-square Playfair, Hill, Enigma and other machine ciphers, and codes (word lists, codebooks) are not general solvers here. A Vigenère solver will mis-read them as a repeating keyword and still print “plaintext.” Two-square (Truppenschlüssel rules) is implemented in `engine/solvers/two_square.py` for keyword-keyed synthetic recovery and for logged hill-climb experiments only; it does not claim wartime readings.
 
 Short ciphertext is also a hard limit. Caesar needs enough letters for a frequency peak. Vigenère on this engine wants on the order of a few dozen letters per key column. Simple substitution wants roughly 80 letters and is aimed at a few hundred; below that the search is not reliable. German and Spanish are supported for Caesar and Vigenère unigram scoring only. Substitution fitness is English.
 
@@ -97,6 +97,20 @@ Limits:
 - Forty-six letters is too short for a quadgram score to identify a plaintext. A better score is still only resemblance to this sample.
 - Truppenschlüssel is a manual digraph cipher on two 5×5 squares (J omitted). This score does not implement that cipher. Running it on a Caesar, Vigenère, or monoalphabetic dump does not turn the dump into German.
 - Nothing here is a historical decipherment. The Nr. 86 message remains unbroken.
+
+
+## Two-square (Truppenschlüssel rules)
+
+`engine/ciphers.py` implements single-stage two-square encrypt/decrypt with two 5×5 squares that omit J (plaintext J → I). Rectangle and same-row rules match Ostwald & Weierud (author PDF [mcts.pdf](https://cryptocellar.org/pubs/mcts.pdf)); the Fig. 6 compromise pairs `KR→IN`, `NI→RK`, `QT→EU`, `UE→TQ` are checked in `tests/test_two_square.py`.
+
+`engine/solvers/two_square.py`:
+
+| Entry | What it does |
+|---|---|
+| `solve_two_square` / `solve_two_square_keywords` | Try keyword-built squares from a word list; rank by English trigram counts |
+| `climb_two_square` | Shotgun hill-climb with row/column/letter swaps and kicks (English trigram score) |
+
+`tests/test_two_square.py` recovers a synthetic English stream enciphered under `HARBOR`/`CANAL` without being given the squares. The Nr. 86 climb is logged as **failed** in `docs/logs/two-square-2026-10-02.md`. A high English trigram score on a short German Army ciphertext is not a sourced plaintext.
 
 ## Unknown-script analysis tools (not decipherment)
 
