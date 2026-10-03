@@ -1,0 +1,15 @@
+{
+  "cipher_name": "slidefair",
+  "plaintext": "THESLIDEFAIRCANBEUSEDWITHVIGENEREVARIANTORBEAUFORT",
+  "ciphertext": "EW KM CR NU AF CX TJ YQ MM YY FU TI GW ZP KH JM PK BS AI EC KV CF MI IL CI",
+  "key": "DIGRAPH",
+  "keys": {
+    "keyword": "DIGRAPH",
+    "table": "vigenere",
+    "period": 7,
+    "sentence": "The Slidefair can be used with Vigenere, Variant or Beaufort."
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/Slidefair.pdf",
+  "plaintext_sha256": "cbdf8259cd869a5593fbc736e575f1a8ae716c875607138b638afa06492633b9",
+  "note": "Verification certificate for a published worked example of the Slidefair cipher (American Cryptogram Association cipher sheet: sentence \"The Slidefair can be used with Vigenere, Variant or Beaufort.\", keyword DIGRAPH, Vigenere table, period 7). Spaces and punctuation are not enciphered. The hashed plaintext is the 50-letter stream THESLIDEFAIRCANBEUSEDWITHVIGENEREVARIANTORBEAUFORT. Ciphertext digraphs are EW KM CR NU AF CX TJ YQ MM YY FU TI GW ZP KH JM PK BS AI EC KV CF MI IL CI. Known-cipher solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}

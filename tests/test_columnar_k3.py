@@ -33,7 +33,7 @@ from engine.solvers.columnar import (
 
 class ColumnarRoundTripTest(unittest.TestCase):
     def test_single_width_roundtrip(self) -> None:
-        plain = "SLOWLYDESPARATLYSLOWLYTHEREMAINSOFPASSAGEDEBRISTHATENCUMBEREDXX"
+        plain = "SLOWLYDESPARATLYSLOWLYTHEREMAINSOFPASSAGEDEBRISTHATENCUMBEREDXXX"
         self.assertEqual(len(plain) % 8, 0)
         cipher = columnar_encrypt_right_to_left(plain, 8)
         self.assertEqual(columnar_decrypt_right_to_left(cipher, 8), plain)

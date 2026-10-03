@@ -73,3 +73,8 @@
 - https://web.archive.org/web/20110405112022/http://www.fbi.gov/news/stories/2011/march/cryptanalysis_032911
 - http://www.fbi.gov/news/stories/2011/march/cryptanalysis_032911
 - See [fbi-letter-shift.md](fbi-letter-shift.md)
+
+## Slidefair (ACA known keyword; not an unknown script)
+- https://www.cryptogram.org/downloads/aca.info/ciphers/Slidefair.pdf
+- https://sites.google.com/site/cryptocrackprogram/user-guide/cipher-types/substitution/slidefair
+- See [slidefair.md](slidefair.md)
