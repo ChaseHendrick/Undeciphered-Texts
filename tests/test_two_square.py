@@ -54,6 +54,22 @@ class TwoSquareRoundTripTest(unittest.TestCase):
         self.assertEqual(two_square_encrypt("QT", left, right), "EU")
         self.assertEqual(two_square_encrypt("UE", left, right), "TQ")
 
+    def test_published_message_64_recovers_plaintext(self) -> None:
+        """Known two-square from Ostwald & Weierud, mcts.pdf appendix.
+
+        Message No. 64 of 17 September 1941. Ciphertext and raw plaintext
+        are the emended compromise in the PDF (Fig. 5 / appendix), not Nr. 86.
+        Squares are Fig. 6 read as five rows of left-then-right.
+        https://cryptocellar.org/pubs/mcts.pdf
+        """
+        left = "WKIZBOGPSFENHQRDATLMVCXUY"
+        right = "IGVBXDPQFSREYNCZOLMHATUKW"
+        cipher = "FFZNSBQTHNCIQTHNCIXPOLAQTQNZ"
+        expect = "SQARFXPLACHXPLACHXISTZURUEQB"
+        result = solve_two_square(cipher, left=left, right=right)
+        self.assertEqual(result.plaintext, expect)
+        self.assertEqual(two_square_encrypt(expect, left, right), cipher)
+
 
 class TwoSquareRecoveryTest(unittest.TestCase):
     def test_keyword_solver_recovers_synthetic_plaintext(self) -> None:
@@ -122,8 +138,8 @@ class TwoSquareNr86ExperimentTest(unittest.TestCase):
     """Nr. 86 is an experiment only. Do not treat climb output as a reading."""
 
     def test_climb_on_nr86_does_not_match_any_sourced_plaintext(self) -> None:
-        # No public sourced plaintext for Funkspruch Nr. 86 (FBOIQ). A climb
-        # may emit letters; that is not a match to a sourced reading.
+        # The 30 Sep 2026 message list marks Nr. 86 broken but prints no
+        # plaintext. A climb may emit letters; that is not a sourced reading.
         cipher = TRUPPENSCHLUESSEL_NR86
         self.assertEqual(len(cipher), 46)
         result = climb_two_square(cipher, restarts=2, kicks=4, seed=86)
