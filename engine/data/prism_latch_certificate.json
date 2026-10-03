@@ -1,0 +1,7 @@
+{
+  "cipher_name": "prism-latch",
+  "plaintext": "Prism latch keeps this fresh sentence under a certificate, not an old script.",
+  "ciphertext": "Gjsfd xiztn trxev blit ezpad wjzswrge pgyvq h ebgvkynnirx, rbb tn bbv utymbj.",
+  "plaintext_sha256": "ff4a2768219008e89306be59433d5d5019720bad9b6e1fccb43723e3a3e1119d",
+  "note": "Original method verified by a known-plaintext certificate. Not a reading of an ancient script or of army message Nr. 86."
+}
