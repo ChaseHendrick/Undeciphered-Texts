@@ -4,7 +4,7 @@
 
 <!-- SVG fallback: docs/assets/readme-hero.svg -->
 
-Research notes and a **classical cipher engine** for **Chase Hendrick (Sharpie)**.
+Research notes and a **classical cipher engine**.
 
 **This repository does not claim any new decipherment of ancient scripts or unknown languages.**  
 The `engine/` package recovers *known* classical ciphers (Caesar, Vigenère, monoalphabetic substitution) with tests and fixtures. Famous undeciphered systems are documented for context and realistic contribution paths—not as overnight puzzles.
@@ -32,7 +32,7 @@ Python **3.10+**. Standard library only—no third-party packages required.
 python3 -m engine demo  # or: python -m engine demo              # recovers built-in known cases; writes DEMO.md
 python -m unittest discover -s tests -v
 python -m engine analyze "Wkh kdueru ehoo udqj"
-python -m engine solve caesar "Wkh kdueru ehoo udqj"
+python -m engine solve caesar "Wkh kduor ehoo udqj"
 python -m engine solve keyed-vigenere EMUFPHZLRFAXYUSDJKZLDKRNSHGNFIVJYQTQUXQBQVYUVLLTREVJYQTMKYRDMFD --key PALIMPSEST --alphabet KRYPTOS --index K
 python demos/run_demo.py           # same demo path; rewrites DEMO.md
 ```
