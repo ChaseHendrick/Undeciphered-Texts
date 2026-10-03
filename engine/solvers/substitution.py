@@ -3,6 +3,10 @@
 The start key maps ciphertext letter frequencies onto English unigram order.
 Search then swaps letters to raise quadgram log-likelihood. A final exhaustive
 swap polish walks the neighborhood of the best key until it is a local maximum.
+
+The learned trigram network in engine.neural is not the search objective. It
+scores the finished candidate as a second opinion beside the quadgram score.
+That number is an English-letter fitness, not a decipherment of an unknown script.
 """
 
 from __future__ import annotations
@@ -12,6 +16,7 @@ import random
 
 from engine.alphabet import from_ints, letters_only, reinject, to_ints
 from engine.language import ENGLISH_ORDER, get_model
+from engine.neural import get_neural_model
 from engine.result import SolveResult
 
 
@@ -152,6 +157,8 @@ def solve_substitution(
     for cipher_i, plain_i in enumerate(best_key):
         encrypt_key[plain_i] = chr(65 + cipher_i)
     rendered = reinject(text, from_ints(plain_ints))
+    neural = get_neural_model()
+    neural_score = neural.score(plain_ints)
     return SolveResult(
         method="substitution",
         plaintext=rendered,
@@ -163,5 +170,9 @@ def solve_substitution(
             "anneal_steps": steps,
             "letters": len(letters),
             "decrypt_map": "".join(chr(65 + p) for p in best_key),
+            "fitness": "quadgram",
+            "neural_score": neural_score,
+            "neural_backend": neural.backend,
+            "second_opinion": "neural_trigram",
         },
     )
