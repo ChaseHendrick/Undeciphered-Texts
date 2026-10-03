@@ -1,0 +1,7 @@
+{
+  "cipher_name": "lumen-braid",
+  "plaintext": "The lumen braid hides a known line, and nothing ancient.",
+  "ciphertext": "Nrx itsri vppmp xqkoe f ivkvh aanv, zrk yrnggtg amokgob.",
+  "plaintext_sha256": "5a9c7cf0b76b17c76a6a78551eb4b5a098431e96b52b1bbab2881eba486bf7c6",
+  "note": "Original method verified by a known-plaintext certificate. Not a reading of an ancient script or of army message Nr. 86."
+}
