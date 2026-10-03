@@ -5,9 +5,9 @@ This repository mixes **sourced research notes** about undeciphered scripts / op
 ## Hard rules
 
 1. **Cite real URLs** for historical claims. Prefer museum, archive, peer-reviewed, or well-known project pages. Do not invent links.
-2. **Do not invent decipherments.** Never present an unknown-script "solution," Linear A / Indus / Rongorongo / Voynich "reading," or similar as fact.
+2. **Do not invent decipherments.** Never present an unknown-script “solution,” Linear A / Indus / Rongorongo / Voynich “reading,” or similar as fact.
 3. **Unknown-script output is hypothesis only.** If you explore mappings or models, label them clearly as untested hypotheses and keep them out of landscape / closest rankings unless sourced.
-4. **Script vs language.** Distinguish "signs can be transcribed" from "language is understood." Etruscan and Meroitic are not "fully cracked languages" just because signs are readable.
+4. **Script vs language.** Distinguish “signs can be transcribed” from “language is understood.” Etruscan and Meroitic are not “fully cracked languages” just because signs are readable.
 5. **Solvers need known-plaintext tests.** New classical solvers must recover fixture ciphertext without being given the key, with a failing-then-passing test in `tests/`.
 6. **Research logs ≠ claims.** Dated notes go in `docs/logs/YYYY-MM-DD.md`. Do not promote log speculation into `docs/landscape.md` / `docs/closest.md` without sources.
 7. **Do not commit broken binaries.** Image uploads via some MCP GitHub tools can corrupt JPEG/PNG (base64 stored as text). Prefer `git add` of binary blobs. Verify magic bytes after push (`FF D8 FF` for JPEG).
@@ -16,7 +16,7 @@ This repository mixes **sourced research notes** about undeciphered scripts / op
 
 ## Quality bar
 
-See [`docs/QUALITY.md`](QUALITY.md). Link any new historical ranking or "closest to cracking" claim to sources; otherwise omit the ranking.
+See [`docs/QUALITY.md`](QUALITY.md) and [`docs/NOVELTY.md`](NOVELTY.md). Link any new historical ranking or “closest to cracking” claim to sources; otherwise omit the ranking.
 
 ## Allowed work
 
@@ -28,5 +28,5 @@ See [`docs/QUALITY.md`](QUALITY.md). Link any new historical ranking or "closest
 ## Disallowed work
 
 - Claiming a breakthrough on an undeciphered script or language inside this repo.
-- Shipping stub "solvers" that do not recover known plaintext.
-- Copying domain content from JustLetMeRead or GENChase (layout inspiration only).
+- Shipping stub “solvers” that do not recover known plaintext.
+- Copying domain content from JustLetMeRead or GENChase (layout/quality inspiration only).

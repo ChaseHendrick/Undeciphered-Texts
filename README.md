@@ -1,6 +1,8 @@
 # Undeciphered Texts & Open Historical Ciphers
 
-![Hero](docs/assets/readme-hero.svg)
+![Hero](docs/assets/readme-hero.jpg)
+
+<!-- SVG fallback: docs/assets/readme-hero.svg -->
 
 Research notes and a **classical cipher engine** for **Chase Hendrick (Sharpie)**.
 
@@ -27,7 +29,7 @@ Python **3.10+**. Standard library only—no third-party packages required.
 
 ```bash
 # from repo root
-python -m engine demo              # recovers built-in known cases; writes DEMO.md
+python3 -m engine demo  # or: python -m engine demo              # recovers built-in known cases; writes DEMO.md
 python -m unittest discover -s tests -v
 python -m engine analyze "Wkh kdueru ehoo udqj"
 python -m engine solve caesar "Wkh kdueru ehoo udqj"
@@ -42,7 +44,7 @@ python demos/run_demo.py           # same demo path; rewrites DEMO.md
 | --- | --- |
 | Caesar (all shifts + English unigram score) | Decipher Linear A, Indus, Rongorongo, Phaistos, Voynich, … |
 | Vigenère (Kasiski, IC, Friedman, column Caesar + n-grams) | Attack modern cryptography |
-| Simple substitution (frequency seed + annealing + hill-climb) | Claim a script or language is "solved" |
+| Simple substitution (frequency seed + annealing + hill-climb) | Claim a script or language is “solved” |
 | Known-plaintext recovery tests (7) | Invent historical decipherments |
 
 ## Repository layout
@@ -56,7 +58,7 @@ python demos/run_demo.py           # same demo path; rewrites DEMO.md
 | [`demos/run_demo.py`](demos/run_demo.py) | Demo entry that rewrites `DEMO.md` |
 | [`DEMO.md`](DEMO.md) | Last demo witness (ciphertext → recovered PT) |
 | [`docs/landscape.md`](docs/landscape.md) | Undeciphered & partly deciphered scripts/texts |
-| [`docs/closest.md`](docs/closest.md) | "Closest to breakthrough" (hype-checked, sourced) |
+| [`docs/closest.md`](docs/closest.md) | “Closest to breakthrough” (hype-checked, sourced) |
 | [`docs/recent-cracks.md`](docs/recent-cracks.md) | Recent / famous cracks and methods |
 | [`docs/starter-projects.md`](docs/starter-projects.md) | Open targets with data URLs |
 | [`docs/methods.md`](docs/methods.md) | How amateurs make progress |
@@ -71,6 +73,10 @@ python demos/run_demo.py           # same demo path; rewrites DEMO.md
 | [`docs/UI-UX.md`](docs/UI-UX.md) | CLI / docs presentation expectations |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution ground rules |
 | [`LICENSE`](LICENSE) | MIT |
+| [`docs/NOVELTY.md`](docs/NOVELTY.md) | Claim labels (sourced / hypothesis / not a decipherment) |
+| [`docs/ERROR-LOG.md`](docs/ERROR-LOG.md) | Pointer to append-only failure log |
+| [`docs/logs/errors.md`](docs/logs/errors.md) | Real failures only (JPEG MCP bug, env gaps, solver fails) |
+| [`docs/image-reading.md`](docs/image-reading.md) | OCR vs ink detection vs unwrapping (honest limits) |
 | [`docs/logs/`](docs/logs/) | Dated research notes (not claims) |
 | [`docs/assets/`](docs/assets/) | Hero art (SVG; JPEG only if verified binary blob) |
 
@@ -90,6 +96,8 @@ python demos/run_demo.py           # same demo path; rewrites DEMO.md
 - [`docs/TESTING.md`](docs/TESTING.md) — unittest + demo witness.
 - [`docs/UI-UX.md`](docs/UI-UX.md) — CLI and docs presentation.
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) — PR ground rules.
+- [`docs/NOVELTY.md`](docs/NOVELTY.md) — claim labels; no hallucinated readings.
+- [`docs/ERROR-LOG.md`](docs/ERROR-LOG.md) / [`docs/logs/errors.md`](docs/logs/errors.md) — real failures only.
 
 ## License note
 

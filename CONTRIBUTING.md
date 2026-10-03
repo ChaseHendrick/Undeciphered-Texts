@@ -29,6 +29,6 @@ python -m engine demo
 
 ## Scope that does not fit
 
-- "I deciphered Voynich / Linear A" commits presented as fact.
+- “I deciphered Voynich / Linear A” commits presented as fact.
 - Vendoring large external apps (link to CrypTool 2 / CTTS / DECODE instead).
 - Copying domain code from GENChase or JustLetMeRead (layout inspiration only).

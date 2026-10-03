@@ -44,3 +44,21 @@
 - https://github.com/marinocom/Direct-Image-Decryption-Copiale
 - https://aclanthology.org/P06-2065.pdf
 - See also [external.md](external.md)
+
+## AI, Herculaneum, solvers (2026 audit)
+- https://scrollprize.org/grandprize
+- https://scrollprize.org/firstscroll
+- https://scrollprize.org/data
+- https://github.com/ScrollPrize/villa
+- https://arxiv.org/abs/2304.02084
+- https://www.nature.com/articles/s41586-022-04448-z
+- https://github.com/google-deepmind/ithaca
+- https://doi.org/10.1093/pnasnexus/pgad096
+- https://github.com/gaigutherz/Akkademia
+- https://arxiv.org/abs/2306.01268
+- https://aclanthology.org/P19-1303/
+- https://aclanthology.org/W11-1202/
+- https://github.com/jameslyons/pycipher
+- https://github.com/doranchak/azdecrypt
+- https://github.com/CrypToolProject/CrypTool-2
+- https://github.com/mittagessen/kraken
