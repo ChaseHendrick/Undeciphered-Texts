@@ -1,0 +1,31 @@
+{
+  "description": "Tiny invented bilingual for crib-checker tests. Not a historical script.",
+  "sign_to_sound": {
+    "SX01": "ka",
+    "SX02": "ti",
+    "SX03": "ru",
+    "SX04": "me",
+    "SX05": "so",
+    "SX06": "na",
+    "SX07": "li",
+    "SX08": "pe"
+  },
+  "wrong_sign_to_sound": {
+    "SX01": "zu",
+    "SX02": "ti",
+    "SX03": "ru",
+    "SX04": "me",
+    "SX05": "so",
+    "SX06": "na",
+    "SX07": "li",
+    "SX08": "pe"
+  },
+  "known_words": ["katiru", "katime", "sona", "lipe", "soru"],
+  "inscriptions": [
+    ["SX01", "SX02", "SX03"],
+    ["SX01", "SX02", "SX04"],
+    ["SX05", "SX06"],
+    ["SX07", "SX08"],
+    ["SX05", "SX03"]
+  ]
+}

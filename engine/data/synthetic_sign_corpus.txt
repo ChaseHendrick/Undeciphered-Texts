@@ -1,0 +1,13 @@
+# Synthetic sign corpus for inventory and repeat tests.
+# Tokens are invented labels (SX##). This is not Linear A, Voynich, or any
+# historical script. Word breaks are newlines; signs are space-separated.
+SX01 SX02 SX03 SX01 SX04
+SX05 SX02 SX03 SX06
+SX01 SX02 SX03 SX07 SX08
+SX09 SX02 SX03 SX01 SX04
+SX05 SX10 SX11 SX06
+SX01 SX02 SX03 SX07 SX12
+SX09 SX02 SX03 SX05 SX10
+SX01 SX04 SX08 SX07 SX12
+SX05 SX02 SX03 SX01 SX04
+SX11 SX06 SX09 SX02 SX03
