@@ -1,0 +1,21 @@
+{
+  "cipher_name": "quagmire-iv",
+  "name": "quagmire-iv",
+  "plaintext": "THISONEEMPLOYSTHREEKEYWORDS",
+  "ciphertext": "VBMRFCYISPMPBRRHEICXRREIGDX",
+  "key": "pt=SENSORY ct=PERCEPTION indicator=EXTRA under=S",
+  "keys": {
+    "plaintext_keyword": "SENSORY",
+    "ciphertext_keyword": "PERCEPTION",
+    "indicator": "EXTRA",
+    "indicator_under": "S",
+    "plaintext_alphabet": "SENORYABCDFGHIJKLMPQTUVWXZ",
+    "ciphertext_alphabet": "PERCTIONABDFGHJKLMQSUVWXYZ",
+    "period": 5,
+    "key": "pt=SENSORY ct=PERCEPTION indicator=EXTRA under=S"
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/QuagmireIV.pdf",
+  "message": "This one employs three keywords",
+  "plaintext_sha256": "dd6b57cd2948f668502997d26f798851e84c0abdfe566e0de40e57b5a2c1ad36",
+  "note": "Verification certificate for the ACA Quagmire IV sheet worked example. K4 keyword plan: plaintext keyword SENSORY, ciphertext keyword PERC(EP)TION (repeated E and P dropped), indicator EXTRA written under plaintext alphabet S, period 5. The sheet prints the plaintext as 'This one employs three keywords' and the ciphertext as VBMRF CYISP MPBRR HEICX RREIG DX. Spaces in the printed sentence and the five-letter ciphertext groups are not enciphered. plaintext_sha256 is the SHA-256 of THISONEEMPLOYSTHREEKEYWORDS. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, Zodiac, Beale, McCormick, or army message Nr. 86."
+}
