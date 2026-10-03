@@ -2,7 +2,7 @@
 
 Deep inventory of solvers and analysis tools on `main`. Each row is grounded in the module docstring and named tests. **No invented tools. No undeciphered-script decipherment claims. No Kryptos K4 claims.**
 
-Companion notes: [beam-search.md](beam-search.md), [em-sign-aligner.md](em-sign-aligner.md), [hmm-baum-welch.md](hmm-baum-welch.md), [sign-clustering.md](sign-clustering.md), [pairwise-mutual-information.md](pairwise-mutual-information.md), [compression-language-score.md](compression-language-score.md), [mural-analyzer.md](mural-analyzer.md), [kryptos-k1.md](kryptos-k1.md), [latin-roman-reader.md](latin-roman-reader.md), [maya-glyph-lookup.md](maya-glyph-lookup.md), [egyptian-hieroglyph-reader.md](egyptian-hieroglyph-reader.md), [ogham-lookup.md](ogham-lookup.md), [elder-futhark-lookup.md](elder-futhark-lookup.md), [locks-and-safes.md](locks-and-safes.md), [TESTING.md](TESTING.md).
+Companion notes: [beam-search.md](beam-search.md), [em-sign-aligner.md](em-sign-aligner.md), [hmm-baum-welch.md](hmm-baum-welch.md), [sign-clustering.md](sign-clustering.md), [pairwise-mutual-information.md](pairwise-mutual-information.md), [compression-language-score.md](compression-language-score.md), [mural-analyzer.md](mural-analyzer.md), [kryptos-k1.md](kryptos-k1.md), [latin-roman-reader.md](latin-roman-reader.md), [maya-glyph-lookup.md](maya-glyph-lookup.md), [egyptian-hieroglyph-reader.md](egyptian-hieroglyph-reader.md), [ogham-lookup.md](ogham-lookup.md), [elder-futhark-lookup.md](elder-futhark-lookup.md), [locks-and-safes.md](locks-and-safes.md), [safecracking-machines.md](safecracking-machines.md), [TESTING.md](TESTING.md).
 
 `SOLVERS` registry: `caesar`, `vigenere`, `substitution`. Keyed Vigenère is known-key CLI only.
 
