@@ -85,6 +85,38 @@ class TwoSquareRecoveryTest(unittest.TestCase):
         )
         self.assertGreater(trigram_count_score(true_plain), trigram_count_score(wrong_plain))
 
+    def test_recovers_constructed_frost_maple_ciphertext(self) -> None:
+        """Ciphertext built for this test. Solver is not given the squares.
+
+        Plaintext (J folded, odd length padded with X):
+        THENIGHTWATCHWALKEDTHEEASTWALLTWICEANDCOUNTEDEVERYLAMPALONGTHERIVERROADBEFORETHEGATEWASSHUTX
+        Keywords FROST / MAPLE sit in a list of decoys. Ranking is English quadgram
+        log-likelihood, not a hand-off of the key.
+        """
+        expect = (
+            "THENIGHTWATCHWALKEDTHEEASTWALLTWICEANDCOUNTEDEVERYLAMP"
+            "ALONGTHERIVERROADBEFORETHEGATEWASSHUTX"
+        )
+        cipher = (
+            "MLFLOCNNWRAEIWFFOSFQORCTLQWRNTAZICCTSBGITLMFGSZFLWITSFFFLINMORAH"
+            "ZFANPSCEGAAPFUORIFMFWRPQONPZ"
+        )
+        keywords = ("FROST", "MAPLE") + DEFAULT_KEYWORDS
+        result = solve_two_square(cipher, keywords=keywords)
+        self.assertEqual(result.details["left_keyword"], "FROST")
+        self.assertEqual(result.details["right_keyword"], "MAPLE")
+        self.assertEqual(result.plaintext, expect)
+        self.assertEqual(result.details["scoring"], "english_quadgram_log")
+        # The fixed ciphertext really is that plaintext under those squares.
+        self.assertEqual(
+            two_square_encrypt(
+                expect,
+                square_from_keyword("FROST"),
+                square_from_keyword("MAPLE"),
+            ),
+            cipher,
+        )
+
 
 class TwoSquareNr86ExperimentTest(unittest.TestCase):
     """Nr. 86 is an experiment only. Do not treat climb output as a reading."""

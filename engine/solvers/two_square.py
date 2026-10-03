@@ -7,7 +7,8 @@ square, second in the right; rectangle or same-row right-neighbour; ciphertext
 letter from the right square first.
 
 This module recovers **synthetic** keyword-keyed English by trying keyword
-pairs from a word list and ranking decrypts with English trigram counts. A
+pairs from a word list and ranking decrypts with the English quadgram model
+in ``engine.language``. A
 shotgun hill-climber is included for random-square experiments. Neither path
 claims a historical decipherment of an unsolved wartime message.
 """
@@ -28,6 +29,7 @@ from engine.ciphers import (
     two_square_letters,
 )
 from engine.german import german_letters, get_german_model
+from engine.language import get_model
 from engine.result import SolveResult
 
 _ENGLISH_PATH = Path(__file__).resolve().parents[1] / "data" / "english.txt"
@@ -143,19 +145,31 @@ def _score_ints(seq: list[int], table: tuple[int, ...]) -> int:
     return total
 
 
+def _quadgram_score(text: str) -> float:
+    """English quadgram log-likelihood. Higher is better. Not a decipherment claim."""
+    stream = two_square_letters(text)
+    if len(stream) < 4:
+        return float("-inf")
+    return get_model().score([ord(ch) - 65 for ch in stream])
+
+
 def solve_two_square_keywords(
     text: str,
     keywords: tuple[str, ...] | list[str] = DEFAULT_KEYWORDS,
 ) -> SolveResult:
-    """Try every keyword pair; keep the decrypt with the best English trigram count."""
+    """Try every keyword pair; keep the decrypt with the best English quadgram score.
+
+    The squares are built from the word list. The true keywords are not passed
+    separately. Raw trigram counts are not used here: on a long synthetic
+    English text they can rank a wrong pair above the real plaintext.
+    """
     stream = two_square_letters(text)
     if len(stream) < 8 or len(stream) % 2 == 1:
         raise ValueError("two-square ciphertext needs an even length of at least 8 letters")
-    table = _english_trigram_table()
     words = tuple(dict.fromkeys(two_square_letters(w) for w in keywords if two_square_letters(w)))
     if len(words) < 2:
         raise ValueError("need at least two distinct keywords")
-    best_score = -1
+    best_score = float("-inf")
     best_plain = ""
     best_left = ""
     best_right = ""
@@ -168,7 +182,7 @@ def solve_two_square_keywords(
                 continue
             right = square_from_keyword(right_kw)
             plain = two_square_decrypt(stream, left, right)
-            score = trigram_count_score(plain, table)
+            score = _quadgram_score(plain)
             trials += 1
             if score > best_score:
                 best_score = score
@@ -188,7 +202,7 @@ def solve_two_square_keywords(
             "right_square": best_right,
             "letters": len(stream),
             "trials": trials,
-            "scoring": "english_trigram_count",
+            "scoring": "english_quadgram_log",
         },
     )
 

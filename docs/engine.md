@@ -107,10 +107,10 @@ Limits:
 
 | Entry | What it does |
 |---|---|
-| `solve_two_square` / `solve_two_square_keywords` | Try keyword-built squares from a word list; rank by English trigram counts |
+| `solve_two_square` / `solve_two_square_keywords` | Try keyword-built squares from a word list; rank by English quadgram log-likelihood (`engine.language`) |
 | `climb_two_square` | Shotgun hill-climb with row/column/letter swaps and kicks (English trigram score) |
 
-`tests/test_two_square.py` recovers a synthetic English stream enciphered under `HARBOR`/`CANAL` without being given the squares. The Nr. 86 climb is logged as **failed** in `docs/logs/two-square-2026-10-02.md`. A high English trigram score on a short German Army ciphertext is not a sourced plaintext.
+`tests/test_two_square.py` recovers two synthetic English streams without being given the squares: `VIGENERE_PLAIN` under `HARBOR`/`CANAL`, and a fixed ciphertext under `FROST`/`MAPLE` (see `docs/logs/two-square-known-example-2026-10-02.md`). The Nr. 86 climb is logged as **failed** in `docs/logs/two-square-2026-10-02.md` and again in that note. A high English score on a short German Army ciphertext is not a sourced plaintext.
 
 ## Unknown-script analysis tools (not decipherment)
 
