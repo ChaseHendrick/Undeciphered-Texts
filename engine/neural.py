@@ -1,7 +1,7 @@
 """Learned English letter fitness: a small trigram neural language model.
 
 The two previous letters are one-hot encoded, passed through a tanh hidden
-layer, and scored with a 26-way softmax. Weights are fit by gradient descent
+layer, and scored with a 26-way softmax. Weights are fit by momentum gradient descent
 on next-letter cross-entropy. The training prose is Jane Austen, Pride and Prejudice, chapters I-III
 (Project Gutenberg eBook 1342), not the held-out Doyle passage and not the
 demo or test plaintext. Held-out numbers are in docs/neural-grade.md.
@@ -27,8 +27,9 @@ from engine.alphabet import letters_only
 _DATA = Path(__file__).resolve().parent / "data" / "neural_train_austen.txt"
 
 HIDDEN = 32
-NUMPY_EPOCHS = 200
+NUMPY_EPOCHS = 60
 PURE_EPOCHS = 24
+MOMENTUM = 0.8
 SEED = 20261002
 
 
@@ -116,6 +117,10 @@ class NeuralLetterModel:
 
         initial = None
         final = None
+        vel_w1 = np.zeros_like(w1)
+        vel_b1 = np.zeros_like(b1)
+        vel_w2 = np.zeros_like(w2)
+        vel_b2 = np.zeros_like(b2)
         for epoch in range(NUMPY_EPOCHS):
             rate = 1.2 if epoch < NUMPY_EPOCHS // 2 else 0.35
             hidden_pre = features @ w1 + b1
@@ -135,10 +140,14 @@ class NeuralLetterModel:
             grad_pre = grad_hidden * (1.0 - activated * activated)
             grad_w1 = features.T @ grad_pre
             grad_b1 = grad_pre.sum(axis=0)
-            w1 -= rate * grad_w1
-            b1 -= rate * grad_b1
-            w2 -= rate * grad_w2
-            b2 -= rate * grad_b2
+            vel_w1 = MOMENTUM * vel_w1 + grad_w1
+            vel_b1 = MOMENTUM * vel_b1 + grad_b1
+            vel_w2 = MOMENTUM * vel_w2 + grad_w2
+            vel_b2 = MOMENTUM * vel_b2 + grad_b2
+            w1 -= rate * vel_w1
+            b1 -= rate * vel_b1
+            w2 -= rate * vel_w2
+            b2 -= rate * vel_b2
         self.initial_loss = float(initial)
         self.final_loss = float(final)
         # W1 is 52 x hidden, W2 is hidden x 26, matching the pure-Python layout.
@@ -215,11 +224,36 @@ class NeuralLetterModel:
         self.W2 = w2
         self.b2 = b2
 
+    def _cache_numpy(self):
+        import numpy as np
+
+        self._np_w1 = np.asarray(self.W1, dtype=np.float64)
+        self._np_b1 = np.asarray(self.b1, dtype=np.float64)
+        self._np_w2 = np.asarray(self.W2, dtype=np.float64)
+        self._np_b2 = np.asarray(self.b2, dtype=np.float64)
+
     def score(self, seq: list[int]) -> float:
         """Sum of log P(letter_t | letter_t-2, letter_t-1). Higher is better."""
-        n = len(seq)
-        if n < 3:
+        if len(seq) < 3:
             return 0.0
+        try:
+            import numpy as np
+        except ImportError:
+            return self._score_python(seq)
+        if not hasattr(self, "_np_w1"):
+            self._cache_numpy()
+        arr = np.asarray(seq, dtype=np.int64)
+        left = arr[:-2]
+        mid = arr[1:-1]
+        nxt = arr[2:]
+        activated = np.tanh(self._np_b1 + self._np_w1[left] + self._np_w1[26 + mid])
+        logits = activated @ self._np_w2 + self._np_b2
+        peak = logits.max(axis=1)
+        log_partition = peak + np.log(np.exp(logits - peak[:, None]).sum(axis=1))
+        return float((logits[np.arange(nxt.shape[0]), nxt] - log_partition).sum())
+
+    def _score_python(self, seq: list[int]) -> float:
+        n = len(seq)
         hidden = self.hidden
         w1 = self.W1
         b1 = self.b1

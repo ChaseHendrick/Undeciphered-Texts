@@ -12,6 +12,9 @@ import json
 import unittest
 
 from engine.neural import load_training_prose
+import tempfile
+from pathlib import Path
+
 from engine.neural_grade import (
     CERTIFICATE_PATH,
     HELD_DE_PATH,
@@ -27,10 +30,15 @@ from engine.neural_grade import (
     assert_certificate_plaintexts_excluded,
     assert_split,
     certificate_letter_strings,
+    discover_solver_labels,
     evaluate,
+    families_for_grade,
+    heldout_accuracy_not_worse,
+    label_is_unsolved,
     language_preference,
     letters_az,
     metrics_sha256,
+    normalize_cipher_label,
     router_chance_baseline,
     sha256_text,
     three_way_chance_baseline,
@@ -126,6 +134,48 @@ class NeuralGradeTest(unittest.TestCase):
                 load_training_prose(HELD_EN_PATH),
                 load_training_prose(HELD_DE_PATH),
             )
+
+
+    def test_a_new_certificate_becomes_a_class_and_unsolved_names_do_not(self) -> None:
+        labels = discover_solver_labels()
+        self.assertIn("caesar", labels)
+        self.assertIn("m209", labels)
+        self.assertIn("caesar", families_for_grade())
+        for banned in ("k4", "zodiac", "beale", "mccormick", "voynich", "nr-86"):
+            self.assertIsNone(normalize_cipher_label(banned))
+            self.assertTrue(label_is_unsolved(banned))
+            self.assertNotIn(banned, labels)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "rail_fence_certificate.json").write_text(
+                json.dumps(
+                    {
+                        "cipher_name": "rail_fence",
+                        "plaintext": "THIS IS A KNOWN ANSWER SAMPLE TEXT",
+                        "ciphertext": "TIEHSXISIAKNWOANNSRMELTXAT",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (root / "zodiac_certificate.json").write_text(
+                json.dumps(
+                    {
+                        "cipher_name": "zodiac",
+                        "plaintext": "NOT A CLAIMED SOLUTION",
+                        "ciphertext": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            found = discover_solver_labels(root)
+        self.assertEqual(found, ["rail-fence"])
+
+    def test_weights_stay_put_when_the_held_out_score_drops(self) -> None:
+        self.assertTrue(heldout_accuracy_not_worse(0.8, None))
+        self.assertTrue(heldout_accuracy_not_worse(0.8, {"heldout_accuracy": 0.8}))
+        self.assertTrue(heldout_accuracy_not_worse(0.81, {"heldout_accuracy": 0.8}))
+        self.assertFalse(heldout_accuracy_not_worse(0.79, {"heldout_accuracy": 0.8}))
+
 
     def test_a_certificate_plaintext_cannot_be_the_grade_corpus(self) -> None:
         banned = certificate_letter_strings()

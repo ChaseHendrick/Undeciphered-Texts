@@ -60,8 +60,8 @@ WINDOW = 120
 ROUTER_WINDOW = 180
 ROUTER_TRAIN_PER_CLASS = 20
 ROUTER_TEST_PER_CLASS = 12
-ROUTER_EPOCHS = 250
-ROUTER_HIDDEN = 40
+ROUTER_EPOCHS = 60
+ROUTER_HIDDEN = 32
 ROUTER_SEED = 20261002
 GRADE_SEED = 20261002
 OVERLAP_WIDTH = 48
@@ -421,6 +421,266 @@ def _random_permutation(draw: random.Random) -> str:
     return key
 
 
+
+WEIGHTS_PATH = _DATA / "neural_router_weights.json"
+LOOP_STATUS_PATH = _DATA / "neural_router_loop_status.json"
+LOOP_STOP_PATH = _DATA / "neural_router_loop.stop"
+LOOP_PID_PATH = _DATA / "neural_router_loop.pid"
+
+# Labels that would claim an unsolved text. They are never router classes.
+_UNSOLVED_LABELS = {
+    "k4",
+    "kryptos-k4",
+    "zodiac",
+    "zodiac-340",
+    "zodiac-408",
+    "beale",
+    "beale-2",
+    "beale-cipher",
+    "mccormick",
+    "voynich",
+    "voynich-manuscript",
+    "nr-86",
+    "nr86",
+    "truppenschlussel",
+}
+_UNSOLVED_TOKENS = {"k4", "zodiac", "beale", "mccormick", "voynich", "nr86"}
+
+
+def label_is_unsolved(label: str) -> bool:
+    """True for K4, Zodiac, Beale, McCormick, Voynich, and Nr. 86."""
+    folded = " ".join(label.strip().lower().replace("_", " ").split()).replace(" ", "-")
+    if folded in _UNSOLVED_LABELS or "nr-86" in folded:
+        return True
+    parts = set(folded.split("-"))
+    return bool(parts & _UNSOLVED_TOKENS)
+
+
+def normalize_cipher_label(name: str) -> str | None:
+    """Map a certificate cipher_name onto a router class, or None if refused."""
+    raw = " ".join(name.strip().lower().replace("_", " ").split())
+    if raw.startswith("m-209") or raw.startswith("m209"):
+        label = "m209"
+    else:
+        label = raw.replace(" ", "-").replace("(", "").replace(")", "")
+        label = "-".join(part for part in label.split("-") if part)
+    if not label or label_is_unsolved(label):
+        return None
+    return label
+
+
+def discover_solver_labels(data_dir: Path | None = None) -> list[str]:
+    """Known-answer cipher labels from certificate files, in filename order.
+
+    A certificate becomes a class when it has cipher_name, plaintext, and
+    ciphertext. The plaintext is not copied into the router. Unsolved-text
+    names are dropped. The same cipher_name on two files is one class.
+    """
+    root = data_dir or _DATA
+    found: list[str] = []
+    seen: set[str] = set()
+    for path in sorted(root.glob("*_certificate.json")):
+        if path.name == CERTIFICATE_PATH.name:
+            continue
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        cipher_name = payload.get("cipher_name")
+        plaintext = payload.get("plaintext")
+        ciphertext = payload.get("ciphertext")
+        if not isinstance(cipher_name, str) or not cipher_name.strip():
+            continue
+        if not isinstance(plaintext, str) or not plaintext.strip():
+            continue
+        if not isinstance(ciphertext, str) or not ciphertext.strip():
+            continue
+        label = normalize_cipher_label(cipher_name)
+        if label is None or label in seen:
+            continue
+        seen.add(label)
+        found.append(label)
+    return found
+
+
+# Families with a fresh-key encrypt function. New certificate labels whose
+# normalized name is in this set are sampled on Austen and Doyle. Other
+# known-answer labels still become classes via their certificate ciphertext.
+_GENERATOR_NAMES = set(FAMILIES)
+
+
+def families_for_grade() -> tuple[str, ...]:
+    """Grade classes: discovered labels we can encrypt, original order first.
+
+    A later certificate joins this tuple when its label is in _GENERATOR_NAMES.
+    That is how a new known-answer cipher with a registered generator becomes
+    a scored class without editing a separate frozen list by hand.
+    """
+    discovered = discover_solver_labels()
+    have = set(discovered)
+    labels = [name for name in FAMILIES if name in have]
+    for name in discovered:
+        if name in _GENERATOR_NAMES and name not in labels:
+            labels.append(name)
+    return tuple(labels) if labels else tuple(FAMILIES)
+
+
+def _certificate_ciphertexts(label: str, data_dir: Path | None = None) -> list[str]:
+    """Ciphertext exemplars for one class. Plaintext is not returned."""
+    root = data_dir or _DATA
+    found: list[str] = []
+    for path in sorted(root.glob("*_certificate.json")):
+        if path.name == CERTIFICATE_PATH.name:
+            continue
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        cipher_name = payload.get("cipher_name")
+        ciphertext = payload.get("ciphertext")
+        if not isinstance(cipher_name, str) or not isinstance(ciphertext, str):
+            continue
+        if normalize_cipher_label(cipher_name) != label:
+            continue
+        if ciphertext.strip():
+            found.append(ciphertext)
+    return found
+
+
+def load_router_weights(path: Path | None = None) -> dict | None:
+    weights_path = path or WEIGHTS_PATH
+    if not weights_path.is_file():
+        return None
+    return json.loads(weights_path.read_text(encoding="utf-8"))
+
+
+def heldout_accuracy_not_worse(new_accuracy: float, previous: dict | None) -> bool:
+    """True when there is no saved score yet, or the new score does not drop."""
+    if previous is None:
+        return True
+    old = previous.get("heldout_accuracy")
+    if not isinstance(old, (int, float)):
+        return True
+    return float(new_accuracy) + 1e-12 >= float(old)
+
+
+def _atomic_json(path: Path, payload: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    temporary.replace(path)
+
+
+def retrain_router(*, write: bool = True, weights_path: Path | None = None) -> dict[str, object]:
+    """Refit from the current certificates. Write weights only if the held-out score holds.
+
+    Calling this function is the whole update. Nothing here schedules a rerun.
+    The returned choice is a family label, not a plaintext.
+    """
+    from engine.neural_features import feature_tables, router_features
+
+    destination = weights_path or WEIGHTS_PATH
+    train_letters = letters_az(load_training_prose(TRAIN_PATH))
+    held_letters = letters_az(load_training_prose(HELD_EN_PATH))
+    assert_split(train_letters, held_letters)
+    assert_certificate_plaintexts_excluded(train_letters, held_letters)
+    discovered = [label for label in discover_solver_labels() if not label_is_unsolved(label)]
+    ordered = [name for name in FAMILIES if name in discovered]
+    for name in discovered:
+        if name in _GENERATOR_NAMES and name not in ordered:
+            ordered.append(name)
+    exemplars = [name for name in discovered if name not in _GENERATOR_NAMES]
+    classes = ordered + exemplars
+    if len(classes) < 2:
+        raise ValueError("need at least two certified solver labels")
+    english = _english_unigram(train_letters)
+    tables = feature_tables(train_letters, english)
+    train_x, train_y = _router_samples(
+        train_letters, english, ROUTER_TRAIN_PER_CLASS, ROUTER_SEED, ordered, tables
+    )
+    test_x, test_y = _router_samples(
+        held_letters, english, ROUTER_TEST_PER_CLASS, ROUTER_SEED + 1, ordered, tables
+    )
+    for label in exemplars:
+        class_index = classes.index(label)
+        for ciphertext in _certificate_ciphertexts(label):
+            try:
+                train_x.append(router_features(ciphertext, english, tables))
+            except ValueError:
+                continue
+            train_y.append(class_index)
+    predicted, weights = _fit_router_numpy(
+        train_x,
+        train_y,
+        test_x,
+        ROUTER_EPOCHS,
+        ROUTER_HIDDEN,
+        ROUTER_SEED,
+        n_classes=len(classes),
+    )
+    correct = sum(1 for guess, truth in zip(predicted, test_y) if guess == truth)
+    total = len(test_y)
+    accuracy = correct / total if total else 0.0
+    previous = load_router_weights(destination)
+    previous_accuracy = None if previous is None else previous.get("heldout_accuracy")
+    wrote = False
+    if write and heldout_accuracy_not_worse(accuracy, previous):
+        payload = {
+            "families": classes,
+            "heldout_correct": correct,
+            "heldout_total": total,
+            "heldout_accuracy": accuracy,
+            "note": (
+                "Family choice only. Does not emit plaintext for K4, Zodiac, "
+                "Beale, McCormick, Voynich, or Nr. 86."
+            ),
+            **weights,
+        }
+        _atomic_json(destination, payload)
+        wrote = True
+    return {
+        "wrote": wrote,
+        "families": classes,
+        "correct": correct,
+        "total": total,
+        "accuracy": accuracy,
+        "previous_accuracy": previous_accuracy,
+        "weights_path": str(destination),
+    }
+
+
+def route_ciphertext(text: str, weights_path: Path | None = None) -> str:
+    """Route one ciphertext to a certified family label. Does not return plaintext."""
+    import numpy as np
+
+    from engine.neural_features import feature_tables, router_features
+
+    payload = load_router_weights(weights_path)
+    if payload is None:
+        raise FileNotFoundError("router weights are not written yet")
+    families = list(payload["families"])
+    if not families:
+        raise ValueError("router weights have no certified family")
+    train_letters = letters_az(load_training_prose(TRAIN_PATH))
+    english = _english_unigram(train_letters)
+    tables = feature_tables(train_letters, english)
+    row = np.asarray(router_features(text, english, tables), dtype=np.float64)
+    mean = np.asarray(payload["mean"], dtype=np.float64)
+    scale = np.asarray(payload["scale"], dtype=np.float64)
+    if row.shape[0] != mean.shape[0]:
+        raise ValueError("feature width does not match the saved router")
+    hidden = np.tanh(((row - mean) / scale) @ np.asarray(payload["w1"]) + np.asarray(payload["b1"]))
+    logits = hidden @ np.asarray(payload["w2"]) + np.asarray(payload["b2"])
+    # Exemplar classes sit after the scored families. Predictions still name a class.
+    index = int(np.argmax(logits))
+    if index >= len(families):
+        raise ValueError("router weights do not match the class list")
+    label = families[index]
+    if label_is_unsolved(label):
+        raise ValueError("refusing an unsolved-text label")
+    return label
+
+
 def encrypt_family(family: str, text: str, draw: random.Random) -> str:
     """Encrypt with a fresh key. text is plaintext, not a certificate string."""
     if family == "caesar":
@@ -491,20 +751,25 @@ def _router_samples(
     english: list[float],
     per_class: int,
     seed: int,
+    families: tuple[str, ...] | list[str] | None = None,
+    tables: dict | None = None,
 ) -> tuple[list[list[float]], list[int]]:
+    from engine.neural_features import router_features
+
     draw = random.Random(seed)
     windows = _windows(letters, ROUTER_WINDOW)
     if len(windows) < 4:
         raise ValueError("not enough plaintext for router windows")
+    names = tuple(families) if families is not None else FAMILIES
     features: list[list[float]] = []
     labels: list[int] = []
-    for class_index, family in enumerate(FAMILIES):
+    for class_index, family in enumerate(names):
         for sample_index in range(per_class):
             window = windows[(sample_index * 5 + class_index * 2) % len(windows)]
             offset = (sample_index * 17) % 40
             rotated = window[offset:] + window[:offset]
             ciphertext = encrypt_family(family, rotated, draw)
-            features.append(ciphertext_features(ciphertext, english))
+            features.append(router_features(ciphertext, english, tables))
             labels.append(class_index)
     return features, labels
 
@@ -516,7 +781,8 @@ def _fit_router_numpy(
     epochs: int,
     hidden: int,
     seed: int,
-) -> list[int]:
+    n_classes: int | None = None,
+) -> tuple[list[int], dict[str, object]]:
     import numpy as np
 
     features = np.asarray(train_x, dtype=np.float64)
@@ -526,7 +792,7 @@ def _fit_router_numpy(
     train_n = (features - mean) / scale
     held_n = (held - mean) / scale
     n_samples, width = train_n.shape
-    n_classes = len(FAMILIES)
+    n_classes = len(FAMILIES) if n_classes is None else n_classes
     rng = np.random.default_rng(seed)
     weight_1 = rng.normal(0.0, 0.15, size=(width, hidden))
     bias_1 = np.zeros(hidden)
@@ -534,7 +800,7 @@ def _fit_router_numpy(
     bias_2 = np.zeros(n_classes)
     targets = np.eye(n_classes)[np.asarray(train_y, dtype=np.int64)]
     for epoch in range(epochs):
-        rate = 0.35 if epoch < epochs // 2 else 0.1
+        rate = 0.4 if epoch < epochs // 2 else 0.12
         activated = np.tanh(train_n @ weight_1 + bias_1)
         logits = activated @ weight_2 + bias_2
         shifted = logits - logits.max(axis=1, keepdims=True)
@@ -551,7 +817,19 @@ def _fit_router_numpy(
         bias_1 -= rate * grad_pre.sum(axis=0)
     activated = np.tanh(held_n @ weight_1 + bias_1)
     logits = activated @ weight_2 + bias_2
-    return [int(index) for index in logits.argmax(axis=1)]
+    predicted = [int(index) for index in logits.argmax(axis=1)]
+    weights = {
+        "mean": mean.tolist(),
+        "scale": scale.tolist(),
+        "w1": weight_1.tolist(),
+        "b1": bias_1.tolist(),
+        "w2": weight_2.tolist(),
+        "b2": bias_2.tolist(),
+        "hidden": hidden,
+        "epochs": epochs,
+        "width": int(width),
+    }
+    return predicted, weights
 
 
 def _dot(row: list[float], col: list[float]) -> float:
@@ -565,11 +843,12 @@ def _fit_router_python(
     epochs: int,
     hidden: int,
     seed: int,
+    n_classes: int | None = None,
 ) -> list[int]:
     """Same architecture as the numpy fit, standard-library only."""
     width = len(train_x[0])
     n_samples = len(train_x)
-    n_classes = len(FAMILIES)
+    n_classes = len(FAMILIES) if n_classes is None else n_classes
     mean = [sum(row[j] for row in train_x) / n_samples for j in range(width)]
     var = [
         sum((row[j] - mean[j]) ** 2 for row in train_x) / n_samples for j in range(width)
@@ -587,7 +866,7 @@ def _fit_router_python(
     weight_2 = [[draw.gauss(0.0, 0.15) for _ in range(n_classes)] for _ in range(hidden)]
     bias_2 = [0.0] * n_classes
     for epoch in range(epochs):
-        rate = 0.35 if epoch < epochs // 2 else 0.1
+        rate = 0.4 if epoch < epochs // 2 else 0.12
         grad_w1 = [[0.0] * hidden for _ in range(width)]
         grad_b1 = [0.0] * hidden
         grad_w2 = [[0.0] * n_classes for _ in range(hidden)]
@@ -650,32 +929,44 @@ def route_held_out(
     epochs: int = ROUTER_EPOCHS,
     hidden: int = ROUTER_HIDDEN,
     seed: int = ROUTER_SEED,
+    families: tuple[str, ...] | list[str] | None = None,
 ) -> dict[str, object]:
     """Train on Austen-derived ciphertexts and score Doyle-derived ciphertexts."""
+    from engine.neural_features import feature_tables
+
     assert_split(train_letters, held_letters)
     assert_certificate_plaintexts_excluded(train_letters, held_letters)
+    names = tuple(families) if families is not None else families_for_grade()
     english = _english_unigram(train_letters)
-    train_x, train_y = _router_samples(train_letters, english, ROUTER_TRAIN_PER_CLASS, seed)
+    tables = feature_tables(train_letters, english)
+    train_x, train_y = _router_samples(
+        train_letters, english, ROUTER_TRAIN_PER_CLASS, seed, names, tables
+    )
     test_x, test_y = _router_samples(
-        held_letters, english, ROUTER_TEST_PER_CLASS, seed + 1
+        held_letters, english, ROUTER_TEST_PER_CLASS, seed + 1, names, tables
     )
     backend = "numpy"
     try:
-        predicted = _fit_router_numpy(train_x, train_y, test_x, epochs, hidden, seed)
+        predicted, _weights = _fit_router_numpy(
+            train_x, train_y, test_x, epochs, hidden, seed, n_classes=len(names)
+        )
     except ImportError:
         # Fewer passes: the standard-library fit only has to beat chance.
         backend = "python"
-        predicted = _fit_router_python(train_x, train_y, test_x, min(epochs, 40), hidden, seed)
+        predicted = _fit_router_python(
+            train_x, train_y, test_x, min(epochs, 40), hidden, seed, n_classes=len(names)
+        )
+        _weights = None
     correct = sum(1 for guess, truth in zip(predicted, test_y) if guess == truth)
     total = len(test_y)
     per_family: dict[str, dict[str, int]] = {}
-    for class_index, family in enumerate(FAMILIES):
+    for class_index, family in enumerate(names):
         truths = [i for i, label in enumerate(test_y) if label == class_index]
         hits = sum(1 for i in truths if predicted[i] == class_index)
         per_family[family] = {"correct": hits, "total": len(truths)}
     return {
         "backend": backend,
-        "families": list(FAMILIES),
+        "families": list(names),
         "train_plaintext_sha256": sha256_text(train_letters),
         "heldout_plaintext_sha256": sha256_text(held_letters),
         "train_per_class": ROUTER_TRAIN_PER_CLASS,
@@ -683,7 +974,7 @@ def route_held_out(
         "correct": correct,
         "total": total,
         "accuracy": correct / total,
-        "chance_baseline": router_chance_baseline(),
+        "chance_baseline": router_chance_baseline(len(names)),
         "per_family": per_family,
     }
 
@@ -808,7 +1099,7 @@ def evaluate() -> dict:
                 **language,
             },
             "solver_router": {
-                "model": "ciphertext-feature tanh hidden softmax in engine.neural_grade",
+                "model": "ciphertext features plus certified look-ahead, tanh hidden softmax in engine.neural_grade",
                 "note": "Separate from engine.solver_net, which is not edited. Covers certified families that module does not route.",
                 "train_ciphertexts": "generated from Austen chapters I-III, not from certificate plaintexts",
                 "heldout_ciphertexts": "generated from the Doyle held-out passage, not from certificate plaintexts",
