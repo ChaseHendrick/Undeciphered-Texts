@@ -96,3 +96,7 @@
 ## Chaocipher (Programming Praxis known alphabets; not Byrne's exhibits)
 - https://programmingpraxis.com/2010/07/06/chaocipher/
 - See [chaocipher.md](chaocipher.md)
+
+## Tri-square (ACA known squares; not an unknown script)
+- https://www.cryptogram.org/downloads/aca.info/ciphers/TriSquare.pdf
+- See [tri-square.md](tri-square.md)

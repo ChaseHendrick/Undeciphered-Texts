@@ -1,0 +1,26 @@
+{
+  "cipher_name": "tri_square",
+  "name": "tri_square",
+  "plaintext": "THREEKEYSQUARESUSEDX",
+  "ciphertext": "RHLQXRLXOEVZBATXSERXDDIUAAABFZ",
+  "key": "NOVELS:vertical/READING:horizontal/PASTIME:clockwise_spiral",
+  "keys": {
+    "square1_keyword": "NOVELS",
+    "square1_route": "vertical",
+    "square1": "NSFMUOAGPWVBHQXECIRYLDKTZ",
+    "square2_keyword": "READING",
+    "square2_route": "horizontal",
+    "square2": "READINGBCFHKLMOPQSTUVWXYZ",
+    "square3_keyword": "PASTIME",
+    "square3_route": "clockwise_spiral",
+    "square3": "PASTINOQRMLYZUEKXWVBHGFDC",
+    "first_rows": [3, 2, 4, 3, 2, 2, 3, 4, 1, 2],
+    "third_cols": [2, 0, 4, 4, 3, 1, 3, 4, 2, 4]
+  },
+  "source_url": "https://www.cryptogram.org/downloads/aca.info/ciphers/TriSquare.pdf",
+  "source_sha256": "74b8200474df8a50e6782fcc33b4a34517f09d644b3954dc918c373f3f1b4151",
+  "message": "three key squares used x",
+  "printed_ciphertext": "RHL QXR LXO EVZ BAT XSE RXD DIU AAA BFZ.",
+  "plaintext_sha256": "20b2ce99dcadee9e158cff57e88c0328ed9461218b841061ed66a79e86c182b6",
+  "note": "Verification certificate for the ACA Tri-square sheet worked example, sheet page 86. The sheet prints the plaintext as spaced letters 't h r e e k e y s q u a r e s u s e d x'. Spaces are not enciphered and are not included in plaintext or in plaintext_sha256. That hash is SHA-256 of THREEKEYSQUARESUSEDX. The final X is the even-length null printed on the sheet. The sheet prints the ciphertext as RHL QXR LXO EVZ BAT XSE RXD DIU AAA BFZ. Those spaces are trigraph groups only, and the final period is punctuation. Neither is in the ciphertext field. The sheet prints three 5 by 5 squares and does not name keywords. Square 1 row-major NSFMUOAGPWVBHQXECIRYLDKTZ is keyword NOVELS written down the columns. Square 2 row-major READINGBCFHKLMOPQSTUVWXYZ is keyword READING written across the rows. Square 3 row-major PASTINOQRMLYZUEKXWVBHGFDC is keyword PASTIME written in a clockwise spiral. J is omitted. The first cipher letter may be any letter in the square 1 column, and the third may be any letter in the square 2 row. first_rows and third_cols record the letters the sheet printed, counting from the top of the column and from the left of the row. source_sha256 is the SHA-256 of the fetched TriSquare.pdf. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, Zodiac, Beale, McCormick, or army message Nr. 86."
+}
