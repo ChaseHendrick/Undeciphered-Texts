@@ -11,7 +11,7 @@ This repository mixes **sourced research notes** about undeciphered scripts / op
 5. **Solvers need known-plaintext tests.** New classical solvers must recover fixture ciphertext without being given the key, with a failing-then-passing test in `tests/`.
 6. **Research logs ≠ claims.** Dated notes go in `docs/logs/YYYY-MM-DD.md`. Do not promote log speculation into `docs/landscape.md` / `docs/closest.md` without sources.
 7. **Do not commit broken binaries.** Image uploads via some MCP GitHub tools can corrupt JPEG/PNG (base64 stored as text). Prefer `git add` of binary blobs. Verify magic bytes after push (`FF D8 FF` for JPEG).
-8. **One engine.** Do not publish two competing cipher engines. Extend `engine/` here; do not import GENChase simulation / genart domain code.
+8. **One engine.** Do not publish two competing cipher engines. Extend `engine/` here.
 9. **Honesty in README and DEMO.md.** `DEMO.md` must be produced by `python -m engine demo`, not hand-written as if it were a run.
 
 ## Quality bar
@@ -29,4 +29,3 @@ See [`docs/QUALITY.md`](QUALITY.md) and [`docs/NOVELTY.md`](NOVELTY.md). Link an
 
 - Claiming a breakthrough on an undeciphered script or language inside this repo.
 - Shipping stub “solvers” that do not recover known plaintext.
-- Copying domain content from JustLetMeRead or GENChase (layout/quality inspiration only).

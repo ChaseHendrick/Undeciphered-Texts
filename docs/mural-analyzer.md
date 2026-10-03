@@ -10,9 +10,9 @@
 
 **It does not read Teotihuacan glyphs or any ancient painting.** It does not OCR, decipher, transliterate, or claim a glyph reading. It is not a Mesoamerican epigraphy tool. Feed it a photo of an ancient mural and you still only get color buckets and blobs, not names, sounds, or meanings.
 
-## Technique note (GENChase)
+## Technique note
 
-Connected-region labeling uses the classical one-pass union-find idea from site percolation (Hoshen-Kopelman). That family of cluster labeling is discussed on the percolation plate in [ChaseHendrick/GENChase](https://github.com/ChaseHendrick/GENChase). The Python here is a fresh implementation for RGB grids; no GENChase studio JavaScript is vendored.
+Connected-region labeling uses the classical one-pass union-find idea from site percolation (Hoshen-Kopelman).
 
 ## Dependencies
 

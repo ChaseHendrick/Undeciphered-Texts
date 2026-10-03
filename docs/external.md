@@ -46,10 +46,6 @@ Pointers only, different problem than classical substitution annealing:
 | Beinecke digital library | Voynich MS 408 | https://beinecke.library.yale.edu/beinecke/collections/beinecke-cipher-voynich-manuscript |
 | Indus corpora / stats papers | Indus | e.g. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009506 |
 
-## Architecture reference (non-crypto)
-
-- [GENChase](https://github.com/ChaseHendrick/GENChase), quality bar for CLI/tests/docs honesty; **not** a cipher engine; do not copy domain code.
-
 ## How to use these with this repo
 
 1. Learn classical attacks with `python -m engine.cli demo`.

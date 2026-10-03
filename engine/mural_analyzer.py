@@ -6,8 +6,7 @@ painting. It does not OCR, decipher, or claim a glyph reading.
 
 Connected-region labeling follows the same one-pass union-find idea used in
 classical site percolation (Hoshen-Kopelman), reimplemented here for RGB
-labels. That technique appears in ChaseHendrick/GENChase's percolation plate;
-no studio JavaScript is copied.
+labels.
 
 Stdlib only for analysis. Pillow is optional for load/save of PNG files.
 """
@@ -67,7 +66,7 @@ DISCLAIMER = (
 
 
 def quantize_rgb(rgb: RGB, step: int = 32) -> RGB:
-    """Bucket each channel. Same spirit as discrete color fields in GENChase plates."""
+    """Bucket each channel."""
     if step < 1:
         raise ValueError("step must be >= 1")
     r, g, b = rgb
