@@ -1,0 +1,16 @@
+{
+  "cipher_name": "four-square",
+  "plaintext": "HELPMEOBIWANKENOBI",
+  "ciphertext": "FYGMKYHOBXMFKKKIMD",
+  "keys": {
+    "upper_right_keyword": "example",
+    "lower_left_keyword": "keyword",
+    "upper_right_square": "EXAMPLBCDFGHIJKNORSTUVWYZ",
+    "lower_left_square": "KEYWORDABCFGHIJLMNPSTUVXZ",
+    "plaintext_square": "ABCDEFGHIJKLMNOPRSTUVWXYZ",
+    "omitted_letter": "Q"
+  },
+  "source_url": "https://en.wikipedia.org/wiki/Four-square_cipher",
+  "plaintext_sha256": "48a9da8065b6034b2bebc719c06545132b9fc4e5a337c642343dca376a2cca36",
+  "note": "Verification certificate for a published worked example. Known-cipher solver only. Checks the published example, not an unknown script. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
