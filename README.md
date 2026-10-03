@@ -11,8 +11,6 @@ The `engine/` package recovers *known* classical ciphers (Caesar, Vigenère, mon
 
 Inspired by amateur / hobby recovery of old German coded messages (see Crypto Cellar Enigma work) and by published historical breaks such as Copiale and Zodiac Z340.
 
-Layout and honesty bar take cues from [JustLetMeRead](https://github.com/ChaseHendrick/JustLetMeRead) (docs clarity) and [GENChase](https://github.com/ChaseHendrick/GENChase) (CLI / tests / architecture), **structure only**. Domain content here is original classical crypto and sourced research; nothing from genart/simulation code is imported.
-
 ## Start here (recommendation)
 
 Work **digitized historical ciphertexts in known languages** first, not Linear A or Voynich.
