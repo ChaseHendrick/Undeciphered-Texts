@@ -1,0 +1,15 @@
+{
+  "method": "old_dial_lock",
+  "combination": "3-11-7",
+  "numbers": [
+    3,
+    11,
+    7
+  ],
+  "dial_min": 0,
+  "dial_max": 99,
+  "wheels": 3,
+  "space_size": 1000000,
+  "combination_sha256": "940967c92ad05416c88b08c3e92f3c6eba2b2bbac1eadbb8c46e886ba5e1ec1b",
+  "note": "One combination planted in an in-process old three-number dial (0 through 99). The simulator returns only whether a try matches. The search recovers that combination from the boolean answers. This opens only the simulated lock inside the test, not a real safe. Not a procedure for a physical lock and not a claim about Nr. 86."
+}

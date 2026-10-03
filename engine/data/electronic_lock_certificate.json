@@ -1,0 +1,16 @@
+{
+  "method": "electronic_lock",
+  "code": "4816",
+  "digits": [
+    4,
+    8,
+    1,
+    6
+  ],
+  "code_length": 4,
+  "digit_min": 0,
+  "digit_max": 9,
+  "space_size": 10000,
+  "code_sha256": "21445af8f7acc5de30b16b435e488cca8c824c41c178fa56d4bc6fec55d98bf6",
+  "note": "One short code planted in an in-process modern electronic lock (four digits, 0 through 9). The simulator returns only whether a try matches. The search recovers that code from the boolean answers. This opens only the simulated lock inside the test, not a real safe. Not a procedure for a physical lock and not a claim about Nr. 86."
+}
