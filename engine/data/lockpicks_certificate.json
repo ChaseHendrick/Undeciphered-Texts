@@ -1,0 +1,39 @@
+{
+  "method": "lockpicks",
+  "pick_types_source": "https://en.wikipedia.org/wiki/Lock_picking",
+  "pin_tumbler_key": "3-1-5-0",
+  "pin_tumbler_key_sha256": "b5242deaa295cdd3fcb771df3120862e9c1faa7441dc66ea85c9034c256817e6",
+  "pin_cuts": [
+    3,
+    1,
+    5,
+    0
+  ],
+  "pin_binding_order": [
+    2,
+    0,
+    3,
+    1
+  ],
+  "wafer_key": "1-3-2",
+  "wafer_key_sha256": "4f38ac43ee8a7fb00038518ae4a0d1314de3e8f19ee32c947d02df4a48ac29ba",
+  "wafer_lifts": [
+    1,
+    3,
+    2
+  ],
+  "wafer_order": [
+    0,
+    2,
+    1
+  ],
+  "keypad_key": "7395",
+  "keypad_key_sha256": "d114c819970461a9486c63dc47dab37a87b01144cef635b26a41c0d0b6a6272a",
+  "keypad_digits": [
+    7,
+    3,
+    9,
+    5
+  ],
+  "note": "Three in-process models, each with one planted secret. The pin-tumbler model has four pins, binding order 2, 0, 3, 1, and cuts 3-1-5-0. The wafer model has three wafers, order 0, 2, 1, and lifts 1-3-2. The keypad model plants 7395. Each picker reads only yes or no answers from its model. This opens only the simulated lock inside the test, not a real lock. Not a procedure for a physical lock and not a claim about Nr. 86."
+}
