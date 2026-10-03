@@ -1,0 +1,9 @@
+{
+  "method": "dudley_60",
+  "known_combination": "8-2",
+  "first_position": 2,
+  "candidate_count": 45,
+  "source_url": "https://jameshowell.wordpress.com/2010/09/04/hack-a-dudley-lock-in-10-minutes/",
+  "combination_sha256": "821bdccb6a71a7eb2002f7aac79f58099cdcab35dee0d582cc72ab32a7939d55",
+  "note": "Published math for the Dudley 60-position dial, checked on one pair from James Howell's worked example (8-2, the first pair he prints, with first position 2). Candidate count is the published list of 45 pairs, not the full 216,000 dial triples. The page does not mark 8-2 as the pair that opened a lock. Not instructions for a specific physical lock and not a claim about Nr. 86."
+}

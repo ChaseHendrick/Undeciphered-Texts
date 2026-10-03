@@ -1,0 +1,8 @@
+{
+  "method": "simplex_9600",
+  "known_combination": "2+4, 3",
+  "candidate_count": 1081,
+  "source_url": "https://ekman.cx/articles/simplex_locks/",
+  "combination_sha256": "117de98c02c71af60109f033f4a9f5e8259eff6e10371d2741935819c6f95523",
+  "note": "Published math for the five-button Simplex combination set, checked on one known combination (factory default 2+4, 3) from Patrick Ekman's table. Candidate count is the published total of 1081, not the 120 sequences that use every button once with no simultaneous press. Not instructions for a specific physical lock and not a claim about Nr. 86."
+}
