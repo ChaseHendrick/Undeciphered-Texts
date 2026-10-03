@@ -1,0 +1,9 @@
+{
+  "cipher_name": "straddling checkerboard",
+  "plaintext": "ATTACKATDAWN",
+  "ciphertext": "3113212731223655",
+  "key": "2,6|ETAONRIS|BCDFGHJKLMPQ/UVWXYZ.",
+  "source_url": "https://en.wikipedia.org/wiki/Straddling_checkerboard",
+  "plaintext_sha256": "393dfae2845abf5cb0d599ccd1189f57ef56b3fa104e0ae71844d78bccd4e5d2",
+  "note": "Verification certificate for a published worked example of the straddling checkerboard (Wikipedia: board with header ETAONRIS, blank columns 2 and 6, rows BCDFGHJKLM and PQ/UVWXYZ., printed sentence \"ATTACK AT DAWN\", ciphertext 3113212731223655). Spaces are not encoded, so the recovered plaintext is ATTACKATDAWN. Known-cipher solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
