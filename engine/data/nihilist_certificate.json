@@ -1,0 +1,14 @@
+{
+  "cipher_name": "nihilist",
+  "plaintext": "DYNAMITEWINTERPALACE",
+  "ciphertext": "37 106 62 36 67 47 86 26 104 53 62 77 27 55 57 66 55 36 54 27",
+  "key": "ZEBRAS RUSSIAN",
+  "keys": {
+    "key": "ZEBRAS RUSSIAN",
+    "square_keyword": "ZEBRAS",
+    "additive_keyword": "RUSSIAN"
+  },
+  "source_url": "https://en.wikipedia.org/wiki/Nihilist_cipher",
+  "plaintext_sha256": "0a515b552fd4a9f181e22817708ce8d911ee58a634c8faa388a7123cccb9a6df",
+  "note": "Verification certificate for a published worked example of the Nihilist cipher (keyed Polybius square plus an additive keyword). Known-cipher solver only. Not an unknown-script reading. Not a reading of Linear A, Indus, Voynich, rongorongo, Kryptos K4, or army message Nr. 86."
+}
