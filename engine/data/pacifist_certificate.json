@@ -1,0 +1,16 @@
+{
+  "method": "pacifist_preference",
+  "cipher_name": "caesar",
+  "plaintext": "The calm garden keeps peace under soft light.",
+  "ciphertext": "Aol jhst nhyklu rllwz wlhjl bukly zvma spnoa.",
+  "keys": {
+    "shift": 7
+  },
+  "candidates": [
+    "The calm garden keeps peace under soft light.",
+    "The attack will kill foes in a brutal war!"
+  ],
+  "chosen": "The calm garden keeps peace under soft light.",
+  "plaintext_sha256": "b06bcda857f543144a9f463bfe9c1b8d7aed2c5a87482880663633487cfe3b82",
+  "note": "Verification certificate for a preference among candidate plaintexts for one known Caesar ciphertext. The pacifist word list picks the peaceful sentence over a violent one. Preference among candidates only. Not a decipherment of army message Nr. 86, Kryptos K4, or an unknown script."
+}
