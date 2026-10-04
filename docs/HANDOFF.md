@@ -52,6 +52,8 @@ Bob's format 5 file is still the incumbent. A 128-row manifest, seed 20261005, 3
 
 `engine.dagapeyeff_more` continues that swarm. 200 workers share 2,457 alphabet shapes. The friendliest is Italian with M and U merged, score 14.05, and 0 of 200 English texts given the same menu are that bad. Reversing the last three digits of each group is the only other order that stays on the square, and it fails the book's solved example. Do not adopt it as plaintext.
 
+The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, died 22 March 1955 at Maugersbury Manor, Wing Commander, service number 87808, dismissed by court martial 18 January 1949. The "he forgot" line is not a quote from him. See `docs/logs/dagapeyeff-life-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
