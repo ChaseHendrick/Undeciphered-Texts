@@ -114,6 +114,10 @@ credible cribs and independent checks remain more useful than claiming perfect
 identification. The other new catalog helpers are not automatically extra
 trained output classes.
 
+## Shuffle check, 4 October 2026
+
+Bob's confidence can describe the alphabet rather than the order. `engine.bob_caution` asks the shipped format 5 model, then asks it again on shuffled copies. If the same family wins on most shuffles, the call does not use the order. On the D'Agapeyeff cells the call is substitution at 0.9696, and 40 of 40 shuffles agree, so that call is refused. On a Caesar of known prose the call is caesar, and 0 of 40 shuffles agree, so the order check still passes for a real Caesar. The weight file was not replaced. Its SHA-256 remains `d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825`. See [the note](logs/bob-caution-2026-10-04.md).
+
 ## Use and reproducibility
 
 ```sh

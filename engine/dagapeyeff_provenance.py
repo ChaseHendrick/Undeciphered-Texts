@@ -21,6 +21,7 @@ from engine.dagapeyeff_angles import angle_report
 from engine.dagapeyeff_autokey import autokey_report
 from engine.dagapeyeff_balls import ball_report
 from engine.dagapeyeff_bifid import bifid_report
+from engine.bob_caution import bob_caution_report
 from engine.dagapeyeff_bookkey import bookkey_report
 from engine.dagapeyeff_board import board
 from engine.dagapeyeff_columns import column_report
@@ -41,6 +42,7 @@ from engine.dagapeyeff_patterns import pattern_report
 from engine.dagapeyeff_period4 import period4_report
 from engine.dagapeyeff_places import place_report
 from engine.dagapeyeff_record import record_report
+from engine.dagapeyeff_refined import refined_report
 from engine.dagapeyeff_regroup import regroup_report
 from engine.dagapeyeff_running import running_report
 from engine.dagapeyeff_router_swarm import router_swarm_report
@@ -110,6 +112,8 @@ def provenance_report() -> dict:
         ("router-swarm", router_swarm_report()),
         ("column-null", column_null_report()),
         ("large-swarm", large_swarm_report()),
+        ("refined-swarm", refined_report()),
+        ("bob-caution", bob_caution_report()),
     )
     entries = []
     previous = None

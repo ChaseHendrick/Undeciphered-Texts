@@ -11,6 +11,7 @@ from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_angles import angle_report
 from engine.dagapeyeff_autokey import autokey_report
 from engine.dagapeyeff_bifid import bifid_report
+from engine.bob_caution import bob_caution_report
 from engine.dagapeyeff_bookkey import bookkey_report
 from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_large_swarm import large_swarm_report
@@ -24,6 +25,7 @@ from engine.dagapeyeff_delay import delay_report
 from engine.dagapeyeff_digit_routes import digit_route_report
 from engine.dagapeyeff_groups import group_report
 from engine.dagapeyeff_regroup import regroup_report
+from engine.dagapeyeff_refined import refined_report
 from engine.dagapeyeff_router_swarm import router_swarm_report
 from engine.dagapeyeff_running import running_report
 from engine.dagapeyeff_solver_swarm import solver_swarm_report
@@ -403,5 +405,35 @@ def consider_large_swarm() -> dict:
             "Prose is -2.5185. 21 of 40 shuffled texts, given the same 19,110 drops, do as well. "
             "Repeat gaps at periods 2 through 28 peak at a z of 0.7495. "
             "1,505 of 5,000 shuffles peak at least that high. Refuse both."
+        ),
+    }
+
+
+def consider_refined() -> dict:
+    report = refined_report()
+    allowed = report["shuffles_as_high"] * 20 < report["draws"] and report["peak_count"] > 1
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "refined_allowed": allowed,
+        "learned": (
+            "The most surprising neighbor pair has a z of 3.9957 and occurs once. "
+            "1,637 of 2,000 shuffles have a peak at least that high. "
+            "A pair that appears once is not a pattern. Refuse it."
+        ),
+    }
+
+
+def consider_bob() -> dict:
+    report = bob_caution_report()
+    allowed = report["challenge_uses_order"] and report["weights_match_shipped"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "bob_allowed": allowed,
+        "learned": (
+            "Bob names the cells substitution at 0.9696. 40 of 40 shuffles get the same name, "
+            "so the call does not use the order. On a Caesar of known prose he names caesar, "
+            "and 0 of 40 shuffles agree. The shipped weights were not replaced."
         ),
     }
