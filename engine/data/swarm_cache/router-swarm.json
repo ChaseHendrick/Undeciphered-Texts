@@ -1,0 +1,20 @@
+{
+  "claimed_plaintext": null,
+  "column_ic": 0.1868,
+  "column_index": 3,
+  "column_shuffles_as_high": 6,
+  "column_top_count": 6,
+  "families": 20,
+  "grid_draws": 200,
+  "router_draws": 40,
+  "row_ic": 0.1319,
+  "row_shuffles_as_high": 58,
+  "scope": "A family probability is not a reading. No letter string is stored.",
+  "second_family": "adfgvx",
+  "shuffles_as_confident": 25,
+  "shuffles_same_family": 40,
+  "solved": false,
+  "top_family": "substitution",
+  "top_probability": 0.9696,
+  "uncertain": false
+}

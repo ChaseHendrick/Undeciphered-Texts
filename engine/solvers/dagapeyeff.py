@@ -22,6 +22,7 @@ from engine.dagapeyeff_delay import delay_report
 from engine.dagapeyeff_digit_routes import digit_route_report
 from engine.dagapeyeff_groups import group_report
 from engine.dagapeyeff_regroup import regroup_report
+from engine.dagapeyeff_router_swarm import router_swarm_report
 from engine.dagapeyeff_running import running_report
 from engine.dagapeyeff_solver_swarm import solver_swarm_report
 from engine.dagapeyeff_classic_swarm import classic_swarm_report
@@ -346,5 +347,24 @@ def consider_classic_swarm() -> dict:
             "Beaufort period 5 scores -3.7684. A sample of 20 was widened to 80, and 8 do as well. "
             "Porta period 4 scores -3.9175, and 11 of 20 shuffles do as well. "
             "Prose is -2.5185. Refuse the swarm."
+        ),
+    }
+
+
+def consider_router_swarm() -> dict:
+    report = router_swarm_report()
+    column_unusual = report["column_shuffles_as_high"] * 20 < report["grid_draws"]
+    family_unusual = report["shuffles_as_confident"] * 20 < report["router_draws"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "router_swarm_allowed": False,
+        "column_unusual": column_unusual,
+        "family_unusual": family_unusual,
+        "learned": (
+            "The router names substitution at 0.9696 and is not uncertain. "
+            "40 of 40 shuffles are also named substitution, and 25 of 40 are at least as confident. "
+            "The fourth column has one symbol 6 times. 6 of 200 shuffled grids match that. "
+            "A repetitive column is not a reading. Refuse it."
         ),
     }
