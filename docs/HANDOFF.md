@@ -102,6 +102,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_record` places the cells against a published chi-square of 49.23 and against 2,000 same-length English draws. The cells score 34.23, which is past that candidate and still 10.06 above the worst English draw. A legal group reversal scores 8.86 and fails the solved example. The order gap from 0.5706 to 1.0658 is unclosed. Do not convert his -692 onto this scale. Do not store a letter string. See `docs/logs/dagapeyeff-record-2026-10-04.md`.
 
+`engine.dagapeyeff_provenance` hashes the cells, then the yardstick, the balls, and the record. Floats are written with 17 significant digits. The chain ends at `ce7d38c98d060ee26a038f8a7f5b1849b1f30996eeda15c6955c74912370b455`. A matching hash means those objects were recomputed. Do not treat it as a reading. Do not store a letter string. See `docs/logs/dagapeyeff-provenance-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
