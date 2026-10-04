@@ -22,6 +22,7 @@ from engine.dagapeyeff_board import board
 from engine.dagapeyeff_columns import column_report
 from engine.dagapeyeff_convert import convert_report
 from engine.dagapeyeff_edits import edit_report
+from engine.dagapeyeff_foresight import foresight
 from engine.dagapeyeff_infer import infer
 from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_model import model_report
@@ -80,6 +81,7 @@ def provenance_report() -> dict:
         ("columns", column_report()),
         ("board", board()),
         ("infer", infer()),
+        ("foresight", foresight()),
     )
     entries = []
     previous = None

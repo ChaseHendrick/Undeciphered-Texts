@@ -122,6 +122,15 @@ def board_text() -> str:
     lines.append("")
     lines.append(drawn["required"])
     lines.append("")
+    from engine.dagapeyeff_foresight import foresight
+
+    chosen = foresight()
+    lines.append("## Next")
+    lines.append("")
+    lines.append(chosen["learned"])
+    lines.append("")
+    lines.append(chosen["do_not"])
+    lines.append("")
     lines.append("No letter string is stored.")
     lines.append("")
     return "\n".join(lines)

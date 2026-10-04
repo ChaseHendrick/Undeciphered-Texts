@@ -78,4 +78,10 @@ Not a next step: Another order of the same cells, a longer repeat of the same sh
 
 A rule outside the closed classes. It has to beat prose at -2.5185, and the same search on shuffled cells has to miss it. Meeting that bar is still not a reading until the control is checked.
 
+## Next
+
+The members let through one job: drop one fixed digit from each printed group of five. That changes the cells, so it is not a closed class. None of the five positions stays on the book square. The fewest pairs off the square is 79 of 158. A word score was not run. Refuse it.
+
+Do not drop one fixed digit from each printed group of five.
+
 No letter string is stored.
