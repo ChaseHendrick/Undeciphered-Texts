@@ -24,6 +24,7 @@ from engine.dagapeyeff_bifid import bifid_report
 from engine.dagapeyeff_bookkey import bookkey_report
 from engine.dagapeyeff_board import board
 from engine.dagapeyeff_columns import column_report
+from engine.dagapeyeff_column_null import column_null_report
 from engine.dagapeyeff_convert import convert_report
 from engine.dagapeyeff_delay import delay_report
 from engine.dagapeyeff_digit_routes import digit_route_report
@@ -106,6 +107,7 @@ def provenance_report() -> dict:
         ("solver-swarm", solver_swarm_report()),
         ("classic-swarm", classic_swarm_report()),
         ("router-swarm", router_swarm_report()),
+        ("column-null", column_null_report()),
     )
     entries = []
     previous = None

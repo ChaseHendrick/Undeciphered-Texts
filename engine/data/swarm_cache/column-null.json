@@ -1,0 +1,19 @@
+{
+  "best_column": 5,
+  "best_quadgram": -3.3208,
+  "best_shuffles_as_high": 12,
+  "claimed_plaintext": null,
+  "columns": 14,
+  "draws": 80,
+  "fourth_column": 3,
+  "fourth_quadgram": -3.6511,
+  "fourth_shuffles_as_high": 77,
+  "kept_after_column": 182,
+  "mode_dropped": 6,
+  "mode_quadgram": -3.5794,
+  "mode_shuffles_as_high": 58,
+  "prose_quadgram": -2.5185,
+  "reaches_prose": false,
+  "scope": "Dropping a column is not a reading. No letter string is stored.",
+  "solved": false
+}

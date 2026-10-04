@@ -18,6 +18,7 @@ from engine.dagapeyeff_patterns import pattern_report
 from engine.dagapeyeff_places import place_report
 from engine.dagapeyeff_period4 import period4_report
 from engine.dagapeyeff_columns import column_report
+from engine.dagapeyeff_column_null import column_null_report
 from engine.dagapeyeff_delay import delay_report
 from engine.dagapeyeff_digit_routes import digit_route_report
 from engine.dagapeyeff_groups import group_report
@@ -366,5 +367,23 @@ def consider_router_swarm() -> dict:
             "40 of 40 shuffles are also named substitution, and 25 of 40 are at least as confident. "
             "The fourth column has one symbol 6 times. 6 of 200 shuffled grids match that. "
             "A repetitive column is not a reading. Refuse it."
+        ),
+    }
+
+
+def consider_column_null() -> dict:
+    report = column_null_report()
+    allowed = report["reaches_prose"] and report["best_shuffles_as_high"] * 20 < report["draws"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "column_null_allowed": allowed,
+        "learned": (
+            "Dropping the best of the 14 columns leaves 182 cells at -3.3208. "
+            "That column is index 5, not the repetitive fourth column. "
+            "12 of 80 shuffled grids, allowed to drop their own best column, do as well. "
+            "Dropping the fourth column scores -3.6511, and 77 of 80 shuffles do as well. "
+            "Dropping its six repeated symbols scores -3.5794, and 58 of 80 do as well. "
+            "Prose is -2.5185. The repetitive column is not filler. Refuse it."
         ),
     }
