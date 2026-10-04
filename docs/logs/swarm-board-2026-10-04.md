@@ -8,7 +8,7 @@ Search this page from code with `engine.dagapeyeff_board.search_board`. A hit is
 
 ## frequency: refuse
 
-At least three count-moves are required before a frequency ball can clear English. Clearing it is not a reading.
+Every reachable three-move change was scored, 2,321,645 of them. The best chi-square is 24.8811. Its ball runs from 24.83087 to 24.931425, entirely above the English line at 24.165. Four moves are required. Clearing the line is not a reading.
 
 Do not treat a chi-square under the English line as a reading.
 
@@ -84,6 +84,6 @@ The members let through one job: drop one fixed digit from each printed group of
 
 Do not drop one fixed digit from each printed group of five.
 
-10 frozen scores claim no reading. Reversing the cells does not change the chi-square. Both ends of a printed group of five are on the square in 0 of 79 groups. That zero is forced by the odd group length, so 1 of 2000 shuffles also hitting zero is not evidence. The next job the members allow is the check, not another search. Refuse the zero as a finding.
+19 frozen scores claim no reading. Reversing the cells does not change the chi-square. Both ends of a printed group of five are on the square in 0 of 79 groups. That zero is forced by the odd group length, so 1 of 2000 shuffles also hitting zero is not evidence. The next job the members allow is the check, not another search. Refuse the zero as a finding.
 
 No letter string is stored.
