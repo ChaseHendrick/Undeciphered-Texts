@@ -72,6 +72,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_frames` uses no letter table. Even places are exactly the digits 06789. Odd places are exactly 12345 except index 393, a 0. 0 of 20,000 shuffles are that clean. Dropping the last three zeros as filler is stronger than the digits require: only the middle one is on the wrong side. Adjacent pairs are not more predictable than a shuffle (16,611 of 20,000). Do not store a letter string. See `docs/logs/dagapeyeff-frames-2026-10-04.md`.
 
+`engine.dagapeyeff_order` reorders the 196 cells. Relabeling cannot raise successive-symbol dependence: an English passage scores 1.0658 before and after a letter shift. The best of 20,000 column keys scores 0.7657, about the same as the best of 5,000 random orders (0.7556), and below same-length English (1.0658) and German (1.2000). A substitution of these orders is not a reading. Do not store a letter string. See `docs/logs/dagapeyeff-order-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
