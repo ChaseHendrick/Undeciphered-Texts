@@ -1,0 +1,400 @@
+{
+  "schema_version": 1,
+  "experiment": "K4 finite family completion of the 2026-10-03 partial model space",
+  "date": "2026-10-04",
+  "status": "not_solved",
+  "solved": false,
+  "claimed_plaintext": null,
+  "new_verified_plaintext": false,
+  "ciphertext": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+  "ciphertext_length": 97,
+  "ciphertext_sha256": "eea813570c7f1fd3b34674e47b5c3da8948026f5cefee612a0b38ffaa515ceab",
+  "coordinates": "Zero-based original plaintext letter positions, before any tested transposition.",
+  "fitted_and_reserved": [
+    {
+      "fold": "A",
+      "fitted_crib": {
+        "offset": 21,
+        "plaintext": "EASTNORTHEAST"
+      },
+      "reserved_crib": {
+        "offset": 63,
+        "plaintext": "BERLINCLOCK"
+      },
+      "reserved_crib_passed_to_search": false
+    },
+    {
+      "fold": "B",
+      "fitted_crib": {
+        "offset": 63,
+        "plaintext": "BERLINCLOCK"
+      },
+      "reserved_crib": {
+        "offset": 21,
+        "plaintext": "EASTNORTHEAST"
+      },
+      "reserved_crib_passed_to_search": false
+    }
+  ],
+  "hypothesis_space": {
+    "per_family": 8128,
+    "per_fold": 32512,
+    "families": [
+      "repeating",
+      "plaintext-autokey",
+      "ciphertext-autokey",
+      "beaufort"
+    ],
+    "alphabets": [
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      "KRYPTOSABCDEFGHIJLMNQUVWXZ"
+    ],
+    "orders": [
+      "substitute-then-transpose",
+      "transpose-then-substitute"
+    ],
+    "max_period": 32,
+    "max_width": 32,
+    "max_checks_per_call": 10000,
+    "max_candidates_per_call": 10000,
+    "calls": 8
+  },
+  "checks_per_call": [
+    {
+      "fold": "A",
+      "family": "repeating",
+      "fitted_crib": {
+        "offset": 21,
+        "plaintext": "EASTNORTHEAST"
+      },
+      "reserved_crib": {
+        "offset": 63,
+        "plaintext": "BERLINCLOCK"
+      },
+      "reserved_crib_passed_to_search": false,
+      "checks": 8128,
+      "requested_models": 8128,
+      "search_complete": true,
+      "stop_reason": "complete",
+      "compatible_models": 3212,
+      "rejected_models": 4916,
+      "candidates_returned": 3212,
+      "candidates_truncated": false,
+      "reserved_counts_cover_returned_candidates": true,
+      "complete_keys": 146,
+      "complete_key_reserved_contradictions": 146,
+      "complete_key_reserved_underdetermined": 0,
+      "reserved_contradictions": 2790,
+      "reserved_underdetermined": 422,
+      "reserved_span_matches_incomplete_key": 0,
+      "reserved_exact_predictions": 0,
+      "key_complete_flag_disagrees_with_slots": 0,
+      "elapsed_seconds": 0.449964
+    },
+    {
+      "fold": "A",
+      "family": "plaintext-autokey",
+      "fitted_crib": {
+        "offset": 21,
+        "plaintext": "EASTNORTHEAST"
+      },
+      "reserved_crib": {
+        "offset": 63,
+        "plaintext": "BERLINCLOCK"
+      },
+      "reserved_crib_passed_to_search": false,
+      "checks": 8128,
+      "requested_models": 8128,
+      "search_complete": true,
+      "stop_reason": "complete",
+      "compatible_models": 3214,
+      "rejected_models": 4914,
+      "candidates_returned": 3214,
+      "candidates_truncated": false,
+      "reserved_counts_cover_returned_candidates": true,
+      "complete_keys": 147,
+      "complete_key_reserved_contradictions": 147,
+      "complete_key_reserved_underdetermined": 0,
+      "reserved_contradictions": 2786,
+      "reserved_underdetermined": 428,
+      "reserved_span_matches_incomplete_key": 0,
+      "reserved_exact_predictions": 0,
+      "key_complete_flag_disagrees_with_slots": 0,
+      "elapsed_seconds": 0.479689
+    },
+    {
+      "fold": "A",
+      "family": "ciphertext-autokey",
+      "fitted_crib": {
+        "offset": 21,
+        "plaintext": "EASTNORTHEAST"
+      },
+      "reserved_crib": {
+        "offset": 63,
+        "plaintext": "BERLINCLOCK"
+      },
+      "reserved_crib_passed_to_search": false,
+      "checks": 8128,
+      "requested_models": 8128,
+      "search_complete": true,
+      "stop_reason": "complete",
+      "compatible_models": 2,
+      "rejected_models": 8126,
+      "candidates_returned": 2,
+      "candidates_truncated": false,
+      "reserved_counts_cover_returned_candidates": true,
+      "complete_keys": 0,
+      "complete_key_reserved_contradictions": 0,
+      "complete_key_reserved_underdetermined": 0,
+      "reserved_contradictions": 2,
+      "reserved_underdetermined": 0,
+      "reserved_span_matches_incomplete_key": 0,
+      "reserved_exact_predictions": 0,
+      "key_complete_flag_disagrees_with_slots": 0,
+      "elapsed_seconds": 0.294971
+    },
+    {
+      "fold": "A",
+      "family": "beaufort",
+      "fitted_crib": {
+        "offset": 21,
+        "plaintext": "EASTNORTHEAST"
+      },
+      "reserved_crib": {
+        "offset": 63,
+        "plaintext": "BERLINCLOCK"
+      },
+      "reserved_crib_passed_to_search": false,
+      "checks": 8128,
+      "requested_models": 8128,
+      "search_complete": true,
+      "stop_reason": "complete",
+      "compatible_models": 3220,
+      "rejected_models": 4908,
+      "candidates_returned": 3220,
+      "candidates_truncated": false,
+      "reserved_counts_cover_returned_candidates": true,
+      "complete_keys": 148,
+      "complete_key_reserved_contradictions": 148,
+      "complete_key_reserved_underdetermined": 0,
+      "reserved_contradictions": 2798,
+      "reserved_underdetermined": 422,
+      "reserved_span_matches_incomplete_key": 0,
+      "reserved_exact_predictions": 0,
+      "key_complete_flag_disagrees_with_slots": 0,
+      "elapsed_seconds": 0.468149
+    },
+    {
+      "fold": "B",
+      "family": "repeating",
+      "fitted_crib": {
+        "offset": 63,
+        "plaintext": "BERLINCLOCK"
+      },
+      "reserved_crib": {
+        "offset": 21,
+        "plaintext": "EASTNORTHEAST"
+      },
+      "reserved_crib_passed_to_search": false,
+      "checks": 8128,
+      "requested_models": 8128,
+      "search_complete": true,
+      "stop_reason": "complete",
+      "compatible_models": 3713,
+      "rejected_models": 4415,
+      "candidates_returned": 3713,
+      "candidates_truncated": false,
+      "reserved_counts_cover_returned_candidates": true,
+      "complete_keys": 150,
+      "complete_key_reserved_contradictions": 150,
+      "complete_key_reserved_underdetermined": 0,
+      "reserved_contradictions": 3284,
+      "reserved_underdetermined": 429,
+      "reserved_span_matches_incomplete_key": 0,
+      "reserved_exact_predictions": 0,
+      "key_complete_flag_disagrees_with_slots": 0,
+      "elapsed_seconds": 0.441295
+    },
+    {
+      "fold": "B",
+      "family": "plaintext-autokey",
+      "fitted_crib": {
+        "offset": 63,
+        "plaintext": "BERLINCLOCK"
+      },
+      "reserved_crib": {
+        "offset": 21,
+        "plaintext": "EASTNORTHEAST"
+      },
+      "reserved_crib_passed_to_search": false,
+      "checks": 8128,
+      "requested_models": 8128,
+      "search_complete": true,
+      "stop_reason": "complete",
+      "compatible_models": 3708,
+      "rejected_models": 4420,
+      "candidates_returned": 3708,
+      "candidates_truncated": false,
+      "reserved_counts_cover_returned_candidates": true,
+      "complete_keys": 148,
+      "complete_key_reserved_contradictions": 148,
+      "complete_key_reserved_underdetermined": 0,
+      "reserved_contradictions": 3273,
+      "reserved_underdetermined": 435,
+      "reserved_span_matches_incomplete_key": 0,
+      "reserved_exact_predictions": 0,
+      "key_complete_flag_disagrees_with_slots": 0,
+      "elapsed_seconds": 0.4922
+    },
+    {
+      "fold": "B",
+      "family": "ciphertext-autokey",
+      "fitted_crib": {
+        "offset": 63,
+        "plaintext": "BERLINCLOCK"
+      },
+      "reserved_crib": {
+        "offset": 21,
+        "plaintext": "EASTNORTHEAST"
+      },
+      "reserved_crib_passed_to_search": false,
+      "checks": 8128,
+      "requested_models": 8128,
+      "search_complete": true,
+      "stop_reason": "complete",
+      "compatible_models": 0,
+      "rejected_models": 8128,
+      "candidates_returned": 0,
+      "candidates_truncated": false,
+      "reserved_counts_cover_returned_candidates": true,
+      "complete_keys": 0,
+      "complete_key_reserved_contradictions": 0,
+      "complete_key_reserved_underdetermined": 0,
+      "reserved_contradictions": 0,
+      "reserved_underdetermined": 0,
+      "reserved_span_matches_incomplete_key": 0,
+      "reserved_exact_predictions": 0,
+      "key_complete_flag_disagrees_with_slots": 0,
+      "elapsed_seconds": 0.282292
+    },
+    {
+      "fold": "B",
+      "family": "beaufort",
+      "fitted_crib": {
+        "offset": 63,
+        "plaintext": "BERLINCLOCK"
+      },
+      "reserved_crib": {
+        "offset": 21,
+        "plaintext": "EASTNORTHEAST"
+      },
+      "reserved_crib_passed_to_search": false,
+      "checks": 8128,
+      "requested_models": 8128,
+      "search_complete": true,
+      "stop_reason": "complete",
+      "compatible_models": 3707,
+      "rejected_models": 4421,
+      "candidates_returned": 3707,
+      "candidates_truncated": false,
+      "reserved_counts_cover_returned_candidates": true,
+      "complete_keys": 149,
+      "complete_key_reserved_contradictions": 149,
+      "complete_key_reserved_underdetermined": 0,
+      "reserved_contradictions": 3280,
+      "reserved_underdetermined": 427,
+      "reserved_span_matches_incomplete_key": 0,
+      "reserved_exact_predictions": 0,
+      "key_complete_flag_disagrees_with_slots": 0,
+      "elapsed_seconds": 0.464272
+    }
+  ],
+  "search_complete": true,
+  "incomplete_searches": [],
+  "truncated_candidate_lists": [],
+  "compatible_counts": {
+    "per_call": [
+      {
+        "fold": "A",
+        "family": "repeating",
+        "compatible_models": 3212,
+        "rejected_models": 4916,
+        "complete_keys": 146
+      },
+      {
+        "fold": "A",
+        "family": "plaintext-autokey",
+        "compatible_models": 3214,
+        "rejected_models": 4914,
+        "complete_keys": 147
+      },
+      {
+        "fold": "A",
+        "family": "ciphertext-autokey",
+        "compatible_models": 2,
+        "rejected_models": 8126,
+        "complete_keys": 0
+      },
+      {
+        "fold": "A",
+        "family": "beaufort",
+        "compatible_models": 3220,
+        "rejected_models": 4908,
+        "complete_keys": 148
+      },
+      {
+        "fold": "B",
+        "family": "repeating",
+        "compatible_models": 3713,
+        "rejected_models": 4415,
+        "complete_keys": 150
+      },
+      {
+        "fold": "B",
+        "family": "plaintext-autokey",
+        "compatible_models": 3708,
+        "rejected_models": 4420,
+        "complete_keys": 148
+      },
+      {
+        "fold": "B",
+        "family": "ciphertext-autokey",
+        "compatible_models": 0,
+        "rejected_models": 8128,
+        "complete_keys": 0
+      },
+      {
+        "fold": "B",
+        "family": "beaufort",
+        "compatible_models": 3707,
+        "rejected_models": 4421,
+        "complete_keys": 149
+      }
+    ],
+    "total": 20776
+  },
+  "reserved_exact_prediction_count": 0,
+  "reserved_contradiction_count": 18213,
+  "reserved_underdetermined_count": 2563,
+  "reserved_span_matches_incomplete_key_count": 0,
+  "complete_key_count": 888,
+  "complete_key_reserved_contradictions": 888,
+  "complete_key_reserved_underdetermined": 0,
+  "key_complete_flag_disagrees_with_slots": 0,
+  "unverified_crib_agreements": [],
+  "totals": {
+    "calls": 8,
+    "checks": 65024,
+    "compatible_models": 20776,
+    "rejected_models": 44248,
+    "complete_keys": 888,
+    "complete_key_reserved_contradictions": 888,
+    "complete_key_reserved_underdetermined": 0,
+    "reserved_contradictions": 18213,
+    "reserved_underdetermined": 2563,
+    "reserved_span_matches_incomplete_key": 0,
+    "reserved_exact_predictions": 0
+  },
+  "elapsed_seconds": 3.382252,
+  "scope": "Eight searches cover the declared families, two alphabets, two orders, periods 1 through 32, and the distinct layouts through width 32, once per fold. Search completion is coverage of that finite hypothesis list, not a unique key and not a historical plaintext. Free completions of an incomplete key are not enumerated. Contradictions on the reserved crib are counted. A crib fit is not a decipherment."
+}

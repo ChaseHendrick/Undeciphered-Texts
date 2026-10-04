@@ -149,6 +149,11 @@ Legacy sentence-preference interfaces retain their original scope. The
 chosen-sentence checks from these recovered-output controls.
 
 | `engine/truppenschluessel_residue.py` | Count the public Truppenschlüssel failure page into live residue versus later Broken-on marks | `tests/test_truppenschluessel_residue.py`: 41 listed, 11 broken, 30 unmarked, sibling links, no stored message text | Does not store ciphertext or plaintext and does not search keys. [Note](truppenschluessel-residue-2026-10-04.md). |
+| `engine/neural_generator_broad.py` | Sample legal Enigma rotor orders, reflectors, and plugboards, and varied M-209 pins and lugs, then score the frozen router | `tests/test_neural_generator_broad.py`: roundtrip, restricted settings stay inside the old four rotor orders, weight file hash unchanged | Does not train and does not replace format 5. Sixteen samples are not the 480-case gate. [Note](bob-generator-2026-10-04.md). |
+| `engine/k4_model_finish.py` | Finish the 32,512-hypothesis K4 composition space once per crib fold by searching one family at a time | `tests/test_k4_model_finish.py`: import and a 3-check call; the full 65,024-check run is recorded separately | Reserved exact predictions were 0. No historical plaintext. [Note](k4-focus/model-finish-2026-10-04.md). |
+| `engine/k4_running_key.py` | Slide in-repo K1 and K3 plaintext constants as non-wrapping running keys | `tests/test_k4_running_key.py`: 240 K3 offsets, K1 skipped at 63 letters, solved stays false | Does not wrap the key and does not invent a K2 text. [Note](k4-focus/running-key-hill-2026-10-04.md). |
+| `engine/k4_hill_heldout.py` | Record the odd-length Hill rejection, then fit 2x2 Hill on each 96-letter endpoint window | `tests/test_k4_hill_heldout.py`: 97-letter call does not run, four endpoint folds complete with zero keys | No padding. Not a larger matrix. [Note](k4-focus/running-key-hill-2026-10-04.md). |
+| `engine/k4_keyword_panel.py` | Decrypt K4 under PALIMPSEST, ABSCISSA, and KRYPTOS with Playfair, Porta, Gromark, and two-square | `tests/test_k4_keyword_panel.py`: Porta tried 3, the other methods rejected odd length or a missing primer, zero crib hits | Not a dictionary search. [Note](k4-focus/keyword-panel-2026-10-04.md). |
 
 ## Out of scope
 

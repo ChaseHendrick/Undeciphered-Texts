@@ -8,6 +8,19 @@ Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
 Started from verified `origin/main` commit `6a6df75c1a9a323a7aaa0b10f16ccb761faa2ab1`. Added a metadata-only Truppenschlüssel residue ledger for the CryptoCellar page updated 27 July 2026. The count is 41 listed, 11 marked broken, 30 unmarked. See `docs/truppenschluessel-residue-2026-10-04.md` and `engine/truppenschluessel_residue.py`. No ciphertext was added and no residue message was attacked. Funkspruch Nr. 86 remains skipped. The next unchecked queue item in `docs/next.md` is the DECODE metadata audit.
 
+## Session 4 October 2026, Bob and K4
+
+Started from the residue commit on `main`. Bob's shipped format 5 file was scored, not replaced. SHA-256 `d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825` was unchanged. Seed 20261004, 16 samples per family, first 180 training Austen letters: restricted Enigma/M-209 top one 14/32, broad settings 15/32. That sample is too small to promote or reject a model. See `docs/bob-generator-2026-10-04.md`.
+
+K4 swarm, all with `solved` false and `claimed_plaintext` null:
+
+- `engine.k4_model_finish` completed both 32,512-hypothesis folds (65,024 checks). Reserved exact predictions: 0. All 888 complete keys contradicted the withheld crib.
+- Running key: 240 offsets of the in-repo K3 plaintext, 0 crib hits. K1 is 63 letters and was skipped. No K2 text was typed in.
+- Hill: the 97-letter string is rejected without padding. Dropping either endpoint letter finishes 2x2 Hill with 0 compatible keys.
+- Keyword panel: PALIMPSEST, ABSCISSA, KRYPTOS. Porta returned three 97-letter texts and no crib hit. Playfair and two-square reject the odd length. Gromark rejects a missing primer.
+
+Do not describe any of those negative results as a K4 solution. Do not replace the format 5 weights from the 16-sample probe.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
