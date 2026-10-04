@@ -191,6 +191,7 @@ chosen-sentence checks from these recovered-output controls.
 | `engine/dagapeyeff_outgoing.py` | The same score counted once, by the column a pair starts in | `tests/test_dagapeyeff_outgoing.py`: column 13 is 0.0953 and column 12 is 0.0894, mostly the private symbols; 7 of 10,000 grids match | The double count was the seam. Not a reading. [Note](logs/dagapeyeff-outgoing-2026-10-04.md). |
 | `engine/dagapeyeff_yardstick.py` | The prose score a reading would have to beat, and the book's own square | `tests/test_dagapeyeff_yardstick.py`: cells 0.5706, English 1.0658, German 1.2; the book square's best flip stays at 0.5706 | Sorting scores 2.3931 and is not a reading. [Note](logs/dagapeyeff-yardstick-2026-10-04.md). |
 | `engine/dagapeyeff_balls.py` | Center-and-radius enclosures of those scores | `tests/test_dagapeyeff_balls.py`: radii under 10^-30; the cells sit entirely below English and German; column 13 sits entirely above column 12 | Rounding did not invent the gaps. Not a reading. [Note](logs/dagapeyeff-balls-2026-10-04.md). |
+| `engine/dagapeyeff_record.py` | Distance from a published chi-square and from same-length English | `tests/test_dagapeyeff_record.py`: cells 34.23 versus a published 49.23; still 10.06 above the worst English draw; the order gap 0.4952 is unclosed | Past a candidate, short of a text. Not a reading. [Note](logs/dagapeyeff-record-2026-10-04.md). |
 
 ## Out of scope
 

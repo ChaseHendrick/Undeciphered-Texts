@@ -100,6 +100,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_balls` encloses those scores as a center and a radius. Thirty terms of the logarithm leave every radius under 10^-30. The cell ball sits entirely under English and under German. Column 13's once-counted share sits entirely above column 12, which sits entirely above the rest. Sorting still sits above English and is not a reading. Do not store a letter string. See `docs/logs/dagapeyeff-balls-2026-10-04.md`.
 
+`engine.dagapeyeff_record` places the cells against a published chi-square of 49.23 and against 2,000 same-length English draws. The cells score 34.23, which is past that candidate and still 10.06 above the worst English draw. A legal group reversal scores 8.86 and fails the solved example. The order gap from 0.5706 to 1.0658 is unclosed. Do not convert his -692 onto this scale. Do not store a letter string. See `docs/logs/dagapeyeff-record-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
