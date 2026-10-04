@@ -16,6 +16,7 @@ from typing import Any
 
 from engine.dagapeyeff_balls import ball_report
 from engine.dagapeyeff_convert import convert_report
+from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_record import record_report
 from engine.dagapeyeff_swarm import challenge_pairs
 from engine.dagapeyeff_yardstick import yardstick_report
@@ -53,6 +54,7 @@ def provenance_report() -> dict:
         ("balls", ball_report()),
         ("record", record_report()),
         ("convert", convert_report()),
+        ("edits", edit_report()),
     )
     entries = []
     previous = None

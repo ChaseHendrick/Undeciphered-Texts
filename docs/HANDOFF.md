@@ -106,6 +106,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_convert` turns the published chi-square 49.23 into the ball from 49.225 to 49.235, and the published index 0.0697 into the ball from 0.06965 to 0.06975. The cells sit between 34.174639 and 34.292468, entirely under the first ball and entirely over the worst English draw. Their index, 0.069702, sits inside the published index ball. The score -692.13 has no formula and is not compared. Replacing cell 04 with 75 makes the chi-square ball worse. None of the 24 possible replacements reach English, and 0 of them improve on the cells. Do not store a letter string. See `docs/logs/dagapeyeff-convert-2026-10-04.md`.
 
+`engine.dagapeyeff_edits` exhausts one and two count-moves. The best two-move ball reaches 27.557769, still above 24.165. A greedy path clears that line at four edits, with a ball high of 22.471061, and those cells are not kept. `engine.solvers.dagapeyeff` refuses a frequency claim with fewer than three moves, and it still marks a claim unsolved when the frequency line is cleared. Do not store a letter string. See `docs/logs/dagapeyeff-edits-2026-10-04.md`. The provenance chain ends at `c1c00d25d3ecc0293af2898ec0fb3b0efeab0bb6cbb6387f9f604fa274c0ff36`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
