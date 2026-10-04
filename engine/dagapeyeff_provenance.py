@@ -43,6 +43,7 @@ from engine.dagapeyeff_large_swarm import large_swarm_report
 from engine.dagapeyeff_model import model_report
 from engine.dagapeyeff_patterns import pattern_report
 from engine.dagapeyeff_period4 import period4_report
+from engine.dagapeyeff_placed import placed_report
 from engine.dagapeyeff_places import place_report
 from engine.dagapeyeff_record import record_report
 from engine.dagapeyeff_refined import refined_report
@@ -120,6 +121,7 @@ def provenance_report() -> dict:
         ("keystream", keystream_report()),
         ("depth3", depth3_report()),
         ("depth4", depth4_report()),
+        ("placed", placed_report()),
     )
     entries = []
     previous = None

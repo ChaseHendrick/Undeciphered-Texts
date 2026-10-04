@@ -20,6 +20,7 @@ from engine.dagapeyeff_model import model_report
 from engine.dagapeyeff_patterns import pattern_report
 from engine.dagapeyeff_places import place_report
 from engine.dagapeyeff_period4 import period4_report
+from engine.dagapeyeff_placed import placed_report
 from engine.dagapeyeff_columns import column_report
 from engine.dagapeyeff_column_null import column_null_report
 from engine.dagapeyeff_delay import delay_report
@@ -82,6 +83,22 @@ def consider_depth4() -> dict:
             "52,003 states. The best chi-square is 22.4243. Its ball, 22.377631 to 22.471061, "
             "does clear 24.165. 18,760 of the states have a point score under that line. "
             "The edited positions were not kept. A matching count is not a reading. Refuse it."
+        ),
+    }
+
+
+def consider_placed() -> dict:
+    report = placed_report()
+    allowed = report["reaches_prose"] and report["shuffles_as_high"] * 20 < report["draws"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "placed_allowed": allowed,
+        "learned": (
+            "70 count vectors tie for the best four-move score. "
+            "Placing every one of them on the printed cells is 2,494,800 edits. "
+            "The best order scores -3.4263. Prose is -2.5185. "
+            "11 of 20 shuffled orders, given the same edits, do as well. Refuse it."
         ),
     }
 

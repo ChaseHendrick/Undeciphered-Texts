@@ -1,0 +1,12 @@
+{
+  "best_quadgram": -3.4263,
+  "claimed_plaintext": null,
+  "draws": 20,
+  "placements": 2494800,
+  "prose_quadgram": -2.5185,
+  "reaches_prose": false,
+  "scope": "Placing a count-matched edit is not a reading. No letter string is stored.",
+  "shuffles_as_high": 11,
+  "solved": false,
+  "targets": 70
+}

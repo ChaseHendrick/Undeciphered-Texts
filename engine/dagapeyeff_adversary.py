@@ -35,6 +35,7 @@ from engine.solvers.dagapeyeff import (
     consider_patterns,
     consider_places,
     consider_period4,
+    consider_placed,
     consider_regrouping,
     consider_refined,
     consider_running_key,
@@ -96,6 +97,7 @@ def adversary_report() -> dict:
         consider_keystream(),
         consider_depth3(),
         consider_depth4(),
+        consider_placed(),
     ]
     frequency = claims[0]
     readings = [claim for claim in claims if claim["solved"] is not False or claim["claimed_plaintext"] is not None]
