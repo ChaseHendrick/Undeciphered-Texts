@@ -70,6 +70,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_languages` does not assume English. French, German, Spanish, Italian, Portuguese, Dutch, and folded Esperanto are each scored against text drawn from that language. French is closest at 21.36 and still only 2 of 2,000 French draws are that flat. The solved English exercise is accepted as English and rejected as Italian. Not a reading. See `docs/logs/dagapeyeff-languages-2026-10-04.md`.
 
+`engine.dagapeyeff_frames` uses no letter table. Even places are exactly the digits 06789. Odd places are exactly 12345 except index 393, a 0. 0 of 20,000 shuffles are that clean. Dropping the last three zeros as filler is stronger than the digits require: only the middle one is on the wrong side. Adjacent pairs are not more predictable than a shuffle (16,611 of 20,000). Do not store a letter string. See `docs/logs/dagapeyeff-frames-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.

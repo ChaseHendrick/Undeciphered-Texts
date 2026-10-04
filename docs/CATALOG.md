@@ -176,6 +176,7 @@ chosen-sentence checks from these recovered-output controls.
 | `engine/dagapeyeff_reads.py` | 10,000 column keys, and digit reads at widths 2 through 28 | `tests/test_dagapeyeff_reads.py`: no key beats its own draw; only width 3 stays legal, score 11.73, and 7,473 of 10,000 random re-pairings do as well or better | The flatness is in the original pairs. Not a reading. [Note](logs/dagapeyeff-reads-2026-10-04.md). |
 | `engine/dagapeyeff_add.py` | Every period-2 and period-3 shift on the 5 by 5 square, against 40 shuffled ciphers | `tests/test_dagapeyeff_add.py`: best period-3 score 2.80 is matched by a shuffle; word score -3.5039 against prose at -2.5185 | Not a solution. [Note](logs/dagapeyeff-add-2026-10-04.md). |
 | `engine/dagapeyeff_languages.py` | Score the 196 cells as French, German, Spanish, Italian, Portuguese, Dutch, and folded Esperanto | `tests/test_dagapeyeff_languages.py`: closest is French at 21.36, 2 of 2,000 French draws; the solved English exercise is accepted as English and rejected as Italian | Not a language fit. Not a reading. [Note](logs/dagapeyeff-languages-2026-10-04.md). |
+| `engine/dagapeyeff_frames.py` | Even/odd digit split and pair-to-pair prediction, with no letter table | `tests/test_dagapeyeff_frames.py`: one digit, index 393, breaks an otherwise strict split; 0 of 20,000 shuffles are that clean; 16,611 of 20,000 pair shuffles are at least as predictable | The split is real. A language is not assumed. Not a reading. [Note](logs/dagapeyeff-frames-2026-10-04.md). |
 
 ## Out of scope
 
