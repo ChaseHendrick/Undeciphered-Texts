@@ -11,6 +11,7 @@ from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_angles import angle_report
 from engine.dagapeyeff_autokey import autokey_report
 from engine.dagapeyeff_bifid import bifid_report
+from engine.dagapeyeff_bookkey import bookkey_report
 from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_model import model_report
 from engine.dagapeyeff_patterns import pattern_report
@@ -242,5 +243,19 @@ def consider_delay() -> dict:
             "Rotating the row digits against the column digits, the best delay is 79 and scores -3.2652. "
             "Prose is -2.5185. 3 of 200 shuffles do as well. "
             "A progressive shift scores -3.6491, and 4 of 200 shuffles do as well. Refuse both."
+        ),
+    }
+
+
+def consider_bookkey() -> dict:
+    report = bookkey_report()
+    allowed = report["reaches_prose"] and report["shuffles_as_high"] * 20 < report["null_texts"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "bookkey_allowed": allowed,
+        "learned": (
+            "The book's solved exercise, slid or repeated as a key, scores -3.389. "
+            "Prose is -2.5185. 61 of 100 shuffles do as well. Refuse it."
         ),
     }
