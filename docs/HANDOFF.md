@@ -98,6 +98,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_yardstick` is the line a reading has to clear. English at this length scores 1.0658, German 1.2, the cells 0.5706. Sorting scores 2.3931 and is not a reading. The index of coincidence is already 0.069702, so a cutoff of 0.06 is not the line. The book's solved square, in 8 flips, never rises above 0.5706. Do not store a letter string. See `docs/logs/dagapeyeff-yardstick-2026-10-04.md`.
 
+`engine.dagapeyeff_balls` encloses those scores as a center and a radius. Thirty terms of the logarithm leave every radius under 10^-30. The cell ball sits entirely under English and under German. Column 13's once-counted share sits entirely above column 12, which sits entirely above the rest. Sorting still sits above English and is not a reading. Do not store a letter string. See `docs/logs/dagapeyeff-balls-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
