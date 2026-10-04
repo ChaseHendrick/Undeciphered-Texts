@@ -7,6 +7,7 @@ the id, the statement, and the tags. Nothing here is a plaintext.
 from __future__ import annotations
 
 from engine.bob_branch import bob_branch_report
+from engine.dagapeyeff_clump import clump_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -19,6 +20,7 @@ def paper_notes() -> dict:
     placed = placed_report()
     repair = repair_report()
     branch = bob_branch_report()
+    clump = clump_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -98,6 +100,19 @@ def paper_notes() -> dict:
                 "The second layer is in use on both."
             ),
             "do_not_claim": "A live residual branch does not name a plaintext or a family for this cipher.",
+        },
+        {
+            "id": "pair-72-window",
+            "kind": "correction",
+            "tags": ["72", "window", "multiple-testing"],
+            "statement": (
+                f"Six of the nine 72 pairs sit in rows 11 through 14. "
+                f"That fixed window is {clump['fixed_shuffles_as_high']} of {clump['draws']} shuffles, "
+                "but the window was chosen after looking. "
+                f"Every window of that height reaches {clump['every_window_count']}, "
+                f"and {clump['every_window_shuffles_as_high']} of {clump['draws']} shuffles do as well."
+            ),
+            "do_not_claim": "A window chosen after looking is not a clump and not a reading.",
         },
     ]
     return {

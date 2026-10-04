@@ -2,7 +2,7 @@
 
 4 October 2026. This is not a paper. No letter string is stored.
 
-`engine.paper_notes` builds six notes from the frozen scores. `search_notes` is a substring over the id, the statement, and the tags. The schema is `paper-notes-1`. `solved` is false.
+`engine.paper_notes` builds seven notes from the frozen scores. `search_notes` is a substring over the id, the statement, and the tags. The schema is `paper-notes-1`. `solved` is false.
 
 The notes a paper can cite today:
 
@@ -12,6 +12,7 @@ The notes a paper can cite today:
 - The 70 best count vectors each touch 6 symbols, share the loss of pair 72, and draw that loss from only 3 symbols.
 - Four neighbor edits are not rare: 6 of 80. Four free edits are not rare: 7 of 40.
 - Bob's residual branch is alive, and the shipped weights were not replaced.
+- Six of nine 72 pairs in the last four rows is 35 of 2000 only if that window was fixed in advance. It was not. Every window of that height is 268 of 2000.
 
 Do not cite any of these as a plaintext.
 

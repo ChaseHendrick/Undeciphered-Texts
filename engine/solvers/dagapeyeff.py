@@ -36,6 +36,7 @@ from engine.dagapeyeff_router_swarm import router_swarm_report
 from engine.dagapeyeff_running import running_report
 from engine.dagapeyeff_solver_swarm import solver_swarm_report
 from engine.dagapeyeff_classic_swarm import classic_swarm_report
+from engine.dagapeyeff_clump import clump_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -118,6 +119,21 @@ def consider_repair() -> dict:
             "the symbol 72, which every vector reduces. Losses come from 3 symbols. "
             "Four neighbor edits score -3.1449, and 6 of 80 shuffles do as well. "
             "Prose is -2.5185. The shared loss is not a reading. Refuse it."
+        ),
+    }
+
+
+def consider_clump() -> dict:
+    report = clump_report()
+    allowed = report["every_window_shuffles_as_high"] * 20 < report["draws"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "clump_allowed": allowed,
+        "learned": (
+            "Six of the nine 72 pairs sit in the last four rows. "
+            "That one window is 35 of 2000 shuffles, and it was chosen after looking. "
+            "Every window of that height is 268 of 2000. Refuse the clump."
         ),
     }
 

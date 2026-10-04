@@ -34,6 +34,7 @@ from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_digit_routes import digit_route_report
 from engine.dagapeyeff_checks import checks_report
 from engine.dagapeyeff_classic_swarm import classic_swarm_report
+from engine.dagapeyeff_clump import clump_report
 from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_foresight import foresight
 from engine.dagapeyeff_groups import group_report
@@ -126,6 +127,7 @@ def provenance_report() -> dict:
         ("depth4", depth4_report()),
         ("placed", placed_report()),
         ("repair", repair_report()),
+        ("clump", clump_report()),
         ("bob-branch", bob_branch_report()),
         ("paper", paper_notes()),
     )

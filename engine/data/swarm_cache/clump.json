@@ -1,0 +1,15 @@
+{
+  "claimed_plaintext": null,
+  "count": 9,
+  "draws": 2000,
+  "every_window_count": 6,
+  "every_window_shuffles_as_high": 268,
+  "fixed_chosen_after_looking": true,
+  "fixed_count": 6,
+  "fixed_shuffles_as_high": 35,
+  "fixed_start": 10,
+  "scope": "A window chosen after looking is not a reading. No letter string is stored.",
+  "solved": false,
+  "symbol": "72",
+  "width": 4
+}

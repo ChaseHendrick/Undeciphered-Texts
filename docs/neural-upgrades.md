@@ -79,6 +79,18 @@ for 148 features. It omits the 80 additional format 6 letter/lag measurements.
 The M209 values assume fixed public internal settings and use training-only
 English frequencies. Feature availability does not establish an improvement.
 
+## A smaller residual mix, 4 October 2026
+
+DeepSeek's mHC projects a widened residual mix onto doubly stochastic matrices
+so a deep stack cannot amplify. A later look at DeepSeek-V4-Flash found that a
+block usually uses about two of four streams, and that late mixing is nearly
+the identity. Bob is two layers, so four streams are the unused part of that
+result. `engine.neural_manifold` is a two-stream Sinkhorn mix. A stack of 32
+mixes does not raise the L1 norm. It is not wired into the format 5 forward
+pass, and the shipped weights were not replaced. See
+[the note](logs/bob-manifold-2026-10-04.md).
+
+
 The first format 8 warm trial used 256 samples per family, 250 epochs, three
 96-unit members and the existing rate 0.01. It took 101.727 seconds locally and
 selected epochs 55,45,0. Its 433/480 score improved the larger development

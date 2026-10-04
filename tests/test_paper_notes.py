@@ -13,10 +13,13 @@ class PaperNotesTest(unittest.TestCase):
         self.assertEqual(notes["schema"], "paper-notes-1")
         self.assertIs(notes["solved"], False)
         self.assertIsNone(notes["claimed_plaintext"])
-        self.assertEqual(len(notes["notes"]), 6)
+        self.assertEqual(len(notes["notes"]), 7)
         self.assertTrue(all(note["claimed_plaintext"] is None for note in notes["notes"] if "claimed_plaintext" in note))
         shared = search_notes("72")
-        self.assertEqual([note["id"] for note in shared], ["repairs-share-one-loss"])
+        self.assertEqual(
+            [note["id"] for note in shared],
+            ["repairs-share-one-loss", "pair-72-window"],
+        )
         branch = search_notes("residual")
         self.assertEqual([note["id"] for note in branch], ["residual-branch-is-alive"])
         self.assertEqual(search_notes(""), [])
