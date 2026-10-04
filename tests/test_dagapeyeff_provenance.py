@@ -37,7 +37,7 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("board", "05c9f50f2bd79840d2a7a8198e8fe01cf3b110b1c794fabfadf62ffed0b34c9f"),
                 ("infer", "c67768bd2e358814d7b1faea635b909637f2eb2ca249c6053f6889e958c409c0"),
                 ("foresight", "48ceb2bf1c6010816c96eb483fccd9dc5609748da14cb459b638f94f94a29e10"),
-                ("checks", "5476cd7928fa9c7b1c0ec7979470868896f22125a2ffc3b7bfc04f6b4e74e44d"),
+                ("checks", "a6ace8761543c0eefc658fdcc52590b827eeb272084964d40c0607a6ef061c20"),
                 ("adversary", "27532401beeff15910f3beb80b6bef2095313b8beb709213f46ee2ce8adede86"),
                 ("autokey", "291d0e3ead0bb0903b5a93f7851c44dc9f491060cc3a62a8302759af2a863306"),
                 ("digit-routes", "97547066e834b8423c9edee4d893b838baa6b8a22d530d821c0eb2306f1577af"),
@@ -53,11 +53,12 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("large-swarm", "3cb01d80cd5b96ce4f12e3e08a9c646626159e91ce0f7480e6cf48cff174c327"),
                 ("refined-swarm", "b20eb44ed7d876ec239be0dc6df48650350dd6de9d6f4a83516b48bbe3f8c9a4"),
                 ("bob-caution", "1abdbfa908bcc9578b9aab1fe7155515e6e632adbff79b019a51b9d9df2beafb"),
+                ("keystream", "39ed6e63310f65a30083d55496aab70575823d5f39149402054c6ebf8f7f2bf1"),
             ],
         )
         self.assertEqual(
             report["chain_sha256"],
-            "069259f698f4e1cff1c4943406bf9c3154268e6f735204849e86fa2edf92bb73",
+            "7b827c4dd9f9f568e464339742d11a75b281db55e23812c744fdc7177be83ca5",
         )
         self.assertEqual(report["entries"][0]["chain_sha256"], report["entries"][0]["content_sha256"])
         self.assertNotEqual(report["entries"][1]["chain_sha256"], report["entries"][1]["content_sha256"])

@@ -1,0 +1,17 @@
+{
+  "best_column": 9,
+  "best_quadgram": -3.645,
+  "best_rule": "add",
+  "best_shuffles_as_high": 71,
+  "claimed_plaintext": null,
+  "columns": 14,
+  "draws": 80,
+  "fourth_column": 3,
+  "fourth_quadgram": -3.6947,
+  "fourth_shuffles_as_high": 21,
+  "kept": 182,
+  "prose_quadgram": -2.5185,
+  "reaches_prose": false,
+  "scope": "A column used as a key is not a reading. No letter string is stored.",
+  "solved": false
+}

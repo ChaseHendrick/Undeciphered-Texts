@@ -14,6 +14,7 @@ from engine.dagapeyeff_bifid import bifid_report
 from engine.bob_caution import bob_caution_report
 from engine.dagapeyeff_bookkey import bookkey_report
 from engine.dagapeyeff_keys import key_report
+from engine.dagapeyeff_keystream import keystream_report
 from engine.dagapeyeff_large_swarm import large_swarm_report
 from engine.dagapeyeff_model import model_report
 from engine.dagapeyeff_patterns import pattern_report
@@ -435,5 +436,20 @@ def consider_bob() -> dict:
             "Bob names the cells substitution at 0.9696. 40 of 40 shuffles get the same name, "
             "so the call does not use the order. On a Caesar of known prose he names caesar, "
             "and 0 of 40 shuffles agree. The shipped weights were not replaced."
+        ),
+    }
+
+
+def consider_keystream() -> dict:
+    report = keystream_report()
+    allowed = report["reaches_prose"] and report["best_shuffles_as_high"] * 20 < report["draws"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "keystream_allowed": allowed,
+        "learned": (
+            "Using one column as the key for the rest of its row, the best is column 9 added, at -3.645. "
+            "71 of 80 shuffled grids do as well. The repetitive fourth column scores -3.6947, "
+            "and 21 of 80 do as well. Prose is -2.5185. It is not a key. Refuse it."
         ),
     }
