@@ -32,6 +32,8 @@ The next swarm stayed inside the Truppenschlüssel residue and did not search a 
 
 A follow-up climb on the even windows, including one-letter endpoint drops, beat a shuffled control on all 7 windows. Both endpoint drops beat it, so the Grimm trigram scorer is not choosing a text. No plaintext was stored. See `docs/logs/ts-pair-climb-2026-10-04.md`. Do not promote those scores to a key.
 
+The pair grid is a separate check. Pairs that start on the first printed letter repeat about as often as the Grimm sample in the longer messages, and random letters of that length do not. Removing the five-letter designator shifts the pairs by one and, for SSKFV, the excess disappears. The 1735 alignment's clumps are not tighter than a random set of 33 hits. See `docs/logs/ts-bigram-phase-2026-10-04.md`. Do not call that a square or a reading.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
