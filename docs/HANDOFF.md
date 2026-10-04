@@ -18,6 +18,7 @@ K4 swarm, all with `solved` false and `claimed_plaintext` null:
 - Running key: 240 offsets of the in-repo K3 plaintext, 0 crib hits. K1 is 63 letters and was skipped. No K2 text was typed in.
 - Hill: the 97-letter string is rejected without padding. Dropping either endpoint letter finishes 2x2 Hill with 0 compatible keys.
 - Keyword panel: PALIMPSEST, ABSCISSA, KRYPTOS. Porta returned three 97-letter texts and no crib hit. Playfair and two-square reject the odd length. Gromark rejects a missing primer.
+- Innovative swarm, 4 October 2026: in-place ACA Gromark is impossible for any keyword because ciphertext letters F, K, and P cannot share one alphabet index with both public cribs. Myszkowski under the three published keywords, on either side of that Gromark, is the same blocked pairing. Periodic Gromark on those keywords has 0 crib hits. Quagmire I-IV over 11310 declared settings has 0 crib hits. See `docs/k4-focus/innovative-swarm-2026-10-04.md`.
 
 Do not describe any of those negative results as a K4 solution. Do not replace the format 5 weights from the 16-sample probe.
 
