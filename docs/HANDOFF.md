@@ -36,6 +36,8 @@ The pair grid is a separate check. Pairs that start on the first printed letter 
 
 Read the residue as clerk work, not as a cleverer cipher. Station 4fc reused IASRZ and the next group `EDSTB`. Station f8y reused the closing `LMOTIYIZ` and not the opening. The two 1735 messages agree in 33 letters, differ in 20, and have 4 gaps, so they are not one transmission copied twice. Their first 10 body letters agree in 8. Dropping any one of HOHOX's 11 groups leaves only 1 or 2 repeated pairs, which random letters also reach. See `docs/logs/ts-clerk-2026-10-04.md`. Do not promote a habit into plaintext.
 
+`engine.ts_isolog` slides twelve formulae along the pair grid. A window survives only when repeated pairs match in both directions. Formulae that never repeat a pair survive almost everywhere and are not evidence. `UNTERKUNFT` repeats its first and fourth pairs and fits only offsets 40, 60, and 64 on IASRZ Nr. 129. The same shape would fit any other formula, and the sister message has no window. Joint agreements between the two IASRZ messages are 0. A planted control is found. See `docs/logs/ts-isolog-2026-10-04.md`. Do not read those offsets as the word.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
