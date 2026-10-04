@@ -55,7 +55,7 @@ Normal Human Man provides a plain Caesar and rail-fence baseline. Adversary sear
 
 ## When a new unsolved cipher arrives
 
-Start with [target triage](docs/target-triage.md) to check current solution status, data access, and useful constraints. The [dated shortlist](docs/target-shortlist.json) records evidence and next steps. No checked named unsolved target is established as easy. Archival keys, related letters, and reliable transcription offer the most concrete starting paths.
+Start with [target triage](docs/target-triage.md) to check current solution status, data access, and useful constraints. The [Truppenschlüssel residue count](docs/truppenschluessel-residue-2026-10-04.md) separates the 27 July 2026 failure page into 30 unmarked rows and 11 later breaks. It is a count, not an attack. The [dated shortlist](docs/target-shortlist.json) records evidence and next steps. No checked named unsolved target is established as easy. Archival keys, related letters, and reliable transcription offer the most concrete starting paths.
 
 Use the [case workflow](docs/WORKFLOW.md) to preserve the original transcription, document its source and alphabet, separate confirmed cribs from guesses, and save each analysis with its inputs and limits.
 

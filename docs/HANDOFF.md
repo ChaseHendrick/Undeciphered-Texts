@@ -4,6 +4,10 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 4 October 2026
+
+Started from verified `origin/main` commit `6a6df75c1a9a323a7aaa0b10f16ccb761faa2ab1`. Added a metadata-only Truppenschlüssel residue ledger for the CryptoCellar page updated 27 July 2026. The count is 41 listed, 11 marked broken, 30 unmarked. See `docs/truppenschluessel-residue-2026-10-04.md` and `engine/truppenschluessel_residue.py`. No ciphertext was added and no residue message was attacked. Funkspruch Nr. 86 remains skipped. The next unchecked queue item in `docs/next.md` is the DECODE metadata audit.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.

@@ -148,6 +148,8 @@ Legacy sentence-preference interfaces retain their original scope. The
 [certificate index](verification-certificates.md) distinguishes their older
 chosen-sentence checks from these recovered-output controls.
 
+| `engine/truppenschluessel_residue.py` | Count the public Truppenschlüssel failure page into live residue versus later Broken-on marks | `tests/test_truppenschluessel_residue.py`: 41 listed, 11 broken, 30 unmarked, sibling links, no stored message text | Does not store ciphertext or plaintext and does not search keys. [Note](truppenschluessel-residue-2026-10-04.md). |
+
 ## Out of scope
 
 Linear A, Indus, Rongorongo, Phaistos, Voynich, Kryptos K4, production AES, production RSA, live TLS, Enigma breaks, and Vesuvius ink models are **not** claimed solved by any module above. The `rsa_broadcast` helper is a known-answer textbook-weak e=3 broadcast check only.
