@@ -90,6 +90,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_strip` deletes those five symbols. The score falls from 0.5706 to 0.4174, against English of the remaining length at 1.0946. All 10,000 other eight-cell cuts and all 5,000 other symbol bundles of mass 8 stay higher. The private symbols are not filler. Do not store a letter string. See `docs/logs/dagapeyeff-strip-2026-10-04.md`.
 
+`engine.dagapeyeff_bearing` deletes one column at a time. Only column 13 drops the score, from 0.5706 to 0.4514. The next worst column stays at 0.5655. 0 of 10,000 shuffled grids have a column that load-bearing. English of the remaining 182 cells is 1.1264. Do not store a letter string. See `docs/logs/dagapeyeff-bearing-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.

@@ -186,6 +186,7 @@ chosen-sentence checks from these recovered-output controls.
 | `engine/dagapeyeff_check.py` | 33 predictors for the rare column as a check digit of its row | `tests/test_dagapeyeff_check.py`: a planted sum scores 14/14; the real column scores 6, and 20,000 of 20,000 shuffled columns also reach 6 | Not a check digit. Not a reading. [Note](logs/dagapeyeff-check-2026-10-04.md). |
 | `engine/dagapeyeff_private.py` | Symbols whose every copy sits in one column | `tests/test_dagapeyeff_private.py`: 92, 93, 04, 71, and 94 account for 8 cells, all in column 13; 0 of 20,000 grids match | Period 7 is that column at half resolution. Not a reading. [Note](logs/dagapeyeff-private-2026-10-04.md). |
 | `engine/dagapeyeff_strip.py` | Delete those five symbols and score the other 188 cells | `tests/test_dagapeyeff_strip.py`: score falls from 0.5706 to 0.4174; all 10,000 other eight-cell cuts stay higher | The private symbols are not filler. Not a reading. [Note](logs/dagapeyeff-strip-2026-10-04.md). |
+| `engine/dagapeyeff_bearing.py` | Delete each column and see whether the order notices | `tests/test_dagapeyeff_bearing.py`: last column falls to 0.4514, next worst is 0.5655; 0 of 10,000 grids have a column that load-bearing | The order sits in the last column. Not a reading. [Note](logs/dagapeyeff-bearing-2026-10-04.md). |
 
 ## Out of scope
 
