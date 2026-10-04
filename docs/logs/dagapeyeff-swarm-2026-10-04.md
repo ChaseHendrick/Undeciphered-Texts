@@ -19,3 +19,14 @@ The book's example is 89 cells. Chi-square grows with length, so 4.14 against 34
 None of those 2,000 scored 34.23 or worse. The worst of them scored 24.17. Their median was 7.44. None used 18 or fewer distinct letters. The narrowest used 19.
 
 Changing one cell, whichever change improves the count the most, only moves the challenge from 34.23 to 30.65. It takes 4 such changes to get inside the worst English draw, and 14 to reach the median. Those changed cells are not kept. Four slips is not the one mistake a tired author makes, and a count that has been edited until it looks English is not a reading.
+
+## Two hundred slices
+
+The printed grid was then scored against 2,457 alphabets: English, French, German, Spanish, Italian, Portuguese, and Dutch, and for each language every way to merge two letters into one cell or to drop a letter. A 5 by 5 square has room for 25 letters. Esperanto has 28, so it was not treated as one letter per cell. The 2,457 shapes were split across 200 workers.
+
+The friendliest shape is Italian with M and U in one cell, score 14.05. English's friendliest shape, also M with U, scores 23.96. Real English text of 196 letters, allowed to shop the same 2,457 shapes, has a median best score of 2.84. None of 200 such texts scored 14.05 or worse. Shopping for an alphabet does not make the printed grid ordinary.
+
+Of 120 ways to rearrange the five digits inside every printed group, only two stay on his square. The printed order scores 34.23. Reversing the last three digits of each group scores 8.86, which does look like an English count. The same 120 rearrangements were applied to the solved example earlier in the book. There the printed order scores 4.14 and is the best of the 120. Reversing the last three digits makes that example worse, 21.56. The rearrangement that flatters the challenge is not the grouping he used when the plaintext is known. It is not adopted.
+
+The cells are peaked (index of coincidence 0.0697), so this is not a flattened repeating-key cipher. The strongest column rhythm is matched by 20 of 200 shuffles of the same cells. No period is claimed. No plaintext is stored.
+

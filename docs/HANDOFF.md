@@ -50,6 +50,8 @@ Bob's format 5 file is still the incumbent. A 128-row manifest, seed 20261005, 3
 
 `engine.dagapeyeff_swarm` is the non-German, non-K4 swarm. The 1939 challenge is 196 Polybius cells in a 14 by 14 grid. The book's own example is only 89 cells, so its chi-square is a direction. Against 2,000 English strings of 196 letters, none is as flat and none uses as few distinct letters. One best cell change leaves it outside that range. It takes 4 changes to enter the range and 14 to reach the median. See `docs/logs/dagapeyeff-swarm-2026-10-04.md`. Do not keep those changed cells or treat the grid as a reading.
 
+`engine.dagapeyeff_more` continues that swarm. 200 workers share 2,457 alphabet shapes. The friendliest is Italian with M and U merged, score 14.05, and 0 of 200 English texts given the same menu are that bad. Reversing the last three digits of each group is the only other order that stays on the square, and it fails the book's solved example. Do not adopt it as plaintext.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.

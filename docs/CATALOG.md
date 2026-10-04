@@ -167,6 +167,7 @@ chosen-sentence checks from these recovered-output controls.
 | `engine/pooled_substitution.py` | Pool ciphertext letters, force a one-to-one key, and compare it with a colliding key and a shuffled control | `tests/test_pooled_substitution.py`: a planted permutation roundtrips, and on IASRZ 129 and K4 the colliding key outscores the legal key | Not part of Bob. A higher score is not a reading. [Note](logs/pooled-substitution-2026-10-04.md). |
 | `engine/pen_pressure.py` | Read a supplied heavy/light Bacon channel, or supplied pinprick positions | `tests/test_pen_pressure.py`: `HI` roundtrips from L/H marks, ink alone returns no text, pinpricks spell only the chosen letters | Does not infer pressure from a letter transcription. [Note](logs/pen-pressure-2026-10-04.md). |
 | `engine/dagapeyeff_swarm.py` | Check the 1939 D'Agapeyeff digit challenge against same-length English and against one-cell repairs | `tests/test_dagapeyeff_swarm.py`: 196 cells, 0 of 2000 English draws as flat, 4 edits to enter that range, 14 to reach the median | Not a reading. Edited cells are not kept. [Note](logs/dagapeyeff-swarm-2026-10-04.md). |
+| `engine/dagapeyeff_more.py` | Split 2,457 alphabet shapes across 200 workers, plus 120 group orders and a period scan | `tests/test_dagapeyeff_more.py`: best shape is Italian M/U at 14.05, 0 of 200 English texts that bad, the flattering group order fails the book's solved example | Not a reading. [Note](logs/dagapeyeff-swarm-2026-10-04.md). |
 
 ## Out of scope
 
