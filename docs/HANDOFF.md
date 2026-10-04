@@ -82,6 +82,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_battery` runs 1,000 pre-specified attacks against 500 order shuffles and 500 re-pairings, 1,000,000 scores. The only order hits are the rare-cell pile at widths 7, 14, and 28. Re-pair hits are the glue, including windows that only look special because re-pairing invents new cells. Lags, deletions, and repeating shifts do not hit. Do not store a letter string. See `docs/logs/dagapeyeff-battery-2026-10-04.md`.
 
+`engine.dagapeyeff_symbols` separates one repeating cell from that pile. Cell 82 sits in one column six times, and 738 of 20,000 grids match when the luckiest cell is allowed to win. The five rare cells in one column are matched by 0 of 20,000. Their row bunch, once the column is given, is 100 of 2,002. Do not store a letter string. See `docs/logs/dagapeyeff-symbols-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
