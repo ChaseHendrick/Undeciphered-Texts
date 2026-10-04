@@ -24,6 +24,7 @@ from engine.dagapeyeff_columns import column_report
 from engine.dagapeyeff_column_null import column_null_report
 from engine.dagapeyeff_delay import delay_report
 from engine.dagapeyeff_depth3 import depth3_report
+from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_digit_routes import digit_route_report
 from engine.dagapeyeff_groups import group_report
 from engine.dagapeyeff_regroup import regroup_report
@@ -66,6 +67,21 @@ def consider_depth3() -> dict:
         "learned": (
             "2,321,645 three-move changes were scored. The best is 24.8811, "
             "and the ball stays above 24.165. Three moves cannot counterfeit English counts. Refuse them."
+        ),
+    }
+
+
+def consider_depth4() -> dict:
+    report = depth4_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "depth4_allowed": False,
+        "learned": (
+            "140 three-move states tie for the best score. Every fourth move from them was scored, "
+            "52,003 states. The best chi-square is 22.4243. Its ball, 22.377631 to 22.471061, "
+            "does clear 24.165. 18,760 of the states have a point score under that line. "
+            "The edited positions were not kept. A matching count is not a reading. Refuse it."
         ),
     }
 

@@ -29,6 +29,7 @@ from engine.dagapeyeff_column_null import column_null_report
 from engine.dagapeyeff_convert import convert_report
 from engine.dagapeyeff_delay import delay_report
 from engine.dagapeyeff_depth3 import depth3_report
+from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_digit_routes import digit_route_report
 from engine.dagapeyeff_checks import checks_report
 from engine.dagapeyeff_classic_swarm import classic_swarm_report
@@ -118,6 +119,7 @@ def provenance_report() -> dict:
         ("bob-caution", bob_caution_report()),
         ("keystream", keystream_report()),
         ("depth3", depth3_report()),
+        ("depth4", depth4_report()),
     )
     entries = []
     previous = None

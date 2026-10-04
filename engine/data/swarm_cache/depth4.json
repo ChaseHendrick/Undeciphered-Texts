@@ -1,0 +1,13 @@
+{
+  "ball_clears": true,
+  "ball_hi": 22.471061,
+  "ball_lo": 22.377631,
+  "best_chi": 22.4243,
+  "claimed_plaintext": null,
+  "english_line": 24.165,
+  "fourth_states": 52003,
+  "point_under_line": 18760,
+  "scope": "A fourth count-move is not a reading. The edited cells are not stored.",
+  "solved": false,
+  "tied_after_three": 140
+}
