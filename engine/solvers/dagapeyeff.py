@@ -8,6 +8,7 @@ clear frequency ball is still not a reading.
 from __future__ import annotations
 
 from engine.dagapeyeff_edits import edit_report
+from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_regroup import regroup_report
 
 
@@ -47,5 +48,19 @@ def consider_regrouping() -> dict:
             "Regrouping 01432 clears the frequency line and the order stays under English. "
             "A shuffle of the same cells matches the downward read. "
             "The book's solved example gets worse. Refuse the regrouping."
+        ),
+    }
+
+
+def consider_column_key() -> dict:
+    report = key_report()
+    allowed = report["key_reaches_english"] and report["repeats_as_high"] == 0
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "column_key_allowed": allowed,
+        "learned": (
+            "The best of 20000 column orders of regrouping 01432 scores 1.0033. "
+            "13 of 20 shuffle samples of the same size reach it. English is 1.0658. Refuse the key."
         ),
     }
