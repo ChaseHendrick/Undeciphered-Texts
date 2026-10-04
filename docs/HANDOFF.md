@@ -58,6 +58,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_nulls` tries the book's dummy-letter rule at every period from 2 to 31. 495 workers agree the best is still flat (11.33 against an English cherry-pick median of 3.61). Deleting digits never stays on the square. Not a reading.
 
+`engine.dagapeyeff_rule` changes the order of work. A worker writes the prediction first: a dummy every third, fourth, or fifth cell would be one symbol. None of the 12 residues is. 214 of 400 shuffles are as narrow. The solved example is not a filler either. He did not use that rule. The 196 cells are the cipher. Do not delete them and call the remainder a reading.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.

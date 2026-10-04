@@ -38,4 +38,13 @@ Dropping every second cell (period 2, phase 0) leaves 98 cells and scores 11.33.
 
 Deleting every kth digit, then repairing the pairs, never stays on the 5 by 5 square: 0 of 495. A dummy digit knocks the row alphabet into the column alphabet. No letter string is stored.
 
+## What if he did not use that rule
+
+The deletion swarm assumed the rule and then scored what remained. That is the wrong order. A dummy every third, fourth, or fifth cell would show up as one residue made of a single symbol. Twelve workers, one per book residue, each wrote that prediction down before counting.
+
+None of the twelve is a filler. The narrowest uses 12 symbols in 49 cells (period 4, phase 0). Shuffling the same cells, 214 of 400 draws are that narrow or narrower. The most repetitive residue is only 20.4 percent one symbol, and 116 of 400 shuffles match it. The solved example in the book, which was not written with dummies, also has no one-symbol residue. Its narrowest class has 8 symbols.
+
+So the rule is not in the digits. The rival stands: the 196 cells are the cipher. The flatness already measured on those 196 cells is not an English message hiding behind deleted letters. No letter string is stored.
+
+
 
