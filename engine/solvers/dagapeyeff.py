@@ -15,6 +15,7 @@ from engine.dagapeyeff_model import model_report
 from engine.dagapeyeff_patterns import pattern_report
 from engine.dagapeyeff_period4 import period4_report
 from engine.dagapeyeff_columns import column_report
+from engine.dagapeyeff_digit_routes import digit_route_report
 from engine.dagapeyeff_regroup import regroup_report
 from engine.dagapeyeff_running import running_report
 from engine.dagapeyeff_word import word_report
@@ -190,5 +191,20 @@ def consider_autokey() -> dict:
         "learned": (
             "Four autokey rules, 25 starts each. The best is plain-sub at -3.7495. "
             "Prose is -2.5185. 37 of 40 shuffles do as well or better. Refuse it."
+        ),
+    }
+
+
+def consider_digit_routes() -> dict:
+    report = digit_route_report()
+    allowed = report["reaches_prose"] and report["shuffles_as_high"] == 0
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "digit_routes_allowed": allowed,
+        "learned": (
+            "46 routes of the row digits and the column digits stay on the square. "
+            "The best is rail-both-4 at -3.4242. Prose is -2.5185. "
+            "29 of 40 shuffles of those digits do as well. Refuse it."
         ),
     }
