@@ -49,7 +49,7 @@ def _rejections(job: dict, closed: set[str]) -> list[dict]:
     reasons = []
     if job["family"] in closed:
         reasons.append({"member": "class-guard", "reason": "This job is inside a closed class."})
-    if job["score"] != "word" or not job["changes_cells"]:
+    if job.get("kind") != "check" and (job["score"] != "word" or not job["changes_cells"]):
         reasons.append({"member": "closer", "reason": "The goal is a word score on cells this rule changes."})
     if not job["has_null"]:
         reasons.append({"member": "null-keeper", "reason": "A job with no shuffled control cannot be a goal."})
@@ -106,4 +106,39 @@ def foresight(records: list[dict] | None = None) -> dict:
             "The fewest pairs off the square is 79 of 158. "
             "A word score was not run. Refuse it."
         ),
+    }
+
+
+def after_training(records: list[dict] | None = None) -> dict:
+    """The group-digit job is finished. The next allowed job is a check, not another search."""
+    drawn = infer(records)
+    closed = _closed_families(drawn)
+    jobs = []
+    for job in _JOBS:
+        copied = dict(job)
+        if copied["id"] == "group-digit":
+            copied["budget"] = "done"
+        jobs.append(copied)
+    jobs.append({
+        "id": "end-pairs",
+        "family": "parity",
+        "changes_cells": False,
+        "score": "check",
+        "has_null": True,
+        "budget": "small",
+        "kind": "check",
+    })
+    rejected = []
+    accepted = []
+    for job in jobs:
+        reasons = _rejections(job, closed)
+        if reasons:
+            rejected.append({"id": job["id"], "by": reasons})
+        else:
+            accepted.append(job["id"])
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "accepted": accepted,
+        "rejected": rejected,
     }

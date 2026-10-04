@@ -131,6 +131,11 @@ def board_text() -> str:
     lines.append("")
     lines.append(chosen["do_not"])
     lines.append("")
+    from engine.dagapeyeff_checks import checks_report
+
+    checked = checks_report()
+    lines.append(checked["learned"])
+    lines.append("")
     lines.append("No letter string is stored.")
     lines.append("")
     return "\n".join(lines)
