@@ -21,6 +21,7 @@ from engine.dagapeyeff_convert import convert_report
 from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_model import model_report
+from engine.dagapeyeff_patterns import pattern_report
 from engine.dagapeyeff_period4 import period4_report
 from engine.dagapeyeff_record import record_report
 from engine.dagapeyeff_regroup import regroup_report
@@ -71,6 +72,7 @@ def provenance_report() -> dict:
         ("period4", period4_report()),
         ("word", word_report()),
         ("running", running_report()),
+        ("patterns", pattern_report()),
     )
     entries = []
     previous = None

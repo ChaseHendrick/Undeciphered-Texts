@@ -122,7 +122,9 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_word` scores those same 390,625 keys by the quadgram model instead of by the counts. The best is -3.2713, against prose at -2.5185. Four of eight shuffled ciphers do as well. That is not a record. `engine.solvers.dagapeyeff` refuses it. Do not store a letter string. See `docs/logs/dagapeyeff-word-2026-10-04.md`.
 
-`engine.dagapeyeff_running` slides five texts along the cells, 94,860 alignments. The best is -3.4945, which is worse than -3.2713. One of eight shuffles beats it. `engine.solvers.dagapeyeff` refuses it. Do not store a letter string. See `docs/logs/dagapeyeff-running-2026-10-04.md`. The provenance chain ends at `d23fe2c0d3b5ec89dcf36a2fee4624adbd277d8fa1643382e7653e52ab204cb8`.
+`engine.dagapeyeff_running` slides five texts along the cells, 94,860 alignments. The best is -3.4945, which is worse than -3.2713. One of eight shuffles beats it. `engine.solvers.dagapeyeff` refuses it. Do not store a letter string. See `docs/logs/dagapeyeff-running-2026-10-04.md`.
+
+`engine.dagapeyeff_patterns` slides 4,703 dictionary shapes across 940 windows. The printed order matches 423. Of 100,000 shuffles, 92,932 match at least that often. The regrouping matches 499, and 31,687 of 50,000 shuffles of those cells do too. `engine.solvers.dagapeyeff` refuses it. Do not store a letter string. See `docs/logs/dagapeyeff-patterns-2026-10-04.md`. The provenance chain ends at `56bfd5ee030bc73895d3f7395fa22d49d6ecf9a7637eac2288fae8f303f357be`.
 
 ## Current user direction
 

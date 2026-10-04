@@ -11,6 +11,7 @@ from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_bifid import bifid_report
 from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_model import model_report
+from engine.dagapeyeff_patterns import pattern_report
 from engine.dagapeyeff_period4 import period4_report
 from engine.dagapeyeff_regroup import regroup_report
 from engine.dagapeyeff_running import running_report
@@ -140,5 +141,24 @@ def consider_running_key() -> dict:
             "94860 alignments of five texts were tried as a running key. "
             "The best is -3.4945, worse than the period-4 word search at -3.2713. "
             "Prose is -2.5185. 1 of 8 shuffles beats it. Refuse it."
+        ),
+    }
+
+
+def consider_patterns() -> dict:
+    report = pattern_report()
+    tails = (
+        report["printed_null"]["as_high"] * 100 < report["printed_null"]["draws"]
+        or report["down_null"]["as_high"] * 100 < report["down_null"]["draws"]
+        or report["regrouped_null"]["as_high"] * 100 < report["regrouped_null"]["draws"]
+    )
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "pattern_allowed": tails,
+        "learned": (
+            "Of 940 windows, the printed cells match a dictionary shape in 423. "
+            "92932 of 100000 shuffles do that well or better. "
+            "The regrouping matches 499, and 31687 of 50000 shuffles do too. Refuse it."
         ),
     }
