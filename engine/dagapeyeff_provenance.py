@@ -37,6 +37,7 @@ from engine.dagapeyeff_classic_swarm import classic_swarm_report
 from engine.dagapeyeff_clump import clump_report
 from engine.dagapeyeff_widths import widths_report
 from engine.dagapeyeff_hole import hole_report
+from engine.dagapeyeff_clerical import clerical_report
 from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_foresight import foresight
 from engine.dagapeyeff_groups import group_report
@@ -134,6 +135,7 @@ def provenance_report() -> dict:
         ("paper", paper_notes()),
         ("widths", widths_report()),
         ("hole", hole_report()),
+        ("clerical", clerical_report()),
     )
     entries = []
     previous = None

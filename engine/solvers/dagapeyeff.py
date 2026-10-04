@@ -39,6 +39,7 @@ from engine.dagapeyeff_classic_swarm import classic_swarm_report
 from engine.dagapeyeff_clump import clump_report
 from engine.dagapeyeff_widths import widths_report
 from engine.dagapeyeff_hole import hole_report
+from engine.dagapeyeff_clerical import clerical_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -176,6 +177,28 @@ def consider_hole() -> dict:
             f"{report['high_in_named_column']} sit in that column. "
             f"The period-7 pair rate is {report['period7_as_high']} of {report['period7_draws']} shuffles. "
             "The new cells clear 5 percent. The period does not. Neither is a reading."
+        ),
+    }
+
+
+def consider_clerical() -> dict:
+    report = clerical_report()
+    line_rate = report["line_as_high"] / report["line_draws"]
+    allowed = line_rate < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "clerical_allowed": allowed,
+        "learned": (
+            f"Seven check-digit rules were fixed first. The best single rule hits "
+            f"{report['first_digit_hits']} groups, and {report['first_digit_as_high']} of "
+            f"{report['check_draws']} shuffles do as well. The best of the seven, "
+            f"chosen again on every shuffle, is {report['family_as_high']} of {report['check_draws']}. "
+            f"One symbol sits in one column {report['column_mode']} times, "
+            f"and {report['column_as_high']} of {report['line_draws']} shuffles do that. "
+            f"A row reaches {report['row_mode']}, and the taller of the row and the column is "
+            f"{report['line_as_high']} of {report['line_draws']}. "
+            "The column alone is under 5 percent. The line is not. Refuse the line."
         ),
     }
 

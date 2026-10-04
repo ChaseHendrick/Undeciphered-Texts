@@ -1,0 +1,27 @@
+{
+  "best_rule_hits": 12,
+  "check_draws": 2000,
+  "claimed_plaintext": null,
+  "column_as_high": 357,
+  "column_mode": 6,
+  "family_as_high": 742,
+  "first_digit_as_high": 156,
+  "first_digit_hits": 11,
+  "groups": 79,
+  "line_as_high": 720,
+  "line_draws": 10000,
+  "row_as_high": 3238,
+  "row_mode": 5,
+  "rule_hits": [
+    6,
+    6,
+    11,
+    12,
+    8,
+    0,
+    0
+  ],
+  "rules": 7,
+  "scope": "A check digit that a shuffle can reach is not a key. A line chosen after looking at rows and columns is not a rare column. No letter string is stored.",
+  "solved": false
+}

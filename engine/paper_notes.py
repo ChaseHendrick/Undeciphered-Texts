@@ -10,6 +10,7 @@ from engine.bob_branch import bob_branch_report
 from engine.dagapeyeff_clump import clump_report
 from engine.dagapeyeff_widths import widths_report
 from engine.dagapeyeff_hole import hole_report
+from engine.dagapeyeff_clerical import clerical_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -25,6 +26,7 @@ def paper_notes() -> dict:
     clump = clump_report()
     widths = widths_report()
     hole = hole_report()
+    clerical = clerical_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -146,6 +148,20 @@ def paper_notes() -> dict:
                 f"Lag 7 is {hole['period7_as_high']} of {hole['period7_draws']} shuffles."
             ),
             "do_not_claim": "A rare column placement is not a reading, and an ordinary period is not a key.",
+        },
+        {
+            "id": "clerical-line",
+            "kind": "negative",
+            "tags": ["check-digit", "column", "row"],
+            "statement": (
+                f"Seven check rules were fixed first. The best one is "
+                f"{clerical['first_digit_as_high']} of {clerical['check_draws']} shuffles, "
+                f"and the best of the seven is {clerical['family_as_high']} of {clerical['check_draws']}. "
+                f"A column holds one symbol {clerical['column_mode']} times, "
+                f"{clerical['column_as_high']} of {clerical['line_draws']} shuffles. "
+                "Allowing a row as well, 7.2 percent of the shuffles still reach that height."
+            ),
+            "do_not_claim": "A column that looks rare until a row is allowed is not a reading.",
         },
     ]
     return {
