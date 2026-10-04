@@ -11,6 +11,7 @@ from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_bifid import bifid_report
 from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_model import model_report
+from engine.dagapeyeff_period4 import period4_report
 from engine.dagapeyeff_regroup import regroup_report
 
 
@@ -93,5 +94,20 @@ def consider_bifid() -> dict:
         "learned": (
             "The best bifid period is 174 and scores -3.4727 per quadgram. "
             "English is -1.553. 1109 of 2000 shuffles have a best period at least that high. Refuse it."
+        ),
+    }
+
+
+def consider_period4() -> dict:
+    report = period4_report()
+    allowed = report["reaches_prose"] and report["quad_as_high"] * 20 < report["null_texts"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "period4_allowed": allowed,
+        "learned": (
+            "All 390625 period-4 shifts were scored. The friendliest counts are 3.86, "
+            "and 32 of 40 shuffles do that well. The quadgram is -3.4759 against prose at -2.5185. "
+            "3 of 40 shuffles match it. Refuse it."
         ),
     }

@@ -21,6 +21,7 @@ from engine.dagapeyeff_convert import convert_report
 from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_model import model_report
+from engine.dagapeyeff_period4 import period4_report
 from engine.dagapeyeff_record import record_report
 from engine.dagapeyeff_regroup import regroup_report
 from engine.dagapeyeff_swarm import challenge_pairs
@@ -65,6 +66,7 @@ def provenance_report() -> dict:
         ("keys", key_report()),
         ("model", model_report()),
         ("bifid", bifid_report()),
+        ("period4", period4_report()),
     )
     entries = []
     previous = None

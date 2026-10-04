@@ -116,7 +116,9 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_model` labels cells by English letter frequency and scores that string. English of this length scores -1.553 per quadgram. The printed cells score -3.6316 and the regrouping scores -3.6352, so the lower chi-square made the model score worse. Of 200,000 shuffles, 177,295 beat the printed cells and 151,728 beat the regrouping. The best shuffle reached -3.107. `engine.solvers.dagapeyeff` refuses the labeling. Do not store a letter string. See `docs/logs/dagapeyeff-model-2026-10-04.md`.
 
-`engine.dagapeyeff_bifid` undoes a bifid on the coordinate digits for every period from 1 to 196. Period 1 scores -3.6316. The best period is 174, at -3.4727, against English at -1.553. Of 2,000 shuffles, 1,109 have a best period at least that high. That is 392,000 period scores. `engine.solvers.dagapeyeff` refuses the period. Do not store a letter string. See `docs/logs/dagapeyeff-bifid-2026-10-04.md`. The provenance chain ends at `052661154c4364a74c5deb984a1fc02c3ab2670f6e49d08855b1af3d8d1341c4`.
+`engine.dagapeyeff_bifid` undoes a bifid on the coordinate digits for every period from 1 to 196. Period 1 scores -3.6316. The best period is 174, at -3.4727, against English at -1.553. Of 2,000 shuffles, 1,109 have a best period at least that high. That is 392,000 period scores. `engine.solvers.dagapeyeff` refuses the period. Do not store a letter string. See `docs/logs/dagapeyeff-bifid-2026-10-04.md`.
+
+`engine.dagapeyeff_period4` scores every one of the 390,625 period-4 shifts, and the same search on 40 shuffled copies. That is 16,015,625 keys. The friendliest counts are 3.86, and 32 of 40 shuffles do that well or better. Period 3 had reached 2.80, so the longer key is not closer. The quadgram is -3.4759 against prose at -2.5185, and 3 of 40 shuffles match it. `engine.solvers.dagapeyeff` refuses the key. Do not store a letter string. See `docs/logs/dagapeyeff-period4-2026-10-04.md`. The provenance chain ends at `2ecc51b639257b3d2da027683e42318fb1b3db08154aaf755f88f51c29aa833d`.
 
 ## Current user direction
 
