@@ -376,8 +376,82 @@ def evaluate_incumbent(
     }
 
 
+def probe_manifest(plaintext: str, *, seed: int, per_family: int) -> dict[str, object]:
+    """Hash each draw and record the frozen router's top family.
+
+    One ``random.Random(seed)`` draws in the same order as
+    ``evaluate_incumbent``. The plaintext and the keys are not stored.
+    The weight file is only read. This is not a training run.
+    """
+    letters = _require_letters(plaintext)
+    if len(letters) < 16:
+        raise ValueError("plaintext needs at least 16 letters")
+    before = _weights_sha256()
+    format_version = json.loads(_WEIGHTS_PATH.read_text(encoding="utf-8"))["format_version"]
+    rng = random.Random(seed)
+    texts = [_sample_plaintext(letters, index) for index in range(per_family)]
+    draws: list[tuple[str, str, str]] = []
+    for text in texts:
+        settings, ciphertext = sample_restricted_enigma(rng, text)
+        _require_roundtrip("enigma", settings, ciphertext, text)
+        draws.append(("restricted", "enigma", ciphertext))
+    for text in texts:
+        settings, ciphertext = sample_restricted_m209(rng, text)
+        _require_roundtrip("m209", settings, ciphertext, text)
+        draws.append(("restricted", "m209", ciphertext))
+    for text in texts:
+        settings, ciphertext = sample_enigma(rng, text)
+        _require_roundtrip("enigma", settings, ciphertext, text)
+        draws.append(("broad", "enigma", ciphertext))
+    for text in texts:
+        settings, ciphertext = sample_m209(rng, text)
+        _require_roundtrip("m209", settings, ciphertext, text)
+        draws.append(("broad", "m209", ciphertext))
+    from engine.neural_router_v2 import route_probabilities
+
+    rows = []
+    for generator, family, ciphertext in draws:
+        ranked = [
+            item["family"]
+            for item in route_probabilities(ciphertext, weights_path=_WEIGHTS_PATH)["candidates"]
+        ]
+        rows.append({
+            "generator": generator,
+            "family": family,
+            "ciphertext_sha256": hashlib.sha256(ciphertext.encode("utf-8")).hexdigest(),
+            "top1": ranked[0] if ranked else "",
+            "in_top3": family in ranked[:3],
+        })
+    after = _weights_sha256()
+    if before != after:
+        raise RuntimeError("incumbent weights changed during the manifest")
+
+    def _hits(generator: str) -> int:
+        return sum(
+            row["top1"] == row["family"]
+            for row in rows
+            if row["generator"] == generator
+        )
+
+    return {
+        "kind": "bob_probe_manifest",
+        "seed": seed,
+        "per_family": per_family,
+        "format_version": format_version,
+        "weights_sha256": before,
+        "weights_unchanged": True,
+        "incumbent_replaced": False,
+        "plaintext_sha256": hashlib.sha256(letters.encode("utf-8")).hexdigest(),
+        "rows": rows,
+        "restricted_top1": _hits("restricted"),
+        "broad_top1": _hits("broad"),
+        "scope": "Hashes and family labels for one frozen incumbent. Not a weight update.",
+    }
+
+
 __all__ = [
     "evaluate_incumbent",
+    "probe_manifest",
     "sample_enigma",
     "sample_m209",
     "sample_restricted_enigma",

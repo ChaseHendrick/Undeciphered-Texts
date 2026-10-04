@@ -1,0 +1,911 @@
+{
+  "kind": "bob_probe_manifest",
+  "seed": 20261005,
+  "per_family": 32,
+  "format_version": 5,
+  "weights_sha256": "d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825",
+  "weights_unchanged": true,
+  "incumbent_replaced": false,
+  "plaintext_sha256": "da910590e36633f59366139f327ae72b3cd3a82d3510f1ad173881b4a944ad28",
+  "rows": [
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "6f7caeb3cbdfd17a4a82ae648cd1f5e859e56b5e1520cb037fe590b373f3b509",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "8674800cd4cc687dd58408f33c9ebc4ef459146b71108bf1618736e846dc893c",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "947d1c8fd6b67c0e6973f3b53763614b4cae46ee7b41bec9bf397c39c0095cbb",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "2720cdc3fd0a3cfd2890e422b116f26c87445e19bccc8d5d1ac266db69ed885b",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "30d085166ede5bc115cf19d6df5d2da8e1716df437162b495cd52f4382b1f45b",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "922bd2db956a04eff3b2e1ad8e531a9364a60481f9269ef68441ff0825b91df6",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "6a75d35519ea2758044e0987d61e115ec4a058253922a60992fafbb02795b668",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "b0550b37efeff4c1165810f941459383b6abe8204e81f7572ad846aab9473f8f",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "97b761466118c165342ddb767c69e199cc91ca98cc6f62583522a0b96d5d34a6",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "d2cf4b87d99b02bca5df6fc5d8789cff371db6270b7a3b54b98c71e3c4c0282f",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "b741ed4e4c88191c9a71c2ce0ed661fec5295eb430b2d71bca843de30d4c12fd",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "8ef578af087dcc165cdcaacac64d7d046209e9736b153a5f65fb26357e2314cd",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "234beb4aa99f03607df49a06fb7ad576338841fb0ecd453e8dcc4b35108eaf53",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "02eea4b2b73eed1521a3d4d1be150f51c007076d6a0cf458dcdd81d6b7423f7a",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "e087c979dc00007f13b9e70102289ba120ccf778d8c41c989d26fb6f08ed348f",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "6964ff4bfd1bcb75e6c82193e8c8051ccf5c83b2226a64e5a737b582d76f65be",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "e775e1412e7b37a1e7e54722d421247d4157a327f7944bd5024505b5bfd75412",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "dc773cffa54a29c7cb50b58c8b2012f3609b2bed00b79eb37ed7c6303bee9d21",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "7eedd168a0cd74ed62889e63da5d2081b52bb1d4b7acccefcb5137750c9175ed",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "9caa079eceaea18352c494c7f51b9ae2be3a2e99ae0bcfdf68ac441a69255d84",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "bf094f7b26e78a91b7c6a990b45266432415628f4bf4b2f198968fc2b8a778ae",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "28c7c0064aae30f20d2f5967a455b6c3bd7f23ca235e3640a0c9c78dd64bae8c",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "70cd184998b4f60cd05eeb74195c6e2ac739e6112a70778aab9dd0afe424877e",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "68c551e477eceb137bc33cc0e6943515c169399e20c9535ec66ebbb70ab1c2b7",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "e85d02747f8f3b3ed13031f6ce02a220e6b6b75344198dca6eaa484747390ebf",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "84fafc544e9b5330945c2d7dd7261f54b8872a1f835c346f913f39bfab776171",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "e18da5e4a87bbebcd96bfb2c9e168e54699bcb6a98314363f3b7830dd22c1a74",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "11b56b058a8cf1ea4023202af7a9c93efa6fbf99fbb46349c61f615dfd3bb80b",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "b9469051197fb0ed3216bdf1edcb39aef81443e52c86afcca18e3f6e001c95ee",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "5e78a7041e2040c5ded9b91d590ad1edcd5b39bdedb6eb19357f76e5f7b021ea",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "a17c0451824bd371c175b0ede3729aacdf040a9154685c6c0cad97a827d7bee5",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "enigma",
+      "ciphertext_sha256": "88875a649cc9a216413f17645c9b5790b261d1755c432dfe7b046183831d12f2",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "0d56f2f349b948d4fda5eb8ea6d8650c37af3281c09a855008c961b5afe812c2",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "10169125a78d8f4fe1624dbf7caf63910dbce0e72d043ae5cbaa992a855fb085",
+      "top1": "keyed-vigenere",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "859aeecd0c176cd9e7c9cb18861de3c5206758c817df9a37b7eb4dd50895b394",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "58e86a874223ef806e8a6d4c709ba55142d8de40a86a22d6ea0e8f0bf8a7c27a",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "068165b3e13ea16a68c3a72389742b1f110e1b599c335cf4c17d3cf114d03016",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "82b111fd262f15950381a8cdd2febcee6fc5006d1c7c4f19c2ba590429859008",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "b9f91ecf202349b702c1953cd59d9965119500f34e1abd6196c8fe6aae9cd599",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "80705cc7e14f554d1eab55045b6136eb4d04f30365f61d6c8ea6983d73cbe7af",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "ef158a17ed1e6206b3af380ec13ce4cc437dd97f3fed62a7af9e037a1a78d4a2",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "29099f0a80224505ae6ba7b24899d2088ebc11ec49e906de462e9bcf8ad6ea0c",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "080ac8dbb7ff4edb11332a7688afd43b9369fec5307b66de680ed324749ff230",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "1af001a18b9acab8eebe14b84cbdcf64fe6312badfe8153b70e5935672c13528",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "0489eec5dfc518571e6e402ba790caec116da2c4aec87db2724e4598287f52e4",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "62a06191328c3519c4984cfe5dded73af91e4f509ef78efac32c10fcdf6b661f",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "e652772ec4a70d11edd079709c6a1328a7b29f4e20a375b52a01b667eac2004a",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "6c8ebbbf651baad77bea0832cce9a81e6e6c3d58e2d273dba2428a8210359db3",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "f5fe92515c989ca3b5e43db0e4f15b1330a11d5bbe0cae5d0e2c59e08fe5f882",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "80a666908397694543190ff75cebbb6b169749644b35f6f70f3112acb7e6151c",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "fb7ffb178a9d7c831c27a3030af5243d2243215756a241032739abc5dc6bda30",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "fd438f70d709e3514a4978c2331e17b67bac657b2fb33fb7b63e315c421c8761",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "ad2c10fafdaebe6146802833ca7a3934779f91447cf794437e6e0849985913f7",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "122483f6716224acdc289ca3aa856f9e0a0dc0082171aee77cc2fb0acb6ea859",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "49f2c3f3a342453d6944065705c42d503e47e2558009d31a476939858dc7dd75",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "8b342af13f8297fa74b05c2db8c55a09690bb7ec2ff6753d46dbf903c9ef1747",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "555a463a2fe0ab4dd10d6b2d91d63fbe931855e7f931a1ad29b279d1769135f3",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "b1a4f33cbfcd480ee0e042568227c158e240a7aef12329cbf77d68a391293718",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "e2559c4f100f281cfaaf4c23a8ccb20cab9c1f3b73885077547bd63390ddf875",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "11c6e658c1f68712f8b6f4e609262aaa06c78c0dd67c5bb4dc67d03b380c41b6",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "6536b64b8c2a297bc80c4cd3b431354239cb97776c04f0e4ffe9fc7682915924",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "54be9ae23366c4cf1791aceb22eb06e04e636f30a60b642ccf1775b939e10675",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "9940e7ce838be05a4580df65ce7c99d0d8c53e8cc0d64b974fcc8a0f0612c206",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "restricted",
+      "family": "m209",
+      "ciphertext_sha256": "0ad7e5f769c3effb07c65a12d632b23a258d5756a257d694e9f31414cffee98c",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "e61ba053c8f3d89b0c98d7fb74f1ba70590db8f25dc061740db0e9735c01f856",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "9ea47fd75a99e69b135d8fcc4895fdd8922124ec56af9e66fa964c9e9ce0d802",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "8d709505818610190e63b3b7939cfc98d09b9359291fa86e5037687ba94eb8de",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "a863d98cebe01f120f5cc4ed09add350a3b09c7528f59a87c172c2b461d5534d",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "7d578fd629cde6a9caf0b8fb55be75b5618670b0ad2ccb046716c06ed592763a",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "513f89d7403bf1d68fee86b0c5924207e0e8348c2de219976cb834ca9760fcb0",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "20858ff5cc5f739ca71af18b647e0b64d2624cc1e04af6637e57fbe5b993774c",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "e220564f39efe05286e991b30d7ba4b02f3a7c29b60658b9e1f08181204bd382",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "2009c58f30da8f719b46309de1ccd1183f1be31a45c2748c1e6fa37d96a3818d",
+      "top1": "bifid",
+      "in_top3": false
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "49b3e9c5fd15afb65e4579f77dd86b605908e094ae9e6e3eb619da3ba0a80ef3",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "f9e8442f2137802d8c761d95bc58d0968d90aecbf9e2415c15af77f1362e3b44",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "3e296d170d7be6f3789cf3b5a78675036b7c3e5b38554bba3d942ed392393ff4",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "f5fba6b1426554b31e0c5398a935932e01c010798d2f9e0c2c0fefd881fb242c",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "74834022d616021643d789e4873f0ae78fd1a2f30fe87091631cc68a7bd4a94d",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "b0f24d520a51edb07c57467fb46726401cda74d8be3af2d7d5fe21d6c1cc7b49",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "e49da27ee07cf1106f78b3172681600072a4d7aad108950d21954d0efde5203d",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "c14993802204f8ea4857c23294f9fa6559239b7d7fcf997773a4bc2d5b3693e0",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "bdd04c3604629f640a11def7944d3dcff3f02abc125e741c83caa1478f85ecec",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "bd20ddbc56043e24966c4d1041c5409fe00be5705d536b2b5b485cccdd0b610d",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "c762e600051e2c485fd1dd14ce1f778beae81a7a0597cf12488701e35ad90444",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "665c881765e79105009415fd6c051079444a40e4e8e7a5780382d2bcef7cc81f",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "f9b555459790f6e4b21627987296b9832cfca3742f646a9c32ab02d072045f2f",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "e52be0205c402ec6b231dd7cdbfad9f5b9777646a15f9daabc2e0f060b0f6eea",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "9a507a4e0ef56a8bfbc8191a893dabfd3305ca3e8c8d5e57555be4c861a7787c",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "375d5e407091b65594dd195358b3474c7859c8bff3cf410ed4c6c99b4e74c60e",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "ebd9ea5e8525a111776e30385ba272025732692977bc9356c3d96a81fd3848bb",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "475c7f943f90e79f3f31f39c21764fbf0c0174dc8a263fa8b8377a1928845ce2",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "5ac9f1c0b627ff78ce8533255c8bc9db8713bc5c4ea872805f3433740a17e1d7",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "976b739b9c97113bcf30ef71cc579690fc7a824c843a09b05576526f9775e05e",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "377d23e0c7137c83ab4120078747b59298e5c9a41eefdd8a64601124d342ce44",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "9f2269a241a0cb45bb3dc02bdbda3fd5bf9e19980596124bfb31a21c4efc3364",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "enigma",
+      "ciphertext_sha256": "a634eae9e72d6d08936cc8d3a0e26fccd5cdf056a9b0f9100bc0547962d029de",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "aee6eaa3d4647d826102d44d85c4efec027da3328f97a7900b182385dd1e1914",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "7bae1321a2275dec072f1519784ea26be60425c08b460bf17d94e78366540a09",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "a0dc1804b94ed2bff7429cc547b45999f0d254d80e169dfb56c9ad5ebc1bb10c",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "2008becfb09ad81115de60d5c9603ff17158838c69f84383c18a3fba20215290",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "e176b56a547c77d152952e329106a74c7e61ca0835a652185dc8eff492281ba4",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "2a7a19af767b6e7b17ba211006f0adece8bd98c56dba628a51f0a12ae67421cc",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "791a2990ba559a599795b61c32add325bf64139daa65df0b8eb848f03b75461c",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "527f1b49b8ec2a93c357ad3454714a8da951d28be218f51349c53e917c2c5d10",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "418c5b96297a49ad095e63efed7c8fadc3c57bead5a699f4671bf477498a4106",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "bcf2fd633e4043bdc709d94fb5eb84fa6d7a3676615266e837c43b16583e5e39",
+      "top1": "beaufort",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "dc192dc161d1f9e64b8de79048f62f15d20974ee016da89a36b0d11be5bc5704",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "7740daad4993642641cf22cdb90a3f66c54536daf4ee6cdd7addc59117ed0101",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "53d528204d07bf627c7fc518cea739af846739d015222315f30563d638a1211c",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "e920fad9f53aeda6cc7ecd1e364926eeef0c55f904dcf9ea953750a56a49c883",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "a490a322f7b6e8f2233895afd7db67c0ec3fe860e864faa6dbcbacebfe9d256d",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "2c24446e8ec87be726c99bc30c5acb4bb30ba9789b38bac783d484c71246c930",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "2525ec13243e9214b6d8704c527e26882f4939d1805d366af0b13092e604a0a3",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "af12dda31b26274080ef22df4d58b3e635ab5ed174c0e64761c96c773c04f711",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "0bda4fe14ac0b95fa4fa81806ce7b03773796d45e881e826def23d16c0a1cee0",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "b7ea963884a0d912fff665a3635075753fbe11413d3f2827d887d357c5f16606",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "927172b6d4d2c024b820168bb6aff56287171151ed83ffb5c3706baa8b5d8857",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "324ea5d9e4699f3e273f864a4d8df85c91d5f96bced772e62789c7c420a98c70",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "ae15b72a89ce12cbe5b424dbde44dacc41be4d53b4ec81542714cf5223df3672",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "fb931ffac86f15207d32630b7c88a4be3f617b65998d59d02064808102c8f557",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "f7519712e7ab097593cf420f025d00808074bb192944ceb816f5950efd031261",
+      "top1": "keyed-vigenere",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "01767d04c8d850aa32bcdc51fee3d4927f96cd74b0f1970106253a4df87ab4c3",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "23accd6b89b534b9e57a5e851e70f37368d3a020313d3279971862927bb6210a",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "433709c33e6683cfd6ffe0a5104015445554ca79461aa9bab4c91b023dffd968",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "fcfa39ad2a4fbd86bf78e75a06c72d181439f47b61d781fc72869af16e7702df",
+      "top1": "m209",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "99e1dd02eb2e1a315056aab1ad33dbee86ab788170af9d1162a5e39fee6d2b78",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "75590bd2bb5d648cbbe78d068cca86bfaf2fe8ffab774cbdf1087c2debd6ef5e",
+      "top1": "enigma",
+      "in_top3": true
+    },
+    {
+      "generator": "broad",
+      "family": "m209",
+      "ciphertext_sha256": "f911e83babc8489b2f1dd62a742d24d4b765bb9b3f2378e40f4dba2ef390137d",
+      "top1": "enigma",
+      "in_top3": true
+    }
+  ],
+  "restricted_top1": 39,
+  "broad_top1": 34,
+  "scope": "Hashes and family labels for one frozen incumbent. Not a weight update."
+}
