@@ -74,6 +74,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_order` reorders the 196 cells. Relabeling cannot raise successive-symbol dependence: an English passage scores 1.0658 before and after a letter shift. The best of 20,000 column keys scores 0.7657, about the same as the best of 5,000 random orders (0.7556), and below same-length English (1.0658) and German (1.2000). A substitution of these orders is not a reading. Do not store a letter string. See `docs/logs/dagapeyeff-order-2026-10-04.md`.
 
+`engine.dagapeyeff_routes` tries rails, diagonals, and regular deletions. Deleting every other cell scores 1.0556, close to English of length 196, but English of the remaining 98 cells scores 1.2922. 963 of 10,000 shuffled deletions match it. The rise is the shorter text. Do not store a letter string. See `docs/logs/dagapeyeff-routes-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
