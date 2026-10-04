@@ -46,7 +46,11 @@ class HeadlessTruppenschluessel:
 
     def feed(self, text: str) -> str:
         """Decrypt. Spaces are ignored. A dash or J spoils that one pair and does not slide the rest."""
-        slots = []
+        return self.run(text)["text"]
+
+    def run(self, text: str) -> dict:
+        """Decrypt, and re-seal every intact pair. A spoiled pair is not re-invented."""
+        slots: list[str] = []
         for char in text:
             if char.isspace():
                 continue
@@ -58,17 +62,31 @@ class HeadlessTruppenschluessel:
             else:
                 raise ValueError("feed accepts letters, spaces, dashes, and J as a hole")
         out: list[str] = []
+        spoiled = 0
+        replay_ok = True
         for index in range(0, len(slots) - 1, 2):
             pair = slots[index] + slots[index + 1]
             if "-" in pair:
                 out.append("??")
+                spoiled += 1
             else:
-                out.append(two_square_decrypt(pair, self.left, self.right))
-        if len(slots) % 2:
+                plain = two_square_decrypt(pair, self.left, self.right)
+                out.append(plain)
+                if self.seal(plain) != pair:
+                    replay_ok = False
+        leftover = len(slots) % 2 == 1
+        if leftover:
             out.append("?")
         if not out:
             raise ValueError("text has no slots")
-        return "".join(out)
+        return {
+            "text": "".join(out),
+            "holes": "".join(out).count("?"),
+            "spoiled_pairs": spoiled,
+            "leftover": leftover,
+            "replay_ok": replay_ok,
+            "claimed_plaintext": None,
+        }
 
 
 def residue_without_squares() -> dict:

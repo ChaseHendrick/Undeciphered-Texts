@@ -16,6 +16,8 @@ The open messages tried on the published keys for 1 July and 5 through 9 July:
 | LXACA, Nr. 100, 5 July | Ground `OGD`, second `PKN`, 20 letters | 5 July start is `LXI`, the same window as the earlier neighborhood. None of the six scores beat the control. |
 | JBIYH, Nr. 242, 20 July | Ground `BSB`, second `NTK`, 55 letters | Six starts. None beat the control. |
 
-Zero of the 18 rows beat the control. The 3 July key and the 20 July key are not on the key page, and this pass does not search stand-ins for them. June messages EHSTQ, AFKZT, and RXPSB are not in this run: the June message page returned 404, and their groups were not copied from memory. BYQMZ, FKQLZ, and XFEDT are the Ultimate challenge, whose wiring the publisher questions. This machine is ordinary Enigma I with reflector B, so it was not aimed at them.
+The machine now also reports the window where the wheels stop, and it re-enciphers what it just produced. The full Nr. 101 body, 178 letters, still starts `BETRIEBSSPRUQXKUPPLU` and stops at `WLN`. Nr. 99, ground `QCB` and second group `NSR`, starts at `SIM` and stops at `SOM`. Both stops are the ones printed for those broken messages. Every open-message row re-enciphers, including KLJBO's four holes. None of the 18 scores beat the control. The full bodies are not stored as a reading.
+
+The 3 July and 20 July keys are still not on the key page and were not invented. June messages and the Ultimate challenge were not added.
 
 `solved` stays false and `claimed_plaintext` stays null.

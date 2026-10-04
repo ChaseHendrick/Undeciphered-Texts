@@ -21,7 +21,11 @@ class HeadlessEnigmaTest(unittest.TestCase):
         self.assertIsNone(report["claimed_plaintext"])
         self.assertEqual(report["control_start"], "WER")
         self.assertEqual(report["control_text"], "BETRIEBSSPRUQXKUPPLU")
+        self.assertEqual(report["control_final_window"], "WLN")
+        self.assertEqual(report["xtmsy_start"], "SIM")
+        self.assertEqual(report["xtmsy_final_window"], "SOM")
         self.assertEqual(report["rows_beating_control"], 0)
+        self.assertTrue(all(row["replay_ok"] for row in report["rows"]))
         self.assertEqual(len(report["rows"]), 18)
         by_key = {(row["message"], row["key_date"]): row for row in report["rows"]}
         self.assertEqual(by_key[("LXACA", "1941-07-05")]["start"], "LXI")

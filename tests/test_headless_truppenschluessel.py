@@ -15,10 +15,14 @@ class HeadlessTruppenschluesselTest(unittest.TestCase):
         machine = HeadlessTruppenschluessel("FELD", "POST")
         cipher = machine.seal("ABCDEF")
         self.assertEqual(machine.feed(cipher), "ABCDEF")
+        self.assertTrue(machine.run(cipher)["replay_ok"])
         holed = cipher[:2] + "-" + cipher[3:]
-        self.assertEqual(machine.feed(holed), "AB??EF")
+        report = machine.run(holed)
+        self.assertEqual(report["text"], "AB??EF")
+        self.assertEqual(report["spoiled_pairs"], 1)
+        self.assertTrue(report["replay_ok"])
         self.assertEqual(machine.feed(cipher[:2] + "J" + cipher[3:]), "AB??EF")
-        self.assertEqual(machine.feed("A"), "?")
+        self.assertTrue(machine.run("A")["leftover"])
 
     def test_residue_messages_are_not_opened(self) -> None:
         report = residue_without_squares()
