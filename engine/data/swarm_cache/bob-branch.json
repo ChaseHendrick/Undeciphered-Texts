@@ -1,19 +1,19 @@
 {
   "branch_alive": true,
   "challenge_branch_share": [
-    0.4994,
+    0.5012,
     0.5271,
-    0.5164
+    0.5178
   ],
   "claimed_plaintext": null,
   "control_branch_share": [
-    0.4538,
+    0.4566,
     0.4709,
-    0.4806
+    0.4835
   ],
   "scope": "A live residual branch is not a reading. The weights were not replaced.",
   "solved": false,
   "weights_match_shipped": true,
   "weights_replaced": false,
-  "weights_sha256": "d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825"
+  "weights_sha256": "5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b"
 }

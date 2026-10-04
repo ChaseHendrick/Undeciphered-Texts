@@ -1,5 +1,14 @@
 {
+  "model_name": "Bob the Neural Net",
   "format_version": 5,
+  "feature_version": "cipher_statistics_v5",
+  "warm_start": true,
+  "learning_rate": 0.0005,
+  "checkpoint_epochs": [
+    15,
+    0,
+    15
+  ],
   "families": [
     "caesar",
     "vigenere",
@@ -22,9 +31,9 @@
     "affine",
     "autokey"
   ],
-  "correct": 428,
+  "correct": 429,
   "total": 480,
-  "accuracy": 0.8916666666666667,
+  "accuracy": 0.89375,
   "top3_correct": 477,
   "per_family": {
     "caesar": {
@@ -96,7 +105,7 @@
       "total": 24
     },
     "rail-fence": {
-      "correct": 20,
+      "correct": 21,
       "total": 24
     },
     "affine": {
@@ -109,15 +118,15 @@
     }
   },
   "temperature": 1.0,
-  "calibration_nll": 0.3206024960576484,
-  "heldout_nll": 0.3095737009242988,
+  "calibration_nll": 0.32016130829816414,
+  "heldout_nll": 0.30802439037500007,
   "benchmark_correct": 193,
   "baseline_correct": 158,
   "benchmark_total": 204,
   "promoted": true,
   "predecessor_comparison": {
-    "correct_before": 411,
-    "correct_after": 428,
+    "correct_before": 428,
+    "correct_after": 429,
     "total": 480,
     "families_before": [
       "caesar",
@@ -166,10 +175,13 @@
     "output_class_counts": [
       20,
       20
-    ]
+    ],
+    "benchmark_correct_before": 193,
+    "benchmark_correct_after": 193,
+    "benchmark_total": 204
   },
   "train_per_class": 256,
-  "epochs": 250,
+  "epochs": 80,
   "hidden": 96,
   "ensemble_size": 3,
   "calibration_sha256": "aa0dc75b524b6ab09fb267780db5e9ed92cd017e3aeb2aed40d0c5f8ee2f7add",
@@ -179,19 +191,28 @@
   "training_types": [
     "supervised_label_smoothing",
     "curriculum_hard_examples",
-    "paired_dropout_consistency"
+    "paired_dropout_consistency",
+    "frozen_incumbent_teacher_kl"
   ],
-  "elapsed_seconds": 101.96517054107971,
-  "reward": 0.8568772534277381,
+  "distillation": {
+    "strength": 0.25,
+    "temperature": 2.0,
+    "source_model_sha256": "d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825",
+    "feature_version": "cipher_statistics_v5",
+    "ensemble_size": 3,
+    "scope": "generated training rows only",
+    "objective": "T^2 KL(teacher || student)",
+    "teacher": "frozen mean-logit incumbent ensemble",
+    "synthetic_labels": "retained at full supervised weight"
+  },
+  "elapsed_seconds": 88.40380817699952,
+  "reward": 0.8629745119276911,
   "reward_scope": "Synthetic family-label ground truth only; wrong labels receive -1 regardless of speed. Reward never overrides promotion.",
   "model_policy": {
     "status": "promoted",
     "action": "replace incumbent",
     "criterion": "zero additional errors on both fixed benchmarks; speed cannot compensate for incorrect labels"
   },
-  "model_sha256": "d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825",
-  "artifact_bytes": 2577717,
-  "benchmark_scope": "Reused Doyle development comparisons; labels excluded from gradient updates.",
-  "independent_audit": "neural_router_v2_audit.json",
-  "model_name": "Bob the Neural Net"
+  "artifact_bytes": 1573698,
+  "model_sha256": "5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b"
 }

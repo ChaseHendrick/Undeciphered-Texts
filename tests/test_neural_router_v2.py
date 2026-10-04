@@ -88,7 +88,8 @@ class ShippedResidualRouterTest(unittest.TestCase):
         for model in payload["models"]:
             self.assertEqual(model["training_types"], ["supervised_label_smoothing",
                                                        "curriculum_hard_examples",
-                                                       "paired_dropout_consistency"])
+                                                       "paired_dropout_consistency",
+                                                       "frozen_incumbent_teacher_kl"])
         source = json.loads((Path(__file__).resolve().parents[1] / "engine/data/caesar_certificate.json").read_text())
         report = route_probabilities(source["ciphertext"])
         self.assertEqual(len(report["candidates"]), len(payload["families"]))

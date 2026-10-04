@@ -109,6 +109,8 @@ def build_parser() -> argparse.ArgumentParser:
                        help="optional frozen-incumbent teacher KL weight; requires --warm-start (default:0)")
     train.add_argument("--distillation-temperature", type=float, default=2.0,
                        help="teacher/student softening temperature (default:2)")
+    train.add_argument("--feature-version", default=None,
+                       help="cipher statistics version; default is the current feature set")
     train.add_argument("--dry-run", action="store_true", help="evaluate without writing artifacts")
 
     analyze = sub.add_parser("analyze", help="IC, Friedman, Kasiski, and n-gram counts")
@@ -186,6 +188,7 @@ def main(argv: list[str] | None = None) -> int:
                                           write=not args.dry_run, expanded_families=args.expanded_families,
                                           hidden=args.hidden, ensemble_size=args.ensemble_size,
                                           warm_start=args.warm_start, learning_rate=args.learning_rate,
+                                          feature_version=args.feature_version,
                                           **teacher_options), indent=2))
             return 0
         except (ValueError, TypeError, ImportError, OSError) as exc:

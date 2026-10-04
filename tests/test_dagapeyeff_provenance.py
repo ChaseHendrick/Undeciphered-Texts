@@ -52,20 +52,20 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("column-null", "7c9bc0e57380cd289805fe8fc7197982a806d38ab99c4bc74791fa4f7d47a5ac"),
                 ("large-swarm", "3cb01d80cd5b96ce4f12e3e08a9c646626159e91ce0f7480e6cf48cff174c327"),
                 ("refined-swarm", "b20eb44ed7d876ec239be0dc6df48650350dd6de9d6f4a83516b48bbe3f8c9a4"),
-                ("bob-caution", "1abdbfa908bcc9578b9aab1fe7155515e6e632adbff79b019a51b9d9df2beafb"),
+                ("bob-caution", "65aa758f96e16ee0a73ec236ec3ddaaae9339b55fb5d6bff74724d38db33edb9"),
                 ("keystream", "39ed6e63310f65a30083d55496aab70575823d5f39149402054c6ebf8f7f2bf1"),
                 ("depth3", "dbcc65be1cd402f2f1bccbed7a2f264f3f26f6021fa206a3114d01b0b3162785"),
                 ("depth4", "7b17d8d9161e3b65ba6f1f8f912bb51efb048a357e85da9a53d88bb20a2a6436"),
                 ("placed", "3c57007347fe8c493c3acb252072ef3b107e3e7a26c4ea2b3c08f3532890814f"),
                 ("repair", "904b00214b7320dc722fbdd3375f6308a01f959c45ede413d63f916f31d01fd4"),
                 ("clump", "06a9879d5d9b1b68421068eaee049e27965cca4ce26a1650441495e008c1e532"),
-                ("bob-branch", "de6eb1fe00e145e77a6e45ec96e69158b8f56066e4dcfe2f7f35061478897b8d"),
-                ("paper", "6cd614a4254ba203358beba27533d44a9a8c249ff34f2d515b7a329a26a8735a"),
+                ("bob-branch", "9097ae65beb914c64aca8f8d6a494f14842de8b10148b86ed278852d4e2b4b21"),
+                ("paper", "2f291d69b45b72f13559308884d7657de8c20a39a829e67aa4dcb45463764bfa"),
             ],
         )
         self.assertEqual(
             report["chain_sha256"],
-            "cad205b8c289176a436709d7ff13d1fea14bba25037dafb04f53fa33e0f8a1a0",
+            "91eb840c8a3a074523cf2b4aac7c7d549aa33918b667860da8982e5684cf0219",
         )
         self.assertEqual(report["entries"][0]["chain_sha256"], report["entries"][0]["content_sha256"])
         self.assertNotEqual(report["entries"][1]["chain_sha256"], report["entries"][1]["content_sha256"])

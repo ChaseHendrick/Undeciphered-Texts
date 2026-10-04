@@ -7,7 +7,7 @@ import unittest
 from engine.bob_caution import bob_caution_report
 from engine.solvers.dagapeyeff import consider_bob
 
-_SHIPPED = "d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825"
+_SHIPPED = "5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b"
 
 
 class BobCautionTest(unittest.TestCase):
@@ -20,13 +20,13 @@ class BobCautionTest(unittest.TestCase):
         self.assertTrue(report["weights_match_shipped"])
         self.assertEqual(report["draws"], 40)
         self.assertEqual(report["challenge_family"], "substitution")
-        self.assertEqual(report["challenge_probability"], 0.9696)
+        self.assertEqual(report["challenge_probability"], 0.969)
         self.assertIs(report["challenge_uncertain"], False)
         self.assertEqual(report["challenge_shuffles_same_family"], 40)
         self.assertEqual(report["challenge_shuffles_as_confident"], 25)
         self.assertFalse(report["challenge_uses_order"])
         self.assertEqual(report["control_family"], "caesar")
-        self.assertEqual(report["control_probability"], 0.9471)
+        self.assertEqual(report["control_probability"], 0.9492)
         self.assertEqual(report["control_shuffles_same_family"], 0)
         self.assertTrue(report["control_uses_order"])
         claim = consider_bob()

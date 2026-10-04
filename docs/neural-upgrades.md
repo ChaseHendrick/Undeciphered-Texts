@@ -57,6 +57,7 @@ predictions containing unknown letters are not treated as complete texts.
 | Format 7, 228 features | 431 | 470 | 187 | Rejected |
 | Format 8 warm start, 148 features, rate 0.01 | 433 | 477 | 191 | Rejected; format 5 retained |
 | Format 8 conservative warm start, rate 0.0003 | 432 | 476 | 191 | Rejected; format 5 retained |
+| Format 5 warm start, same 142 features, rate 0.0005, 80 epochs, distillation 0.25 | 429 | 477 | 193 | Promoted. SHA-256 `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b` |
 
 An earlier expanded 23-family trial scored 362/552 but regressed to 335/480
 on the identical prior 20-family cases against 347/480, so it was rejected.
@@ -128,7 +129,11 @@ trained output classes.
 
 ## Shuffle check, 4 October 2026
 
-Bob's confidence can describe the alphabet rather than the order. `engine.bob_caution` asks the shipped format 5 model, then asks it again on shuffled copies. If the same family wins on most shuffles, the call does not use the order. On the D'Agapeyeff cells the call is substitution at 0.9696, and 40 of 40 shuffles agree, so that call is refused. On a Caesar of known prose the call is caesar, and 0 of 40 shuffles agree, so the order check still passes for a real Caesar. The weight file was not replaced. Its SHA-256 remains `d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825`. See [the note](logs/bob-caution-2026-10-04.md).
+Bob's confidence can describe the alphabet rather than the order. `engine.bob_caution` asks the shipped model, then asks it again on shuffled copies. If the same family wins on most shuffles, the call does not use the order. On the D'Agapeyeff cells the call is substitution, and 40 of 40 shuffles agree, so that call is refused. On a Caesar of known prose the call is caesar, and 0 of 40 shuffles agree. That check did not itself replace the weights. See [the note](logs/bob-caution-2026-10-04.md).
+
+## Promoted warm start, 4 October 2026
+
+A later pass kept the 142 features, warmed up for 80 epochs at learning rate 0.0005, and distilled the previous model at strength 0.25. The gate accepted it: 429 of 480 top one, 477 of 480 top three, and 193 of 204 on the earlier benchmark. The gain is one rail-fence case. Enigma and the M-209 stay at 12 of 24. The new SHA-256 is `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b`. The Wells audit still belongs to the previous file. See [the note](logs/bob-warm-2026-10-04.md).
 
 ## Use and reproducibility
 

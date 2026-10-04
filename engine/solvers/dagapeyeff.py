@@ -146,8 +146,8 @@ def consider_branch() -> dict:
         "branch_allowed": False,
         "learned": (
             "Bob's residual branch is in use. On the cells the three shares are "
-            "0.4994, 0.5271, and 0.5164. On a Caesar of known prose they are "
-            "0.4538, 0.4709, and 0.4806. The shipped weights were not replaced. "
+            "0.5012, 0.5271, and 0.5178. On a Caesar of known prose they are "
+            "0.4566, 0.4709, and 0.4835. The shipped weights are the promoted warm start. "
             "A live branch is not a reading."
         ),
     }
@@ -533,9 +533,9 @@ def consider_bob() -> dict:
         "claimed_plaintext": None,
         "bob_allowed": allowed,
         "learned": (
-            "Bob names the cells substitution at 0.9696. 40 of 40 shuffles get the same name, "
+            "Bob names the cells substitution at 0.969. 40 of 40 shuffles get the same name, "
             "so the call does not use the order. On a Caesar of known prose he names caesar, "
-            "and 0 of 40 shuffles agree. The shipped weights were not replaced."
+            "and 0 of 40 shuffles agree. The call uses the promoted weights."
         ),
     }
 

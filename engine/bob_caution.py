@@ -18,7 +18,7 @@ from engine.neural_router_v2 import route_probabilities
 _SEED = 20261004
 _DRAWS = 40
 _WEIGHTS = Path(__file__).resolve().parent / "data" / "neural_router_v2_weights.json"
-_SHIPPED = "d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825"
+_SHIPPED = "5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b"
 
 
 def _letters(cells: list[int]) -> str:

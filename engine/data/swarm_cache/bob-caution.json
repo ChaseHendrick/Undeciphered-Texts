@@ -1,13 +1,13 @@
 {
   "challenge_family": "substitution",
-  "challenge_probability": 0.9696,
+  "challenge_probability": 0.969,
   "challenge_shuffles_as_confident": 25,
   "challenge_shuffles_same_family": 40,
   "challenge_uncertain": false,
   "challenge_uses_order": false,
   "claimed_plaintext": null,
   "control_family": "caesar",
-  "control_probability": 0.9471,
+  "control_probability": 0.9492,
   "control_shuffles_same_family": 0,
   "control_uses_order": true,
   "draws": 40,
@@ -15,5 +15,5 @@
   "solved": false,
   "weights_match_shipped": true,
   "weights_replaced": false,
-  "weights_sha256": "d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825"
+  "weights_sha256": "5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b"
 }

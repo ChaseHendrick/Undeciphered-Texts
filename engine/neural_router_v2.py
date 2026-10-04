@@ -464,11 +464,14 @@ def promotion_allowed(benchmark_accuracy, baseline_accuracy, overall_accuracy, p
 
 def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WEIGHTS_PATH,
                  expanded_families=False, hidden=64, ensemble_size=3, warm_start=False, learning_rate=.01,
-                 distillation_strength=0., distillation_temperature=2.):
+                 distillation_strength=0., distillation_temperature=2., feature_version=None):
     """One local pass. Hyperparameters and calibration never use Doyle scores."""
     started = time.perf_counter()
     _validate_learning_rate(learning_rate)
     _validate_distillation(distillation_strength, distillation_temperature)
+    version = FEATURE_VERSION if feature_version is None else feature_version
+    if version not in FEATURE_WIDTHS:
+        raise ValueError("feature_version must be a known cipher statistics version")
     if not isinstance(warm_start, bool):
         raise ValueError("warm_start must be an explicit boolean")
     if distillation_strength and not warm_start:
@@ -521,8 +524,8 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
             raise ValueError("warm start must preserve ensemble size")
         if any(len(model["parameters"]["b0"]) != hidden for model in previous["models"]):
             raise ValueError("warm start must preserve hidden width")
-    x, y = _samples(training, families, train_per_class, ROUTER_SEED, english, tables)
-    vx, vy = _samples(validation, families, 24, ROUTER_SEED + 101, english, tables)
+    x, y = _samples(training, families, train_per_class, ROUTER_SEED, english, tables, version=version)
+    vx, vy = _samples(validation, families, 24, ROUTER_SEED + 101, english, tables, version=version)
     teacher_options = {}
     if distillation_strength:
         teacher_options = {"teacher_models": previous["models"], "distillation_strength": distillation_strength,
@@ -531,10 +534,10 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
                                   initial_model=previous["models"][i] if warm_start else None,
                                   learning_rate=learning_rate, **teacher_options)
               for i in range(ensemble_size)]
-    cx, cy = _samples(calibration, families, 24, ROUTER_SEED + 303, english, tables)
+    cx, cy = _samples(calibration, families, 24, ROUTER_SEED + 303, english, tables, version=version)
     c_logits = np.mean([network_logits(cx, model) for model in models], axis=0)
     temperature = min((.75, 1., 1.25, 1.5, 2., 3.), key=lambda t: _nll(calibrated_probabilities(c_logits, t), cy))
-    hx, hy = _samples(held, families, 24, ROUTER_SEED + 202, english, tables)
+    hx, hy = _samples(held, families, 24, ROUTER_SEED + 202, english, tables, version=version)
     h_logits = np.mean([network_logits(hx, model) for model in models], axis=0)
     probs = calibrated_probabilities(h_logits, temperature)
     correct = int((probs.argmax(axis=1) == hy).sum())
@@ -556,7 +559,7 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
             offset = (sample * 17) % 40
             ciphertext = encrypt_family(family, window[offset:] + window[:offset], draw)
             benchmark_ciphertexts.append(ciphertext)
-            candidate_x.append(_features(ciphertext, english, tables, version=FEATURE_VERSION))
+            candidate_x.append(_features(ciphertext, english, tables, version=version))
     candidate_logits = np.mean([network_logits(candidate_x, model) for model in models], axis=0)
     benchmark_correct = sum(families[int(index)] == FAMILIES[label] for index, label in zip(candidate_logits.argmax(axis=1), benchmark_y))
     previous_overall = previous.get("heldout_accuracy") if previous is not None and previous["families"] == families else None
@@ -586,7 +589,7 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
         predecessor_ok = after >= before
     accuracy = correct / len(hy)
     promoted = predecessor_ok and promotion_allowed(benchmark_correct / len(benchmark_y), baseline_correct / len(benchmark_y), accuracy, previous_overall, previous_benchmark)
-    payload = {"format_version": 8, "feature_version": FEATURE_VERSION, "families": families,
+    payload = {"format_version": int(version.removeprefix("cipher_statistics_v")), "feature_version": version, "families": families,
                "models": models, "mean": models[0]["mean"], "scale": models[0]["scale"],
                "temperature": temperature, "heldout_accuracy": accuracy,
                "training_letters": training, "train_sha256": hashlib.sha256(training.encode()).hexdigest(),
@@ -594,7 +597,7 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
                "calibration_sha256": hashlib.sha256(calibration.encode()).hexdigest(),
                "heldout_sha256": hashlib.sha256(held.encode()).hexdigest(),
                "note": "Family ranking only; no plaintext claim. Disjoint Austen slices train, select checkpoints and calibrate. Reused Doyle comparisons are development benchmarks."}
-    metrics = {"model_name": MODEL_NAME, "format_version": 8, "feature_version": FEATURE_VERSION,
+    metrics = {"model_name": MODEL_NAME, "format_version": payload["format_version"], "feature_version": version,
                "warm_start": warm_start, "learning_rate": learning_rate,
                "checkpoint_epochs": [model.get("checkpoint_epoch") for model in models],
                "families": families, "correct": correct, "total": len(hy),
