@@ -16,6 +16,7 @@ from typing import Any
 
 from engine.corrections import load_corrections
 from engine.dagapeyeff_balls import ball_report
+from engine.dagapeyeff_bifid import bifid_report
 from engine.dagapeyeff_convert import convert_report
 from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_keys import key_report
@@ -63,6 +64,7 @@ def provenance_report() -> dict:
         ("regroup", regroup_report()),
         ("keys", key_report()),
         ("model", model_report()),
+        ("bifid", bifid_report()),
     )
     entries = []
     previous = None

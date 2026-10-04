@@ -114,7 +114,9 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_keys` scores 20,000 column orders of that regrouping. The best is 1.0033, under English at 1.0658. One shuffle sample of the same size topped out at 0.9925. Thirteen of twenty further samples reached 1.0033. `engine.solvers.dagapeyeff` refuses the key. Do not store a letter string. See `docs/logs/dagapeyeff-keys-2026-10-04.md`.
 
-`engine.dagapeyeff_model` labels cells by English letter frequency and scores that string. English of this length scores -1.553 per quadgram. The printed cells score -3.6316 and the regrouping scores -3.6352, so the lower chi-square made the model score worse. Of 200,000 shuffles, 177,295 beat the printed cells and 151,728 beat the regrouping. The best shuffle reached -3.107. `engine.solvers.dagapeyeff` refuses the labeling. Do not store a letter string. See `docs/logs/dagapeyeff-model-2026-10-04.md`. The provenance chain ends at `5ff05c351d6dac071d3a572c83bf363be98b2206bd16f4b71783f83f179be40c`.
+`engine.dagapeyeff_model` labels cells by English letter frequency and scores that string. English of this length scores -1.553 per quadgram. The printed cells score -3.6316 and the regrouping scores -3.6352, so the lower chi-square made the model score worse. Of 200,000 shuffles, 177,295 beat the printed cells and 151,728 beat the regrouping. The best shuffle reached -3.107. `engine.solvers.dagapeyeff` refuses the labeling. Do not store a letter string. See `docs/logs/dagapeyeff-model-2026-10-04.md`.
+
+`engine.dagapeyeff_bifid` undoes a bifid on the coordinate digits for every period from 1 to 196. Period 1 scores -3.6316. The best period is 174, at -3.4727, against English at -1.553. Of 2,000 shuffles, 1,109 have a best period at least that high. That is 392,000 period scores. `engine.solvers.dagapeyeff` refuses the period. Do not store a letter string. See `docs/logs/dagapeyeff-bifid-2026-10-04.md`. The provenance chain ends at `052661154c4364a74c5deb984a1fc02c3ab2670f6e49d08855b1af3d8d1341c4`.
 
 ## Current user direction
 

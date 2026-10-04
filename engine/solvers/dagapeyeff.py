@@ -8,6 +8,7 @@ clear frequency ball is still not a reading.
 from __future__ import annotations
 
 from engine.dagapeyeff_edits import edit_report
+from engine.dagapeyeff_bifid import bifid_report
 from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_model import model_report
 from engine.dagapeyeff_regroup import regroup_report
@@ -78,5 +79,19 @@ def consider_language_model() -> dict:
             "Under the frequency labeling, regrouping 01432 scores -3.6352 per quadgram "
             "and the printed cells score -3.6316. English scores -1.553. "
             "151728 of 200000 shuffles beat the regrouping. The lower chi-square did not help. Refuse it."
+        ),
+    }
+
+
+def consider_bifid() -> dict:
+    report = bifid_report()
+    allowed = report["reaches_english"] and report["shuffles_as_high"] * 20 < report["draws"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "bifid_allowed": allowed,
+        "learned": (
+            "The best bifid period is 174 and scores -3.4727 per quadgram. "
+            "English is -1.553. 1109 of 2000 shuffles have a best period at least that high. Refuse it."
         ),
     }

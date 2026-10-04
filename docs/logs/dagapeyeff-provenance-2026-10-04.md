@@ -15,6 +15,6 @@ The chain, after the record, is `ce7d38c98d060ee26a038f8a7f5b1849b1f30996eeda15c
 
 A matching hash means the cells and these scores were recomputed. It does not mean they were read. If a score changes, its hash changes, and every chain hash after it changes.
 
-The conversion of the published chi-square was hashed after this note. The edit bound was hashed after that. The correction ledger was hashed after that. The regrouping was hashed after that. The column-key null was hashed after that. The language-model null was hashed after that. The chain tip is now `5ff05c351d6dac071d3a572c83bf363be98b2206bd16f4b71783f83f179be40c`. The four hashes in the table above did not change.
+The conversion of the published chi-square was hashed after this note. The edit bound was hashed after that. The correction ledger was hashed after that. The regrouping was hashed after that. The column-key null was hashed after that. The language-model null was hashed after that. The bifid null was hashed after that. The chain tip is now `052661154c4364a74c5deb984a1fc02c3ab2670f6e49d08855b1af3d8d1341c4`. The four hashes in the table above did not change.
 
 No letter string is stored.
