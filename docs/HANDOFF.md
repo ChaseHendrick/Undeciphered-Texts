@@ -60,6 +60,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_rule` changes the order of work. A worker writes the prediction first: a dummy every third, fourth, or fifth cell would be one symbol. None of the 12 residues is. 214 of 400 shuffles are as narrow. The solved example is not a filler either. He did not use that rule. The 196 cells are the cipher. Do not delete them and call the remainder a reading.
 
+`engine.dagapeyeff_column` checks the column other people marked. All 3 symbols that appear once, and all 5 cells of symbols that appear at most twice, sit in column 14. Seven legal pairs are absent, not three: 61, 73, 95, 01, 02, 03, 05. Deleting column 14 is the worst of the 14 columns (45.57). Do not adopt a published letter string. See `docs/logs/dagapeyeff-others-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.

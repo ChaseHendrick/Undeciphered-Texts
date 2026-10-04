@@ -171,6 +171,7 @@ chosen-sentence checks from these recovered-output controls.
 | `engine/dagapeyeff_life.py` | Query the life record, then try 1939 names and later names as keys | `tests/test_dagapeyeff_life.py`: `87808` and the rejected 1969 death are findable; 1939 names lose to 46 of 100 random packages; his numbers lose to a random shift | Not a reading. [Note](logs/dagapeyeff-life-2026-10-04.md). |
 | `engine/dagapeyeff_nulls.py` | Every dummy period from 2 to 31, every phase, on cells and on digits | `tests/test_dagapeyeff_nulls.py`: 495 schedules, best chi 11.33, 0 of 80 English texts that bad after the same menu, 0 digit deletions stay on the square | Not a reading. [Note](logs/dagapeyeff-swarm-2026-10-04.md). |
 | `engine/dagapeyeff_rule.py` | Ask whether a book-rule residue is a filler before deleting anything | `tests/test_dagapeyeff_rule.py`: 0 of 12 residues are one symbol; 214 of 400 shuffles are as narrow; the solved example is not a filler either | The rule is not in the digits. Not a reading. [Note](logs/dagapeyeff-swarm-2026-10-04.md). |
+| `engine/dagapeyeff_column.py` | Check the published column-14 claim and the effect of deleting that column | `tests/test_dagapeyeff_column.py`: all 3 singletons and all 5 cells of count at most 2 sit in column 14; deleting it scores 45.57, the worst of 14 columns; 0 of 200 English strings of length 182 match the friendliest deletion | Location holds. Stripping it does not help. Not a reading. [Note](logs/dagapeyeff-others-2026-10-04.md). |
 
 ## Out of scope
 
