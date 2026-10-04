@@ -14,6 +14,7 @@ import json
 import math
 from typing import Any
 
+from engine.corrections import load_corrections
 from engine.dagapeyeff_balls import ball_report
 from engine.dagapeyeff_convert import convert_report
 from engine.dagapeyeff_edits import edit_report
@@ -55,6 +56,7 @@ def provenance_report() -> dict:
         ("record", record_report()),
         ("convert", convert_report()),
         ("edits", edit_report()),
+        ("corrections", load_corrections()),
     )
     entries = []
     previous = None

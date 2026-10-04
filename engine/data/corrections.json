@@ -1,0 +1,110 @@
+{
+  "schema": "corrections-1",
+  "subject": "claims this repo made and later measurements overturned",
+  "how_to_search": "Use engine.corrections.search_corrections with a word from id, tags, wrong, or correction. A hit is a retracted claim, not a reading.",
+  "append_only": true,
+  "rules": [
+    "Append a record when a later measurement contradicts an earlier claim from this repo.",
+    "Do not edit a record already in the list. Point at it with supersedes.",
+    "A subagent note is not a correction until the contradicting measurement is in the repo.",
+    "solved is always false. claimed_plaintext is always null. Do not store a letter string."
+  ],
+  "records": [
+    {
+      "id": "sorting-is-not-progress",
+      "date": "2026-10-04",
+      "recorded_by": "main-session",
+      "wrong": "Raising the order score to the English line, or past it, is progress toward a reading.",
+      "correction": "Sorting the cells scores 2.3931, above English at 1.0658, and sorting is not a message. A reading has to be language and it has to regenerate the cells.",
+      "evidence": ["engine/dagapeyeff_yardstick.py", "engine/dagapeyeff_balls.py"],
+      "supersedes": ["docs/logs/dagapeyeff-yardstick-2026-10-04.md"],
+      "tags": ["sort", "mutual information", "yardstick", "english", "not a reading"],
+      "solved": false,
+      "claimed_plaintext": null
+    },
+    {
+      "id": "ioc-cutoff-too-low",
+      "date": "2026-10-04",
+      "recorded_by": "main-session",
+      "wrong": "An index of coincidence above 0.06 means the cells are language.",
+      "correction": "The cells already score 0.069702. They pass that cutoff and they are not a reading.",
+      "evidence": ["engine/dagapeyeff_yardstick.py"],
+      "supersedes": ["docs/logs/dagapeyeff-yardstick-2026-10-04.md"],
+      "tags": ["index of coincidence", "0.06", "0.069702", "language"],
+      "solved": false,
+      "claimed_plaintext": null
+    },
+    {
+      "id": "private-symbols-are-not-filler",
+      "date": "2026-10-04",
+      "recorded_by": "main-session",
+      "wrong": "The five symbols that never leave the last column are filler, and deleting them would reveal the message.",
+      "correction": "Deleting them drops the order score from 0.5706 to 0.4174. Every other eight-cell cut scores higher. They are not filler.",
+      "evidence": ["engine/dagapeyeff_strip.py", "engine/dagapeyeff_private.py"],
+      "supersedes": ["docs/logs/dagapeyeff-strip-2026-10-04.md"],
+      "tags": ["filler", "nulls", "92", "93", "04", "71", "94", "column 13"],
+      "solved": false,
+      "claimed_plaintext": null
+    },
+    {
+      "id": "period-7-is-the-last-column",
+      "date": "2026-10-04",
+      "recorded_by": "main-session",
+      "wrong": "A reported period of 7 is a separate key length.",
+      "correction": "Those positions are the last column, read at half resolution. They are not a 7-letter key.",
+      "evidence": ["engine/dagapeyeff_private.py"],
+      "supersedes": ["docs/logs/dagapeyeff-private-2026-10-04.md"],
+      "tags": ["period 7", "key length", "column 13", "k=7"],
+      "solved": false,
+      "claimed_plaintext": null
+    },
+    {
+      "id": "seam-was-double-counted",
+      "date": "2026-10-04",
+      "recorded_by": "main-session",
+      "wrong": "Column shares of 0.1847, 0.1256, and 0.1226, with no shuffled grid matching, mean a second pattern on the row-end seam.",
+      "correction": "A boundary pair was counted for both columns. Counted once, column 13 is 0.0953 and column 12 is 0.0894, and 7 of 10,000 shuffled grids match 0.0953. Almost all of both numbers is the private symbols.",
+      "evidence": ["engine/dagapeyeff_joins.py", "engine/dagapeyeff_outgoing.py"],
+      "supersedes": ["docs/logs/dagapeyeff-joins-2026-10-04.md", "docs/logs/dagapeyeff-outgoing-2026-10-04.md"],
+      "tags": ["seam", "double count", "column share", "joins", "outgoing"],
+      "solved": false,
+      "claimed_plaintext": null
+    },
+    {
+      "id": "score-692-has-no-formula",
+      "date": "2026-10-04",
+      "recorded_by": "main-session",
+      "wrong": "The published two-square score -692.13 can be converted onto this repo's order score or chi-square.",
+      "correction": "No formula for that score was published. It is stored as a ball from -692.135 to -692.125 and it is not compared to anything.",
+      "evidence": ["engine/dagapeyeff_convert.py"],
+      "supersedes": ["docs/logs/dagapeyeff-convert-2026-10-04.md"],
+      "tags": ["-692", "-692.13", "two-square", "Q score", "Marland"],
+      "solved": false,
+      "claimed_plaintext": null
+    },
+    {
+      "id": "repair-04-to-75-is-worse",
+      "date": "2026-10-04",
+      "recorded_by": "main-session",
+      "wrong": "Replacing the single cell 04 with 75 improves the chi-square.",
+      "correction": "In the rate balls, the cells sit between 34.174639 and 34.292468. The 75 replacement sits between 35.886775 and 36.007091, entirely worse. 0 of 24 replacements improve the ball.",
+      "evidence": ["engine/dagapeyeff_convert.py"],
+      "supersedes": ["docs/logs/dagapeyeff-convert-2026-10-04.md"],
+      "tags": ["04", "75", "repair", "position 97", "error correction"],
+      "solved": false,
+      "claimed_plaintext": null
+    },
+    {
+      "id": "not-the-lead-on-a-solution",
+      "date": "2026-10-04",
+      "recorded_by": "main-session",
+      "wrong": "Beating a published chi-square of 49.23 means this repo is in the lead on a solution.",
+      "correction": "The cells themselves score about 34.2, so they beat that candidate, and they are still the unsolved cells. Nobody has a sentence that regenerates them. Two count-moves cannot clear the English frequency line: the best two-move ball reaches 27.557769, above 24.165.",
+      "evidence": ["engine/dagapeyeff_record.py", "engine/dagapeyeff_edits.py", "engine/solvers/dagapeyeff.py"],
+      "supersedes": ["docs/logs/dagapeyeff-record-2026-10-04.md", "docs/logs/dagapeyeff-edits-2026-10-04.md"],
+      "tags": ["lead", "record", "49.23", "count-move", "unsolved"],
+      "solved": false,
+      "claimed_plaintext": null
+    }
+  ]
+}
