@@ -8,6 +8,7 @@ clear frequency ball is still not a reading.
 from __future__ import annotations
 
 from engine.dagapeyeff_edits import edit_report
+from engine.dagapeyeff_autokey import autokey_report
 from engine.dagapeyeff_bifid import bifid_report
 from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_model import model_report
@@ -175,5 +176,19 @@ def consider_columns() -> dict:
         "learned": (
             "A width-27 downward read matches 544 dictionary windows, and the best of 25000 column orders matches 581. "
             "The printed order matches 423. 4 of 8 shuffled grids, given the same column search, reach 581. Refuse it."
+        ),
+    }
+
+
+def consider_autokey() -> dict:
+    report = autokey_report()
+    allowed = report["reaches_prose"] and report["shuffles_as_high"] == 0
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "autokey_allowed": allowed,
+        "learned": (
+            "Four autokey rules, 25 starts each. The best is plain-sub at -3.7495. "
+            "Prose is -2.5185. 37 of 40 shuffles do as well or better. Refuse it."
         ),
     }

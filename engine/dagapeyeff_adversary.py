@@ -14,6 +14,7 @@ from engine.dagapeyeff_checks import checks_report
 from engine.dagapeyeff_foresight import after_training, foresight, judge_job
 from engine.dagapeyeff_infer import infer
 from engine.solvers.dagapeyeff import (
+    consider_autokey,
     consider_bifid,
     consider_column_key,
     consider_columns,
@@ -62,6 +63,7 @@ def adversary_report() -> dict:
         consider_running_key(),
         consider_patterns(),
         consider_columns(),
+        consider_autokey(),
     ]
     frequency = claims[0]
     readings = [claim for claim in claims if claim["solved"] is not False or claim["claimed_plaintext"] is not None]
