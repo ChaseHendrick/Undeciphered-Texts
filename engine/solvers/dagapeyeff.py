@@ -23,6 +23,7 @@ from engine.dagapeyeff_period4 import period4_report
 from engine.dagapeyeff_columns import column_report
 from engine.dagapeyeff_column_null import column_null_report
 from engine.dagapeyeff_delay import delay_report
+from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_digit_routes import digit_route_report
 from engine.dagapeyeff_groups import group_report
 from engine.dagapeyeff_regroup import regroup_report
@@ -36,7 +37,8 @@ from engine.dagapeyeff_word import word_report
 
 def consider_frequency_claim(count_moves: int, chi_hi: float) -> dict:
     bound = edit_report()
-    required = bound["moves_required"]
+    third = depth3_report()
+    required = 4 if not third["clears"] else bound["moves_required"]
     line = bound["english_line"]
     enough_moves = count_moves >= required
     clears = chi_hi < line
@@ -47,8 +49,23 @@ def consider_frequency_claim(count_moves: int, chi_hi: float) -> dict:
         "english_line": line,
         "frequency_claim_allowed": enough_moves and clears,
         "learned": (
-            "At least three count-moves are required before a frequency ball can clear English. "
-            "Clearing it is not a reading."
+            "Every reachable three-move change was scored, 2,321,645 of them. "
+            "The best chi-square is 24.8811. Its ball runs from 24.83087 to 24.931425, "
+            "entirely above the English line at 24.165. Four moves are required. "
+            "Clearing the line is not a reading."
+        ),
+    }
+
+
+def consider_depth3() -> dict:
+    report = depth3_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "depth3_allowed": report["clears"],
+        "learned": (
+            "2,321,645 three-move changes were scored. The best is 24.8811, "
+            "and the ball stays above 24.165. Three moves cannot counterfeit English counts. Refuse them."
         ),
     }
 

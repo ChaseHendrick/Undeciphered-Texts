@@ -34,10 +34,10 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("running", "1b8674ddd9b6bcb520613739a11188ad3bc623973d24ee603b73b8078d423f33"),
                 ("patterns", "c5a700688728c2b918a8c3835ad66f3fc95631500091b122153fc599432a6365"),
                 ("columns", "545dc79eab57e4d8457943ca70b90d303b2a3533500f8558aca5b70605aa2492"),
-                ("board", "05c9f50f2bd79840d2a7a8198e8fe01cf3b110b1c794fabfadf62ffed0b34c9f"),
+                ("board", "3b39a845596491cb92c951d67d82ce49e5773379c082cc005c978c2a80b527a9"),
                 ("infer", "c67768bd2e358814d7b1faea635b909637f2eb2ca249c6053f6889e958c409c0"),
                 ("foresight", "48ceb2bf1c6010816c96eb483fccd9dc5609748da14cb459b638f94f94a29e10"),
-                ("checks", "a6ace8761543c0eefc658fdcc52590b827eeb272084964d40c0607a6ef061c20"),
+                ("checks", "2aa75f219bf08e8ede1efaea722eb9ea3445337684766eb2528942706ab0655f"),
                 ("adversary", "27532401beeff15910f3beb80b6bef2095313b8beb709213f46ee2ce8adede86"),
                 ("autokey", "291d0e3ead0bb0903b5a93f7851c44dc9f491060cc3a62a8302759af2a863306"),
                 ("digit-routes", "97547066e834b8423c9edee4d893b838baa6b8a22d530d821c0eb2306f1577af"),
@@ -54,11 +54,12 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("refined-swarm", "b20eb44ed7d876ec239be0dc6df48650350dd6de9d6f4a83516b48bbe3f8c9a4"),
                 ("bob-caution", "1abdbfa908bcc9578b9aab1fe7155515e6e632adbff79b019a51b9d9df2beafb"),
                 ("keystream", "39ed6e63310f65a30083d55496aab70575823d5f39149402054c6ebf8f7f2bf1"),
+                ("depth3", "dbcc65be1cd402f2f1bccbed7a2f264f3f26f6021fa206a3114d01b0b3162785"),
             ],
         )
         self.assertEqual(
             report["chain_sha256"],
-            "7b827c4dd9f9f568e464339742d11a75b281db55e23812c744fdc7177be83ca5",
+            "5034e675e4ee3598de00a01bca70bdf8f4253aff534118db2d80c07154d04c57",
         )
         self.assertEqual(report["entries"][0]["chain_sha256"], report["entries"][0]["content_sha256"])
         self.assertNotEqual(report["entries"][1]["chain_sha256"], report["entries"][1]["content_sha256"])

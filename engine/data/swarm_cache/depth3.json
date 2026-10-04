@@ -1,0 +1,12 @@
+{
+  "ball_hi": 24.931425,
+  "ball_lo": 24.83087,
+  "best_chi": 24.8811,
+  "claimed_plaintext": null,
+  "clears": false,
+  "english_line": 24.165,
+  "moves": 3,
+  "scope": "Three count-moves are not a reading. The changed cells are not stored.",
+  "solved": false,
+  "states": 2321645
+}

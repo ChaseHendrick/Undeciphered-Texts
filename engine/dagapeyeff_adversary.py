@@ -24,6 +24,7 @@ from engine.solvers.dagapeyeff import (
     consider_column_null,
     consider_classic_swarm,
     consider_delay,
+    consider_depth3,
     consider_digit_routes,
     consider_frequency_claim,
     consider_groups,
@@ -67,7 +68,7 @@ def adversary_report() -> dict:
     counts = next(item for item in plaintext["classes"] if item["id"] == "counts")
     short_keys = next(item for item in solved_flag["classes"] if item["id"] == "short-keys")
     claims = [
-        consider_frequency_claim(3, 0.0),
+        consider_frequency_claim(4, 0.0),
         consider_regrouping(),
         consider_column_key(),
         consider_language_model(),
@@ -92,6 +93,7 @@ def adversary_report() -> dict:
         consider_refined(),
         consider_bob(),
         consider_keystream(),
+        consider_depth3(),
     ]
     frequency = claims[0]
     readings = [claim for claim in claims if claim["solved"] is not False or claim["claimed_plaintext"] is not None]
