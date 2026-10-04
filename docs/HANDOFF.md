@@ -86,6 +86,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_battery` scores are unchanged after removing a duplicated tail count that never ran and rebuilding the scorer without per-attack dictionaries. `engine.dagapeyeff_check` asks whether the rare column is a check digit of its row. Thirty-three predictors. A planted sum scores 14/14. The real column scores 6, and every one of 20,000 shuffled columns also reaches 6. Do not store a letter string. See `docs/logs/dagapeyeff-check-2026-10-04.md`.
 
+`engine.dagapeyeff_private` finds five symbols that never leave column 13: 92 (three times), 93 (twice), and 04, 71, 94 once each. That is 8 cells. 0 of 20,000 grids match. Their positions are also 6 mod 7, so a reported period of 7 is this column at half resolution, not a 7-letter key. Do not adopt an outside mapping of these cells onto codewords. Do not store a letter string. See `docs/logs/dagapeyeff-private-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
