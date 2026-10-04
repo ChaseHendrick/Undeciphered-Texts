@@ -23,6 +23,7 @@ from engine.dagapeyeff_digit_routes import digit_route_report
 from engine.dagapeyeff_groups import group_report
 from engine.dagapeyeff_regroup import regroup_report
 from engine.dagapeyeff_running import running_report
+from engine.dagapeyeff_solver_swarm import solver_swarm_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -289,5 +290,32 @@ def consider_places() -> dict:
             "Five digit places, each paired on its own, stay on the square. "
             "Place 4 scores -3.1598 on 39 cells. Prose is -2.5185. "
             "24 of 80 shuffles do as well. The shorter score is not a better reading. Refuse them."
+        ),
+    }
+
+
+def consider_solver_swarm() -> dict:
+    report = solver_swarm_report()
+    caesar_ok = (
+        report["caesar_per_letter"] >= report["caesar_prose_per_letter"]
+        and report["caesar_shuffles_as_high"] * 20 < report["caesar_draws"]
+    )
+    vigenere_ok = (
+        report["vigenere_per_letter"] >= report["vigenere_prose_per_letter"]
+        and report["vigenere_shuffles_as_high"] * 20 < report["vigenere_draws"]
+    )
+    substitution_ok = (
+        report["substitution_reading"] is True
+        and report["substitution_shuffles_as_high"] * 20 < report["substitution_draws"]
+    )
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "solver_swarm_allowed": caesar_ok or vigenere_ok or substitution_ok,
+        "learned": (
+            "Caesar scores -3.4459 per letter, prose -2.9415, and 33 of 40 shuffles do as well. "
+            "Vigenere, periods through 8, picks period 3 at -3.7393, prose -2.4363, and 7 of 20 shuffles do as well. "
+            "Substitution at 400 steps scores -3.0858, its own reading flag is false, and 8 of 8 shuffles do as well. "
+            "Refuse the swarm."
         ),
     }
