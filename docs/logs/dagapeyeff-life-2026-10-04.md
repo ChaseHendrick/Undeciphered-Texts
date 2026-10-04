@@ -51,3 +51,14 @@ An SOE personnel file exists (HS 9/9/5). A file is not a posting. Nothing here s
 ## The "he forgot" story
 
 No letter, preface, or sentence in his own words was found. A 2026 claim of a 1952 letter tucked in a bookmark has no image and pairs it with the wrong death year. What is on paper is narrower: the puzzle is only in the 1939 book, it was cut from the shorter edition, strangers pestered him, and his son was embarrassed for him and could not reconstruct it.
+
+## A record a model can query
+
+`engine/data/dagapeyeff_life.json` is the same material as one list of facts. Each fact has an id, a date, a source, a confidence (`gazette`, `catalogue`, `index`, `secondary`, or `rejected`), and aliases. `search_life("87808")` returns the commission and the dismissal. `search_life("1969")` returns the rejected death. `search_life("forgot")` returns the rejected confession.
+
+## Keys taken from that list
+
+Names and numbers he could have used in 1939 were scored apart from names and numbers from 1940 onward. Column order was applied to a frequency ranking of the 196 cells, which is not a solved alphabet. A package of random column orders the same size beat the 1939 names 46 times in 100. The later names, which he could not have chosen when he wrote the book, were beaten 8 times in 100. Neither is kept.
+
+His birth date, read as the digits 20051902, and the service number 87808 were used as a repeating shift of the 25 cells. The birth date scores 21.64 and the service number 18.55, against 34.23 for the printed pairs. A random five-digit shift has median about 15, and most of those random shifts beat both of his numbers. The improvement is what a shift does, not what his life does. No letter string is stored.
+

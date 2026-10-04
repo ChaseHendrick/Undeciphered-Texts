@@ -54,6 +54,8 @@ Bob's format 5 file is still the incumbent. A 128-row manifest, seed 20261005, 3
 
 The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, died 22 March 1955 at Maugersbury Manor, Wing Commander, service number 87808, dismissed by court martial 18 January 1949. The "he forgot" line is not a quote from him. See `docs/logs/dagapeyeff-life-2026-10-04.md`.
 
+`engine.dagapeyeff_life.search_life` reads `engine/data/dagapeyeff_life.json`. Ask it for `87808`, `Rachel`, or `1969`. Names from 1939 and numbers from his life were tried as keys and lost to random keys of the same size. Do not store a string from that test.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
