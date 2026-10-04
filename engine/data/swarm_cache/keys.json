@@ -1,0 +1,15 @@
+{
+  "best_down_mi": 0.9427,
+  "best_row_mi": 1.0033,
+  "claimed_plaintext": null,
+  "draws": 20000,
+  "english_mi": 1.0658,
+  "key_reaches_english": false,
+  "one_sample_higher": true,
+  "reorder": "01432",
+  "repeats": 20,
+  "repeats_as_high": 13,
+  "scope": "One shuffle sample can sit under a searched maximum by chance. Repeated samples of the same size correct that. No letter string is stored.",
+  "shuffle_max_mi": 0.9925,
+  "solved": false
+}

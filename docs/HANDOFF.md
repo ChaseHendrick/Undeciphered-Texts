@@ -124,7 +124,11 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_running` slides five texts along the cells, 94,860 alignments. The best is -3.4945, which is worse than -3.2713. One of eight shuffles beats it. `engine.solvers.dagapeyeff` refuses it. Do not store a letter string. See `docs/logs/dagapeyeff-running-2026-10-04.md`.
 
-`engine.dagapeyeff_patterns` slides 4,703 dictionary shapes across 940 windows. The printed order matches 423. Of 100,000 shuffles, 92,932 match at least that often. The regrouping matches 499, and 31,687 of 50,000 shuffles of those cells do too. `engine.solvers.dagapeyeff` refuses it. Do not store a letter string. See `docs/logs/dagapeyeff-patterns-2026-10-04.md`. The provenance chain ends at `56bfd5ee030bc73895d3f7395fa22d49d6ecf9a7637eac2288fae8f303f357be`.
+`engine.dagapeyeff_patterns` slides 4,703 dictionary shapes across 940 windows. The printed order matches 423. Of 100,000 shuffles, 92,932 match at least that often. The regrouping matches 499, and 31,687 of 50,000 shuffles of those cells do too. `engine.solvers.dagapeyeff` refuses it. Do not store a letter string. See `docs/logs/dagapeyeff-patterns-2026-10-04.md`.
+
+`engine.dagapeyeff_columns` asks whether another reading order is where those shapes went. A width-27 downward read matches 544 windows. The best of 25,000 column orders matches 581. Four of eight shuffled grids, given the same search, reach 581. `engine.solvers.dagapeyeff` refuses it. Do not store a letter string. See `docs/logs/dagapeyeff-columns-2026-10-04.md`.
+
+`engine.dagapeyeff_cache` writes a finished heavy score to `engine/data/swarm_cache`. The hash reads that file. It does not run the search again. The chain ends at `6b5e65d495d3e00ebbccb3cfcbfaf47215f7f5c3cb090845d21cc7c50387800f`.
 
 ## Current user direction
 

@@ -8,7 +8,7 @@ cells, drawn the same number of times. No letter string is stored.
 from __future__ import annotations
 
 import random
-from functools import lru_cache
+from engine.dagapeyeff_cache import frozen
 
 from engine.dagapeyeff_order import _down_read, _grid, _mi, _prose, _row_read
 from engine.dagapeyeff_regroup import regrouped_pairs
@@ -18,7 +18,7 @@ _SEED = 20261004
 _REPEATS = 20
 
 
-@lru_cache(maxsize=1)
+@frozen("keys")
 def key_report() -> dict:
     pairs = regrouped_pairs()
     grid = _grid(pairs)

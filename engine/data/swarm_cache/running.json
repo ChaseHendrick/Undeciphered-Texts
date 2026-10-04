@@ -1,0 +1,14 @@
+{
+  "alignments": 94860,
+  "best_direction": "key-minus-cell",
+  "best_quadgram": -3.4945,
+  "best_text": "neural_audit_wells.txt",
+  "claimed_plaintext": null,
+  "null_texts": 8,
+  "prose_quadgram": -2.5185,
+  "reaches_prose": false,
+  "scope": "A running key from these texts is a score, not a reading. No letter string is stored.",
+  "shuffles_as_high": 1,
+  "solved": false,
+  "texts": 5
+}

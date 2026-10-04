@@ -9,7 +9,7 @@ of the same letters. English is the yardstick. No letter string is stored.
 from __future__ import annotations
 
 import random
-from functools import lru_cache
+from engine.dagapeyeff_cache import frozen
 
 from engine.dagapeyeff_life import _assign
 from engine.dagapeyeff_order import _prose
@@ -57,7 +57,7 @@ def _tail(seq: list[int], observed_quad: float, observed_neural: float, seed: in
     }
 
 
-@lru_cache(maxsize=1)
+@frozen("model")
 def model_report() -> dict:
     model = get_model()
     neural = get_neural_model()

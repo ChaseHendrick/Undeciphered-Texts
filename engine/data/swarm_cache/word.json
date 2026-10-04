@@ -1,0 +1,12 @@
+{
+  "best_quadgram": -3.2713,
+  "claimed_plaintext": null,
+  "keys": 390625,
+  "null_texts": 8,
+  "prose_quadgram": -2.5185,
+  "reaches_prose": false,
+  "scope": "The best word score over every period-4 shift is still a score. Shuffled cells get the same search. No letter string is stored.",
+  "shuffles_as_high": 4,
+  "solved": false,
+  "trials": 3515625
+}

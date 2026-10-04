@@ -1,0 +1,25 @@
+{
+  "claimed_plaintext": null,
+  "down_hits": 464,
+  "down_null": {
+    "as_high": 32841,
+    "below": 17159,
+    "draws": 50000
+  },
+  "printed_hits": 423,
+  "printed_null": {
+    "as_high": 92932,
+    "below": 7068,
+    "draws": 100000
+  },
+  "regrouped_hits": 499,
+  "regrouped_null": {
+    "as_high": 31687,
+    "below": 18313,
+    "draws": 50000
+  },
+  "scope": "A window count is not a word, and a word is not a reading. No letter string is stored.",
+  "shapes": 4703,
+  "solved": false,
+  "windows": 940
+}

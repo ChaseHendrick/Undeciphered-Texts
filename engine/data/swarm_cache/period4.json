@@ -1,0 +1,14 @@
+{
+  "chi": 3.86,
+  "chi_as_low": 32,
+  "claimed_plaintext": null,
+  "keys": 390625,
+  "null_texts": 40,
+  "prose_quadgram": -2.5185,
+  "quad_as_high": 3,
+  "quadgram": -3.4759,
+  "reaches_prose": false,
+  "scope": "A period-4 shift can paint English-looking counts. The quadgram has to reach prose, and shuffled cells get the same search. No letter string is stored.",
+  "solved": false,
+  "trials": 16015625
+}

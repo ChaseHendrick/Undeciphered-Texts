@@ -9,7 +9,7 @@ same cells is the control.
 from __future__ import annotations
 
 import random
-from functools import lru_cache
+from engine.dagapeyeff_cache import frozen
 from pathlib import Path
 
 from engine.dagapeyeff_order import _down_read, _grid
@@ -50,13 +50,70 @@ def _shapes() -> set[tuple[int, tuple[int, ...]]]:
     return found
 
 
+def _compile(shapes: set[tuple[int, tuple[int, ...]]]) -> dict:
+    root: dict = {}
+    for _length, pattern in shapes:
+        node = root
+        for value in pattern:
+            node = node.setdefault(value, {})
+        node["$"] = True
+    return root
+
+
+def _encode(seq: list[str]) -> list[int]:
+    table: dict[str, int] = {}
+    out = []
+    for item in seq:
+        index = table.get(item)
+        if index is None:
+            index = len(table)
+            table[item] = index
+        out.append(index)
+    return out
+
+
+_TRIES: dict[int, dict] = {}
+
+
+def _trie(shapes: set[tuple[int, tuple[int, ...]]]) -> dict:
+    key = id(shapes)
+    got = _TRIES.get(key)
+    if got is None:
+        got = _compile(shapes)
+        _TRIES[key] = got
+    return got
+
+
 def _hits(seq: list[str], shapes: set[tuple[int, tuple[int, ...]]]) -> int:
+    """Windows whose letter-shape is in the lexicon. Same count as a direct pattern compare."""
+    trie = _trie(shapes)
+    encoded = _encode(seq)
+    if not encoded:
+        return 0
+    alphabet = max(encoded) + 1
+    last = [0] * alphabet
+    code = [0] * alphabet
+    stamp = 0
     hits = 0
-    last = len(seq)
+    count = len(encoded)
     for length in _LENGTHS:
-        stop = last - length + 1
+        stop = count - length + 1
         for start in range(stop):
-            if (length, _pattern(seq[start : start + length])) in shapes:
+            stamp += 1
+            node = trie
+            matched = True
+            rank = 0
+            for index in range(start, start + length):
+                item = encoded[index]
+                if last[item] != stamp:
+                    last[item] = stamp
+                    code[item] = rank
+                    rank += 1
+                node = node.get(code[item])
+                if node is None:
+                    matched = False
+                    break
+            if matched and "$" in node:
                 hits += 1
     return hits
 
@@ -76,7 +133,7 @@ def _null(seq: list[str], shapes: set[tuple[int, tuple[int, ...]]], draws: int, 
     return {"draws": draws, "as_high": as_high, "below": below}
 
 
-@lru_cache(maxsize=1)
+@frozen("patterns")
 def pattern_report() -> dict:
     shapes = _shapes()
     printed = list(challenge_pairs())

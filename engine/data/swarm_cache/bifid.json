@@ -1,0 +1,14 @@
+{
+  "best_period": 174,
+  "best_quad": -3.4727,
+  "claimed_plaintext": null,
+  "draws": 2000,
+  "english_quad": -1.553,
+  "identity_quad": -3.6316,
+  "period_scores": 392000,
+  "periods": 196,
+  "reaches_english": false,
+  "scope": "The best period is a number, not a text. A shuffle whose best period scores as high is not a reading. No letter string is stored.",
+  "shuffles_as_high": 1109,
+  "solved": false
+}

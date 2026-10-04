@@ -10,7 +10,7 @@ The best period is kept only as a number. The cells are not.
 from __future__ import annotations
 
 import random
-from functools import lru_cache
+from engine.dagapeyeff_cache import frozen
 
 from engine.dagapeyeff_life import _assign
 from engine.dagapeyeff_order import _prose
@@ -67,7 +67,7 @@ def _best(pairs: list[str], logp: list[float]) -> tuple[float, int]:
     return best_score, best_period
 
 
-@lru_cache(maxsize=1)
+@frozen("bifid")
 def bifid_report() -> dict:
     model = get_model()
     logp = model.logp

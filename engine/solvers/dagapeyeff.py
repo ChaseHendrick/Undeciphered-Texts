@@ -13,6 +13,7 @@ from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_model import model_report
 from engine.dagapeyeff_patterns import pattern_report
 from engine.dagapeyeff_period4 import period4_report
+from engine.dagapeyeff_columns import column_report
 from engine.dagapeyeff_regroup import regroup_report
 from engine.dagapeyeff_running import running_report
 from engine.dagapeyeff_word import word_report
@@ -160,5 +161,19 @@ def consider_patterns() -> dict:
             "Of 940 windows, the printed cells match a dictionary shape in 423. "
             "92932 of 100000 shuffles do that well or better. "
             "The regrouping matches 499, and 31687 of 50000 shuffles do too. Refuse it."
+        ),
+    }
+
+
+def consider_columns() -> dict:
+    report = column_report()
+    allowed = report["nulls_as_high"] == 0
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "column_allowed": allowed,
+        "learned": (
+            "A width-27 downward read matches 544 dictionary windows, and the best of 25000 column orders matches 581. "
+            "The printed order matches 423. 4 of 8 shuffled grids, given the same column search, reach 581. Refuse it."
         ),
     }

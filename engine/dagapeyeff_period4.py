@@ -8,7 +8,7 @@ Shuffled copies get the same free choice of key.
 from __future__ import annotations
 
 import random
-from functools import lru_cache
+from engine.dagapeyeff_cache import frozen
 
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_add import _PROSE, _cells, _chi, _mean_quadgram, _phases
@@ -39,7 +39,7 @@ def _best(seq: list[int]) -> tuple[float, tuple[int, ...], list[int]]:
     return best, best_key, best_counts
 
 
-@lru_cache(maxsize=1)
+@frozen("period4")
 def period4_report() -> dict:
     cells = _cells()
     chi, key, counts = _best(cells)

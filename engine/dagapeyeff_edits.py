@@ -7,7 +7,7 @@ still not be a reading.
 
 from __future__ import annotations
 
-from functools import lru_cache
+from engine.dagapeyeff_cache import frozen
 
 from engine.dagapeyeff_convert import _rate_balls, chi_ball
 from engine.dagapeyeff_swarm import ENGLISH_25, best_chi_square, challenge_pairs
@@ -94,7 +94,7 @@ def _greedy_ball(step: int) -> float:
     return float(chi_ball(current, rates).hi())
 
 
-@lru_cache(maxsize=1)
+@frozen("edits")
 def edit_report() -> dict:
     start = _counts()
     score_1, _state_1 = _best_after(start, 1)

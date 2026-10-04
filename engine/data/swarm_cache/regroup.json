@@ -1,0 +1,19 @@
+{
+  "chi_hi": 8.889665,
+  "chi_lo": 8.8291,
+  "claimed_plaintext": null,
+  "control_flipped_chi": 21.56,
+  "control_printed_chi": 4.14,
+  "down_mi": 0.8735,
+  "down_shuffles_as_high": 2216,
+  "draws": 10000,
+  "english_mi": 1.0658,
+  "frequency_clears_english_worst": true,
+  "order_mi": 0.7801,
+  "order_still_below_english": true,
+  "printed_mi": 0.5706,
+  "reorder": "01432",
+  "row_shuffles_as_high": 9700,
+  "scope": "A regrouping that flatters the counts and loses to a shuffle is not a reading. The changed cells are not kept. No letter string is stored.",
+  "solved": false
+}

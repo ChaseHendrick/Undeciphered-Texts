@@ -1,0 +1,14 @@
+{
+  "claimed_plaintext": null,
+  "depth1_chi": 30.65,
+  "depth2_ball_hi": 27.557769,
+  "depth2_chi": 27.5,
+  "depth2_clears": false,
+  "english_line": 24.165,
+  "greedy3_ball_hi": 24.931425,
+  "greedy4_ball_hi": 22.471061,
+  "greedy4_clears": true,
+  "moves_required": 3,
+  "scope": "Two count-moves are exhaustive and still sit above English. A fourth greedy edit can clear the frequency line and is not kept. No letter string is stored.",
+  "solved": false
+}

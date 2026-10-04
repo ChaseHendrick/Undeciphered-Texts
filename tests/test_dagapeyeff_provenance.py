@@ -2,14 +2,17 @@
 
 from __future__ import annotations
 
+import time
 import unittest
 
 from engine.dagapeyeff_provenance import provenance_report
 
 
 class DagapeyeffProvenanceTest(unittest.TestCase):
-    def test_the_chain_recomputes(self) -> None:
+    def test_the_chain_reads_the_frozen_scores(self) -> None:
+        started = time.perf_counter()
         report = provenance_report()
+        self.assertLess(time.perf_counter() - started, 15)
         self.assertIs(report["solved"], False)
         self.assertIsNone(report["claimed_plaintext"])
         self.assertEqual(
@@ -30,11 +33,12 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("word", "ccf44aceb6efea160894fa3730d3cf0e999d5eccdeeebb447e41983867ae8b36"),
                 ("running", "1b8674ddd9b6bcb520613739a11188ad3bc623973d24ee603b73b8078d423f33"),
                 ("patterns", "c5a700688728c2b918a8c3835ad66f3fc95631500091b122153fc599432a6365"),
+                ("columns", "545dc79eab57e4d8457943ca70b90d303b2a3533500f8558aca5b70605aa2492"),
             ],
         )
         self.assertEqual(
             report["chain_sha256"],
-            "56bfd5ee030bc73895d3f7395fa22d49d6ecf9a7637eac2288fae8f303f357be",
+            "6b5e65d495d3e00ebbccb3cfcbfaf47215f7f5c3cb090845d21cc7c50387800f",
         )
         self.assertEqual(report["entries"][0]["chain_sha256"], report["entries"][0]["content_sha256"])
         self.assertNotEqual(report["entries"][1]["chain_sha256"], report["entries"][1]["content_sha256"])

@@ -1,0 +1,28 @@
+{
+  "claimed_plaintext": null,
+  "either_reaches_english": false,
+  "english_neural": -2.495,
+  "english_quad": -1.553,
+  "length": 196,
+  "printed_neural": -3.2313,
+  "printed_quad": -3.6316,
+  "printed_tail": {
+    "best_shuffle_neural": -2.9014,
+    "best_shuffle_quad": -3.107,
+    "draws": 200000,
+    "neural_as_high": 114857,
+    "quad_as_high": 177295
+  },
+  "regrouped_beats_printed_quad": false,
+  "regrouped_neural": -3.3504,
+  "regrouped_quad": -3.6352,
+  "regrouped_tail": {
+    "best_shuffle_neural": -2.977,
+    "best_shuffle_quad": -3.1795,
+    "draws": 200000,
+    "neural_as_high": 175130,
+    "quad_as_high": 151728
+  },
+  "scope": "A frequency labeling is not a key. A shuffle that scores higher is not a reading. No letter string is stored.",
+  "solved": false
+}

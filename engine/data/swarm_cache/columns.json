@@ -1,0 +1,13 @@
+{
+  "claimed_plaintext": null,
+  "column_best": 581,
+  "column_draws": 25000,
+  "null_grids": 8,
+  "nulls_as_high": 4,
+  "route_hits": 544,
+  "route_read": "down",
+  "route_width": 27,
+  "scope": "A higher window count from a searched order is not a word. No letter string is stored.",
+  "solved": false,
+  "trials": 225000
+}

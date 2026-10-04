@@ -9,7 +9,7 @@ of those same cells. No letter string is stored.
 from __future__ import annotations
 
 import random
-from functools import lru_cache
+from engine.dagapeyeff_cache import frozen
 
 from engine.dagapeyeff_balls import information_ball
 from engine.dagapeyeff_convert import _rate_balls, chi_ball
@@ -37,7 +37,7 @@ def regrouped_pairs() -> list[str]:
     return pairs
 
 
-@lru_cache(maxsize=1)
+@frozen("regroup")
 def regroup_report() -> dict:
     pairs = regrouped_pairs()
     rates = _rate_balls()

@@ -1,10 +1,11 @@
 """Hash the cells and the scores that depend on them. Not a reading.
 
-The encoding is part of the result. Tuples become lists. Floats become the
-17-digit general format. Object keys are sorted. SHA-256 of that JSON is the
-content hash. Each step's chain hash is SHA-256 of the previous chain hash,
-a newline, and the new content hash. The first step's chain hash is its
-content hash. No letter string is stored.
+The heavy scores are read from engine/data/swarm_cache. A later hash does
+not repeat the search. The encoding is part of the result. Tuples become
+lists. Floats become the 17-digit general format. Object keys are sorted.
+SHA-256 of that JSON is the content hash. Each step's chain hash is SHA-256
+of the previous chain hash, a newline, and the new content hash. The first
+step's chain hash is its content hash. No letter string is stored.
 """
 
 from __future__ import annotations
@@ -17,6 +18,7 @@ from typing import Any
 from engine.corrections import load_corrections
 from engine.dagapeyeff_balls import ball_report
 from engine.dagapeyeff_bifid import bifid_report
+from engine.dagapeyeff_columns import column_report
 from engine.dagapeyeff_convert import convert_report
 from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_keys import key_report
@@ -73,6 +75,7 @@ def provenance_report() -> dict:
         ("word", word_report()),
         ("running", running_report()),
         ("patterns", pattern_report()),
+        ("columns", column_report()),
     )
     entries = []
     previous = None
