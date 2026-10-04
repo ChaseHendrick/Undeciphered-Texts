@@ -189,6 +189,7 @@ chosen-sentence checks from these recovered-output controls.
 | `engine/dagapeyeff_bearing.py` | Delete each column and see whether the order notices | `tests/test_dagapeyeff_bearing.py`: last column falls to 0.4514, next worst is 0.5655; 0 of 10,000 grids have a column that load-bearing | The order sits in the last column. Not a reading. [Note](logs/dagapeyeff-bearing-2026-10-04.md). |
 | `engine/dagapeyeff_joins.py` | How much of the order score touches each column | `tests/test_dagapeyeff_joins.py`: column 13 holds 0.1847, then column 12 at 0.1256 and column 0 at 0.1226; 0 of 10,000 grids match | The score clusters on the row-end seam. Not a reading. [Note](logs/dagapeyeff-joins-2026-10-04.md). |
 | `engine/dagapeyeff_outgoing.py` | The same score counted once, by the column a pair starts in | `tests/test_dagapeyeff_outgoing.py`: column 13 is 0.0953 and column 12 is 0.0894, mostly the private symbols; 7 of 10,000 grids match | The double count was the seam. Not a reading. [Note](logs/dagapeyeff-outgoing-2026-10-04.md). |
+| `engine/dagapeyeff_yardstick.py` | The prose score a reading would have to beat, and the book's own square | `tests/test_dagapeyeff_yardstick.py`: cells 0.5706, English 1.0658, German 1.2; the book square's best flip stays at 0.5706 | Sorting scores 2.3931 and is not a reading. [Note](logs/dagapeyeff-yardstick-2026-10-04.md). |
 
 ## Out of scope
 
