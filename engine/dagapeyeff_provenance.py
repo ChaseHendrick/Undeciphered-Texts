@@ -36,6 +36,7 @@ from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_model import model_report
 from engine.dagapeyeff_patterns import pattern_report
 from engine.dagapeyeff_period4 import period4_report
+from engine.dagapeyeff_places import place_report
 from engine.dagapeyeff_record import record_report
 from engine.dagapeyeff_regroup import regroup_report
 from engine.dagapeyeff_running import running_report
@@ -98,6 +99,7 @@ def provenance_report() -> dict:
         ("delay", delay_report()),
         ("bookkey", bookkey_report()),
         ("groups", group_report()),
+        ("places", place_report()),
     )
     entries = []
     previous = None

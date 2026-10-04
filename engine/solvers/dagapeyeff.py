@@ -15,6 +15,7 @@ from engine.dagapeyeff_bookkey import bookkey_report
 from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_model import model_report
 from engine.dagapeyeff_patterns import pattern_report
+from engine.dagapeyeff_places import place_report
 from engine.dagapeyeff_period4 import period4_report
 from engine.dagapeyeff_columns import column_report
 from engine.dagapeyeff_delay import delay_report
@@ -273,5 +274,20 @@ def consider_groups() -> dict:
             "160 routes keep an even group in an even place. All 160 stay on the square. "
             "The best is rail-odd-6 at -3.3582. Prose is -2.5185. "
             "33 of 40 shuffles of those groups do as well. Refuse them."
+        ),
+    }
+
+
+def consider_places() -> dict:
+    report = place_report()
+    allowed = report["reaches_prose"] and report["shuffles_as_high"] * 20 < report["null_texts"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "places_allowed": allowed,
+        "learned": (
+            "Five digit places, each paired on its own, stay on the square. "
+            "Place 4 scores -3.1598 on 39 cells. Prose is -2.5185. "
+            "24 of 80 shuffles do as well. The shorter score is not a better reading. Refuse them."
         ),
     }
