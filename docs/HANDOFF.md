@@ -94,6 +94,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_joins` splits that score across columns. Column 13's joins hold 0.1847, column 12 holds 0.1256, and column 0 holds 0.1226. Shares overlap on the boundary between columns. 0 of 10,000 shuffled grids have a column holding 0.1847. Do not store a letter string. See `docs/logs/dagapeyeff-joins-2026-10-04.md`.
 
+`engine.dagapeyeff_outgoing` counts each pair once. The numbers then add to 0.5706. Column 13 is 0.0953 and column 12 is 0.0894, and 7 of 10,000 shuffled grids reach 0.0953. Of those two scores, 0.0839 and 0.077 are pairs that touch the private symbols. The seam is not a second pattern. Do not store a letter string. See `docs/logs/dagapeyeff-outgoing-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
