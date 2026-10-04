@@ -64,6 +64,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_methods` ranks measurements on 37,000 trials. The rare-column search still fires after it is allowed to shop widths (0 of 10,000). Full-length letter counts still reject English (0 of 10,000, while the solved example scores 4.14). Printed-order digrams, either half alone, and symbol spacing do not. A 10,000-draw English maximum is 32.65 against the challenge's 34.23, so the gap is small. Do not store a letter string. See `docs/logs/dagapeyeff-methods-2026-10-04.md`.
 
+`engine.dagapeyeff_reads` tries 10,000 column keys and digit reads at widths 2 through 28. No key stands out of its own draw. Even widths destroy the square. Width 3 is the only read that stays legal, and its better score (11.73) loses to random ungluing (7,473 of 10,000). The flatness is in the original pairs. Do not store a letter string. See `docs/logs/dagapeyeff-reads-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
