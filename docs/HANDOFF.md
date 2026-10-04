@@ -34,6 +34,8 @@ A follow-up climb on the even windows, including one-letter endpoint drops, beat
 
 The pair grid is a separate check. Pairs that start on the first printed letter repeat about as often as the Grimm sample in the longer messages, and random letters of that length do not. Removing the five-letter designator shifts the pairs by one and, for SSKFV, the excess disappears. The 1735 alignment's clumps are not tighter than a random set of 33 hits. See `docs/logs/ts-bigram-phase-2026-10-04.md`. Do not call that a square or a reading.
 
+Read the residue as clerk work, not as a cleverer cipher. Station 4fc reused IASRZ and the next group `EDSTB`. Station f8y reused the closing `LMOTIYIZ` and not the opening. The two 1735 messages agree in 33 letters, differ in 20, and have 4 gaps, so they are not one transmission copied twice. Their first 10 body letters agree in 8. Dropping any one of HOHOX's 11 groups leaves only 1 or 2 repeated pairs, which random letters also reach. See `docs/logs/ts-clerk-2026-10-04.md`. Do not promote a habit into plaintext.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.

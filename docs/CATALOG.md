@@ -160,6 +160,7 @@ chosen-sentence checks from these recovered-output controls.
 | `engine/ts_close_pairs.py` | Measure the IASRZ, 1735, and shared-ending Truppenschlüssel pairs | `tests/test_ts_close_pairs.py`: shared prefix IASRZEDSTB, 33 alignment matches against a null of 15, suffix LMOTIYIZ, solved stays false | Does not search a square and does not pad an odd body. [Note](logs/ts-close-pairs-2026-10-04.md). |
 | `engine/ts_pair_climb.py` | Hill-climb even two-square windows of those pairs and compare each score with a shuffle | `tests/test_ts_pair_climb.py`: 7 of 7 beat the shuffle, both endpoint drops beat it, no plaintext stored | Grimm trigram counts are not a military reading. [Note](logs/ts-pair-climb-2026-10-04.md). |
 | `engine/ts_bigram_phase.py` | Count repeated letter-pairs on the printed grid and on the grid after the five-letter designator is removed | `tests/test_ts_bigram_phase.py`: IASRZ 129 has 9 extra repeats and 0 of 400 random strings match, SSKFV drops from 4 to 0 when the designator is removed, alignment clumps are not tighter than chance | Not a square search. [Note](logs/ts-bigram-phase-2026-10-04.md). |
+| `engine/ts_clerk.py` | Record repeated openings, the shared f8y closing, the 1735 difference counts, and each one-group deletion from HOHOX | `tests/test_ts_clerk.py`: opening matches 8 of 10, alignment is 33 same / 20 substituted / 4 gaps, no HOHOX deletion exceeds 2 extra repeats | A habit is not a reading. [Note](logs/ts-clerk-2026-10-04.md). |
 
 ## Out of scope
 
