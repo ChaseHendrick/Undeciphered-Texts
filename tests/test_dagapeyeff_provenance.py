@@ -37,7 +37,7 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("board", "05c9f50f2bd79840d2a7a8198e8fe01cf3b110b1c794fabfadf62ffed0b34c9f"),
                 ("infer", "c67768bd2e358814d7b1faea635b909637f2eb2ca249c6053f6889e958c409c0"),
                 ("foresight", "48ceb2bf1c6010816c96eb483fccd9dc5609748da14cb459b638f94f94a29e10"),
-                ("checks", "5773bf5ec8bb87d2f75e810916ea04fb7d571074d8735bf71f004efbd30e5b86"),
+                ("checks", "6673d0b0814bd05548fb9e789b04dd3ef42b4f0ef98db9a382cc3669f111eafe"),
                 ("adversary", "27532401beeff15910f3beb80b6bef2095313b8beb709213f46ee2ce8adede86"),
                 ("autokey", "291d0e3ead0bb0903b5a93f7851c44dc9f491060cc3a62a8302759af2a863306"),
                 ("digit-routes", "97547066e834b8423c9edee4d893b838baa6b8a22d530d821c0eb2306f1577af"),
@@ -47,11 +47,12 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("groups", "f80567663cc41f4175fdaa88a8b5fab1306c4bc97069bdc2f158b522c077b1ac"),
                 ("places", "142b6e3498c975797e9b5d80f5f3c534e1cbd06a217dc90054d177da2297dfaf"),
                 ("solver-swarm", "21509a963f29551ce6155319f60d82e64d1da3d2acbe267c1a4201472779330e"),
+                ("classic-swarm", "396a9fa86092731be302bb8243d61f48adde06a54d61dbf8d325d5664c63cfcf"),
             ],
         )
         self.assertEqual(
             report["chain_sha256"],
-            "5be84ca8878bf1bb9392495f9ad1a6637ad024d7b985ae30f565608b34e35898",
+            "88dcf5dfd7c63f713baad1c7a0385004daf57dbfe857a2cc51c06768e89a3c6f",
         )
         self.assertEqual(report["entries"][0]["chain_sha256"], report["entries"][0]["content_sha256"])
         self.assertNotEqual(report["entries"][1]["chain_sha256"], report["entries"][1]["content_sha256"])

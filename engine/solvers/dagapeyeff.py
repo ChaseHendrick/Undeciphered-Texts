@@ -24,6 +24,7 @@ from engine.dagapeyeff_groups import group_report
 from engine.dagapeyeff_regroup import regroup_report
 from engine.dagapeyeff_running import running_report
 from engine.dagapeyeff_solver_swarm import solver_swarm_report
+from engine.dagapeyeff_classic_swarm import classic_swarm_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -317,5 +318,33 @@ def consider_solver_swarm() -> dict:
             "Vigenere, periods through 8, picks period 3 at -3.7393, prose -2.4363, and 7 of 20 shuffles do as well. "
             "Substitution at 400 steps scores -3.0858, its own reading flag is false, and 8 of 8 shuffles do as well. "
             "Refuse the swarm."
+        ),
+    }
+
+
+def consider_classic_swarm() -> dict:
+    report = classic_swarm_report()
+    prose = report["prose_per_quadgram"]
+    affine_ok = (
+        report["affine_per_quadgram"] >= prose
+        and report["affine_shuffles_as_high"] * 20 < report["affine_draws"]
+    )
+    beaufort_ok = (
+        report["beaufort_per_quadgram"] >= prose
+        and report["beaufort_shuffles_as_high"] * 20 < report["beaufort_draws"]
+    )
+    porta_ok = (
+        report["porta_per_quadgram"] >= prose
+        and report["porta_shuffles_as_high"] * 20 < report["porta_draws"]
+    )
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "classic_swarm_allowed": affine_ok or beaufort_ok or porta_ok,
+        "learned": (
+            "Affine's best multiplier is 1, a Caesar, at -3.7883. 16 of 20 shuffles do as well. "
+            "Beaufort period 5 scores -3.7684. A sample of 20 was widened to 80, and 8 do as well. "
+            "Porta period 4 scores -3.9175, and 11 of 20 shuffles do as well. "
+            "Prose is -2.5185. Refuse the swarm."
         ),
     }

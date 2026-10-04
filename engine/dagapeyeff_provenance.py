@@ -28,6 +28,7 @@ from engine.dagapeyeff_convert import convert_report
 from engine.dagapeyeff_delay import delay_report
 from engine.dagapeyeff_digit_routes import digit_route_report
 from engine.dagapeyeff_checks import checks_report
+from engine.dagapeyeff_classic_swarm import classic_swarm_report
 from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_foresight import foresight
 from engine.dagapeyeff_groups import group_report
@@ -102,6 +103,7 @@ def provenance_report() -> dict:
         ("groups", group_report()),
         ("places", place_report()),
         ("solver-swarm", solver_swarm_report()),
+        ("classic-swarm", classic_swarm_report()),
     )
     entries = []
     previous = None
