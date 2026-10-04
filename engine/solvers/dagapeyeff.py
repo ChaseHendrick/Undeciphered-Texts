@@ -13,6 +13,8 @@ from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_model import model_report
 from engine.dagapeyeff_period4 import period4_report
 from engine.dagapeyeff_regroup import regroup_report
+from engine.dagapeyeff_running import running_report
+from engine.dagapeyeff_word import word_report
 
 
 def consider_frequency_claim(count_moves: int, chi_hi: float) -> dict:
@@ -109,5 +111,34 @@ def consider_period4() -> dict:
             "All 390625 period-4 shifts were scored. The friendliest counts are 3.86, "
             "and 32 of 40 shuffles do that well. The quadgram is -3.4759 against prose at -2.5185. "
             "3 of 40 shuffles match it. Refuse it."
+        ),
+    }
+
+
+def consider_word_score() -> dict:
+    report = word_report()
+    allowed = report["reaches_prose"] and report["shuffles_as_high"] == 0
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "word_score_allowed": allowed,
+        "learned": (
+            "Scoring all 390625 period-4 shifts by the word model reaches -3.2713. "
+            "Prose is -2.5185. 4 of 8 shuffled ciphers do as well. Refuse it."
+        ),
+    }
+
+
+def consider_running_key() -> dict:
+    report = running_report()
+    allowed = report["reaches_prose"] and report["shuffles_as_high"] == 0
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "running_key_allowed": allowed,
+        "learned": (
+            "94860 alignments of five texts were tried as a running key. "
+            "The best is -3.4945, worse than the period-4 word search at -3.2713. "
+            "Prose is -2.5185. 1 of 8 shuffles beats it. Refuse it."
         ),
     }

@@ -118,7 +118,11 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_bifid` undoes a bifid on the coordinate digits for every period from 1 to 196. Period 1 scores -3.6316. The best period is 174, at -3.4727, against English at -1.553. Of 2,000 shuffles, 1,109 have a best period at least that high. That is 392,000 period scores. `engine.solvers.dagapeyeff` refuses the period. Do not store a letter string. See `docs/logs/dagapeyeff-bifid-2026-10-04.md`.
 
-`engine.dagapeyeff_period4` scores every one of the 390,625 period-4 shifts, and the same search on 40 shuffled copies. That is 16,015,625 keys. The friendliest counts are 3.86, and 32 of 40 shuffles do that well or better. Period 3 had reached 2.80, so the longer key is not closer. The quadgram is -3.4759 against prose at -2.5185, and 3 of 40 shuffles match it. `engine.solvers.dagapeyeff` refuses the key. Do not store a letter string. See `docs/logs/dagapeyeff-period4-2026-10-04.md`. The provenance chain ends at `2ecc51b639257b3d2da027683e42318fb1b3db08154aaf755f88f51c29aa833d`.
+`engine.dagapeyeff_period4` scores every one of the 390,625 period-4 shifts, and the same search on 40 shuffled copies. That is 16,015,625 keys. The friendliest counts are 3.86, and 32 of 40 shuffles do that well or better. Period 3 had reached 2.80, so the longer key is not closer. The quadgram is -3.4759 against prose at -2.5185, and 3 of 40 shuffles match it. `engine.solvers.dagapeyeff` refuses the key. Do not store a letter string. See `docs/logs/dagapeyeff-period4-2026-10-04.md`.
+
+`engine.dagapeyeff_word` scores those same 390,625 keys by the quadgram model instead of by the counts. The best is -3.2713, against prose at -2.5185. Four of eight shuffled ciphers do as well. That is not a record. `engine.solvers.dagapeyeff` refuses it. Do not store a letter string. See `docs/logs/dagapeyeff-word-2026-10-04.md`.
+
+`engine.dagapeyeff_running` slides five texts along the cells, 94,860 alignments. The best is -3.4945, which is worse than -3.2713. One of eight shuffles beats it. `engine.solvers.dagapeyeff` refuses it. Do not store a letter string. See `docs/logs/dagapeyeff-running-2026-10-04.md`. The provenance chain ends at `d23fe2c0d3b5ec89dcf36a2fee4624adbd277d8fa1643382e7653e52ab204cb8`.
 
 ## Current user direction
 
