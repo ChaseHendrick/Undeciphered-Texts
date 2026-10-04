@@ -8,6 +8,7 @@ clear frequency ball is still not a reading.
 from __future__ import annotations
 
 from engine.dagapeyeff_edits import edit_report
+from engine.dagapeyeff_angles import angle_report
 from engine.dagapeyeff_autokey import autokey_report
 from engine.dagapeyeff_bifid import bifid_report
 from engine.dagapeyeff_keys import key_report
@@ -206,5 +207,23 @@ def consider_digit_routes() -> dict:
             "46 routes of the row digits and the column digits stay on the square. "
             "The best is rail-both-4 at -3.4242. Prose is -2.5185. "
             "29 of 40 shuffles of those digits do as well. Refuse it."
+        ),
+    }
+
+
+def consider_angles() -> dict:
+    report = angle_report()
+    step_ok = report["reaches_prose"] and report["shuffles_as_high"] == 0
+    holes_ok = report["placements_as_crowded"] * 20 < report["placements"]
+    playfair_ok = report["shuffles_as_few_identical"] * 20 < report["digraph_draws"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "angles_allowed": step_ok and holes_ok and playfair_ok,
+        "learned": (
+            "The step from cell to cell scores -3.8542, and 23 of 40 shuffles do as well. "
+            "Seven unused cells put 4 in one row, and 29450 of 480700 placements do that. "
+            "10 of 98 digraphs repeat a cell, and 363 of 400 shuffles have as few repeats, so it is not Playfair. "
+            "Refuse all three."
         ),
     }

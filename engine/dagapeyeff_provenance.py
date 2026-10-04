@@ -17,6 +17,7 @@ from typing import Any
 
 from engine.corrections import load_corrections
 from engine.dagapeyeff_adversary import adversary_report
+from engine.dagapeyeff_angles import angle_report
 from engine.dagapeyeff_autokey import autokey_report
 from engine.dagapeyeff_balls import ball_report
 from engine.dagapeyeff_bifid import bifid_report
@@ -90,6 +91,7 @@ def provenance_report() -> dict:
         ("adversary", adversary_report()),
         ("autokey", autokey_report()),
         ("digit-routes", digit_route_report()),
+        ("angles", angle_report()),
     )
     entries = []
     previous = None
