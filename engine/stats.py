@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import math
 from collections import Counter
 
 from engine.alphabet import letters_only
@@ -101,3 +102,23 @@ def column_mean_ic(letters: str, period: int) -> float:
     if not scores:
         return 0.0
     return sum(scores) / len(scores)
+
+
+def successive_information(seq: list[str] | str) -> float:
+    """How strongly one symbol predicts the next. Relabeling does not change it.
+
+    Zero when the sequence is shorter than two symbols. This is not a language
+    score and it is not a decipherment.
+    """
+    count = len(seq) - 1
+    if count <= 0:
+        return 0.0
+    joint = Counter(zip(seq, seq[1:]))
+    left = Counter(seq[:-1])
+    right = Counter(seq[1:])
+    score = 0.0
+    for (first, second), seen in joint.items():
+        share = seen / count
+        score += share * math.log(share / ((left[first] / count) * (right[second] / count)))
+    return score
+

@@ -7,6 +7,11 @@ swap polish walks the neighborhood of the best key until it is a local maximum.
 The learned trigram network in engine.neural is not the search objective. It
 scores the finished candidate as a second opinion beside the quadgram score.
 That number is an English-letter fitness, not a decipherment of an unknown script.
+
+The order gate is separate from the search. Renaming symbols cannot make one
+symbol predict the next. If the ciphertext order is no more dependent than a
+shuffle of itself, ``reading`` is false and the returned plaintext is only
+the best candidate, not a solution.
 """
 
 from __future__ import annotations
@@ -18,6 +23,40 @@ from engine.alphabet import from_ints, letters_only, reinject, to_ints
 from engine.language import ENGLISH_ORDER, get_model
 from engine.neural import get_neural_model
 from engine.result import SolveResult
+from engine.stats import successive_information
+
+_GATE_DRAWS = 200
+
+
+def substitution_order_gate(text: str, *, draws: int = _GATE_DRAWS, seed: int = 20261004) -> dict:
+    """Whether the ciphertext order could carry a substitution reading.
+
+    The score is unchanged by the decrypt key. ``reading`` is true only when
+    fewer than one draw in twenty is at least as dependent. It is not a claim
+    that the key is correct.
+    """
+    symbols = list(letters_only(text))
+    observed = successive_information(symbols)
+    if len(symbols) < 8:
+        return {
+            "order_mi": round(observed, 4),
+            "order_draws": draws,
+            "order_as_predictable": draws,
+            "reading": False,
+        }
+    drawn = random.Random(seed)
+    as_high = 0
+    for _ in range(draws):
+        shuffled = symbols[:]
+        drawn.shuffle(shuffled)
+        if successive_information(shuffled) >= observed - 1e-15:
+            as_high += 1
+    return {
+        "order_mi": round(observed, 4),
+        "order_draws": draws,
+        "order_as_predictable": as_high,
+        "reading": as_high * 20 < draws,
+    }
 
 
 def frequency_decrypt_key(seq: list[int]) -> list[int]:
@@ -159,6 +198,7 @@ def solve_substitution(
     rendered = reinject(text, from_ints(plain_ints))
     neural = get_neural_model()
     neural_score = neural.score(plain_ints)
+    gate = substitution_order_gate(letters, seed=seed)
     return SolveResult(
         method="substitution",
         plaintext=rendered,
@@ -174,5 +214,9 @@ def solve_substitution(
             "neural_score": neural_score,
             "neural_backend": neural.backend,
             "second_opinion": "neural_trigram",
+            "order_mi": gate["order_mi"],
+            "order_draws": gate["order_draws"],
+            "order_as_predictable": gate["order_as_predictable"],
+            "reading": gate["reading"],
         },
     )

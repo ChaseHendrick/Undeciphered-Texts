@@ -180,6 +180,7 @@ chosen-sentence checks from these recovered-output controls.
 | `engine/dagapeyeff_order.py` | 20,000 column keys and 5,000 random orders, scored by successive-symbol dependence | `tests/test_dagapeyeff_order.py`: best key 0.7657, best random order 0.7556, same-length English prose 1.0658; relabeling English does not change its score | Substitution cannot create the missing dependence. Not a reading. [Note](logs/dagapeyeff-order-2026-10-04.md). |
 | `engine/dagapeyeff_routes.py` | Rails, diagonals, and deleting every kth cell | `tests/test_dagapeyeff_routes.py`: every other cell scores 1.0556 against English of that length at 1.2922; 963 of 10,000 shuffled deletions match it | The rise is the shorter text. Not a reading. [Note](logs/dagapeyeff-routes-2026-10-04.md). |
 | `engine/dagapeyeff_glue.py` | Row stream, column stream, and the pairing of the two | `tests/test_dagapeyeff_glue.py`: pairing score 77.36, 0 of 20,000 re-pairings; row order is beaten by 15,767 of 20,000 shuffles | The unevenness is which digits share a cell. Not a reading. [Note](logs/dagapeyeff-glue-2026-10-04.md). |
+| `engine/dagapeyeff_split.py` | Split crowded cells 91, 75, and 81 into two labels | `tests/test_dagapeyeff_split.py`: best cut 0.7002 against English 1.0658; 15 of 20 shuffled cuts match it | The substitution gate refuses the pairs (170 of 200). Not a reading. [Note](logs/dagapeyeff-split-2026-10-04.md). |
 
 ## Out of scope
 

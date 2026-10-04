@@ -78,6 +78,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_glue` separates the two digits. Neither stream has an order of its own (row predictability is beaten by 15,767 of 20,000 shuffles). The pairing does: score 77.36, 0 of 20,000 re-pairings. Cell 91 appears 12 times against about 3 from the totals. The unevenness is which digits share a cell, not the sequence. Do not store a letter string. See `docs/logs/dagapeyeff-glue-2026-10-04.md`.
 
+`engine.solvers.substitution` now records an order gate. `reading` is false when a shuffle of the ciphertext is at least as dependent, because renaming symbols cannot fix that. A known English substitution still passes (0 of 200). The 1939 pairs fail (170 of 200). `engine.dagapeyeff_split` cuts cells 91, 75, and 81 in two. The best cut scores 0.7002 against same-length English at 1.0658, and 15 of 20 shuffled cuts match it. Do not store a letter string. See `docs/logs/dagapeyeff-split-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
