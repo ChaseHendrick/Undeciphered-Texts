@@ -110,6 +110,18 @@ def board_text() -> str:
         lines.append("")
         lines.append(record["do_not"])
         lines.append("")
+    from engine.dagapeyeff_infer import infer
+
+    drawn = infer()
+    lines.append("## Inference")
+    lines.append("")
+    for item in drawn["classes"]:
+        lines.append(f"{item['id']}: {item['status']}. {item['because']} {item['do_not']}")
+        lines.append("")
+    lines.append(f"Not a next step: {drawn['not_a_next_step']}")
+    lines.append("")
+    lines.append(drawn["required"])
+    lines.append("")
     lines.append("No letter string is stored.")
     lines.append("")
     return "\n".join(lines)

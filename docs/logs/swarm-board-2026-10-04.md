@@ -66,4 +66,16 @@ A width-27 downward read matches 544 dictionary windows, and the best of 25000 c
 
 Do not trust the column order with the most dictionary windows unless shuffled grids miss it.
 
+## Inference
+
+counts: closed. Friendlier counts were scored three ways, and each was refused. Do not bring a lower chi-square back as progress.
+
+same-cells: closed. Another order of the same cells was scored, and the shuffles matched it. Do not search another reading order of these cells.
+
+short-keys: closed. The word score was asked on a short shift, a bifid, and a running key, and none beat prose. Do not lengthen that shift, add a bifid period, or reuse those five texts.
+
+Not a next step: Another order of the same cells, a longer repeat of the same shift, another bifid period, or the five texts already used as a running key.
+
+A rule outside the closed classes. It has to beat prose at -2.5185, and the same search on shuffled cells has to miss it. Meeting that bar is still not a reading until the control is checked.
+
 No letter string is stored.
