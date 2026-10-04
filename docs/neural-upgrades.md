@@ -135,6 +135,11 @@ Bob's confidence can describe the alphabet rather than the order. `engine.bob_ca
 
 A later pass kept the 142 features, warmed up for 80 epochs at learning rate 0.0005, and distilled the previous model at strength 0.25. The gate accepted it: 429 of 480 top one, 477 of 480 top three, and 193 of 204 on the earlier benchmark. The gain is one rail-fence case. Enigma and the M-209 stay at 12 of 24. The new SHA-256 is `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b`. The Wells audit still belongs to the previous file. See [the note](logs/bob-warm-2026-10-04.md).
 
+## More prose and six wheel lags, 4 October 2026
+
+`engine/data/neural_train_public.txt` adds 1,916,398 public-domain letters. `cipher_statistics_v9` adds the five missing M-209 wheel lags and one contrast. A cold fit on that prose scored 427 of 480 and 188 of 204. A warm start onto the new features scored 432 of 480 and 191 of 204. Both lose the older benchmark, so the saved weights stay. See [the note](logs/bob-prose-2026-10-04.md).
+
+
 ## Use and reproducibility
 
 ```sh

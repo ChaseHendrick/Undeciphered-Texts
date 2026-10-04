@@ -80,7 +80,8 @@ class ShippedResidualRouterTest(unittest.TestCase):
                     5: ("cipher_statistics_v5", 142),
                     6: ("cipher_statistics_v6", 222),
                     7: ("cipher_statistics_v7", 228),
-                    8: ("cipher_statistics_v8", 148)}
+                    8: ("cipher_statistics_v8", 148),
+                    9: ("cipher_statistics_v9", 154)}
         self.assertIn(payload["format_version"], versions)
         self.assertGreaterEqual(len(payload["families"]), 17)
         self.assertEqual((payload["feature_version"], len(payload["mean"])),

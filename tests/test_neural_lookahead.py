@@ -23,7 +23,7 @@ class RouterCompatibilityTest(unittest.TestCase):
         from engine.neural_router_v2 import _features
         prose='THEHARBORWATCHKEPTTHELANTERNBURNINGWHILETHELASTSHIPRETURNED' * 8
         english=_english_unigram(prose);tables=feature_tables(prose,english)
-        for version,width in ((2,58),(3,82),(4,126),(5,142),(6,222),(7,228)):
+        for version,width in ((2,58),(3,82),(4,126),(5,142),(6,222),(7,228),(8,148),(9,154)):
             row=_features(prose[:180],english,tables,version='cipher_statistics_v'+str(version))
             self.assertEqual(len(row),width)
             self.assertTrue(np.all(np.isfinite(row)))

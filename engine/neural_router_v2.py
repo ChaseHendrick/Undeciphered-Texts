@@ -33,7 +33,7 @@ WEIGHTS_PATH = DATA / "neural_router_v2_weights.json"
 METRICS_PATH = DATA / "neural_router_v2_metrics.json"
 FEATURE_VERSION = "cipher_statistics_v8"
 FEATURE_WIDTHS = {f"cipher_statistics_v{version}": width for version, width in
-                  ((2, 58), (3, 82), (4, 126), (5, 142), (6, 222), (7, 228), (8, 148))}
+                  ((2, 58), (3, 82), (4, 126), (5, 142), (6, 222), (7, 228), (8, 148), (9, 154))}
 MODEL_NAME = "Bob the Neural Net"
 EXTRA_FAMILIES = ("rail-fence", "affine", "autokey", "condi", "progressive-key", "redefence")
 
@@ -384,7 +384,7 @@ def _features(text, english, tables, *, version="cipher_statistics_v2"):
             counts = np.bincount(values[offset::period], minlength=26).astype(float)
             agreements.append(float((counts @ tables["mvig"]).max() / (np.linalg.norm(counts) * tables["norm"] + 1e-12)))
         row.append(float(np.mean(agreements)))
-    if version in tuple(f"cipher_statistics_v{i}" for i in range(3, 9)):
+    if version in tuple(f"cipher_statistics_v{i}" for i in range(3, 10)):
         for width in (2, 3, 4):
             grams = [tuple(values[i:i + width]) for i in range(len(values) - width + 1)]
             frequencies = {}
@@ -395,9 +395,9 @@ def _features(text, english, tables, *, version="cipher_statistics_v2"):
             row.extend((len(counts) / len(grams), float(-(p * np.log(p)).sum()),
                         float(p.max()), float(counts[counts > 1].sum() / len(grams))))
         row.extend(float(np.mean(values[lag:] == values[:-lag])) if len(values) > lag else 0. for lag in range(6, 18))
-    if version in tuple(f"cipher_statistics_v{i}" for i in range(4, 9)):
+    if version in tuple(f"cipher_statistics_v{i}" for i in range(4, 10)):
         row.extend(cryptanalytic_features(text, tables))
-    if version in ("cipher_statistics_v5", "cipher_statistics_v6", "cipher_statistics_v7", FEATURE_VERSION):
+    if version in ("cipher_statistics_v5", "cipher_statistics_v6", "cipher_statistics_v7", "cipher_statistics_v9", FEATURE_VERSION):
         from engine.solvers.autokey_inference import autokey_feature_scores
         row.extend(autokey_feature_scores(text, tables))
     if version in ("cipher_statistics_v6", "cipher_statistics_v7"):
@@ -407,9 +407,12 @@ def _features(text, english, tables, *, version="cipher_statistics_v2"):
         for offset in (0, 1):
             pairs = values[offset:len(values) - (len(values) - offset) % 2].reshape(-1, 2)
             row.append(float(tables["logdig"][pairs[:, 0], pairs[:, 1]].mean()))
-    if version in ("cipher_statistics_v7", FEATURE_VERSION):
+    if version in ("cipher_statistics_v7", "cipher_statistics_v9", FEATURE_VERSION):
         from engine.neural_m209_features import m209_pair_features
         row.extend(m209_pair_features(text, tables))
+    if version == "cipher_statistics_v9":
+        from engine.neural_features import wheel_lag_features
+        row.extend(wheel_lag_features(values))
     return row
 
 
@@ -464,7 +467,8 @@ def promotion_allowed(benchmark_accuracy, baseline_accuracy, overall_accuracy, p
 
 def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WEIGHTS_PATH,
                  expanded_families=False, hidden=64, ensemble_size=3, warm_start=False, learning_rate=.01,
-                 distillation_strength=0., distillation_temperature=2., feature_version=None):
+                 distillation_strength=0., distillation_temperature=2., feature_version=None,
+                 more_prose=False):
     """One local pass. Hyperparameters and calibration never use Doyle scores."""
     started = time.perf_counter()
     _validate_learning_rate(learning_rate)
@@ -484,13 +488,26 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
         raise ValueError("ensemble_size must be between 1 and 5")
     if not isinstance(train_per_class, int) or isinstance(train_per_class, bool) or not 8 <= train_per_class <= 256:
         raise ValueError("train_per_class must be between8 and256")
+    if not isinstance(more_prose, bool):
+        raise ValueError("more_prose must be an explicit boolean")
     full = letters_az(load_training_prose(TRAIN_PATH))
+    if more_prose:
+        extra_path = DATA / "neural_train_public.txt"
+        extra = letters_az(extra_path.read_text(encoding="utf-8"))
+        if len(extra) < 10000:
+            raise ValueError("the extra training prose is too short")
+        full += extra
     held = letters_az(load_training_prose(HELD_EN_PATH))
     cut, calibration_cut = int(len(full) * .6), int(len(full) * .8)
     training, validation, calibration = full[:cut], full[cut:calibration_cut], full[calibration_cut:]
     for left, right in ((training, validation), (training, calibration), (validation, calibration), (full, held)):
         assert_split(left, right)
     assert_certificate_plaintexts_excluded(full, held)
+    if more_prose:
+        wells = letters_az((DATA / "neural_audit_wells.txt").read_text(encoding="utf-8"))
+        grimm = letters_az((DATA / "neural_heldout_grimm_wolf.txt").read_text(encoding="utf-8"))
+        assert_split(full, wells)
+        assert_split(full, grimm)
     english = _english_unigram(training)
     tables = feature_tables(training, english)
     certified = set(discover_solver_labels())
@@ -518,7 +535,8 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
         if previous["training_letters"] != training:
             raise ValueError("warm start must preserve training-only language tables; use a cold fit for changed training prose")
         if previous["feature_version"] not in ("cipher_statistics_v2", "cipher_statistics_v3",
-                                               "cipher_statistics_v4", "cipher_statistics_v5", FEATURE_VERSION):
+                                               "cipher_statistics_v4", "cipher_statistics_v5",
+                                               "cipher_statistics_v9", FEATURE_VERSION):
             raise ValueError("warm start requires prefix-compatible features; V6/V7 replay is supported but their inputs cannot be discarded")
         if len(previous["models"]) != ensemble_size:
             raise ValueError("warm start must preserve ensemble size")
@@ -606,7 +624,7 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
                "heldout_nll": _nll(probs, hy), "benchmark_correct": benchmark_correct,
                "baseline_correct": baseline_correct, "benchmark_total": len(benchmark_y),
                "promoted": promoted, "predecessor_comparison": predecessor_comparison, "train_per_class": train_per_class, "epochs": epochs,
-               "hidden":hidden, "ensemble_size":ensemble_size,
+               "hidden":hidden, "ensemble_size":ensemble_size, "more_prose": more_prose,
                "calibration_sha256": payload["calibration_sha256"],
                "train_sha256": payload["train_sha256"], "validation_sha256": payload["validation_sha256"], "heldout_sha256": payload["heldout_sha256"]}
     metrics["training_types"] = models[0]["training_types"]
@@ -711,7 +729,7 @@ def load_router(path=None):
     try:
         families = p["families"]
         widths = {(version, f"cipher_statistics_v{version}"): width for version, width in
-                  ((2, 58), (3, 82), (4, 126), (5, 142), (6, 222), (7, 228), (8, 148))}
+                  ((2, 58), (3, 82), (4, 126), (5, 142), (6, 222), (7, 228), (8, 148), (9, 154))}
         width = widths.get((p["format_version"], p["feature_version"]))
         if width is None or not isinstance(families, list) or not 2 <= len(families) <= 128 or any(not isinstance(f, str) for f in families):
             raise ValueError("unsupported router format")
@@ -734,7 +752,7 @@ def load_router(path=None):
         if p["mean"] != p["models"][0]["mean"] or p["scale"] != p["models"][0]["scale"]:
             raise ValueError("inconsistent feature normalization")
         training = p["training_letters"]
-        if not isinstance(training, str) or not 360 <= len(training) <= 100000 or any(not "A" <= ch <= "Z" for ch in training) or hashlib.sha256(training.encode()).hexdigest() != p["train_sha256"]:
+        if not isinstance(training, str) or not 360 <= len(training) <= 2_000_000 or any(not "A" <= ch <= "Z" for ch in training) or hashlib.sha256(training.encode()).hexdigest() != p["train_sha256"]:
             raise ValueError("invalid training provenance")
         if not isinstance(p["heldout_accuracy"], (int, float)) or isinstance(p["heldout_accuracy"], bool) or not 0 <= p["heldout_accuracy"] <= 1 or not math.isfinite(p["heldout_accuracy"]):
             raise ValueError("invalid heldout accuracy")

@@ -44,9 +44,19 @@ class NeuralFeatureCompatibilityTest(unittest.TestCase):
         np.testing.assert_array_equal(current[142:], m209_pair_features(CIPHER, self.tables))
         self.assertTrue(np.all(np.isfinite(current)))
 
+    def test_v9_adds_six_wheel_lags_after_the_v8_row(self):
+        from engine.neural_features import wheel_lag_features
+        before = _features(CIPHER, self.english, self.tables, version="cipher_statistics_v8")
+        current = _features(CIPHER, self.english, self.tables, version="cipher_statistics_v9")
+        self.assertEqual(len(current), 154)
+        np.testing.assert_array_equal(current[:148], before)
+        values = np.array([ord(ch) - 65 for ch in CIPHER.upper() if "A" <= ch <= "Z"])
+        np.testing.assert_array_equal(current[148:], wheel_lag_features(values))
+        self.assertTrue(np.all(np.isfinite(current)))
+
     def test_all_serialized_formats_remain_loadable_with_their_exact_widths(self):
         training = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" * 14
-        widths = {2: 58, 3: 82, 4: 126, 5: 142, 6: 222, 7: 228, 8: 148}
+        widths = {2: 58, 3: 82, 4: 126, 5: 142, 6: 222, 7: 228, 8: 148, 9: 154}
         with tempfile.TemporaryDirectory() as temporary:
             path = Path(temporary) / "compatibility.json"
             for version, width in widths.items():

@@ -111,6 +111,8 @@ def build_parser() -> argparse.ArgumentParser:
                        help="teacher/student softening temperature (default:2)")
     train.add_argument("--feature-version", default=None,
                        help="cipher statistics version; default is the current feature set")
+    train.add_argument("--more-prose", action="store_true",
+                       help="append the public-domain training file to the Austen slice")
     train.add_argument("--dry-run", action="store_true", help="evaluate without writing artifacts")
 
     analyze = sub.add_parser("analyze", help="IC, Friedman, Kasiski, and n-gram counts")
@@ -189,6 +191,7 @@ def main(argv: list[str] | None = None) -> int:
                                           hidden=args.hidden, ensemble_size=args.ensemble_size,
                                           warm_start=args.warm_start, learning_rate=args.learning_rate,
                                           feature_version=args.feature_version,
+                                          more_prose=args.more_prose,
                                           **teacher_options), indent=2))
             return 0
         except (ValueError, TypeError, ImportError, OSError) as exc:

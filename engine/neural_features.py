@@ -213,3 +213,28 @@ def router_features(text: str, english: list[float], tables: dict | None = None)
         raise ValueError("ciphertext is too short to featurize")
     return _base_features(values, tables) + _look_ahead(values, tables)
 
+
+# Public M-209 wheel lengths that the v5 row does not already report as raw lags.
+# Lag 17 is already in that row. The contrast is the tallest wheel lag minus the
+# quiet lags just before them. No pin, lug, or plaintext is recovered.
+_WHEEL_LAGS = (19, 21, 23, 25, 26)
+_SPIKE_LAGS = (17, 19, 21, 23, 25, 26)
+_QUIET_LAGS = (11, 12, 13, 14, 15, 16)
+
+
+def wheel_lag_features(values: np.ndarray) -> list[float]:
+    """Six repeat rates. Five wheel lags, then how far the tallest stands above the quiet lags."""
+    sequence = np.asarray(values)
+    if sequence.ndim != 1 or sequence.size < 16:
+        raise ValueError("wheel lags need at least 16 letters")
+
+    def kappa(lag: int) -> float:
+        if sequence.shape[0] <= lag:
+            return 0.0
+        return float(np.mean(sequence[lag:] == sequence[:-lag]))
+
+    wheels = [kappa(lag) for lag in _WHEEL_LAGS]
+    spike = max(kappa(lag) for lag in _SPIKE_LAGS)
+    quiet = float(np.mean([kappa(lag) for lag in _QUIET_LAGS]))
+    return [*wheels, spike - quiet]
+
