@@ -112,7 +112,9 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_regroup` scores the one other legal grouping, `01432`. The chi-square ball runs from 8.8291 to 8.889665, under the worst English draw. The order score is 0.7801 against English 1.0658, and 2,216 of 10,000 shuffles match the downward read of 0.8735. The book's solved example moves from 4.14 to 21.56. `engine.solvers.dagapeyeff` refuses the regrouping. Do not store a letter string. See `docs/logs/dagapeyeff-regroup-2026-10-04.md`.
 
-`engine.dagapeyeff_keys` scores 20,000 column orders of that regrouping. The best is 1.0033, under English at 1.0658. One shuffle sample of the same size topped out at 0.9925. Thirteen of twenty further samples reached 1.0033. `engine.solvers.dagapeyeff` refuses the key. Do not store a letter string. See `docs/logs/dagapeyeff-keys-2026-10-04.md`. The provenance chain ends at `7e6d6161830f7ac878a681d6c233781728927d9b2b4c8718ec829750311a9332`.
+`engine.dagapeyeff_keys` scores 20,000 column orders of that regrouping. The best is 1.0033, under English at 1.0658. One shuffle sample of the same size topped out at 0.9925. Thirteen of twenty further samples reached 1.0033. `engine.solvers.dagapeyeff` refuses the key. Do not store a letter string. See `docs/logs/dagapeyeff-keys-2026-10-04.md`.
+
+`engine.dagapeyeff_model` labels cells by English letter frequency and scores that string. English of this length scores -1.553 per quadgram. The printed cells score -3.6316 and the regrouping scores -3.6352, so the lower chi-square made the model score worse. Of 200,000 shuffles, 177,295 beat the printed cells and 151,728 beat the regrouping. The best shuffle reached -3.107. `engine.solvers.dagapeyeff` refuses the labeling. Do not store a letter string. See `docs/logs/dagapeyeff-model-2026-10-04.md`. The provenance chain ends at `5ff05c351d6dac071d3a572c83bf363be98b2206bd16f4b71783f83f179be40c`.
 
 ## Current user direction
 

@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_keys import key_report
+from engine.dagapeyeff_model import model_report
 from engine.dagapeyeff_regroup import regroup_report
 
 
@@ -62,5 +63,20 @@ def consider_column_key() -> dict:
         "learned": (
             "The best of 20000 column orders of regrouping 01432 scores 1.0033. "
             "13 of 20 shuffle samples of the same size reach it. English is 1.0658. Refuse the key."
+        ),
+    }
+
+
+def consider_language_model() -> dict:
+    report = model_report()
+    allowed = report["either_reaches_english"] and report["regrouped_tail"]["quad_as_high"] * 20 < report["regrouped_tail"]["draws"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "language_model_allowed": allowed,
+        "learned": (
+            "Under the frequency labeling, regrouping 01432 scores -3.6352 per quadgram "
+            "and the printed cells score -3.6316. English scores -1.553. "
+            "151728 of 200000 shuffles beat the regrouping. The lower chi-square did not help. Refuse it."
         ),
     }
