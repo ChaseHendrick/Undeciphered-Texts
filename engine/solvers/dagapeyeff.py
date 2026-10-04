@@ -11,6 +11,7 @@ from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_angles import angle_report
 from engine.dagapeyeff_autokey import autokey_report
 from engine.dagapeyeff_bifid import bifid_report
+from engine.bob_branch import bob_branch_report
 from engine.bob_caution import bob_caution_report
 from engine.dagapeyeff_bookkey import bookkey_report
 from engine.dagapeyeff_keys import key_report
@@ -29,6 +30,7 @@ from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_digit_routes import digit_route_report
 from engine.dagapeyeff_groups import group_report
 from engine.dagapeyeff_regroup import regroup_report
+from engine.dagapeyeff_repair import repair_report
 from engine.dagapeyeff_refined import refined_report
 from engine.dagapeyeff_router_swarm import router_swarm_report
 from engine.dagapeyeff_running import running_report
@@ -99,6 +101,38 @@ def consider_placed() -> dict:
             "Placing every one of them on the printed cells is 2,494,800 edits. "
             "The best order scores -3.4263. Prose is -2.5185. "
             "11 of 20 shuffled orders, given the same edits, do as well. Refuse it."
+        ),
+    }
+
+
+def consider_repair() -> dict:
+    report = repair_report()
+    rare = report["neighbor_shuffles_as_high"] * 20 < report["neighbor_draws"]
+    allowed = report["reaches_prose"] and rare
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "repair_allowed": allowed,
+        "learned": (
+            "70 best count vectors each touch 6 symbols. The union is 10 and they share one, "
+            "the symbol 72, which every vector reduces. Losses come from 3 symbols. "
+            "Four neighbor edits score -3.1449, and 6 of 80 shuffles do as well. "
+            "Prose is -2.5185. The shared loss is not a reading. Refuse it."
+        ),
+    }
+
+
+def consider_branch() -> dict:
+    report = bob_branch_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "branch_allowed": False,
+        "learned": (
+            "Bob's residual branch is in use. On the cells the three shares are "
+            "0.4994, 0.5271, and 0.5164. On a Caesar of known prose they are "
+            "0.4538, 0.4709, and 0.4806. The shipped weights were not replaced. "
+            "A live branch is not a reading."
         ),
     }
 
