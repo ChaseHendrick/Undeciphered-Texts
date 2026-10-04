@@ -35,6 +35,7 @@ from engine.dagapeyeff_foresight import foresight
 from engine.dagapeyeff_groups import group_report
 from engine.dagapeyeff_infer import infer
 from engine.dagapeyeff_keys import key_report
+from engine.dagapeyeff_large_swarm import large_swarm_report
 from engine.dagapeyeff_model import model_report
 from engine.dagapeyeff_patterns import pattern_report
 from engine.dagapeyeff_period4 import period4_report
@@ -108,6 +109,7 @@ def provenance_report() -> dict:
         ("classic-swarm", classic_swarm_report()),
         ("router-swarm", router_swarm_report()),
         ("column-null", column_null_report()),
+        ("large-swarm", large_swarm_report()),
     )
     entries = []
     previous = None

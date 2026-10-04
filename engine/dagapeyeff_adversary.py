@@ -27,6 +27,7 @@ from engine.solvers.dagapeyeff import (
     consider_frequency_claim,
     consider_groups,
     consider_language_model,
+    consider_large_swarm,
     consider_patterns,
     consider_places,
     consider_period4,
@@ -84,6 +85,7 @@ def adversary_report() -> dict:
         consider_classic_swarm(),
         consider_router_swarm(),
         consider_column_null(),
+        consider_large_swarm(),
     ]
     frequency = claims[0]
     readings = [claim for claim in claims if claim["solved"] is not False or claim["claimed_plaintext"] is not None]

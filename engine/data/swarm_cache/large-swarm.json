@@ -1,0 +1,17 @@
+{
+  "cells": 196,
+  "claimed_plaintext": null,
+  "deletion_draws": 40,
+  "deletion_quadgram": -3.3437,
+  "deletion_shuffles_as_high": 21,
+  "gap_count": 178,
+  "gap_draws": 5000,
+  "gap_peak_z": 0.7495,
+  "gap_periods": "2-28",
+  "gap_shuffles_as_high": 1505,
+  "pairs": 19110,
+  "prose_quadgram": -2.5185,
+  "reaches_prose": false,
+  "scope": "A large search is not a reading. No letter string is stored.",
+  "solved": false
+}

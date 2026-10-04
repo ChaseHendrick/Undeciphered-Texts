@@ -13,6 +13,7 @@ from engine.dagapeyeff_autokey import autokey_report
 from engine.dagapeyeff_bifid import bifid_report
 from engine.dagapeyeff_bookkey import bookkey_report
 from engine.dagapeyeff_keys import key_report
+from engine.dagapeyeff_large_swarm import large_swarm_report
 from engine.dagapeyeff_model import model_report
 from engine.dagapeyeff_patterns import pattern_report
 from engine.dagapeyeff_places import place_report
@@ -385,5 +386,22 @@ def consider_column_null() -> dict:
             "Dropping the fourth column scores -3.6511, and 77 of 80 shuffles do as well. "
             "Dropping its six repeated symbols scores -3.5794, and 58 of 80 do as well. "
             "Prose is -2.5185. The repetitive column is not filler. Refuse it."
+        ),
+    }
+
+
+def consider_large_swarm() -> dict:
+    report = large_swarm_report()
+    deletion_ok = report["reaches_prose"] and report["deletion_shuffles_as_high"] * 20 < report["deletion_draws"]
+    gap_ok = report["gap_shuffles_as_high"] * 20 < report["gap_draws"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "large_swarm_allowed": deletion_ok and gap_ok,
+        "learned": (
+            "Every pair of cells was dropped, 19,110 ways. The best is -3.3437. "
+            "Prose is -2.5185. 21 of 40 shuffled texts, given the same 19,110 drops, do as well. "
+            "Repeat gaps at periods 2 through 28 peak at a z of 0.7495. "
+            "1,505 of 5,000 shuffles peak at least that high. Refuse both."
         ),
     }
