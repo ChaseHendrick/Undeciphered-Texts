@@ -48,7 +48,7 @@ Bob's format 5 file is still the incumbent. A 128-row manifest, seed 20261005, 3
 
 `engine.pen_pressure` reads only a supplied heavy/light channel or supplied pinprick positions. Bacon's a-form is light and the b-form is heavy. Ink with no pressure record returns no text. See `docs/logs/pen-pressure-2026-10-04.md`. Do not infer a hidden meaning from a transcription.
 
-`engine.dagapeyeff_swarm` is the non-German, non-K4 swarm. The 1939 challenge is 196 Polybius cells in a 14 by 14 grid. The book's own example is only 89 cells, so its chi-square is a direction. Against 2,000 English strings of 196 letters, none is as flat and none uses as few distinct letters. One best cell change leaves it outside that range. It takes 4 changes to enter the range and 14 to reach the median. See `docs/logs/dagapeyeff-swarm-2026-10-04.md`. Do not keep those changed cells or treat the grid as a reading.
+`engine.dagapeyeff_swarm` is the non-German, non-K4 swarm. The 1939 challenge is 196 Polybius cells in a 14 by 14 grid. The book's own example is only 89 cells, so its chi-square is a direction. Against 2,000 English strings of 196 letters, none is as flat and none uses as few distinct letters. One best cell change leaves it outside that range. It takes 4 changes to enter the range and 14 to reach the median. See `docs/logs/dagapeyeff-swarm-2026-10-04.md`. Do not keep those changed cells or treat the grid as a reading. The later swarms are briefed on one page, `docs/logs/swarm-board-2026-10-04.md`. Search that page with `engine.dagapeyeff_board.search_board`. Every card on it is a refusal.
 
 `engine.dagapeyeff_more` continues that swarm. 200 workers share 2,457 alphabet shapes. The friendliest is Italian with M and U merged, score 14.05, and 0 of 200 English texts given the same menu are that bad. Reversing the last three digits of each group is the only other order that stays on the square, and it fails the book's solved example. Do not adopt it as plaintext.
 
@@ -128,7 +128,7 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_columns` asks whether another reading order is where those shapes went. A width-27 downward read matches 544 windows. The best of 25,000 column orders matches 581. Four of eight shuffled grids, given the same search, reach 581. `engine.solvers.dagapeyeff` refuses it. Do not store a letter string. See `docs/logs/dagapeyeff-columns-2026-10-04.md`.
 
-`engine.dagapeyeff_cache` writes a finished heavy score to `engine/data/swarm_cache`. The hash reads that file. It does not run the search again. The chain ends at `6b5e65d495d3e00ebbccb3cfcbfaf47215f7f5c3cb090845d21cc7c50387800f`.
+`engine.dagapeyeff_cache` writes a finished heavy score to `engine/data/swarm_cache`. The hash reads that file. It does not run the search again. `engine.dagapeyeff_board` is the one-page brief. The chain ends at `0aadba2865bc04b98ced5384ba5e9396b795813ba4e79c3eee01e287723e8524`.
 
 ## Current user direction
 

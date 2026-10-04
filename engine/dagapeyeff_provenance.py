@@ -18,6 +18,7 @@ from typing import Any
 from engine.corrections import load_corrections
 from engine.dagapeyeff_balls import ball_report
 from engine.dagapeyeff_bifid import bifid_report
+from engine.dagapeyeff_board import board
 from engine.dagapeyeff_columns import column_report
 from engine.dagapeyeff_convert import convert_report
 from engine.dagapeyeff_edits import edit_report
@@ -76,6 +77,7 @@ def provenance_report() -> dict:
         ("running", running_report()),
         ("patterns", pattern_report()),
         ("columns", column_report()),
+        ("board", board()),
     )
     entries = []
     previous = None
