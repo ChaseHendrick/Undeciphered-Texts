@@ -236,7 +236,7 @@ def _frozen_teacher_probabilities(train_x, models, *, input_width, hidden, class
 
 def fit_residual_network(train_x, train_y, validation_x, validation_y, *, hidden=64, epochs=160, seed=20261003,
                          initial_model=None, learning_rate=.01, teacher_models=None,
-                         distillation_strength=0., distillation_temperature=2.):
+                         distillation_strength=0., distillation_temperature=2., cost_sensitive=False):
     """Supervised, curriculum and paired-dropout training with validation checkpoints."""
     _validate_learning_rate(learning_rate)
     _validate_distillation(distillation_strength, distillation_temperature)
@@ -278,6 +278,19 @@ def fit_residual_network(train_x, train_y, validation_x, validation_y, *, hidden
         best_loss = _nll(probabilities, vy)
         best_correct = int((probabilities.argmax(axis=1) == vy).sum())
         best = initial
+    if not isinstance(cost_sensitive, bool):
+        raise ValueError("cost_sensitive must be an explicit boolean")
+    factors = np.ones(classes, dtype=float)
+    if cost_sensitive:
+        if initial is None:
+            raise ValueError("cost-sensitive weights need the incumbent's validation errors")
+        predicted = _softmax(network_logits(v, initial)).argmax(axis=1)
+        for label in range(classes):
+            mask = vy == label
+            if not int(mask.sum()):
+                raise ValueError("cost-sensitive weights need every class in validation")
+            errors = 1.0 - float((predicted[mask] == label).mean())
+            factors[label] = 1.0 + errors
     views = np.concatenate((normalized, normalized))
     view_labels = np.concatenate((y, y))
     pairs = [(i, i + len(x)) for i in range(len(x))]
@@ -291,7 +304,7 @@ def fit_residual_network(train_x, train_y, validation_x, validation_y, *, hidden
     for epoch in range(1, epochs + 1):
         a0 = np.tanh(normalized @ parameters["w0"] + parameters["b0"])
         clean_logits = (np.tanh(a0 @ parameters["w1"] + parameters["b1"]) + a0) @ parameters["w2"] + parameters["b2"]
-        weights = curriculum_weights(y, clean_logits, epoch=epoch, total_epochs=epochs)
+        weights = curriculum_weights(y, clean_logits, epoch=epoch, total_epochs=epochs) * factors[y]
         _, gradients = residual_gradients(parameters, views, view_labels, dropout=.05, rng=rng,
             sample_weights=np.concatenate((weights, weights)), paired_rows=pairs, consistency_weight=.15,
             **teacher_options)
@@ -468,7 +481,7 @@ def promotion_allowed(benchmark_accuracy, baseline_accuracy, overall_accuracy, p
 def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WEIGHTS_PATH,
                  expanded_families=False, hidden=64, ensemble_size=3, warm_start=False, learning_rate=.01,
                  distillation_strength=0., distillation_temperature=2., feature_version=None,
-                 more_prose=False):
+                 more_prose=False, cost_sensitive=False):
     """One local pass. Hyperparameters and calibration never use Doyle scores."""
     started = time.perf_counter()
     _validate_learning_rate(learning_rate)
@@ -488,6 +501,10 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
         raise ValueError("ensemble_size must be between 1 and 5")
     if not isinstance(train_per_class, int) or isinstance(train_per_class, bool) or not 8 <= train_per_class <= 256:
         raise ValueError("train_per_class must be between8 and256")
+    if not isinstance(cost_sensitive, bool):
+        raise ValueError("cost_sensitive must be an explicit boolean")
+    if cost_sensitive and not warm_start:
+        raise ValueError("cost-sensitive weights require warm_start=True")
     if not isinstance(more_prose, bool):
         raise ValueError("more_prose must be an explicit boolean")
     full = letters_az(load_training_prose(TRAIN_PATH))
@@ -550,7 +567,7 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
             "distillation_temperature": distillation_temperature}
     models = [fit_residual_network(x, y, vx, vy, hidden=hidden, epochs=epochs, seed=ROUTER_SEED + i * 997,
                                   initial_model=previous["models"][i] if warm_start else None,
-                                  learning_rate=learning_rate, **teacher_options)
+                                  learning_rate=learning_rate, cost_sensitive=cost_sensitive, **teacher_options)
               for i in range(ensemble_size)]
     cx, cy = _samples(calibration, families, 24, ROUTER_SEED + 303, english, tables, version=version)
     c_logits = np.mean([network_logits(cx, model) for model in models], axis=0)
@@ -625,6 +642,7 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
                "baseline_correct": baseline_correct, "benchmark_total": len(benchmark_y),
                "promoted": promoted, "predecessor_comparison": predecessor_comparison, "train_per_class": train_per_class, "epochs": epochs,
                "hidden":hidden, "ensemble_size":ensemble_size, "more_prose": more_prose,
+               "cost_sensitive": cost_sensitive,
                "calibration_sha256": payload["calibration_sha256"],
                "train_sha256": payload["train_sha256"], "validation_sha256": payload["validation_sha256"], "heldout_sha256": payload["heldout_sha256"]}
     metrics["training_types"] = models[0]["training_types"]

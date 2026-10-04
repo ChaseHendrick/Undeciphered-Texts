@@ -9,6 +9,7 @@ from __future__ import annotations
 from engine.bob_branch import bob_branch_report
 from engine.dagapeyeff_clump import clump_report
 from engine.dagapeyeff_widths import widths_report
+from engine.dagapeyeff_hole import hole_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -23,6 +24,7 @@ def paper_notes() -> dict:
     branch = bob_branch_report()
     clump = clump_report()
     widths = widths_report()
+    hole = hole_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -129,6 +131,21 @@ def paper_notes() -> dict:
                 f"Width 3 moves it to {widths['control_width_3_chi']} and width 131 moves it to {widths['control_width_131_chi']}."
             ),
             "do_not_claim": "A width that stays on the square is not a reading, and these widths hurt the solved exercise.",
+        },
+        {
+            "id": "frequency-hole",
+            "kind": "constraint",
+            "tags": ["column-14", "gap", "period-7"],
+            "statement": (
+                f"Occupied counts jump by {hole['gap']} between {hole['low_max']} and {hole['high_min']}. "
+                f"All {hole['low_cells']} low-side cells sit in column 14. "
+                f"{hole['already_recorded_cells']} were already recorded. "
+                f"The other {hole['new_cells']}, given those, sit there in "
+                f"{hole['step_numerator']} of {hole['step_denominator']} placements. "
+                f"Count {hole['high_min']} does not follow: {hole['high_in_named_column']} of {hole['high_cells']}. "
+                f"Lag 7 is {hole['period7_as_high']} of {hole['period7_draws']} shuffles."
+            ),
+            "do_not_claim": "A rare column placement is not a reading, and an ordinary period is not a key.",
         },
     ]
     return {

@@ -139,6 +139,9 @@ A later pass kept the 142 features, warmed up for 80 epochs at learning rate 0.0
 
 `engine/data/neural_train_public.txt` adds 1,916,398 public-domain letters. `cipher_statistics_v9` adds the five missing M-209 wheel lags and one contrast. A cold fit on that prose scored 427 of 480 and 188 of 204. A warm start onto the new features scored 432 of 480 and 191 of 204. Both lose the older benchmark, so the saved weights stay. See [the note](logs/bob-prose-2026-10-04.md).
 
+A later cost-sensitive warm start, using only the incumbent's validation misses, scored 430 of 480 and 192 of 204. It was not saved. See [the hole note](logs/dagapeyeff-hole-2026-10-04.md).
+
+
 
 ## Use and reproducibility
 

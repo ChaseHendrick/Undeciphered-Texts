@@ -38,6 +38,7 @@ from engine.dagapeyeff_solver_swarm import solver_swarm_report
 from engine.dagapeyeff_classic_swarm import classic_swarm_report
 from engine.dagapeyeff_clump import clump_report
 from engine.dagapeyeff_widths import widths_report
+from engine.dagapeyeff_hole import hole_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -153,6 +154,28 @@ def consider_widths() -> dict:
             "Width 131 scores 10.63, and 1227 of 2000 random re-pairings are at least that flat. "
             "On the solved exercise, width 3 moves the score from 4.14 to 29.56 and width 131 moves it to 42.13. "
             "Refuse the widths."
+        ),
+    }
+
+
+def consider_hole() -> dict:
+    report = hole_report()
+    step = report["step_numerator"] / report["step_denominator"]
+    period = report["period7_as_high"] / report["period7_draws"]
+    allowed = step < 0.05 and period < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "hole_allowed": allowed,
+        "learned": (
+            f"The occupied counts jump by {report['gap']} between {report['low_max']} and {report['high_min']}, "
+            f"the unique largest gap. All {report['low_cells']} cells on the low side sit in column 14. "
+            f"Five of them were already recorded. The new {report['new_cells']} cells, given those five, "
+            f"sit there in {report['step_numerator']} of {report['step_denominator']} placements. "
+            f"The {report['high_cells']} cells of count {report['high_min']} do not follow: "
+            f"{report['high_in_named_column']} sit in that column. "
+            f"The period-7 pair rate is {report['period7_as_high']} of {report['period7_draws']} shuffles. "
+            "The new cells clear 5 percent. The period does not. Neither is a reading."
         ),
     }
 

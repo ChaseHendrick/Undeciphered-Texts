@@ -1,0 +1,33 @@
+{
+  "already_recorded_cells": 5,
+  "claimed_plaintext": null,
+  "full_denominator": 171205042680,
+  "full_numerator": 11,
+  "gap": 6,
+  "high_cells": 9,
+  "high_in_named_column": 0,
+  "high_min": 9,
+  "low_cells": 8,
+  "low_in_named_column": 8,
+  "low_max": 3,
+  "new_cells": 3,
+  "occupied": [
+    1,
+    2,
+    3,
+    9,
+    11,
+    12,
+    14,
+    15,
+    16,
+    17,
+    20
+  ],
+  "period7_as_high": 1088,
+  "period7_draws": 2000,
+  "scope": "Column 14 was named in 2014. The low side is the unique largest frequency gap, not a cutoff slid until the count looked rare. The period-7 pair rate is a published claim, not a lag chosen here. No letter string is stored.",
+  "solved": false,
+  "step_denominator": 54435,
+  "step_numerator": 4
+}
