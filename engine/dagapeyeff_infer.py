@@ -41,7 +41,9 @@ def infer(records: list[dict] | None = None) -> dict:
         if missing:
             raise ValueError(f"inference cites a missing card: {missing}")
         refused = all(
-            by_id[name]["verdict"] == "refuse" and by_id[name]["solved"] is False
+            by_id[name]["verdict"] == "refuse"
+            and by_id[name]["solved"] is False
+            and by_id[name]["claimed_plaintext"] is None
             for name in spec["supports"]
         )
         classes.append({

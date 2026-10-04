@@ -49,13 +49,28 @@ def _rejections(job: dict, closed: set[str]) -> list[dict]:
     reasons = []
     if job["family"] in closed:
         reasons.append({"member": "class-guard", "reason": "This job is inside a closed class."})
-    if job.get("kind") != "check" and (job["score"] != "word" or not job["changes_cells"]):
+    if job.get("kind") == "check":
+        if job.get("score") != "check" or job.get("changes_cells"):
+            reasons.append({"member": "closer", "reason": "A check cannot change the cells or ask for a word score."})
+    elif job["score"] != "word" or not job["changes_cells"]:
         reasons.append({"member": "closer", "reason": "The goal is a word score on cells this rule changes."})
     if not job["has_null"]:
         reasons.append({"member": "null-keeper", "reason": "A job with no shuffled control cannot be a goal."})
     if job["budget"] != "small":
         reasons.append({"member": "budget", "reason": "This family is already finished, or it is a larger copy of one that failed."})
     return reasons
+
+
+def judge_job(job: dict, records: list[dict] | None = None) -> dict:
+    """Whether the members refuse this one job. A refusal is not a reading."""
+    drawn = infer(records)
+    reasons = _rejections(job, _closed_families(drawn))
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "rejected": bool(reasons),
+        "by": reasons,
+    }
 
 
 def _group_digits() -> list[dict]:

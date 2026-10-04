@@ -16,6 +16,7 @@ import math
 from typing import Any
 
 from engine.corrections import load_corrections
+from engine.dagapeyeff_adversary import adversary_report
 from engine.dagapeyeff_balls import ball_report
 from engine.dagapeyeff_bifid import bifid_report
 from engine.dagapeyeff_board import board
@@ -84,6 +85,7 @@ def provenance_report() -> dict:
         ("infer", infer()),
         ("foresight", foresight()),
         ("checks", checks_report()),
+        ("adversary", adversary_report()),
     )
     entries = []
     previous = None
