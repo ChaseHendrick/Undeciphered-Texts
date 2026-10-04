@@ -42,11 +42,12 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("autokey", "291d0e3ead0bb0903b5a93f7851c44dc9f491060cc3a62a8302759af2a863306"),
                 ("digit-routes", "97547066e834b8423c9edee4d893b838baa6b8a22d530d821c0eb2306f1577af"),
                 ("angles", "b8a3311101662a1c4d86365b052271bc112878168f513353cbd4845112e061d0"),
+                ("delay", "56016bdaf30c3aef8ebcfb956b21a3af8605b88d526667a439d5d476a4765380"),
             ],
         )
         self.assertEqual(
             report["chain_sha256"],
-            "33618e26ca3fc99023cc46604882ad0e2670a24589b3341f06e8a12e7503c961",
+            "1e233f8630b2b3dd513d34426b6ccb1d36d77bb6365739bec6477366d87e7ed6",
         )
         self.assertEqual(report["entries"][0]["chain_sha256"], report["entries"][0]["content_sha256"])
         self.assertNotEqual(report["entries"][1]["chain_sha256"], report["entries"][1]["content_sha256"])

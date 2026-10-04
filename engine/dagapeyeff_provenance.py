@@ -24,6 +24,7 @@ from engine.dagapeyeff_bifid import bifid_report
 from engine.dagapeyeff_board import board
 from engine.dagapeyeff_columns import column_report
 from engine.dagapeyeff_convert import convert_report
+from engine.dagapeyeff_delay import delay_report
 from engine.dagapeyeff_digit_routes import digit_route_report
 from engine.dagapeyeff_checks import checks_report
 from engine.dagapeyeff_edits import edit_report
@@ -92,6 +93,7 @@ def provenance_report() -> dict:
         ("autokey", autokey_report()),
         ("digit-routes", digit_route_report()),
         ("angles", angle_report()),
+        ("delay", delay_report()),
     )
     entries = []
     previous = None

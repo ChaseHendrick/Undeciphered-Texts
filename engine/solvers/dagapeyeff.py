@@ -16,6 +16,7 @@ from engine.dagapeyeff_model import model_report
 from engine.dagapeyeff_patterns import pattern_report
 from engine.dagapeyeff_period4 import period4_report
 from engine.dagapeyeff_columns import column_report
+from engine.dagapeyeff_delay import delay_report
 from engine.dagapeyeff_digit_routes import digit_route_report
 from engine.dagapeyeff_regroup import regroup_report
 from engine.dagapeyeff_running import running_report
@@ -225,5 +226,21 @@ def consider_angles() -> dict:
             "Seven unused cells put 4 in one row, and 29450 of 480700 placements do that. "
             "10 of 98 digraphs repeat a cell, and 363 of 400 shuffles have as few repeats, so it is not Playfair. "
             "Refuse all three."
+        ),
+    }
+
+
+def consider_delay() -> dict:
+    report = delay_report()
+    rare = report["delay_shuffles_as_high"] * 20 < report["delay_draws"]
+    allowed = report["reaches_prose"] and rare and report["progressive_shuffles_as_high"] == 0
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "delay_allowed": allowed,
+        "learned": (
+            "Rotating the row digits against the column digits, the best delay is 79 and scores -3.2652. "
+            "Prose is -2.5185. 3 of 200 shuffles do as well. "
+            "A progressive shift scores -3.6491, and 4 of 200 shuffles do as well. Refuse both."
         ),
     }
