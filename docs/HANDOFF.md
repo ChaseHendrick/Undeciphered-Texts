@@ -62,6 +62,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_column` checks the column other people marked. All 3 symbols that appear once, and all 5 cells of symbols that appear at most twice, sit in column 14. Seven legal pairs are absent, not three: 61, 73, 95, 01, 02, 03, 05. Deleting column 14 is the worst of the 14 columns (45.57). Do not adopt a published letter string. See `docs/logs/dagapeyeff-others-2026-10-04.md`.
 
+`engine.dagapeyeff_methods` ranks measurements on 37,000 trials. The rare-column search still fires after it is allowed to shop widths (0 of 10,000). Full-length letter counts still reject English (0 of 10,000, while the solved example scores 4.14). Printed-order digrams, either half alone, and symbol spacing do not. A 10,000-draw English maximum is 32.65 against the challenge's 34.23, so the gap is small. Do not store a letter string. See `docs/logs/dagapeyeff-methods-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
