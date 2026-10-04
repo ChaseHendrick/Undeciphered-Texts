@@ -30,3 +30,12 @@ Of 120 ways to rearrange the five digits inside every printed group, only two st
 
 The cells are peaked (index of coincidence 0.0697), so this is not a flattened repeating-key cipher. The strongest column rhythm is matched by 20 of 200 shuffles of the same cells. No period is claimed. No plaintext is stored.
 
+## Dummy letters, his own rule
+
+The book says a dummy may be every third, fourth, or fifth letter. The swarm tried every period from 2 through 31 and every phase: 495 schedules. Each schedule was one worker process. Eighteen bands rechecked all 495 and agreed on the winner.
+
+Dropping every second cell (period 2, phase 0) leaves 98 cells and scores 11.33. That is the friendliest of the 495. The book's own three periods score 18.49, 18.77, and 20.26. English text of 196 letters, allowed to pick the friendliest of the same 495 deletions, has a median best score of 3.61. None of 80 such texts was as flat as 11.33. The solved example in the book, given the same menu, still scores 2.20.
+
+Deleting every kth digit, then repairing the pairs, never stays on the 5 by 5 square: 0 of 495. A dummy digit knocks the row alphabet into the column alphabet. No letter string is stored.
+
+

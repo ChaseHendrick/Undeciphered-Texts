@@ -56,6 +56,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_life.search_life` reads `engine/data/dagapeyeff_life.json`. Ask it for `87808`, `Rachel`, or `1969`. Names from 1939 and numbers from his life were tried as keys and lost to random keys of the same size. Do not store a string from that test.
 
+`engine.dagapeyeff_nulls` tries the book's dummy-letter rule at every period from 2 to 31. 495 workers agree the best is still flat (11.33 against an English cherry-pick median of 3.61). Deleting digits never stays on the square. Not a reading.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
