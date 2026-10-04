@@ -183,6 +183,7 @@ chosen-sentence checks from these recovered-output controls.
 | `engine/dagapeyeff_split.py` | Split crowded cells 91, 75, and 81 into two labels | `tests/test_dagapeyeff_split.py`: best cut 0.7002 against English 1.0658; 15 of 20 shuffled cuts match it | The substitution gate refuses the pairs (170 of 200). Not a reading. [Note](logs/dagapeyeff-split-2026-10-04.md). |
 | `engine/dagapeyeff_battery.py` | 1,000 pre-specified attacks, each against 500 order shuffles and 500 re-pairings | `tests/test_dagapeyeff_battery.py`: order hits are only the rare-cell pile at widths 7, 14, and 28; re-pair hits are the glue, plus windows that see it | Not a reading. [Note](logs/dagapeyeff-battery-2026-10-04.md). |
 | `engine/dagapeyeff_symbols.py` | Whether one cell, not several rare cells, owns a column | `tests/test_dagapeyeff_symbols.py`: cell 82 piles 6 high and 738 of 20,000 grids match; the rare-cell pile of 5 is matched by 0 | One repeating cell is ordinary. Not a reading. [Note](logs/dagapeyeff-symbols-2026-10-04.md). |
+| `engine/dagapeyeff_check.py` | 33 predictors for the rare column as a check digit of its row | `tests/test_dagapeyeff_check.py`: a planted sum scores 14/14; the real column scores 6, and 20,000 of 20,000 shuffled columns also reach 6 | Not a check digit. Not a reading. [Note](logs/dagapeyeff-check-2026-10-04.md). |
 
 ## Out of scope
 
