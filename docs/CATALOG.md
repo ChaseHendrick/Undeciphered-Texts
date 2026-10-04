@@ -185,6 +185,7 @@ chosen-sentence checks from these recovered-output controls.
 | `engine/dagapeyeff_symbols.py` | Whether one cell, not several rare cells, owns a column | `tests/test_dagapeyeff_symbols.py`: cell 82 piles 6 high and 738 of 20,000 grids match; the rare-cell pile of 5 is matched by 0 | One repeating cell is ordinary. Not a reading. [Note](logs/dagapeyeff-symbols-2026-10-04.md). |
 | `engine/dagapeyeff_check.py` | 33 predictors for the rare column as a check digit of its row | `tests/test_dagapeyeff_check.py`: a planted sum scores 14/14; the real column scores 6, and 20,000 of 20,000 shuffled columns also reach 6 | Not a check digit. Not a reading. [Note](logs/dagapeyeff-check-2026-10-04.md). |
 | `engine/dagapeyeff_private.py` | Symbols whose every copy sits in one column | `tests/test_dagapeyeff_private.py`: 92, 93, 04, 71, and 94 account for 8 cells, all in column 13; 0 of 20,000 grids match | Period 7 is that column at half resolution. Not a reading. [Note](logs/dagapeyeff-private-2026-10-04.md). |
+| `engine/dagapeyeff_strip.py` | Delete those five symbols and score the other 188 cells | `tests/test_dagapeyeff_strip.py`: score falls from 0.5706 to 0.4174; all 10,000 other eight-cell cuts stay higher | The private symbols are not filler. Not a reading. [Note](logs/dagapeyeff-strip-2026-10-04.md). |
 
 ## Out of scope
 
