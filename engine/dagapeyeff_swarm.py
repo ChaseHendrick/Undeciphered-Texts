@@ -38,6 +38,7 @@ DBBBC EAACD BDCDD BCEDC AECAC EDC
 _ROW = set("67890")
 _COLUMN = set("12345")
 _SHUFFLES = 200
+_DRAWS = 2000
 _SEED = 20261004
 
 # 25-letter English: published A-Z rates with I and J added together, then scaled.
@@ -106,6 +107,64 @@ def digram_excess(pairs: tuple[str, ...]) -> int:
     return sum(count - 1 for count in counts.values())
 
 
+def english_calibration(draws: int = _DRAWS) -> dict:
+    """Same-length English. Chi-square grows with length, so 89 cells are not the control."""
+    alphabet = "ABCDEFGHIKLMNOPQRSTUVWXYZ"
+    if len(alphabet) != len(ENGLISH_25):
+        raise RuntimeError("25-letter alphabet and rates disagree")
+    drawn = random.Random(_SEED)
+    chis = []
+    distincts = []
+    challenge_chi = best_chi_square(challenge_pairs())
+    challenge_distinct = len(set(challenge_pairs()))
+    for _ in range(draws):
+        sample = tuple(drawn.choices(alphabet, weights=ENGLISH_25, k=196))
+        chis.append(best_chi_square(sample))
+        distincts.append(len(set(sample)))
+    ordered = sorted(chis)
+    return {
+        "draws": draws,
+        "chi_median": round(ordered[draws // 2], 2),
+        "chi_max": round(ordered[-1], 2),
+        "flatter_than_challenge": sum(1 for score in chis if score >= challenge_chi),
+        "min_distinct": min(distincts),
+        "as_narrow_as_challenge": sum(1 for count in distincts if count <= challenge_distinct),
+    }
+
+
+def edits_to_look_english(calibration: dict) -> dict:
+    """Greedy cell changes until the counts sit inside the same-length English range.
+
+    The forged cells are not returned. A frequency repair is not a plaintext.
+    """
+    cells = [row + column for row in "67890" for column in "12345"]
+    current = list(challenge_pairs())
+    ceiling = calibration["chi_max"]
+    median = calibration["chi_median"]
+    reached = {"inside_sample_max": None, "at_or_below_median": None, "one_edit_chi_square": None}
+    for step in range(1, len(current) + 1):
+        best = None
+        for index, old in enumerate(current):
+            for cell in cells:
+                if cell == old:
+                    continue
+                current[index] = cell
+                score = best_chi_square(tuple(current))
+                if best is None or score < best[0]:
+                    best = (score, index, cell)
+            current[index] = old
+        score, index, cell = best
+        current[index] = cell
+        if step == 1:
+            reached["one_edit_chi_square"] = round(score, 2)
+        if reached["inside_sample_max"] is None and score <= ceiling:
+            reached["inside_sample_max"] = step
+        if reached["at_or_below_median"] is None and score <= median:
+            reached["at_or_below_median"] = step
+            break
+    return reached
+
+
 def search_dagapeyeff() -> dict:
     """Compare the challenge with the book's own example. Claim no plaintext."""
     challenge = challenge_pairs()
@@ -122,23 +181,35 @@ def search_dagapeyeff() -> dict:
     mean = sum(shuffle_excess) / len(shuffle_excess)
     variance = sum((item - mean) ** 2 for item in shuffle_excess) / len(shuffle_excess)
     z_score = 0.0 if variance == 0 else (observed - mean) / variance ** 0.5
+    calibration = english_calibration()
+    repairs = edits_to_look_english(calibration)
     return {
         "claimed_plaintext": None,
         "solved": False,
         "challenge_pairs": len(challenge),
+        "control_pairs": len(control),
         "distinct_cells": len(set(challenge)),
         "grid": f"{int(len(challenge) ** 0.5)} by {int(len(challenge) ** 0.5)}"
         if int(len(challenge) ** 0.5) ** 2 == len(challenge) else "not a square grid",
         "challenge_chi_square": round(challenge_chi, 2),
         "control_chi_square": round(control_chi, 2),
         "challenge_closer_to_english": challenge_chi < control_chi,
+        "english_draws": calibration["draws"],
+        "english_chi_median": calibration["chi_median"],
+        "english_chi_max": calibration["chi_max"],
+        "flatter_than_challenge": calibration["flatter_than_challenge"],
+        "english_min_distinct": calibration["min_distinct"],
+        "as_narrow_as_challenge": calibration["as_narrow_as_challenge"],
+        "one_edit_chi_square": repairs["one_edit_chi_square"],
+        "edits_to_enter_sample": repairs["inside_sample_max"],
+        "edits_to_median": repairs["at_or_below_median"],
         "digram_excess": observed,
         "shuffle_mean_excess": round(mean, 2),
         "digram_z": round(z_score, 2),
         "shuffles": _SHUFFLES,
         "scope": (
-            "No letter assignment and no transposition of these cells matches "
-            "English as well as the book's own example. A second cipher, or an "
-            "error in the encipherment, is not ruled out. No plaintext is claimed."
+            "Same-length English is the control that counts. The book's example "
+            "is shorter, so its chi-square is only a direction. Changing a cell "
+            "to improve the count is not a reading. No plaintext is claimed."
         ),
     }

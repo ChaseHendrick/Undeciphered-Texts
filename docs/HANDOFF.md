@@ -48,7 +48,7 @@ Bob's format 5 file is still the incumbent. A 128-row manifest, seed 20261005, 3
 
 `engine.pen_pressure` reads only a supplied heavy/light channel or supplied pinprick positions. Bacon's a-form is light and the b-form is heavy. Ink with no pressure record returns no text. See `docs/logs/pen-pressure-2026-10-04.md`. Do not infer a hidden meaning from a transcription.
 
-`engine.dagapeyeff_swarm` is the non-German, non-K4 swarm. The 1939 challenge is 196 Polybius cells in a 14 by 14 grid. Best English letter counts score 34.23, against 4.14 for the book's own solved example. Digram excess is below a 200-shuffle mean. See `docs/logs/dagapeyeff-swarm-2026-10-04.md`. Do not treat that grid as a reading.
+`engine.dagapeyeff_swarm` is the non-German, non-K4 swarm. The 1939 challenge is 196 Polybius cells in a 14 by 14 grid. The book's own example is only 89 cells, so its chi-square is a direction. Against 2,000 English strings of 196 letters, none is as flat and none uses as few distinct letters. One best cell change leaves it outside that range. It takes 4 changes to enter the range and 14 to reach the median. See `docs/logs/dagapeyeff-swarm-2026-10-04.md`. Do not keep those changed cells or treat the grid as a reading.
 
 ## Current user direction
 

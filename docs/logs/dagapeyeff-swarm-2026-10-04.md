@@ -11,3 +11,11 @@ The swarm then asks whether those cells can be English. Letter counts do not car
 Adjacent cells repeat 65 times. Two hundred shuffles of the same cells, seed 20261004, average 67.84. The challenge sits 0.74 standard deviations below that mean, not above it.
 
 A transposition of a single Polybius reading cannot cross this gap. A second cipher on top, or a mistake in the encipherment, is not ruled out. No plaintext is stored. A hill-climb that spells a few words in some language is not a confirmation, and none was run.
+
+## Same length, then repairs
+
+The book's example is 89 cells. Chi-square grows with length, so 4.14 against 34.23 was only a direction. The comparison that counts is 2,000 strings of 196 letters drawn from the same English rates, seed 20261004.
+
+None of those 2,000 scored 34.23 or worse. The worst of them scored 24.17. Their median was 7.44. None used 18 or fewer distinct letters. The narrowest used 19.
+
+Changing one cell, whichever change improves the count the most, only moves the challenge from 34.23 to 30.65. It takes 4 such changes to get inside the worst English draw, and 14 to reach the median. Those changed cells are not kept. Four slips is not the one mistake a tired author makes, and a count that has been edited until it looks English is not a reading.
