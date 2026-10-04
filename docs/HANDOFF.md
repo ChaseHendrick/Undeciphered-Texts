@@ -46,6 +46,10 @@ Bob's format 5 file is still the incumbent. A 128-row manifest, seed 20261005, 3
 
 `engine.pooled_substitution` is the separate one-to-one substitution constraint from the Bob research note. It is not a Transformer and it does not touch Bob. On IASRZ Nr. 129 and on K4, a key that is allowed to collapse letters outscores the legal permutation under both English and Grimm quadgrams. K4 under Grimm does not beat a shuffle. See `docs/logs/pooled-substitution-2026-10-04.md`. Do not describe those scores as plaintext.
 
+`engine.pen_pressure` reads only a supplied heavy/light channel or supplied pinprick positions. Bacon's a-form is light and the b-form is heavy. Ink with no pressure record returns no text. See `docs/logs/pen-pressure-2026-10-04.md`. Do not infer a hidden meaning from a transcription.
+
+`engine.dagapeyeff_swarm` is the non-German, non-K4 swarm. The 1939 challenge is 196 Polybius cells in a 14 by 14 grid. Best English letter counts score 34.23, against 4.14 for the book's own solved example. Digram excess is below a 200-shuffle mean. See `docs/logs/dagapeyeff-swarm-2026-10-04.md`. Do not treat that grid as a reading.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
