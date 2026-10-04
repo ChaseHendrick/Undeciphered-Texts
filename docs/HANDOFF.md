@@ -30,6 +30,8 @@ The September 2026 master list has already credited the MVUEH, FMNGI, AWTZK, ZNL
 
 The next swarm stayed inside the Truppenschlüssel residue and did not search a square. IASRZ Nr. 129 and 130 share the prefix `IASRZEDSTB`, and the bodies are odd once the designator is removed. DSZPZ and DEZPS, both headed 1735, align at 33 letters against a 20-draw null maximum of 15. SSKFV and HOHOX share the suffix `LMOTIYIZ`. See `docs/logs/ts-close-pairs-2026-10-04.md`. Do not describe that agreement as a reading.
 
+A follow-up climb on the even windows, including one-letter endpoint drops, beat a shuffled control on all 7 windows. Both endpoint drops beat it, so the Grimm trigram scorer is not choosing a text. No plaintext was stored. See `docs/logs/ts-pair-climb-2026-10-04.md`. Do not promote those scores to a key.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.

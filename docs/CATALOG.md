@@ -158,6 +158,7 @@ chosen-sentence checks from these recovered-output controls.
 | `engine/k4_quagmire_panel.py` | Decrypt K4 under Quagmire I-IV with the three published keywords, 29 indicators, and every indicator column | `tests/test_k4_innovative_swarm.py`: 11310 decrypts, 0 crib hits, solved stays false | Not a search over other indicators. [Note](k4-focus/innovative-swarm-2026-10-04.md). |
 | `engine/lxaca_neighborhood.py` | Decipher Enigma message LXACA under the published keys for 1 July and 5 through 9 July, plus one-letter edits of the 5 July indicator | `tests/test_lxaca_neighborhood.py`: DEROP start WER, WEUWY starts SPE and SPF, 152 edits, no claimed plaintext | The 4 July key is not on the key page and is not searched. [Note](logs/lxaca-neighborhood-2026-10-04.md). |
 | `engine/ts_close_pairs.py` | Measure the IASRZ, 1735, and shared-ending Truppenschlüssel pairs | `tests/test_ts_close_pairs.py`: shared prefix IASRZEDSTB, 33 alignment matches against a null of 15, suffix LMOTIYIZ, solved stays false | Does not search a square and does not pad an odd body. [Note](logs/ts-close-pairs-2026-10-04.md). |
+| `engine/ts_pair_climb.py` | Hill-climb even two-square windows of those pairs and compare each score with a shuffle | `tests/test_ts_pair_climb.py`: 7 of 7 beat the shuffle, both endpoint drops beat it, no plaintext stored | Grimm trigram counts are not a military reading. [Note](logs/ts-pair-climb-2026-10-04.md). |
 
 ## Out of scope
 
