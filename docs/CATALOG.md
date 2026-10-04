@@ -156,6 +156,7 @@ chosen-sentence checks from these recovered-output controls.
 | `engine/k4_keyword_panel.py` | Decrypt K4 under PALIMPSEST, ABSCISSA, and KRYPTOS with Playfair, Porta, Gromark, and two-square | `tests/test_k4_keyword_panel.py`: Porta tried 3, the other methods rejected odd length or a missing primer, zero crib hits | Not a dictionary search. [Note](k4-focus/keyword-panel-2026-10-04.md). |
 | `engine/k4_gromark_obstruction.py` | Show that in-place ACA Gromark cannot place the public K4 cribs for any keyword, including after the three published Myszkowski keys | `tests/test_k4_innovative_swarm.py`: K4 blocks on F, K, P; a real Gromark crib message is not blocked; periodic Gromark crib hits are 0 | Does not cover a shift outside digits 0..9 or other transpositions. [Note](k4-focus/innovative-swarm-2026-10-04.md). |
 | `engine/k4_quagmire_panel.py` | Decrypt K4 under Quagmire I-IV with the three published keywords, 29 indicators, and every indicator column | `tests/test_k4_innovative_swarm.py`: 11310 decrypts, 0 crib hits, solved stays false | Not a search over other indicators. [Note](k4-focus/innovative-swarm-2026-10-04.md). |
+| `engine/lxaca_neighborhood.py` | Decipher Enigma message LXACA under the published keys for 1 July and 5 through 9 July, plus one-letter edits of the 5 July indicator | `tests/test_lxaca_neighborhood.py`: DEROP start WER, WEUWY starts SPE and SPF, 152 edits, no claimed plaintext | The 4 July key is not on the key page and is not searched. [Note](logs/lxaca-neighborhood-2026-10-04.md). |
 
 ## Out of scope
 

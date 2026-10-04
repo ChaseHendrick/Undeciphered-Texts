@@ -22,6 +22,12 @@ K4 swarm, all with `solved` false and `claimed_plaintext` null:
 
 Do not describe any of those negative results as a K4 solution. Do not replace the format 5 weights from the 16-sample probe.
 
+## Session 4 October 2026, what is close
+
+The September 2026 master list has already credited the MVUEH, FMNGI, AWTZK, ZNLZT, and WEUWY breaks. The open Enigma row that the publisher marks as one day away is LXACA, 5 July 1941, Nr. 100, 20 body letters. The key page says it does not break on 5 July and is probably 4 July traffic. No 4 July key is printed.
+
+`engine.lxaca_neighborhood` checks the published keys for 1 July and 5 through 9 July, then 152 indicator edits on the 5 July key. Controls match first: DEROP's indicator gives WER, and the corrected WEUWY indicator gives SPE. No LXACA output is claimed. One noisy 20-letter edit scores above the DEROP prefix and does not read as German. See `docs/logs/lxaca-neighborhood-2026-10-04.md`. Do not describe that score as a break. Do not search an invented 4 July key and call the result unique.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
