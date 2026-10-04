@@ -76,6 +76,8 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_routes` tries rails, diagonals, and regular deletions. Deleting every other cell scores 1.0556, close to English of length 196, but English of the remaining 98 cells scores 1.2922. 963 of 10,000 shuffled deletions match it. The rise is the shorter text. Do not store a letter string. See `docs/logs/dagapeyeff-routes-2026-10-04.md`.
 
+`engine.dagapeyeff_glue` separates the two digits. Neither stream has an order of its own (row predictability is beaten by 15,767 of 20,000 shuffles). The pairing does: score 77.36, 0 of 20,000 re-pairings. Cell 91 appears 12 times against about 3 from the totals. The unevenness is which digits share a cell, not the sequence. Do not store a letter string. See `docs/logs/dagapeyeff-glue-2026-10-04.md`.
+
 ## Current user direction
 
 The user asked for useful solvers across modern supplied-key cryptography, documented modern weaknesses, and classical searches. They also asked for stronger reverse engineering, local image OCR, a structured workflow when an unsolved cipher arrives, research into tractable targets, and a puzzle solver. Subagents are permitted.
