@@ -108,7 +108,9 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_edits` exhausts one and two count-moves. The best two-move ball reaches 27.557769, still above 24.165. A greedy path clears that line at four edits, with a ball high of 22.471061, and those cells are not kept. `engine.solvers.dagapeyeff` refuses a frequency claim with fewer than three moves, and it still marks a claim unsolved when the frequency line is cleared. Do not store a letter string. See `docs/logs/dagapeyeff-edits-2026-10-04.md`.
 
-`engine.corrections` searches `engine/data/corrections.json` (schema `corrections-1`). Append a record when a later measurement contradicts an earlier claim. Do not edit an existing record. A subagent note is not a correction until that measurement is in the repo. A search hit is a retracted claim, not a reading. Do not store a letter string. See `docs/logs/corrections-2026-10-04.md`. The provenance chain ends at `8fcc15f87d3654b05c6af67fbc0ddfd51fbbf72c08b539010e053b81f7a48923`.
+`engine.corrections` searches `engine/data/corrections.json` (schema `corrections-1`). Append a record when a later measurement contradicts an earlier claim. Do not edit an existing record. A subagent note is not a correction until that measurement is in the repo. A search hit is a retracted claim, not a reading. Do not store a letter string. See `docs/logs/corrections-2026-10-04.md`.
+
+`engine.dagapeyeff_regroup` scores the one other legal grouping, `01432`. The chi-square ball runs from 8.8291 to 8.889665, under the worst English draw. The order score is 0.7801 against English 1.0658, and 2,216 of 10,000 shuffles match the downward read of 0.8735. The book's solved example moves from 4.14 to 21.56. `engine.solvers.dagapeyeff` refuses the regrouping. Do not store a letter string. See `docs/logs/dagapeyeff-regroup-2026-10-04.md`. The provenance chain ends at `783f1415d504cea1fe30ad05373b6a5221116f3ac6de1c2f9615f98585020824`.
 
 ## Current user direction
 
