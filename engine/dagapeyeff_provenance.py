@@ -30,6 +30,7 @@ from engine.dagapeyeff_digit_routes import digit_route_report
 from engine.dagapeyeff_checks import checks_report
 from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_foresight import foresight
+from engine.dagapeyeff_groups import group_report
 from engine.dagapeyeff_infer import infer
 from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_model import model_report
@@ -96,6 +97,7 @@ def provenance_report() -> dict:
         ("angles", angle_report()),
         ("delay", delay_report()),
         ("bookkey", bookkey_report()),
+        ("groups", group_report()),
     )
     entries = []
     previous = None

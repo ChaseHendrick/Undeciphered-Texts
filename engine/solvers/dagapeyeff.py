@@ -19,6 +19,7 @@ from engine.dagapeyeff_period4 import period4_report
 from engine.dagapeyeff_columns import column_report
 from engine.dagapeyeff_delay import delay_report
 from engine.dagapeyeff_digit_routes import digit_route_report
+from engine.dagapeyeff_groups import group_report
 from engine.dagapeyeff_regroup import regroup_report
 from engine.dagapeyeff_running import running_report
 from engine.dagapeyeff_word import word_report
@@ -257,5 +258,20 @@ def consider_bookkey() -> dict:
         "learned": (
             "The book's solved exercise, slid or repeated as a key, scores -3.389. "
             "Prose is -2.5185. 61 of 100 shuffles do as well. Refuse it."
+        ),
+    }
+
+
+def consider_groups() -> dict:
+    report = group_report()
+    allowed = report["reaches_prose"] and report["shuffles_as_high"] * 20 < report["null_texts"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "groups_allowed": allowed,
+        "learned": (
+            "160 routes keep an even group in an even place. All 160 stay on the square. "
+            "The best is rail-odd-6 at -3.3582. Prose is -2.5185. "
+            "33 of 40 shuffles of those groups do as well. Refuse them."
         ),
     }
