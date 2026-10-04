@@ -25,6 +25,7 @@ from engine.solvers.dagapeyeff import (
     consider_column_null,
     consider_classic_swarm,
     consider_clump,
+    consider_widths,
     consider_delay,
     consider_depth3,
     consider_depth4,
@@ -103,6 +104,7 @@ def adversary_report() -> dict:
         consider_placed(),
         consider_repair(),
         consider_clump(),
+        consider_widths(),
         consider_branch(),
     ]
     frequency = claims[0]

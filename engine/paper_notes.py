@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from engine.bob_branch import bob_branch_report
 from engine.dagapeyeff_clump import clump_report
+from engine.dagapeyeff_widths import widths_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -21,6 +22,7 @@ def paper_notes() -> dict:
     repair = repair_report()
     branch = bob_branch_report()
     clump = clump_report()
+    widths = widths_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -113,6 +115,20 @@ def paper_notes() -> dict:
                 f"and {clump['every_window_shuffles_as_high']} of {clump['draws']} shuffles do as well."
             ),
             "do_not_claim": "A window chosen after looking is not a clump and not a reading.",
+        },
+        {
+            "id": "column-widths",
+            "kind": "negative",
+            "tags": ["widths", "131", "exercise"],
+            "statement": (
+                f"Of {widths['widths']} column widths, the fully legal ones are "
+                f"{', '.join(str(width) for width in widths['fully_legal'])}. "
+                f"Width 131 scores {widths['width_131_chi']}, and "
+                f"{widths['re_pairings_as_flat']} of {widths['draws']} random re-pairings are at least that flat. "
+                f"On the solved exercise the printed score is {widths['control_printed_chi']}. "
+                f"Width 3 moves it to {widths['control_width_3_chi']} and width 131 moves it to {widths['control_width_131_chi']}."
+            ),
+            "do_not_claim": "A width that stays on the square is not a reading, and these widths hurt the solved exercise.",
         },
     ]
     return {

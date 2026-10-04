@@ -37,6 +37,7 @@ from engine.dagapeyeff_running import running_report
 from engine.dagapeyeff_solver_swarm import solver_swarm_report
 from engine.dagapeyeff_classic_swarm import classic_swarm_report
 from engine.dagapeyeff_clump import clump_report
+from engine.dagapeyeff_widths import widths_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -134,6 +135,24 @@ def consider_clump() -> dict:
             "Six of the nine 72 pairs sit in the last four rows. "
             "That one window is 35 of 2000 shuffles, and it was chosen after looking. "
             "Every window of that height is 268 of 2000. Refuse the clump."
+        ),
+    }
+
+
+def consider_widths() -> dict:
+    report = widths_report()
+    rare = report["re_pairings_as_flat"] * 20 < report["draws"]
+    helped = report["control_width_3_chi"] <= report["control_printed_chi"]
+    allowed = rare and helped
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "widths_allowed": allowed,
+        "learned": (
+            "Of 392 column widths, only 1, 3, 131, and 392 keep every pair on the square. "
+            "Width 131 scores 10.63, and 1227 of 2000 random re-pairings are at least that flat. "
+            "On the solved exercise, width 3 moves the score from 4.14 to 29.56 and width 131 moves it to 42.13. "
+            "Refuse the widths."
         ),
     }
 

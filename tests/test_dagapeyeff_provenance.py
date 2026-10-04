@@ -37,7 +37,7 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("board", "3b39a845596491cb92c951d67d82ce49e5773379c082cc005c978c2a80b527a9"),
                 ("infer", "c67768bd2e358814d7b1faea635b909637f2eb2ca249c6053f6889e958c409c0"),
                 ("foresight", "48ceb2bf1c6010816c96eb483fccd9dc5609748da14cb459b638f94f94a29e10"),
-                ("checks", "022025a176f5ee84a2d45ae683e03276ca593e743ca6cd44ad51463e1f2b4716"),
+                ("checks", "96a5b1923e9b66190a4226b1149e48a7a8d350a664353b1d16d68060194b09f1"),
                 ("adversary", "27532401beeff15910f3beb80b6bef2095313b8beb709213f46ee2ce8adede86"),
                 ("autokey", "291d0e3ead0bb0903b5a93f7851c44dc9f491060cc3a62a8302759af2a863306"),
                 ("digit-routes", "97547066e834b8423c9edee4d893b838baa6b8a22d530d821c0eb2306f1577af"),
@@ -60,12 +60,13 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("repair", "904b00214b7320dc722fbdd3375f6308a01f959c45ede413d63f916f31d01fd4"),
                 ("clump", "06a9879d5d9b1b68421068eaee049e27965cca4ce26a1650441495e008c1e532"),
                 ("bob-branch", "9097ae65beb914c64aca8f8d6a494f14842de8b10148b86ed278852d4e2b4b21"),
-                ("paper", "2f291d69b45b72f13559308884d7657de8c20a39a829e67aa4dcb45463764bfa"),
+                ("paper", "14986bfb9ee3a9b5e15fdd1c238d5dc9e6b73465c52c0e1e031c06e02f63fe40"),
+                ("widths", "5df871436efb665fd2cf2bad6fa01f8c566f07ed893f87cce47e42dd92bd019e"),
             ],
         )
         self.assertEqual(
             report["chain_sha256"],
-            "91eb840c8a3a074523cf2b4aac7c7d549aa33918b667860da8982e5684cf0219",
+            "4f697cd2cab08afcf21ff516141e87809e789f4bd92624a53db03e609b79a58e",
         )
         self.assertEqual(report["entries"][0]["chain_sha256"], report["entries"][0]["content_sha256"])
         self.assertNotEqual(report["entries"][1]["chain_sha256"], report["entries"][1]["content_sha256"])
