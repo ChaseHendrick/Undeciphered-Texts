@@ -181,6 +181,7 @@ chosen-sentence checks from these recovered-output controls.
 | `engine/dagapeyeff_routes.py` | Rails, diagonals, and deleting every kth cell | `tests/test_dagapeyeff_routes.py`: every other cell scores 1.0556 against English of that length at 1.2922; 963 of 10,000 shuffled deletions match it | The rise is the shorter text. Not a reading. [Note](logs/dagapeyeff-routes-2026-10-04.md). |
 | `engine/dagapeyeff_glue.py` | Row stream, column stream, and the pairing of the two | `tests/test_dagapeyeff_glue.py`: pairing score 77.36, 0 of 20,000 re-pairings; row order is beaten by 15,767 of 20,000 shuffles | The unevenness is which digits share a cell. Not a reading. [Note](logs/dagapeyeff-glue-2026-10-04.md). |
 | `engine/dagapeyeff_split.py` | Split crowded cells 91, 75, and 81 into two labels | `tests/test_dagapeyeff_split.py`: best cut 0.7002 against English 1.0658; 15 of 20 shuffled cuts match it | The substitution gate refuses the pairs (170 of 200). Not a reading. [Note](logs/dagapeyeff-split-2026-10-04.md). |
+| `engine/dagapeyeff_battery.py` | 1,000 pre-specified attacks, each against 500 order shuffles and 500 re-pairings | `tests/test_dagapeyeff_battery.py`: order hits are only the rare-cell pile at widths 7, 14, and 28; re-pair hits are the glue, plus windows that see it | Not a reading. [Note](logs/dagapeyeff-battery-2026-10-04.md). |
 
 ## Out of scope
 
