@@ -102,7 +102,9 @@ The man is not the 1969 or 2003 namesake. London Gazette: oath 17 March 1947, di
 
 `engine.dagapeyeff_record` places the cells against a published chi-square of 49.23 and against 2,000 same-length English draws. The cells score 34.23, which is past that candidate and still 10.06 above the worst English draw. A legal group reversal scores 8.86 and fails the solved example. The order gap from 0.5706 to 1.0658 is unclosed. Do not convert his -692 onto this scale. Do not store a letter string. See `docs/logs/dagapeyeff-record-2026-10-04.md`.
 
-`engine.dagapeyeff_provenance` hashes the cells, then the yardstick, the balls, and the record. Floats are written with 17 significant digits. The chain ends at `ce7d38c98d060ee26a038f8a7f5b1849b1f30996eeda15c6955c74912370b455`. A matching hash means those objects were recomputed. Do not treat it as a reading. Do not store a letter string. See `docs/logs/dagapeyeff-provenance-2026-10-04.md`.
+`engine.dagapeyeff_provenance` hashes the cells, then the yardstick, the balls, the record, and the conversion. Floats are written with 17 significant digits. The chain ends at `bc1777b69a21801037a41ee2b4129edf6503014b813c26e4cc781f204482fe59`. A matching hash means those objects were recomputed. Do not treat it as a reading. Do not store a letter string. See `docs/logs/dagapeyeff-provenance-2026-10-04.md`.
+
+`engine.dagapeyeff_convert` turns the published chi-square 49.23 into the ball from 49.225 to 49.235, and the published index 0.0697 into the ball from 0.06965 to 0.06975. The cells sit between 34.174639 and 34.292468, entirely under the first ball and entirely over the worst English draw. Their index, 0.069702, sits inside the published index ball. The score -692.13 has no formula and is not compared. Replacing cell 04 with 75 makes the chi-square ball worse. None of the 24 possible replacements reach English, and 0 of them improve on the cells. Do not store a letter string. See `docs/logs/dagapeyeff-convert-2026-10-04.md`.
 
 ## Current user direction
 

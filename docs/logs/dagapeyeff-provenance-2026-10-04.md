@@ -15,4 +15,6 @@ The chain, after the record, is `ce7d38c98d060ee26a038f8a7f5b1849b1f30996eeda15c
 
 A matching hash means the cells and these scores were recomputed. It does not mean they were read. If a score changes, its hash changes, and every chain hash after it changes.
 
+The conversion of the published chi-square was hashed after this note. The chain tip is now `bc1777b69a21801037a41ee2b4129edf6503014b813c26e4cc781f204482fe59`. The four hashes above did not change.
+
 No letter string is stored.

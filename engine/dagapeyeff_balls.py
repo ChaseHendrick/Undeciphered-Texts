@@ -36,6 +36,26 @@ class Ball:
     def __sub__(self, other: "Ball") -> "Ball":
         return Ball(self.mid - other.mid, self.rad + other.rad)
 
+    def __mul__(self, other: "Ball") -> "Ball":
+        ends = (
+            self.lo() * other.lo(),
+            self.lo() * other.hi(),
+            self.hi() * other.lo(),
+            self.hi() * other.hi(),
+        )
+        low = min(ends)
+        high = max(ends)
+        return Ball((low + high) / 2, (high - low) / 2)
+
+    def __truediv__(self, other: "Ball") -> "Ball":
+        if other.lo() <= 0 <= other.hi():
+            raise ZeroDivisionError("a ball that contains zero has no reciprocal")
+        inverse_low = Fraction(1) / other.hi()
+        inverse_high = Fraction(1) / other.lo()
+        if inverse_low > inverse_high:
+            inverse_low, inverse_high = inverse_high, inverse_low
+        return self * Ball((inverse_low + inverse_high) / 2, (inverse_high - inverse_low) / 2)
+
     def scale(self, factor: Fraction) -> "Ball":
         return Ball(self.mid * factor, self.rad * abs(factor))
 
