@@ -17,6 +17,7 @@ from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
+from engine.dagapeyeff_diagonal import diagonal_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -39,6 +40,7 @@ def paper_notes() -> dict:
     trigram = trigram_report()
     monotone = monotone_report()
     straight = straight_report()
+    diagonal = diagonal_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -255,6 +257,19 @@ def paper_notes() -> dict:
                 f"The solved exercise has one too, and {straight['control_rows_as_long']} of {straight['draws']} of its re-pairings do."
             ),
             "do_not_claim": "A run of counts that differ by one is not a reading.",
+        },
+        {
+            "id": "diagonal-holes",
+            "kind": "comparison",
+            "tags": ["square", "diagonal"],
+            "statement": (
+                f"The main diagonal has {diagonal['main_zeros']} empty cells and the other has {diagonal['anti_zeros']}. "
+                f"{diagonal['either_zeros_as_many']} of {diagonal['draws']} re-pairings have a diagonal with at least that many. "
+                f"The sums of the diagonals do not clear the bar: {diagonal['sum_either']} of {diagonal['draws']}. "
+                f"The solved exercise has the same empty-cell counts, "
+                f"and {diagonal['control_either_zeros_as_many']} of {diagonal['draws']} of its re-pairings do."
+            ),
+            "do_not_claim": "Empty cells on a diagonal are not a reading.",
         },
     ]
     return {

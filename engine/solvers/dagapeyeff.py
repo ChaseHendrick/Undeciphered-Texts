@@ -46,6 +46,7 @@ from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
+from engine.dagapeyeff_diagonal import diagonal_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -332,6 +333,27 @@ def consider_straight() -> dict:
             f"The solved exercise has a straight of length {report['control_row_length']}, "
             f"and {report['control_rows_as_long']} of {report['draws']} of its re-pairings do too. "
             "The challenge clears 5 percent. The exercise does not. Not a reading."
+        ),
+    }
+
+
+def consider_diagonal() -> dict:
+    report = diagonal_report()
+    either = report["either_zeros_as_many"] / report["draws"]
+    allowed = either < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "diagonal_allowed": allowed,
+        "learned": (
+            f"The main diagonal has {report['main_zeros']} empty cells and the other diagonal has {report['anti_zeros']}. "
+            f"{report['either_zeros_as_many']} of {report['draws']} re-pairings have a diagonal with at least that many. "
+            f"The sum of the main diagonal is {report['main_sum']}. "
+            f"If the other diagonal's sum counts as well, {report['sum_either']} of {report['draws']} match, "
+            "which is not under 5 percent. "
+            f"The solved exercise has {report['control_main_zeros']} and {report['control_anti_zeros']} empty cells, "
+            f"and {report['control_either_zeros_as_many']} of {report['draws']} of its re-pairings do. "
+            "The empty cells clear 5 percent. The sums do not. Not a reading."
         ),
     }
 

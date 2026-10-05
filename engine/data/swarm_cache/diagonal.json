@@ -1,0 +1,19 @@
+{
+  "anti_sum": 43,
+  "anti_zeros": 1,
+  "claimed_plaintext": null,
+  "control_anti_zeros": 1,
+  "control_either_zeros_as_many": 3357,
+  "control_main_zeros": 2,
+  "draws": 100000,
+  "either_zeros_as_many": 1193,
+  "holes": 3,
+  "holes_as_many": 923,
+  "main_sum": 25,
+  "main_sum_as_low": 2508,
+  "main_zeros": 2,
+  "main_zeros_as_many": 688,
+  "scope": "Empty cells on a diagonal are not a reading. No letter string is stored.",
+  "solved": false,
+  "sum_either": 21907
+}
