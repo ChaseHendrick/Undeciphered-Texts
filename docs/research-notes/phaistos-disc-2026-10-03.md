@@ -1,4 +1,11 @@
 # Phaistos disc: one object and explicit transcription choices
+<!--
+index-id: phaistos
+index-title: Phaistos disc
+index-problem: Undeciphered inscription on one object
+index-data: Heraklion Museum object description
+index-next: Reconcile sign inventories before language fitting
+-->
 
 Source check: **2026-10-03**. Category: undeciphered inscription; no language or cipher family is established here.
 

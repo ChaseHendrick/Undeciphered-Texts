@@ -1,0 +1,37 @@
+name: Refresh doc indexes
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Rewrite generated indexes
+        run: python3 tools/refresh_docs.py
+      - name: Commit the indexes on main when they moved
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          if git diff --quiet; then
+            echo "indexes already current"
+            exit 0
+          fi
+          git config user.name "Chase"
+          git config user.email "326338179+ChaseHendrick@users.noreply.github.com"
+          git add README.md docs/research-notes
+          git commit -m "Refresh generated doc indexes."
+          git push
+      - name: A pull request must already contain the refresh
+        if: github.event_name == 'pull_request'
+        run: git diff --exit-code

@@ -1,4 +1,11 @@
 # Dorabella: transcription uncertainty and matched experimental controls
+<!--
+index-id: dorabella
+index-title: Dorabella
+index-problem: Short historical cipher with ambiguous glyph orientations
+index-data: Authored experimental paper and its facsimile
+index-next: Compare transcription variants with matched synthetic controls
+-->
 
 Source check: **2026-10-03**. Category: historical cipher; no systematic reading is established by this note.
 

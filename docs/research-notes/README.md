@@ -1,7 +1,10 @@
 # Undeciphered-text research notes
 
-Primary sources checked on **3 October 2026**. These notes distinguish a source's publication date from the date we inspected it. They are an evidence register and experiment plan, not a list of new decipherments. Availability failures and older status statements remain visible.
+Primary sources checked on **3 October 2026** for the first eight notes. Later notes keep their own dates. These notes distinguish a source's publication date from the date we inspected it. They are an evidence register and experiment plan, not a list of new decipherments. Availability failures and older status statements remain visible.
 
+The case table is generated. `tools/refresh_docs.py` rewrites it from the `index-*` block in each note. A push to main runs that script and commits the indexes when they moved.
+
+<!-- case-index:start -->
 | Case | Problem represented here | Data entry point | Next measurable task |
 | --- | --- | --- | --- |
 | [Kryptos K4](kryptos-k4-2026-10-03.md) | Public cryptanalytic method not established by the checked sources; private archival knowledge documented | Sculpture transcription and disclosed clue coordinates | Separate fitted clues from reserved evidence |
@@ -12,6 +15,8 @@ Primary sources checked on **3 October 2026**. These notes distinguish a source'
 | [Phaistos disc](phaistos-disc-2026-10-03.md) | Undeciphered inscription on one object | Heraklion Museum object description | Reconcile sign inventories before language fitting |
 | [Zodiac Z13 and Z32](zodiac-short-ciphers-2026-10-03.md) | Short cryptograms with many compatible readings | FBI documents and the Z340 solvers' account | Measure ambiguity; reproduce Z340 separately as a control |
 | [Dorabella](dorabella-2026-10-03.md) | Short historical cipher with ambiguous glyph orientations | Authored experimental paper and its facsimile | Compare transcription variants with matched synthetic controls |
+| [D'Agapeyeff challenge](dagapeyeff-2026-10-05.md) | 1939 digit challenge with no public reading; measured structure is not a plaintext | Wikipedia digit block used by the engine, plus the solved exercise as the control | Record a predeclared comparison only when it stays under 5 percent after its widening |
+<!-- case-index:end -->
 
 The case notes carry the citations supporting this table. The [machine-readable source register](source-register-2026-10-03.json) records access limitations and the claim each source supports. This dated collection does not certify current universal agreement or the absence of every proposed solution.
 

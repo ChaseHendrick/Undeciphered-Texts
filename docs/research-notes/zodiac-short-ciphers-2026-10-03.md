@@ -1,4 +1,11 @@
 # Zodiac Z13 and Z32: ambiguity, with Z340 as a solved control
+<!--
+index-id: zodiac
+index-title: Zodiac Z13 and Z32
+index-problem: Short cryptograms with many compatible readings
+index-data: FBI documents and the Z340 solvers' account
+index-next: Measure ambiguity; reproduce Z340 separately as a control
+-->
 
 Source check: **2026-10-03**. Category: short historical cryptograms. A killer's identity is not inferred here.
 

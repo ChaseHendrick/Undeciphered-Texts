@@ -1,4 +1,11 @@
 # Rongorongo: object provenance, orientation and the age of wood
+<!--
+index-id: rongorongo
+index-title: Rongorongo
+index-problem: Undeciphered script with material and reading uncertainties
+index-data: Museum object records and authored tablet study
+index-next: Separate originals, casts and line orientations
+-->
 
 Source check: **2026-10-03**. Category: undeciphered script with uncertain interpretation and chronology.
 

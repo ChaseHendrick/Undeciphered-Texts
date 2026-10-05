@@ -129,7 +129,7 @@ Full inventory of solvers and analysis tools (classical, keyed Vigenère, column
 | [`docs/ocr-backends.md`](docs/ocr-backends.md) | Local image transcription backends and setup |
 | [`docs/puzzles.md`](docs/puzzles.md) | Bounded Sudoku, word search, and anagrams |
 | [`docs/target-triage.md`](docs/target-triage.md), [`target-shortlist.json`](docs/target-shortlist.json) | Dated source research and feasibility judgments for open targets |
-| [`docs/research-notes/README.md`](docs/research-notes/README.md) | Eight dated primary-source case notes, corpus limits and proposed experiments for undeciphered scripts and historical ciphers |
+| [`docs/research-notes/README.md`](docs/research-notes/README.md) | <!-- research-note-count:start -->9 dated primary-source case notes<!-- research-note-count:end -->, corpus limits and proposed experiments for undeciphered scripts and historical ciphers |
 | [`docs/k4-focus/evidence-2026-10-03.md`](docs/k4-focus/evidence-2026-10-03.md), [`model-experiments-2026-10-03.md`](docs/k4-focus/model-experiments-2026-10-03.md) | K4 source and clue audit, current custody, and executed bounded composition tests |
 | [`docs/easy-unsolved-attempt-2026-10-03.md`](docs/easy-unsolved-attempt-2026-10-03.md) | Reproducible smaller open-target attacks, controls, ambiguity and verification limits |
 | [`docs/ctf-triage-2026-10-03.md`](docs/ctf-triage-2026-10-03.md) | Public puzzle fixtures and organizer first-solve records; all ten already recorded solved at this check |
