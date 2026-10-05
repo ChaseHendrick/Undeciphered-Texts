@@ -15,7 +15,7 @@ class DagapeyeffRouterSwarmTest(unittest.TestCase):
         self.assertIsNone(report["claimed_plaintext"])
         self.assertEqual(report["families"], 20)
         self.assertEqual(report["top_family"], "substitution")
-        self.assertEqual(report["top_probability"], 0.9696)
+        self.assertEqual(report["top_probability"], 0.969)
         self.assertEqual(report["second_family"], "adfgvx")
         self.assertIs(report["uncertain"], False)
         self.assertEqual(report["router_draws"], 40)

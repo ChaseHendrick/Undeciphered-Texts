@@ -25,6 +25,7 @@ LOG_UNIGRAM = tuple(math.log(p) for p in UNIGRAM)
 ENGLISH_ORDER = "ETAOINSHRDLCUMWFGYPBVKJXQZ"
 
 _DATA = Path(__file__).resolve().parent / "data" / "english.txt"
+_LARGE = Path(__file__).resolve().parent / "data" / "neural_train_public.txt"
 
 
 def unigram_score(seq: list[int]) -> float:
@@ -120,3 +121,15 @@ class LanguageModel:
 def get_model() -> LanguageModel:
     prose = _DATA.read_text(encoding="utf-8")
     return LanguageModel(prose)
+
+
+@lru_cache(maxsize=1)
+def get_large_model() -> LanguageModel:
+    """The same quadgram model fit on 1,916,398 public-domain letters.
+
+    ``get_model`` is fit on about 8,500 letters. On short texts it can prefer a
+    wrong substitution key to the right one. This model is opt-in, so frozen
+    scores computed with ``get_model`` keep their meaning. Its corpus excludes
+    the Doyle, Wells and Grimm held-out windows and every certificate plaintext.
+    """
+    return LanguageModel(_LARGE.read_text(encoding="utf-8"))

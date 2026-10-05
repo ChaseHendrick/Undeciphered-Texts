@@ -12,6 +12,7 @@ import unittest
 import hashlib
 import json
 from pathlib import Path
+import urllib.error
 import urllib.request
 
 from engine.known_language_reader import (
@@ -38,8 +39,12 @@ def _fetch(url: str) -> str:
         url,
         headers={"User-Agent": "undeciphered-texts-known-language-reader/1.0"},
     )
-    with urllib.request.urlopen(request, timeout=45) as response:
-        return response.read().decode("utf-8")
+    try:
+        with urllib.request.urlopen(request, timeout=45) as response:
+            return response.read().decode("utf-8")
+    except (urllib.error.URLError, TimeoutError, ConnectionError) as error:
+        # A sandbox or proxy that blocks the host is not a reader failure.
+        raise unittest.SkipTest(f"cannot fetch {url}: {error}") from error
 
 
 def _visible(html: str) -> str:
@@ -157,7 +162,8 @@ class KnownLanguageReaderTest(unittest.TestCase):
                     self.assertTrue(other.source_url.startswith("https://"))
                     self.assertNotIn("\ufffd", other.lemma)
         if egyptian_sign_module() is not None:
-            self._gloss_fetched_amun_signs()
+            with self.subTest(language="egyptian"):
+                self._gloss_fetched_amun_signs()
         german = gloss_phrase("german", CITED[2]["phrase"])
         by_lemma = {entry.lemma: entry for entry in german.entries}
         self.assertEqual(by_lemma["König"].token, "König")

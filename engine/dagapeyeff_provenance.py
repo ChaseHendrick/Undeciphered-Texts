@@ -64,10 +64,21 @@ from engine.dagapeyeff_echo import echo_report
 from engine.dagapeyeff_ride import ride_report
 from engine.dagapeyeff_span import span_report
 from engine.dagapeyeff_successive import successive_report
+from engine.dagapeyeff_core import core_report
 from engine.dagapeyeff_counts import counts_report
 from engine.dagapeyeff_tile import tile_report
 from engine.dagapeyeff_blank import blank_report
+from engine.bob_attack import bob_attack_report
+from engine.bob_distill import bob_distill_report
+from engine.bob_harden import bob_harden_report
 from engine.bob_pair import bob_pair_report
+from engine.bob_read import bob_read_report
+from engine.bob_slim import bob_slim_report
+from engine.bob_train import bob_train_report
+from engine.dagapeyeff_anneal import anneal_swarm_report
+from engine.solver_attack import solver_attack_report
+from engine.solver_model import solver_model_report
+from engine.solver_train import solver_train_report
 from engine.bob_lift import bob_lift_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -214,6 +225,17 @@ def provenance_report() -> dict:
         ("bob-pair", bob_pair_report()),
         ("bob-lift", bob_lift_report()),
         ("blank", blank_report()),
+        ("bob-attack", bob_attack_report()),
+        ("bob-distill", bob_distill_report()),
+        ("bob-harden", bob_harden_report()),
+        ("bob-read", bob_read_report()),
+        ("bob-slim", bob_slim_report()),
+        ("solver-attack", solver_attack_report()),
+        ("bob-train", bob_train_report()),
+        ("solver-train", solver_train_report()),
+        ("dagapeyeff-anneal", anneal_swarm_report()),
+        ("solver-model", solver_model_report()),
+        ("core", core_report()),
     )
     entries = []
     previous = None

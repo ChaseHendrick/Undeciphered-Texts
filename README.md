@@ -30,6 +30,8 @@ python -m pip install Pillow numpy  # required by the full image and neural test
 python -m unittest discover -s tests -v
 python -m engine analyze "Wkh kdueru ehoo udqj"
 python -m engine solve caesar "Wkh kdueru ehoo udqj"
+python -m engine solve substitution "$(cat cipher.txt)" --model large --restarts 30 --temperature 10
+python3 tools/verify_cache.py --jobs 3   # rerun the frozen swarm searches and compare them with their files
 python -m engine solve keyed-vigenere EMUFPHZLRFAXYUSDJKZLDKRNSHGNFIVJYQTQUXQBQVYUVLLTREVJYQTMKYRDMFD --key PALIMPSEST --alphabet KRYPTOS --index K
 python demos/run_demo.py           # same demo path; rewrites DEMO.md
 python3 -m engine reverse-engineer LXFOPVEFRNHR --crib 0:ATTACK --max-period 5

@@ -28,6 +28,20 @@ class SolverJudgeTest(unittest.TestCase):
         self.assertIn("nonfinite_score", claim["blocks"])
         self.assertNotIn("SENTENCE", str(claim))
 
+    def test_a_disguised_flag_or_plaintext_is_still_blocked(self) -> None:
+        for smuggled, block in (
+            ({"solved": "yes"}, "solved_flag"),
+            ({"solved": 1}, "solved_flag"),
+            ({"claimed_plaintext": list("ATTACKATDAWN")}, "plaintext_stored"),
+            ({"claimed_plaintext": {"text": "ATTACK"}}, "plaintext_stored"),
+            ({"solved": "true", "target": "Kryptos K4"}, "historical_solved"),
+        ):
+            judged = judge_claim(smuggled)
+            self.assertFalse(judged["accepted"], smuggled)
+            self.assertIn(block, judged["blocks"])
+        self.assertTrue(judge_claim({"solved": False, "claimed_plaintext": None})["accepted"])
+        self.assertTrue(judge_claim({"claimed_plaintext": ""})["accepted"])
+
     def test_caesar_vigenere_and_beaufort_roundtrips(self) -> None:
         plain = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG"
         caesar = caesar_encrypt(plain, 5)

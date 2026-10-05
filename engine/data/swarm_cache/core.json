@@ -1,0 +1,145 @@
+{
+  "cells": 196,
+  "claimed_plaintext": null,
+  "cliff": 13,
+  "core_chi": 8.6596,
+  "core_mass": 188,
+  "core_period": {
+    "best_ic": 0.1051,
+    "best_period": 40,
+    "core_letters": 188,
+    "draws": 2000,
+    "periods": [
+      2,
+      49
+    ],
+    "shuffles_as_high": 831
+  },
+  "die_as_flat": 5442,
+  "die_draws": 20000,
+  "distinct": 18,
+  "english": {
+    "as_flat": 987,
+    "as_full": 17063,
+    "as_narrow": 2,
+    "both": 0,
+    "draws": 20000
+  },
+  "exercise_cells": 89,
+  "exercise_cliff": 19,
+  "exercise_core_chi": 32.8605,
+  "exercise_core_mass": 86,
+  "exercise_distinct": 22,
+  "families": [
+    {
+      "draws": 2000,
+      "family": "any transposition of a Polybius",
+      "flat_full_core": 0
+    },
+    {
+      "draws": 2000,
+      "family": "vigenere period 2",
+      "flat_full_core": 0
+    },
+    {
+      "draws": 2000,
+      "family": "vigenere period 3",
+      "flat_full_core": 0
+    },
+    {
+      "draws": 2000,
+      "family": "vigenere period 5",
+      "flat_full_core": 0
+    },
+    {
+      "draws": 2000,
+      "family": "vigenere period 7",
+      "flat_full_core": 1
+    },
+    {
+      "draws": 2000,
+      "family": "vigenere period 14",
+      "flat_full_core": 8
+    },
+    {
+      "draws": 2000,
+      "family": "running key",
+      "flat_full_core": 13
+    },
+    {
+      "draws": 2000,
+      "family": "plaintext autokey",
+      "flat_full_core": 0
+    },
+    {
+      "draws": 2000,
+      "family": "both coordinates shifted, period 2",
+      "flat_full_core": 0
+    },
+    {
+      "draws": 2000,
+      "family": "both coordinates shifted, period 7",
+      "flat_full_core": 1
+    },
+    {
+      "draws": 2000,
+      "family": "column coordinate shifted, period 5",
+      "flat_full_core": 0
+    },
+    {
+      "draws": 2000,
+      "family": "bifid period 7",
+      "flat_full_core": 1
+    },
+    {
+      "draws": 2000,
+      "family": "bifid over the whole text",
+      "flat_full_core": 0
+    },
+    {
+      "draws": 2000,
+      "family": "digit stream off by one",
+      "flat_full_core": 0
+    },
+    {
+      "draws": 2000,
+      "family": "twenty nulls from three cells",
+      "flat_full_core": 0
+    },
+    {
+      "draws": 2000,
+      "family": "six common letters split in two",
+      "flat_full_core": 0
+    },
+    {
+      "draws": 2000,
+      "family": "playfair",
+      "flat_full_core": 0
+    },
+    {
+      "draws": 2000,
+      "family": "two cells per letter from 13",
+      "flat_full_core": 1
+    },
+    {
+      "draws": 2000,
+      "family": "two cells per letter from 13, then a period-7 key",
+      "flat_full_core": 130
+    },
+    {
+      "draws": 2000,
+      "family": "letters merged into 13 classes",
+      "flat_full_core": 1
+    },
+    {
+      "draws": 2000,
+      "family": "13 equal cells and a rare tail, no language",
+      "flat_full_core": 485
+    }
+  ],
+  "language_families_reaching_5_percent": [
+    "two cells per letter from 13, then a period-7 key"
+  ],
+  "scope": "The common cells are as even as a fair die, and no family that enciphers English in this sweep makes such a core. The core has no stride a shuffle cannot match, so a key on it would not be short and periodic. That narrows the family. It is not a reading.",
+  "solved": false
+}

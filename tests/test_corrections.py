@@ -24,6 +24,7 @@ class CorrectionsTest(unittest.TestCase):
                 "score-692-has-no-formula",
                 "repair-04-to-75-is-worse",
                 "not-the-lead-on-a-solution",
+                "router-confidence-used-old-weights",
             ],
         )
         for record in data["records"]:

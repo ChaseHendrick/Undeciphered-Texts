@@ -4,6 +4,18 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 5 October 2026, audit and repair
+
+Started from `ef2f4a6` on `main`, which was red. Commits `f1bfedb`, `6bcb64c` and `f63a38d` added nine frozen files without updating the frozen count in `tests/test_dagapeyeff_checks.py`, the swarm board page, or the provenance pins. Those are fixed, the nine reports are now in the chain, and `tests/test_dagapeyeff_cache.py` names any frozen file that has no search or no chain entry.
+
+Frozen reports are read from disk, so their tests never rerun the search. `tools/verify_cache.py` reruns them. 80 of 81 reproduced. `router-swarm` stored 0.9696 from the weights replaced at 20:09 on 4 October; the shipped weights give 0.969. The file was refreshed and the correction appended to `engine/data/corrections.json`.
+
+The substitution misses in `engine.solver_train` came from the 8,689-letter quadgram model, not the step count. `engine.language.get_large_model` fits the same model on the 1,916,398 public-domain letters. With 30 restarts at temperature 10 it gets 8 of 8 held-out Doyle windows of 200 letters and 7 of 8 of 100. It is opt-in (`model=`, or `--model large` on the CLI), so frozen scores keep their meaning. See `docs/logs/audit-2026-10-05.md`.
+
+The scratch pad and the solver judge each let a plaintext or a solved flag through in a disguised form. Both now refuse it. The network test skips when its host is unreachable.
+
+The format 5 file is `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b`. Older paragraphs below that quote `d8c985df...` predate the 4 October promotion.
+
 ## Session 5 October 2026, a warm start and a cell swarm
 
 Started from `6bcb64c` on `main`. The shipped weight file was not replaced. SHA-256 `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b`. The lifted ranking remains 433 of 480 and 195 of 204.

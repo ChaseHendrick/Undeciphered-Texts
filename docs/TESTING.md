@@ -37,6 +37,18 @@ From the repository root, use Python 3.10 or newer. Local validation on 2026-10-
 
 Pillow and NumPy are required by full discovery of the existing image and neural tests. Core cipher routines and the recovery demo remain usable without them. Install `requirements-synthesis.txt` for exact symbolic checks and a local OCR backend for the real image roundtrip; absent optional engines are reported as skips.
 
+## Frozen searches
+
+Many D'Agapeyeff and Bob reports are decorated with `@frozen` and stored in `engine/data/swarm_cache`. Their unit tests read the stored file and do not rerun the search, so a green unit run does not show that the code still produces those numbers. Rerun them with:
+
+```bash
+python3 tools/verify_cache.py --jobs 3            # every frozen file, about 40 minutes on 3 cores
+python3 tools/verify_cache.py router-swarm widths # only these names
+python3 tools/verify_cache.py --list              # names and the function behind each
+```
+
+It reports `match`, `mismatch` with the differing keys, `timeout`, or `error`, and never rewrites a file. A new frozen report also needs an entry in `engine/dagapeyeff_provenance.py`; `tests/test_dagapeyeff_cache.py` names any that are missing. Tests that download a cited page skip when the host cannot be reached.
+
 `demo` rewrites `DEMO.md` and returns 1 if any fixture misses. It appends [logs/errors.md](logs/errors.md) only in that failure case. Do not run a deliberately broken demo against the real log.
 
 ## The seven recovery tests

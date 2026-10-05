@@ -9,6 +9,7 @@ from pathlib import Path
 
 from engine.alphabet import letters_only
 from engine.cipher_synthesis import OptionalSynthesisDependencyError
+from engine.language import get_large_model
 from engine.solvers import SOLVERS
 from engine.solvers.keyed_vigenere import solve_keyed_vigenere
 from engine.stats import (
@@ -67,7 +68,15 @@ def _cmd_solve(method: str, text: str, args: argparse.Namespace) -> int:
     if method == "vigenere":
         result = solver(text, max_period=args.max_period)
     elif method == "substitution":
-        result = solver(text, restarts=args.restarts, steps=args.steps, seed=args.seed)
+        model = get_large_model() if args.model == "large" else None
+        result = solver(
+            text,
+            restarts=args.restarts,
+            steps=args.steps,
+            seed=args.seed,
+            temperature=args.temperature,
+            model=model,
+        )
     else:
         result = solver(text)
     print(result.summary())
@@ -128,6 +137,13 @@ def build_parser() -> argparse.ArgumentParser:
     solve.add_argument("--restarts", type=int, default=10)
     solve.add_argument("--steps", type=int, default=4000)
     solve.add_argument("--seed", type=int, default=20261002)
+    solve.add_argument("--temperature", type=float, default=30.0, help="substitution starting temperature")
+    solve.add_argument(
+        "--model",
+        choices=("small", "large"),
+        default="small",
+        help="substitution quadgram model: small (frozen default) or large (1.9M public-domain letters)",
+    )
     solve.add_argument("--key", help="repeating key for keyed-vigenere")
     solve.add_argument(
         "--alphabet",

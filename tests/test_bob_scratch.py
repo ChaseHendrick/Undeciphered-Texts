@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import unittest
 
 from engine.bob_scratch import open_pad, pad_digest, write_note
@@ -15,6 +16,18 @@ class BobScratchTest(unittest.TestCase):
             write_note(pad, step="bad", note="A" * 20)
         with self.assertRaises(ValueError):
             write_note(pad, step="bad", plaintext="NO")
+        # Spaces, a list, or a nested field do not let a sentence through.
+        for smuggled in (
+            {"note": "ATTACK AT DAWN WE RIDE AT NOON"},
+            {"note": ["ATTACKATDAWNWERIDEATNOON"]},
+            {"note": {"text": "ATTACKATDAWNWERIDEATNOON"}},
+            {"note": {"plain": "NO"}},
+        ):
+            with self.assertRaises(ValueError):
+                write_note(pad, step="bad", **smuggled)
+        write_note(pad, step="read", sha256=hashlib.sha256(b"probe").hexdigest(), note="judge withheld")
+        self.assertEqual(len(pad), 2)
+        pad.pop()
         self.assertEqual(len(pad), 1)
         self.assertEqual(pad_digest(pad), pad_digest([dict(pad[0])]))
         self.assertNotEqual(pad_digest(pad), pad_digest([]))
