@@ -46,6 +46,7 @@ from engine.dagapeyeff_block import block_report
 from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_triples import triples_report
+from engine.dagapeyeff_contact import contact_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -507,6 +508,23 @@ def consider_triples() -> dict:
             f"The cells are {report['cells'][0]} and {report['cells'][1]}. "
             f"{report['as_aligned']} of {report['draws']} shuffles put two such runs in one starting column. "
             "Not a reading."
+        ),
+    }
+
+
+def consider_contact() -> dict:
+    report = contact_report()
+    allowed = report["aligned"] > 0 and report["contact"] / report["aligned"] < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "contact_allowed": allowed,
+        "learned": (
+            "The two runs that share a starting column each sit next to a rare cell. "
+            f"The cells after them are {report['following'][0]} and {report['following'][1]}. "
+            f"Of {report['draws']} shuffles, {report['aligned']} already have two runs in one starting column, "
+            f"and {report['contact']} of those also sit next to rare cells. "
+            "The contact is not the alignment. Not a reading."
         ),
     }
 

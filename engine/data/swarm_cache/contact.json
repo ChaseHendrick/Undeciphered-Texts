@@ -1,0 +1,25 @@
+{
+  "aligned": 866,
+  "cells": [
+    "75",
+    "63"
+  ],
+  "claimed_plaintext": null,
+  "contact": 11,
+  "draws": 40000,
+  "following": [
+    "93",
+    "04"
+  ],
+  "rare": [
+    "04",
+    "71",
+    "92",
+    "93",
+    "94"
+  ],
+  "scope": "Contact with a rare cell is not a reading. No letter string is stored.",
+  "shared": 2,
+  "solved": false,
+  "touched": 2
+}

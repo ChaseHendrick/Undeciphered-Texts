@@ -53,6 +53,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [The window was chosen after looking](../logs/dagapeyeff-clump-2026-10-04.md)
 - [Column as filler](../logs/dagapeyeff-column-null-2026-10-04.md)
 - [Reading orders and dictionary shapes](../logs/dagapeyeff-columns-2026-10-04.md)
+- [The aligned runs sit next to rare cells](../logs/dagapeyeff-contact-2026-10-05.md)
 - [The published score, as a ball](../logs/dagapeyeff-convert-2026-10-04.md)
 - [Delay and progressive shift](../logs/dagapeyeff-delay-2026-10-04.md)
 - [Three moves are not enough](../logs/dagapeyeff-depth3-2026-10-04.md)

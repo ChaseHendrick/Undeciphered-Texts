@@ -18,6 +18,7 @@ from engine.dagapeyeff_block import block_report
 from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_triples import triples_report
+from engine.dagapeyeff_contact import contact_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -47,6 +48,7 @@ def paper_notes() -> dict:
     digraph = digraph_report()
     trigram = trigram_report()
     triples = triples_report()
+    contact = contact_report()
     monotone = monotone_report()
     straight = straight_report()
     diagonal = diagonal_report()
@@ -372,6 +374,18 @@ def paper_notes() -> dict:
                 f"{triples['as_aligned']} of {triples['draws']} shuffles put two such runs in one starting column."
             ),
             "do_not_claim": "Two runs in one column band are not a reading.",
+        },
+        {
+            "id": "aligned-contact",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                "The two runs that share a starting column each sit next to a rare cell. "
+                f"The cells after them are {contact['following'][0]} and {contact['following'][1]}. "
+                f"Of {contact['draws']} shuffles, {contact['aligned']} already have the alignment, "
+                f"and {contact['contact']} of those also sit next to rare cells."
+            ),
+            "do_not_claim": "Contact with a rare cell is not a reading.",
         },
     ]
     return {
