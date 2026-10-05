@@ -1,0 +1,16 @@
+{
+  "as_short": 304,
+  "cells": 196,
+  "claimed_plaintext": null,
+  "control_as_short": 429,
+  "control_cells": 89,
+  "control_distinct": 22,
+  "control_longest_wait": 8,
+  "distinct": 18,
+  "draws": 10000,
+  "hole_as_short": 199,
+  "longest_wait": 22,
+  "low_max": 3,
+  "scope": "A short wait for a new cell is not a reading. The solved exercise is the check that the wait is not special to the challenge. No letter string is stored.",
+  "solved": false
+}

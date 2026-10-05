@@ -40,6 +40,7 @@ from engine.dagapeyeff_clump import clump_report
 from engine.dagapeyeff_widths import widths_report
 from engine.dagapeyeff_hole import hole_report
 from engine.dagapeyeff_clerical import clerical_report
+from engine.dagapeyeff_intro import intro_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -199,6 +200,27 @@ def consider_clerical() -> dict:
             f"A row reaches {report['row_mode']}, and the taller of the row and the column is "
             f"{report['line_as_high']} of {report['line_draws']}. "
             "The column alone is under 5 percent. The line is not. Refuse the line."
+        ),
+    }
+
+
+def consider_intro() -> dict:
+    report = intro_report()
+    rate = report["as_short"] / report["draws"]
+    given_hole = report["hole_as_short"] / report["draws"]
+    allowed = rate < 0.05 and given_hole < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "intro_allowed": allowed,
+        "learned": (
+            f"The longest wait for a new cell is {report['longest_wait']}. "
+            f"{report['as_short']} of {report['draws']} shuffles wait that little or less. "
+            f"Given that every cell of count at most {report['low_max']} sits in one column, "
+            f"{report['hole_as_short']} of {report['draws']} still do. "
+            f"The solved exercise waits {report['control_longest_wait']}, "
+            f"and {report['control_as_short']} of {report['draws']} of its shuffles do as well. "
+            "The wait clears 5 percent, and the exercise does too. Not a reading."
         ),
     }
 

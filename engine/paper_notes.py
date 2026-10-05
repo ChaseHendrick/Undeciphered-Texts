@@ -11,6 +11,7 @@ from engine.dagapeyeff_clump import clump_report
 from engine.dagapeyeff_widths import widths_report
 from engine.dagapeyeff_hole import hole_report
 from engine.dagapeyeff_clerical import clerical_report
+from engine.dagapeyeff_intro import intro_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -27,6 +28,7 @@ def paper_notes() -> dict:
     widths = widths_report()
     hole = hole_report()
     clerical = clerical_report()
+    intro = intro_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -162,6 +164,19 @@ def paper_notes() -> dict:
                 "Allowing a row as well, 7.2 percent of the shuffles still reach that height."
             ),
             "do_not_claim": "A column that looks rare until a row is allowed is not a reading.",
+        },
+        {
+            "id": "new-cell-wait",
+            "kind": "comparison",
+            "tags": ["introduction", "hole", "exercise"],
+            "statement": (
+                f"The longest wait for a new cell is {intro['longest_wait']}. "
+                f"{intro['as_short']} of {intro['draws']} shuffles wait that little or less. "
+                f"Given the low side of the frequency hole, {intro['hole_as_short']} of {intro['draws']} still do. "
+                f"The solved exercise waits {intro['control_longest_wait']}, "
+                f"and {intro['control_as_short']} of {intro['draws']} of its shuffles do as well."
+            ),
+            "do_not_claim": "A short wait that the solved exercise shares is not a reading.",
         },
     ]
     return {
