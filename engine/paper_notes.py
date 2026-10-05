@@ -22,6 +22,7 @@ from engine.dagapeyeff_contact import contact_report
 from engine.dagapeyeff_meeting import meeting_report
 from engine.dagapeyeff_sandwich import sandwich_report
 from engine.dagapeyeff_outside import outside_report
+from engine.dagapeyeff_modulo import modulo_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -56,6 +57,7 @@ def paper_notes() -> dict:
     meeting = meeting_report()
     sandwich = sandwich_report()
     outside = outside_report()
+    modulo = modulo_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -430,6 +432,21 @@ def paper_notes() -> dict:
                 f"and {outside['spare']} of those also have two outside copies in every such row."
             ),
             "do_not_claim": "Copies outside an aligned run are not a reading.",
+        },
+        {
+            "id": "modulo-diagonal-is-ordinary",
+            "kind": "negative",
+            "tags": ["order", "grid"],
+            "statement": (
+                f"The {modulo['digit']} digit matches the "
+                f"{'column' if modulo['axis'] == 'x' else 'row'} of the grid, modulo 5, "
+                f"in {modulo['hits']} cells. That is the best of {modulo['alignments']} alignments. "
+                f"{modulo['early_as_high']} of {modulo['early_draws']} shuffles reach it, and "
+                f"{modulo['as_high']} of {modulo['draws']} do. "
+                f"Scored as whole tables, {modulo['chi_as_high']} of {modulo['chi_draws']} shuffles match. "
+                f"The solved exercise is {modulo['control_as_high']} of {modulo['control_draws']}."
+            ),
+            "do_not_claim": "A diagonal of an ordinary table is not a reading.",
         },
         {
             "id": "bob-side-vote",

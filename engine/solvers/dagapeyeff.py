@@ -50,6 +50,7 @@ from engine.dagapeyeff_contact import contact_report
 from engine.dagapeyeff_meeting import meeting_report
 from engine.dagapeyeff_sandwich import sandwich_report
 from engine.dagapeyeff_outside import outside_report
+from engine.dagapeyeff_modulo import modulo_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -580,6 +581,25 @@ def consider_outside() -> dict:
             f"Of {report['draws']} shuffles, {report['aligned']} already have the alignment, "
             f"and {report['spare']} of those also have two outside copies in every such row. "
             "The extra copies are not the alignment. Not a reading."
+        ),
+    }
+
+
+def consider_modulo() -> dict:
+    report = modulo_report()
+    axis = "column" if report["axis"] == "x" else "row"
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "modulo_allowed": report["allowed"],
+        "learned": (
+            f"The {report['digit']} digit matches the {axis} of the grid, modulo 5, "
+            f"in {report['hits']} cells. That is the best of {report['alignments']} alignments. "
+            f"{report['early_as_high']} of {report['early_draws']} shuffles reach it, and "
+            f"{report['as_high']} of {report['draws']} do. "
+            "The same four pairs, scored as whole tables, are ordinary: "
+            f"{report['chi_as_high']} of {report['chi_draws']} shuffles match the chi-square. "
+            "The solved exercise does not clear. Not a reading."
         ),
     }
 

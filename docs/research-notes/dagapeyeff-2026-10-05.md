@@ -30,6 +30,8 @@ Four successive counts in that row differ by one. 1,237 of 100,000 re-pairings m
 
 The main diagonal has 2 empty cells and the other diagonal has 1. 1,193 of 100,000 re-pairings have a diagonal at least that empty. The sums of the diagonals do not survive both directions: 21,907 of 100,000. The exercise has the same empty-cell counts, and 3,357 of 100,000 of its re-pairings do. [Diagonals](../logs/dagapeyeff-diagonal-2026-10-04.md).
 
+The row digit matches the column of the grid, modulo 5, in 56 cells. That is the best of twenty alignments. 975 of 20,000 shuffles reach it, and 4,978 of 100,000 do. The same pairs scored as whole tables are ordinary: 12,780 of 20,000. A diagonal of an ordinary table is not a finding. [Modulo](../logs/dagapeyeff-modulo-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -77,6 +79,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [The common cell meets the run of 63](../logs/dagapeyeff-meeting-2026-10-05.md)
 - [Which measurements can see this cipher](../logs/dagapeyeff-methods-2026-10-04.md)
 - [The language model does not like the flattering counts](../logs/dagapeyeff-model-2026-10-04.md)
+- [The row digit does not track the column](../logs/dagapeyeff-modulo-2026-10-05.md)
 - [One row steps down](../logs/dagapeyeff-monotone-2026-10-04.md)
 - [Why a substitution of these cells is not a reading](../logs/dagapeyeff-order-2026-10-04.md)
 - [What others found, and what the digits do with it](../logs/dagapeyeff-others-2026-10-04.md)

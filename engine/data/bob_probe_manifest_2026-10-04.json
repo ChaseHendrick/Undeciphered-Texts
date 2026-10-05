@@ -3,7 +3,7 @@
   "seed": 20261005,
   "per_family": 32,
   "format_version": 5,
-  "weights_sha256": "d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825",
+  "weights_sha256": "5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b",
   "weights_unchanged": true,
   "incumbent_replaced": false,
   "plaintext_sha256": "da910590e36633f59366139f327ae72b3cd3a82d3510f1ad173881b4a944ad28",
@@ -244,7 +244,7 @@
       "family": "m209",
       "ciphertext_sha256": "10169125a78d8f4fe1624dbf7caf63910dbce0e72d043ae5cbaa992a855fb085",
       "top1": "keyed-vigenere",
-      "in_top3": true
+      "in_top3": false
     },
     {
       "generator": "restricted",

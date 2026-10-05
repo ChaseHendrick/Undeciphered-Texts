@@ -49,6 +49,7 @@ from engine.dagapeyeff_contact import contact_report
 from engine.dagapeyeff_meeting import meeting_report
 from engine.dagapeyeff_sandwich import sandwich_report
 from engine.dagapeyeff_outside import outside_report
+from engine.dagapeyeff_modulo import modulo_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -175,6 +176,7 @@ def provenance_report() -> dict:
         ("meeting", meeting_report()),
         ("sandwich", sandwich_report()),
         ("outside", outside_report()),
+        ("modulo", modulo_report()),
         ("bob-pair", bob_pair_report()),
     )
     entries = []
