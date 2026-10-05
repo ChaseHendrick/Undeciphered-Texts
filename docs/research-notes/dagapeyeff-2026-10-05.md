@@ -136,6 +136,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [The other legal column width](../logs/dagapeyeff-widths-2026-10-04.md)
 - [The best word score, not the friendliest counts](../logs/dagapeyeff-word-2026-10-04.md)
 - [The score a reading has to beat](../logs/dagapeyeff-yardstick-2026-10-04.md)
+- [Seven cells of the square are empty](../logs/dagapeyeff-blank-2026-10-05.md)
 - [The aligned runs sit next to rare cells](../logs/dagapeyeff-contact-2026-10-05.md)
 - [Rare counts sit in order on the square](../logs/dagapeyeff-counts-2026-10-05.md)
 - [A spaced triple is echoed](../logs/dagapeyeff-echo-2026-10-05.md)
@@ -167,4 +168,4 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 
 ## Proposed next comparison
 
-Do not record the four corners of the square as a new result. Those corners are the ends of the two diagonals already counted. A later comparison needs its own predeclared statistic, a widening written down before the count, and the solved exercise scored the same way.
+The empty-cell count is recorded. Do not record it again, and do not record the four corners of the square as a separate result. Those corners are the ends of the two diagonals already counted. A later comparison needs its own predeclared statistic, a widening written down before the count, and the solved exercise scored the same way.

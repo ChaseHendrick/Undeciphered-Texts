@@ -67,6 +67,7 @@ from engine.dagapeyeff_span import span_report
 from engine.dagapeyeff_successive import successive_report
 from engine.dagapeyeff_counts import counts_report
 from engine.dagapeyeff_tile import tile_report
+from engine.dagapeyeff_blank import blank_report
 from engine.bob_pair import bob_pair_report
 from engine.bob_lift import bob_lift_report
 from engine.dagapeyeff_monotone import monotone_report
@@ -653,6 +654,22 @@ def consider_tile() -> dict:
             f"{report['tiles']} blocks copy a 2 by 2 of the square. "
             f"{report['as_many']} of {report['draws']} shuffles have that many. "
             "Not a reading."
+        ),
+    }
+
+
+def consider_blank() -> dict:
+    report = blank_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "blank_allowed": report["allowed"],
+        "learned": (
+            f"{report['empty']} cells of the square are empty. "
+            f"The digit that appears once leaves {report['once_empty']} of them empty in every re-pairing. "
+            f"Shuffling either digit, {report['column_as_many']} and {report['row_as_many']} "
+            f"of {report['draws']} reach the total. "
+            "The solved exercise does not. Not a reading."
         ),
     }
 

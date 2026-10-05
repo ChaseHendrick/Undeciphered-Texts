@@ -37,7 +37,7 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("board", "3b39a845596491cb92c951d67d82ce49e5773379c082cc005c978c2a80b527a9"),
                 ("infer", "c67768bd2e358814d7b1faea635b909637f2eb2ca249c6053f6889e958c409c0"),
                 ("foresight", "48ceb2bf1c6010816c96eb483fccd9dc5609748da14cb459b638f94f94a29e10"),
-                ("checks", "10c9ad9adf5f88afab2ca729557c467eb64e98b6931f70603d829aff37bd5104"),
+                ("checks", "499d34102ae55883509752135605447afd7a1456de193c97cca46492a66d4a53"),
                 ("adversary", "27532401beeff15910f3beb80b6bef2095313b8beb709213f46ee2ce8adede86"),
                 ("autokey", "291d0e3ead0bb0903b5a93f7851c44dc9f491060cc3a62a8302759af2a863306"),
                 ("digit-routes", "97547066e834b8423c9edee4d893b838baa6b8a22d530d821c0eb2306f1577af"),
@@ -60,7 +60,7 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("repair", "904b00214b7320dc722fbdd3375f6308a01f959c45ede413d63f916f31d01fd4"),
                 ("clump", "06a9879d5d9b1b68421068eaee049e27965cca4ce26a1650441495e008c1e532"),
                 ("bob-branch", "9097ae65beb914c64aca8f8d6a494f14842de8b10148b86ed278852d4e2b4b21"),
-                ("paper", "95bc1a2615a2dd86a61cd4225681b40b4b95b3ce6da4aefdd1b098b62be831a3"),
+                ("paper", "67cb263143cbc7b2f5ef160f734b302a418454768bcc4c1770385d28e1e35828"),
                 ("widths", "5df871436efb665fd2cf2bad6fa01f8c566f07ed893f87cce47e42dd92bd019e"),
                 ("hole", "3b86af84c05c57f3d8496287de142c29d7aedab38ca3a9ea6005d371c68e1a06"),
                 ("clerical", "264ba5d22210f0601017ab53e19fb62c1e2dab802e6738dec7315336634b15ea"),
@@ -101,11 +101,12 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("tile", "9257bc55494ccfa4c55a8d065f45cf1f72e66c7421f55b5812e288e00d435d05"),
                 ("bob-pair", "1ed12ea6572d2fb8bbfceedc07fa67840e34ea2e3e78e863370dd213721db0a5"),
                 ("bob-lift", "55316d8ee090829fa17f0f45b05b143ae8c273ca8a5dd05c47282e16010b4064"),
+                ("blank", "74f5614259fe7a25d72965bb1e479edc40bfa895976f692185f40b169080b8ba"),
             ],
         )
         self.assertEqual(
             report["chain_sha256"],
-            "c214252630f38ce0b6e9f5e074bc188aff7d67d339015b098c5890ad0861a680",
+            "677c20ec70ff69adf56465f16f7521efe6d60503d4ecef31904558df6a5d0df2",
         )
         self.assertEqual(report["entries"][0]["chain_sha256"], report["entries"][0]["content_sha256"])
         self.assertNotEqual(report["entries"][1]["chain_sha256"], report["entries"][1]["content_sha256"])

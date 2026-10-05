@@ -39,6 +39,7 @@ from engine.dagapeyeff_span import span_report
 from engine.dagapeyeff_successive import successive_report
 from engine.dagapeyeff_counts import counts_report
 from engine.dagapeyeff_tile import tile_report
+from engine.dagapeyeff_blank import blank_report
 from engine.bob_pair import bob_pair_report
 from engine.bob_lift import bob_lift_report
 from engine.dagapeyeff_monotone import monotone_report
@@ -91,6 +92,7 @@ def paper_notes() -> dict:
     successive = successive_report()
     counts = counts_report()
     tile = tile_report()
+    blank = blank_report()
     pair = bob_pair_report()
     lift = bob_lift_report()
     monotone = monotone_report()
@@ -734,6 +736,24 @@ def paper_notes() -> dict:
                 f"Top three on the 480 stays {lift['held_top3']}. The weight file stays."
             ),
             "do_not_claim": "A lifted ranking is not a reading, and it does not replace the weight file.",
+        },
+        {
+            "id": "seven-empty-cells",
+            "kind": "comparison",
+            "tags": ["square", "re-pairing"],
+            "statement": (
+                "Seven cells of the square are empty. "
+                "The digit that appears once leaves four cells of its row empty in every re-pairing. "
+                "Three further cells are empty: 61, 73, and 95. "
+                f"Shuffling the column digits, {blank['column_as_many']} of {blank['draws']} reach seven. "
+                f"The furthest is {blank['column_furthest']}, and {blank['column_at_furthest']} draws reach it. "
+                f"Shuffling the row digits, {blank['row_as_many']} of {blank['draws']} reach seven. "
+                f"The furthest is {blank['row_furthest']}, and {blank['row_at_furthest']} draws reach it. "
+                f"The solved exercise has {blank['exercise_empty']} empty cells. "
+                f"{blank['exercise_column_as_many']} and {blank['exercise_row_as_many']} of {blank['draws']} "
+                "re-pairings reach that. The exercise is not under 5 percent."
+            ),
+            "do_not_claim": "Seven empty cells are not a reading.",
         },
     ]
     return {

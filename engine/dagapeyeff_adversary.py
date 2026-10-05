@@ -66,6 +66,7 @@ from engine.solvers.dagapeyeff import (
     consider_successive,
     consider_counts,
     consider_tile,
+    consider_blank,
     consider_bob_pair,
     consider_bob_lift,
     consider_running_key,
@@ -156,6 +157,7 @@ def adversary_report() -> dict:
         consider_successive(),
         consider_counts(),
         consider_tile(),
+        consider_blank(),
         consider_bob_pair(),
         consider_bob_lift(),
     ]

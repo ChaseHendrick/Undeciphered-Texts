@@ -1,0 +1,24 @@
+{
+  "allowed": true,
+  "claimed_plaintext": null,
+  "column_as_many": 0,
+  "column_at_furthest": 31,
+  "column_furthest": 6,
+  "draws": 20000,
+  "empty": 7,
+  "exercise_column_as_many": 2205,
+  "exercise_empty": 3,
+  "exercise_row_as_many": 2280,
+  "further": [
+    "61",
+    "73",
+    "95"
+  ],
+  "once_digit": "0",
+  "once_empty": 4,
+  "row_as_many": 0,
+  "row_at_furthest": 26,
+  "row_furthest": 6,
+  "scope": "Seven empty cells are not a reading. No letter string is stored.",
+  "solved": false
+}
