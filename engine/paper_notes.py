@@ -18,6 +18,7 @@ from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
+from engine.dagapeyeff_heavy import heavy_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -41,6 +42,7 @@ def paper_notes() -> dict:
     monotone = monotone_report()
     straight = straight_report()
     diagonal = diagonal_report()
+    heavy = heavy_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -270,6 +272,20 @@ def paper_notes() -> dict:
                 f"and {diagonal['control_either_zeros_as_many']} of {diagonal['draws']} of its re-pairings do."
             ),
             "do_not_claim": "Empty cells on a diagonal are not a reading.",
+        },
+        {
+            "id": "heavy-row",
+            "kind": "comparison",
+            "tags": ["square", "margins"],
+            "statement": (
+                f"The fullest row that still has an empty cell has {heavy['row_full']} entries. "
+                "That chance is rarer than 1 in 37005. "
+                f"The fullest column that still has an empty cell has {heavy['column_full']} entries, "
+                "and that chance is 76.7 percent. "
+                f"The solved exercise's fullest such row has {heavy['control_row_full']} entries, "
+                "and that chance is under 1 percent."
+            ),
+            "do_not_claim": "A full row with an empty cell is not a reading.",
         },
     ]
     return {

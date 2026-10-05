@@ -1,0 +1,17 @@
+{
+  "claimed_plaintext": null,
+  "column_denominator": 1732713715827559446565946859854543934657,
+  "column_full": 46,
+  "column_numerator": 1328866302093932338657983518057960012398,
+  "control_denominator": 6419796923858636802,
+  "control_numerator": 52672987154742827,
+  "control_row_full": 26,
+  "open_denominator": 1106845118754750709333902855555150681706014474986913960,
+  "open_numerator": 56498518554951482026406655112292289613086332363,
+  "row_denominator": 1830195262429003541521826002942669214789351708376,
+  "row_full": 56,
+  "row_numerator": 49457625028435544158345552750235855398188499,
+  "row_open": 80,
+  "scope": "A full row with an empty cell is not a reading. No letter string is stored.",
+  "solved": false
+}

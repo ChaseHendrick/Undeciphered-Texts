@@ -47,6 +47,7 @@ from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
+from engine.dagapeyeff_heavy import heavy_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -354,6 +355,28 @@ def consider_diagonal() -> dict:
             f"The solved exercise has {report['control_main_zeros']} and {report['control_anti_zeros']} empty cells, "
             f"and {report['control_either_zeros_as_many']} of {report['draws']} of its re-pairings do. "
             "The empty cells clear 5 percent. The sums do not. Not a reading."
+        ),
+    }
+
+
+def consider_heavy() -> dict:
+    report = heavy_report()
+    row_rate = report["row_numerator"] / report["row_denominator"]
+    column_rate = report["column_numerator"] / report["column_denominator"]
+    allowed = row_rate < 0.05 and column_rate < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "heavy_allowed": allowed,
+        "learned": (
+            f"The fullest row that still has an empty cell has {report['row_full']} entries. "
+            "That chance is rarer than 1 in 37005. "
+            f"The row of {report['row_open']} entries has no empty cell. "
+            f"The fullest column that still has an empty cell has {report['column_full']} entries, "
+            "and that chance is 76.7 percent. "
+            "The two directions together do not clear 5 percent. "
+            f"The solved exercise's fullest such row has {report['control_row_full']} entries, "
+            "and that chance is under 1 percent. Not a reading."
         ),
     }
 

@@ -64,6 +64,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [No language assumed](../logs/dagapeyeff-frames-2026-10-04.md)
 - [The glue is real. The order is not.](../logs/dagapeyeff-glue-2026-10-04.md)
 - [Printed groups](../logs/dagapeyeff-groups-2026-10-04.md)
+- [A full row with an empty cell](../logs/dagapeyeff-heavy-2026-10-05.md)
 - [The frequency hole, and a period that is not there](../logs/dagapeyeff-hole-2026-10-04.md)
 - [The wait for a new cell](../logs/dagapeyeff-intro-2026-10-04.md)
 - [The order is on the last column's joins](../logs/dagapeyeff-joins-2026-10-04.md)
