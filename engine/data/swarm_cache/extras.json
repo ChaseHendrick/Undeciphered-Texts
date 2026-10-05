@@ -1,0 +1,23 @@
+{
+  "aligned": 528,
+  "allowed": true,
+  "also_touching": 0,
+  "at_least_one": 112,
+  "at_least_two": 8,
+  "claimed_plaintext": null,
+  "close_rows": 298,
+  "different_cells": 506,
+  "draws": 20000,
+  "exact_length": 458,
+  "low": [
+    "04",
+    "71",
+    "92",
+    "93",
+    "94"
+  ],
+  "outside": 2,
+  "pinned": 8,
+  "scope": "Two copies outside an aligned run are not a reading. No letter string is stored.",
+  "solved": false
+}

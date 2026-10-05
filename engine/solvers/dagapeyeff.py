@@ -55,6 +55,7 @@ from engine.dagapeyeff_halves import halves_report
 from engine.dagapeyeff_repeat import repeat_report
 from engine.dagapeyeff_held import held_report
 from engine.dagapeyeff_seats import seats_report
+from engine.dagapeyeff_extras import extras_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -626,6 +627,23 @@ def consider_halves() -> dict:
             f"Leave the same five out and that gap is {report['period7_residual_gap']}, "
             f"matched by {report['period7_residual_as_high']} of {report['draws']}. "
             "Not a reading."
+        ),
+    }
+
+
+def consider_extras() -> dict:
+    report = extras_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "extras_allowed": report["allowed"],
+        "learned": (
+            "The rare cells stay in their seats. "
+            f"Of {report['aligned']} shuffles that already have two runs in one starting column, "
+            f"{report['at_least_one']} have at least one further copy in the row, "
+            f"and {report['at_least_two']} have two. "
+            f"{report['also_touching']} of those two-copy rows are also the rows that touch a rare cell. "
+            "One further copy does not clear. Two do. Not a reading."
         ),
     }
 

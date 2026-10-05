@@ -27,6 +27,7 @@ from engine.dagapeyeff_halves import halves_report
 from engine.dagapeyeff_repeat import repeat_report
 from engine.dagapeyeff_held import held_report
 from engine.dagapeyeff_seats import seats_report
+from engine.dagapeyeff_extras import extras_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -66,6 +67,7 @@ def paper_notes() -> dict:
     repeat = repeat_report()
     held = held_report()
     seats = seats_report()
+    extras = extras_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -514,6 +516,20 @@ def paper_notes() -> dict:
                 "The contact is under 5 percent. The meeting is not."
             ),
             "do_not_claim": "Contact with the rare seats is not a reading.",
+        },
+        {
+            "id": "two-copies-outside-the-runs",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                "The rare cells stay in their seats. "
+                f"Of {extras['aligned']} shuffles that already have two runs in one starting column, "
+                f"{extras['at_least_one']} have at least one further copy in the row, "
+                f"and {extras['at_least_two']} have two. "
+                f"{extras['also_touching']} of those two-copy rows are also the rows that touch a rare cell. "
+                "One further copy does not clear. Two do."
+            ),
+            "do_not_claim": "Two copies outside an aligned run are not a reading.",
         },
         {
             "id": "bob-side-vote",

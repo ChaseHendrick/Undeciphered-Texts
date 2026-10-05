@@ -84,6 +84,6 @@ The members let through one job: drop one fixed digit from each printed group of
 
 Do not drop one fixed digit from each printed group of five.
 
-58 frozen scores claim no reading. Reversing the cells does not change the chi-square. Both ends of a printed group of five are on the square in 0 of 79 groups. That zero is forced by the odd group length, so 1 of 2000 shuffles also hitting zero is not evidence. The next job the members allow is the check, not another search. Refuse the zero as a finding.
+59 frozen scores claim no reading. Reversing the cells does not change the chi-square. Both ends of a printed group of five are on the square in 0 of 79 groups. That zero is forced by the odd group length, so 1 of 2000 shuffles also hitting zero is not evidence. The next job the members allow is the check, not another search. Refuse the zero as a finding.
 
 No letter string is stored.

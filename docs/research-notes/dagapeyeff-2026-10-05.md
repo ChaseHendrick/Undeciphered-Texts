@@ -40,6 +40,8 @@ The five symbols that appear at most three times can be held in their seats whil
 
 Of those 528, 9 also have both runs next to a rare cell. That is 1.70 percent. The meeting was scored on the same draws and does not clear: 185 of 2,842 grids that already have a vertical run of the common cell also meet a different run. [Seats](../logs/dagapeyeff-seats-2026-10-05.md).
 
+Of the same 528, 112 have at least one further copy of the run's cell in its row, which does not clear. 8 have two further copies. That is 1.52 percent. None of those 8 is one of the 9 that touch a rare cell. [Extras](../logs/dagapeyeff-extras-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -72,6 +74,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Digit routes](../logs/dagapeyeff-digit-routes-2026-10-04.md)
 - [Repeated digraphs](../logs/dagapeyeff-digraph-2026-10-04.md)
 - [At least three count-moves](../logs/dagapeyeff-edits-2026-10-04.md)
+- [Two copies outside the runs](../logs/dagapeyeff-extras-2026-10-05.md)
 - [No language assumed](../logs/dagapeyeff-frames-2026-10-04.md)
 - [The glue is real. The order is not.](../logs/dagapeyeff-glue-2026-10-04.md)
 - [Printed groups](../logs/dagapeyeff-groups-2026-10-04.md)
