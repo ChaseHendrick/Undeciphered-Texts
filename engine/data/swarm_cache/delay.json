@@ -1,0 +1,16 @@
+{
+  "best_delay": 79,
+  "claimed_plaintext": null,
+  "delay_draws": 200,
+  "delay_quadgram": -3.2652,
+  "delay_shuffles_as_high": 3,
+  "delays": 196,
+  "progressive_draws": 200,
+  "progressive_quadgram": -3.6491,
+  "progressive_rule": "sub",
+  "progressive_shuffles_as_high": 4,
+  "prose_quadgram": -2.5185,
+  "reaches_prose": false,
+  "scope": "A delay or a progressive shift is not a reading. No letter string is stored.",
+  "solved": false
+}

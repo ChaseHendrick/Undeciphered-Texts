@@ -13,6 +13,7 @@ import json
 import random
 from pathlib import Path
 
+from engine.dagapeyeff_cache import frozen
 from engine.dagapeyeff_foresight import after_training
 from engine.dagapeyeff_swarm import CHALLENGE, best_chi_square, challenge_pairs
 
@@ -37,6 +38,7 @@ def _cache_check() -> dict:
     return {"files": len(files), "claiming_a_reading": claiming}
 
 
+@frozen("parity")
 def _parity_check() -> dict:
     groups = CHALLENGE.split()
     both_on = 0
@@ -68,6 +70,8 @@ def _parity_check() -> dict:
         if count <= both_on:
             as_low += 1
     return {
+        "solved": False,
+        "claimed_plaintext": None,
         "groups": len(groups),
         "interior_groups": len(groups) - 1,
         "interior_breaks": interior_breaks,
@@ -89,8 +93,8 @@ def _order_check() -> dict:
 
 
 def checks_report() -> dict:
-    cache = _cache_check()
     parity = _parity_check()
+    cache = _cache_check()
     order = _order_check()
     trained = after_training()
     sound = (

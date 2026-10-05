@@ -1,0 +1,13 @@
+{
+  "best_quadgram": -3.4242,
+  "best_route": "rail-both-4",
+  "claimed_plaintext": null,
+  "null_texts": 40,
+  "prose_quadgram": -2.5185,
+  "reaches_prose": false,
+  "routes": 46,
+  "routes_on_square": 46,
+  "scope": "A digit route is not a reading. No letter string is stored.",
+  "shuffles_as_high": 29,
+  "solved": false
+}

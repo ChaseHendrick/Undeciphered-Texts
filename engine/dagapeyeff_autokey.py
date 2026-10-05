@@ -8,7 +8,8 @@ Shuffled cells get the same four rules. No letter string is stored.
 from __future__ import annotations
 
 import random
-from functools import lru_cache
+
+from engine.dagapeyeff_cache import frozen
 
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_add import _PROSE, _cells
@@ -71,7 +72,7 @@ def _best(cells: list[int], logp: list[float], english: list[int]) -> tuple[floa
     return best, best_rule
 
 
-@lru_cache(maxsize=1)
+@frozen("autokey")
 def autokey_report() -> dict:
     logp = get_model().logp
     english = [ord(char) - 65 for char in ENGLISH_ORDER]

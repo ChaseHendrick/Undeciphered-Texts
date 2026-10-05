@@ -1,0 +1,15 @@
+{
+  "best_quadgram": -3.3582,
+  "best_route": "rail-odd-6",
+  "claimed_plaintext": null,
+  "even_groups": 39,
+  "null_texts": 40,
+  "odd_groups": 39,
+  "prose_quadgram": -2.5185,
+  "reaches_prose": false,
+  "routes": 160,
+  "routes_on_square": 160,
+  "scope": "A regrouping of the printed groups is not a reading. No letter string is stored.",
+  "shuffles_as_high": 33,
+  "solved": false
+}

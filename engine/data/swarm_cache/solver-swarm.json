@@ -1,0 +1,22 @@
+{
+  "caesar_draws": 40,
+  "caesar_per_letter": -3.4459,
+  "caesar_prose_per_letter": -2.9415,
+  "caesar_shuffles_as_high": 33,
+  "claimed_plaintext": null,
+  "letters": 196,
+  "scope": "A solver score is not a reading. The plaintext is discarded.",
+  "solved": false,
+  "substitution_draws": 8,
+  "substitution_per_letter": -3.0858,
+  "substitution_prose_per_letter": -2.6585,
+  "substitution_reading": false,
+  "substitution_shuffles_as_high": 8,
+  "substitution_steps": 400,
+  "vigenere_draws": 20,
+  "vigenere_max_period": 8,
+  "vigenere_per_letter": -3.7393,
+  "vigenere_period": 3,
+  "vigenere_prose_per_letter": -2.4363,
+  "vigenere_shuffles_as_high": 7
+}

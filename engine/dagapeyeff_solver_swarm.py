@@ -8,7 +8,8 @@ plaintext a solver prints is discarded.
 from __future__ import annotations
 
 import random
-from functools import lru_cache
+
+from engine.dagapeyeff_cache import frozen
 
 from engine.alphabet import letters_only
 from engine.dagapeyeff_add import _PROSE, _cells
@@ -32,7 +33,7 @@ def _per_letter(score: float, count: int) -> float:
     return score / count
 
 
-@lru_cache(maxsize=1)
+@frozen("solver-swarm")
 def solver_swarm_report() -> dict:
     cells = _cells()
     text = _letters(cells)

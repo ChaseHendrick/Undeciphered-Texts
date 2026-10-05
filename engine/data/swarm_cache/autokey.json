@@ -1,0 +1,13 @@
+{
+  "best_quadgram": -3.7495,
+  "best_rule": "plain-sub",
+  "claimed_plaintext": null,
+  "null_texts": 40,
+  "prose_quadgram": -2.5185,
+  "reaches_prose": false,
+  "rules": 4,
+  "scope": "An autokey score is not a reading. No letter string is stored.",
+  "seeds": 25,
+  "shuffles_as_high": 37,
+  "solved": false
+}

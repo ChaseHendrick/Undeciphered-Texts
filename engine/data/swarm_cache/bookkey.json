@@ -1,0 +1,13 @@
+{
+  "best_quadgram": -3.389,
+  "best_use": "slide-faithful-sub",
+  "claimed_plaintext": null,
+  "faithful_length": 89,
+  "gloss_length": 92,
+  "null_texts": 100,
+  "prose_quadgram": -2.5185,
+  "reaches_prose": false,
+  "scope": "The book's exercise is not a reading of the challenge. No letter string is stored.",
+  "shuffles_as_high": 61,
+  "solved": false
+}

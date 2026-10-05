@@ -10,7 +10,8 @@ the control. No letter string is stored.
 from __future__ import annotations
 
 import random
-from functools import lru_cache
+
+from engine.dagapeyeff_cache import frozen
 from itertools import combinations
 
 from engine.alphabet import letters_only, to_ints
@@ -80,7 +81,7 @@ def _identical(seq: list[int]) -> int:
     return sum(left == right for left, right in zip(seq[0::2], seq[1::2]))
 
 
-@lru_cache(maxsize=1)
+@frozen("angles")
 def angle_report() -> dict:
     logp = get_model().logp
     english = [ord(char) - 65 for char in ENGLISH_ORDER]

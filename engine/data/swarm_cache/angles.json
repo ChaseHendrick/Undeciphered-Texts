@@ -1,0 +1,19 @@
+{
+  "claimed_plaintext": null,
+  "digraph_draws": 400,
+  "digraphs": 98,
+  "identical_digraphs": 10,
+  "most_in_one_row": 4,
+  "null_texts": 40,
+  "placements": 480700,
+  "placements_as_crowded": 29450,
+  "prose_quadgram": -2.5185,
+  "reaches_prose": false,
+  "scope": "A step, a row of holes, or a Playfair ban is not a reading. No letter string is stored.",
+  "shuffles_as_few_identical": 363,
+  "shuffles_as_high": 23,
+  "solved": false,
+  "step_quadgram": -3.8542,
+  "steps": 195,
+  "unused_cells": 7
+}

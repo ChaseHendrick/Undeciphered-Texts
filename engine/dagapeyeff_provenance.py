@@ -13,6 +13,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+from functools import lru_cache
 from typing import Any
 
 from engine.corrections import load_corrections
@@ -99,6 +100,7 @@ def chain_hash(previous: str | None, content: str) -> str:
     return hashlib.sha256(f"{previous}\n{content}".encode("utf-8")).hexdigest()
 
 
+@lru_cache(maxsize=1)
 def provenance_report() -> dict:
     steps = (
         ("cells", list(challenge_pairs())),

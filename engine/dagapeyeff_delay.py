@@ -10,7 +10,8 @@ string is stored.
 from __future__ import annotations
 
 import random
-from functools import lru_cache
+
+from engine.dagapeyeff_cache import frozen
 
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_add import _PROSE, _cells
@@ -96,7 +97,7 @@ def _coordinates() -> tuple[str, str]:
     return digits[0::2], digits[1::2]
 
 
-@lru_cache(maxsize=1)
+@frozen("delay")
 def delay_report() -> dict:
     logp = get_model().logp
     english = [ord(char) - 65 for char in ENGLISH_ORDER]

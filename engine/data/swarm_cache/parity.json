@@ -1,0 +1,14 @@
+{
+  "both_ends_on_square": 0,
+  "claimed_plaintext": null,
+  "forced_by_odd_groups": true,
+  "groups": 79,
+  "interior_breaks": 0,
+  "interior_groups": 78,
+  "last_group_left_on_square": true,
+  "last_group_right_on_square": false,
+  "shuffle_draws": 2000,
+  "shuffle_is_evidence": false,
+  "shuffles_as_low": 1,
+  "solved": false
+}

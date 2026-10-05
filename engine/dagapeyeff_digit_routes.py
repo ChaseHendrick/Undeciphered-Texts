@@ -9,7 +9,8 @@ routes. No letter string is stored.
 from __future__ import annotations
 
 import random
-from functools import lru_cache
+
+from engine.dagapeyeff_cache import frozen
 
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_add import _PROSE
@@ -95,7 +96,7 @@ def _best(row_digits: str, column_digits: str, logp: list[float], english: list[
     return best, best_name, kept
 
 
-@lru_cache(maxsize=1)
+@frozen("digit-routes")
 def digit_route_report() -> dict:
     logp = get_model().logp
     english = [ord(char) - 65 for char in ENGLISH_ORDER]
