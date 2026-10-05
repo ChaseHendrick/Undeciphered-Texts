@@ -104,6 +104,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [D'Agapeyeff swarm, 4 October 2026](../logs/dagapeyeff-swarm-2026-10-04.md)
 - [One cell repeating is not the column](../logs/dagapeyeff-symbols-2026-10-04.md)
 - [Three cells in a row](../logs/dagapeyeff-trigram-2026-10-04.md)
+- [The two runs of three share a column](../logs/dagapeyeff-triples-2026-10-05.md)
 - [The other legal column width](../logs/dagapeyeff-widths-2026-10-04.md)
 - [The best word score, not the friendliest counts](../logs/dagapeyeff-word-2026-10-04.md)
 - [The score a reading has to beat](../logs/dagapeyeff-yardstick-2026-10-04.md)

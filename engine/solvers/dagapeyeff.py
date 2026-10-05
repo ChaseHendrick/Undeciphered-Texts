@@ -45,6 +45,7 @@ from engine.dagapeyeff_intro import intro_report
 from engine.dagapeyeff_block import block_report
 from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_trigram import trigram_report
+from engine.dagapeyeff_triples import triples_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -490,6 +491,22 @@ def consider_bob_exercise() -> dict:
             f"He calls the challenge {challenge['challenge_family']}, "
             f"and {challenge['challenge_shuffles_same_family']} of {challenge['draws']} shuffles agree. "
             "The exercise uses the order. The challenge call does not. Not a reading."
+        ),
+    }
+
+
+def consider_triples() -> dict:
+    report = triples_report()
+    allowed = report["as_aligned"] / report["draws"] < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "triples_allowed": allowed,
+        "learned": (
+            f"Two runs of three identical cells start in column {report['columns'][0]}. "
+            f"The cells are {report['cells'][0]} and {report['cells'][1]}. "
+            f"{report['as_aligned']} of {report['draws']} shuffles put two such runs in one starting column. "
+            "Not a reading."
         ),
     }
 

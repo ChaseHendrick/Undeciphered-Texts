@@ -1,0 +1,25 @@
+{
+  "as_aligned": 430,
+  "cells": [
+    "75",
+    "63"
+  ],
+  "claimed_plaintext": null,
+  "columns": [
+    10,
+    10
+  ],
+  "draws": 20000,
+  "lengths": [
+    3,
+    3
+  ],
+  "rows": [
+    2,
+    6
+  ],
+  "runs": 2,
+  "scope": "Two runs in one column band are not a reading. No letter string is stored.",
+  "shared_starts": 2,
+  "solved": false
+}

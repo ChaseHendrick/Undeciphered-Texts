@@ -44,6 +44,7 @@ from engine.dagapeyeff_intro import intro_report
 from engine.dagapeyeff_block import block_report
 from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_trigram import trigram_report
+from engine.dagapeyeff_triples import triples_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -164,6 +165,7 @@ def provenance_report() -> dict:
         ("sharp", sharp_report()),
         ("rest", rest_report()),
         ("bob-exercise", bob_exercise_report()),
+        ("triples", triples_report()),
     )
     entries = []
     previous = None

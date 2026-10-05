@@ -17,6 +17,7 @@ from engine.dagapeyeff_intro import intro_report
 from engine.dagapeyeff_block import block_report
 from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_trigram import trigram_report
+from engine.dagapeyeff_triples import triples_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -45,6 +46,7 @@ def paper_notes() -> dict:
     block = block_report()
     digraph = digraph_report()
     trigram = trigram_report()
+    triples = triples_report()
     monotone = monotone_report()
     straight = straight_report()
     diagonal = diagonal_report()
@@ -359,6 +361,17 @@ def paper_notes() -> dict:
                 f"and {caution['challenge_shuffles_same_family']} of {caution['draws']} shuffles agree."
             ),
             "do_not_claim": "A family name is not a reading of the challenge.",
+        },
+        {
+            "id": "aligned-triples",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                f"Two runs of three identical cells start in column {triples['columns'][0]}. "
+                f"The cells are {triples['cells'][0]} and {triples['cells'][1]}. "
+                f"{triples['as_aligned']} of {triples['draws']} shuffles put two such runs in one starting column."
+            ),
+            "do_not_claim": "Two runs in one column band are not a reading.",
         },
     ]
     return {
