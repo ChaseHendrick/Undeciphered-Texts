@@ -48,6 +48,8 @@ from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_triples import triples_report
 from engine.dagapeyeff_contact import contact_report
 from engine.dagapeyeff_meeting import meeting_report
+from engine.dagapeyeff_sandwich import sandwich_report
+from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -547,6 +549,23 @@ def consider_meeting() -> dict:
     }
 
 
+def consider_sandwich() -> dict:
+    report = sandwich_report()
+    allowed = report["as_many"] / report["draws"] < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "sandwich_allowed": allowed,
+        "learned": (
+            f"The most common cell is {report['mode']}. "
+            f"Twice, {report['middle']} sits between two of them, both times in a row. "
+            f"{report['middle']} is also a run of three. A vertical gap would have counted. "
+            f"{report['as_many']} of {report['draws']} shuffles have at least two such gaps. "
+            "Not a reading."
+        ),
+    }
+
+
 def consider_regrouping() -> dict:
     report = regroup_report()
     allowed = (
@@ -930,6 +949,21 @@ def consider_bob() -> dict:
             "Bob names the cells substitution at 0.969. 40 of 40 shuffles get the same name, "
             "so the call does not use the order. On a Caesar of known prose he names caesar, "
             "and 0 of 40 shuffles agree. The call uses the promoted weights."
+        ),
+    }
+
+
+def consider_bob_pair() -> dict:
+    report = bob_pair_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "bob_pair_allowed": report["promoted"],
+        "learned": (
+            f"A side vote on six M-209 scores, fit on training keys, would move the 480 from "
+            f"{report['held_before']} to {report['held_after']} and the older 204 from "
+            f"{report['benchmark_before']} to {report['benchmark_after']}. "
+            "The older bar drops, so the weights stay. Not a reading."
         ),
     }
 

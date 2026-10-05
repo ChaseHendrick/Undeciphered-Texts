@@ -47,6 +47,8 @@ from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_triples import triples_report
 from engine.dagapeyeff_contact import contact_report
 from engine.dagapeyeff_meeting import meeting_report
+from engine.dagapeyeff_sandwich import sandwich_report
+from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -170,6 +172,8 @@ def provenance_report() -> dict:
         ("triples", triples_report()),
         ("contact", contact_report()),
         ("meeting", meeting_report()),
+        ("sandwich", sandwich_report()),
+        ("bob-pair", bob_pair_report()),
     )
     entries = []
     previous = None

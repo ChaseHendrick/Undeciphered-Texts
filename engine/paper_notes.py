@@ -20,6 +20,8 @@ from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_triples import triples_report
 from engine.dagapeyeff_contact import contact_report
 from engine.dagapeyeff_meeting import meeting_report
+from engine.dagapeyeff_sandwich import sandwich_report
+from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -51,6 +53,8 @@ def paper_notes() -> dict:
     triples = triples_report()
     contact = contact_report()
     meeting = meeting_report()
+    sandwich = sandwich_report()
+    pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
     diagonal = diagonal_report()
@@ -400,6 +404,30 @@ def paper_notes() -> dict:
                 f"A king's move counts. {meeting['as_many']} of {meeting['draws']} shuffles have such a meeting."
             ),
             "do_not_claim": "A meeting of two runs is not a reading.",
+        },
+        {
+            "id": "mode-sandwich",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                f"The most common cell is {sandwich['mode']}. "
+                f"Twice, {sandwich['middle']} sits between two of them, both times in a row. "
+                f"{sandwich['middle']} is also a run of three. A vertical gap would have counted. "
+                f"{sandwich['as_many']} of {sandwich['draws']} shuffles have at least two such gaps."
+            ),
+            "do_not_claim": "A cell between two copies of another is not a reading.",
+        },
+        {
+            "id": "bob-side-vote",
+            "kind": "comparison",
+            "tags": ["router"],
+            "statement": (
+                "A side vote on six M-209 scores, fit on training keys, would move the 480 from "
+                f"{pair['held_before']} to {pair['held_after']} and the older 204 from "
+                f"{pair['benchmark_before']} to {pair['benchmark_after']}. "
+                "The older bar drops, so the weights stay."
+            ),
+            "do_not_claim": "A side vote is not a reading, and it does not replace Bob.",
         },
     ]
     return {

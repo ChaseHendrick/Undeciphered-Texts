@@ -1,0 +1,19 @@
+{
+  "benchmark_after": 192,
+  "benchmark_before": 193,
+  "benchmark_flips": 5,
+  "benchmark_total": 204,
+  "claimed_plaintext": null,
+  "held_after": 435,
+  "held_before": 429,
+  "held_flips": 8,
+  "held_total": 480,
+  "promoted": false,
+  "scope": "A side vote is not a reading. The weights were not replaced.",
+  "solved": false,
+  "train_correct": 155,
+  "train_total": 200,
+  "weights_match_shipped": true,
+  "weights_replaced": false,
+  "weights_sha256": "5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b"
+}

@@ -1,0 +1,22 @@
+{
+  "as_many": 427,
+  "claimed_plaintext": null,
+  "draws": 20000,
+  "gaps": 2,
+  "middle": "63",
+  "mode": "81",
+  "places": [
+    {
+      "axis": "row",
+      "column": 7,
+      "row": 1
+    },
+    {
+      "axis": "row",
+      "column": 4,
+      "row": 3
+    }
+  ],
+  "scope": "A cell between two copies of another is not a reading. No letter string is stored.",
+  "solved": false
+}
