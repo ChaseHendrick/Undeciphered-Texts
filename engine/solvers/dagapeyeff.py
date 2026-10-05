@@ -59,6 +59,7 @@ from engine.dagapeyeff_extras import extras_report
 from engine.dagapeyeff_heldsand import heldsand_report
 from engine.dagapeyeff_heldwait import heldwait_report
 from engine.dagapeyeff_quartet import quartet_report
+from engine.dagapeyeff_squares import squares_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -630,6 +631,21 @@ def consider_halves() -> dict:
             f"Leave the same five out and that gap is {report['period7_residual_gap']}, "
             f"matched by {report['period7_residual_as_high']} of {report['draws']}. "
             "Not a reading."
+        ),
+    }
+
+
+def consider_squares() -> dict:
+    report = squares_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "squares_allowed": report["allowed"],
+        "learned": (
+            f"Of the cells that share one count, {report['cell']} has "
+            f"{report['even']} copies on one color of the board and {report['odd']} on the other. "
+            f"{report['as_split']} of {report['draws']} scrambles, allowed to pick their most uneven cell, match that split. "
+            "A straight run alternates colors, so the runs do not cause it. Not a reading."
         ),
     }
 

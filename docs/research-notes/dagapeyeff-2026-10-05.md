@@ -48,6 +48,8 @@ The same seats were held for the introduction wait. Counted with the rare cells,
 
 Four cells, 62, 75, 82 and 85, each appear 17 times. No row holds more than 6 of them. The fullest column holds 8. Taking the more even direction, 4,643 of 100,000 scrambles are that even. The most common cell, and the four cells 64, 74, 81 and 83, are not spread in this way. [Quartet](../logs/dagapeyeff-quartet-2026-10-05.md).
 
+Of those four, 62 has 3 copies on the even squares of the grid and 14 on the odd squares. A scramble may pick the most uneven of the four. 3.615 percent of 20,000 match that split. A straight run alternates the colors, so the runs do not cause it. [Squares](../logs/dagapeyeff-squares-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -130,6 +132,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Solver swarm](../logs/dagapeyeff-solver-swarm-2026-10-04.md)
 - [The solver now refuses a flat order](../logs/dagapeyeff-split-2026-10-04.md)
 - [The exercise has an uneven line](../logs/dagapeyeff-spread-2026-10-05.md)
+- [One tied cell prefers one color](../logs/dagapeyeff-squares-2026-10-05.md)
 - [Counts that differ by one](../logs/dagapeyeff-straight-2026-10-04.md)
 - [The private symbols are not filler](../logs/dagapeyeff-strip-2026-10-04.md)
 - [D'Agapeyeff swarm, 4 October 2026](../logs/dagapeyeff-swarm-2026-10-04.md)

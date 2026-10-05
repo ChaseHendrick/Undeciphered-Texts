@@ -1,0 +1,40 @@
+{
+  "allowed": true,
+  "as_split": 723,
+  "cell": "62",
+  "cells": [
+    "62",
+    "75",
+    "82",
+    "85"
+  ],
+  "claimed_plaintext": null,
+  "detail": {
+    "62": {
+      "even": 3,
+      "gap": 11,
+      "odd": 14
+    },
+    "75": {
+      "even": 9,
+      "gap": 1,
+      "odd": 8
+    },
+    "82": {
+      "even": 7,
+      "gap": 3,
+      "odd": 10
+    },
+    "85": {
+      "even": 8,
+      "gap": 1,
+      "odd": 9
+    }
+  },
+  "draws": 20000,
+  "even": 3,
+  "gap": 11,
+  "odd": 14,
+  "scope": "A color split of a tied cell is not a reading. No letter string is stored.",
+  "solved": false
+}

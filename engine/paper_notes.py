@@ -31,6 +31,7 @@ from engine.dagapeyeff_extras import extras_report
 from engine.dagapeyeff_heldsand import heldsand_report
 from engine.dagapeyeff_heldwait import heldwait_report
 from engine.dagapeyeff_quartet import quartet_report
+from engine.dagapeyeff_squares import squares_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -74,6 +75,7 @@ def paper_notes() -> dict:
     heldsand = heldsand_report()
     heldwait = heldwait_report()
     quartet = quartet_report()
+    squares = squares_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -580,6 +582,20 @@ def paper_notes() -> dict:
                 "Those two do not clear."
             ),
             "do_not_claim": "Four cells that share a count are not a reading.",
+        },
+        {
+            "id": "tied-cell-color-split",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                "Of the four cells that appear 17 times, "
+                f"{squares['cell']} has {squares['even']} copies on the even squares of the grid "
+                f"and {squares['odd']} on the odd squares. "
+                "A scramble may pick the most uneven of the four. "
+                "3.615 percent of 20,000 scrambles match that split. "
+                "A straight run alternates the two colors, so the runs do not cause it."
+            ),
+            "do_not_claim": "A color split of a tied cell is not a reading.",
         },
         {
             "id": "bob-side-vote",
