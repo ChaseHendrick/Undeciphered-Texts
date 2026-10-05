@@ -1,0 +1,44 @@
+{
+  "claimed_plaintext": null,
+  "column_line": [
+    0,
+    1,
+    20,
+    12,
+    0
+  ],
+  "column_spread": 1636,
+  "columns_as_uneven": 3337,
+  "control_column_line": [
+    1,
+    9,
+    9,
+    3,
+    0
+  ],
+  "control_column_spread": 376,
+  "control_columns_as_uneven": 234,
+  "control_either_as_uneven": 250,
+  "control_line": [
+    2,
+    5,
+    0,
+    9,
+    10
+  ],
+  "control_rows_as_uneven": 73,
+  "control_spread": 374,
+  "draws": 20000,
+  "either_as_uneven": 3345,
+  "row_line": [
+    1,
+    9,
+    0,
+    14,
+    17
+  ],
+  "row_spread": 1154,
+  "rows_as_uneven": 112,
+  "scope": "An uneven row is not a reading. No letter string is stored.",
+  "solved": false
+}

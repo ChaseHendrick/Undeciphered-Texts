@@ -48,6 +48,7 @@ from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
 from engine.dagapeyeff_heavy import heavy_report
+from engine.dagapeyeff_spread import spread_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -377,6 +378,27 @@ def consider_heavy() -> dict:
             "The two directions together do not clear 5 percent. "
             f"The solved exercise's fullest such row has {report['control_row_full']} entries, "
             "and that chance is under 1 percent. Not a reading."
+        ),
+    }
+
+
+def consider_spread() -> dict:
+    report = spread_report()
+    challenge = report["either_as_uneven"] / report["draws"]
+    exercise = report["control_either_as_uneven"] / report["draws"]
+    allowed = exercise < 0.05 and challenge > 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "spread_allowed": allowed,
+        "learned": (
+            f"The solved exercise's most uneven line stays rare when a column may be the line: "
+            f"{report['control_either_as_uneven']} of {report['draws']}. "
+            f"The challenge's most uneven row is {report['row_line']}, "
+            f"and {report['rows_as_uneven']} of {report['draws']} re-pairings have a row at least that uneven. "
+            f"Its most uneven column is {report['column_line']}. "
+            f"The two directions together are {report['either_as_uneven']} of {report['draws']}. "
+            "The exercise clears 5 percent. The challenge does not share it. Not a reading."
         ),
     }
 

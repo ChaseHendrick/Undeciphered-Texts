@@ -95,6 +95,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Running keys from texts already in the repo](../logs/dagapeyeff-running-2026-10-04.md)
 - [Solver swarm](../logs/dagapeyeff-solver-swarm-2026-10-04.md)
 - [The solver now refuses a flat order](../logs/dagapeyeff-split-2026-10-04.md)
+- [The exercise has an uneven line](../logs/dagapeyeff-spread-2026-10-05.md)
 - [Counts that differ by one](../logs/dagapeyeff-straight-2026-10-04.md)
 - [The private symbols are not filler](../logs/dagapeyeff-strip-2026-10-04.md)
 - [D'Agapeyeff swarm, 4 October 2026](../logs/dagapeyeff-swarm-2026-10-04.md)

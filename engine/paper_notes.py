@@ -19,6 +19,7 @@ from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
 from engine.dagapeyeff_heavy import heavy_report
+from engine.dagapeyeff_spread import spread_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -43,6 +44,7 @@ def paper_notes() -> dict:
     straight = straight_report()
     diagonal = diagonal_report()
     heavy = heavy_report()
+    spread = spread_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -286,6 +288,19 @@ def paper_notes() -> dict:
                 "and that chance is under 1 percent."
             ),
             "do_not_claim": "A full row with an empty cell is not a reading.",
+        },
+        {
+            "id": "uneven-line",
+            "kind": "comparison",
+            "tags": ["square", "spread"],
+            "statement": (
+                "The solved exercise's most uneven line stays rare when columns count: "
+                f"{spread['control_either_as_uneven']} of {spread['draws']}. "
+                f"The challenge's most uneven row is {spread['row_line']}, "
+                f"and {spread['rows_as_uneven']} of {spread['draws']} re-pairings match that row. "
+                f"With its column included, {spread['either_as_uneven']} of {spread['draws']} match."
+            ),
+            "do_not_claim": "An uneven row is not a reading of the challenge.",
         },
     ]
     return {
