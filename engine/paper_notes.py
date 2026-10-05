@@ -36,6 +36,7 @@ from engine.dagapeyeff_twospace import twospace_report
 from engine.dagapeyeff_echo import echo_report
 from engine.dagapeyeff_ride import ride_report
 from engine.dagapeyeff_span import span_report
+from engine.dagapeyeff_successive import successive_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -84,6 +85,7 @@ def paper_notes() -> dict:
     echo = echo_report()
     ride = ride_report()
     span = span_report()
+    successive = successive_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -658,6 +660,18 @@ def paper_notes() -> dict:
                 f"{span['as_many']} of {span['draws']} scrambles have such a span."
             ),
             "do_not_claim": "A palindrome on a spaced span is not a reading.",
+        },
+        {
+            "id": "successive-singleton-rows",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                "The three cells that appear once are 04, 71 and 94. "
+                "They sit in column 13 at rows 6, 7 and 8, which are successive. "
+                "Given that those three cells share a column, "
+                f"{successive['successive_choices']} of {successive['choices']} choices of rows are successive."
+            ),
+            "do_not_claim": "Successive rows in the private column are not a reading.",
         },
         {
             "id": "bob-side-vote",

@@ -58,6 +58,8 @@ Those two rows, 5 and 11, are also two seats of 85 in column 2, whose seats are 
 
 Columns 6 through 10 of row 0 read 91, 64, 81, 64, 91, the same forwards and backwards. Those are the columns from the first to the last seat of 62 in row 11, at columns 6, 8 and 10. The triple is not three adjacent cells. A scramble may use any cell and any row or column. 782 of 20,000 scrambles have such a span. [Span](../logs/dagapeyeff-span-2026-10-05.md).
 
+The cells that appear once are 04, 71 and 94, already known to share column 13. They sit at rows 6, 7 and 8, which are successive. Given the shared column, 12 of 364 choices of rows are successive. [Successive rows](../logs/dagapeyeff-successive-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -152,6 +154,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [A palindrome fills a spaced span](../logs/dagapeyeff-span-2026-10-05.md)
 - [The exercise has an uneven line](../logs/dagapeyeff-spread-2026-10-05.md)
 - [One tied cell prefers one color](../logs/dagapeyeff-squares-2026-10-05.md)
+- [Three successive rows in the private column](../logs/dagapeyeff-successive-2026-10-05.md)
 - [The two runs of three share a column](../logs/dagapeyeff-triples-2026-10-05.md)
 - [Two spaced triples share a column](../logs/dagapeyeff-twospace-2026-10-05.md)
 <!-- generated-logs:end -->

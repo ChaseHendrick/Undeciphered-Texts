@@ -1,0 +1,31 @@
+{
+  "allowed": true,
+  "cells": [
+    {
+      "cell": "04",
+      "column": 13,
+      "row": 6
+    },
+    {
+      "cell": "94",
+      "column": 13,
+      "row": 7
+    },
+    {
+      "cell": "71",
+      "column": 13,
+      "row": 8
+    }
+  ],
+  "choices": 364,
+  "claimed_plaintext": null,
+  "rows": [
+    6,
+    7,
+    8
+  ],
+  "scope": "Successive rows in the private column are not a reading. No letter string is stored.",
+  "solved": false,
+  "successive": true,
+  "successive_choices": 12
+}
