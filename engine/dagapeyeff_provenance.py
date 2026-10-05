@@ -43,6 +43,7 @@ from engine.dagapeyeff_block import block_report
 from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_monotone import monotone_report
+from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_foresight import foresight
 from engine.dagapeyeff_groups import group_report
@@ -146,6 +147,7 @@ def provenance_report() -> dict:
         ("digraph", digraph_report()),
         ("trigram", trigram_report()),
         ("monotone", monotone_report()),
+        ("straight", straight_report()),
     )
     entries = []
     previous = None

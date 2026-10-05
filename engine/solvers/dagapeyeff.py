@@ -45,6 +45,7 @@ from engine.dagapeyeff_block import block_report
 from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_monotone import monotone_report
+from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -311,6 +312,26 @@ def consider_monotone() -> dict:
             f"No column does. If a row or a column may be the line, "
             f"{report['either_with_one']} of {report['draws']} re-pairings have one. "
             "The row clears 5 percent. The two directions together do not. Not a reading."
+        ),
+    }
+
+
+def consider_straight() -> dict:
+    report = straight_report()
+    either = report["either_as_long"] / report["draws"]
+    allowed = either < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "straight_allowed": allowed,
+        "learned": (
+            f"Four successive counts in the row {report['strict_row']} differ by one. "
+            f"{report['rows_as_long']} of {report['draws']} re-pairings have a straight at least that long. "
+            f"Columns were scored the same way. {report['columns_as_long']} of {report['draws']} reach it, "
+            f"so both directions together are {report['either_as_long']} of {report['draws']}. "
+            f"The solved exercise has a straight of length {report['control_row_length']}, "
+            f"and {report['control_rows_as_long']} of {report['draws']} of its re-pairings do too. "
+            "The challenge clears 5 percent. The exercise does not. Not a reading."
         ),
     }
 

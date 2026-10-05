@@ -16,6 +16,7 @@ from engine.dagapeyeff_block import block_report
 from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_monotone import monotone_report
+from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -37,6 +38,7 @@ def paper_notes() -> dict:
     digraph = digraph_report()
     trigram = trigram_report()
     monotone = monotone_report()
+    straight = straight_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -239,6 +241,20 @@ def paper_notes() -> dict:
                 f"{monotone['either_with_one']} of {monotone['draws']} re-pairings have a strict line."
             ),
             "do_not_claim": "A staircase that fails once columns are allowed is not a reading.",
+        },
+        {
+            "id": "unit-straight",
+            "kind": "comparison",
+            "tags": ["square", "straight"],
+            "statement": (
+                "Four successive counts differ by one in the row "
+                + ", ".join(str(count) for count in straight["strict_row"])
+                + ". "
+                f"{straight['either_as_long']} of {straight['draws']} re-pairings have a straight that long, "
+                f"including columns. "
+                f"The solved exercise has one too, and {straight['control_rows_as_long']} of {straight['draws']} of its re-pairings do."
+            ),
+            "do_not_claim": "A run of counts that differ by one is not a reading.",
         },
     ]
     return {
