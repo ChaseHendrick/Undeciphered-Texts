@@ -58,6 +58,7 @@ from engine.dagapeyeff_seats import seats_report
 from engine.dagapeyeff_extras import extras_report
 from engine.dagapeyeff_heldsand import heldsand_report
 from engine.dagapeyeff_heldwait import heldwait_report
+from engine.dagapeyeff_quartet import quartet_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -629,6 +630,23 @@ def consider_halves() -> dict:
             f"Leave the same five out and that gap is {report['period7_residual_gap']}, "
             f"matched by {report['period7_residual_as_high']} of {report['draws']}. "
             "Not a reading."
+        ),
+    }
+
+
+def consider_quartet() -> dict:
+    report = quartet_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "quartet_allowed": report["allowed"],
+        "learned": (
+            "Four cells share one count: "
+            + ", ".join(report["cells"])
+            + f". No row holds more than {report['row_most']} of them, "
+            f"and no column holds more than {report['column_most']}. "
+            f"Taking the more even direction, {report['as_even']} of {report['draws']} scrambles are that even. "
+            "The most common cell is not spread this way, and neither are the next four cells. Not a reading."
         ),
     }
 

@@ -46,6 +46,8 @@ Of the same 528, 112 have at least one further copy of the run's cell in its row
 
 The same seats were held for the introduction wait. Counted with the rare cells, a wait of 22 is matched by 118 of 20,000 draws. Leave the rare cells out of the count and the wait is 39, matched by 19,186 of 20,000. The short wait does not survive. [Held wait](../logs/dagapeyeff-heldwait-2026-10-05.md).
 
+Four cells, 62, 75, 82 and 85, each appear 17 times. No row holds more than 6 of them. The fullest column holds 8. Taking the more even direction, 4,643 of 100,000 scrambles are that even. The most common cell, and the four cells 64, 74, 81 and 83, are not spread in this way. [Quartet](../logs/dagapeyeff-quartet-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -110,6 +112,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [One digit place](../logs/dagapeyeff-places-2026-10-04.md)
 - [Five symbols never leave the last column](../logs/dagapeyeff-private-2026-10-04.md)
 - [Hashes for the cells and the scores](../logs/dagapeyeff-provenance-2026-10-04.md)
+- [Four cells share a count](../logs/dagapeyeff-quartet-2026-10-05.md)
 - [Column keys and digit reads](../logs/dagapeyeff-reads-2026-10-04.md)
 - [How far from the published score](../logs/dagapeyeff-record-2026-10-04.md)
 - [Refined swarm](../logs/dagapeyeff-refined-2026-10-04.md)

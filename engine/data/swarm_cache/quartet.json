@@ -1,0 +1,32 @@
+{
+  "allowed": true,
+  "as_even": 4643,
+  "cap": 6,
+  "cells": [
+    "62",
+    "75",
+    "82",
+    "85"
+  ],
+  "claimed_plaintext": null,
+  "column_most": 8,
+  "copies": 68,
+  "count": 17,
+  "draws": 100000,
+  "mode_as_even": 76792,
+  "mode_cap": 3,
+  "mode_cell": [
+    "81"
+  ],
+  "next_as_even": 96962,
+  "next_cap": 8,
+  "next_cells": [
+    "64",
+    "74",
+    "81",
+    "83"
+  ],
+  "row_most": 6,
+  "scope": "Four cells that share a count are not a reading. No letter string is stored.",
+  "solved": false
+}

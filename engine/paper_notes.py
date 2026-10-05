@@ -30,6 +30,7 @@ from engine.dagapeyeff_seats import seats_report
 from engine.dagapeyeff_extras import extras_report
 from engine.dagapeyeff_heldsand import heldsand_report
 from engine.dagapeyeff_heldwait import heldwait_report
+from engine.dagapeyeff_quartet import quartet_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -72,6 +73,7 @@ def paper_notes() -> dict:
     extras = extras_report()
     heldsand = heldsand_report()
     heldwait = heldwait_report()
+    quartet = quartet_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -562,6 +564,22 @@ def paper_notes() -> dict:
                 "The short wait does not survive once the rare cells are left out of the count."
             ),
             "do_not_claim": "The introduction wait with the rare cells held still is not a reading.",
+        },
+        {
+            "id": "four-cells-share-a-count",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                "Four cells share the count 17: "
+                + ", ".join(quartet["cells"])
+                + f". No row holds more than {quartet['row_most']} of them, "
+                f"and no column holds more than {quartet['column_most']}. "
+                f"Taking the more even direction, {quartet['as_even']} of {quartet['draws']} scrambles are that even. "
+                f"The most common cell reaches that bar in {quartet['mode_as_even']} of {quartet['draws']}, "
+                f"and the next four cells in {quartet['next_as_even']} of {quartet['draws']}. "
+                "Those two do not clear."
+            ),
+            "do_not_claim": "Four cells that share a count are not a reading.",
         },
         {
             "id": "bob-side-vote",

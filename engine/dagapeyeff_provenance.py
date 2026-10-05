@@ -57,6 +57,7 @@ from engine.dagapeyeff_seats import seats_report
 from engine.dagapeyeff_extras import extras_report
 from engine.dagapeyeff_heldsand import heldsand_report
 from engine.dagapeyeff_heldwait import heldwait_report
+from engine.dagapeyeff_quartet import quartet_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -191,6 +192,7 @@ def provenance_report() -> dict:
         ("extras", extras_report()),
         ("heldsand", heldsand_report()),
         ("heldwait", heldwait_report()),
+        ("quartet", quartet_report()),
         ("bob-pair", bob_pair_report()),
     )
     entries = []
