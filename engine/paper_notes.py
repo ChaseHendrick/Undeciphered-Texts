@@ -37,6 +37,7 @@ from engine.dagapeyeff_echo import echo_report
 from engine.dagapeyeff_ride import ride_report
 from engine.dagapeyeff_span import span_report
 from engine.dagapeyeff_successive import successive_report
+from engine.dagapeyeff_counts import counts_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -86,6 +87,7 @@ def paper_notes() -> dict:
     ride = ride_report()
     span = span_report()
     successive = successive_report()
+    counts = counts_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -672,6 +674,20 @@ def paper_notes() -> dict:
                 f"{successive['successive_choices']} of {successive['choices']} choices of rows are successive."
             ),
             "do_not_claim": "Successive rows in the private column are not a reading.",
+        },
+        {
+            "id": "counts-in-order-on-the-square",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                "The only symbol that appears three times is 92. "
+                "The only symbol that appears twice is 93. "
+                "Three symbols appear once, and 94 is one of them. "
+                "On the square, 92, 93 and 94 sit in a row in that order of counts. "
+                "A placement may use either order, a row or a column, and a step of one or two. "
+                f"{counts['favorable']} of {counts['placements']} placements do that."
+            ),
+            "do_not_claim": "Counts in order on the square are not a reading.",
         },
         {
             "id": "bob-side-vote",

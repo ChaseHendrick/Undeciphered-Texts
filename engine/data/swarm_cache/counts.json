@@ -1,0 +1,20 @@
+{
+  "allowed": true,
+  "claimed_plaintext": null,
+  "favorable": 18480,
+  "one": [
+    "04",
+    "71",
+    "94"
+  ],
+  "ordered": true,
+  "placements": 1062600,
+  "scope": "Counts in order on the square are not a reading. No letter string is stored.",
+  "solved": false,
+  "three": [
+    "92"
+  ],
+  "two": [
+    "93"
+  ]
+}

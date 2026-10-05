@@ -60,6 +60,8 @@ Columns 6 through 10 of row 0 read 91, 64, 81, 64, 91, the same forwards and bac
 
 The cells that appear once are 04, 71 and 94, already known to share column 13. They sit at rows 6, 7 and 8, which are successive. Given the shared column, 12 of 364 choices of rows are successive. [Successive rows](../logs/dagapeyeff-successive-2026-10-05.md).
 
+92 appears three times, 93 appears twice, and 94 appears once. On the square those three are successive in one row, so the counts read three, then two, then one. Either order, a row or a column, and a step of one or two are all counted. 18480 of 1,062,600 placements do that. [Counts](../logs/dagapeyeff-counts-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -133,6 +135,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [The best word score, not the friendliest counts](../logs/dagapeyeff-word-2026-10-04.md)
 - [The score a reading has to beat](../logs/dagapeyeff-yardstick-2026-10-04.md)
 - [The aligned runs sit next to rare cells](../logs/dagapeyeff-contact-2026-10-05.md)
+- [Rare counts sit in order on the square](../logs/dagapeyeff-counts-2026-10-05.md)
 - [A spaced triple is echoed](../logs/dagapeyeff-echo-2026-10-05.md)
 - [Two copies outside the runs](../logs/dagapeyeff-extras-2026-10-05.md)
 - [Even and odd are the private column](../logs/dagapeyeff-halves-2026-10-05.md)

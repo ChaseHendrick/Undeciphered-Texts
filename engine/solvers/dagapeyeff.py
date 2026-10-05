@@ -65,6 +65,7 @@ from engine.dagapeyeff_echo import echo_report
 from engine.dagapeyeff_ride import ride_report
 from engine.dagapeyeff_span import span_report
 from engine.dagapeyeff_successive import successive_report
+from engine.dagapeyeff_counts import counts_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -635,6 +636,20 @@ def consider_halves() -> dict:
             f"and {report['period7_as_high']} of {report['draws']} shuffles match. "
             f"Leave the same five out and that gap is {report['period7_residual_gap']}, "
             f"matched by {report['period7_residual_as_high']} of {report['draws']}. "
+            "Not a reading."
+        ),
+    }
+
+
+def consider_counts() -> dict:
+    report = counts_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "counts_allowed": report["allowed"],
+        "learned": (
+            f"The counts of three, two and one sit in order on the square. "
+            f"{report['favorable']} of {report['placements']} placements do that. "
             "Not a reading."
         ),
     }
