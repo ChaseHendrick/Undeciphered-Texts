@@ -1,0 +1,43 @@
+{
+  "allowed": true,
+  "as_many": 932,
+  "claimed_plaintext": null,
+  "draws": 20000,
+  "echo_count": 2,
+  "echoes": [
+    {
+      "axis": "row",
+      "cell": "62",
+      "echo": 5,
+      "echoed": [
+        6,
+        8
+      ],
+      "index": 11,
+      "seats": [
+        6,
+        8,
+        10
+      ],
+      "step": 2
+    },
+    {
+      "axis": "column",
+      "cell": "82",
+      "echo": 7,
+      "echoed": [
+        6,
+        12
+      ],
+      "index": 2,
+      "seats": [
+        0,
+        6,
+        12
+      ],
+      "step": 6
+    }
+  ],
+  "scope": "An echoed spaced triple is not a reading. No letter string is stored.",
+  "solved": false
+}

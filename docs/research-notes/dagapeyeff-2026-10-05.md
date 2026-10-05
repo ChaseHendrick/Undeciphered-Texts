@@ -52,6 +52,8 @@ Of those four, 62 has 3 copies on the even squares of the grid and 14 on the odd
 
 Column 2 holds three copies of 82, at rows 0, 6 and 12, and three copies of 85, at rows 5, 8 and 11. Each triple is equally spaced, and neither is three adjacent cells. A scramble may use any row or any column, and any cells. 740 of 20,000 scrambles have such a line. [Two spaced triples](../logs/dagapeyeff-twospace-2026-10-05.md).
 
+Row 11 holds 62 at columns 6, 8 and 10, and row 5 repeats it at columns 6 and 8. Column 2 holds 82 at rows 0, 6 and 12, and column 7 repeats it at rows 6 and 12. Neither triple is three adjacent cells. A scramble may use any cell and any row or column. 932 of 20,000 scrambles have two such echoes. [Echo](../logs/dagapeyeff-echo-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -125,6 +127,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [The best word score, not the friendliest counts](../logs/dagapeyeff-word-2026-10-04.md)
 - [The score a reading has to beat](../logs/dagapeyeff-yardstick-2026-10-04.md)
 - [The aligned runs sit next to rare cells](../logs/dagapeyeff-contact-2026-10-05.md)
+- [A spaced triple is echoed](../logs/dagapeyeff-echo-2026-10-05.md)
 - [Two copies outside the runs](../logs/dagapeyeff-extras-2026-10-05.md)
 - [Even and odd are the private column](../logs/dagapeyeff-halves-2026-10-05.md)
 - [A full row with an empty cell](../logs/dagapeyeff-heavy-2026-10-05.md)

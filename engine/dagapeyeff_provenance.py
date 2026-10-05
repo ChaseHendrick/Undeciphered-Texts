@@ -60,6 +60,7 @@ from engine.dagapeyeff_heldwait import heldwait_report
 from engine.dagapeyeff_quartet import quartet_report
 from engine.dagapeyeff_squares import squares_report
 from engine.dagapeyeff_twospace import twospace_report
+from engine.dagapeyeff_echo import echo_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -197,6 +198,7 @@ def provenance_report() -> dict:
         ("quartet", quartet_report()),
         ("squares", squares_report()),
         ("twospace", twospace_report()),
+        ("echo", echo_report()),
         ("bob-pair", bob_pair_report()),
     )
     entries = []

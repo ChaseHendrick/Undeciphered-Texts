@@ -61,6 +61,7 @@ from engine.dagapeyeff_heldwait import heldwait_report
 from engine.dagapeyeff_quartet import quartet_report
 from engine.dagapeyeff_squares import squares_report
 from engine.dagapeyeff_twospace import twospace_report
+from engine.dagapeyeff_echo import echo_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -631,6 +632,20 @@ def consider_halves() -> dict:
             f"and {report['period7_as_high']} of {report['draws']} shuffles match. "
             f"Leave the same five out and that gap is {report['period7_residual_gap']}, "
             f"matched by {report['period7_residual_as_high']} of {report['draws']}. "
+            "Not a reading."
+        ),
+    }
+
+
+def consider_echo() -> dict:
+    report = echo_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "echo_allowed": report["allowed"],
+        "learned": (
+            f"{report['echo_count']} spaced triples are each repeated in at least two seats by a parallel line. "
+            f"{report['as_many']} of {report['draws']} scrambles do that, using any cell and any row or column. "
             "Not a reading."
         ),
     }

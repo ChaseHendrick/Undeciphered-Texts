@@ -33,6 +33,7 @@ from engine.dagapeyeff_heldwait import heldwait_report
 from engine.dagapeyeff_quartet import quartet_report
 from engine.dagapeyeff_squares import squares_report
 from engine.dagapeyeff_twospace import twospace_report
+from engine.dagapeyeff_echo import echo_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -78,6 +79,7 @@ def paper_notes() -> dict:
     quartet = quartet_report()
     squares = squares_report()
     twospace = twospace_report()
+    echo = echo_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -614,6 +616,19 @@ def paper_notes() -> dict:
                 f"{twospace['as_many']} of {twospace['draws']} scrambles have such a line."
             ),
             "do_not_claim": "Two spaced triples in one line are not a reading.",
+        },
+        {
+            "id": "echoed-spaced-triple",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                "Row 11 holds 62 at seats 6, 8 and 10, and row 5 repeats it at seats 6 and 8. "
+                "Column 2 holds 82 at seats 0, 6 and 12, and column 7 repeats it at seats 6 and 12. "
+                "Neither triple is three adjacent cells. "
+                "A scramble may use any cell and any row or column. "
+                f"{echo['as_many']} of {echo['draws']} scrambles have two such echoes."
+            ),
+            "do_not_claim": "An echoed spaced triple is not a reading.",
         },
         {
             "id": "bob-side-vote",
