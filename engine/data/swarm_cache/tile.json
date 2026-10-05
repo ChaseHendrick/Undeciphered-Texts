@@ -1,0 +1,31 @@
+{
+  "allowed": true,
+  "as_many": 743,
+  "claimed_plaintext": null,
+  "draws": 20000,
+  "found": [
+    {
+      "cells": [
+        "85",
+        "84",
+        "75",
+        "74"
+      ],
+      "col": 8,
+      "row": 12
+    },
+    {
+      "cells": [
+        "84",
+        "75",
+        "74",
+        "85"
+      ],
+      "col": 9,
+      "row": 12
+    }
+  ],
+  "scope": "Two blocks that copy a square are not a reading. No letter string is stored.",
+  "solved": false,
+  "tiles": 2
+}

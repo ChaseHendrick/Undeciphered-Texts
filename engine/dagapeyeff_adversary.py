@@ -65,6 +65,7 @@ from engine.solvers.dagapeyeff import (
     consider_span,
     consider_successive,
     consider_counts,
+    consider_tile,
     consider_bob_pair,
     consider_running_key,
     consider_router_swarm,
@@ -153,6 +154,7 @@ def adversary_report() -> dict:
         consider_span(),
         consider_successive(),
         consider_counts(),
+        consider_tile(),
         consider_bob_pair(),
     ]
     frequency = claims[0]

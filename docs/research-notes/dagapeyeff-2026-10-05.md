@@ -62,6 +62,8 @@ The cells that appear once are 04, 71 and 94, already known to share column 13. 
 
 92 appears three times, 93 appears twice, and 94 appears once. On the square those three are successive in one row, so the counts read three, then two, then one. Either order, a row or a column, and a step of one or two are all counted. 18480 of 1,062,600 placements do that. [Counts](../logs/dagapeyeff-counts-2026-10-05.md).
 
+Rows 12 and 13 hold two neighboring blocks, 85, 84 over 75, 74 and 84, 75 over 74, 85. Both are the square's 2 by 2 on row digits 7 and 8 and column digits 4 and 5. The blocks may sit anywhere. 743 of 20,000 shuffles have two or more. [Tile](../logs/dagapeyeff-tile-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -158,6 +160,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [The exercise has an uneven line](../logs/dagapeyeff-spread-2026-10-05.md)
 - [One tied cell prefers one color](../logs/dagapeyeff-squares-2026-10-05.md)
 - [Three successive rows in the private column](../logs/dagapeyeff-successive-2026-10-05.md)
+- [Two blocks copy a square](../logs/dagapeyeff-tile-2026-10-05.md)
 - [The two runs of three share a column](../logs/dagapeyeff-triples-2026-10-05.md)
 - [Two spaced triples share a column](../logs/dagapeyeff-twospace-2026-10-05.md)
 <!-- generated-logs:end -->

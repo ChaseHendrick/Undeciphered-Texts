@@ -65,6 +65,7 @@ from engine.dagapeyeff_ride import ride_report
 from engine.dagapeyeff_span import span_report
 from engine.dagapeyeff_successive import successive_report
 from engine.dagapeyeff_counts import counts_report
+from engine.dagapeyeff_tile import tile_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -207,6 +208,7 @@ def provenance_report() -> dict:
         ("span", span_report()),
         ("successive", successive_report()),
         ("counts", counts_report()),
+        ("tile", tile_report()),
         ("bob-pair", bob_pair_report()),
     )
     entries = []

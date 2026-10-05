@@ -38,6 +38,7 @@ from engine.dagapeyeff_ride import ride_report
 from engine.dagapeyeff_span import span_report
 from engine.dagapeyeff_successive import successive_report
 from engine.dagapeyeff_counts import counts_report
+from engine.dagapeyeff_tile import tile_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -88,6 +89,7 @@ def paper_notes() -> dict:
     span = span_report()
     successive = successive_report()
     counts = counts_report()
+    tile = tile_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -688,6 +690,20 @@ def paper_notes() -> dict:
                 f"{counts['favorable']} of {counts['placements']} placements do that."
             ),
             "do_not_claim": "Counts in order on the square are not a reading.",
+        },
+        {
+            "id": "two-blocks-copy-a-square",
+            "kind": "comparison",
+            "tags": ["grid", "square"],
+            "statement": (
+                "Rows 12 and 13 hold two neighboring blocks. "
+                "One is 85, 84 over 75, 74. The other is 84, 75 over 74, 85. "
+                "Each block is four different cells, and each is the 2 by 2 of the square "
+                "on row digits 7 and 8 and column digits 4 and 5. "
+                "A shuffle may put such a block anywhere, and the two blocks may be different squares. "
+                f"{tile['as_many']} of {tile['draws']} shuffles have two or more."
+            ),
+            "do_not_claim": "Two blocks that copy a square are not a reading.",
         },
         {
             "id": "bob-side-vote",
