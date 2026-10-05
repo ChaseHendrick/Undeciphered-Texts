@@ -75,6 +75,9 @@ from engine.bob_attack import bob_attack_report
 from engine.bob_slim import bob_slim_report
 from engine.bob_read import bob_read_report
 from engine.solver_attack import solver_attack_report
+from engine.bob_train import bob_train_report
+from engine.solver_train import solver_train_report
+from engine.dagapeyeff_anneal import anneal_swarm_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -1404,6 +1407,50 @@ def consider_solver_attack() -> dict:
             "That deletion check stays off, because it would also drop the true keywords. "
             f"Substitution is consistent on {report['substitution_consistent']} and exact on {report['substitution_exact']}. "
             "A wrong key still re-encrypts. The order flag is not a recovery. Not a reading."
+        ),
+    }
+
+
+def consider_bob_train() -> dict:
+    report = bob_train_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "bob_train_allowed": report["promoted"],
+        "learned": (
+            f"A warm start of {report['epochs']} epochs stays at {report['held_after']} of {report['held_total']} "
+            f"and {report['benchmark_after']} of {report['benchmark_total']}. "
+            f"Every checkpoint stayed at the shipped network. The lift is still {report['lift_held']} and {report['lift_benchmark']}. "
+            "The file was not replaced. Not a reading."
+        ),
+    }
+
+
+def consider_solver_train() -> dict:
+    report = solver_train_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "solver_train_allowed": report["promoted"],
+        "learned": (
+            f"On {report['windows']} fresh windows the default substitution search is exact {report['default_exact']} times "
+            f"and the longer search is exact {report['long_exact']} times. "
+            "Both recover the known certificate. The default stays. Not a reading."
+        ),
+    }
+
+
+def consider_anneal_swarm() -> dict:
+    report = anneal_swarm_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "anneal_swarm_allowed": False,
+        "learned": (
+            f"Bob names the cells {report['reader_family']} and the reader withholds. "
+            f"A longer substitution search is matched by {report['substitution_shuffles_as_high']} of {report['draws']} shuffles. "
+            f"Caesar is matched by {report['caesar_shuffles_as_high']} and Vigenere by {report['vigenere_shuffles_as_high']}. "
+            "The cells do not win the swarm. Not a reading."
         ),
     }
 

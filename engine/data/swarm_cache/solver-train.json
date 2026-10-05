@@ -1,0 +1,16 @@
+{
+  "certificate_default_exact": true,
+  "certificate_long_exact": true,
+  "claimed_plaintext": null,
+  "default_changed": false,
+  "default_exact": 0,
+  "long_exact": 0,
+  "long_restarts": 16,
+  "long_steps": 8000,
+  "promoted": false,
+  "scope": "A longer substitution search is a drill on known training text. It does not change the solver, and it is not a reading.",
+  "solved": false,
+  "weights_replaced": false,
+  "width": 200,
+  "windows": 6
+}

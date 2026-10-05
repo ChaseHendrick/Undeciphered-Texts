@@ -4,6 +4,18 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 5 October 2026, a warm start and a cell swarm
+
+Started from `6bcb64c` on `main`. The shipped weight file was not replaced. SHA-256 `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b`. The lifted ranking remains 433 of 480 and 195 of 204.
+
+`engine.bob_train` is a warm start: 16 epochs, 32 samples per family, learning rate 0.0004, teacher strength 0.25, write left off. All three checkpoints stayed at epoch 0. The scores stayed 429 of 480 and 193 of 204. The internal gate would allow that tie. A tie is not a gain, so the file stayed. See `docs/logs/bob-train-2026-10-05.md`.
+
+`engine.solver_train` runs a longer substitution search on six fresh windows of 200 letters. The default is exact 0 times and the longer search is exact 0 times. Both recover the known certificate. The solver's default stays. See `docs/logs/solver-train-2026-10-05.md`.
+
+`engine.dagapeyeff_anneal` is a swarm on the 196 cells, read as letters. Bob names substitution and the reader withholds. With 2000 steps and four restarts, all 6 shuffles match the Caesar score and the substitution score, and 4 of 6 match Vigenere. The cells do not win. See `docs/logs/dagapeyeff-anneal-2026-10-05.md`.
+
+Do not describe the warm start, the longer search, or the swarm as a decipherment. Do not replace the weight file from this probe.
+
 ## Session 5 October 2026, a reader and a smaller student
 
 Started from `f1bfedb` on `main`. The shipped weight file was not replaced. SHA-256 `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b`. The lifted ranking remains 433 of 480 and 195 of 204. This is not 480 of 480.

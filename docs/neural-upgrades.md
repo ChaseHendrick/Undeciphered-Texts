@@ -167,6 +167,14 @@ Caesar search is exact on 8 of 8 training windows. Vigenere search is exact on 6
 
 Do not describe the reader, the bias, or the mix as a decipherment. Do not replace the weight file from this probe.
 
+## A warm start and a cell swarm, 5 October 2026
+
+The weight file is still `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b`. A warm start of 16 epochs, 32 samples per family, learning rate 0.0004, and teacher strength 0.25 never beat validation. The checkpoints stayed at epoch 0. The scores stayed 429 of 480 and 193 of 204. The internal gate would allow the tie. The file was not written. The lift remains 433 and 195. See [the note](logs/bob-train-2026-10-05.md).
+
+A longer substitution search, 8000 steps and 16 restarts, is exact on 0 of 6 fresh windows of 200 letters. The default is also 0 of 6. Both recover the known certificate. The default stays. See [the note](logs/solver-train-2026-10-05.md).
+
+On the 196 cells, Bob names substitution and the reader withholds. A swarm with 2000 substitution steps and four restarts loses to shuffled cells: 6 of 6 for Caesar, 4 of 6 for Vigenere, 6 of 6 for substitution. Not a reading. See [the note](logs/dagapeyeff-anneal-2026-10-05.md).
+
 ## Use and reproducibility
 
 ```sh
