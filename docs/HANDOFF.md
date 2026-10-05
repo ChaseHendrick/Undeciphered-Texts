@@ -4,6 +4,18 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 5 October 2026, Bob distillation and a pentest
+
+Started from the empty-cells commit on `main`. The shipped weight file was not replaced. SHA-256 `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b`. The lifted ranking remains the one that cleared both bars: 433 of 480 and 195 of 204. This is not 480 of 480.
+
+`engine.bob_distill` fits a linear student on the three logit vectors, training prose only, 8 per family. Half the loss is the label and half is the frozen mean at temperature 2. It scores 427 of 480 and 192 of 204. A Sinkhorn mix of the three outputs stays at the mean, 429 and 193. Neither beats the lift, so neither is promoted. See `docs/logs/bob-distill-2026-10-05.md`.
+
+`engine.bob_attack` is a 40-text pentest on training ciphers. The lift is right 38 times. Middle deletion flips 14. The withhold gate in `engine.bob_harden` keeps 24, withholds 15, and still misses 1. It is not an accuracy promotion. Unencrypted English is certain on 20 of 20 draws. Random letters are certain on 6 of 8. No cutoff was fit to those draws. The lifted path used to drop lower case; it now folds case, matching the mean router. The 433 and 195 counts were already upper case. See `docs/logs/bob-attack-2026-10-05.md`.
+
+`engine.solver_judge` blocks a solved flag, refuses to copy a plaintext, and re-encrypts Caesar, Vigenere, and Beaufort. A historical name cannot leave it marked solved. A forward match is not a reading. See `docs/logs/solver-judge-2026-10-05.md`.
+
+Do not describe the student, the mix, or the withhold gate as a decipherment. Do not replace the weight file from this probe.
+
 ## Session 4 October 2026
 
 Started from verified `origin/main` commit `6a6df75c1a9a323a7aaa0b10f16ccb761faa2ab1`. Added a metadata-only Truppenschlüssel residue ledger for the CryptoCellar page updated 27 July 2026. The count is 41 listed, 11 marked broken, 30 unmarked. See `docs/truppenschluessel-residue-2026-10-04.md` and `engine/truppenschluessel_residue.py`. No ciphertext was added and no residue message was attacked. Funkspruch Nr. 86 remains skipped. The next unchecked queue item in `docs/next.md` is the DECODE metadata audit.

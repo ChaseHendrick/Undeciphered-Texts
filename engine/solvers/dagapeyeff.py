@@ -70,6 +70,8 @@ from engine.dagapeyeff_tile import tile_report
 from engine.dagapeyeff_blank import blank_report
 from engine.bob_pair import bob_pair_report
 from engine.bob_lift import bob_lift_report
+from engine.bob_distill import bob_distill_report
+from engine.bob_attack import bob_attack_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -1312,6 +1314,39 @@ def consider_bob_lift() -> dict:
             f"({report['held_corrections']} corrections, {report['held_mistakes']} new mistakes) "
             f"and the older 204 from {report['benchmark_before']} to {report['benchmark_after']}. "
             "The weight file stays. Not a reading, and not 480 of 480."
+        ),
+    }
+
+
+def consider_bob_distill() -> dict:
+    report = bob_distill_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "bob_distill_allowed": report["promoted"],
+        "learned": (
+            f"A linear student of the three networks scores {report['held_student']} of {report['held_total']} "
+            f"and {report['benchmark_student']} of {report['benchmark_total']}. "
+            f"The lifted ranking is {report['held_lift']} and {report['benchmark_lift']}. "
+            f"A Sinkhorn mix of the three outputs scores {report['held_sinkhorn']} and {report['benchmark_sinkhorn']}. "
+            "Neither beats the lift, so neither is promoted. The weight file stays. Not a reading."
+        ),
+    }
+
+
+def consider_bob_attack() -> dict:
+    report = bob_attack_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "bob_attack_allowed": False,
+        "learned": (
+            f"On {report['texts']} training ciphers the lifted call is right {report['clean_correct']} times. "
+            f"Deleting the middle letter flips {report['deletion_flips']}. "
+            f"The withhold gate keeps {report['hardened_correct']} right calls, "
+            f"withholds {report['hardened_withheld']}, and still misses {report['hardened_wrong']}. "
+            f"Unencrypted English is certain on {report['plain_certain']} of {report['plain_draws']} draws. "
+            "That gate is not a higher score. Not a reading."
         ),
     }
 

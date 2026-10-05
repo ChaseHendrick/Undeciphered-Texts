@@ -147,7 +147,15 @@ The weight file is unchanged. Two of the three saved networks have to agree befo
 
 The lifted ranking scores 433 of 480 top one and 195 of 204 on the older benchmark. Six of the eight changes on the 480 are corrections and two are new mistakes. Top three stays 477. Both changes on the 204 are corrections. This is not 480 of 480. See [the note](logs/bob-lift-2026-10-05.md).
 
+## Distillation, a Sinkhorn mix, and a pentest, 5 October 2026
 
+The weight file is still `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b`. Two students were fit on training ciphers only. A linear map on the three logit vectors, half hard labels and half a temperature-2 teacher, scores 427 of 480 and 192 of 204. A Sinkhorn mix of the three outputs, the same style of doubly stochastic mix as a widened residual, stays on the mean: 429 and 193. Neither beats the lifted ranking. Neither was saved. See [the note](logs/bob-distill-2026-10-05.md).
+
+The lifted path now folds case, because the feature table keeps only A-Z and a lower-case string used to fail. The mean router already folded case. The development counts do not move.
+
+On 40 training ciphers the lifted call is right 38 times. Deleting the middle letter flips 14. A withhold gate keeps 24, withholds 15, and still misses 1. It is not a higher score. Unencrypted English is certain on 20 of 20 draws, and random letters on 6 of 8. No cutoff was fit to those draws. See [the note](logs/bob-attack-2026-10-05.md).
+
+`engine.solver_judge` blocks a solved flag and checks Caesar, Vigenere, and Beaufort by re-encryption. A match is not a reading. See [the note](logs/solver-judge-2026-10-05.md).
 
 ## Use and reproducibility
 

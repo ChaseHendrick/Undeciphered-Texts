@@ -1,0 +1,10 @@
+{
+  "claimed_plaintext": null,
+  "probability_cutoff": 0.5,
+  "promoted_as_accuracy": false,
+  "scope": "Withholding a fragile call is not a higher score and not a reading.",
+  "solved": false,
+  "weights_match_shipped": true,
+  "weights_replaced": false,
+  "weights_sha256": "5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b"
+}

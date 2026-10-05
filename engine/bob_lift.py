@@ -136,11 +136,19 @@ def _score(texts, labels, named):
 
 
 def lifted_family(text: str) -> str:
-    """The family the lifted ranking would name. Not a plaintext."""
+    """The family the lifted ranking would name. Not a plaintext.
+
+    Lower case is folded first. The feature table only reads A-Z, so a
+    lower-case string used to look empty and the call failed. The mean
+    router already folds case. This path now does the same.
+    """
+    if not isinstance(text, str):
+        raise TypeError("ciphertext must be text")
+    folded = text.upper()
     saved, english, tables, weights, mean, scale, _train = _bundle()
-    rows = [_features(text, english, tables, version=saved["feature_version"])]
+    rows = [_features(folded, english, tables, version=saved["feature_version"])]
     each = np.stack([network_logits(rows, model) for model in saved["models"]], axis=0)
-    _base, chosen, _order = _choose([text], each, tables, weights, mean, scale, saved["families"])
+    _base, chosen, _order = _choose([folded], each, tables, weights, mean, scale, saved["families"])
     return saved["families"][int(chosen[0])]
 
 
