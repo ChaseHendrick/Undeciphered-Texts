@@ -62,9 +62,17 @@ def case_table(notes: list[dict[str, str]]) -> str:
     return "\n".join(rows)
 
 
+_DATE = re.compile(r"(20\d\d-\d\d-\d\d)")
+
+
+def _log_key(path: Path) -> tuple[str, str]:
+    found = _DATE.findall(path.name)
+    return (found[-1] if found else "", path.name)
+
+
 def log_index() -> str:
     rows = []
-    for path in sorted(LOGS.glob("dagapeyeff*.md")):
+    for path in sorted(LOGS.glob("dagapeyeff*.md"), key=_log_key):
         title = path.stem
         for line in path.read_text().splitlines():
             if line.startswith("# "):

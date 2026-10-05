@@ -32,6 +32,7 @@ from engine.dagapeyeff_heldsand import heldsand_report
 from engine.dagapeyeff_heldwait import heldwait_report
 from engine.dagapeyeff_quartet import quartet_report
 from engine.dagapeyeff_squares import squares_report
+from engine.dagapeyeff_twospace import twospace_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -76,6 +77,7 @@ def paper_notes() -> dict:
     heldwait = heldwait_report()
     quartet = quartet_report()
     squares = squares_report()
+    twospace = twospace_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -596,6 +598,22 @@ def paper_notes() -> dict:
                 "A straight run alternates the two colors, so the runs do not cause it."
             ),
             "do_not_claim": "A color split of a tied cell is not a reading.",
+        },
+        {
+            "id": "two-spaced-triples",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                f"{twospace['lines'][0]['axis'].capitalize()} {twospace['lines'][0]['index']} holds "
+                + " and ".join(
+                    f"three copies of {item['cell']}, at seats {item['seats'][0]}, {item['seats'][1]} and {item['seats'][2]}"
+                    for item in twospace["lines"][0]["cells"]
+                )
+                + ". Each triple is equally spaced, and neither is three adjacent cells. "
+                f"A scramble may use any row or any column, and any cells. "
+                f"{twospace['as_many']} of {twospace['draws']} scrambles have such a line."
+            ),
+            "do_not_claim": "Two spaced triples in one line are not a reading.",
         },
         {
             "id": "bob-side-vote",

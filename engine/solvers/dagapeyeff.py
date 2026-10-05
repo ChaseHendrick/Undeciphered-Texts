@@ -60,6 +60,7 @@ from engine.dagapeyeff_heldsand import heldsand_report
 from engine.dagapeyeff_heldwait import heldwait_report
 from engine.dagapeyeff_quartet import quartet_report
 from engine.dagapeyeff_squares import squares_report
+from engine.dagapeyeff_twospace import twospace_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -630,6 +631,25 @@ def consider_halves() -> dict:
             f"and {report['period7_as_high']} of {report['draws']} shuffles match. "
             f"Leave the same five out and that gap is {report['period7_residual_gap']}, "
             f"matched by {report['period7_residual_as_high']} of {report['draws']}. "
+            "Not a reading."
+        ),
+    }
+
+
+def consider_twospace() -> dict:
+    report = twospace_report()
+    line = report["lines"][0]
+    cells = ", ".join(
+        f"{item['cell']} at {item['seats'][0]}, {item['seats'][1]} and {item['seats'][2]}"
+        for item in line["cells"]
+    )
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "twospace_allowed": report["allowed"],
+        "learned": (
+            f"{line['axis'].capitalize()} {line['index']} holds two cells with three equally spaced seats each: {cells}. "
+            f"{report['as_many']} of {report['draws']} scrambles have such a line, using any row or column and any cells. "
             "Not a reading."
         ),
     }

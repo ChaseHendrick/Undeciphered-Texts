@@ -1,0 +1,35 @@
+{
+  "allowed": true,
+  "as_many": 740,
+  "claimed_plaintext": null,
+  "draws": 20000,
+  "line_count": 1,
+  "lines": [
+    {
+      "axis": "column",
+      "cells": [
+        {
+          "cell": "82",
+          "seats": [
+            0,
+            6,
+            12
+          ],
+          "step": 6
+        },
+        {
+          "cell": "85",
+          "seats": [
+            5,
+            8,
+            11
+          ],
+          "step": 3
+        }
+      ],
+      "index": 2
+    }
+  ],
+  "scope": "Two spaced triples in one line are not a reading. No letter string is stored.",
+  "solved": false
+}
