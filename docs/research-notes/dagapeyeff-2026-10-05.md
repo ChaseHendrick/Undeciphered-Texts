@@ -91,6 +91,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [The flattering regrouping](../logs/dagapeyeff-regroup-2026-10-04.md)
 - [The repairs share one loss](../logs/dagapeyeff-repair-2026-10-04.md)
 - [The order left after the rare column](../logs/dagapeyeff-residual-2026-10-05.md)
+- [The mismatch is not one cell](../logs/dagapeyeff-rest-2026-10-05.md)
 - [Router and grid](../logs/dagapeyeff-router-swarm-2026-10-04.md)
 - [Rails, diagonals, and the every-other-cell trap](../logs/dagapeyeff-routes-2026-10-04.md)
 - [Running keys from texts already in the repo](../logs/dagapeyeff-running-2026-10-04.md)

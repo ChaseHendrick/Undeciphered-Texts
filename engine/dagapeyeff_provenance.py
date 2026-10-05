@@ -51,6 +51,7 @@ from engine.dagapeyeff_heavy import heavy_report
 from engine.dagapeyeff_spread import spread_report
 from engine.dagapeyeff_residual import residual_report
 from engine.dagapeyeff_sharp import sharp_report
+from engine.dagapeyeff_rest import rest_report
 from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_foresight import foresight
 from engine.dagapeyeff_groups import group_report
@@ -161,6 +162,7 @@ def provenance_report() -> dict:
         ("spread", spread_report()),
         ("residual", residual_report()),
         ("sharp", sharp_report()),
+        ("rest", rest_report()),
         ("bob-exercise", bob_exercise_report()),
     )
     entries = []

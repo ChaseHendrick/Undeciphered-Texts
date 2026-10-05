@@ -24,6 +24,7 @@ from engine.dagapeyeff_heavy import heavy_report
 from engine.dagapeyeff_spread import spread_report
 from engine.dagapeyeff_residual import residual_report
 from engine.dagapeyeff_sharp import sharp_report
+from engine.dagapeyeff_rest import rest_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -51,6 +52,7 @@ def paper_notes() -> dict:
     spread = spread_report()
     residual = residual_report()
     sharp = sharp_report()
+    rest = rest_report()
     caution = bob_caution_report()
     exercise = bob_exercise_report()
     notes = [
@@ -333,6 +335,18 @@ def paper_notes() -> dict:
                 f"The solved exercise's sharpest cell is matched by {sharp['control_as_sharp']} of {sharp['draws']}."
             ),
             "do_not_claim": "The sharpest cell is not a reading.",
+        },
+        {
+            "id": "leftover-mismatch",
+            "kind": "comparison",
+            "tags": ["square", "pairing"],
+            "statement": (
+                f"After the sharpest cell is set aside, {rest['rest']} remains. "
+                f"None of {rest['draws']} re-pairings reach it. "
+                f"The solved exercise keeps {rest['control_rest']}, "
+                f"and {rest['control_as_large']} of {rest['draws']} reach that."
+            ),
+            "do_not_claim": "A leftover mismatch is not a reading.",
         },
         {
             "id": "bob-on-the-exercise",

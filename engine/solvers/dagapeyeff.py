@@ -52,6 +52,7 @@ from engine.dagapeyeff_heavy import heavy_report
 from engine.dagapeyeff_spread import spread_report
 from engine.dagapeyeff_residual import residual_report
 from engine.dagapeyeff_sharp import sharp_report
+from engine.dagapeyeff_rest import rest_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -439,6 +440,23 @@ def consider_sharp() -> dict:
             f"The total mismatch is {report['chi']}, and the two move together with correlation {report['correlation']}. "
             f"The solved exercise's sharpest cell is matched by {report['control_as_sharp']} of {report['draws']}, "
             "which is not under 5 percent. This is the known pairing at its sharpest cell. Not a reading."
+        ),
+    }
+
+
+def consider_rest() -> dict:
+    report = rest_report()
+    allowed = report["as_large"] / report["draws"] < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "rest_allowed": allowed,
+        "learned": (
+            f"After the sharpest cell is set aside, {report['rest']} remains. "
+            f"None of {report['draws']} re-pairings reach it, and each may set aside its own sharpest cell. "
+            f"The furthest leftover is {report['peak']}. "
+            f"The solved exercise keeps {report['control_rest']}, and {report['control_as_large']} of {report['draws']} reach it. "
+            "The mismatch is not one cell. Not a reading."
         ),
     }
 

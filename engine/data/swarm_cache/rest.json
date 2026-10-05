@@ -1,0 +1,16 @@
+{
+  "as_large": 0,
+  "chi": 77.36,
+  "claimed_plaintext": null,
+  "control_as_large": 0,
+  "control_peak": 35.12,
+  "control_rest": 35.26,
+  "draws": 20000,
+  "peak": 38.0,
+  "rest": 50.81,
+  "scope": "A leftover mismatch is not a reading. No letter string is stored.",
+  "second": 9.43,
+  "second_cell": "61",
+  "sharp": 26.55,
+  "solved": false
+}
