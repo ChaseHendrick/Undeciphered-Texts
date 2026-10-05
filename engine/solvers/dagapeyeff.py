@@ -68,6 +68,7 @@ from engine.dagapeyeff_successive import successive_report
 from engine.dagapeyeff_counts import counts_report
 from engine.dagapeyeff_tile import tile_report
 from engine.bob_pair import bob_pair_report
+from engine.bob_lift import bob_lift_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -1278,6 +1279,22 @@ def consider_bob_pair() -> dict:
             f"{report['held_before']} to {report['held_after']} and the older 204 from "
             f"{report['benchmark_before']} to {report['benchmark_after']}. "
             "The older bar drops, so the weights stay. Not a reading."
+        ),
+    }
+
+
+def consider_bob_lift() -> dict:
+    report = bob_lift_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "bob_lift_allowed": report["promoted"],
+        "learned": (
+            f"Two of the three networks, then a sure Enigma versus M-209 vote, move the 480 from "
+            f"{report['held_before']} to {report['held_after']} "
+            f"({report['held_corrections']} corrections, {report['held_mistakes']} new mistakes) "
+            f"and the older 204 from {report['benchmark_before']} to {report['benchmark_after']}. "
+            "The weight file stays. Not a reading, and not 480 of 480."
         ),
     }
 

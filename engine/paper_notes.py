@@ -40,6 +40,7 @@ from engine.dagapeyeff_successive import successive_report
 from engine.dagapeyeff_counts import counts_report
 from engine.dagapeyeff_tile import tile_report
 from engine.bob_pair import bob_pair_report
+from engine.bob_lift import bob_lift_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -91,6 +92,7 @@ def paper_notes() -> dict:
     counts = counts_report()
     tile = tile_report()
     pair = bob_pair_report()
+    lift = bob_lift_report()
     monotone = monotone_report()
     straight = straight_report()
     diagonal = diagonal_report()
@@ -716,6 +718,22 @@ def paper_notes() -> dict:
                 "The older bar drops, so the weights stay."
             ),
             "do_not_claim": "A side vote is not a reading, and it does not replace Bob.",
+        },
+        {
+            "id": "lifted-ranking-holds-both-bars",
+            "kind": "comparison",
+            "tags": ["bob", "router"],
+            "statement": (
+                "When two of the three saved networks agree, that label replaces the mean. "
+                "An Enigma versus M-209 vote then speaks only if those two are already the mean's top two, "
+                "the pair score is past 0.8, and the mean's gap is at least 0.7. "
+                f"The 480 moves from {lift['held_before']} to {lift['held_after']}, "
+                f"with {lift['held_corrections']} corrections and {lift['held_mistakes']} new mistakes. "
+                f"The older 204 moves from {lift['benchmark_before']} to {lift['benchmark_after']}, "
+                f"with {lift['benchmark_corrections']} corrections and {lift['benchmark_mistakes']} new mistakes. "
+                f"Top three on the 480 stays {lift['held_top3']}. The weight file stays."
+            ),
+            "do_not_claim": "A lifted ranking is not a reading, and it does not replace the weight file.",
         },
     ]
     return {

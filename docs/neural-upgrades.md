@@ -141,6 +141,12 @@ A later pass kept the 142 features, warmed up for 80 epochs at learning rate 0.0
 
 A later cost-sensitive warm start, using only the incumbent's validation misses, scored 430 of 480 and 192 of 204. It was not saved. See [the hole note](logs/dagapeyeff-hole-2026-10-04.md).
 
+## Lifted ranking, 5 October 2026
+
+The weight file is unchanged. Two of the three saved networks have to agree before their label replaces the mean. The Enigma versus M-209 side vote then speaks only past 0.8 and only when the mean's gap is at least 0.7. Those cutoffs were read off the development flips of the looser vote, which still drops the older 204 and stays off.
+
+The lifted ranking scores 433 of 480 top one and 195 of 204 on the older benchmark. Six of the eight changes on the 480 are corrections and two are new mistakes. Top three stays 477. Both changes on the 204 are corrections. This is not 480 of 480. See [the note](logs/bob-lift-2026-10-05.md).
+
 
 
 ## Use and reproducibility

@@ -225,8 +225,8 @@ def main(argv: list[str] | None = None) -> int:
                     max_checks=args.max_checks, max_candidates=args.max_candidates,
                     temperament=args.temperament).to_dict()
             elif args.command == "route":
-                from engine.neural_router_v2 import route_probabilities
-                output = route_probabilities(text)
+                from engine.bob_lift import route_lifted
+                output = route_lifted(text)
             else:
                 from engine.tool_registry import TOOLS, run_tool
                 if len(args.params) > 65536:
