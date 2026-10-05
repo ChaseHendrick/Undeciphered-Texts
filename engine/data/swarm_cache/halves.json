@@ -1,0 +1,24 @@
+{
+  "allowed": false,
+  "as_high": 146,
+  "claimed_plaintext": null,
+  "draws": 20000,
+  "even_support": 13,
+  "gap": 5,
+  "odd_support": 18,
+  "period7_as_high": 637,
+  "period7_gap": 6,
+  "period7_residual_as_high": 9966,
+  "period7_residual_gap": 3,
+  "private": [
+    "04",
+    "71",
+    "92",
+    "93",
+    "94"
+  ],
+  "residual_as_high": 20000,
+  "residual_gap": 0,
+  "scope": "A split of even and odd positions is not a reading. No letter string is stored.",
+  "solved": false
+}

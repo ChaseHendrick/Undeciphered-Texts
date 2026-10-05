@@ -51,6 +51,7 @@ from engine.dagapeyeff_meeting import meeting_report
 from engine.dagapeyeff_sandwich import sandwich_report
 from engine.dagapeyeff_outside import outside_report
 from engine.dagapeyeff_modulo import modulo_report
+from engine.dagapeyeff_halves import halves_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -600,6 +601,28 @@ def consider_modulo() -> dict:
             "The same four pairs, scored as whole tables, are ordinary: "
             f"{report['chi_as_high']} of {report['chi_draws']} shuffles match the chi-square. "
             "The solved exercise does not clear. Not a reading."
+        ),
+    }
+
+
+def consider_halves() -> dict:
+    report = halves_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "halves_allowed": report["allowed"],
+        "learned": (
+            f"Even positions use {report['even_support']} symbols and odd positions use "
+            f"{report['odd_support']}. "
+            f"{report['as_high']} of {report['draws']} shuffles have a gap at least that large. "
+            "The five symbols that sit only on the odd side are the five that never leave the last column. "
+            f"Leave them out and the gap is {report['residual_gap']}, "
+            f"which {report['residual_as_high']} of {report['draws']} shuffles match. "
+            f"A period of 7 has a gap of {report['period7_gap']}, "
+            f"and {report['period7_as_high']} of {report['draws']} shuffles match. "
+            f"Leave the same five out and that gap is {report['period7_residual_gap']}, "
+            f"matched by {report['period7_residual_as_high']} of {report['draws']}. "
+            "Not a reading."
         ),
     }
 

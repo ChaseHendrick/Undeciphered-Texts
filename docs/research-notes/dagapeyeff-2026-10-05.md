@@ -32,6 +32,8 @@ The main diagonal has 2 empty cells and the other diagonal has 1. 1,193 of 100,0
 
 The row digit matches the column of the grid, modulo 5, in 56 cells. That is the best of twenty alignments. 975 of 20,000 shuffles reach it, and 4,978 of 100,000 do. The same pairs scored as whole tables are ordinary: 12,780 of 20,000. A diagonal of an ordinary table is not a finding. [Modulo](../logs/dagapeyeff-modulo-2026-10-05.md).
 
+Even positions use 13 symbols and odd positions use 18. 146 of 20,000 shuffles match that gap. The five extra symbols are the five that never leave the last column, and that column is always an odd index. Leave them out and the gap is 0. A period of 7 looks rare only until those five are left out. [Halves](../logs/dagapeyeff-halves-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -67,6 +69,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [No language assumed](../logs/dagapeyeff-frames-2026-10-04.md)
 - [The glue is real. The order is not.](../logs/dagapeyeff-glue-2026-10-04.md)
 - [Printed groups](../logs/dagapeyeff-groups-2026-10-04.md)
+- [Even and odd are the private column](../logs/dagapeyeff-halves-2026-10-05.md)
 - [A full row with an empty cell](../logs/dagapeyeff-heavy-2026-10-05.md)
 - [The frequency hole, and a period that is not there](../logs/dagapeyeff-hole-2026-10-04.md)
 - [The wait for a new cell](../logs/dagapeyeff-intro-2026-10-04.md)

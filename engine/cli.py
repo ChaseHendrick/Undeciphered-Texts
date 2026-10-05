@@ -104,11 +104,11 @@ def build_parser() -> argparse.ArgumentParser:
     train.add_argument("--warm-start", action="store_true",
                        help="start from the compatible incumbent with unchanged families, hidden width, ensemble size and training tables")
     train.add_argument("--learning-rate", type=float, default=.01,
-                       help="maximum cosine-schedule rate, finite and in (0,0.1] (default:0.01)")
+                       help="maximum cosine-schedule rate, finite and in (0,0.1] (default: 0.01)")
     train.add_argument("--distillation-strength", type=float, default=0.0,
-                       help="optional frozen-incumbent teacher KL weight; requires --warm-start (default:0)")
+                       help="optional frozen-incumbent teacher KL weight; requires --warm-start (default: 0)")
     train.add_argument("--distillation-temperature", type=float, default=2.0,
-                       help="teacher/student softening temperature (default:2)")
+                       help="teacher/student softening temperature (default: 2)")
     train.add_argument("--feature-version", default=None,
                        help="cipher statistics version; default is the current feature set")
     train.add_argument("--more-prose", action="store_true",

@@ -23,6 +23,7 @@ from engine.dagapeyeff_meeting import meeting_report
 from engine.dagapeyeff_sandwich import sandwich_report
 from engine.dagapeyeff_outside import outside_report
 from engine.dagapeyeff_modulo import modulo_report
+from engine.dagapeyeff_halves import halves_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -58,6 +59,7 @@ def paper_notes() -> dict:
     sandwich = sandwich_report()
     outside = outside_report()
     modulo = modulo_report()
+    halves = halves_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -447,6 +449,23 @@ def paper_notes() -> dict:
                 f"The solved exercise is {modulo['control_as_high']} of {modulo['control_draws']}."
             ),
             "do_not_claim": "A diagonal of an ordinary table is not a reading.",
+        },
+        {
+            "id": "even-odd-is-the-private-column",
+            "kind": "negative",
+            "tags": ["order", "grid"],
+            "statement": (
+                f"Even positions use {halves['even_support']} symbols and odd positions use "
+                f"{halves['odd_support']}. "
+                f"{halves['as_high']} of {halves['draws']} shuffles have a gap at least that large. "
+                "The five symbols only on the odd side never leave the last column. "
+                f"Leave them out and the gap is {halves['residual_gap']}. "
+                f"A period of 7 has a gap of {halves['period7_gap']}, "
+                f"matched by {halves['period7_as_high']} of {halves['draws']} shuffles. "
+                f"Leave the same five out and that gap is {halves['period7_residual_gap']}, "
+                f"matched by {halves['period7_residual_as_high']} of {halves['draws']}."
+            ),
+            "do_not_claim": "An even and odd split is not a reading.",
         },
         {
             "id": "bob-side-vote",
