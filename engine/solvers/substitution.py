@@ -20,7 +20,7 @@ import math
 import random
 
 from engine.alphabet import from_ints, letters_only, reinject, to_ints
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, get_legacy_model, get_model
 from engine.neural import get_neural_model
 from engine.result import SolveResult
 from engine.stats import successive_information
@@ -146,13 +146,16 @@ def solve_substitution(
     seed: int = 20261002,
     temperature: float = 30.0,
     cooling: float = 0.997,
+    model: str = "default",
 ) -> SolveResult:
     letters = letters_only(text)
     if len(letters) < 40:
         raise ValueError("ciphertext is too short for substitution search (need at least 40 letters)")
     seq = to_ints(letters)
-    model = get_model()
-    logp = model.logp
+    if model not in ("default", "legacy"):
+        raise ValueError("model must be 'default' or 'legacy'")
+    language = get_legacy_model() if model == "legacy" else get_model()
+    logp = language.logp
     rng = random.Random(seed)
     base = frequency_decrypt_key(seq)
     starts: list[list[int]] = [base[:]]
@@ -211,6 +214,8 @@ def solve_substitution(
             "letters": len(letters),
             "decrypt_map": "".join(chr(65 + p) for p in best_key),
             "fitness": "quadgram",
+            "model": model,
+            "model_letters": language.sample_letters,
             "neural_score": neural_score,
             "neural_backend": neural.backend,
             "second_opinion": "neural_trigram",

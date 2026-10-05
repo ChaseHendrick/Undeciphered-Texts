@@ -12,7 +12,7 @@ import random
 
 from engine.alphabet import letters_only, to_ints
 from engine.german import get_german_model
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, get_legacy_model
 
 SWAPS = 200
 SEED = 20261004
@@ -57,7 +57,7 @@ def _apply(seq: list[int], key: list[int]) -> list[int]:
 
 def _quadgram(seq: list[int], language: str) -> float:
     if language == "english":
-        return get_model().score(seq)
+        return get_legacy_model().score(seq)
     if language == "german":
         return get_german_model().quadgram_score(seq)
     raise ValueError("language must be english or german")

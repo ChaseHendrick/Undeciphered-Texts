@@ -15,7 +15,7 @@ from engine.dagapeyeff_life import _assign
 from engine.dagapeyeff_order import _prose
 from engine.dagapeyeff_regroup import regrouped_pairs
 from engine.dagapeyeff_swarm import challenge_pairs
-from engine.language import get_model
+from engine.language import get_legacy_model
 from engine.neural import get_neural_model
 
 _DRAWS = 200_000
@@ -27,7 +27,7 @@ def _per_step(total: float, length: int, skip: int) -> float:
 
 
 def _tail(seq: list[int], observed_quad: float, observed_neural: float, seed: int) -> dict:
-    model = get_model()
+    model = get_legacy_model()
     neural = get_neural_model()
     drawn = random.Random(seed)
     sample = seq[:]
@@ -59,7 +59,7 @@ def _tail(seq: list[int], observed_quad: float, observed_neural: float, seed: in
 
 @frozen("model")
 def model_report() -> dict:
-    model = get_model()
+    model = get_legacy_model()
     neural = get_neural_model()
     regrouped = [ord(letter) - 65 for letter in _assign(tuple(regrouped_pairs()))]
     printed = [ord(letter) - 65 for letter in _assign(challenge_pairs())]

@@ -12,7 +12,7 @@ import random
 
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_swarm import ENGLISH_25, challenge_pairs
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, get_legacy_model
 
 _SEED = 20261004
 _NULL = 40
@@ -107,7 +107,7 @@ def _mean_quadgram(seq: list[int], key: tuple[int, ...], counts: list[int]) -> f
         mapping[cell] = english[rank]
         rank += 1
     plain = [mapping[cell] for cell in plain_cells]
-    return get_model().score(plain) / (len(plain) - 3)
+    return get_legacy_model().score(plain) / (len(plain) - 3)
 
 
 def add_report() -> dict:
@@ -135,10 +135,10 @@ def add_report() -> dict:
     unigram_quads = []
     for _ in range(_ENGLISH):
         letters = [ord(char) - 65 for char in drawn.choices(alphabet, weights=ENGLISH_25, k=len(cells))]
-        unigram_quads.append(get_model().score(letters) / (len(cells) - 3))
+        unigram_quads.append(get_legacy_model().score(letters) / (len(cells) - 3))
     unigram_quads.sort()
     prose = to_ints(letters_only(_PROSE))
-    prose_quad = get_model().score(prose) / (len(prose) - 3)
+    prose_quad = get_legacy_model().score(prose) / (len(prose) - 3)
     return {
         "solved": False,
         "claimed_plaintext": None,

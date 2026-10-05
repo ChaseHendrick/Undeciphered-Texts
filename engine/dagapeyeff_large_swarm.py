@@ -13,7 +13,7 @@ import random
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_add import _PROSE, _cells
 from engine.dagapeyeff_cache import frozen
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, get_legacy_model
 
 _SEED = 20261004
 _DELETION_DRAWS = 40
@@ -82,13 +82,13 @@ def _peak_z(gaps: list[int]) -> float:
 
 @frozen("large-swarm")
 def large_swarm_report() -> dict:
-    logp = get_model().logp
+    logp = get_legacy_model().logp
     english = [ord(char) - 65 for char in ENGLISH_ORDER]
     cells = _cells()
     pairs = len(cells) * (len(cells) - 1) // 2
     deletion = _best_pair(cells, logp, english)
     prose = to_ints(letters_only(_PROSE))
-    prose_score = get_model().score(prose) / (len(prose) - 3)
+    prose_score = get_legacy_model().score(prose) / (len(prose) - 3)
     drawn = random.Random(_SEED)
     deletion_as_high = 0
     for _ in range(_DELETION_DRAWS):

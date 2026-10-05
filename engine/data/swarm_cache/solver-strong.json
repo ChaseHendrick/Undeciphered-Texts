@@ -1,0 +1,36 @@
+{
+  "certificate_default_exact": true,
+  "certificate_legacy_exact": true,
+  "claimed_plaintext": null,
+  "default_letters": 1916398,
+  "legacy_letters": 8689,
+  "promoted": true,
+  "rows": [
+    {
+      "default_exact": 7,
+      "default_wrong_letters": 1,
+      "legacy_exact": 1,
+      "legacy_wrong_letters": 194,
+      "width": 200,
+      "windows": 8
+    },
+    {
+      "default_exact": 6,
+      "default_wrong_letters": 63,
+      "legacy_exact": 0,
+      "legacy_wrong_letters": 533,
+      "width": 150,
+      "windows": 8
+    },
+    {
+      "default_exact": 0,
+      "default_wrong_letters": 131,
+      "legacy_exact": 0,
+      "legacy_wrong_letters": 475,
+      "width": 100,
+      "windows": 8
+    }
+  ],
+  "scope": "A drill on known training text with a fresh key. It decides which English model the solvers use. It is not a reading.",
+  "solved": false
+}

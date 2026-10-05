@@ -16,7 +16,7 @@ import random
 from pathlib import Path
 
 from engine.dagapeyeff_swarm import best_chi_square, challenge_pairs
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, get_legacy_model
 
 _PATH = Path(__file__).resolve().parent / "data" / "dagapeyeff_life.json"
 _ROWS = "67890"
@@ -102,7 +102,7 @@ def _columns(text: str, order: tuple[int, ...], undo: bool) -> str:
 
 
 def _mean_quadgram(text: str) -> float:
-    model = get_model()
+    model = get_legacy_model()
     seq = [ord(letter) - 65 for letter in text]
     return model.score(seq) / (len(seq) - 3)
 
