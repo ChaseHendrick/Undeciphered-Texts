@@ -204,7 +204,7 @@ def main(argv: list[str] | None = None) -> int:
         try:
             text = args.text if args.text is not None else sys.stdin.read(8193)
             if len(text) > 8192:
-                raise ValueError("input exceeds8192 characters")
+                raise ValueError("input exceeds 8192 characters")
             if args.command == "investigate":
                 from engine.solver_reasoning import investigate_cipher
                 from engine.reverse_engineer import Crib
@@ -230,7 +230,7 @@ def main(argv: list[str] | None = None) -> int:
             else:
                 from engine.tool_registry import TOOLS, run_tool
                 if len(args.params) > 65536:
-                    raise ValueError("parameter JSON exceeds64 KiB")
+                    raise ValueError("parameter JSON exceeds 64 KiB")
                 params = json.loads(args.params)
                 if args.tool in TOOLS and TOOLS[args.tool].encoding == "integer":
                     text = int(text)

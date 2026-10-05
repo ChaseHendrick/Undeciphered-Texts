@@ -742,7 +742,7 @@ def evaluate_router(corpus, *, samples_per_class=24, seed=20262003, weights_path
 def load_router(path=None):
     destination = WEIGHTS_PATH if path is None else Path(path)
     if destination.stat().st_size > 4 * 1024 * 1024:
-        raise ValueError("router artifact exceeds4 MiB")
+        raise ValueError("router artifact exceeds 4 MiB")
     p = json.loads(destination.read_text())
     try:
         families = p["families"]

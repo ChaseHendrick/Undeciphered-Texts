@@ -105,26 +105,26 @@ def list_tools():
 
 def _validate_json(value, *, depth=0):
     if depth > 8:
-        raise ValueError("parameter nesting exceeds8 levels")
+        raise ValueError("parameter nesting exceeds 8 levels")
     if isinstance(value, str):
         if len(value) > 8192:
-            raise ValueError("parameter string exceeds8192 characters")
+            raise ValueError("parameter string exceeds 8192 characters")
     elif isinstance(value, bool) or value is None:
         return
     elif isinstance(value, int):
         if value.bit_length() > 4096:
-            raise ValueError("integer parameter exceeds4096 bits")
+            raise ValueError("integer parameter exceeds 4096 bits")
     elif isinstance(value, float):
         if not math.isfinite(value):
             raise ValueError("numeric parameters must be finite")
     elif isinstance(value, list):
         if len(value) > 1000:
-            raise ValueError("parameter sequence exceeds1000 entries")
+            raise ValueError("parameter sequence exceeds 1000 entries")
         for item in value:
             _validate_json(item, depth=depth + 1)
     elif isinstance(value, dict):
         if len(value) > 100:
-            raise ValueError("parameter object exceeds100 fields")
+            raise ValueError("parameter object exceeds 100 fields")
         for key, item in value.items():
             if not isinstance(key, str):
                 raise TypeError("parameter names must be strings")
@@ -143,7 +143,7 @@ def run_tool(name, value, *, params=None):
     params = dict(params)
     _validate_json(params)
     if len(json.dumps(params)) > 65536:
-        raise ValueError("parameter JSON exceeds64 KiB")
+        raise ValueError("parameter JSON exceeds 64 KiB")
     if spec.encoding == "integer":
         if not isinstance(value, int) or isinstance(value, bool) or value.bit_length() > 4096:
             raise TypeError("input must be a bounded RSA integer")

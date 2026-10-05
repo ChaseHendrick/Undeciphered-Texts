@@ -22,6 +22,7 @@ See [`docs/QUALITY.md`](QUALITY.md) and [`docs/NOVELTY.md`](NOVELTY.md). Link an
 
 - Improve docs with citations.
 - Add classical solvers + fixtures + tests.
+- When someone brings a ciphertext, use `.claude/skills/unsolved-attack/SKILL.md`. Run the solvers on their text. Report a plaintext only when a solver prints it. Do not declare a catalogued unread cipher solved.
 - Point to external tools (CrypTool 2, CTTS, DECODE/DECRYPT, Crypto Cellar) without vendoring them.
 - Summarize published cracks (Copiale, Z340, Enigma challenges, etc.) with links.
 
