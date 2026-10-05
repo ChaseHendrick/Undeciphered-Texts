@@ -52,6 +52,7 @@ from engine.dagapeyeff_outside import outside_report
 from engine.dagapeyeff_modulo import modulo_report
 from engine.dagapeyeff_halves import halves_report
 from engine.dagapeyeff_repeat import repeat_report
+from engine.dagapeyeff_held import held_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -181,6 +182,7 @@ def provenance_report() -> dict:
         ("modulo", modulo_report()),
         ("halves", halves_report()),
         ("repeat", repeat_report()),
+        ("held", held_report()),
         ("bob-pair", bob_pair_report()),
     )
     entries = []

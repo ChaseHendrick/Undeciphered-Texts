@@ -25,6 +25,7 @@ from engine.dagapeyeff_outside import outside_report
 from engine.dagapeyeff_modulo import modulo_report
 from engine.dagapeyeff_halves import halves_report
 from engine.dagapeyeff_repeat import repeat_report
+from engine.dagapeyeff_held import held_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -62,6 +63,7 @@ def paper_notes() -> dict:
     modulo = modulo_report()
     halves = halves_report()
     repeat = repeat_report()
+    held = held_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -484,6 +486,18 @@ def paper_notes() -> dict:
                 "which is also not under 5 percent."
             ),
             "do_not_claim": "A second run beside a long run is not a reading.",
+        },
+        {
+            "id": "aligned-runs-survive-the-pin",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                "The five cells that appear at most three times stay in their seats. "
+                f"The other cells are shuffled. Two runs still share a starting column in "
+                f"{held['as_aligned']} of {held['draws']} draws. "
+                f"A plain count of two runs, aligned or not, is {held['as_many_runs']} of {held['draws']}."
+            ),
+            "do_not_claim": "Aligned runs with the rare cells held still are not a reading.",
         },
         {
             "id": "bob-side-vote",

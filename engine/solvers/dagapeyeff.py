@@ -53,6 +53,7 @@ from engine.dagapeyeff_outside import outside_report
 from engine.dagapeyeff_modulo import modulo_report
 from engine.dagapeyeff_halves import halves_report
 from engine.dagapeyeff_repeat import repeat_report
+from engine.dagapeyeff_held import held_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -624,6 +625,22 @@ def consider_halves() -> dict:
             f"Leave the same five out and that gap is {report['period7_residual_gap']}, "
             f"matched by {report['period7_residual_as_high']} of {report['draws']}. "
             "Not a reading."
+        ),
+    }
+
+
+def consider_held() -> dict:
+    report = held_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "held_allowed": report["allowed"],
+        "learned": (
+            "The five cells that appear at most three times stay in their seats. "
+            f"The other {196 - report['pinned']} cells are shuffled. "
+            f"Two runs still share a starting column in {report['as_aligned']} of {report['draws']} draws. "
+            f"A plain count of two runs, aligned or not, is {report['as_many_runs']} of {report['draws']}. "
+            "The alignment is not the rare column. Not a reading."
         ),
     }
 

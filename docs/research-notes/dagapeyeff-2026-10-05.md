@@ -36,6 +36,8 @@ Even positions use 13 symbols and odd positions use 18. 146 of 20,000 shuffles m
 
 One column holds a run of three and a separate run of two of the same cell. 956 of 20,000 shuffles have such a line, just under 5 percent. Every such line already has a long run. Inside the shuffles that already have one, the rate is not under 5 percent. [Repeat](../logs/dagapeyeff-repeat-2026-10-05.md).
 
+The five symbols that appear at most three times can be held in their seats while the other cells are shuffled. Two runs still share a starting column in 528 of 20,000 draws. A plain count of two runs does not clear. The alignment is not the rare column. [Held](../logs/dagapeyeff-held-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -73,6 +75,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Printed groups](../logs/dagapeyeff-groups-2026-10-04.md)
 - [Even and odd are the private column](../logs/dagapeyeff-halves-2026-10-05.md)
 - [A full row with an empty cell](../logs/dagapeyeff-heavy-2026-10-05.md)
+- [The alignment is not the rare column](../logs/dagapeyeff-held-2026-10-05.md)
 - [The frequency hole, and a period that is not there](../logs/dagapeyeff-hole-2026-10-04.md)
 - [The wait for a new cell](../logs/dagapeyeff-intro-2026-10-04.md)
 - [The order is on the last column's joins](../logs/dagapeyeff-joins-2026-10-04.md)

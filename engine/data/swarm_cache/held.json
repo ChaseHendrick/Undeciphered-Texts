@@ -1,0 +1,19 @@
+{
+  "allowed": true,
+  "as_aligned": 528,
+  "as_many_runs": 4149,
+  "claimed_plaintext": null,
+  "draws": 20000,
+  "low": [
+    "04",
+    "71",
+    "92",
+    "93",
+    "94"
+  ],
+  "pinned": 8,
+  "runs": 2,
+  "scope": "Aligned runs with the rare cells held still are not a reading. No letter string is stored.",
+  "shared_starts": 2,
+  "solved": false
+}
