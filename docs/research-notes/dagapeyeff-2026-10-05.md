@@ -34,6 +34,8 @@ The row digit matches the column of the grid, modulo 5, in 56 cells. That is the
 
 Even positions use 13 symbols and odd positions use 18. 146 of 20,000 shuffles match that gap. The five extra symbols are the five that never leave the last column, and that column is always an odd index. Leave them out and the gap is 0. A period of 7 looks rare only until those five are left out. [Halves](../logs/dagapeyeff-halves-2026-10-05.md).
 
+One column holds a run of three and a separate run of two of the same cell. 956 of 20,000 shuffles have such a line, just under 5 percent. Every such line already has a long run. Inside the shuffles that already have one, the rate is not under 5 percent. [Repeat](../logs/dagapeyeff-repeat-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -99,6 +101,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Refined swarm](../logs/dagapeyeff-refined-2026-10-04.md)
 - [The flattering regrouping](../logs/dagapeyeff-regroup-2026-10-04.md)
 - [The repairs share one loss](../logs/dagapeyeff-repair-2026-10-04.md)
+- [The second run needs the long run](../logs/dagapeyeff-repeat-2026-10-05.md)
 - [The order left after the rare column](../logs/dagapeyeff-residual-2026-10-05.md)
 - [The mismatch is not one cell](../logs/dagapeyeff-rest-2026-10-05.md)
 - [Router and grid](../logs/dagapeyeff-router-swarm-2026-10-04.md)

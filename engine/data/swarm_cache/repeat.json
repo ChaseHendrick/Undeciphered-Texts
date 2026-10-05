@@ -1,0 +1,25 @@
+{
+  "allowed": false,
+  "any_and_feature": 956,
+  "any_long": 15871,
+  "as_high": 956,
+  "claimed_plaintext": null,
+  "draws": 20000,
+  "hits": [
+    {
+      "axis": "column",
+      "cell": "82",
+      "index": 3,
+      "lengths": [
+        2,
+        1,
+        3
+      ]
+    }
+  ],
+  "lines": 1,
+  "scope": "A second run beside a long run is not a reading. No letter string is stored.",
+  "solved": false,
+  "vertical_and_feature": 724,
+  "vertical_runs": 10855
+}

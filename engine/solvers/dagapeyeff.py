@@ -52,6 +52,7 @@ from engine.dagapeyeff_sandwich import sandwich_report
 from engine.dagapeyeff_outside import outside_report
 from engine.dagapeyeff_modulo import modulo_report
 from engine.dagapeyeff_halves import halves_report
+from engine.dagapeyeff_repeat import repeat_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -622,6 +623,25 @@ def consider_halves() -> dict:
             f"and {report['period7_as_high']} of {report['draws']} shuffles match. "
             f"Leave the same five out and that gap is {report['period7_residual_gap']}, "
             f"matched by {report['period7_residual_as_high']} of {report['draws']}. "
+            "Not a reading."
+        ),
+    }
+
+
+def consider_repeat() -> dict:
+    report = repeat_report()
+    hit = report["hits"][0]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "repeat_allowed": report["allowed"],
+        "learned": (
+            f"One {hit['axis']} holds runs of lengths {hit['lengths']} of the same cell. "
+            f"{report['as_high']} of {report['draws']} shuffles have at least one such line. "
+            f"Of the {report['vertical_runs']} shuffles that already have a vertical run of three, "
+            f"{report['vertical_and_feature']} also have the second run. "
+            f"Of the {report['any_long']} shuffles with a long run in either direction, "
+            f"{report['any_and_feature']} do. The raw rate is under 5 percent and the widened rates are not. "
             "Not a reading."
         ),
     }

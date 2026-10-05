@@ -24,6 +24,7 @@ from engine.dagapeyeff_sandwich import sandwich_report
 from engine.dagapeyeff_outside import outside_report
 from engine.dagapeyeff_modulo import modulo_report
 from engine.dagapeyeff_halves import halves_report
+from engine.dagapeyeff_repeat import repeat_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -60,6 +61,7 @@ def paper_notes() -> dict:
     outside = outside_report()
     modulo = modulo_report()
     halves = halves_report()
+    repeat = repeat_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -466,6 +468,22 @@ def paper_notes() -> dict:
                 f"matched by {halves['period7_residual_as_high']} of {halves['draws']}."
             ),
             "do_not_claim": "An even and odd split is not a reading.",
+        },
+        {
+            "id": "second-run-needs-a-long-run",
+            "kind": "negative",
+            "tags": ["order", "grid"],
+            "statement": (
+                "One column holds a run of three and another disjoint run of two of the same cell. "
+                f"{repeat['as_high']} of {repeat['draws']} shuffles have at least one such line. "
+                "That raw rate is under 5 percent. Every such line already has a long run. "
+                f"{repeat['vertical_runs']} shuffles have a vertical run of three, "
+                "and the rate inside them is not under 5 percent. "
+                f"{repeat['any_long']} shuffles have a long run in either direction, "
+                f"and all {repeat['as_high']} of the raw matches sit in that set, "
+                "which is also not under 5 percent."
+            ),
+            "do_not_claim": "A second run beside a long run is not a reading.",
         },
         {
             "id": "bob-side-vote",
