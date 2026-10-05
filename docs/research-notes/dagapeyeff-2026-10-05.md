@@ -74,6 +74,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [What if it is not English](../logs/dagapeyeff-languages-2026-10-04.md)
 - [Large swarm](../logs/dagapeyeff-large-swarm-2026-10-04.md)
 - [Alexander d'Agapeyeff, the man, 4 October 2026](../logs/dagapeyeff-life-2026-10-04.md)
+- [The common cell meets the run of 63](../logs/dagapeyeff-meeting-2026-10-05.md)
 - [Which measurements can see this cipher](../logs/dagapeyeff-methods-2026-10-04.md)
 - [The language model does not like the flattering counts](../logs/dagapeyeff-model-2026-10-04.md)
 - [One row steps down](../logs/dagapeyeff-monotone-2026-10-04.md)

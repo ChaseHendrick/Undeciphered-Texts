@@ -1,0 +1,16 @@
+{
+  "as_many": 149,
+  "cell": "63",
+  "claimed_plaintext": null,
+  "draws": 20000,
+  "left": 10,
+  "meetings": 1,
+  "mode": "81",
+  "right": 12,
+  "row": 6,
+  "scope": "A meeting of two runs is not a reading. No letter string is stored.",
+  "solved": false,
+  "vertical_bottom": 6,
+  "vertical_column": 9,
+  "vertical_top": 4
+}

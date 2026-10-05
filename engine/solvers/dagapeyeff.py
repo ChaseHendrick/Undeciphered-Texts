@@ -47,6 +47,7 @@ from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_triples import triples_report
 from engine.dagapeyeff_contact import contact_report
+from engine.dagapeyeff_meeting import meeting_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -525,6 +526,23 @@ def consider_contact() -> dict:
             f"Of {report['draws']} shuffles, {report['aligned']} already have two runs in one starting column, "
             f"and {report['contact']} of those also sit next to rare cells. "
             "The contact is not the alignment. Not a reading."
+        ),
+    }
+
+
+def consider_meeting() -> dict:
+    report = meeting_report()
+    allowed = report["as_many"] / report["draws"] < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "meeting_allowed": allowed,
+        "learned": (
+            f"The most common cell, {report['mode']}, repeats down column {report['vertical_column']} "
+            f"in rows {report['vertical_top']}, {report['vertical_top'] + 1}, and {report['vertical_bottom']}. "
+            f"That run meets the run of {report['cell']} in row {report['row']}. "
+            f"A king's move counts. {report['as_many']} of {report['draws']} shuffles have such a meeting. "
+            "Not a reading."
         ),
     }
 
