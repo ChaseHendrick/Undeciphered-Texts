@@ -14,6 +14,7 @@ from engine.dagapeyeff_clerical import clerical_report
 from engine.dagapeyeff_intro import intro_report
 from engine.dagapeyeff_block import block_report
 from engine.dagapeyeff_digraph import digraph_report
+from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -33,6 +34,7 @@ def paper_notes() -> dict:
     intro = intro_report()
     block = block_report()
     digraph = digraph_report()
+    trigram = trigram_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -208,6 +210,19 @@ def paper_notes() -> dict:
                 f"and {digraph['repeated_as_high']} of {digraph['draws']} shuffles do as well."
             ),
             "do_not_claim": "A repeat count that fails once a second count is included is not a reading.",
+        },
+        {
+            "id": "three-cell-habit",
+            "kind": "comparison",
+            "tags": ["trigram", "exercise"],
+            "statement": (
+                f"The solved exercise has {trigram['control_repeated_trigrams']} three-cell sequences that repeat. "
+                f"{trigram['control_trigrams_as_high']} of {trigram['draws']} shuffles have that many. "
+                f"Four cells in a row do not repeat, and {trigram['control_tetragrams_as_few']} of {trigram['draws']} shuffles also have none. "
+                f"The challenge has {trigram['repeated_trigrams']} repeated three-cell sequences, "
+                f"and {trigram['trigrams_as_high']} of {trigram['draws']} shuffles do as well."
+            ),
+            "do_not_claim": "A three-cell habit in the solved exercise is not a reading of the challenge.",
         },
     ]
     return {

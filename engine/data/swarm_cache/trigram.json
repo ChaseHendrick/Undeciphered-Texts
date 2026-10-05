@@ -1,0 +1,17 @@
+{
+  "cells": 196,
+  "claimed_plaintext": null,
+  "control_cells": 89,
+  "control_repeated_tetragrams": 0,
+  "control_repeated_trigrams": 4,
+  "control_tetragrams_as_few": 9656,
+  "control_trigrams_as_high": 59,
+  "draws": 10000,
+  "lengths_scored": 2,
+  "repeated_tetragrams": 0,
+  "repeated_trigrams": 5,
+  "scope": "A three-cell habit in the solved exercise is not a reading of the challenge. No letter string is stored.",
+  "solved": false,
+  "tetragrams_as_few": 6602,
+  "trigrams_as_high": 7329
+}

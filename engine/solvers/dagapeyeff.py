@@ -43,6 +43,7 @@ from engine.dagapeyeff_clerical import clerical_report
 from engine.dagapeyeff_intro import intro_report
 from engine.dagapeyeff_block import block_report
 from engine.dagapeyeff_digraph import digraph_report
+from engine.dagapeyeff_trigram import trigram_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -266,6 +267,29 @@ def consider_digraph() -> dict:
             f"The challenge has {report['repeated_digraphs']} repeated digraphs, "
             f"and {report['repeated_as_high']} of {report['draws']} shuffles do as well. "
             "The variety clears 5 percent. The two measures together do not. Not a reading."
+        ),
+    }
+
+
+def consider_trigram() -> dict:
+    report = trigram_report()
+    rate = report["control_trigrams_as_high"] / report["draws"]
+    corrected = report["lengths_scored"] * rate
+    challenge = report["trigrams_as_high"] / report["draws"]
+    allowed = rate < 0.05 and corrected < 0.05 and challenge > 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "trigram_allowed": allowed,
+        "learned": (
+            f"The solved exercise has {report['control_repeated_trigrams']} three-cell sequences that repeat. "
+            f"{report['control_trigrams_as_high']} of {report['draws']} shuffles have that many. "
+            f"Four cells in a row were scored as well. None repeat, "
+            f"and {report['control_tetragrams_as_few']} of {report['draws']} shuffles also have none. "
+            f"Two lengths were scored, and twice the three-cell rate is still under 5 percent. "
+            f"The challenge has {report['repeated_trigrams']} repeated three-cell sequences, "
+            f"and {report['trigrams_as_high']} of {report['draws']} shuffles do as well. "
+            "The exercise clears the bar. The challenge does not share it. Not a reading."
         ),
     }
 
