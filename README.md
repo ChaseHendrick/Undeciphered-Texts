@@ -133,7 +133,8 @@ Full inventory of solvers and analysis tools (classical, keyed Vigenère, column
 | [`docs/k4-focus/evidence-2026-10-03.md`](docs/k4-focus/evidence-2026-10-03.md), [`model-experiments-2026-10-03.md`](docs/k4-focus/model-experiments-2026-10-03.md) | K4 source and clue audit, current custody, and executed bounded composition tests |
 | [`docs/easy-unsolved-attempt-2026-10-03.md`](docs/easy-unsolved-attempt-2026-10-03.md) | Reproducible smaller open-target attacks, controls, ambiguity and verification limits |
 | [`docs/ctf-triage-2026-10-03.md`](docs/ctf-triage-2026-10-03.md) | Public puzzle fixtures and organizer first-solve records; all ten already recorded solved at this check |
-| [`engine/data/english.txt`](engine/data/english.txt) | Training prose for n-gram model |
+| [`engine/data/neural_train_public.txt`](engine/data/neural_train_public.txt) | 1,916,398 public-domain letters behind the default English quadgram model ([drill](docs/logs/solver-strong-2026-10-05.md)) |
+| [`engine/data/english.txt`](engine/data/english.txt) | Prose for the legacy n-gram model that recorded probes replay |
 | [`tests/test_recover.py`](tests/test_recover.py) | Round-trip + recovery tests |
 | [`demos/run_demo.py`](demos/run_demo.py) | Demo entry that rewrites `DEMO.md` |
 | [`DEMO.md`](DEMO.md) | Last demo witness (ciphertext → recovered PT) |
