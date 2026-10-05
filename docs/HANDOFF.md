@@ -4,6 +4,24 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 5 October 2026, a larger English model, a grille, and an Enigma trial for Bob
+
+Started from `ef2f4a6` on `main`.
+
+`engine.language.get_model()` now returns a quadgram model with interpolated absolute discounting, fit on the 1,916,398-letter `engine/data/neural_train_public.txt`. `get_legacy_model()` is the old model, 8,689 letters of `english.txt`. On eight fresh training windows the substitution solver is exact on 1 of 8 at 200 letters with the legacy model and 7 of 8 with the new one, and on 0 and 6 of 8 at 150. Both recover the certificate. A first draft that sent unseen contexts to a flat 1/26 let nonsense keys win, so keep the backoff. See `docs/logs/solver-strong-2026-10-05.md` and `engine.solver_strong`.
+
+Every D'Agapeyeff probe that called the model, `engine.pooled_substitution`, and the fixed-temperature homophonic solver now name the legacy model, so their recorded numbers replay. The homophonic solver collapses to frequent letters under the new model. A letter-count penalty helped one fixture and hurt the other, so it was not adopted. Probes that call a solver were frozen under the legacy model; deleting their cache would recompute them under the new one.
+
+`engine.dagapeyeff_grille` is a 14 by 14 turning grille. Information climbing overshoots a planted text (1.2062 against 1.0242) at 17 of 49 holes, so it cannot choose a grille. With the key given, the annealed search recovers 1 of 3 planted grilles, one more at 47 of 49. With grille and key unknown, 0 of 2. On the cells, 2 of 4 shuffles score as high. The model's unicity bound is about 93 letters, so a right grille and key would stand out in 196. The search is what fails. The grille class is not closed. See `docs/logs/dagapeyeff-grille-2026-10-05.md`.
+
+`engine.dagapeyeff_booksquare` rebuilds the book exercise's square. The exercise as transcribed has 89 pairs for 92 letters: BOMBER's E, SQUADRONS' A and OF's F have no pair, and AREA's E is written as Y. The challenge under that square, in all 8 digit labelings, scores at best 362.87 against an English maximum of 150.73. The exercise itself scores 24.86. See `docs/logs/dagapeyeff-booksquare-2026-10-05.md`.
+
+`engine.dagapeyeff_spiral` reads 16 spiral, snake and zigzag routes both ways. The best is 0.686, and 567 of 2,000 shuffles match it. See `docs/logs/dagapeyeff-spiral-2026-10-05.md`.
+
+The cache now holds 86 files. The board page and the provenance chain were regenerated; the chain ends at `3977fb2ed8a1d1f4f1f91ebb3e64e020ea74915664346a5b171599e983da50b2`.
+
+Do not describe the grille score, the book square, or the routes as a decipherment.
+
 ## Session 5 October 2026, a warm start and a cell swarm
 
 Started from `6bcb64c` on `main`. The shipped weight file was not replaced. SHA-256 `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b`. The lifted ranking remains 433 of 480 and 195 of 204.

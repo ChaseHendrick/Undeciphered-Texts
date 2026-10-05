@@ -15,7 +15,7 @@ from engine.dagapeyeff_cache import frozen
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_add import _PROSE
 from engine.dagapeyeff_swarm import CHALLENGE, _digits
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, get_legacy_model
 
 _SEED = 20261004
 _NULL = 40
@@ -98,14 +98,14 @@ def _best(row_digits: str, column_digits: str, logp: list[float], english: list[
 
 @frozen("digit-routes")
 def digit_route_report() -> dict:
-    logp = get_model().logp
+    logp = get_legacy_model().logp
     english = [ord(char) - 65 for char in ENGLISH_ORDER]
     digits = _stream()
     row_digits, column_digits = digits[0::2], digits[1::2]
     menu = len(_routes(row_digits, column_digits))
     best, name, kept = _best(row_digits, column_digits, logp, english)
     prose = to_ints(letters_only(_PROSE))
-    prose_quad = get_model().score(prose) / (len(prose) - 3)
+    prose_quad = get_legacy_model().score(prose) / (len(prose) - 3)
     drawn = random.Random(_SEED)
     as_high = 0
     for _ in range(_NULL):

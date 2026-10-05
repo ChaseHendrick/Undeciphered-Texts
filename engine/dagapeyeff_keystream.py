@@ -12,7 +12,7 @@ import random
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_add import _PROSE, _cells
 from engine.dagapeyeff_cache import frozen
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, get_legacy_model
 
 _SEED = 20261004
 _DRAWS = 80
@@ -68,7 +68,7 @@ def _best(cells: list[int], logp: list[float], english: list[int]) -> tuple[floa
 
 @frozen("keystream")
 def keystream_report() -> dict:
-    logp = get_model().logp
+    logp = get_legacy_model().logp
     english = [ord(char) - 65 for char in ENGLISH_ORDER]
     cells = _cells()
     if len(cells) != _WIDTH * _WIDTH:
@@ -79,7 +79,7 @@ def keystream_report() -> dict:
         _quad(_keyed(cells, 3, 1), logp, english),
     )
     prose = to_ints(letters_only(_PROSE))
-    prose_score = get_model().score(prose) / (len(prose) - 3)
+    prose_score = get_legacy_model().score(prose) / (len(prose) - 3)
     drawn = random.Random(_SEED)
     best_as_high = 0
     fourth_as_high = 0

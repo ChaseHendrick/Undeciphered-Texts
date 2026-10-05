@@ -11,7 +11,7 @@ import random
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_add import _PROSE, _cells
 from engine.dagapeyeff_cache import frozen
-from engine.language import get_model, unigram_score
+from engine.language import get_legacy_model, unigram_score
 from engine.solvers.porta import porta_substitute
 
 _SEED = 20261004
@@ -29,7 +29,7 @@ def _inv(value: int) -> int:
 
 
 def _quad(seq: list[int]) -> float:
-    return get_model().score(seq) / (len(seq) - 3)
+    return get_legacy_model().score(seq) / (len(seq) - 3)
 
 
 def _best_affine(seq: list[int]) -> tuple[float, int]:

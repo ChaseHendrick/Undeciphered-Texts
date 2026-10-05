@@ -15,7 +15,7 @@ from engine.dagapeyeff_add import _PROSE
 from engine.dagapeyeff_cache import frozen
 from engine.dagapeyeff_edits import _counts, _fast, _symbols
 from engine.dagapeyeff_swarm import challenge_pairs
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, get_legacy_model
 
 _SEED = 20261004
 _DRAWS = 20
@@ -156,14 +156,14 @@ def _best_order(
 
 @frozen("placed")
 def placed_report() -> dict:
-    logp = get_model().logp
+    logp = get_legacy_model().logp
     english = [ord(char) - 65 for char in ENGLISH_ORDER]
     start = tuple(_counts())
     targets = _best_targets()
     cells = _cells()
     best, scored = _best_order(cells, targets, start, logp, english)
     prose = to_ints(letters_only(_PROSE))
-    prose_score = get_model().score(prose) / (len(prose) - 3)
+    prose_score = get_legacy_model().score(prose) / (len(prose) - 3)
     drawn = random.Random(_SEED)
     as_high = 0
     for _ in range(_DRAWS):

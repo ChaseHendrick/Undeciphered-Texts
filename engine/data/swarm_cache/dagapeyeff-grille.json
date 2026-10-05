@@ -1,0 +1,59 @@
+{
+  "cell_per_letter": -3.1388,
+  "cell_shuffles_as_high": 2,
+  "cell_shuffles_per_letter": [
+    -3.1078,
+    -3.0901,
+    -3.155,
+    -3.1823
+  ],
+  "cells": 196,
+  "claimed_plaintext": null,
+  "information_agreement": 17,
+  "information_found": 1.2062,
+  "information_true": 1.0242,
+  "joint": [
+    {
+      "agreement": 16,
+      "distinct_letters": 21,
+      "found_per_letter": -3.2517,
+      "key_letters_right": 4,
+      "shuffled_per_letter": -3.3426,
+      "true_per_letter": -2.0111
+    },
+    {
+      "agreement": 20,
+      "distinct_letters": 22,
+      "found_per_letter": -2.9762,
+      "key_letters_right": 3,
+      "shuffled_per_letter": -3.126,
+      "true_per_letter": -1.7441
+    }
+  ],
+  "joint_recovered": 0,
+  "key_bits": 171.08,
+  "known_key": [
+    {
+      "agreement": 49,
+      "found_per_letter": -2.0522,
+      "true_per_letter": -2.0111
+    },
+    {
+      "agreement": 25,
+      "found_per_letter": -2.8101,
+      "true_per_letter": -1.7441
+    },
+    {
+      "agreement": 47,
+      "found_per_letter": -2.1283,
+      "true_per_letter": -1.9207
+    }
+  ],
+  "known_key_recovered": 1,
+  "model_nats_per_letter": 1.9803,
+  "orbits": 49,
+  "saved_bits_per_letter": 1.8435,
+  "scope": "A grille search under a known key is the power check. The joint search did not recover a planted grille, so the grille class is not closed. The cells do not beat shuffled cells under the same search. No letter string is stored.",
+  "solved": false,
+  "unicity_letters": 92.8
+}

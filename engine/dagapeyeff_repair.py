@@ -15,7 +15,7 @@ from engine.dagapeyeff_add import _PROSE
 from engine.dagapeyeff_cache import frozen
 from engine.dagapeyeff_edits import _counts, _fast, _symbols
 from engine.dagapeyeff_swarm import challenge_pairs
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, get_legacy_model
 
 _SEED = 20261004
 
@@ -164,11 +164,11 @@ def repair_report() -> dict:
         roles.append("loss" if delta < 0 else "gain")
     shared_role = roles[0] if len(set(roles)) == 1 else "mixed"
     symbols = _symbols()
-    logp = get_model().logp
+    logp = get_legacy_model().logp
     english = [ord(char) - 65 for char in ENGLISH_ORDER]
     cells = _cells()
     prose = to_ints(letters_only(_PROSE))
-    prose_score = get_model().score(prose) / (len(prose) - 3)
+    prose_score = get_legacy_model().score(prose) / (len(prose) - 3)
     neighbor = _greedy(cells, 4, True, logp, english)
     free = _greedy(cells, 4, False, logp, english)
     one = _one(cells, logp, english)

@@ -14,7 +14,7 @@ from functools import lru_cache
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_add import _PROSE
 from engine.dagapeyeff_swarm import CHALLENGE
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, get_legacy_model
 
 _SEED = 20261004
 _NULL = 80
@@ -85,12 +85,12 @@ def _best(groups: list[str], logp: list[float], english: list[int]) -> tuple[flo
 
 @lru_cache(maxsize=1)
 def place_report() -> dict:
-    logp = get_model().logp
+    logp = get_legacy_model().logp
     english = [ord(char) - 65 for char in ENGLISH_ORDER]
     groups = _body()
     best, place, kept = _best(groups, logp, english)
     prose = to_ints(letters_only(_PROSE))
-    prose_quad = get_model().score(prose) / (len(prose) - 3)
+    prose_quad = get_legacy_model().score(prose) / (len(prose) - 3)
     even = groups[0::2]
     odd = groups[1::2]
     drawn = random.Random(_SEED)

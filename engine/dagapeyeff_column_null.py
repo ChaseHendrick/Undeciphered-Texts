@@ -13,7 +13,7 @@ from collections import Counter
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_add import _PROSE, _cells
 from engine.dagapeyeff_cache import frozen
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, get_legacy_model
 
 _SEED = 20261004
 _DRAWS = 80
@@ -71,7 +71,7 @@ def _drop_mode(cells: list[int], index: int) -> tuple[list[int], int]:
 
 @frozen("column-null")
 def column_null_report() -> dict:
-    logp = get_model().logp
+    logp = get_legacy_model().logp
     english = [ord(char) - 65 for char in ENGLISH_ORDER]
     cells = _cells()
     if len(cells) != _WIDTH * _WIDTH:
@@ -81,7 +81,7 @@ def column_null_report() -> dict:
     mode_kept, mode_dropped = _drop_mode(cells, 3)
     mode_score = _quad(mode_kept, logp, english)
     prose = to_ints(letters_only(_PROSE))
-    prose_score = get_model().score(prose) / (len(prose) - 3)
+    prose_score = get_legacy_model().score(prose) / (len(prose) - 3)
     drawn = random.Random(_SEED)
     best_as_high = 0
     fourth_as_high = 0

@@ -78,6 +78,10 @@ from engine.solver_attack import solver_attack_report
 from engine.bob_train import bob_train_report
 from engine.solver_train import solver_train_report
 from engine.dagapeyeff_anneal import anneal_swarm_report
+from engine.dagapeyeff_grille import grille_report
+from engine.dagapeyeff_booksquare import booksquare_report
+from engine.dagapeyeff_spiral import spiral_report
+from engine.solver_strong import solver_strong_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -1451,6 +1455,65 @@ def consider_anneal_swarm() -> dict:
             f"A longer substitution search is matched by {report['substitution_shuffles_as_high']} of {report['draws']} shuffles. "
             f"Caesar is matched by {report['caesar_shuffles_as_high']} and Vigenere by {report['vigenere_shuffles_as_high']}. "
             "The cells do not win the swarm. Not a reading."
+        ),
+    }
+
+
+def consider_grille() -> dict:
+    report = grille_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "grille_allowed": False,
+        "learned": (
+            f"With the letter key given, the grille search recovers {report['known_key_recovered']} of "
+            f"{len(report['known_key'])} planted grilles. With both unknown it recovers {report['joint_recovered']} of "
+            f"{len(report['joint'])}, so the grille class is not closed. "
+            f"On the cells {report['cell_shuffles_as_high']} of {len(report['cell_shuffles_per_letter'])} shuffles score as high. "
+            f"A key should stand out after about {report['unicity_letters']} letters. Not a reading."
+        ),
+    }
+
+
+def consider_booksquare() -> dict:
+    report = booksquare_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "booksquare_allowed": False,
+        "learned": (
+            f"The exercise's own square, under the best of {len(report['labelings'])} digit labelings, gives a chi-square "
+            f"of {report['best_chi_square']}. The worst of {report['english_draws']} English draws is {report['english_chi_max']}. "
+            "A transposition cannot change counts. Not a reading."
+        ),
+    }
+
+
+def consider_spiral() -> dict:
+    report = spiral_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "spiral_allowed": False,
+        "learned": (
+            f"The best of {report['readings']} spiral, snake and zigzag readings scores {report['best_mi']}. "
+            f"{report['shuffles_as_high']} of {report['draws']} shuffles do as well, and English is {report['english_mi']}. "
+            "Not a reading."
+        ),
+    }
+
+
+def consider_solver_strong() -> dict:
+    report = solver_strong_report()
+    rows = {row["width"]: row for row in report["rows"]}
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "solver_strong_allowed": report["promoted"],
+        "learned": (
+            f"At 200 letters the legacy model is exact on {rows[200]['legacy_exact']} of {rows[200]['windows']} windows "
+            f"and the larger model on {rows[200]['default_exact']}. The larger model is the default. "
+            "A drill on training text is not a reading."
         ),
     }
 

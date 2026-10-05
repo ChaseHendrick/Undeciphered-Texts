@@ -13,8 +13,10 @@ times that set) so spare slots can hold letters that are not in the active
 map. The start key is drawn at random with the English unigram distribution,
 so E is more common in the key than X. Search swaps two key entries. The
 fitness is a sum of natural-log n-gram scores. Kopal sums log pentagrams.
-This small version sums the quadgram log-likelihood already fitted in
-engine.language, which is the same kind of score on a shorter model.
+This small version sums the quadgram log-likelihood of the legacy model in
+engine.language, which is the same kind of score on a shorter model. The
+larger default model collapses this fixed-temperature search to frequent
+letters on the fixture, so the solver names the legacy model.
 
 Section 5.3 accepts a swap with a simulated-annealing test whose temperature
 does not cool:
@@ -53,7 +55,7 @@ import math
 import random
 
 from engine.alphabet import letters_only
-from engine.language import UNIGRAM, get_model
+from engine.language import UNIGRAM, get_legacy_model
 from engine.result import SolveResult
 
 PAPER_URL = "https://ep.liu.se/ecp/158/012/ecp19158012.pdf"
@@ -190,7 +192,7 @@ def solve_homophonic_fixed_temperature(
     index = {symbol: position for position, symbol in enumerate(symbols)}
     ids = [index[token] for token in tokens]
     n_symbols = len(symbols)
-    model = get_model()
+    model = get_legacy_model()
     logp = model.logp
     positions = _positions(ids, n_symbols)
     rng = random.Random(seed)

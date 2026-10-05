@@ -16,7 +16,7 @@ from engine.dagapeyeff_cache import frozen
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_add import _PROSE, _cells
 from engine.dagapeyeff_swarm import CHALLENGE, _digits
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, get_legacy_model
 
 _SEED = 20261004
 _NULL = 200
@@ -99,14 +99,14 @@ def _coordinates() -> tuple[str, str]:
 
 @frozen("delay")
 def delay_report() -> dict:
-    logp = get_model().logp
+    logp = get_legacy_model().logp
     english = [ord(char) - 65 for char in ENGLISH_ORDER]
     row_digits, column_digits = _coordinates()
     delay_score, delay = _best_delay(row_digits, column_digits, logp, english)
     cells = _cells()
     progressive_score, rule = _best_progressive(cells, logp, english)
     prose = to_ints(letters_only(_PROSE))
-    prose_quad = get_model().score(prose) / (len(prose) - 3)
+    prose_quad = get_legacy_model().score(prose) / (len(prose) - 3)
     drawn = random.Random(_SEED)
     delay_as_high = 0
     for _ in range(_NULL):

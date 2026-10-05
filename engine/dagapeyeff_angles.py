@@ -16,7 +16,7 @@ from itertools import combinations
 
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_add import _PROSE, _cells
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, get_legacy_model
 
 _SEED = 20261004
 _NULL = 40
@@ -83,13 +83,13 @@ def _identical(seq: list[int]) -> int:
 
 @frozen("angles")
 def angle_report() -> dict:
-    logp = get_model().logp
+    logp = get_legacy_model().logp
     english = [ord(char) - 65 for char in ENGLISH_ORDER]
     cells = _cells()
     stepped = _steps(cells)
     best = _quad(stepped, logp, english)
     prose = to_ints(letters_only(_PROSE))
-    prose_quad = get_model().score(prose) / (len(prose) - 3)
+    prose_quad = get_legacy_model().score(prose) / (len(prose) - 3)
     drawn = random.Random(_SEED)
     as_high = 0
     for _ in range(_NULL):

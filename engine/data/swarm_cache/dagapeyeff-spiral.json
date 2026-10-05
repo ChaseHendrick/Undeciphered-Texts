@@ -1,0 +1,13 @@
+{
+  "best_mi": 0.686,
+  "best_route": "spiral-3-copied",
+  "claimed_plaintext": null,
+  "draws": 2000,
+  "english_mi": 1.0658,
+  "printed_mi": 0.5706,
+  "readings": 32,
+  "routes": 16,
+  "scope": "The best spiral, snake or zigzag reading is matched by shuffled cells given the same routes, and it stays under same-length English. No letter key can raise this score. Not a reading. No letter string is stored.",
+  "shuffles_as_high": 567,
+  "solved": false
+}

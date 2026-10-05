@@ -12,7 +12,7 @@ from engine.dagapeyeff_cache import frozen
 
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_add import _PROSE, _cells, _chi, _mean_quadgram, _phases
-from engine.language import get_model
+from engine.language import get_legacy_model
 
 _SEED = 20261004
 _NULL = 40
@@ -56,7 +56,7 @@ def period4_report() -> dict:
         if _mean_quadgram(shuffled, null_key, null_counts) >= quad - 1e-12:
             quad_as_high += 1
     prose = to_ints(letters_only(_PROSE))
-    prose_quad = get_model().score(prose) / (len(prose) - 3)
+    prose_quad = get_legacy_model().score(prose) / (len(prose) - 3)
     return {
         "solved": False,
         "claimed_plaintext": None,

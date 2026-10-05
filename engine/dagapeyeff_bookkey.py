@@ -14,7 +14,7 @@ from engine.dagapeyeff_cache import frozen
 
 from engine.alphabet import letters_only, to_ints
 from engine.dagapeyeff_add import _PROSE, _cells
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, get_legacy_model
 
 # Same two strings as tests/test_polybius_gronsfeld.py. The first is the
 # faithful reading of the book's solved exercise. The second is its gloss.
@@ -95,13 +95,13 @@ def _best(cells: list[int], keys: list[list[int]], logp: list[float], english: l
 
 @frozen("bookkey")
 def bookkey_report() -> dict:
-    logp = get_model().logp
+    logp = get_legacy_model().logp
     english = [ord(char) - 65 for char in ENGLISH_ORDER]
     keys = [_shifts(_FAITHFUL), _shifts(_GLOSS)]
     cells = _cells()
     best, name = _best(cells, keys, logp, english)
     prose = to_ints(letters_only(_PROSE))
-    prose_quad = get_model().score(prose) / (len(prose) - 3)
+    prose_quad = get_legacy_model().score(prose) / (len(prose) - 3)
     drawn = random.Random(_SEED)
     as_high = 0
     for _ in range(_NULL):

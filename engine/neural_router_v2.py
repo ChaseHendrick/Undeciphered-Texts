@@ -33,7 +33,7 @@ WEIGHTS_PATH = DATA / "neural_router_v2_weights.json"
 METRICS_PATH = DATA / "neural_router_v2_metrics.json"
 FEATURE_VERSION = "cipher_statistics_v8"
 FEATURE_WIDTHS = {f"cipher_statistics_v{version}": width for version, width in
-                  ((2, 58), (3, 82), (4, 126), (5, 142), (6, 222), (7, 228), (8, 148), (9, 154))}
+                  ((2, 58), (3, 82), (4, 126), (5, 142), (6, 222), (7, 228), (8, 148), (9, 154), (10, 145))}
 MODEL_NAME = "Bob the Neural Net"
 EXTRA_FAMILIES = ("rail-fence", "affine", "autokey", "condi", "progressive-key", "redefence")
 
@@ -397,7 +397,7 @@ def _features(text, english, tables, *, version="cipher_statistics_v2"):
             counts = np.bincount(values[offset::period], minlength=26).astype(float)
             agreements.append(float((counts @ tables["mvig"]).max() / (np.linalg.norm(counts) * tables["norm"] + 1e-12)))
         row.append(float(np.mean(agreements)))
-    if version in tuple(f"cipher_statistics_v{i}" for i in range(3, 10)):
+    if version in tuple(f"cipher_statistics_v{i}" for i in range(3, 11)):
         for width in (2, 3, 4):
             grams = [tuple(values[i:i + width]) for i in range(len(values) - width + 1)]
             frequencies = {}
@@ -408,9 +408,10 @@ def _features(text, english, tables, *, version="cipher_statistics_v2"):
             row.extend((len(counts) / len(grams), float(-(p * np.log(p)).sum()),
                         float(p.max()), float(counts[counts > 1].sum() / len(grams))))
         row.extend(float(np.mean(values[lag:] == values[:-lag])) if len(values) > lag else 0. for lag in range(6, 18))
-    if version in tuple(f"cipher_statistics_v{i}" for i in range(4, 10)):
+    if version in tuple(f"cipher_statistics_v{i}" for i in range(4, 11)):
         row.extend(cryptanalytic_features(text, tables))
-    if version in ("cipher_statistics_v5", "cipher_statistics_v6", "cipher_statistics_v7", "cipher_statistics_v9", FEATURE_VERSION):
+    if version in ("cipher_statistics_v5", "cipher_statistics_v6", "cipher_statistics_v7", "cipher_statistics_v9",
+                   "cipher_statistics_v10", FEATURE_VERSION):
         from engine.solvers.autokey_inference import autokey_feature_scores
         row.extend(autokey_feature_scores(text, tables))
     if version in ("cipher_statistics_v6", "cipher_statistics_v7"):
@@ -426,6 +427,10 @@ def _features(text, english, tables, *, version="cipher_statistics_v2"):
     if version == "cipher_statistics_v9":
         from engine.neural_features import wheel_lag_features
         row.extend(wheel_lag_features(values))
+    if version == "cipher_statistics_v10":
+        # The format 5 prefix, then a bounded no-plugboard Enigma trial. No setting survives.
+        from engine.neural_enigma_features import enigma_features
+        row.extend(enigma_features(text, tables))
     return row
 
 
@@ -553,7 +558,7 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
             raise ValueError("warm start must preserve training-only language tables; use a cold fit for changed training prose")
         if previous["feature_version"] not in ("cipher_statistics_v2", "cipher_statistics_v3",
                                                "cipher_statistics_v4", "cipher_statistics_v5",
-                                               "cipher_statistics_v9", FEATURE_VERSION):
+                                               "cipher_statistics_v9", "cipher_statistics_v10", FEATURE_VERSION):
             raise ValueError("warm start requires prefix-compatible features; V6/V7 replay is supported but their inputs cannot be discarded")
         if len(previous["models"]) != ensemble_size:
             raise ValueError("warm start must preserve ensemble size")
@@ -747,7 +752,7 @@ def load_router(path=None):
     try:
         families = p["families"]
         widths = {(version, f"cipher_statistics_v{version}"): width for version, width in
-                  ((2, 58), (3, 82), (4, 126), (5, 142), (6, 222), (7, 228), (8, 148), (9, 154))}
+                  ((2, 58), (3, 82), (4, 126), (5, 142), (6, 222), (7, 228), (8, 148), (9, 154), (10, 145))}
         width = widths.get((p["format_version"], p["feature_version"]))
         if width is None or not isinstance(families, list) or not 2 <= len(families) <= 128 or any(not isinstance(f, str) for f in families):
             raise ValueError("unsupported router format")

@@ -1,0 +1,75 @@
+{
+  "best_chi_square": 362.87,
+  "claimed_plaintext": null,
+  "english_chi_max": 150.73,
+  "english_draws": 2000,
+  "english_draws_as_high_as_best": 0,
+  "exercise_chi_square": 24.86,
+  "exercise_draws_as_high": 793,
+  "exercise_dropped_letters": 3,
+  "exercise_pairs": 89,
+  "exercise_plaintext_letters": 92,
+  "exercise_wrong_pairs": 1,
+  "labelings": [
+    {
+      "chi_square": 362.87,
+      "columns_reversed": false,
+      "distinct_letters": 18,
+      "rows_reversed": false,
+      "swapped": false
+    },
+    {
+      "chi_square": 516.86,
+      "columns_reversed": false,
+      "distinct_letters": 18,
+      "rows_reversed": false,
+      "swapped": true
+    },
+    {
+      "chi_square": 1071.63,
+      "columns_reversed": true,
+      "distinct_letters": 18,
+      "rows_reversed": false,
+      "swapped": false
+    },
+    {
+      "chi_square": 967.19,
+      "columns_reversed": true,
+      "distinct_letters": 18,
+      "rows_reversed": false,
+      "swapped": true
+    },
+    {
+      "chi_square": 3519.29,
+      "columns_reversed": false,
+      "distinct_letters": 18,
+      "rows_reversed": true,
+      "swapped": false
+    },
+    {
+      "chi_square": 3286.8,
+      "columns_reversed": false,
+      "distinct_letters": 18,
+      "rows_reversed": true,
+      "swapped": true
+    },
+    {
+      "chi_square": 1150.67,
+      "columns_reversed": true,
+      "distinct_letters": 18,
+      "rows_reversed": true,
+      "swapped": false
+    },
+    {
+      "chi_square": 1976.12,
+      "columns_reversed": true,
+      "distinct_letters": 18,
+      "rows_reversed": true,
+      "swapped": true
+    }
+  ],
+  "scope": "The book's own square, under every digit labeling, does not give English letter counts. A transposition cannot change counts. Not a reading. No letter string is stored.",
+  "solved": false,
+  "square_cells_known": 22,
+  "square_cells_unused": 3
+}

@@ -15,7 +15,7 @@ from engine.dagapeyeff_cache import frozen
 from engine.dagapeyeff_life import _assign
 from engine.dagapeyeff_order import _prose
 from engine.dagapeyeff_swarm import challenge_pairs
-from engine.language import get_model
+from engine.language import get_legacy_model
 
 _DRAWS = 2000
 _SEED = 20261004
@@ -69,7 +69,7 @@ def _best(pairs: list[str], logp: list[float]) -> tuple[float, int]:
 
 @frozen("bifid")
 def bifid_report() -> dict:
-    model = get_model()
+    model = get_legacy_model()
     logp = model.logp
     pairs = list(challenge_pairs())
     identity = _quad(undo_bifid(pairs, 1), logp)
