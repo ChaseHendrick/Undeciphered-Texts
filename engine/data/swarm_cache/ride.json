@@ -1,0 +1,26 @@
+{
+  "allowed": true,
+  "as_many": 335,
+  "claimed_plaintext": null,
+  "draws": 20000,
+  "ride_count": 1,
+  "rides": [
+    {
+      "carrier_axis": "column",
+      "carrier_cell": "85",
+      "carrier_seats": [
+        5,
+        8,
+        11
+      ],
+      "echo_axis": "row",
+      "echo_cell": "62",
+      "lines": [
+        5,
+        11
+      ]
+    }
+  ],
+  "scope": "An echo riding on a spaced triple is not a reading. No letter string is stored.",
+  "solved": false
+}

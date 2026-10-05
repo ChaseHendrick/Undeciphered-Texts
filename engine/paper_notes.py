@@ -34,6 +34,7 @@ from engine.dagapeyeff_quartet import quartet_report
 from engine.dagapeyeff_squares import squares_report
 from engine.dagapeyeff_twospace import twospace_report
 from engine.dagapeyeff_echo import echo_report
+from engine.dagapeyeff_ride import ride_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -80,6 +81,7 @@ def paper_notes() -> dict:
     squares = squares_report()
     twospace = twospace_report()
     echo = echo_report()
+    ride = ride_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -629,6 +631,18 @@ def paper_notes() -> dict:
                 f"{echo['as_many']} of {echo['draws']} scrambles have two such echoes."
             ),
             "do_not_claim": "An echoed spaced triple is not a reading.",
+        },
+        {
+            "id": "echo-rides-a-triple",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                "Row 11 holds 62 at columns 6, 8 and 10, and row 5 repeats it at two of those columns. "
+                "Rows 5 and 11 are also two seats of 85 in column 2, whose three seats are rows 5, 8 and 11. "
+                "A scramble may use any cell for either triple. "
+                f"{ride['as_many']} of {ride['draws']} scrambles have such a pair of lines."
+            ),
+            "do_not_claim": "An echo riding on a spaced triple is not a reading.",
         },
         {
             "id": "bob-side-vote",

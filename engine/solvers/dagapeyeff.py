@@ -62,6 +62,7 @@ from engine.dagapeyeff_quartet import quartet_report
 from engine.dagapeyeff_squares import squares_report
 from engine.dagapeyeff_twospace import twospace_report
 from engine.dagapeyeff_echo import echo_report
+from engine.dagapeyeff_ride import ride_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -632,6 +633,20 @@ def consider_halves() -> dict:
             f"and {report['period7_as_high']} of {report['draws']} shuffles match. "
             f"Leave the same five out and that gap is {report['period7_residual_gap']}, "
             f"matched by {report['period7_residual_as_high']} of {report['draws']}. "
+            "Not a reading."
+        ),
+    }
+
+
+def consider_ride() -> dict:
+    report = ride_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "ride_allowed": report["allowed"],
+        "learned": (
+            f"The two lines of an echoed triple are also two seats of a spaced triple. "
+            f"{report['as_many']} of {report['draws']} scrambles have such a pair of lines, using any cell. "
             "Not a reading."
         ),
     }

@@ -54,6 +54,8 @@ Column 2 holds three copies of 82, at rows 0, 6 and 12, and three copies of 85, 
 
 Row 11 holds 62 at columns 6, 8 and 10, and row 5 repeats it at columns 6 and 8. Column 2 holds 82 at rows 0, 6 and 12, and column 7 repeats it at rows 6 and 12. Neither triple is three adjacent cells. A scramble may use any cell and any row or column. 932 of 20,000 scrambles have two such echoes. [Echo](../logs/dagapeyeff-echo-2026-10-05.md).
 
+Those two rows, 5 and 11, are also two seats of 85 in column 2, whose seats are rows 5, 8 and 11. A scramble may use any cell for either triple. 335 of 20,000 scrambles have such a pair of lines. An echo on its own is ordinary. [Ride](../logs/dagapeyeff-ride-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -141,6 +143,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [The second run needs the long run](../logs/dagapeyeff-repeat-2026-10-05.md)
 - [The order left after the rare column](../logs/dagapeyeff-residual-2026-10-05.md)
 - [The mismatch is not one cell](../logs/dagapeyeff-rest-2026-10-05.md)
+- [An echo rides on a spaced triple](../logs/dagapeyeff-ride-2026-10-05.md)
 - [63 sits between two copies of 81](../logs/dagapeyeff-sandwich-2026-10-05.md)
 - [The runs still touch the rare seats](../logs/dagapeyeff-seats-2026-10-05.md)
 - [The sharpest cell](../logs/dagapeyeff-sharp-2026-10-05.md)
