@@ -13,7 +13,7 @@ class PaperNotesTest(unittest.TestCase):
         self.assertEqual(notes["schema"], "paper-notes-1")
         self.assertIs(notes["solved"], False)
         self.assertIsNone(notes["claimed_plaintext"])
-        self.assertEqual(len(notes["notes"]), 14)
+        self.assertEqual(len(notes["notes"]), 15)
         self.assertTrue(all(note["claimed_plaintext"] is None for note in notes["notes"] if "claimed_plaintext" in note))
         shared = search_notes("72")
         self.assertEqual(

@@ -1,0 +1,18 @@
+{
+  "claimed_plaintext": null,
+  "columns_with_one": 4435,
+  "draws": 100000,
+  "either_with_one": 5768,
+  "rows_with_one": 1432,
+  "scope": "A staircase in one direction is not a reading. A line chosen from either direction is not a rarer line. No letter string is stored.",
+  "solved": false,
+  "strict_columns": 0,
+  "strict_row": [
+    12,
+    3,
+    2,
+    1,
+    0
+  ],
+  "strict_rows": 1
+}

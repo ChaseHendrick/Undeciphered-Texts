@@ -15,6 +15,7 @@ from engine.dagapeyeff_intro import intro_report
 from engine.dagapeyeff_block import block_report
 from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_trigram import trigram_report
+from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -35,6 +36,7 @@ def paper_notes() -> dict:
     block = block_report()
     digraph = digraph_report()
     trigram = trigram_report()
+    monotone = monotone_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -223,6 +225,20 @@ def paper_notes() -> dict:
                 f"and {trigram['trigrams_as_high']} of {trigram['draws']} shuffles do as well."
             ),
             "do_not_claim": "A three-cell habit in the solved exercise is not a reading of the challenge.",
+        },
+        {
+            "id": "monotone-row",
+            "kind": "comparison",
+            "tags": ["square", "monotone"],
+            "statement": (
+                "One row of the square has counts "
+                + ", ".join(str(count) for count in monotone["strict_row"])
+                + ". "
+                f"{monotone['rows_with_one']} of {monotone['draws']} re-pairings have a strict row. "
+                f"If a column may be the line instead, "
+                f"{monotone['either_with_one']} of {monotone['draws']} re-pairings have a strict line."
+            ),
+            "do_not_claim": "A staircase that fails once columns are allowed is not a reading.",
         },
     ]
     return {

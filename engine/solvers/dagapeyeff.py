@@ -44,6 +44,7 @@ from engine.dagapeyeff_intro import intro_report
 from engine.dagapeyeff_block import block_report
 from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_trigram import trigram_report
+from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -290,6 +291,26 @@ def consider_trigram() -> dict:
             f"The challenge has {report['repeated_trigrams']} repeated three-cell sequences, "
             f"and {report['trigrams_as_high']} of {report['draws']} shuffles do as well. "
             "The exercise clears the bar. The challenge does not share it. Not a reading."
+        ),
+    }
+
+
+def consider_monotone() -> dict:
+    report = monotone_report()
+    rows = report["rows_with_one"] / report["draws"]
+    either = report["either_with_one"] / report["draws"]
+    allowed = rows < 0.05 and either < 0.05
+    counts = ", ".join(str(count) for count in report["strict_row"])
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "monotone_allowed": allowed,
+        "learned": (
+            f"One row of the square has counts {counts}, and each step changes in the same direction. "
+            f"{report['rows_with_one']} of {report['draws']} re-pairings have a row like that. "
+            f"No column does. If a row or a column may be the line, "
+            f"{report['either_with_one']} of {report['draws']} re-pairings have one. "
+            "The row clears 5 percent. The two directions together do not. Not a reading."
         ),
     }
 
