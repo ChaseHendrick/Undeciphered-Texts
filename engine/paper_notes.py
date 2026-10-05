@@ -35,6 +35,7 @@ from engine.dagapeyeff_squares import squares_report
 from engine.dagapeyeff_twospace import twospace_report
 from engine.dagapeyeff_echo import echo_report
 from engine.dagapeyeff_ride import ride_report
+from engine.dagapeyeff_span import span_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -82,6 +83,7 @@ def paper_notes() -> dict:
     twospace = twospace_report()
     echo = echo_report()
     ride = ride_report()
+    span = span_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -643,6 +645,19 @@ def paper_notes() -> dict:
                 f"{ride['as_many']} of {ride['draws']} scrambles have such a pair of lines."
             ),
             "do_not_claim": "An echo riding on a spaced triple is not a reading.",
+        },
+        {
+            "id": "palindrome-on-a-span",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                "Row 11 holds 62 at columns 6, 8 and 10. "
+                "Columns 6 through 10 of row 0 read 91, 64, 81, 64, 91, the same forwards and backwards. "
+                "The triple is not three adjacent cells. "
+                "A scramble may use any cell and any row or column. "
+                f"{span['as_many']} of {span['draws']} scrambles have such a span."
+            ),
+            "do_not_claim": "A palindrome on a spaced span is not a reading.",
         },
         {
             "id": "bob-side-vote",

@@ -63,6 +63,7 @@ from engine.dagapeyeff_squares import squares_report
 from engine.dagapeyeff_twospace import twospace_report
 from engine.dagapeyeff_echo import echo_report
 from engine.dagapeyeff_ride import ride_report
+from engine.dagapeyeff_span import span_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -633,6 +634,20 @@ def consider_halves() -> dict:
             f"and {report['period7_as_high']} of {report['draws']} shuffles match. "
             f"Leave the same five out and that gap is {report['period7_residual_gap']}, "
             f"matched by {report['period7_residual_as_high']} of {report['draws']}. "
+            "Not a reading."
+        ),
+    }
+
+
+def consider_span() -> dict:
+    report = span_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "span_allowed": report["allowed"],
+        "learned": (
+            f"A parallel line reads the same forwards and backwards across the span of a spaced triple. "
+            f"{report['as_many']} of {report['draws']} scrambles have such a span, using any cell and any row or column. "
             "Not a reading."
         ),
     }

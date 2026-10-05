@@ -56,6 +56,8 @@ Row 11 holds 62 at columns 6, 8 and 10, and row 5 repeats it at columns 6 and 8.
 
 Those two rows, 5 and 11, are also two seats of 85 in column 2, whose seats are rows 5, 8 and 11. A scramble may use any cell for either triple. 335 of 20,000 scrambles have such a pair of lines. An echo on its own is ordinary. [Ride](../logs/dagapeyeff-ride-2026-10-05.md).
 
+Columns 6 through 10 of row 0 read 91, 64, 81, 64, 91, the same forwards and backwards. Those are the columns from the first to the last seat of 62 in row 11, at columns 6, 8 and 10. The triple is not three adjacent cells. A scramble may use any cell and any row or column. 782 of 20,000 scrambles have such a span. [Span](../logs/dagapeyeff-span-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -147,6 +149,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [63 sits between two copies of 81](../logs/dagapeyeff-sandwich-2026-10-05.md)
 - [The runs still touch the rare seats](../logs/dagapeyeff-seats-2026-10-05.md)
 - [The sharpest cell](../logs/dagapeyeff-sharp-2026-10-05.md)
+- [A palindrome fills a spaced span](../logs/dagapeyeff-span-2026-10-05.md)
 - [The exercise has an uneven line](../logs/dagapeyeff-spread-2026-10-05.md)
 - [One tied cell prefers one color](../logs/dagapeyeff-squares-2026-10-05.md)
 - [The two runs of three share a column](../logs/dagapeyeff-triples-2026-10-05.md)

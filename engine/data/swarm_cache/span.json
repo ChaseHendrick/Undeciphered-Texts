@@ -1,0 +1,33 @@
+{
+  "allowed": true,
+  "as_many": 782,
+  "claimed_plaintext": null,
+  "draws": 20000,
+  "scope": "A palindrome on a spaced span is not a reading. No letter string is stored.",
+  "solved": false,
+  "span_count": 1,
+  "spans": [
+    {
+      "axis": "row",
+      "cell": "62",
+      "echo": 0,
+      "index": 11,
+      "seats": [
+        6,
+        8,
+        10
+      ],
+      "span": [
+        6,
+        10
+      ],
+      "window": [
+        "91",
+        "64",
+        "81",
+        "64",
+        "91"
+      ]
+    }
+  ]
+}
