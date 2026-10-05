@@ -1,0 +1,22 @@
+{
+  "aligned": 528,
+  "allowed": true,
+  "also_aligned": 60,
+  "as_many": 543,
+  "claimed_plaintext": null,
+  "draws": 20000,
+  "gaps": 2,
+  "low": [
+    "04",
+    "71",
+    "92",
+    "93",
+    "94"
+  ],
+  "mode": "81",
+  "pinned": 8,
+  "plain_as_many": 7488,
+  "plain_gaps": 4,
+  "scope": "The sandwich with the rare cells held still is not a reading. No letter string is stored.",
+  "solved": false
+}

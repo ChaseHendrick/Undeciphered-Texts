@@ -42,6 +42,8 @@ Of those 528, 9 also have both runs next to a rare cell. That is 1.70 percent. T
 
 Of the same 528, 112 have at least one further copy of the run's cell in its row, which does not clear. 8 have two further copies. That is 1.52 percent. None of those 8 is one of the 9 that touch a rare cell. [Extras](../logs/dagapeyeff-extras-2026-10-05.md).
 
+543 of 20,000 draws, with those rare cells held still, still have the common cell on both sides of a cell that also has a run of three. A plain gap of that shape is 7,488 of 20,000 and does not clear. 60 of the 543 also have the aligned runs, so this is not that alignment. [Held sandwich](../logs/dagapeyeff-heldsand-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -81,6 +83,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Even and odd are the private column](../logs/dagapeyeff-halves-2026-10-05.md)
 - [A full row with an empty cell](../logs/dagapeyeff-heavy-2026-10-05.md)
 - [The alignment is not the rare column](../logs/dagapeyeff-held-2026-10-05.md)
+- [The sandwich is not the plain gap](../logs/dagapeyeff-heldsand-2026-10-05.md)
 - [The frequency hole, and a period that is not there](../logs/dagapeyeff-hole-2026-10-04.md)
 - [The wait for a new cell](../logs/dagapeyeff-intro-2026-10-04.md)
 - [The order is on the last column's joins](../logs/dagapeyeff-joins-2026-10-04.md)

@@ -28,6 +28,7 @@ from engine.dagapeyeff_repeat import repeat_report
 from engine.dagapeyeff_held import held_report
 from engine.dagapeyeff_seats import seats_report
 from engine.dagapeyeff_extras import extras_report
+from engine.dagapeyeff_heldsand import heldsand_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -68,6 +69,7 @@ def paper_notes() -> dict:
     held = held_report()
     seats = seats_report()
     extras = extras_report()
+    heldsand = heldsand_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -530,6 +532,20 @@ def paper_notes() -> dict:
                 "One further copy does not clear. Two do."
             ),
             "do_not_claim": "Two copies outside an aligned run are not a reading.",
+        },
+        {
+            "id": "sandwich-survives-the-pin",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                "The rare cells stay in their seats. "
+                f"{heldsand['as_many']} of {heldsand['draws']} draws still have the common cell on both sides "
+                f"of a cell that also has a run of three. "
+                f"A plain gap, with any other cell in the middle, is {heldsand['plain_as_many']} of {heldsand['draws']}. "
+                f"{heldsand['also_aligned']} of the {heldsand['as_many']} also have two aligned runs. "
+                "The sandwich stays under 5 percent. The plain gap does not."
+            ),
+            "do_not_claim": "The sandwich with the rare cells held still is not a reading.",
         },
         {
             "id": "bob-side-vote",
