@@ -42,6 +42,7 @@ from engine.dagapeyeff_hole import hole_report
 from engine.dagapeyeff_clerical import clerical_report
 from engine.dagapeyeff_intro import intro_report
 from engine.dagapeyeff_block import block_report
+from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -243,6 +244,28 @@ def consider_block() -> dict:
             f"If the pair or the triple may be the packed class instead, "
             f"{report['union_numerator']} of {report['union_denominator']} arrangements pack some class. "
             "The named three clear 5 percent. The menu does not. Not a reading."
+        ),
+    }
+
+
+def consider_digraph() -> dict:
+    report = digraph_report()
+    repeated = report["control_repeated_as_high"] / report["draws"]
+    either = report["control_either_as_high"] / report["draws"]
+    allowed = repeated < 0.05 and either < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "digraph_allowed": allowed,
+        "learned": (
+            f"The solved exercise has {report['control_repeated_digraphs']} digraphs that occur more than once. "
+            f"{report['control_repeated_as_high']} of {report['draws']} shuffles have that many. "
+            f"Its most common digraph occurs {report['control_peak']} times, "
+            f"and {report['control_peak_as_high']} of {report['draws']} match that. "
+            f"Either measure is {report['control_either_as_high']} of {report['draws']}. "
+            f"The challenge has {report['repeated_digraphs']} repeated digraphs, "
+            f"and {report['repeated_as_high']} of {report['draws']} shuffles do as well. "
+            "The variety clears 5 percent. The two measures together do not. Not a reading."
         ),
     }
 

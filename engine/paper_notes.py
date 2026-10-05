@@ -13,6 +13,7 @@ from engine.dagapeyeff_hole import hole_report
 from engine.dagapeyeff_clerical import clerical_report
 from engine.dagapeyeff_intro import intro_report
 from engine.dagapeyeff_block import block_report
+from engine.dagapeyeff_digraph import digraph_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -31,6 +32,7 @@ def paper_notes() -> dict:
     clerical = clerical_report()
     intro = intro_report()
     block = block_report()
+    digraph = digraph_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -192,6 +194,20 @@ def paper_notes() -> dict:
                 f"{block['union_numerator']} of {block['union_denominator']} arrangements pack some class."
             ),
             "do_not_claim": "A block that is rare only when the other rare cells are ignored is not a reading.",
+        },
+        {
+            "id": "digraph-variety",
+            "kind": "comparison",
+            "tags": ["digraph", "exercise"],
+            "statement": (
+                f"The solved exercise has {digraph['control_repeated_digraphs']} digraphs that repeat. "
+                f"{digraph['control_repeated_as_high']} of {digraph['draws']} shuffles have that many. "
+                f"With the most common digraph included, "
+                f"{digraph['control_either_as_high']} of {digraph['draws']} match. "
+                f"The challenge has {digraph['repeated_digraphs']} repeated digraphs, "
+                f"and {digraph['repeated_as_high']} of {digraph['draws']} shuffles do as well."
+            ),
+            "do_not_claim": "A repeat count that fails once a second count is included is not a reading.",
         },
     ]
     return {

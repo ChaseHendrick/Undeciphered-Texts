@@ -1,0 +1,18 @@
+{
+  "cells": 196,
+  "claimed_plaintext": null,
+  "control_cells": 89,
+  "control_either_as_high": 1270,
+  "control_peak": 4,
+  "control_peak_as_high": 1119,
+  "control_repeated_as_high": 165,
+  "control_repeated_digraphs": 15,
+  "draws": 10000,
+  "either_as_high": 9975,
+  "peak": 4,
+  "peak_as_high": 9795,
+  "repeated_as_high": 6924,
+  "repeated_digraphs": 48,
+  "scope": "A digraph count that a second count can explain is not a reading. The solved exercise is the check. No letter string is stored.",
+  "solved": false
+}
