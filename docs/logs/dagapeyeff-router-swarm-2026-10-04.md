@@ -11,3 +11,5 @@ The solver refuses the swarm. No letters are kept.
 The chain ends at `4584646d76303ef60a90ffe5032b09544aa66c1bafb09f8a92735d8c971443df`.
 
 No letter string is stored.
+
+Correction, 5 October 2026. The 0.9696 above was frozen before the 4 October weight promotion. The shipped weights give 0.969. The other counts reproduce and the refusal stands. See the `router-confidence-used-old-weights` record in `engine/data/corrections.json`.

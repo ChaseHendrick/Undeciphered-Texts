@@ -13,7 +13,27 @@ import json
 import re
 
 _LONG_LETTERS = re.compile(r"[A-Za-z]{20}")
+# Spaces and punctuation do not break a sentence. Digits do, so a hash passes.
+_SEPARATORS = re.compile(r"[^A-Za-z0-9]+")
 _BANNED = ("plain", "reading", "letters", "crib")
+
+
+def _refuse(name: str, value) -> None:
+    """Refuse a banned field name or a letter string, at any depth."""
+    if not isinstance(name, str):
+        raise TypeError("a scratch field name must be text")
+    folded = name.lower()
+    if any(token in folded for token in _BANNED):
+        raise ValueError("scratch paper cannot hold a plaintext")
+    if isinstance(value, str):
+        if _LONG_LETTERS.search(_SEPARATORS.sub("", value)):
+            raise ValueError("scratch paper cannot hold a letter string")
+    elif isinstance(value, dict):
+        for key, item in value.items():
+            _refuse(key, item)
+    elif isinstance(value, (list, tuple, set, frozenset)):
+        for item in value:
+            _refuse(name, item)
 
 
 def open_pad() -> list[dict]:
@@ -29,18 +49,13 @@ def write_note(pad: list[dict], **fields) -> dict:
         raise ValueError("a scratch note needs a step")
     clean: dict = {}
     for key, value in fields.items():
-        if not isinstance(key, str):
-            raise TypeError("a scratch field name must be text")
-        folded = key.lower()
-        if any(token in folded for token in _BANNED):
-            raise ValueError("scratch paper cannot hold a plaintext")
-        if isinstance(value, str) and _LONG_LETTERS.search(value):
-            raise ValueError("scratch paper cannot hold a letter string")
-        if folded == "sha256":
+        if isinstance(key, str) and key.lower() == "sha256":
             if value is not None and (
                 not isinstance(value, str) or len(value) != 64 or any(ch not in "0123456789abcdef" for ch in value)
             ):
                 raise ValueError("a scratch hash must be 64 hex characters")
+        else:
+            _refuse(key, value)
         clean[key] = value
     pad.append(clean)
     return clean

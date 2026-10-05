@@ -1,0 +1,60 @@
+{
+  "arms": [
+    {
+      "exact": 0,
+      "letters_right": 0.5787,
+      "misses_the_model_prefers": 5,
+      "misses_the_search_left": 2,
+      "model": "small",
+      "model_letters": 8689,
+      "nine_tenths_right": 1,
+      "restarts": 10,
+      "temperature": 30.0,
+      "width": 100,
+      "windows": 8
+    },
+    {
+      "exact": 5,
+      "letters_right": 0.935,
+      "misses_the_model_prefers": 0,
+      "misses_the_search_left": 1,
+      "model": "large",
+      "model_letters": 1916398,
+      "nine_tenths_right": 7,
+      "restarts": 30,
+      "temperature": 10.0,
+      "width": 100,
+      "windows": 8
+    },
+    {
+      "exact": 0,
+      "letters_right": 0.8337,
+      "misses_the_model_prefers": 2,
+      "misses_the_search_left": 1,
+      "model": "small",
+      "model_letters": 8689,
+      "nine_tenths_right": 5,
+      "restarts": 10,
+      "temperature": 30.0,
+      "width": 200,
+      "windows": 8
+    },
+    {
+      "exact": 6,
+      "letters_right": 0.9981,
+      "misses_the_model_prefers": 0,
+      "misses_the_search_left": 0,
+      "model": "large",
+      "model_letters": 1916398,
+      "nine_tenths_right": 8,
+      "restarts": 30,
+      "temperature": 10.0,
+      "width": 200,
+      "windows": 8
+    }
+  ],
+  "claimed_plaintext": null,
+  "default_changed": false,
+  "scope": "A drill on held-out English with known keys. A higher score than the true text means the model, not the search, chose the wrong key. Not a reading.",
+  "solved": false
+}

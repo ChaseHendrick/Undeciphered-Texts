@@ -105,6 +105,18 @@
       "tags": ["lead", "record", "49.23", "count-move", "unsolved"],
       "solved": false,
       "claimed_plaintext": null
+    },
+    {
+      "id": "router-confidence-used-old-weights",
+      "date": "2026-10-05",
+      "recorded_by": "main-session",
+      "wrong": "The family router names substitution on the 196 cells at probability 0.9696.",
+      "correction": "That number was frozen at 18:55 on 4 October, before the warm start promoted at 20:09 replaced the weight file. Rerunning the frozen search with the shipped weights, SHA-256 5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b, gives 0.969. Every other field reproduces: substitution is still first, 40 of 40 shuffles are also named substitution, 25 of 40 are at least as confident, and the fourth column is still 6 of 200. The refusal does not change.",
+      "evidence": ["tools/verify_cache.py", "engine/dagapeyeff_router_swarm.py", "engine/data/swarm_cache/router-swarm.json"],
+      "supersedes": ["docs/logs/dagapeyeff-router-swarm-2026-10-04.md", "docs/logs/bob-caution-2026-10-04.md"],
+      "tags": ["router", "0.9696", "0.969", "weights", "stale", "frozen"],
+      "solved": false,
+      "claimed_plaintext": null
     }
   ]
 }

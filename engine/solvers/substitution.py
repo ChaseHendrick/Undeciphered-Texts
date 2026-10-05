@@ -20,7 +20,7 @@ import math
 import random
 
 from engine.alphabet import from_ints, letters_only, reinject, to_ints
-from engine.language import ENGLISH_ORDER, get_model
+from engine.language import ENGLISH_ORDER, LanguageModel, get_model
 from engine.neural import get_neural_model
 from engine.result import SolveResult
 from engine.stats import successive_information
@@ -146,12 +146,20 @@ def solve_substitution(
     seed: int = 20261002,
     temperature: float = 30.0,
     cooling: float = 0.997,
+    model: LanguageModel | None = None,
 ) -> SolveResult:
+    """Search a simple substitution key.
+
+    The defaults reproduce the frozen swarm scores. On held-out Doyle windows,
+    ``model=get_large_model()`` with 30 restarts and temperature 10 got 8 of 8
+    windows of 200 letters and 7 of 8 of 100 letters at least nine tenths
+    right; the defaults got 5 of 8 and 1 of 8. See docs/logs/solver-model-2026-10-05.md.
+    """
     letters = letters_only(text)
     if len(letters) < 40:
         raise ValueError("ciphertext is too short for substitution search (need at least 40 letters)")
     seq = to_ints(letters)
-    model = get_model()
+    model = model or get_model()
     logp = model.logp
     rng = random.Random(seed)
     base = frequency_decrypt_key(seq)
@@ -211,6 +219,7 @@ def solve_substitution(
             "letters": len(letters),
             "decrypt_map": "".join(chr(65 + p) for p in best_key),
             "fitness": "quadgram",
+            "model_letters": model.sample_letters,
             "neural_score": neural_score,
             "neural_backend": neural.backend,
             "second_opinion": "neural_trigram",

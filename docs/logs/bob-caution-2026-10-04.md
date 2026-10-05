@@ -13,3 +13,5 @@ On a Caesar of known prose he says caesar, probability 0.9471. 0 of 40 shuffles 
 The chain ends at `069259f698f4e1cff1c4943406bf9c3154268e6f735204849e86fa2edf92bb73`.
 
 No letter string is stored.
+
+Correction, 5 October 2026. The 0.9696 above was frozen before the 4 October weight promotion. The shipped weights give 0.969. The other counts reproduce and the refusal stands. See the `router-confidence-used-old-weights` record in `engine/data/corrections.json`.

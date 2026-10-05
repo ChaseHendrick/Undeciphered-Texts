@@ -45,18 +45,20 @@ def judge_claim(claim: dict) -> dict:
     if not isinstance(claim, dict):
         raise TypeError("a claim must be a dictionary")
     blocks: list[str] = []
-    if claim.get("solved") is True:
+    # Only False or a missing flag passes. "yes" or 1 is still a solved claim.
+    claims_solved = claim.get("solved") is not None and claim.get("solved") is not False
+    if claims_solved:
         blocks.append("solved_flag")
     plain = claim.get("claimed_plaintext")
-    if isinstance(plain, str) and plain.strip():
+    if plain is not None and not (isinstance(plain, str) and not plain.strip()):
         blocks.append("plaintext_stored")
     pieces = " ".join(str(claim.get(key, "")) for key in ("target", "method", "family", "cipher", "name"))
-    if _blocked_name(pieces) and claim.get("solved") is True:
+    if _blocked_name(pieces) and claims_solved:
         blocks.append("historical_solved")
     score = claim.get("score")
     if score is not None and (isinstance(score, bool) or not isinstance(score, (int, float)) or not math.isfinite(float(score))):
         blocks.append("nonfinite_score")
-    if claim.get("reencryption_matches") is False and claim.get("solved") is True:
+    if claim.get("reencryption_matches") is False and claims_solved:
         blocks.append("reencryption_failed")
     return {
         "solved": False,

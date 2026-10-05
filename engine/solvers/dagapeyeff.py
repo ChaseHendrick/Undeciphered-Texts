@@ -1220,7 +1220,7 @@ def consider_router_swarm() -> dict:
         "column_unusual": column_unusual,
         "family_unusual": family_unusual,
         "learned": (
-            "The router names substitution at 0.9696 and is not uncertain. "
+            "The router names substitution at 0.969 and is not uncertain. "
             "40 of 40 shuffles are also named substitution, and 25 of 40 are at least as confident. "
             "The fourth column has one symbol 6 times. 6 of 200 shuffled grids match that. "
             "A repetitive column is not a reading. Refuse it."
