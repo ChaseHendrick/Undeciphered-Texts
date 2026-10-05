@@ -72,6 +72,9 @@ from engine.bob_pair import bob_pair_report
 from engine.bob_lift import bob_lift_report
 from engine.bob_distill import bob_distill_report
 from engine.bob_attack import bob_attack_report
+from engine.bob_slim import bob_slim_report
+from engine.bob_read import bob_read_report
+from engine.solver_attack import solver_attack_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -1347,6 +1350,60 @@ def consider_bob_attack() -> dict:
             f"withholds {report['hardened_withheld']}, and still misses {report['hardened_wrong']}. "
             f"Unencrypted English is certain on {report['plain_certain']} of {report['plain_draws']} draws. "
             "That gate is not a higher score. Not a reading."
+        ),
+    }
+
+
+def consider_bob_slim() -> dict:
+    report = bob_slim_report()
+    if report["promoted"]:
+        ending = "A smaller student beat the lift. The weight file still stays. Not a reading."
+    else:
+        ending = "None of them beat the lift. The weight file stays. Not a reading."
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "bob_slim_allowed": report["promoted"],
+        "learned": (
+            f"A 20-number bias scores {report['held_bias']} of {report['held_total']} "
+            f"and {report['benchmark_bias']} of {report['benchmark_total']}. "
+            f"A bias fit to the lift scores {report['held_lift_bias']} and {report['benchmark_lift_bias']}. "
+            f"A three-weight mix scores {report['held_mix']} and {report['benchmark_mix']}. "
+            f"The lifted ranking is {report['held_lift']} and {report['benchmark_lift']}. "
+            + ending
+        ),
+    }
+
+
+def consider_bob_read() -> dict:
+    report = bob_read_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "bob_read_allowed": False,
+        "learned": (
+            f"On training windows the reader matches Caesar {report['caesar_matched']} of {report['caesar_texts']} "
+            f"and Vigenere {report['vigenere_matched']} of {report['vigenere_texts']}. "
+            f"Substitution is left alone {report['substitution_withheld']} of {report['substitution_texts']}. "
+            f"Beaufort is left alone {report['beaufort_withheld']} of {report['beaufort_texts']}. "
+            f"A short shifted proverb was named {report['proverb_family']} and withheld. Not a reading."
+        ),
+    }
+
+
+def consider_solver_attack() -> dict:
+    report = solver_attack_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "solver_attack_allowed": False,
+        "learned": (
+            f"Caesar search is exact on {report['caesar_exact']} of {report['caesar_texts']}. "
+            f"Vigenere search is exact on {report['vigenere_exact']} of {report['vigenere_texts']}, "
+            f"and a one-letter deletion keeps the keyword {report['vigenere_delete_holds']} times. "
+            "That deletion check stays off, because it would also drop the true keywords. "
+            f"Substitution is consistent on {report['substitution_consistent']} and exact on {report['substitution_exact']}. "
+            "A wrong key still re-encrypts. The order flag is not a recovery. Not a reading."
         ),
     }
 

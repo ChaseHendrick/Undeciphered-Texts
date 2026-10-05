@@ -4,8 +4,9 @@ from __future__ import annotations
 
 import unittest
 
-from engine.ciphers import caesar_encrypt, vigenere_encrypt
+from engine.ciphers import caesar_encrypt, substitution_encrypt, vigenere_encrypt
 from engine.solver_judge import judge_any, judge_claim, judge_solve_result, reencryption_matches
+from engine.solvers.affine import affine_encrypt
 from engine.solvers.beaufort import beaufort_encrypt
 from engine.solvers.caesar import solve_caesar
 
@@ -38,6 +39,13 @@ class SolverJudgeTest(unittest.TestCase):
         beaufort = beaufort_encrypt(plain, "CODE")
         self.assertTrue(reencryption_matches("beaufort", plain, "CODE", beaufort))
         self.assertIsNone(reencryption_matches("playfair", plain, "CODE", beaufort))
+        affine = affine_encrypt(plain, 5, 8)
+        self.assertTrue(reencryption_matches("affine", plain, "a=5,b=8", affine))
+        self.assertFalse(reencryption_matches("affine", plain, "a=5,b=9", affine))
+        permutation = "QWERTYUIOPASDFGHJKLZXCVBNM"
+        substitution = substitution_encrypt(plain, permutation)
+        self.assertTrue(reencryption_matches("substitution", plain, permutation, substitution))
+        self.assertFalse(reencryption_matches("substitution", plain, "ABCDEFGHIJKLMNOPQRSTUVWXYZ", substitution))
         judged = judge_solve_result(solve_caesar(caesar), caesar)
         self.assertIs(judged["solved"], False)
         self.assertIsNone(judged["claimed_plaintext"])

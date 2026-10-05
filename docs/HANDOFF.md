@@ -4,6 +4,18 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 5 October 2026, a reader and a smaller student
+
+Started from `f1bfedb` on `main`. The shipped weight file was not replaced. SHA-256 `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b`. The lifted ranking remains 433 of 480 and 195 of 204. This is not 480 of 480.
+
+`engine.bob_slim` continues distillation with fewer free numbers, on the same 160 training ciphers. A 20-number bias scores 431 of 480 and 193 of 204. A bias fit to the lift scores 430 and 193. Three mixture weights stay on the mean, 429 and 193. None beat the lift, so none are promoted. See `docs/logs/bob-slim-2026-10-05.md`.
+
+`engine.bob_scratch` is a pad. It refuses a plaintext field and twenty letters in a row. `engine.bob_read` uses that pad. If the lifted ranking says Caesar or Vigenere, the matching search runs and the judge has to accept the forward map. The return is a key and a hash, not the letters. On training windows that is 8 of 8 Caesar and 6 of 6 Vigenere. Substitution and Beaufort are left alone, 4 of 4 each. A short proverb encrypted as Caesar was named keyed-vigenere and withheld. See `docs/logs/bob-read-2026-10-05.md`.
+
+`engine.solver_attack` drills the solvers. Caesar search is exact on 8 of 8. Vigenere search is exact on 6 of 6, and a one-letter deletion keeps the keyword 0 times. That deletion check stays off, because it would drop the true keywords. Beaufort is exact on 6 of 6 with the true key, affine on 4 of 4, and a wrong key still re-encrypts. Substitution is consistent on 2 and exact on 0. The order flag was open on both misses, and it is not a recovery. See `docs/logs/solver-attack-2026-10-05.md`.
+
+Do not describe the reader, the bias, or the mix as a decipherment. Do not replace the weight file from this probe.
+
 ## Session 5 October 2026, Bob distillation and a pentest
 
 Started from the empty-cells commit on `main`. The shipped weight file was not replaced. SHA-256 `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b`. The lifted ranking remains the one that cleared both bars: 433 of 480 and 195 of 204. This is not 480 of 480.

@@ -157,6 +157,16 @@ On 40 training ciphers the lifted call is right 38 times. Deleting the middle le
 
 `engine.solver_judge` blocks a solved flag and checks Caesar, Vigenere, and Beaufort by re-encryption. A match is not a reading. See [the note](logs/solver-judge-2026-10-05.md).
 
+## A reader, a smaller student, and a solver pentest, 5 October 2026
+
+The weight file is still `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b`. Distillation continued with fewer free numbers on the same 160 training ciphers. A 20-number bias scores 431 of 480 and 193 of 204. A bias fit to the lifted ranking scores 430 and 193. Three mixture weights stay on the mean, 429 and 193. The lift remains 433 and 195. None are promoted. See [the note](logs/bob-slim-2026-10-05.md).
+
+A scratch pad refuses a plaintext and a run of twenty letters. If Bob names Caesar or Vigenere, that search runs and a key plus a hash come back when the forward map matches. Training windows match 8 of 8 and 6 of 6. Substitution and Beaufort are left alone. A short proverb encrypted as Caesar was named keyed-vigenere and withheld. The letters are not stored. See [the note](logs/bob-read-2026-10-05.md).
+
+Caesar search is exact on 8 of 8 training windows. Vigenere search is exact on 6 of 6, and one deleted letter keeps the keyword 0 times. That deletion check stays off. Beaufort and affine are exact with the true key. A wrong key still re-encrypts, so the judge cannot see it. Substitution search is consistent on 2 windows and exact on 0. The order flag was open on both misses. It is not a recovery. The judge now also checks affine and substitution by re-encryption. See [the note](logs/solver-attack-2026-10-05.md).
+
+Do not describe the reader, the bias, or the mix as a decipherment. Do not replace the weight file from this probe.
+
 ## Use and reproducibility
 
 ```sh

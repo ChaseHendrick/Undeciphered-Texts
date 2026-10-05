@@ -1,7 +1,7 @@
 """A judge for solver claims. It does not produce a reading.
 
 A historical name cannot be marked solved here. A stored plaintext is blocked
-and is not copied out. Caesar, Vigenere, and Beaufort claims are checked by
+and is not copied out. Caesar, Vigenere, Beaufort, affine, and substitution claims are checked by
 re-encryption. A match is a forward check, not a decipherment of an unsolved text.
 """
 
@@ -12,8 +12,9 @@ import math
 from typing import Any
 
 from engine.alphabet import letters_only
-from engine.ciphers import caesar_encrypt, vigenere_encrypt
+from engine.ciphers import caesar_encrypt, substitution_encrypt, vigenere_encrypt
 from engine.result import SolveResult
+from engine.solvers.affine import affine_encrypt
 from engine.solvers.beaufort import beaufort_encrypt
 
 _HISTORICAL = (
@@ -87,6 +88,19 @@ def reencryption_matches(method: str, plaintext: str, key: str, ciphertext: str)
         if not letters_only(key):
             return False
         return letters_only(beaufort_encrypt(plain, key)) == cipher
+    if kind == "affine":
+        try:
+            left, right = key.split(",")
+            multiplier = int(left.split("=")[1])
+            shift = int(right.split("=")[1])
+        except (ValueError, IndexError):
+            return False
+        return letters_only(affine_encrypt(plain, multiplier, shift)) == cipher
+    if kind == "substitution":
+        try:
+            return letters_only(substitution_encrypt(plain, key)) == cipher
+        except ValueError:
+            return False
     return None
 
 
