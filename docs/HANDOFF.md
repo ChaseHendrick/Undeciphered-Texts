@@ -18,9 +18,15 @@ Every D'Agapeyeff probe that called the model, `engine.pooled_substitution`, and
 
 `engine.dagapeyeff_spiral` reads 16 spiral, snake and zigzag routes both ways. The best is 0.686, and 567 of 2,000 shuffles match it. See `docs/logs/dagapeyeff-spiral-2026-10-05.md`.
 
-The cache now holds 86 files. The board page and the provenance chain were regenerated; the chain ends at `3977fb2ed8a1d1f4f1f91ebb3e64e020ea74915664346a5b171599e983da50b2`.
+The cache now holds 90 files. The board page and the provenance chain were regenerated; the chain ends at `6e5230740dd6fb868ba3ca5f2521fbcee97ad2fcaa1a67d080f350d9b72f886b`.
 
 Do not describe the grille score, the book square, or the routes as a decipherment.
+
+`engine.dagapeyeff_columnar` anneals a column order and a letter key together under the new model. Planted texts come back 2 of 2 at widths 1, 2, 4 and 7, and there the cells score -3.82 to -3.97 a letter, where shuffles score, against planted English near -2. Plain substitution and complete columnar transposition at those widths are closed with shown power. Width 14 recovered 0 of 2 planted texts, and 0 of 3 with four times the budget, so it is open. `engine.dagapeyeff_columnar14` reran width 14 under a new seed: 13 of 20 plain shuffles and 10 of 20 kept-column shuffles reach the cells. See `docs/logs/dagapeyeff-columnar-2026-10-05.md`.
+
+`engine.dagapeyeff_corpus` counts 479,051 real 196-letter windows of the public file. 94 are as flat as the cells, 192 use 18 letters or fewer, and none has all three of the cells' properties. See `docs/logs/dagapeyeff-corpus-2026-10-05.md`.
+
+`docs/logs/dagapeyeff-prior-work-2026-10-05.md` surveys outside work: Gariazzo's Zenodo report (the same weak-model failure, then 3.75 million logged attempts with a shuffled baseline that beat the cells), van Eykelen's MsgTrail argument that a no-message construction reproduces every statistic, Marland, Rodrigues, Melichar, Snider, Pelling's Kerckhoffs find, and Wikipedia's confirmation of the exercise square and the ARYA error. `engine.dagapeyeff_claims` quotes eight published readings and checks them against the counts the cells force. None passes as a full-length reading; three fail their own stated method. Quoted readings are other people's claims. No one is close.
 
 ## Session 5 October 2026, a warm start and a cell swarm
 
