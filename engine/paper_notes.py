@@ -21,6 +21,7 @@ from engine.dagapeyeff_diagonal import diagonal_report
 from engine.dagapeyeff_heavy import heavy_report
 from engine.dagapeyeff_spread import spread_report
 from engine.dagapeyeff_residual import residual_report
+from engine.dagapeyeff_sharp import sharp_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -47,6 +48,7 @@ def paper_notes() -> dict:
     heavy = heavy_report()
     spread = spread_report()
     residual = residual_report()
+    sharp = sharp_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -315,6 +317,18 @@ def paper_notes() -> dict:
                 f"The same trigram score on the solved exercise is {residual['control_trigram_high']} of {residual['draws']}."
             ),
             "do_not_claim": "An ordinary leftover order is not a reading.",
+        },
+        {
+            "id": "sharp-cell",
+            "kind": "comparison",
+            "tags": ["square", "pairing"],
+            "statement": (
+                f"The sharpest of the 25 cells is {sharp['cell']}, with {sharp['observed']} "
+                "where the digit totals expect about 3. "
+                f"None of {sharp['draws']} re-pairings has a cell that far out. "
+                f"The solved exercise's sharpest cell is matched by {sharp['control_as_sharp']} of {sharp['draws']}."
+            ),
+            "do_not_claim": "The sharpest cell is not a reading.",
         },
     ]
     return {

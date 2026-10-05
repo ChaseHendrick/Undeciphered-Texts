@@ -1,0 +1,18 @@
+{
+  "as_sharp": 0,
+  "cell": "91",
+  "chi": 77.36,
+  "claimed_plaintext": null,
+  "control_as_sharp": 1383,
+  "control_cell": "CC",
+  "control_observed": 0,
+  "correlation": 0.609,
+  "denominator": 3234,
+  "draws": 20000,
+  "numerator": 85849,
+  "observed": 12,
+  "peak_denominator": 29106,
+  "peak_numerator": 466489,
+  "scope": "The sharpest cell is not a reading. No letter string is stored.",
+  "solved": false
+}

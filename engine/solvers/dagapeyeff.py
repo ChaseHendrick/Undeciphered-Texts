@@ -50,6 +50,7 @@ from engine.dagapeyeff_diagonal import diagonal_report
 from engine.dagapeyeff_heavy import heavy_report
 from engine.dagapeyeff_spread import spread_report
 from engine.dagapeyeff_residual import residual_report
+from engine.dagapeyeff_sharp import sharp_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -419,6 +420,24 @@ def consider_residual() -> dict:
             "That does not clear 5 percent. "
             f"The same trigram score on the solved exercise is {report['control_trigram_high']} of {report['draws']}, "
             "so the swarm can see a real reading order. It does not see one here. Not a reading."
+        ),
+    }
+
+
+def consider_sharp() -> dict:
+    report = sharp_report()
+    allowed = report["as_sharp"] / report["draws"] < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "sharp_allowed": allowed,
+        "learned": (
+            f"The sharpest of the 25 cells is {report['cell']}, with {report['observed']} "
+            "where the digit totals expect about 3. "
+            f"None of {report['draws']} re-pairings has a cell that far out. "
+            f"The total mismatch is {report['chi']}, and the two move together with correlation {report['correlation']}. "
+            f"The solved exercise's sharpest cell is matched by {report['control_as_sharp']} of {report['draws']}, "
+            "which is not under 5 percent. This is the known pairing at its sharpest cell. Not a reading."
         ),
     }
 

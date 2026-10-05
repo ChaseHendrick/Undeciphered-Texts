@@ -94,6 +94,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Router and grid](../logs/dagapeyeff-router-swarm-2026-10-04.md)
 - [Rails, diagonals, and the every-other-cell trap](../logs/dagapeyeff-routes-2026-10-04.md)
 - [Running keys from texts already in the repo](../logs/dagapeyeff-running-2026-10-04.md)
+- [The sharpest cell](../logs/dagapeyeff-sharp-2026-10-05.md)
 - [Solver swarm](../logs/dagapeyeff-solver-swarm-2026-10-04.md)
 - [The solver now refuses a flat order](../logs/dagapeyeff-split-2026-10-04.md)
 - [The exercise has an uneven line](../logs/dagapeyeff-spread-2026-10-05.md)
