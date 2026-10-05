@@ -1,0 +1,13 @@
+{
+  "claimed_plaintext": null,
+  "draws": 40,
+  "exercise_family": "substitution",
+  "exercise_probability": 0.6883,
+  "exercise_shuffles_same_family": 12,
+  "exercise_uses_order": true,
+  "scope": "A family name for the exercise is not a reading of the challenge. The weights were not replaced.",
+  "solved": false,
+  "weights_match_shipped": true,
+  "weights_replaced": false,
+  "weights_sha256": "5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b"
+}

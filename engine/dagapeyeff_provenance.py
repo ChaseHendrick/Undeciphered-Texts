@@ -24,6 +24,7 @@ from engine.dagapeyeff_balls import ball_report
 from engine.dagapeyeff_bifid import bifid_report
 from engine.bob_branch import bob_branch_report
 from engine.bob_caution import bob_caution_report
+from engine.bob_exercise import bob_exercise_report
 from engine.dagapeyeff_bookkey import bookkey_report
 from engine.dagapeyeff_board import board
 from engine.dagapeyeff_columns import column_report
@@ -160,6 +161,7 @@ def provenance_report() -> dict:
         ("spread", spread_report()),
         ("residual", residual_report()),
         ("sharp", sharp_report()),
+        ("bob-exercise", bob_exercise_report()),
     )
     entries = []
     previous = None

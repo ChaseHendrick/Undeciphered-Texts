@@ -7,6 +7,8 @@ the id, the statement, and the tags. Nothing here is a plaintext.
 from __future__ import annotations
 
 from engine.bob_branch import bob_branch_report
+from engine.bob_caution import bob_caution_report
+from engine.bob_exercise import bob_exercise_report
 from engine.dagapeyeff_clump import clump_report
 from engine.dagapeyeff_widths import widths_report
 from engine.dagapeyeff_hole import hole_report
@@ -49,6 +51,8 @@ def paper_notes() -> dict:
     spread = spread_report()
     residual = residual_report()
     sharp = sharp_report()
+    caution = bob_caution_report()
+    exercise = bob_exercise_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -329,6 +333,18 @@ def paper_notes() -> dict:
                 f"The solved exercise's sharpest cell is matched by {sharp['control_as_sharp']} of {sharp['draws']}."
             ),
             "do_not_claim": "The sharpest cell is not a reading.",
+        },
+        {
+            "id": "bob-on-the-exercise",
+            "kind": "comparison",
+            "tags": ["bob", "order"],
+            "statement": (
+                f"Bob calls the solved exercise {exercise['exercise_family']}, "
+                f"and {exercise['exercise_shuffles_same_family']} of {exercise['draws']} shuffles agree. "
+                f"He calls the challenge {caution['challenge_family']}, "
+                f"and {caution['challenge_shuffles_same_family']} of {caution['draws']} shuffles agree."
+            ),
+            "do_not_claim": "A family name is not a reading of the challenge.",
         },
     ]
     return {

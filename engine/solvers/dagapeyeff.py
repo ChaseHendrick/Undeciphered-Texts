@@ -13,6 +13,7 @@ from engine.dagapeyeff_autokey import autokey_report
 from engine.dagapeyeff_bifid import bifid_report
 from engine.bob_branch import bob_branch_report
 from engine.bob_caution import bob_caution_report
+from engine.bob_exercise import bob_exercise_report
 from engine.dagapeyeff_bookkey import bookkey_report
 from engine.dagapeyeff_keys import key_report
 from engine.dagapeyeff_keystream import keystream_report
@@ -453,6 +454,24 @@ def consider_branch() -> dict:
             "0.5012, 0.5271, and 0.5178. On a Caesar of known prose they are "
             "0.4566, 0.4709, and 0.4835. The shipped weights are the promoted warm start. "
             "A live branch is not a reading."
+        ),
+    }
+
+
+def consider_bob_exercise() -> dict:
+    exercise = bob_exercise_report()
+    challenge = bob_caution_report()
+    allowed = exercise["exercise_uses_order"] and not challenge["challenge_uses_order"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "bob_exercise_allowed": allowed,
+        "learned": (
+            f"Bob calls the solved exercise {exercise['exercise_family']}, "
+            f"and {exercise['exercise_shuffles_same_family']} of {exercise['draws']} shuffles agree. "
+            f"He calls the challenge {challenge['challenge_family']}, "
+            f"and {challenge['challenge_shuffles_same_family']} of {challenge['draws']} shuffles agree. "
+            "The exercise uses the order. The challenge call does not. Not a reading."
         ),
     }
 
