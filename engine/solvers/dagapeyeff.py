@@ -49,6 +49,7 @@ from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
 from engine.dagapeyeff_heavy import heavy_report
 from engine.dagapeyeff_spread import spread_report
+from engine.dagapeyeff_residual import residual_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -399,6 +400,25 @@ def consider_spread() -> dict:
             f"Its most uneven column is {report['column_line']}. "
             f"The two directions together are {report['either_as_uneven']} of {report['draws']}. "
             "The exercise clears 5 percent. The challenge does not share it. Not a reading."
+        ),
+    }
+
+
+def consider_residual() -> dict:
+    report = residual_report()
+    rate = report["best_tail"] / report["draws"]
+    allowed = rate < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "residual_allowed": allowed,
+        "learned": (
+            f"Cells that appear at most three times stay in their seats. "
+            f"Seven order scores were taken on the rest. "
+            f"The closest is {report['best_name']}, {report['best_tail']} of {report['draws']}. "
+            "That does not clear 5 percent. "
+            f"The same trigram score on the solved exercise is {report['control_trigram_high']} of {report['draws']}, "
+            "so the swarm can see a real reading order. It does not see one here. Not a reading."
         ),
     }
 

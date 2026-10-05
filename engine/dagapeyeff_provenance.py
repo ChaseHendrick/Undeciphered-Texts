@@ -47,6 +47,7 @@ from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
 from engine.dagapeyeff_heavy import heavy_report
 from engine.dagapeyeff_spread import spread_report
+from engine.dagapeyeff_residual import residual_report
 from engine.dagapeyeff_edits import edit_report
 from engine.dagapeyeff_foresight import foresight
 from engine.dagapeyeff_groups import group_report
@@ -154,6 +155,7 @@ def provenance_report() -> dict:
         ("diagonal", diagonal_report()),
         ("heavy", heavy_report()),
         ("spread", spread_report()),
+        ("residual", residual_report()),
     )
     entries = []
     previous = None

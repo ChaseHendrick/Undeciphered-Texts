@@ -1,0 +1,63 @@
+{
+  "best_name": "step",
+  "best_tail": 1549,
+  "claimed_plaintext": null,
+  "control_trigram_high": 59,
+  "control_trigram_low": 9987,
+  "control_trigram_observed": 4,
+  "draws": 10000,
+  "pinned": 8,
+  "scope": "A residual order score is not a reading. No letter string is stored.",
+  "scores": [
+    {
+      "high": 2031,
+      "low": 8639,
+      "name": "adjacent",
+      "observed": 17,
+      "tail": 2031
+    },
+    {
+      "high": 4100,
+      "low": 7452,
+      "name": "lag",
+      "observed": 20,
+      "tail": 4100
+    },
+    {
+      "high": 1549,
+      "low": 9423,
+      "name": "step",
+      "observed": 16,
+      "tail": 1549
+    },
+    {
+      "high": 6017,
+      "low": 9401,
+      "name": "run",
+      "observed": 3,
+      "tail": 6017
+    },
+    {
+      "high": 7805,
+      "low": 2843,
+      "name": "knight",
+      "observed": 30,
+      "tail": 2843
+    },
+    {
+      "high": 4580,
+      "low": 5920,
+      "name": "gap",
+      "observed": 32,
+      "tail": 4580
+    },
+    {
+      "high": 7297,
+      "low": 4342,
+      "name": "trigram",
+      "observed": 5,
+      "tail": 4342
+    }
+  ],
+  "solved": false
+}

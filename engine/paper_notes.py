@@ -20,6 +20,7 @@ from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
 from engine.dagapeyeff_heavy import heavy_report
 from engine.dagapeyeff_spread import spread_report
+from engine.dagapeyeff_residual import residual_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -45,6 +46,7 @@ def paper_notes() -> dict:
     diagonal = diagonal_report()
     heavy = heavy_report()
     spread = spread_report()
+    residual = residual_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -301,6 +303,18 @@ def paper_notes() -> dict:
                 f"With its column included, {spread['either_as_uneven']} of {spread['draws']} match."
             ),
             "do_not_claim": "An uneven row is not a reading of the challenge.",
+        },
+        {
+            "id": "pinned-order",
+            "kind": "comparison",
+            "tags": ["order", "swarm"],
+            "statement": (
+                "Cells that appear at most three times stay in their seats. "
+                "Seven order scores were taken on the rest. "
+                f"The closest is {residual['best_name']}, {residual['best_tail']} of {residual['draws']}. "
+                f"The same trigram score on the solved exercise is {residual['control_trigram_high']} of {residual['draws']}."
+            ),
+            "do_not_claim": "An ordinary leftover order is not a reading.",
         },
     ]
     return {
