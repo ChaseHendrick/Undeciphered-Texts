@@ -1,0 +1,15 @@
+{
+  "claimed_plaintext": null,
+  "consecutive": true,
+  "named_denominator": 91,
+  "named_numerator": 3,
+  "rows": [
+    6,
+    7,
+    8
+  ],
+  "scope": "Three consecutive rows are not a reading. A class chosen from a menu of three is not a rarer class. No letter string is stored.",
+  "solved": false,
+  "union_denominator": 5005,
+  "union_numerator": 984
+}

@@ -41,6 +41,7 @@ from engine.dagapeyeff_widths import widths_report
 from engine.dagapeyeff_hole import hole_report
 from engine.dagapeyeff_clerical import clerical_report
 from engine.dagapeyeff_intro import intro_report
+from engine.dagapeyeff_block import block_report
 from engine.dagapeyeff_word import word_report
 
 
@@ -221,6 +222,27 @@ def consider_intro() -> dict:
             f"The solved exercise waits {report['control_longest_wait']}, "
             f"and {report['control_as_short']} of {report['draws']} of its shuffles do as well. "
             "The wait clears 5 percent, and the exercise does too. Not a reading."
+        ),
+    }
+
+
+def consider_block() -> dict:
+    report = block_report()
+    named = report["named_numerator"] / report["named_denominator"]
+    union = report["union_numerator"] / report["union_denominator"]
+    allowed = named < 0.05 and union < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "block_allowed": allowed,
+        "learned": (
+            f"The three cells that appear once sit in rows {report['rows'][0] + 1}, "
+            f"{report['rows'][1] + 1}, and {report['rows'][2] + 1} of the named column, consecutively. "
+            f"Given the eight low-side cells are in that column, "
+            f"{report['named_numerator']} of {report['named_denominator']} seatings do that. "
+            f"If the pair or the triple may be the packed class instead, "
+            f"{report['union_numerator']} of {report['union_denominator']} arrangements pack some class. "
+            "The named three clear 5 percent. The menu does not. Not a reading."
         ),
     }
 

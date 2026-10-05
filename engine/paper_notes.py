@@ -12,6 +12,7 @@ from engine.dagapeyeff_widths import widths_report
 from engine.dagapeyeff_hole import hole_report
 from engine.dagapeyeff_clerical import clerical_report
 from engine.dagapeyeff_intro import intro_report
+from engine.dagapeyeff_block import block_report
 from engine.dagapeyeff_depth3 import depth3_report
 from engine.dagapeyeff_depth4 import depth4_report
 from engine.dagapeyeff_placed import placed_report
@@ -29,6 +30,7 @@ def paper_notes() -> dict:
     hole = hole_report()
     clerical = clerical_report()
     intro = intro_report()
+    block = block_report()
     notes = [
         {
             "id": "three-moves-cannot-clear",
@@ -177,6 +179,19 @@ def paper_notes() -> dict:
                 f"and {intro['control_as_short']} of {intro['draws']} of its shuffles do as well."
             ),
             "do_not_claim": "A short wait that the solved exercise shares is not a reading.",
+        },
+        {
+            "id": "singleton-block",
+            "kind": "comparison",
+            "tags": ["column-14", "singleton", "block"],
+            "statement": (
+                f"The three cells that appear once sit in rows {block['rows'][0] + 1}, "
+                f"{block['rows'][1] + 1}, and {block['rows'][2] + 1}, consecutively. "
+                f"{block['named_numerator']} of {block['named_denominator']} seatings do that. "
+                f"If the pair or the triple may be packed instead, "
+                f"{block['union_numerator']} of {block['union_denominator']} arrangements pack some class."
+            ),
+            "do_not_claim": "A block that is rare only when the other rare cells are ignored is not a reading.",
         },
     ]
     return {
