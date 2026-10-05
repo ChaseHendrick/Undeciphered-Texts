@@ -57,6 +57,7 @@ from engine.dagapeyeff_held import held_report
 from engine.dagapeyeff_seats import seats_report
 from engine.dagapeyeff_extras import extras_report
 from engine.dagapeyeff_heldsand import heldsand_report
+from engine.dagapeyeff_heldwait import heldwait_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -628,6 +629,23 @@ def consider_halves() -> dict:
             f"Leave the same five out and that gap is {report['period7_residual_gap']}, "
             f"matched by {report['period7_residual_as_high']} of {report['draws']}. "
             "Not a reading."
+        ),
+    }
+
+
+def consider_heldwait() -> dict:
+    report = heldwait_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "heldwait_allowed": report["allowed"],
+        "learned": (
+            "The rare cells stay in their seats. "
+            f"The longest wait for a new cell is {report['wait']}, and {report['as_short']} of {report['draws']} "
+            "draws are that short or shorter. "
+            f"Ignore the rare cells and the wait is {report['skip_wait']}, matched by "
+            f"{report['skip_as_short']} of {report['draws']}. "
+            "The short wait does not survive once the rare cells are left out of the count. Not a reading."
         ),
     }
 

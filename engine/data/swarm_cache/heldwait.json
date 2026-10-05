@@ -1,0 +1,19 @@
+{
+  "allowed": false,
+  "as_short": 118,
+  "claimed_plaintext": null,
+  "draws": 20000,
+  "low": [
+    "04",
+    "71",
+    "92",
+    "93",
+    "94"
+  ],
+  "pinned": 8,
+  "scope": "The introduction wait with the rare cells held still is not a reading. No letter string is stored.",
+  "skip_as_short": 19186,
+  "skip_wait": 39,
+  "solved": false,
+  "wait": 22
+}

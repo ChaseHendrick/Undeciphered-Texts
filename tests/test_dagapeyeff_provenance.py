@@ -37,7 +37,7 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("board", "3b39a845596491cb92c951d67d82ce49e5773379c082cc005c978c2a80b527a9"),
                 ("infer", "c67768bd2e358814d7b1faea635b909637f2eb2ca249c6053f6889e958c409c0"),
                 ("foresight", "48ceb2bf1c6010816c96eb483fccd9dc5609748da14cb459b638f94f94a29e10"),
-                ("checks", "463bd0626551761b1e92a1e96229a843667b00d81cbfedd9930ba5966ba6d3db"),
+                ("checks", "8a46b855be0076e4115d3627f5f7e61a98ed04c3aafef0972afec5f08d49d3d6"),
                 ("adversary", "27532401beeff15910f3beb80b6bef2095313b8beb709213f46ee2ce8adede86"),
                 ("autokey", "291d0e3ead0bb0903b5a93f7851c44dc9f491060cc3a62a8302759af2a863306"),
                 ("digit-routes", "97547066e834b8423c9edee4d893b838baa6b8a22d530d821c0eb2306f1577af"),
@@ -60,7 +60,7 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("repair", "904b00214b7320dc722fbdd3375f6308a01f959c45ede413d63f916f31d01fd4"),
                 ("clump", "06a9879d5d9b1b68421068eaee049e27965cca4ce26a1650441495e008c1e532"),
                 ("bob-branch", "9097ae65beb914c64aca8f8d6a494f14842de8b10148b86ed278852d4e2b4b21"),
-                ("paper", "9c5b05736eb4e59345b12b6301f652f997d84779f387d8580246b7feb2f0442b"),
+                ("paper", "0682a83a7c07fe72a59705b7b6ea826841583e351937bcc54431108a4d0dc095"),
                 ("widths", "5df871436efb665fd2cf2bad6fa01f8c566f07ed893f87cce47e42dd92bd019e"),
                 ("hole", "3b86af84c05c57f3d8496287de142c29d7aedab38ca3a9ea6005d371c68e1a06"),
                 ("clerical", "264ba5d22210f0601017ab53e19fb62c1e2dab802e6738dec7315336634b15ea"),
@@ -89,12 +89,13 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("seats", "f9a7413f4d1e1db98cf9769702a8979592055d71a00c039f7cd190a7902918c7"),
                 ("extras", "f5907b5c26613bcbb99e278517f014bd0790f28a02d8fbd55844f40f400916fb"),
                 ("heldsand", "db01e89ad081e11aeec1d264b177f2a7f26a7f195805dbc833bf820102bde44c"),
+                ("heldwait", "dfc4f6eaacc69220c4c648575b89fe83d731951eed5615903ef2d2ea6d846288"),
                 ("bob-pair", "1ed12ea6572d2fb8bbfceedc07fa67840e34ea2e3e78e863370dd213721db0a5"),
             ],
         )
         self.assertEqual(
             report["chain_sha256"],
-            "dda676ae7e89630d552d6cd028827927643111c411a3b224ccba39f57b8cba01",
+            "9b08e11ee630d329273f7303518989a8c6822f113154630989310bf8c90805be",
         )
         self.assertEqual(report["entries"][0]["chain_sha256"], report["entries"][0]["content_sha256"])
         self.assertNotEqual(report["entries"][1]["chain_sha256"], report["entries"][1]["content_sha256"])

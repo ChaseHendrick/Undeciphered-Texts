@@ -29,6 +29,7 @@ from engine.dagapeyeff_held import held_report
 from engine.dagapeyeff_seats import seats_report
 from engine.dagapeyeff_extras import extras_report
 from engine.dagapeyeff_heldsand import heldsand_report
+from engine.dagapeyeff_heldwait import heldwait_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -70,6 +71,7 @@ def paper_notes() -> dict:
     seats = seats_report()
     extras = extras_report()
     heldsand = heldsand_report()
+    heldwait = heldwait_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -546,6 +548,20 @@ def paper_notes() -> dict:
                 "The sandwich stays under 5 percent. The plain gap does not."
             ),
             "do_not_claim": "The sandwich with the rare cells held still is not a reading.",
+        },
+        {
+            "id": "short-wait-needs-the-rare-cells",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                "The rare cells stay in their seats. "
+                f"The longest wait for a new cell is {heldwait['wait']}, and {heldwait['as_short']} of "
+                f"{heldwait['draws']} draws are that short or shorter. "
+                f"Ignore the rare cells and the wait is {heldwait['skip_wait']}, matched by "
+                f"{heldwait['skip_as_short']} of {heldwait['draws']}. "
+                "The short wait does not survive once the rare cells are left out of the count."
+            ),
+            "do_not_claim": "The introduction wait with the rare cells held still is not a reading.",
         },
         {
             "id": "bob-side-vote",

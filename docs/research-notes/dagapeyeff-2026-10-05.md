@@ -44,6 +44,8 @@ Of the same 528, 112 have at least one further copy of the run's cell in its row
 
 543 of 20,000 draws, with those rare cells held still, still have the common cell on both sides of a cell that also has a run of three. A plain gap of that shape is 7,488 of 20,000 and does not clear. 60 of the 543 also have the aligned runs, so this is not that alignment. [Held sandwich](../logs/dagapeyeff-heldsand-2026-10-05.md).
 
+The same seats were held for the introduction wait. Counted with the rare cells, a wait of 22 is matched by 118 of 20,000 draws. Leave the rare cells out of the count and the wait is 39, matched by 19,186 of 20,000. The short wait does not survive. [Held wait](../logs/dagapeyeff-heldwait-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -84,6 +86,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [A full row with an empty cell](../logs/dagapeyeff-heavy-2026-10-05.md)
 - [The alignment is not the rare column](../logs/dagapeyeff-held-2026-10-05.md)
 - [The sandwich is not the plain gap](../logs/dagapeyeff-heldsand-2026-10-05.md)
+- [The short wait needs the rare cells](../logs/dagapeyeff-heldwait-2026-10-05.md)
 - [The frequency hole, and a period that is not there](../logs/dagapeyeff-hole-2026-10-04.md)
 - [The wait for a new cell](../logs/dagapeyeff-intro-2026-10-04.md)
 - [The order is on the last column's joins](../logs/dagapeyeff-joins-2026-10-04.md)
