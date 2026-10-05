@@ -54,6 +54,7 @@ from engine.dagapeyeff_modulo import modulo_report
 from engine.dagapeyeff_halves import halves_report
 from engine.dagapeyeff_repeat import repeat_report
 from engine.dagapeyeff_held import held_report
+from engine.dagapeyeff_seats import seats_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -625,6 +626,23 @@ def consider_halves() -> dict:
             f"Leave the same five out and that gap is {report['period7_residual_gap']}, "
             f"matched by {report['period7_residual_as_high']} of {report['draws']}. "
             "Not a reading."
+        ),
+    }
+
+
+def consider_seats() -> dict:
+    report = seats_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "seats_allowed": report["allowed"],
+        "learned": (
+            "The rare cells stay in their seats. "
+            f"Of {report['aligned']} shuffles that already have two runs in one starting column, "
+            f"{report['contact']} also have both runs next to a rare cell. "
+            f"Of {report['vertical_runs']} shuffles that already have a vertical run of the common cell, "
+            f"{report['meeting_given_vertical']} also meet a different run. "
+            "The contact stays under 5 percent. The meeting does not. Not a reading."
         ),
     }
 

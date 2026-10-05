@@ -38,6 +38,8 @@ One column holds a run of three and a separate run of two of the same cell. 956 
 
 The five symbols that appear at most three times can be held in their seats while the other cells are shuffled. Two runs still share a starting column in 528 of 20,000 draws. A plain count of two runs does not clear. The alignment is not the rare column. [Held](../logs/dagapeyeff-held-2026-10-05.md).
 
+Of those 528, 9 also have both runs next to a rare cell. That is 1.70 percent. The meeting was scored on the same draws and does not clear: 185 of 2,842 grids that already have a vertical run of the common cell also meet a different run. [Seats](../logs/dagapeyeff-seats-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -111,6 +113,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Rails, diagonals, and the every-other-cell trap](../logs/dagapeyeff-routes-2026-10-04.md)
 - [Running keys from texts already in the repo](../logs/dagapeyeff-running-2026-10-04.md)
 - [63 sits between two copies of 81](../logs/dagapeyeff-sandwich-2026-10-05.md)
+- [The runs still touch the rare seats](../logs/dagapeyeff-seats-2026-10-05.md)
 - [The sharpest cell](../logs/dagapeyeff-sharp-2026-10-05.md)
 - [Solver swarm](../logs/dagapeyeff-solver-swarm-2026-10-04.md)
 - [The solver now refuses a flat order](../logs/dagapeyeff-split-2026-10-04.md)

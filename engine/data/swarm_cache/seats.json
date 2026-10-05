@@ -1,0 +1,19 @@
+{
+  "aligned": 528,
+  "allowed": true,
+  "claimed_plaintext": null,
+  "contact": 9,
+  "draws": 20000,
+  "low": [
+    "04",
+    "71",
+    "92",
+    "93",
+    "94"
+  ],
+  "meeting_given_vertical": 185,
+  "pinned": 8,
+  "scope": "Contact with the rare seats is not a reading. No letter string is stored.",
+  "solved": false,
+  "vertical_runs": 2842
+}

@@ -26,6 +26,7 @@ from engine.dagapeyeff_modulo import modulo_report
 from engine.dagapeyeff_halves import halves_report
 from engine.dagapeyeff_repeat import repeat_report
 from engine.dagapeyeff_held import held_report
+from engine.dagapeyeff_seats import seats_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -64,6 +65,7 @@ def paper_notes() -> dict:
     halves = halves_report()
     repeat = repeat_report()
     held = held_report()
+    seats = seats_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -498,6 +500,20 @@ def paper_notes() -> dict:
                 f"A plain count of two runs, aligned or not, is {held['as_many_runs']} of {held['draws']}."
             ),
             "do_not_claim": "Aligned runs with the rare cells held still are not a reading.",
+        },
+        {
+            "id": "rare-seats-still-touch",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                "The rare cells stay in their seats. "
+                f"Of {seats['aligned']} shuffles that already have two runs in one starting column, "
+                f"{seats['contact']} also have both runs next to a rare cell. "
+                f"Of {seats['vertical_runs']} shuffles that already have a vertical run of the common cell, "
+                f"{seats['meeting_given_vertical']} also meet a different run. "
+                "The contact is under 5 percent. The meeting is not."
+            ),
+            "do_not_claim": "Contact with the rare seats is not a reading.",
         },
         {
             "id": "bob-side-vote",
