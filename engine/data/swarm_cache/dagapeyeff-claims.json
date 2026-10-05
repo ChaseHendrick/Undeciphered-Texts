@@ -1,0 +1,150 @@
+{
+  "cell_profile": [
+    20,
+    17,
+    17,
+    17,
+    17,
+    16,
+    15,
+    14,
+    12,
+    12,
+    11,
+    11,
+    9,
+    3,
+    2,
+    1,
+    1,
+    1
+  ],
+  "cells": 196,
+  "claimed_plaintext": null,
+  "claims": [
+    {
+      "date": "undated",
+      "distinct_letters": 13,
+      "exact_full_profile": false,
+      "fits_inside_cells": true,
+      "id": "triggernick",
+      "inside_book_dummy_rule": false,
+      "letters": 60,
+      "method": "cells read as letters, dummies removed, homophonic solver (ZKDecrypto)",
+      "quoted": "ON ITS RED HAIR IS NO HOOT SINGER NOR HAT AS SEEN ALAS ON A SHINE A PRATT DIED",
+      "source": "https://triggernick.com/dagapeyeff/ (unreachable on 5 October 2026; text from a search summary)"
+    },
+    {
+      "date": "2014-04-25",
+      "distinct_letters": 23,
+      "exact_full_profile": false,
+      "fits_inside_cells": false,
+      "id": "tony-2014",
+      "inside_book_dummy_rule": false,
+      "letters": 196,
+      "method": "not stated",
+      "quoted": "TOWARDS THE END OF THE FOURTEENTH CENTURY EUROPE WAS REORGANIZING ITSELF THE NATIONS STARTED TO ASSUME SOME OF THE FORMS WE KNOW TODAY THERE WERE WARS AND EXCURSIONS AND A GREAT DEAL OF DIPLOMATIC ACTIVITY AS CIVILIZATION AND LEARNING",
+      "source": "https://ciphermysteries.com/2013/12/23/dagapeyeff-cipher, comment by Tony"
+    },
+    {
+      "date": "2019-11-01",
+      "distinct_letters": 15,
+      "exact_full_profile": false,
+      "fits_inside_cells": true,
+      "id": "darensbourg-2019",
+      "inside_book_dummy_rule": false,
+      "letters": 21,
+      "method": "column digits paired with each other as a second Polybius message; partial",
+      "quoted": "MAIL LLT YR I KEY GO DUTCH C",
+      "source": "https://ciphermysteries.com/2013/12/23/dagapeyeff-cipher, comment by Catherine Mary Darensbourg"
+    },
+    {
+      "date": "2026-02-27",
+      "distinct_letters": 20,
+      "exact_full_profile": false,
+      "fits_inside_cells": false,
+      "id": "officialchaos-2026",
+      "inside_book_dummy_rule": true,
+      "letters": 141,
+      "letters_outside_own_key": [
+        "A",
+        "B",
+        "D",
+        "F",
+        "G",
+        "M",
+        "N",
+        "O",
+        "Q",
+        "X",
+        "Y"
+      ],
+      "method": "single digits as a straddling checkerboard 8=E 1=T 5=R 7=S 2=I 3=C 4=H 6=P 9=U, 14 by 28 columnar, one digit deleted",
+      "quoted": "SPEECH IN DEPTH REQUIRES A SHEET IT IS HARD TO DETECT BECAUSE CIPHERS USE SCHEMES THAT SHIFT THE HEIGHT OF SECURITY IS HARD TO TEST EXCEPT BY SHIFTING THE SHEET REPORT ENDS",
+      "source": "https://ciphermysteries.com/2017/03/05/new-clue-dagapeyeff-challenge-cipher, comment by OfficialChaos"
+    },
+    {
+      "date": "2026-07-28",
+      "distinct_letters": 21,
+      "exact_full_profile": false,
+      "fits_inside_cells": false,
+      "id": "vento-2026",
+      "inside_book_dummy_rule": false,
+      "letters": 78,
+      "method": "each pair of five-digit groups read as two coordinates",
+      "one_coordinate_many_letters": {
+        "(1,4) (2,3)": [
+          "GO",
+          "AN",
+          "SW",
+          "TS"
+        ]
+      },
+      "quoted": "FATHER CHRISTMAS FILL OUR STOCKINGS WE HAVE BEEN GOOD AND WE WOULD LIKE TOYS SWEETS CHOCOLATE",
+      "source": "https://ciphermysteries.com/2013/12/23/dagapeyeff-cipher, comment by Vento"
+    },
+    {
+      "cribs_imposed": [
+        "ASSESSED",
+        "ATTACK"
+      ],
+      "date": "2026-02-14",
+      "distinct_letters": 12,
+      "exact_full_profile": false,
+      "fits_inside_cells": true,
+      "id": "uygun-2026",
+      "inside_book_dummy_rule": false,
+      "letters": 68,
+      "method": "two 14 by 7 blocks split at 04, shared 14-column key, ASSESSED and ATTACK imposed as cribs",
+      "note": "excerpt of the printed raw text; the paper's ellipses and bracketed corrections are left out",
+      "quoted": "ASSESSED TSQ ESR KTDTDS JJJ AREAS RSDTES JQ TRAT SURDRE TAG RTT SE EKUASCUT ATTACK",
+      "source": "https://doi.org/10.5281/zenodo.18639390"
+    },
+    {
+      "date": "2026-06-12",
+      "distinct_letters": 6,
+      "exact_full_profile": false,
+      "fits_inside_cells": true,
+      "id": "caillahua-2026",
+      "inside_book_dummy_rule": false,
+      "letters": 12,
+      "method": "keyword square MANCHESTR, inverse rail fence of 5 rails, every fourth symbol a null; partial",
+      "printed_length": "392 digits in 196 pairs, then 000",
+      "quoted": "NOW OUT TOO YOU",
+      "source": "https://doi.org/10.5281/zenodo.20652502",
+      "stated_length": "196 decimal digits grouped into 98 digrams"
+    },
+    {
+      "date": "2025-12-19",
+      "distinct_letters": 0,
+      "id": "leggett-2025",
+      "letters": 0,
+      "method": "digits read as two 14 by 14 matrices of anti-aircraft telemetry, with a shift chosen so impossible values vanish",
+      "quoted": "",
+      "source": "https://doi.org/10.5281/zenodo.17993736"
+    }
+  ],
+  "full_length_claims_with_cell_profile": 0,
+  "scope": "Other people's published readings, quoted as they gave them, checked against counts the cells force on any reading. Passing a check is not a reading. No reading is claimed here.",
+  "solved": false
+}

@@ -1,0 +1,12 @@
+{
+  "cells_per_letter": -3.6146,
+  "claimed_plaintext": null,
+  "draws": 20,
+  "kept_column_best": -3.4194,
+  "kept_column_shuffles_as_high": 10,
+  "plain_shuffle_best": -3.4087,
+  "plain_shuffles_as_high": 13,
+  "scope": "Under a new seed the cells score lower than the first run, and most shuffles of either kind reach them. The earlier 0 of 4 was a small draw. Not a reading. No letter string is stored.",
+  "solved": false,
+  "width": 14
+}

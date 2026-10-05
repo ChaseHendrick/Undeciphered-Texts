@@ -82,6 +82,10 @@ from engine.dagapeyeff_grille import grille_report
 from engine.dagapeyeff_booksquare import booksquare_report
 from engine.dagapeyeff_spiral import spiral_report
 from engine.solver_strong import solver_strong_report
+from engine.dagapeyeff_columnar import columnar_report
+from engine.dagapeyeff_columnar14 import columnar14_report
+from engine.dagapeyeff_corpus import corpus_report
+from engine.dagapeyeff_claims import claims_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -1514,6 +1518,66 @@ def consider_solver_strong() -> dict:
             f"At 200 letters the legacy model is exact on {rows[200]['legacy_exact']} of {rows[200]['windows']} windows "
             f"and the larger model on {rows[200]['default_exact']}. The larger model is the default. "
             "A drill on training text is not a reading."
+        ),
+    }
+
+
+def consider_columnar() -> dict:
+    report = columnar_report()
+    rows = {row["width"]: row for row in report["rows"]}
+    powered = [width for width, row in rows.items() if row["planted_recovered"] == len(row["planted"])]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "columnar_allowed": False,
+        "learned": (
+            f"Planted texts come back at widths {powered}, and there the cells score between "
+            f"{min(rows[w]['cells_per_letter'] for w in powered)} and {max(rows[w]['cells_per_letter'] for w in powered)} "
+            f"a letter, where shuffles score, against planted English near {report['lowest_planted_true_per_letter']}. "
+            "Width 14 recovered no planted text, so it stays open. Not a reading."
+        ),
+    }
+
+
+def consider_columnar14() -> dict:
+    report = columnar14_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "columnar14_allowed": False,
+        "learned": (
+            f"At width 14 under a new seed the cells score {report['cells_per_letter']}. "
+            f"{report['plain_shuffles_as_high']} of {report['draws']} plain shuffles and "
+            f"{report['kept_column_shuffles_as_high']} of {report['draws']} shuffles that keep the rare column do as well. "
+            "Not a reading."
+        ),
+    }
+
+
+def consider_corpus() -> dict:
+    report = corpus_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "corpus_allowed": False,
+        "learned": (
+            f"Of {report['windows']} real 196-letter windows, {report['windows_as_flat']} are as flat as the cells, "
+            f"{report['windows_as_narrow']} use {report['cell_distinct']} letters or fewer, and "
+            f"{report['windows_all_three']} share those with a top count of {report['cell_largest']} or less. Not a reading."
+        ),
+    }
+
+
+def consider_claims() -> dict:
+    report = claims_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "claims_allowed": False,
+        "learned": (
+            f"{len(report['claims'])} published readings were checked. "
+            f"{report['full_length_claims_with_cell_profile']} full-length readings have the cells' letter counts. "
+            "A quoted claim is someone else's, not a reading here."
         ),
     }
 
