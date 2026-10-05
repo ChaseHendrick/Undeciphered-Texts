@@ -81,6 +81,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Why a substitution of these cells is not a reading](../logs/dagapeyeff-order-2026-10-04.md)
 - [What others found, and what the digits do with it](../logs/dagapeyeff-others-2026-10-04.md)
 - [Count each pair once](../logs/dagapeyeff-outgoing-2026-10-04.md)
+- [The aligned runs are not the only copies in their rows](../logs/dagapeyeff-outside-2026-10-05.md)
 - [Dictionary shapes](../logs/dagapeyeff-patterns-2026-10-04.md)
 - [Every period-4 shift](../logs/dagapeyeff-period4-2026-10-04.md)
 - [The edits, put back on the cells](../logs/dagapeyeff-placed-2026-10-04.md)

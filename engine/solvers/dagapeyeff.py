@@ -49,6 +49,7 @@ from engine.dagapeyeff_triples import triples_report
 from engine.dagapeyeff_contact import contact_report
 from engine.dagapeyeff_meeting import meeting_report
 from engine.dagapeyeff_sandwich import sandwich_report
+from engine.dagapeyeff_outside import outside_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -562,6 +563,23 @@ def consider_sandwich() -> dict:
             f"{report['middle']} is also a run of three. A vertical gap would have counted. "
             f"{report['as_many']} of {report['draws']} shuffles have at least two such gaps. "
             "Not a reading."
+        ),
+    }
+
+
+def consider_outside() -> dict:
+    report = outside_report()
+    allowed = report["aligned"] > 0 and report["spare"] / report["aligned"] < 0.05
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "outside_allowed": allowed,
+        "learned": (
+            "The two runs that share a starting column each have two further copies "
+            "of that cell in the same row. "
+            f"Of {report['draws']} shuffles, {report['aligned']} already have the alignment, "
+            f"and {report['spare']} of those also have two outside copies in every such row. "
+            "The extra copies are not the alignment. Not a reading."
         ),
     }
 

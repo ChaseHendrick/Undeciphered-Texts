@@ -1,0 +1,48 @@
+{
+  "aligned": 866,
+  "cells": [
+    "75",
+    "63"
+  ],
+  "claimed_plaintext": null,
+  "columns": [
+    10,
+    10
+  ],
+  "draws": 40000,
+  "lengths": [
+    3,
+    3
+  ],
+  "outside": 2,
+  "places": [
+    {
+      "cell": "75",
+      "column": 1,
+      "row": 2
+    },
+    {
+      "cell": "75",
+      "column": 6,
+      "row": 2
+    },
+    {
+      "cell": "63",
+      "column": 0,
+      "row": 6
+    },
+    {
+      "cell": "63",
+      "column": 6,
+      "row": 6
+    }
+  ],
+  "rows": [
+    2,
+    6
+  ],
+  "scope": "Copies outside an aligned run are not a reading. No letter string is stored.",
+  "shared": 2,
+  "solved": false,
+  "spare": 14
+}

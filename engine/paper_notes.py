@@ -21,6 +21,7 @@ from engine.dagapeyeff_triples import triples_report
 from engine.dagapeyeff_contact import contact_report
 from engine.dagapeyeff_meeting import meeting_report
 from engine.dagapeyeff_sandwich import sandwich_report
+from engine.dagapeyeff_outside import outside_report
 from engine.bob_pair import bob_pair_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
@@ -54,6 +55,7 @@ def paper_notes() -> dict:
     contact = contact_report()
     meeting = meeting_report()
     sandwich = sandwich_report()
+    outside = outside_report()
     pair = bob_pair_report()
     monotone = monotone_report()
     straight = straight_report()
@@ -416,6 +418,18 @@ def paper_notes() -> dict:
                 f"{sandwich['as_many']} of {sandwich['draws']} shuffles have at least two such gaps."
             ),
             "do_not_claim": "A cell between two copies of another is not a reading.",
+        },
+        {
+            "id": "aligned-spare",
+            "kind": "comparison",
+            "tags": ["order", "grid"],
+            "statement": (
+                "Each aligned run of three has two further copies of that cell in the same row. "
+                f"The cells are {outside['cells'][0]} and {outside['cells'][1]}. "
+                f"Of {outside['draws']} shuffles, {outside['aligned']} already have the alignment, "
+                f"and {outside['spare']} of those also have two outside copies in every such row."
+            ),
+            "do_not_claim": "Copies outside an aligned run are not a reading.",
         },
         {
             "id": "bob-side-vote",
