@@ -64,6 +64,7 @@ from engine.dagapeyeff_echo import echo_report
 from engine.dagapeyeff_ride import ride_report
 from engine.dagapeyeff_span import span_report
 from engine.dagapeyeff_successive import successive_report
+from engine.dagapeyeff_core import core_report
 from engine.dagapeyeff_counts import counts_report
 from engine.dagapeyeff_tile import tile_report
 from engine.dagapeyeff_blank import blank_report
@@ -234,6 +235,7 @@ def provenance_report() -> dict:
         ("solver-train", solver_train_report()),
         ("dagapeyeff-anneal", anneal_swarm_report()),
         ("solver-model", solver_model_report()),
+        ("core", core_report()),
     )
     entries = []
     previous = None

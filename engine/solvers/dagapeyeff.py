@@ -87,6 +87,7 @@ from engine.dagapeyeff_residual import residual_report
 from engine.dagapeyeff_sharp import sharp_report
 from engine.dagapeyeff_rest import rest_report
 from engine.dagapeyeff_word import word_report
+from engine.dagapeyeff_core import core_report
 
 
 def consider_frequency_claim(count_moves: int, chi_hi: float) -> dict:
@@ -1468,3 +1469,23 @@ def consider_keystream() -> dict:
             "and 21 of 80 do as well. Prose is -2.5185. It is not a key. Refuse it."
         ),
     }
+
+
+def consider_core() -> dict:
+    """A flat core narrows the family. It does not choose a key or a text."""
+    report = core_report()
+    english = report["english"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "core_allowed": False,
+        "language_families_reaching_5_percent": report["language_families_reaching_5_percent"],
+        "learned": (
+            f"{report['cliff']} cells hold {report['core_mass']} of {report['cells']}, and they are as even as a fair die: "
+            f"{report['die_as_flat']} of {report['die_draws']} die draws are at least as flat. "
+            f"{english['both']} of {english['draws']} English windows make such a core. "
+            "No transposition, periodic key, autokey, bifid, playfair, null, or homophone of English in the sweep "
+            "reaches 5 percent. A family is not a reading. Refuse it as a decipherment."
+        ),
+    }
+

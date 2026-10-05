@@ -64,6 +64,8 @@ The cells that appear once are 04, 71 and 94, already known to share column 13. 
 
 Rows 12 and 13 hold two neighboring blocks, 85, 84 over 75, 74 and 84, 75 over 74, 85. Both are the square's 2 by 2 on row digits 7 and 8 and column digits 4 and 5. The blocks may sit anywhere. 743 of 20,000 shuffles have two or more. [Tile](../logs/dagapeyeff-tile-2026-10-05.md).
 
+The 13 most common cells hold 188 of 196, and their counts are as even as a fair 13-sided die: 5,442 of 20,000 die throws are at least as flat. 0 of 20,000 English windows, each scored at its own largest drop, make a core that is both as full and as flat. Of 21 ways of enciphering or making 196 cells, no family that enciphers English reaches 5 percent except one built to flatten a 13-symbol channel. Any transposition of a Polybius scores 0 of 2,000, and the core has no stride that shuffles cannot match. [Core](../logs/dagapeyeff-core-2026-10-05.md).
+
 A score that clears 5 percent only before a second direction or a second measure is counted is a refusal. Sharing a property with the solved exercise, or failing to share one, is not a decryption.
 
 ## Log index
@@ -139,6 +141,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [A longer swarm on the cells, 5 October 2026](../logs/dagapeyeff-anneal-2026-10-05.md)
 - [Seven cells of the square are empty](../logs/dagapeyeff-blank-2026-10-05.md)
 - [The aligned runs sit next to rare cells](../logs/dagapeyeff-contact-2026-10-05.md)
+- [The common cells are a fair die](../logs/dagapeyeff-core-2026-10-05.md)
 - [Rare counts sit in order on the square](../logs/dagapeyeff-counts-2026-10-05.md)
 - [A spaced triple is echoed](../logs/dagapeyeff-echo-2026-10-05.md)
 - [Two copies outside the runs](../logs/dagapeyeff-extras-2026-10-05.md)
