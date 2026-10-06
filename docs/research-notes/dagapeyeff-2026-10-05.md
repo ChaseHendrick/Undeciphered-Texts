@@ -175,6 +175,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Two blocks copy a square](../logs/dagapeyeff-tile-2026-10-05.md)
 - [The two runs of three share a column](../logs/dagapeyeff-triples-2026-10-05.md)
 - [Two spaced triples share a column](../logs/dagapeyeff-twospace-2026-10-05.md)
+- [Four-square on the cells, 6 October 2026](../logs/dagapeyeff-foursquare-2026-10-06.md)
 <!-- generated-logs:end -->
 
 ## Proposed next comparison
