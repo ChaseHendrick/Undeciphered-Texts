@@ -18,7 +18,7 @@ Every D'Agapeyeff probe that called the model, `engine.pooled_substitution`, and
 
 `engine.dagapeyeff_spiral` reads 16 spiral, snake and zigzag routes both ways. The best is 0.686, and 567 of 2,000 shuffles match it. See `docs/logs/dagapeyeff-spiral-2026-10-05.md`.
 
-The cache now holds 90 files. The board page and the provenance chain were regenerated; the chain ends at `6e5230740dd6fb868ba3ca5f2521fbcee97ad2fcaa1a67d080f350d9b72f886b`.
+The cache now holds 93 files. The board page and the provenance chain were regenerated; the chain ends at `6a00e47f3548a6dcf93aa6c1b6a21f438ac392993478c9adbccd69929a2a1d29`.
 
 Do not describe the grille score, the book square, or the routes as a decipherment.
 
@@ -27,6 +27,16 @@ Do not describe the grille score, the book square, or the routes as a decipherme
 `engine.dagapeyeff_corpus` counts 479,051 real 196-letter windows of the public file. 94 are as flat as the cells, 192 use 18 letters or fewer, and none has all three of the cells' properties. See `docs/logs/dagapeyeff-corpus-2026-10-05.md`.
 
 `docs/logs/dagapeyeff-prior-work-2026-10-05.md` surveys outside work: Gariazzo's Zenodo report (the same weak-model failure, then 3.75 million logged attempts with a shuffled baseline that beat the cells), van Eykelen's MsgTrail argument that a no-message construction reproduces every statistic, Marland, Rodrigues, Melichar, Snider, Pelling's Kerckhoffs find, and Wikipedia's confirmation of the exercise square and the ARYA error. `engine.dagapeyeff_claims` quotes eight published readings and checks them against the counts the cells force. None passes as a full-length reading; three fail their own stated method. Quoted readings are other people's claims. No one is close.
+
+## Session 5 October 2026, Bob format 10 and exhaustive attacks
+
+Bob's weight file was replaced. Format 10 is the format 5 prefix plus a 3-number Enigma trial (`engine.neural_enigma_features`). Settings were chosen on Austen validation only. The gate promoted it: 451 of 480 top one (was 429), 477 top three, 199 of 204 on the earlier benchmark (was 193). SHA-256 `149b88cae9de463b2447c74c5eb138a6a74818cfd01d70d4f6757f084c75c2da`. The Wells audit, run after promotion, is 456 of 480 (was 429) in `engine/data/neural_router_v2_audit_v10.json`. The broad probe is worse: plugboard Enigma falls from 19 of 32 to 0, called M-209. `FEATURE_VERSION` is now v10; the v8 branches name v8 explicitly so no other version changed width. Frozen reports that name SHA `5c271f...` are records of the earlier file. See `docs/neural-upgrades.md` and `docs/logs/bob-enigma-2026-10-05.md`. The next Bob job is to mix broad-setting Enigma into the training draws only, and keep the 451 and 199 bars.
+
+`engine.dagapeyeff_exhaustive` tries every order at widths 2 to 9: columnar both ways with ragged rows, and periodic. Its score cannot be changed by a letter key, so the result holds for any plaintext language. In all 24 cases the cells and the regrouping beat their own shuffles by less than planted English and German beat theirs. A first run compared the regrouping with shuffles of the printed cells and showed 1.0187; that was the wrong control and was replaced.
+
+`engine.dagapeyeff_keywords` applies 379,521 keywords as single, double and square transpositions both ways, 2,208,702 orders. Planted keywords surface near English; the cells' best, 0.8161, is under shuffled cells' 0.829. `engine.dagapeyeff_body` finds the 13 common symbols as flat as equal odds (chi-square 8.66; 5,274 of 20,000 uniform draws as flat; 194 of 479,051 prose windows). A pure-Python four-square search recovered 0 of 2 planted texts at 2.4 million steps, so four-square was not run on the cells; Gariazzo's 20.9 percent coverage is still the furthest anyone has gone.
+
+Do not describe any of these as a decipherment.
 
 ## Session 5 October 2026, a warm start and a cell swarm
 

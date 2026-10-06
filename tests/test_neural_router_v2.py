@@ -81,16 +81,16 @@ class ShippedResidualRouterTest(unittest.TestCase):
                     6: ("cipher_statistics_v6", 222),
                     7: ("cipher_statistics_v7", 228),
                     8: ("cipher_statistics_v8", 148),
-                    9: ("cipher_statistics_v9", 154)}
+                    9: ("cipher_statistics_v9", 154),
+                    10: ("cipher_statistics_v10", 145)}
         self.assertIn(payload["format_version"], versions)
         self.assertGreaterEqual(len(payload["families"]), 17)
         self.assertEqual((payload["feature_version"], len(payload["mean"])),
                          versions[payload["format_version"]])
+        base_types = ["supervised_label_smoothing", "curriculum_hard_examples", "paired_dropout_consistency"]
+        teacher = ["frozen_incumbent_teacher_kl"] if "distillation" in payload else []
         for model in payload["models"]:
-            self.assertEqual(model["training_types"], ["supervised_label_smoothing",
-                                                       "curriculum_hard_examples",
-                                                       "paired_dropout_consistency",
-                                                       "frozen_incumbent_teacher_kl"])
+            self.assertEqual(model["training_types"], base_types + teacher)
         source = json.loads((Path(__file__).resolve().parents[1] / "engine/data/caesar_certificate.json").read_text())
         report = route_probabilities(source["ciphertext"])
         self.assertEqual(len(report["candidates"]), len(payload["families"]))

@@ -86,6 +86,9 @@ from engine.dagapeyeff_columnar import columnar_report
 from engine.dagapeyeff_columnar14 import columnar14_report
 from engine.dagapeyeff_corpus import corpus_report
 from engine.dagapeyeff_claims import claims_report
+from engine.dagapeyeff_body import body_report
+from engine.dagapeyeff_exhaustive import exhaustive_report
+from engine.dagapeyeff_keywords import keyword_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -1578,6 +1581,48 @@ def consider_claims() -> dict:
             f"{len(report['claims'])} published readings were checked. "
             f"{report['full_length_claims_with_cell_profile']} full-length readings have the cells' letter counts. "
             "A quoted claim is someone else's, not a reading here."
+        ),
+    }
+
+
+def consider_body() -> dict:
+    report = body_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "body_allowed": False,
+        "learned": (
+            f"The 13 common symbols score {report['cells_top13_chi']} against equal counts; "
+            f"{report['uniform_as_flat_or_flatter']} of {report['uniform_draws']} uniform draws are as flat, and "
+            f"{report['windows_as_flat']} of {report['windows']} real prose windows. Not a reading."
+        ),
+    }
+
+
+def consider_exhaustive() -> dict:
+    report = exhaustive_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "exhaustive_allowed": False,
+        "learned": (
+            f"Every order at widths 2 to 9, in {len(report['rows'])} width and family cases. In each case the "
+            "cells and the regrouping beat their own shuffles by less than planted English and German beat theirs. "
+            "No letter key can change this score, so the plaintext language does not matter. Not a reading."
+        ),
+    }
+
+
+def consider_keywords() -> dict:
+    report = keyword_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "keywords_allowed": False,
+        "learned": (
+            f"{report['keywords']} keywords gave {report['orders_scored']} keyword-ordered transpositions. Every planted "
+            f"text surfaced near English; the cells' best, {report['cells_best_mi']}, is under the best of shuffled "
+            f"cells, {max(report['null_best_mi'])}. Not a reading."
         ),
     }
 

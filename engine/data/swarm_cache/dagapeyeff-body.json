@@ -1,0 +1,28 @@
+{
+  "cells_top13_chi": 8.66,
+  "claimed_plaintext": null,
+  "common_counts": [
+    20,
+    17,
+    17,
+    17,
+    17,
+    16,
+    15,
+    14,
+    12,
+    12,
+    11,
+    11,
+    9
+  ],
+  "scope": "The common body of the cells is as flat as typical draws of 13 equally likely symbols. About 1 real prose window in 2,500 is that flat. A transposition cannot change counts. Not a reading. No letter string is stored.",
+  "solved": false,
+  "uniform_as_flat_or_flatter": 5274,
+  "uniform_draws": 20000,
+  "uniform_median": 11.29,
+  "window_top13_chi_median": 30.25,
+  "window_top13_chi_min": 4.72,
+  "windows": 479051,
+  "windows_as_flat": 194
+}

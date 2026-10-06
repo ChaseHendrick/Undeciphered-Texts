@@ -19,12 +19,12 @@ class BobProbeManifestTest(unittest.TestCase):
         self.assertFalse(saved["incumbent_replaced"])
         self.assertTrue(saved["weights_unchanged"])
         self.assertEqual(saved["weights_sha256"], _weights_sha256())
-        self.assertEqual(saved["format_version"], 5)
+        self.assertEqual(saved["format_version"], 10)
         self.assertEqual(saved["seed"], 20261005)
         self.assertEqual(saved["per_family"], 32)
         self.assertEqual(len(saved["rows"]), 128)
-        self.assertEqual(saved["restricted_top1"], 39)
-        self.assertEqual(saved["broad_top1"], 34)
+        self.assertEqual(saved["restricted_top1"], 63)
+        self.assertEqual(saved["broad_top1"], 30)
         self.assertTrue(all(len(row["ciphertext_sha256"]) == 64 for row in saved["rows"]))
 
     def test_a_fresh_one_key_manifest_does_not_write_weights(self) -> None:

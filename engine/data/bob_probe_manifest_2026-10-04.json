@@ -2,8 +2,8 @@
   "kind": "bob_probe_manifest",
   "seed": 20261005,
   "per_family": 32,
-  "format_version": 5,
-  "weights_sha256": "5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b",
+  "format_version": 10,
+  "weights_sha256": "149b88cae9de463b2447c74c5eb138a6a74818cfd01d70d4f6757f084c75c2da",
   "weights_unchanged": true,
   "incumbent_replaced": false,
   "plaintext_sha256": "da910590e36633f59366139f327ae72b3cd3a82d3510f1ad173881b4a944ad28",
@@ -12,14 +12,14 @@
       "generator": "restricted",
       "family": "enigma",
       "ciphertext_sha256": "6f7caeb3cbdfd17a4a82ae648cd1f5e859e56b5e1520cb037fe590b373f3b509",
-      "top1": "m209",
+      "top1": "enigma",
       "in_top3": true
     },
     {
       "generator": "restricted",
       "family": "enigma",
       "ciphertext_sha256": "8674800cd4cc687dd58408f33c9ebc4ef459146b71108bf1618736e846dc893c",
-      "top1": "m209",
+      "top1": "enigma",
       "in_top3": true
     },
     {
@@ -47,14 +47,14 @@
       "generator": "restricted",
       "family": "enigma",
       "ciphertext_sha256": "922bd2db956a04eff3b2e1ad8e531a9364a60481f9269ef68441ff0825b91df6",
-      "top1": "m209",
+      "top1": "enigma",
       "in_top3": true
     },
     {
       "generator": "restricted",
       "family": "enigma",
       "ciphertext_sha256": "6a75d35519ea2758044e0987d61e115ec4a058253922a60992fafbb02795b668",
-      "top1": "m209",
+      "top1": "enigma",
       "in_top3": true
     },
     {
@@ -68,7 +68,7 @@
       "generator": "restricted",
       "family": "enigma",
       "ciphertext_sha256": "97b761466118c165342ddb767c69e199cc91ca98cc6f62583522a0b96d5d34a6",
-      "top1": "m209",
+      "top1": "enigma",
       "in_top3": true
     },
     {
@@ -82,7 +82,7 @@
       "generator": "restricted",
       "family": "enigma",
       "ciphertext_sha256": "b741ed4e4c88191c9a71c2ce0ed661fec5295eb430b2d71bca843de30d4c12fd",
-      "top1": "m209",
+      "top1": "enigma",
       "in_top3": true
     },
     {
@@ -117,7 +117,7 @@
       "generator": "restricted",
       "family": "enigma",
       "ciphertext_sha256": "6964ff4bfd1bcb75e6c82193e8c8051ccf5c83b2226a64e5a737b582d76f65be",
-      "top1": "m209",
+      "top1": "enigma",
       "in_top3": true
     },
     {
@@ -138,14 +138,14 @@
       "generator": "restricted",
       "family": "enigma",
       "ciphertext_sha256": "7eedd168a0cd74ed62889e63da5d2081b52bb1d4b7acccefcb5137750c9175ed",
-      "top1": "m209",
+      "top1": "enigma",
       "in_top3": true
     },
     {
       "generator": "restricted",
       "family": "enigma",
       "ciphertext_sha256": "9caa079eceaea18352c494c7f51b9ae2be3a2e99ae0bcfdf68ac441a69255d84",
-      "top1": "m209",
+      "top1": "enigma",
       "in_top3": true
     },
     {
@@ -159,21 +159,21 @@
       "generator": "restricted",
       "family": "enigma",
       "ciphertext_sha256": "28c7c0064aae30f20d2f5967a455b6c3bd7f23ca235e3640a0c9c78dd64bae8c",
-      "top1": "m209",
+      "top1": "enigma",
       "in_top3": true
     },
     {
       "generator": "restricted",
       "family": "enigma",
       "ciphertext_sha256": "70cd184998b4f60cd05eeb74195c6e2ac739e6112a70778aab9dd0afe424877e",
-      "top1": "m209",
+      "top1": "enigma",
       "in_top3": true
     },
     {
       "generator": "restricted",
       "family": "enigma",
       "ciphertext_sha256": "68c551e477eceb137bc33cc0e6943515c169399e20c9535ec66ebbb70ab1c2b7",
-      "top1": "m209",
+      "top1": "enigma",
       "in_top3": true
     },
     {
@@ -194,7 +194,7 @@
       "generator": "restricted",
       "family": "enigma",
       "ciphertext_sha256": "e18da5e4a87bbebcd96bfb2c9e168e54699bcb6a98314363f3b7830dd22c1a74",
-      "top1": "m209",
+      "top1": "enigma",
       "in_top3": true
     },
     {
@@ -222,7 +222,7 @@
       "generator": "restricted",
       "family": "enigma",
       "ciphertext_sha256": "a17c0451824bd371c175b0ede3729aacdf040a9154685c6c0cad97a827d7bee5",
-      "top1": "m209",
+      "top1": "enigma",
       "in_top3": true
     },
     {
@@ -244,7 +244,7 @@
       "family": "m209",
       "ciphertext_sha256": "10169125a78d8f4fe1624dbf7caf63910dbce0e72d043ae5cbaa992a855fb085",
       "top1": "keyed-vigenere",
-      "in_top3": false
+      "in_top3": true
     },
     {
       "generator": "restricted",
@@ -278,7 +278,7 @@
       "generator": "restricted",
       "family": "m209",
       "ciphertext_sha256": "b9f91ecf202349b702c1953cd59d9965119500f34e1abd6196c8fe6aae9cd599",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -299,14 +299,14 @@
       "generator": "restricted",
       "family": "m209",
       "ciphertext_sha256": "29099f0a80224505ae6ba7b24899d2088ebc11ec49e906de462e9bcf8ad6ea0c",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "restricted",
       "family": "m209",
       "ciphertext_sha256": "080ac8dbb7ff4edb11332a7688afd43b9369fec5307b66de680ed324749ff230",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -320,7 +320,7 @@
       "generator": "restricted",
       "family": "m209",
       "ciphertext_sha256": "0489eec5dfc518571e6e402ba790caec116da2c4aec87db2724e4598287f52e4",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -334,7 +334,7 @@
       "generator": "restricted",
       "family": "m209",
       "ciphertext_sha256": "e652772ec4a70d11edd079709c6a1328a7b29f4e20a375b52a01b667eac2004a",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -348,7 +348,7 @@
       "generator": "restricted",
       "family": "m209",
       "ciphertext_sha256": "f5fe92515c989ca3b5e43db0e4f15b1330a11d5bbe0cae5d0e2c59e08fe5f882",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -369,7 +369,7 @@
       "generator": "restricted",
       "family": "m209",
       "ciphertext_sha256": "fd438f70d709e3514a4978c2331e17b67bac657b2fb33fb7b63e315c421c8761",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -418,7 +418,7 @@
       "generator": "restricted",
       "family": "m209",
       "ciphertext_sha256": "e2559c4f100f281cfaaf4c23a8ccb20cab9c1f3b73885077547bd63390ddf875",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -432,7 +432,7 @@
       "generator": "restricted",
       "family": "m209",
       "ciphertext_sha256": "6536b64b8c2a297bc80c4cd3b431354239cb97776c04f0e4ffe9fc7682915924",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -453,14 +453,14 @@
       "generator": "restricted",
       "family": "m209",
       "ciphertext_sha256": "0ad7e5f769c3effb07c65a12d632b23a258d5756a257d694e9f31414cffee98c",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "e61ba053c8f3d89b0c98d7fb74f1ba70590db8f25dc061740db0e9735c01f856",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -468,13 +468,13 @@
       "family": "enigma",
       "ciphertext_sha256": "9ea47fd75a99e69b135d8fcc4895fdd8922124ec56af9e66fa964c9e9ce0d802",
       "top1": "m209",
-      "in_top3": true
+      "in_top3": false
     },
     {
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "8d709505818610190e63b3b7939cfc98d09b9359291fa86e5037687ba94eb8de",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -495,21 +495,21 @@
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "513f89d7403bf1d68fee86b0c5924207e0e8348c2de219976cb834ca9760fcb0",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "20858ff5cc5f739ca71af18b647e0b64d2624cc1e04af6637e57fbe5b993774c",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "e220564f39efe05286e991b30d7ba4b02f3a7c29b60658b9e1f08181204bd382",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -523,7 +523,7 @@
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "49b3e9c5fd15afb65e4579f77dd86b605908e094ae9e6e3eb619da3ba0a80ef3",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -544,21 +544,21 @@
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "f5fba6b1426554b31e0c5398a935932e01c010798d2f9e0c2c0fefd881fb242c",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "74834022d616021643d789e4873f0ae78fd1a2f30fe87091631cc68a7bd4a94d",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "b0f24d520a51edb07c57467fb46726401cda74d8be3af2d7d5fe21d6c1cc7b49",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -572,15 +572,15 @@
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "c14993802204f8ea4857c23294f9fa6559239b7d7fcf997773a4bc2d5b3693e0",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "bdd04c3604629f640a11def7944d3dcff3f02abc125e741c83caa1478f85ecec",
-      "top1": "enigma",
-      "in_top3": true
+      "top1": "bifid",
+      "in_top3": false
     },
     {
       "generator": "broad",
@@ -600,14 +600,14 @@
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "665c881765e79105009415fd6c051079444a40e4e8e7a5780382d2bcef7cc81f",
-      "top1": "enigma",
-      "in_top3": true
+      "top1": "bifid",
+      "in_top3": false
     },
     {
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "f9b555459790f6e4b21627987296b9832cfca3742f646a9c32ab02d072045f2f",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -635,28 +635,28 @@
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "ebd9ea5e8525a111776e30385ba272025732692977bc9356c3d96a81fd3848bb",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "475c7f943f90e79f3f31f39c21764fbf0c0174dc8a263fa8b8377a1928845ce2",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "5ac9f1c0b627ff78ce8533255c8bc9db8713bc5c4ea872805f3433740a17e1d7",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "976b739b9c97113bcf30ef71cc579690fc7a824c843a09b05576526f9775e05e",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -670,14 +670,14 @@
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "9f2269a241a0cb45bb3dc02bdbda3fd5bf9e19980596124bfb31a21c4efc3364",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "enigma",
       "ciphertext_sha256": "a634eae9e72d6d08936cc8d3a0e26fccd5cdf056a9b0f9100bc0547962d029de",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -698,7 +698,7 @@
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "a0dc1804b94ed2bff7429cc547b45999f0d254d80e169dfb56c9ad5ebc1bb10c",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -733,7 +733,7 @@
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "527f1b49b8ec2a93c357ad3454714a8da951d28be218f51349c53e917c2c5d10",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -761,14 +761,14 @@
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "7740daad4993642641cf22cdb90a3f66c54536daf4ee6cdd7addc59117ed0101",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "53d528204d07bf627c7fc518cea739af846739d015222315f30563d638a1211c",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -803,42 +803,42 @@
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "af12dda31b26274080ef22df4d58b3e635ab5ed174c0e64761c96c773c04f711",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "0bda4fe14ac0b95fa4fa81806ce7b03773796d45e881e826def23d16c0a1cee0",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "b7ea963884a0d912fff665a3635075753fbe11413d3f2827d887d357c5f16606",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "927172b6d4d2c024b820168bb6aff56287171151ed83ffb5c3706baa8b5d8857",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "324ea5d9e4699f3e273f864a4d8df85c91d5f96bced772e62789c7c420a98c70",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "ae15b72a89ce12cbe5b424dbde44dacc41be4d53b4ec81542714cf5223df3672",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -866,14 +866,14 @@
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "23accd6b89b534b9e57a5e851e70f37368d3a020313d3279971862927bb6210a",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "433709c33e6683cfd6ffe0a5104015445554ca79461aa9bab4c91b023dffd968",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
@@ -887,25 +887,25 @@
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "99e1dd02eb2e1a315056aab1ad33dbee86ab788170af9d1162a5e39fee6d2b78",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "75590bd2bb5d648cbbe78d068cca86bfaf2fe8ffab774cbdf1087c2debd6ef5e",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     },
     {
       "generator": "broad",
       "family": "m209",
       "ciphertext_sha256": "f911e83babc8489b2f1dd62a742d24d4b765bb9b3f2378e40f4dba2ef390137d",
-      "top1": "enigma",
+      "top1": "m209",
       "in_top3": true
     }
   ],
-  "restricted_top1": 39,
-  "broad_top1": 34,
+  "restricted_top1": 63,
+  "broad_top1": 30,
   "scope": "Hashes and family labels for one frozen incumbent. Not a weight update."
 }
