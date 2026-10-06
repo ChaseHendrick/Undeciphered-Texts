@@ -105,6 +105,16 @@
       ]
     },
     {
+      "family": "Delays, nulls by place (periods 2 to 14), rails and plain column reads",
+      "status": "closed-with-power",
+      "evidence": "363 transforms solved as a keyed square; planted English comes back 4 of 4, and in every family 7 or 8 of 8 shuffles reach the cells' best; the old delay-79 lead is not in the top twelve.",
+      "logs": [
+        "dagapeyeff-direction-2026-10-06.md",
+        "dagapeyeff-delay-2026-10-04.md",
+        "dagapeyeff-digit-routes-2026-10-04.md"
+      ]
+    },
+    {
       "family": "Any transposition of ordinary English prose under a one-to-one letter key",
       "status": "excluded-by-count",
       "evidence": "A transposition keeps letter counts; none of 479,051 prose windows has the cells' flatness, few letters and rare column together.",
@@ -150,15 +160,6 @@
       "evidence": "None passes as a full-length reading against the counts the cells force; three fail their own stated method.",
       "logs": [
         "dagapeyeff-prior-work-2026-10-05.md"
-      ]
-    },
-    {
-      "family": "Delays and routes of the row and column digits",
-      "status": "tested-without-power",
-      "evidence": "Delay 79 reached 3 of 200 shuffles under the old model; no planted text.",
-      "logs": [
-        "dagapeyeff-delay-2026-10-04.md",
-        "dagapeyeff-digit-routes-2026-10-04.md"
       ]
     },
     {

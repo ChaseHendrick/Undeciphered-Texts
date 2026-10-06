@@ -15,15 +15,15 @@ The public digit block is the one on the English Wikipedia page for the D'Agapey
 <!-- generated-status:start -->
 ## How close is this to solved?
 
-**Unsolved. Plaintext recovered: 0 percent. 17 of 27 hypothesis families listed (63 percent) are closed with shown power or excluded by a count; 5 are open. Reviewed through 2026-10-06.**
+**Unsolved. Plaintext recovered: 0 percent. 18 of 27 hypothesis families listed (67 percent) are closed with shown power or excluded by a count; 5 are open. Reviewed through 2026-10-06.**
 
 Progress here means ruling hypotheses out, not reading part of a message. The percentage is a share of the families listed below, which is not every possible cipher, and a hand construction with no message fits every statistic measured so far. It is not a measure of distance to a reading.
 
 | Status | Families | Share |
 | --- | --- | --- |
-| Closed with shown power | 11 | 41 percent |
+| Closed with shown power | 12 | 44 percent |
 | Excluded by a count | 6 | 22 percent |
-| Tested without shown power | 5 | 19 percent |
+| Tested without shown power | 4 | 15 percent |
 | Open | 5 | 19 percent |
 
 | Family | Status | Evidence |
@@ -39,13 +39,13 @@ Progress here means ruling hypotheses out, not reading part of a message. The pe
 | A repeating shift on a keyed square (Vigenere-like), periods 2 to 14 | Closed with shown power | No English draw of 16,470 reaches the cells' 18 symbols; the joint search recovers 11 of 12 planted texts and the cells' best is -3.33 a letter against -2.08 or better for English. [log](../logs/dagapeyeff-additive-2026-10-06.md), [log](../logs/dagapeyeff-add-2026-10-04.md), [log](../logs/dagapeyeff-period4-2026-10-04.md) |
 | Enciphering errors at the book's rate under a one-to-one key, with or without a transposition | Closed with shown power | No held-out English window reaches the cells' counts with fewer than 15 chosen errors, random errors never do, and with 8 slips planted English still scores -2.49 a letter or better against the cells' -3.90. [log](../logs/dagapeyeff-errors-2026-10-06.md), [log](../logs/dagapeyeff-corpus-2026-10-05.md) |
 | Italian under a one-to-one key, with or without errors at the book's rate | Closed with shown power | Manzoni's Italian needs at least 9 chosen errors to reach the cells' counts; planted Italian comes back 4 of 4, also with 8 slips, and the cells score -4.56 a letter under an Italian model, inside their shuffles. [log](../logs/dagapeyeff-italian-2026-10-06.md), [log](../logs/dagapeyeff-languages-2026-10-04.md), [log](../logs/dagapeyeff-swarm-2026-10-04.md) |
+| Delays, nulls by place (periods 2 to 14), rails and plain column reads | Closed with shown power | 363 transforms solved as a keyed square; planted English comes back 4 of 4, and in every family 7 or 8 of 8 shuffles reach the cells' best; the old delay-79 lead is not in the top twelve. [log](../logs/dagapeyeff-direction-2026-10-06.md), [log](../logs/dagapeyeff-delay-2026-10-04.md), [log](../logs/dagapeyeff-digit-routes-2026-10-04.md) |
 | Any transposition of ordinary English prose under a one-to-one letter key | Excluded by a count | A transposition keeps letter counts; none of 479,051 prose windows has the cells' flatness, few letters and rare column together. [log](../logs/dagapeyeff-corpus-2026-10-05.md) |
 | Playfair | Excluded by a count | 10 of 98 pairs repeat a cell, which Playfair never does. [log](../logs/dagapeyeff-angles-2026-10-04.md) |
 | A fixed code giving each letter one pair of cells | Excluded by a count | Such a code has at most 25 different pairs; the cells have 79 and 80. [log](../logs/dagapeyeff-pairmap-2026-10-06.md) |
 | The five rare symbols as word spaces | Excluded by a count | Words would average 20.89 letters; held-out English never exceeds 8.5. [log](../logs/dagapeyeff-quick-2026-10-06.md) |
 | Only the column digit carries the message | Excluded by a count | The paired column digits are less coincident than any of 373 English windows. [log](../logs/dagapeyeff-quick-2026-10-06.md) |
 | Eight published readings | Excluded by a count | None passes as a full-length reading against the counts the cells force; three fail their own stated method. [log](../logs/dagapeyeff-prior-work-2026-10-05.md) |
-| Delays and routes of the row and column digits | Tested without shown power | Delay 79 reached 3 of 200 shuffles under the old model; no planted text. [log](../logs/dagapeyeff-delay-2026-10-04.md), [log](../logs/dagapeyeff-digit-routes-2026-10-04.md) |
 | Bifid | Tested without shown power | All periods 1 to 196; 1,109 of 2,000 shuffles reach the cells' best; no planted text. [log](../logs/dagapeyeff-bifid-2026-10-04.md) |
 | Autokey on the square | Tested without shown power | 37 of 40 shuffles score as well; no planted text. [log](../logs/dagapeyeff-autokey-2026-10-04.md) |
 | Running key from texts in the repository, and the book's exercise as a key | Tested without shown power | 94,860 alignments and the exercise slid across the cells; shuffles do as well; no planted text. [log](../logs/dagapeyeff-running-2026-10-04.md), [log](../logs/dagapeyeff-bookkey-2026-10-04.md) |
@@ -224,6 +224,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Two spaced triples share a column](../logs/dagapeyeff-twospace-2026-10-05.md)
 - [A repeating shift on a keyed square, 6 October 2026](../logs/dagapeyeff-additive-2026-10-06.md)
 - [Width-14 columnar with a letter key, compiled, 6 October 2026](../logs/dagapeyeff-columnar14c-2026-10-06.md)
+- [A direction swarm: the old leads rerun, 6 October 2026](../logs/dagapeyeff-direction-2026-10-06.md)
 - [Enciphering errors cannot hide English under a one-to-one key, 6 October 2026](../logs/dagapeyeff-errors-2026-10-06.md)
 - [Four-square on the cells, 6 October 2026](../logs/dagapeyeff-foursquare-2026-10-06.md)
 - [A compiled turning-grille search: power only, 6 October 2026](../logs/dagapeyeff-grillec-2026-10-06.md)

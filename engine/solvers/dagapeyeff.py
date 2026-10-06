@@ -96,6 +96,7 @@ from engine.dagapeyeff_additive import additive_report
 from engine.dagapeyeff_quick import quick_report
 from engine.dagapeyeff_homophone import homophone_report
 from engine.dagapeyeff_errors import errors_report
+from engine.dagapeyeff_direction import direction_report
 from engine.dagapeyeff_pairmap import pairmap_report
 from engine.dagapeyeff_columnar14c import columnar14c_report
 from engine.dagapeyeff_monotone import monotone_report
@@ -1774,6 +1775,23 @@ def consider_italian() -> dict:
             f"Under an Italian model planted Italian comes back {report['planted_recovered']} of 4 times, and "
             f"{report['planted_with_errors_recovered']} of 4 with 8 slips; the cells score {report['cells_per_letter']}, "
             f"with {report['shuffles_as_high']} of 8 shuffles as high. Not a reading."
+        ),
+    }
+
+
+def consider_direction() -> dict:
+    report = direction_report()
+    families = report["families"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "direction_allowed": False,
+        "learned": (
+            f"Delays, nulls of period 2 to 14, rails and plain columns, {report['search']['transforms']} transforms "
+            f"solved as a keyed square: planted English comes back {report['planted_recovered']} of "
+            f"{len(report['planted'])} times. The cells' best is {families['all']['cells_best']} and "
+            f"{families['all']['shuffle_bests_as_high']} of {len(families['all']['shuffle_bests'])} shuffles reach "
+            "it. No old lead points anywhere. Not a reading."
         ),
     }
 
