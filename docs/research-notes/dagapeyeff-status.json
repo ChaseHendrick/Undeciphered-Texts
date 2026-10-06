@@ -52,9 +52,9 @@
       ]
     },
     {
-      "family": "Four-square and two-square",
+      "family": "Four-square with standard plain squares",
       "status": "closed-with-power",
-      "evidence": "Excluded by a side count (0 of 7,400 keyed English draws reach the cells) and searched: 4 of 6 planted texts recovered, the cells inside their shuffles.",
+      "evidence": "Excluded by the side count (0 of 7,400 English draws with random plain squares reach the cells) and searched: 4 of 6 planted texts recovered, the cells inside their shuffles.",
       "logs": [
         "dagapeyeff-foursquare-2026-10-06.md"
       ]
@@ -257,6 +257,16 @@
       ],
       "next": "A joint search with a letter key, as for width 14, at widths 11 to 13 and for double transposition above width 6.",
       "priority": 5
+    },
+    {
+      "family": "Four-square with keyed plain squares, and two-square",
+      "status": "open",
+      "evidence": "With chosen plain squares 15 of 15 held-out English windows reach the cells' side counts, so the count does not exclude these, and the four-square search used standard plain squares only.",
+      "logs": [
+        "dagapeyeff-foursquare-2026-10-06.md"
+      ],
+      "next": "Anneal the plain squares as well as the cipher squares, with planted texts under keyed squares, before searching the cells.",
+      "priority": 6
     }
   ]
 }

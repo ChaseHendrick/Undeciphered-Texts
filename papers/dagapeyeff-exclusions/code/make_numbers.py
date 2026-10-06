@@ -22,8 +22,15 @@ PAPER = Path(__file__).resolve().parents[1] / "paper"
 INPUTS = (
     "corpus", "columnar", "columnar14c", "exhaustive", "exhaustive10", "double", "keywords",
     "foursquare", "pairmap", "grillec", "quick", "homophone", "additive", "direction",
-    "errors", "italian", "screen", "latin",
+    "errors", "italian", "screen", "latin", "fskeyed",
 )
+
+
+def _cells_list() -> list[int]:
+    sys.path.insert(0, str(ROOT))
+    from engine.dagapeyeff_add import _cells
+
+    return _cells()
 
 
 def load(name: str) -> dict:
@@ -117,6 +124,9 @@ def macros() -> dict[str, str]:
     low, high = sorted(counts["texts"]["cells"]["pairs-from-first"])
     out["fsCellsLow"] = str(low)
     out["fsCellsHigh"] = str(high)
+    fk = load("fskeyed")
+    out["fskReaching"] = str(fk["reaching"])
+    out["fskWindows"] = str(fk["windows"])
     out["fsRegroupedA"], out["fsRegroupedB"] = (str(x) for x in counts["texts"]["regrouped"]["pairs-from-first"])
     out["fsStandardWindows"] = n(counts["standard_windows"])
     out["fsStandardFewest"] = str(counts["standard_fewest_larger_side"])
@@ -164,9 +174,21 @@ def macros() -> dict[str, str]:
     out["quickShuffleBestAsHigh"] = str(q["shuffle_bests_as_high"])
     sp = q["spaces"]
     out["spacesSeparators"] = str(sp["separators"])
-    out["spacesWords"] = str(sp["separators"] + 1)
+    cells = _cells_list()
+    rare = {c for i, c in enumerate(cells) if i % 14 == 13} - {c for i, c in enumerate(cells) if i % 14 != 13}
+    words, word = [], 0
+    for cell in cells:
+        if cell in rare:
+            if word:
+                words.append(word)
+            word = 0
+        else:
+            word += 1
+    if word:
+        words.append(word)
+    out["spacesWords"] = str(len(words))
     out["spacesLetters"] = str(sp["letters"])
-    out["spacesMean"] = p(sp["mean_word_length"])
+    out["spacesMean"] = p(sum(words) / len(words), 1)
     out["spacesEnglishMax"] = p(sp["english_longest_mean_word"], 1)
     out["spacesRuns"] = n(sp["english_runs"])
     out["spacesDistinct"] = str(sp["distinct_letters"])

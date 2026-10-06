@@ -97,6 +97,7 @@ from engine.dagapeyeff_quick import quick_report
 from engine.dagapeyeff_homophone import homophone_report
 from engine.dagapeyeff_errors import errors_report
 from engine.dagapeyeff_direction import direction_report
+from engine.dagapeyeff_fskeyed import fskeyed_report
 from engine.dagapeyeff_pairmap import pairmap_report
 from engine.dagapeyeff_columnar14c import columnar14c_report
 from engine.dagapeyeff_monotone import monotone_report
@@ -1831,6 +1832,20 @@ def consider_latin() -> dict:
             f"Under a Latin model planted Latin comes back {report['planted_recovered']} of 6 times, and "
             f"{report['planted_with_errors_recovered']} of 6 with 8 slips. The cells' best is {cells['best']} "
             f"({cells['best_variant']}), and {cells['shuffle_bests_as_high']} of 8 shuffles reach it. Not a reading."
+        ),
+    }
+
+
+def consider_fskeyed() -> dict:
+    report = fskeyed_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "fskeyed_allowed": False,
+        "learned": (
+            f"With chosen plain squares {report['reaching']} of {report['windows']} held-out English windows reach the "
+            "cells' four-square side counts, so the side count excludes four-square only with standard plain squares, "
+            "and does not exclude two-square. Not a reading."
         ),
     }
 

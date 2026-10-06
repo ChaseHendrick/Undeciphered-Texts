@@ -55,4 +55,15 @@ Not another score on the same 196 cells. Something from outside: d'Agapeyeff's p
 
 Update, 6 October 2026: the 14-column part is done. A compiled joint search recovered 18 of 18 planted texts, 6 with 8 wrong cells, and the cells stayed inside their shuffles ([note](dagapeyeff-columnar14c-2026-10-06.md)). The compiled grille search still finds a planted grille only with the key given ([note](dagapeyeff-grillec-2026-10-06.md)).
 
+## Added 6 October 2026
+
+A second search found sources the survey above did not list. None gives a checkable full-length reading.
+
+- **David Shulman** (as Ab Struse), "The D'Agapeyeff Cryptogram: A Challenge", *The Cryptogram*, April/May 1952. Title from search results; not opened.
+- **Klaus Schmeh**, [MysteryTwister challenge write-up](https://mysterytwister.org/media/challenges/pdf/mtc3-schmeh-02-agapeyeff-en.pdf), listing the cipher as an open challenge. Read through search results.
+- **NumberWorld blog**, [part 1](https://numberworld.blogspot.com/2013/07/dagapeyeff-cipher-part-1.html) (2013) and [part 2](http://numberworld.blogspot.com/2015/07/d-cipher-part-2.html) (2015). Considers the book itself as the key of a dictionary code, and notes that the cryptogram was still printed in a 1949 reprint and first left out in 1952. Read through search summaries.
+- **Please Decipher Me blog**, [2010](http://pleasedecipherme.blogspot.com/2010/11/is-dagapeyeff-cipher-adfgx-cipher.html) and [2011](http://pleasedecipherme.blogspot.com/2011/01/dagapeyeff-cipher-searching-for.html): an ADFGX hypothesis and a search for a solution. Read through search summaries.
+- **Ashley and Antigravity**, [dagapeyeff-cipher-solver](https://github.com/ajejfiejof/dagapeyeff-cipher-solver), 2026, commit `2009392`, README and PAPER.md read. It argues from the index of coincidence (0.0697) that the cipher is a "mathematically pure" monoalphabetic Polybius substitution on a 14 by 14 matrix, with `04` marking a midpoint. No plaintext is given. The index is unchanged by any one-to-one key, so it cannot show monoalphabeticity; the cells' letter counts, which such a key keeps, are at least 8 errors from any of 479,051 English windows ([errors](dagapeyeff-errors-2026-10-06.md)). The `04` midpoint is Rodrigues's 2014 observation.
+- Craig Bauer's *Unsolved!* (Princeton, 2017) may discuss the cipher; that could not be confirmed here.
+
 No letter string from this repository's searches is stored.

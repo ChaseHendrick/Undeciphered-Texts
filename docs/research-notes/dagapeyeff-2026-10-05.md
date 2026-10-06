@@ -15,16 +15,16 @@ The public digit block is the one on the English Wikipedia page for the D'Agapey
 <!-- generated-status:start -->
 ## How close is this to solved?
 
-**Unsolved. Plaintext recovered: 0 percent. 19 of 28 hypothesis families listed (68 percent) are closed with shown power or excluded by a count; 5 are open. Reviewed through 2026-10-06.**
+**Unsolved. Plaintext recovered: 0 percent. 19 of 29 hypothesis families listed (66 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-06.**
 
 Progress here means ruling hypotheses out, not reading part of a message. The percentage is a share of the families listed below, which is not every possible cipher, and a hand construction with no message fits every statistic measured so far. It is not a measure of distance to a reading.
 
 | Status | Families | Share |
 | --- | --- | --- |
-| Closed with shown power | 13 | 46 percent |
+| Closed with shown power | 13 | 45 percent |
 | Excluded by a count | 6 | 21 percent |
 | Tested without shown power | 4 | 14 percent |
-| Open | 5 | 18 percent |
+| Open | 6 | 21 percent |
 
 | Family | Status | Evidence |
 | --- | --- | --- |
@@ -33,7 +33,7 @@ Progress here means ruling hypotheses out, not reading part of a message. The pe
 | Complete 14-column transposition with a letter key | Closed with shown power | 18 of 18 planted texts recovered, both directions; the cells score -3.25 to -3.64 a letter, inside their shuffles. [log](../logs/dagapeyeff-columnar14c-2026-10-06.md) |
 | Double transposition, every pair of orders at widths 2 to 6 | Closed with shown power | In 50 of 50 cases the cells beat their shuffles by less than planted English and German. [log](../logs/dagapeyeff-double-2026-10-05.md) |
 | Keyword transpositions (379,521 keywords, single, double and square) | Closed with shown power | Planted keywords surface near English; the cells' best is under shuffled cells. [log](../logs/dagapeyeff-keywords-2026-10-05.md) |
-| Four-square and two-square | Closed with shown power | Excluded by a side count (0 of 7,400 keyed English draws reach the cells) and searched: 4 of 6 planted texts recovered, the cells inside their shuffles. [log](../logs/dagapeyeff-foursquare-2026-10-06.md) |
+| Four-square with standard plain squares | Closed with shown power | Excluded by the side count (0 of 7,400 English draws with random plain squares reach the cells) and searched: 4 of 6 planted texts recovered, the cells inside their shuffles. [log](../logs/dagapeyeff-foursquare-2026-10-06.md) |
 | Nulls by place (every 3rd, 4th, 5th cell, or one grid column) | Closed with shown power | 6 of 6 planted texts recovered; the cells' best is -3.28 a letter against -2.14 or better for English. [log](../logs/dagapeyeff-quick-2026-10-06.md) |
 | Homophonic key (several symbols for one letter) | Closed with shown power | 6 of 6 planted homophonic texts recovered; the cells and the regrouping sit inside their shuffles. [log](../logs/dagapeyeff-homophone-2026-10-06.md) |
 | A repeating shift on a keyed square (Vigenere-like), periods 2 to 14 | Closed with shown power | No English draw of 16,470 reaches the cells' 18 symbols; the joint search recovers 11 of 12 planted texts and the cells' best is -3.33 a letter against -2.08 or better for English. [log](../logs/dagapeyeff-additive-2026-10-06.md), [log](../logs/dagapeyeff-add-2026-10-04.md), [log](../logs/dagapeyeff-period4-2026-10-04.md) |
@@ -56,6 +56,7 @@ Progress here means ruling hypotheses out, not reading part of a message. The pe
 | No message (a hand construction) | Open | Van Eykelen's tally-and-deal recipe matches all 14 fingerprint statistics; statistics alone cannot decide. [log](../logs/dagapeyeff-prior-work-2026-10-05.md) |
 | A general pair table (2 by 2 Hill, any 625-pair code) | Open | The cells' different-pair count is ordinary for prose, so the count does not exclude it. [log](../logs/dagapeyeff-pairmap-2026-10-06.md) |
 | Transposition beyond the searched widths, or with nulls and an incomplete rectangle | Open | The key-invariant method has no power past width 10; double transposition is closed only to width 6. [log](../logs/dagapeyeff-exhaustive-2026-10-05.md), [log](../logs/dagapeyeff-double-2026-10-05.md) |
+| Four-square with keyed plain squares, and two-square | Open | With chosen plain squares 15 of 15 held-out English windows reach the cells' side counts, so the count does not exclude these, and the four-square search used standard plain squares only. [log](../logs/dagapeyeff-foursquare-2026-10-06.md) |
 
 Generated from [`dagapeyeff-status.json`](dagapeyeff-status.json) by `tools/refresh_docs.py`.
 <!-- generated-status:end -->
@@ -247,6 +248,7 @@ Open families, in the order they are planned:
 3. **No message (a hand construction).** A predeclared likelihood test between van Eykelen's tally-and-deal recipe and message-bearing models, calibrated on planted texts.
 4. **A general pair table (2 by 2 Hill, any 625-pair code).** Search 2 by 2 Hill over a keyed square with planted texts.
 5. **Transposition beyond the searched widths, or with nulls and an incomplete rectangle.** A joint search with a letter key, as for width 14, at widths 11 to 13 and for double transposition above width 6.
+6. **Four-square with keyed plain squares, and two-square.** Anneal the plain squares as well as the cipher squares, with planted texts under keyed squares, before searching the cells.
 
 Generated from [`dagapeyeff-status.json`](dagapeyeff-status.json) by `tools/refresh_docs.py`.
 <!-- generated-next:end -->
