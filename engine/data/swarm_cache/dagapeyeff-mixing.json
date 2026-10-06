@@ -1,0 +1,87 @@
+{
+  "cases": {
+    "autokey": {
+      "draws": 1110,
+      "fewest_distinct": 23,
+      "reaching_cells": 0
+    },
+    "bifid 14": {
+      "draws": 1110,
+      "fewest_distinct": 22,
+      "reaching_cells": 0
+    },
+    "bifid 196": {
+      "draws": 1110,
+      "fewest_distinct": 22,
+      "reaching_cells": 0
+    },
+    "bifid 2": {
+      "draws": 1110,
+      "fewest_distinct": 22,
+      "reaching_cells": 0
+    },
+    "bifid 3": {
+      "draws": 1110,
+      "fewest_distinct": 23,
+      "reaching_cells": 0
+    },
+    "bifid 4": {
+      "draws": 1110,
+      "fewest_distinct": 22,
+      "reaching_cells": 0
+    },
+    "bifid 5": {
+      "draws": 1110,
+      "fewest_distinct": 22,
+      "reaching_cells": 0
+    },
+    "bifid 7": {
+      "draws": 1110,
+      "fewest_distinct": 23,
+      "reaching_cells": 0
+    },
+    "hill 2x2": {
+      "draws": 1110,
+      "fewest_distinct": 23,
+      "reaching_cells": 0
+    },
+    "running key": {
+      "draws": 1110,
+      "fewest_distinct": 24,
+      "reaching_cells": 0
+    },
+    "vigenere25 14": {
+      "draws": 1110,
+      "fewest_distinct": 24,
+      "reaching_cells": 0
+    },
+    "vigenere25 2": {
+      "draws": 1110,
+      "fewest_distinct": 20,
+      "reaching_cells": 0
+    },
+    "vigenere25 3": {
+      "draws": 1110,
+      "fewest_distinct": 21,
+      "reaching_cells": 0
+    },
+    "vigenere25 4": {
+      "draws": 1110,
+      "fewest_distinct": 22,
+      "reaching_cells": 0
+    },
+    "vigenere25 5": {
+      "draws": 1110,
+      "fewest_distinct": 22,
+      "reaching_cells": 0
+    },
+    "vigenere25 7": {
+      "draws": 1110,
+      "fewest_distinct": 23,
+      "reaching_cells": 0
+    }
+  },
+  "cells_distinct": 18,
+  "claimed_plaintext": null,
+  "solved": false
+}

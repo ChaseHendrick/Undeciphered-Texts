@@ -1,0 +1,98 @@
+{
+  "claimed_plaintext": null,
+  "rows": [
+    {
+      "fewest": 14,
+      "median": 25.0,
+      "period": 2,
+      "shuffled_cells_fewest": [
+        15,
+        12,
+        16,
+        12,
+        14
+      ],
+      "within_8": 0
+    },
+    {
+      "fewest": 13,
+      "median": 23.0,
+      "period": 3,
+      "shuffled_cells_fewest": [
+        11,
+        12,
+        12,
+        11,
+        12
+      ],
+      "within_8": 0
+    },
+    {
+      "fewest": 13,
+      "median": 24.0,
+      "period": 4,
+      "shuffled_cells_fewest": [
+        11,
+        10,
+        13,
+        11,
+        11
+      ],
+      "within_8": 0
+    },
+    {
+      "fewest": 13,
+      "median": 24.0,
+      "period": 5,
+      "shuffled_cells_fewest": [
+        14,
+        12,
+        13,
+        13,
+        14
+      ],
+      "within_8": 0
+    },
+    {
+      "fewest": 13,
+      "median": 24.0,
+      "period": 6,
+      "shuffled_cells_fewest": [
+        14,
+        14,
+        13,
+        14,
+        9
+      ],
+      "within_8": 0
+    },
+    {
+      "fewest": 15,
+      "median": 26.0,
+      "period": 7,
+      "shuffled_cells_fewest": [
+        12,
+        13,
+        14,
+        16,
+        16
+      ],
+      "within_8": 0
+    },
+    {
+      "fewest": 14,
+      "median": 26.0,
+      "period": 14,
+      "shuffled_cells_fewest": [
+        14,
+        15,
+        14,
+        18,
+        14
+      ],
+      "within_8": 0
+    }
+  ],
+  "solved": false,
+  "windows": 1558
+}

@@ -15,16 +15,16 @@ The public digit block is the one on the English Wikipedia page for the D'Agapey
 <!-- generated-status:start -->
 ## How close is this to solved?
 
-**Unsolved. Plaintext recovered: 0 percent. 21 of 31 hypothesis families listed (68 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-06.**
+**Unsolved. Plaintext recovered: 0 percent. 28 of 34 hypothesis families listed (82 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-06.**
 
 Progress here means ruling hypotheses out, not reading part of a message. The percentage is a share of the families listed below, which is not every possible cipher, and a hand construction with no message fits every statistic measured so far. It is not a measure of distance to a reading.
 
 | Status | Families | Share |
 | --- | --- | --- |
-| Closed with shown power | 15 | 48 percent |
-| Excluded by a count | 6 | 19 percent |
-| Tested without shown power | 4 | 13 percent |
-| Open | 6 | 19 percent |
+| Closed with shown power | 16 | 47 percent |
+| Excluded by a count | 12 | 35 percent |
+| Tested without shown power | 0 | 0 percent |
+| Open | 6 | 18 percent |
 
 | Family | Status | Evidence |
 | --- | --- | --- |
@@ -43,20 +43,23 @@ Progress here means ruling hypotheses out, not reading part of a message. The pe
 | Latin under a one-to-one key, with or without the book's dummy rule and errors | Closed with shown power | Latin is the closest of 39 languages by letter counts (4 errors at its closest window), but planted Latin comes back 6 of 6, also with 8 slips, and 7 of 8 shuffles reach the cells' best under a Latin model. [log](../logs/dagapeyeff-latin-2026-10-06.md), [log](../logs/dagapeyeff-screen-2026-10-06.md) |
 | Latin under a complete 14-column transposition with a letter key | Closed with shown power | 8 of 8 planted Latin texts recovered in both directions, also classical Latin and with 8 wrong cells; the printed cells sit inside their shuffles (8 and 6 of 10 as high). [log](../logs/dagapeyeff-latin14-2026-10-06.md) |
 | Catalan and Romanian under a one-to-one key, with or without the book's dummy rule and errors | Closed with shown power | Planted text comes back 3 of 3 in each, also with 8 slips; the cells sit inside their shuffles (Catalan 7 of 8; Romanian 13 of 40 after an edge at 8 shuffles vanished). [log](../logs/dagapeyeff-tongues-2026-10-06.md) |
+| Latin under a repeating coordinate shift, and under four-square with standard plain squares | Closed with shown power | The shift count does not exclude Latin (1 of 9,774 draws reaches the cells), but the joint search recovers 15 of 18 planted Latin texts and the cells sit with their shuffles; four-square recovers 3 of 3 with the cells inside their shuffles. A capped homophonic key recovers only 2 of 3. [log](../logs/dagapeyeff-latinmore-2026-10-06.md) |
 | Any transposition of ordinary English prose under a one-to-one letter key | Excluded by a count | A transposition keeps letter counts; none of 479,051 prose windows has the cells' flatness, few letters and rare column together. [log](../logs/dagapeyeff-corpus-2026-10-05.md) |
 | Playfair | Excluded by a count | 10 of 98 pairs repeat a cell, which Playfair never does. [log](../logs/dagapeyeff-angles-2026-10-04.md) |
 | A fixed code giving each letter one pair of cells | Excluded by a count | Such a code has at most 25 different pairs; the cells have 79 and 80. [log](../logs/dagapeyeff-pairmap-2026-10-06.md) |
 | The five rare symbols as word spaces | Excluded by a count | Words would average 20.89 letters; held-out English never exceeds 8.5. [log](../logs/dagapeyeff-quick-2026-10-06.md) |
 | Only the column digit carries the message | Excluded by a count | The paired column digits are less coincident than any of 373 English windows. [log](../logs/dagapeyeff-quick-2026-10-06.md) |
 | Eight published readings | Excluded by a count | None passes as a full-length reading against the counts the cells force; three fail their own stated method. [log](../logs/dagapeyeff-prior-work-2026-10-05.md) |
-| Bifid | Tested without shown power | All periods 1 to 196; 1,109 of 2,000 shuffles reach the cells' best; no planted text. [log](../logs/dagapeyeff-bifid-2026-10-04.md) |
-| Autokey on the square | Tested without shown power | 37 of 40 shuffles score as well; no planted text. [log](../logs/dagapeyeff-autokey-2026-10-04.md) |
-| Running key from texts in the repository, and the book's exercise as a key | Tested without shown power | 94,860 alignments and the exercise slid across the cells; shuffles do as well; no planted text. [log](../logs/dagapeyeff-running-2026-10-04.md), [log](../logs/dagapeyeff-bookkey-2026-10-04.md) |
-| Caesar, Vigenere, Beaufort, Porta and affine on the cells as letters | Tested without shown power | Under the old model; shuffles score as well; no planted text. [log](../logs/dagapeyeff-solver-swarm-2026-10-04.md), [log](../logs/dagapeyeff-classic-swarm-2026-10-04.md), [log](../logs/dagapeyeff-anneal-2026-10-05.md) |
+| Periodic independent alphabets (a different one-to-one key at each place modulo p, p from 2 to 14) | Excluded by a count | Applied phase by phase, the error count needs at least 13 chosen errors for any held-out English window at every period; none of 1,558 windows comes within 8. [log](../logs/dagapeyeff-phases-2026-10-06.md) |
+| Straddling checkerboard and Nihilist substitution (digit codes not made of fixed pairs) | Excluded by a count | The cells' 392 digits alternate perfectly between two classes of five digits; 300 planted texts per system under random keys reach at most 0.65 to 0.85 of that alternation, none all of it. [log](../logs/dagapeyeff-digitcodes-2026-10-06.md) |
+| Bifid | Excluded by a count | Under random squares bifid of every period spreads English over at least 22 symbols; the cells use 18 (0 of 7,770 draws). [log](../logs/dagapeyeff-mixing-2026-10-06.md), [log](../logs/dagapeyeff-bifid-2026-10-04.md) |
+| Autokey on the square | Excluded by a count | Under random squares autokey spreads English over at least 23 symbols; the cells use 18 (0 of 1,110 draws). [log](../logs/dagapeyeff-mixing-2026-10-06.md), [log](../logs/dagapeyeff-autokey-2026-10-04.md) |
+| Running key from texts in the repository, and the book's exercise as a key | Excluded by a count | An English running key spreads English over at least 24 symbols; the cells use 18 (0 of 1,110 draws). The book's exercise is such a key. [log](../logs/dagapeyeff-mixing-2026-10-06.md), [log](../logs/dagapeyeff-running-2026-10-04.md), [log](../logs/dagapeyeff-bookkey-2026-10-04.md) |
+| Caesar, Vigenere, Beaufort, Porta and affine on the cells as letters | Excluded by a count | Caesar and affine are one-to-one keys, covered by the corpus count; Vigenere modulo 25 on a keyed alphabet at periods 2 to 14 spreads English over at least 20 symbols (0 of 6,660 draws reach 18). Beaufort behaves the same way; Porta was not screened separately. [log](../logs/dagapeyeff-mixing-2026-10-06.md), [log](../logs/dagapeyeff-solver-swarm-2026-10-04.md), [log](../logs/dagapeyeff-classic-swarm-2026-10-04.md) |
 | A plaintext in another language under a large transposition, or in a language not screened | Open | 39 languages were screened by letter counts; Latin is closest, then Catalan and Romanian. Italian and Latin under a one-to-one key are closed; Latin under a 14-column key is closed; the grille has no power in any language. [log](../logs/dagapeyeff-screen-2026-10-06.md), [log](../logs/dagapeyeff-languages-2026-10-04.md) |
-| 14 by 14 turning grille with a letter key | Open | The compiled search finds 4 of 4 planted grilles with the key given and 0 of 4 with it unknown. [log](../logs/dagapeyeff-grillec-2026-10-06.md) |
-| No message (a hand construction) | Open | Van Eykelen's tally-and-deal recipe matches all 14 fingerprint statistics; statistics alone cannot decide. [log](../logs/dagapeyeff-prior-work-2026-10-05.md) |
-| A general pair table (2 by 2 Hill, any 625-pair code) | Open | The cells' different-pair count is ordinary for prose, so the count does not exclude it. [log](../logs/dagapeyeff-pairmap-2026-10-06.md) |
+| 14 by 14 turning grille with a letter key | Open | The compiled search finds 4 of 4 planted grilles with the key given and 0 of 4 with it unknown, and order tests barely tell a grille message from no message (3 of 20; 4 of 12). A grille is a transposition, so under a one-to-one key the letter counts still need at least 8 chosen errors in English and 4 in Latin, and random errors never reach them; a grille stays open mainly with a count-flattening key or an unusual text. A homophonic key cannot flatten the counts either: no English window of 196 letters uses 18 letters or fewer, and no Latin window groups exactly into the cells' 18 symbol counts (the closest needs at most 3 errors). [log](../logs/dagapeyeff-grillec-2026-10-06.md), [log](../logs/dagapeyeff-nomessage-2026-10-06.md), [log](../logs/dagapeyeff-errors-2026-10-06.md), [log](../logs/dagapeyeff-homgroup-2026-10-06.md) |
+| No message (a hand construction) | Open | Against random dealings of the cells' own symbols the order gives a family-wise p of 0.28, with a test that flags 19 of 20 keyed-square and done-columnar messages but only 3 of 20 grille messages; a grille-specific statistic has weak power (4 of 12) and the cells sit among their dealings (25 of 40). A message now needs an order-destroying transposition and either a non-homophonic count-flattening key, chosen errors or an unusual text. [log](../logs/dagapeyeff-nomessage-2026-10-06.md), [log](../logs/dagapeyeff-prior-work-2026-10-05.md) |
+| A general pair table (2 by 2 Hill, any 625-pair code) | Open | The different-pair count does not exclude a general pair table; a 2 by 2 Hill matrix drawn at random spreads English over at least 23 symbols (0 of 1,110 draws reach the cells' 18), so random Hill keys are excluded, but a chosen 625-pair table is not. [log](../logs/dagapeyeff-pairmap-2026-10-06.md), [log](../logs/dagapeyeff-mixing-2026-10-06.md) |
 | Transposition beyond the searched widths, or with nulls and an incomplete rectangle | Open | The key-invariant method has no power past width 10; double transposition is closed only to width 6. [log](../logs/dagapeyeff-exhaustive-2026-10-05.md), [log](../logs/dagapeyeff-double-2026-10-05.md) |
 | Four-square with keyed plain squares, and two-square | Open | With chosen plain squares 15 of 15 held-out English windows reach the cells' side counts; a search annealing all four squares recovers 0 of 6 planted texts at 196 letters, so it has no power yet. [log](../logs/dagapeyeff-foursquare-2026-10-06.md), [log](../logs/dagapeyeff-keyedsquares-2026-10-06.md) |
 
@@ -228,16 +231,22 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Two spaced triples share a column](../logs/dagapeyeff-twospace-2026-10-05.md)
 - [A repeating shift on a keyed square, 6 October 2026](../logs/dagapeyeff-additive-2026-10-06.md)
 - [Width-14 columnar with a letter key, compiled, 6 October 2026](../logs/dagapeyeff-columnar14c-2026-10-06.md)
+- [Digit ciphers other than Polybius pairs, 6 October 2026](../logs/dagapeyeff-digitcodes-2026-10-06.md)
 - [A direction swarm: the old leads rerun, 6 October 2026](../logs/dagapeyeff-direction-2026-10-06.md)
 - [Enciphering errors cannot hide English under a one-to-one key, 6 October 2026](../logs/dagapeyeff-errors-2026-10-06.md)
 - [Four-square on the cells, 6 October 2026](../logs/dagapeyeff-foursquare-2026-10-06.md)
 - [A compiled turning-grille search: power only, 6 October 2026](../logs/dagapeyeff-grillec-2026-10-06.md)
+- [A homophonic key under any transposition, 6 October 2026](../logs/dagapeyeff-homgroup-2026-10-06.md)
 - [A many-to-one key, 6 October 2026](../logs/dagapeyeff-homophone-2026-10-06.md)
 - [Italian under a one-to-one key, with errors, 6 October 2026](../logs/dagapeyeff-italian-2026-10-06.md)
 - [Keyed four-square and two-square: power only, 6 October 2026](../logs/dagapeyeff-keyedsquares-2026-10-06.md)
 - [Latin under a one-to-one key, 6 October 2026](../logs/dagapeyeff-latin-2026-10-06.md)
 - [Latin under a 14-column transposition, 6 October 2026](../logs/dagapeyeff-latin14-2026-10-06.md)
+- [Latin under a repeating shift, a homophonic key and four-square, 6 October 2026](../logs/dagapeyeff-latinmore-2026-10-06.md)
+- [Ciphers that mix letters, 6 October 2026](../logs/dagapeyeff-mixing-2026-10-06.md)
+- [Starting from no message, 6 October 2026](../logs/dagapeyeff-nomessage-2026-10-06.md)
 - [Different pairs under any one-to-one pair cipher, 6 October 2026](../logs/dagapeyeff-pairmap-2026-10-06.md)
+- [Periodic independent alphabets, 6 October 2026](../logs/dagapeyeff-phases-2026-10-06.md)
 - [Five short attacks, 6 October 2026](../logs/dagapeyeff-quick-2026-10-06.md)
 - [Which languages could give the cells' letter counts, 6 October 2026](../logs/dagapeyeff-screen-2026-10-06.md)
 - [Catalan and Romanian under a keyed square, 6 October 2026](../logs/dagapeyeff-tongues-2026-10-06.md)
@@ -249,8 +258,8 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 Open families, in the order they are planned:
 
 1. **A plaintext in another language under a large transposition, or in a language not screened.** Search Catalan, Romanian and Latin under a 14-column key and under keyed four-square once a method with power exists; screen further languages.
-2. **14 by 14 turning grille with a letter key.** A joint method that recovers planted grilles with the key unknown, before the cells are searched.
-3. **No message (a hand construction).** A predeclared likelihood test between van Eykelen's tally-and-deal recipe and message-bearing models, calibrated on planted texts.
+2. **14 by 14 turning grille with a letter key.** A joint method that recovers planted grilles with the key unknown, before the cells are searched; the count-flattening key left to test is a pair code or keyed squares, since a homophonic key is excluded by counts.
+3. **No message (a hand construction).** Find an order statistic that separates a turning-grille message from a no-message dealing at 196 letters, with planted texts, since the grille is the main message system the order still allows.
 4. **A general pair table (2 by 2 Hill, any 625-pair code).** Search 2 by 2 Hill over a keyed square with planted texts.
 5. **Transposition beyond the searched widths, or with nulls and an incomplete rectangle.** A joint search with a letter key, as for width 14, at widths 11 to 13 and for double transposition above width 6.
 6. **Four-square with keyed plain squares, and two-square.** A search with power for keyed squares at 196 letters, for example fixing the Polybius labelling from the cells' structure or using a stronger model, before the cells are searched.

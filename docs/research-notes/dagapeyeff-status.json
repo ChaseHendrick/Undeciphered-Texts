@@ -140,6 +140,14 @@
       ]
     },
     {
+      "family": "Latin under a repeating coordinate shift, and under four-square with standard plain squares",
+      "status": "closed-with-power",
+      "evidence": "The shift count does not exclude Latin (1 of 9,774 draws reaches the cells), but the joint search recovers 15 of 18 planted Latin texts and the cells sit with their shuffles; four-square recovers 3 of 3 with the cells inside their shuffles. A capped homophonic key recovers only 2 of 3.",
+      "logs": [
+        "dagapeyeff-latinmore-2026-10-06.md"
+      ]
+    },
+    {
       "family": "Any transposition of ordinary English prose under a one-to-one letter key",
       "status": "excluded-by-count",
       "evidence": "A transposition keeps letter counts; none of 479,051 prose windows has the cells' flatness, few letters and rare column together.",
@@ -188,38 +196,57 @@
       ]
     },
     {
-      "family": "Bifid",
-      "status": "tested-without-power",
-      "evidence": "All periods 1 to 196; 1,109 of 2,000 shuffles reach the cells' best; no planted text.",
+      "family": "Periodic independent alphabets (a different one-to-one key at each place modulo p, p from 2 to 14)",
+      "status": "excluded-by-count",
+      "evidence": "Applied phase by phase, the error count needs at least 13 chosen errors for any held-out English window at every period; none of 1,558 windows comes within 8.",
       "logs": [
+        "dagapeyeff-phases-2026-10-06.md"
+      ]
+    },
+    {
+      "family": "Straddling checkerboard and Nihilist substitution (digit codes not made of fixed pairs)",
+      "status": "excluded-by-count",
+      "evidence": "The cells' 392 digits alternate perfectly between two classes of five digits; 300 planted texts per system under random keys reach at most 0.65 to 0.85 of that alternation, none all of it.",
+      "logs": [
+        "dagapeyeff-digitcodes-2026-10-06.md"
+      ]
+    },
+    {
+      "family": "Bifid",
+      "status": "excluded-by-count",
+      "evidence": "Under random squares bifid of every period spreads English over at least 22 symbols; the cells use 18 (0 of 7,770 draws).",
+      "logs": [
+        "dagapeyeff-mixing-2026-10-06.md",
         "dagapeyeff-bifid-2026-10-04.md"
       ]
     },
     {
       "family": "Autokey on the square",
-      "status": "tested-without-power",
-      "evidence": "37 of 40 shuffles score as well; no planted text.",
+      "status": "excluded-by-count",
+      "evidence": "Under random squares autokey spreads English over at least 23 symbols; the cells use 18 (0 of 1,110 draws).",
       "logs": [
+        "dagapeyeff-mixing-2026-10-06.md",
         "dagapeyeff-autokey-2026-10-04.md"
       ]
     },
     {
       "family": "Running key from texts in the repository, and the book's exercise as a key",
-      "status": "tested-without-power",
-      "evidence": "94,860 alignments and the exercise slid across the cells; shuffles do as well; no planted text.",
+      "status": "excluded-by-count",
+      "evidence": "An English running key spreads English over at least 24 symbols; the cells use 18 (0 of 1,110 draws). The book's exercise is such a key.",
       "logs": [
+        "dagapeyeff-mixing-2026-10-06.md",
         "dagapeyeff-running-2026-10-04.md",
         "dagapeyeff-bookkey-2026-10-04.md"
       ]
     },
     {
       "family": "Caesar, Vigenere, Beaufort, Porta and affine on the cells as letters",
-      "status": "tested-without-power",
-      "evidence": "Under the old model; shuffles score as well; no planted text.",
+      "status": "excluded-by-count",
+      "evidence": "Caesar and affine are one-to-one keys, covered by the corpus count; Vigenere modulo 25 on a keyed alphabet at periods 2 to 14 spreads English over at least 20 symbols (0 of 6,660 draws reach 18). Beaufort behaves the same way; Porta was not screened separately.",
       "logs": [
+        "dagapeyeff-mixing-2026-10-06.md",
         "dagapeyeff-solver-swarm-2026-10-04.md",
-        "dagapeyeff-classic-swarm-2026-10-04.md",
-        "dagapeyeff-anneal-2026-10-05.md"
+        "dagapeyeff-classic-swarm-2026-10-04.md"
       ]
     },
     {
@@ -236,29 +263,34 @@
     {
       "family": "14 by 14 turning grille with a letter key",
       "status": "open",
-      "evidence": "The compiled search finds 4 of 4 planted grilles with the key given and 0 of 4 with it unknown.",
+      "evidence": "The compiled search finds 4 of 4 planted grilles with the key given and 0 of 4 with it unknown, and order tests barely tell a grille message from no message (3 of 20; 4 of 12). A grille is a transposition, so under a one-to-one key the letter counts still need at least 8 chosen errors in English and 4 in Latin, and random errors never reach them; a grille stays open mainly with a count-flattening key or an unusual text. A homophonic key cannot flatten the counts either: no English window of 196 letters uses 18 letters or fewer, and no Latin window groups exactly into the cells' 18 symbol counts (the closest needs at most 3 errors).",
       "logs": [
-        "dagapeyeff-grillec-2026-10-06.md"
+        "dagapeyeff-grillec-2026-10-06.md",
+        "dagapeyeff-nomessage-2026-10-06.md",
+        "dagapeyeff-errors-2026-10-06.md",
+        "dagapeyeff-homgroup-2026-10-06.md"
       ],
-      "next": "A joint method that recovers planted grilles with the key unknown, before the cells are searched.",
+      "next": "A joint method that recovers planted grilles with the key unknown, before the cells are searched; the count-flattening key left to test is a pair code or keyed squares, since a homophonic key is excluded by counts.",
       "priority": 2
     },
     {
       "family": "No message (a hand construction)",
       "status": "open",
-      "evidence": "Van Eykelen's tally-and-deal recipe matches all 14 fingerprint statistics; statistics alone cannot decide.",
+      "evidence": "Against random dealings of the cells' own symbols the order gives a family-wise p of 0.28, with a test that flags 19 of 20 keyed-square and done-columnar messages but only 3 of 20 grille messages; a grille-specific statistic has weak power (4 of 12) and the cells sit among their dealings (25 of 40). A message now needs an order-destroying transposition and either a non-homophonic count-flattening key, chosen errors or an unusual text.",
       "logs": [
+        "dagapeyeff-nomessage-2026-10-06.md",
         "dagapeyeff-prior-work-2026-10-05.md"
       ],
-      "next": "A predeclared likelihood test between van Eykelen's tally-and-deal recipe and message-bearing models, calibrated on planted texts.",
+      "next": "Find an order statistic that separates a turning-grille message from a no-message dealing at 196 letters, with planted texts, since the grille is the main message system the order still allows.",
       "priority": 3
     },
     {
       "family": "A general pair table (2 by 2 Hill, any 625-pair code)",
       "status": "open",
-      "evidence": "The cells' different-pair count is ordinary for prose, so the count does not exclude it.",
+      "evidence": "The different-pair count does not exclude a general pair table; a 2 by 2 Hill matrix drawn at random spreads English over at least 23 symbols (0 of 1,110 draws reach the cells' 18), so random Hill keys are excluded, but a chosen 625-pair table is not.",
       "logs": [
-        "dagapeyeff-pairmap-2026-10-06.md"
+        "dagapeyeff-pairmap-2026-10-06.md",
+        "dagapeyeff-mixing-2026-10-06.md"
       ],
       "next": "Search 2 by 2 Hill over a keyed square with planted texts.",
       "priority": 4

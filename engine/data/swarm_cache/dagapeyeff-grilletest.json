@@ -1,0 +1,65 @@
+{
+  "cells": {
+    "dealings": 40,
+    "dealings_as_high": 25,
+    "statistic": 0.9543
+  },
+  "claimed_plaintext": null,
+  "planted": [
+    {
+      "dealings_as_high": 6,
+      "statistic": 1.1623
+    },
+    {
+      "dealings_as_high": 6,
+      "statistic": 1.1462
+    },
+    {
+      "dealings_as_high": 6,
+      "statistic": 1.204
+    },
+    {
+      "dealings_as_high": 0,
+      "statistic": 1.2059
+    },
+    {
+      "dealings_as_high": 0,
+      "statistic": 1.2497
+    },
+    {
+      "dealings_as_high": 0,
+      "statistic": 1.228
+    },
+    {
+      "dealings_as_high": 4,
+      "statistic": 1.2251
+    },
+    {
+      "dealings_as_high": 6,
+      "statistic": 1.1691
+    },
+    {
+      "dealings_as_high": 2,
+      "statistic": 1.1336
+    },
+    {
+      "dealings_as_high": 0,
+      "statistic": 1.1877
+    },
+    {
+      "dealings_as_high": 10,
+      "statistic": 1.1872
+    },
+    {
+      "dealings_as_high": 2,
+      "statistic": 1.1878
+    }
+  ],
+  "planted_above_all_dealings": 4,
+  "search": {
+    "dealings": 10,
+    "restarts": 4,
+    "steps": 1500
+  },
+  "solved": false
+}

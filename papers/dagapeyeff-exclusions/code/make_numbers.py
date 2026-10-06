@@ -22,7 +22,8 @@ PAPER = Path(__file__).resolve().parents[1] / "paper"
 INPUTS = (
     "corpus", "columnar", "columnar14c", "exhaustive", "exhaustive10", "double", "keywords",
     "foursquare", "pairmap", "grillec", "quick", "homophone", "additive", "direction",
-    "errors", "italian", "screen", "latin", "fskeyed",
+    "errors", "italian", "screen", "latin", "fskeyed", "latin14", "tongues", "romanian-wide",
+    "keyedsquares", "nomessage", "latinmore", "latinshift",
 )
 
 
@@ -294,6 +295,56 @@ def macros() -> dict[str, str]:
     out["laBest"] = d(la["searched"]["cells"]["best"])
     out["laBestAsHigh"] = str(la["searched"]["cells"]["shuffle_bests_as_high"])
     out["laClassicalLow"] = d(min(pl["true_per_letter"] for pl in la["planted"] if pl["case"] == "classical 0"))
+    l14 = load("latin14")
+    out["laFourteenRecovered"] = str(l14["planted_recovered"])
+    out["laFourteenPlanted"] = str(len(l14["planted"]))
+    out["laFourteenUndone"] = d(l14["searched"]["cells undone"]["per_letter"])
+    out["laFourteenUndoneHigh"] = str(l14["searched"]["cells undone"]["shuffles_as_high"])
+    out["laFourteenDone"] = d(l14["searched"]["cells done"]["per_letter"])
+    out["laFourteenDoneHigh"] = str(l14["searched"]["cells done"]["shuffles_as_high"])
+    out["laFourteenShuffles"] = str(len(l14["searched"]["cells done"]["shuffles"]))
+    out["laFourteenRegroupedHigh"] = str(max(l14["searched"][k]["shuffles_as_high"]
+                                             for k in ("regrouped undone", "regrouped done")))
+
+    tg = load("tongues")["languages"]
+    wide = load("romanian-wide")
+    out["caCells"] = d(tg["Catalan-AnCora"]["searched"]["cells"]["best"])
+    out["caCellsHigh"] = str(tg["Catalan-AnCora"]["searched"]["cells"]["shuffle_bests_as_high"])
+    out["roCells"] = d(tg["Romanian-RRT"]["searched"]["cells"]["best"])
+    out["roCellsHigh"] = str(tg["Romanian-RRT"]["searched"]["cells"]["shuffle_bests_as_high"])
+    out["roWideHigh"] = str(wide["searched"]["cells"]["shuffle_bests_as_high"])
+    out["roWideRegroupedHigh"] = str(wide["searched"]["regrouped"]["shuffle_bests_as_high"])
+    out["roWideShuffles"] = str(wide["shuffles"])
+
+    ks = load("keyedsquares")
+    out["ksRecovered"] = str(ks["planted_recovered"])
+    out["ksPlanted"] = str(len(ks["planted"]))
+    out["ksWrong"] = d(ks["highest_wrong_found"])
+    out["ksSteps"] = n(ks["search"]["steps"])
+
+    nm = load("nomessage")
+    out["nmFamilyP"] = p(nm["cells"]["family_p"], 4)
+    out["nmSmallestP"] = p(nm["cells"]["smallest_p"], 4)
+    out["nmStatistics"] = str(len(nm["statistics"]))
+    out["nmFixed"] = str(len(nm["fixed_places"]))
+    for key, name in (("nmSquare", "keyed square"), ("nmDone", "columnar 14 done"), ("nmUndone", "columnar 14 undone"),
+                      ("nmGrille", "turning grille"), ("nmShift", "repeating shift"), ("nmRandom", "random transposition")):
+        out[key] = str(nm["power"][name]["flagged"])
+    out["nmPlanted"] = str(nm["power"]["keyed square"]["planted"])
+
+    lm = load("latinmore")
+    out["lmShiftReaching"] = str(sum(r["reaching_cells"] for r in lm["shift_counts"]["rows"]))
+    out["lmShiftDraws"] = n(sum(r["draws"] for r in lm["shift_counts"]["rows"]))
+    out["lmShiftFewest"] = str(min(r["fewest_distinct"] for r in lm["shift_counts"]["rows"]))
+    out["lmFsRecovered"] = str(lm["foursquare"]["planted_recovered"])
+    out["lmFsCellsHigh"] = str(lm["foursquare"]["searched"]["cells"]["shuffles_as_high"])
+    out["lmHomRecovered"] = str(lm["homophone"]["planted_recovered"])
+    ls = load("latinshift")
+    out["lsRecovered"] = str(ls["planted_recovered"])
+    out["lsPlanted"] = str(len(ls["planted"]))
+    out["lsBest"] = d(ls["searched_best"]["per_letter"])
+    out["lsAbove"] = str(ls["cases_cells_above_all_shuffles"])
+    out["lsCases"] = str(len(ls["searched"]))
     return out
 
 
@@ -365,6 +416,26 @@ def power_table() -> str:
         f"{la['planted_recovered'] + la['planted_with_errors_recovered']}/12",
         d(min(r["found_per_letter"] for r in la["planted"]), 2), d(la["searched"]["cells"]["best"], 2),
         f"{la['searched']['cells']['shuffle_bests_as_high']}/8\\textsuperscript{{a}}")
+    l14 = load("latin14")
+    best = max(l14["searched"].values(), key=lambda r: r["per_letter"])
+    row("Latin, columnar width 14 (0 and 8 wrong cells)", f"{l14['planted_recovered']}/{len(l14['planted'])}",
+        d(min(r["found_per_letter"] for r in l14["planted"]), 2), d(best["per_letter"], 2),
+        f"{best['shuffles_as_high']}/{len(best['shuffles'])}")
+    ls = load("latinshift")
+    row("Latin, repeating shift, periods 2--14", f"{ls['planted_recovered']}/{len(ls['planted'])}",
+        d(min(r["true_per_letter"] for r in ls["planted"]), 2), d(ls["searched_best"]["per_letter"], 2),
+        f"{ls['searched_best']['shuffles_as_high']}/{len(ls['searched_best']['shuffles'])}")
+    wide = load("romanian-wide")
+    tg = load("tongues")["languages"]
+    for lang, label in (("Catalan-AnCora", "Catalan"), ("Romanian-RRT", "Romanian")):
+        x = tg[lang]
+        shuffles = (f"{wide['searched']['cells']['shuffle_bests_as_high']}/{wide['shuffles']}" if label == "Romanian"
+                    else f"{x['searched']['cells']['shuffle_bests_as_high']}/8")
+        row(f"{label} keyed square and dummy rule (0 and 8 slips)",
+            f"{x['planted_recovered'] + x['planted_with_errors_recovered']}/6",
+            d(min(r["found_per_letter"] for r in x["planted"]), 2),
+            d((wide["searched"]["cells"]["best"] if label == "Romanian" else x["searched"]["cells"]["best"]), 2),
+            shuffles + "\\textsuperscript{a}")
     head = ("\\begin{tabular}{@{}p{0.34\\linewidth}cccc@{}}\n\\toprule\n"
             "Family searched & Planted found & Weakest planted & Cells' best & Shuffles as high \\\\\n\\midrule")
     return head + "\n" + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n"
