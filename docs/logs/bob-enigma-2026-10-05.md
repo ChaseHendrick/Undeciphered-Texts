@@ -19,3 +19,11 @@ The trial ranks families. It is not a break of any intercept.
 The Wells audit was run after promotion; Wells was not used to train, select, calibrate or gate this file. 456 of 480 top one (the format 5 file scored 429), 479 top three (was 476), log loss 0.154 (was 0.278). Enigma 23 of 24 (was 7), M-209 22 of 24 (was 12).
 
 The broad probe is the limit. With plugboards and other rotors, Enigma falls from 19 of 32 to 0, called M-209 29 times. Broad M-209 rises from 15 to 30. A trial that cannot see a plugboard reads as not Enigma.
+
+## Mixing plugboard Enigma into training does not fix it
+
+`train_router(broad_enigma=...)` draws a share of the training and validation Enigma rows with plugboards and all five rotors, and leaves calibration and both fixed comparisons alone. With half the Enigma rows broad, the format 10 network scores 452 of 480 on that mixed validation split. Warm starts from it at rates 0.002, 0.005 and 0.01 score 453, 451 and 454, and each gets Enigma right 13 times in 24: the training-style half, and one broad row. None was run through the gate.
+
+With these features a plugboard Enigma and an M-209 look the same, so the network has to give that kind of text one label. Format 5 called it Enigma more often and was right on broad Enigma 19 of 32 by also calling 25 of 64 M-209 texts Enigma. Format 10 calls it M-209.
+
+A fixed-pin M-209 trial does not help the broad probe either. The broad M-209 generator draws random pins and lugs, so a trial built on the published setting is blind to it, as the Enigma trial is blind to plugboards. A prototype found the published-setting key on 2 of 6 training-style M-209 texts in 0.02 seconds a text. It could at most lift training-style M-209, which is 21 of 24 on the Doyle cases. It was not built into a feature.
