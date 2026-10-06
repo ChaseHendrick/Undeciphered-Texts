@@ -1757,6 +1757,27 @@ def consider_errors() -> dict:
     }
 
 
+def consider_italian() -> dict:
+    import json
+    from pathlib import Path
+
+    # The frozen file is read directly: rerunning the probe would fetch the Italian text.
+    path = Path(__file__).resolve().parents[1] / "data" / "swarm_cache" / "dagapeyeff-italian.json"
+    report = json.loads(path.read_text(encoding="utf-8"))
+    counts = report["counts"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "italian_allowed": False,
+        "learned": (
+            f"Manzoni's Italian needs at least {counts['fewest_errors']} chosen errors to reach the cells' counts. "
+            f"Under an Italian model planted Italian comes back {report['planted_recovered']} of 4 times, and "
+            f"{report['planted_with_errors_recovered']} of 4 with 8 slips; the cells score {report['cells_per_letter']}, "
+            f"with {report['shuffles_as_high']} of 8 shuffles as high. Not a reading."
+        ),
+    }
+
+
 def consider_pairmap() -> dict:
     report = pairmap_report()
     cells = report["texts"]["cells"]

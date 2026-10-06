@@ -76,6 +76,35 @@
       ]
     },
     {
+      "family": "A repeating shift on a keyed square (Vigenere-like), periods 2 to 14",
+      "status": "closed-with-power",
+      "evidence": "No English draw of 16,470 reaches the cells' 18 symbols; the joint search recovers 11 of 12 planted texts and the cells' best is -3.33 a letter against -2.08 or better for English.",
+      "logs": [
+        "dagapeyeff-additive-2026-10-06.md",
+        "dagapeyeff-add-2026-10-04.md",
+        "dagapeyeff-period4-2026-10-04.md"
+      ]
+    },
+    {
+      "family": "Enciphering errors at the book's rate under a one-to-one key, with or without a transposition",
+      "status": "closed-with-power",
+      "evidence": "No held-out English window reaches the cells' counts with fewer than 15 chosen errors, random errors never do, and with 8 slips planted English still scores -2.49 a letter or better against the cells' -3.90.",
+      "logs": [
+        "dagapeyeff-errors-2026-10-06.md",
+        "dagapeyeff-corpus-2026-10-05.md"
+      ]
+    },
+    {
+      "family": "Italian under a one-to-one key, with or without errors at the book's rate",
+      "status": "closed-with-power",
+      "evidence": "Manzoni's Italian needs at least 9 chosen errors to reach the cells' counts; planted Italian comes back 4 of 4, also with 8 slips, and the cells score -4.56 a letter under an Italian model, inside their shuffles.",
+      "logs": [
+        "dagapeyeff-italian-2026-10-06.md",
+        "dagapeyeff-languages-2026-10-04.md",
+        "dagapeyeff-swarm-2026-10-04.md"
+      ]
+    },
+    {
       "family": "Any transposition of ordinary English prose under a one-to-one letter key",
       "status": "excluded-by-count",
       "evidence": "A transposition keeps letter counts; none of 479,051 prose windows has the cells' flatness, few letters and rare column together.",
@@ -124,16 +153,6 @@
       ]
     },
     {
-      "family": "A repeating shift on a keyed square (Vigenere-like), periods 2 to 14",
-      "status": "closed-with-power",
-      "evidence": "No English draw of 16,470 reaches the cells' 18 symbols; the joint search recovers 11 of 12 planted texts and the cells' best is -3.33 a letter against -2.08 or better for English.",
-      "logs": [
-        "dagapeyeff-additive-2026-10-06.md",
-        "dagapeyeff-add-2026-10-04.md",
-        "dagapeyeff-period4-2026-10-04.md"
-      ]
-    },
-    {
       "family": "Delays and routes of the row and column digits",
       "status": "tested-without-power",
       "evidence": "Delay 79 reached 3 of 200 shuffles under the old model; no planted text.",
@@ -178,22 +197,13 @@
       ]
     },
     {
-      "family": "Enciphering errors at the book's rate under a one-to-one key, with or without a transposition",
-      "status": "closed-with-power",
-      "evidence": "No held-out English window reaches the cells' counts with fewer than 15 chosen errors, random errors never do, and with 8 slips planted English still scores -2.49 a letter or better against the cells' -3.90.",
-      "logs": [
-        "dagapeyeff-errors-2026-10-06.md",
-        "dagapeyeff-corpus-2026-10-05.md"
-      ]
-    },
-    {
-      "family": "A plaintext in another language (French, German, Latin, Russian transliteration)",
+      "family": "A plaintext in another language (French, German, Latin, Russian transliteration and others)",
       "status": "open",
       "evidence": "Letter counts only: French 2 of 2,000 and Italian 6 of 2,000 draws as flat. The key-invariant transposition searches cover any language; the substitution searches are English only.",
       "logs": [
         "dagapeyeff-languages-2026-10-04.md"
       ],
-      "next": "Fit quadgram models for French, German, Latin and a Russian transliteration, and rerun the keyed-square, nulls and four-square searches with planted texts in each language.",
+      "next": "Screen real text in many languages by the fewest errors that reach the cells' counts, then search any language that comes close with its own model and planted texts.",
       "priority": 1
     },
     {
