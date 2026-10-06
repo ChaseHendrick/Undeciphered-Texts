@@ -2,7 +2,7 @@
 
 **Key-Free Counts and Searches with Demonstrated Power.** Chase Hendrick, independent researcher.
 
-Status: draft manuscript, kept in this repository only. It has not been deposited or released anywhere.
+Status: draft 2 (6 October 2026), kept in this repository only. It has not been deposited or released anywhere. `notes/CHANGES.md` lists what changed from draft 1.
 
 No reading of the D'Agapeyeff cipher is claimed. Propositions 1 to 3 are proved in the manuscript; every other result is numerical. No letter string produced by a search on the cells is recorded.
 
@@ -19,6 +19,8 @@ No reading of the D'Agapeyeff cipher is claimed. Propositions 1 to 3 are proved 
 | `code/build.sh` | Regenerates the numbers and builds the PDF |
 | `notes/QUALITY.md` | Quality record against the seven-item standard |
 | `notes/RESEARCH.md` | Prior-article review: sources, reading scope, what was and was not checked |
+| `notes/review-1.md`, `notes/review-2.md` | The two adversarial readings, every finding with its verification and disposition |
+| `notes/CHANGES.md` | What changed between drafts |
 
 ## Reproduce
 
@@ -36,7 +38,7 @@ sh papers/dagapeyeff-exclusions/code/build.sh
 python3 -m unittest discover -s tests -p "test_dagapeyeff*.py"
 ```
 
-Rerunning a search means deleting its file in `engine/data/swarm_cache/` and calling its report function, for example `python3 -c "from engine.dagapeyeff_additive import additive_report; additive_report()"`. Searches take from seconds to about thirty minutes on four cores and need a C compiler. The Italian, language-screen and Latin probes fetch their outside texts (Manzoni's 1827 text at a pinned commit; Universal Dependencies treebanks) into the ignored `work/` folder; their frozen results, not the texts, are stored.
+Rerunning a search means deleting its file in `engine/data/swarm_cache/` and calling its report function, for example `python3 -c "from engine.dagapeyeff_additive import additive_report; additive_report()"`. Searches take from seconds to about thirty minutes on four cores and need a C compiler. The Italian, language-screen and Latin probes fetch their outside texts (Manzoni's 1827 text at a pinned commit; Universal Dependencies treebanks; Project Gutenberg books; The Latin Library) into the ignored `work/` folder; their frozen results, not the texts, are stored. The 98-language screen also needs `pip install unidecode` to rerun.
 
 The frozen inputs, with their SHA-256 hashes, are listed at the head of `paper/numbers.tex`.
 

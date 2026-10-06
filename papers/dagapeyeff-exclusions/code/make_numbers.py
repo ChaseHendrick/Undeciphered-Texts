@@ -24,6 +24,7 @@ INPUTS = (
     "foursquare", "pairmap", "grillec", "quick", "homophone", "additive", "direction",
     "errors", "italian", "screen", "latin", "fskeyed", "latin14", "tongues", "romanian-wide",
     "keyedsquares", "nomessage", "latinmore", "latinshift",
+    "alllanguages", "russian", "esperanto", "latinlib", "latinlibrary", "latinw", "shiftgap",
 )
 
 
@@ -345,18 +346,110 @@ def macros() -> dict[str, str]:
     out["lsBest"] = d(ls["searched_best"]["per_letter"])
     out["lsAbove"] = str(ls["cases_cells_above_all_shuffles"])
     out["lsCases"] = str(len(ls["searched"]))
+    # Draft 2: every language, more Latin, and Latin at widths 10 to 15.
+    al = load("alllanguages")
+    rows = al["languages"]
+    out["allLanguages"] = str(len(rows))
+    out["allListed"] = str(len(rows) + len(al["skipped"]))
+    out["allSkippedScript"] = str(sum(1 for s in al["skipped"] if s["reason"].startswith("script")))
+    out["allSkippedEmpty"] = str(sum(1 for s in al["skipped"] if s["reason"].startswith("no sentence")))
+    latin = rows["Latin-ITTB"]
+    others = {k: v for k, v in rows.items() if k != "Latin-ITTB"}
+    out["allLatinMedian"] = p(latin["median_errors"], 0)
+    out["allOthersMedianLow"] = p(min(v["median_errors"] for v in others.values()), 0)
+    out["allLatinRate"] = n(round(latin["within_8_per_million_windows"]))
+    second = max(others, key=lambda k: others[k]["within_8_per_million_windows"])
+    out["allSecondRate"] = n(round(others[second]["within_8_per_million_windows"]))
+    out["allSecondRateName"] = second.split("-")[0].replace("_", " ")
+    out["allSecondRateLetters"] = n(others[second]["letters"])
+    big = {k: v for k, v in others.items() if v["letters"] >= 1_000_000}
+    out["allBigRateHigh"] = n(round(max(v["within_8_per_million_windows"] for v in big.values())))
+    out["allEstonianFewest"] = str(rows["Estonian-EDT"]["fewest_errors"])
+    out["allEstonianMedian"] = p(rows["Estonian-EDT"]["median_errors"], 0)
+    ru = load("russian")
+    out["ruFewest"] = str(ru["fewest_errors"])
+    out["ruWithin"] = str(ru["windows_within_8"])
+    out["ruRows"] = str(len(ru["rows"]))
+    eo = load("esperanto")
+    out["eoFewest"] = str(eo["esperanto"]["fewest_errors"])
+    out["eoMedian"] = p(eo["esperanto"]["median_errors"], 0)
+    out["eoLetters"] = n(eo["esperanto"]["letters"])
+    lib = load("latinlib")
+    ll = load("latinlibrary")
+    out["libLetters"] = n(lib["letters"])
+    out["libSources"] = str(len(lib["sources"]))
+    out["libFewest"] = str(lib["fewest_errors"])
+    out["llLetters"] = n(ll["letters"])
+    out["llPages"] = n(ll["pages_screened"])
+    out["llFewest"] = str(ll["fewest_errors"])
+    out["llWithinFour"] = str(ll["within_4"])
+    out["latinLettersAll"] = p((lib["letters"] + ll["letters"]) / 1e6, 1)
+    out["latinWithinTwo"] = str(lib["within_2"] + ll["within_2"])
+    lw = load("latinw")
+    out["lwRecovered"] = str(lw["planted_recovered"])
+    out["lwPlanted"] = str(lw["planted"])
+    out["lwCellsLow"] = d(min(r["cells"]["per_letter"] for r in lw["rows"]), 2)
+    out["lwCellsHigh"] = d(max(r["cells"]["per_letter"] for r in lw["rows"]), 2)
+    out["lwWeakestFound"] = d(min(pl["found_per_letter"] for r in lw["rows"] for pl in r["planted"] if pl["cells_right"] >= 0.9), 2)
+    out["lwAsHighLow"] = str(min(r["cells"]["shuffles_as_high"] for r in lw["rows"]))
+    # Review 2: gaps between the cells and the weakest planted text found, and counts against chance.
+    la = load("latin")
+    out["gapLatin"] = p(min(pl["found_per_letter"] for pl in la["planted"]) - la["searched"]["cells"]["best"], 2)
+    tg = load("tongues")["languages"]
+    out["gapRomanian"] = p(min(pl["found_per_letter"] for pl in tg["Romanian-RRT"]["planted"]) - tg["Romanian-RRT"]["searched"]["cells"]["best"], 2)
+    out["gapCatalan"] = p(min(pl["found_per_letter"] for pl in tg["Catalan-AnCora"]["planted"]) - tg["Catalan-AnCora"]["searched"]["cells"]["best"], 2)
+    h = load("homophone")
+    out["gapHom"] = p(min(pl["found_per_letter"] for pl in h["planted"]) - max(r["per_letter"] for r in h["searched"].values()), 2)
+    out["roRegroupedFirst"] = d(tg["Romanian-RRT"]["searched"]["regrouped"]["best"])
+    out["roRegroupedFirstHigh"] = str(tg["Romanian-RRT"]["searched"]["regrouped"]["shuffle_bests_as_high"])
+    wide = load("romanian-wide")
+    out["roRegroupedRerun"] = d(wide["searched"]["regrouped"]["best"])
+    out["roRegroupedRerunAbove"] = str(sum(s > tg["Romanian-RRT"]["searched"]["regrouped"]["best"] for s in wide["searched"]["regrouped"]["shuffle_bests_high"]))
+    ex = load("exhaustive")["rows"]
+    out["exAboveAll"] = str(sum(r["cells"]["shuffles_as_high"] == 0 for r in ex))
+    out["exCasesAll"] = str(len(ex))
+    from math import comb
+    k, m = sum(r["cells"]["shuffles_as_high"] == 0 for r in ex), len(ex)
+    out["exAboveP"] = p(sum(comb(m, j) * 0.25 ** j * 0.75 ** (m - j) for j in range(k, m + 1)), 3)
+    out["exAboveChance"] = str(round(m / 4))
+    sg = load("shiftgap")
+    for lang, tag in (("english", "En"), ("latin", "La")):
+        x = sg[lang]
+        out[f"sg{tag}Draws"] = n(sum(r["draws"] for r in x["counts"]))
+        out[f"sg{tag}Fewest"] = str(min(r["fewest_distinct"] for r in x["counts"]))
+        out[f"sg{tag}Reaching"] = str(sum(r["reaching_cells"] for r in x["counts"]))
+        out[f"sg{tag}Recovered"] = str(x["planted_recovered"])
+        out[f"sg{tag}Planted"] = str(len(x["planted"]))
+        out[f"sg{tag}Best"] = d(x["searched_best"]["per_letter"])
+        out[f"sg{tag}Above"] = str(x["cases_cells_above_all_shuffles"])
+        out[f"sg{tag}Cases"] = str(len(x["searched"]))
+        out[f"sg{tag}Chance"] = str(round(len(x["searched"]) / 4))
+    t14 = load("tongues14")["languages"] if (CACHE / "dagapeyeff-tongues14.json").exists() else {}
+    for lang, tag in (("Catalan-AnCora", "Ca"), ("Romanian-RRT", "Ro")) if t14 else ():
+        x = t14[lang]
+        out[f"t{tag}Recovered"] = str(x["planted_recovered"])
+        out[f"t{tag}Planted"] = str(len(x["planted"]))
+        out[f"t{tag}Best"] = d(max(r["per_letter"] for r in x["searched"].values()))
+    if t14:
+        out["tAsHighLow"] = str(min(r["shuffles_as_high"] for x in t14.values() for r in x["searched"].values()))
+        out["tShuffles"] = str(len(next(iter(next(iter(t14.values()))["searched"].values()))["shuffles"]))
+    nm = load("nomessage")
+    out["nmCellNull"] = n(20_000)
+    out["nmPlantNull"] = n(2_000)
     return out
 
 
 def screen_table() -> str:
-    sc = load("screen")
+    sc = load("alllanguages")
     lines = ["\\begin{tabular}{@{}lrrrr@{}}", "\\toprule",
-             "Treebank & Letters & Fewest & Median & Within 8 \\\\", "\\midrule"]
+             "Treebank & Letters & Fewest & Median & Within 8 per million \\\\", "\\midrule"]
     for name in sc["ranked"][:12]:
         row = sc["languages"][name]
         label = name.replace("_", " ").replace("-", " (", 1) + ")"
+        if row["script"] != "latin":
+            label += ", romanized"
         lines.append(f"{label} & {n(row['letters'])} & {row['fewest_errors']} & {row['median_errors']:.0f} & "
-                     f"{n(row['within_8'])} \\\\")
+                     f"{n(round(row['within_8_per_million_windows']))} \\\\")
     lines += ["\\bottomrule", "\\end{tabular}"]
     return "\n".join(lines) + "\n"
 
@@ -388,9 +481,14 @@ def power_table() -> str:
         d(best["per_letter"], 2), f"{best['shuffles_as_high']}/{len(best['shuffles'])}")
     a = load("additive")
     best = max(a["searched"].values(), key=lambda r: r["per_letter"])
-    row("Repeating shift, periods 2--14", f"{a['planted_recovered']}/{len(a['planted'])}",
+    row("Repeating shift, periods 2--5, 7, 14", f"{a['planted_recovered']}/{len(a['planted'])}",
         d(a["planted_lowest_true"], 2), d(best["per_letter"], 2),
         f"{best['shuffles_as_high']}/{len(best['shuffles'])}")
+    sg = load("shiftgap")
+    for lang, label in (("english", "Repeating shift, periods 6, 8--13"),):
+        x = sg[lang]
+        row(label, f"{x['planted_recovered']}/{len(x['planted'])}", d(min(r["true_per_letter"] for r in x["planted"]), 2),
+            d(x["searched_best"]["per_letter"], 2), f"{x['searched_best']['shuffles_as_high']}/{len(x['searched_best']['shuffles'])}")
     q = load("quick")
     row("Nulls by place; reversed; column digits", f"{q['planted_recovered']}/{len(q['planted'])}",
         d(q["planted_lowest_true"], 2), d(q["searched_best"]["per_letter"], 2),
@@ -421,10 +519,19 @@ def power_table() -> str:
     row("Latin, columnar width 14 (0 and 8 wrong cells)", f"{l14['planted_recovered']}/{len(l14['planted'])}",
         d(min(r["found_per_letter"] for r in l14["planted"]), 2), d(best["per_letter"], 2),
         f"{best['shuffles_as_high']}/{len(best['shuffles'])}")
+    lw = load("latinw")
+    best = max((r["cells"] for r in lw["rows"]), key=lambda c: c["per_letter"])
+    row("Latin, columnar widths 10--13, 15 (0 and 8 wrong cells)", f"{lw['planted_recovered']}/{lw['planted']}",
+        d(min(pl["found_per_letter"] for r in lw["rows"] for pl in r["planted"] if pl["cells_right"] >= 0.9), 2),
+        d(best["per_letter"], 2), f"{best['shuffles_as_high']}/{len(best['shuffles'])}")
     ls = load("latinshift")
-    row("Latin, repeating shift, periods 2--14", f"{ls['planted_recovered']}/{len(ls['planted'])}",
+    row("Latin, repeating shift, periods 2--5, 7, 14", f"{ls['planted_recovered']}/{len(ls['planted'])}",
         d(min(r["true_per_letter"] for r in ls["planted"]), 2), d(ls["searched_best"]["per_letter"], 2),
         f"{ls['searched_best']['shuffles_as_high']}/{len(ls['searched_best']['shuffles'])}")
+    x = sg["latin"]
+    row("Latin, repeating shift, periods 6, 8--13", f"{x['planted_recovered']}/{len(x['planted'])}",
+        d(min(r["true_per_letter"] for r in x["planted"]), 2), d(x["searched_best"]["per_letter"], 2),
+        f"{x['searched_best']['shuffles_as_high']}/{len(x['searched_best']['shuffles'])}")
     wide = load("romanian-wide")
     tg = load("tongues")["languages"]
     for lang, label in (("Catalan-AnCora", "Catalan"), ("Romanian-RRT", "Romanian")):
@@ -436,13 +543,47 @@ def power_table() -> str:
             d(min(r["found_per_letter"] for r in x["planted"]), 2),
             d((wide["searched"]["cells"]["best"] if label == "Romanian" else x["searched"]["cells"]["best"]), 2),
             shuffles + "\\textsuperscript{a}")
+    t14 = load("tongues14")["languages"] if (CACHE / "dagapeyeff-tongues14.json").exists() else {}
+    for lang, label in (("Catalan-AnCora", "Catalan"), ("Romanian-RRT", "Romanian")) if t14 else ():
+        x = t14[lang]
+        best = max(x["searched"].values(), key=lambda r: r["per_letter"])
+        row(f"{label}, columnar width 14 (0 and 8 wrong cells)", f"{x['planted_recovered']}/{len(x['planted'])}",
+            d(min(r["found_per_letter"] for r in x["planted"] if r["cells_right"] >= 0.9), 2), d(best["per_letter"], 2),
+            f"{best['shuffles_as_high']}/{len(best['shuffles'])}")
     head = ("\\begin{tabular}{@{}p{0.34\\linewidth}cccc@{}}\n\\toprule\n"
             "Family searched & Planted found & Weakest planted & Cells' best & Shuffles as high \\\\\n\\midrule")
     return head + "\n" + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n"
 
 
+def power_gaps() -> dict[str, float]:
+    """Weakest planted score minus the cells' best, for each row of the power table."""
+    import re
+
+    gaps = {}
+    for line in power_table().splitlines():
+        found = re.findall(r"\\ensuremath\{(-?[0-9.]+)\}", line)
+        if len(found) >= 2:
+            gaps[line.split("&")[0].strip()] = float(found[0]) - float(found[1])
+    return gaps
+
+
+def gap_macros() -> dict[str, str]:
+    gaps = power_gaps()
+    latin = [v for k, v in gaps.items() if k.startswith("Latin")]
+    english = [v for k, v in gaps.items() if not k.startswith(("Latin", "Romanian", "Catalan", "Italian"))
+               and not k.startswith("Homophonic")]
+    return {
+        "gapLatinLow": p(min(latin)), "gapLatinHigh": p(max(latin)),
+        "gapRomanianTab": p(next(v for k, v in gaps.items() if k.startswith("Romanian"))),
+        "gapHomTab": p(next(v for k, v in gaps.items() if k.startswith("Homophonic"))),
+        "gapEnglishLow": p(min(english)),
+        "gapUnderOne": str(sum(v < 1 for v in gaps.values())),
+        "gapRows": str(len(gaps)),
+    }
+
+
 def render() -> dict[str, str]:
-    values = macros()
+    values = macros() | gap_macros()
     lines = ["% Written by ../code/make_numbers.py from engine/data/swarm_cache. Do not edit by hand."]
     for name in INPUTS:
         digest = hashlib.sha256((CACHE / f"dagapeyeff-{name}.json").read_bytes()).hexdigest()
