@@ -51,7 +51,7 @@
     "title": "Excluding Classical Cipher Families for the 1939 D'Agapeyeff Challenge",
     "stage": "Draft 2, 6 October 2026",
     "deposited": false,
-    "status": "Both internal readings are done: the proofs reading and a second reading of the numbers, controls and claims, whose 17 findings were all verified and fixed in draft 2. Draft 2 adds the 98-language screen, 59.8 million letters of Latin, Latin at column widths 10 to 15, and the remaining shift periods. Not peer reviewed, not deposited, no DOI.",
+    "status": "Both internal readings are done: the proofs reading and a second reading of the numbers, controls and claims, whose 17 findings were all verified and fixed in draft 2. Draft 2 adds the 98-language screen, 59.8 million letters of Latin, Latin at column widths 10 to 15, and the remaining shift periods 6 and 8 to 13. Not peer reviewed, not deposited, no DOI.",
     "folder": "papers/dagapeyeff-exclusions"
   },
   "charts": [
@@ -341,11 +341,12 @@
     {
       "family": "A repeating shift on a keyed square (Vigenere-like), periods 2 to 14",
       "status": "closed-with-power",
-      "evidence": "No English draw of 16,470 reaches the cells' 18 symbols; the joint search recovers 11 of 12 planted texts and the cells' best is -3.33 a letter against -2.08 or better for English.",
+      "evidence": "No English draw at any period from 2 to 14 reaches the cells' 18 symbols (0 of 16,470, then 0 of 2,331 at periods 6 and 8 to 13); the joint search recovers 11 of 12 planted texts at periods 2 to 5, 7 and 14 and 26 of 28 at the others, and the cells' best is -3.39 a letter against -2.16 or better for English.",
       "logs": [
         "dagapeyeff-additive-2026-10-06.md",
         "dagapeyeff-add-2026-10-04.md",
-        "dagapeyeff-period4-2026-10-04.md"
+        "dagapeyeff-period4-2026-10-04.md",
+        "dagapeyeff-shiftgap-2026-10-06.md"
       ]
     },
     {
@@ -413,9 +414,10 @@
     {
       "family": "Latin under a repeating coordinate shift, and under four-square with standard plain squares",
       "status": "closed-with-power",
-      "evidence": "The shift count does not exclude Latin (1 of 9,774 draws reaches the cells), but the joint search recovers 15 of 18 planted Latin texts and the cells sit with their shuffles; four-square recovers 3 of 3 with the cells inside their shuffles. A capped homophonic key recovers only 2 of 3.",
+      "evidence": "The shift count does not exclude Latin (1 of 9,774 draws reaches the cells), but the joint search recovers 15 of 18 planted Latin texts and the cells sit with their shuffles; four-square recovers 3 of 3 with the cells inside their shuffles. A capped homophonic key recovers only 2 of 3. At periods 6 and 8 to 13 the search recovers 25 of 28 planted Latin texts and the cells' best, -4.02, sits with their shuffles (7 of 28 cases above all three, as chance gives).",
       "logs": [
-        "dagapeyeff-latinmore-2026-10-06.md"
+        "dagapeyeff-latinmore-2026-10-06.md",
+        "dagapeyeff-shiftgap-2026-10-06.md"
       ]
     },
     {

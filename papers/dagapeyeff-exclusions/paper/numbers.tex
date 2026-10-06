@@ -25,6 +25,13 @@
 % dagapeyeff-nomessage.json sha256 86a68123ba4ee443ff332bbfee54daeaa71ea20ad2606b460f20f89227c78830
 % dagapeyeff-latinmore.json sha256 6ec5a4c3eac5a9b1d9af2b7ac3d9231cb3209e0c37ef1421baeed4a32238b8ee
 % dagapeyeff-latinshift.json sha256 2e145ddf575030e2d1f88d6ebc5e326c647e867ad7f204b611ac615e45828b33
+% dagapeyeff-alllanguages.json sha256 7cfae933a6193855bc173a684c73526a55c2d68f04202b2016fcf520791d2a27
+% dagapeyeff-russian.json sha256 078d368d80972a143ee2bc6e0ab9e76a1ac834f60a2bf7d36de40df5726a7c2c
+% dagapeyeff-esperanto.json sha256 e8a08c70f4118c4b26ed9edfccba248c6e646b5d132043999d091e0fb53aa014
+% dagapeyeff-latinlib.json sha256 1df03e9388d227e1eb9cc30ec8a7562416686ab0066c2825d9eacdf8b0709e66
+% dagapeyeff-latinlibrary.json sha256 a5125e5cdf46777f46e13971bfe0f275081a3ffcf35a321421d7b34757e08842
+% dagapeyeff-latinw.json sha256 bb4802299aadd20fb53d0a7d18b73ffda3b8030d83827f94d54661d43e14301e
+% dagapeyeff-shiftgap.json sha256 797856a17f1d5956103f243938b6c1d6d66615f2bd68af437e6bef88d3959120
 \newcommand{\addAsHighMin}{0}
 \newcommand{\addBest}{\ensuremath{-3.3261}}
 \newcommand{\addCases}{24}
@@ -39,6 +46,19 @@
 \newcommand{\addSteps}{4{,}000{,}000}
 \newcommand{\addTopRows}{177}
 \newcommand{\addTopRowsEnglish}{178}
+\newcommand{\allBigRateHigh}{112}
+\newcommand{\allEstonianFewest}{4}
+\newcommand{\allEstonianMedian}{\ensuremath{28}}
+\newcommand{\allLanguages}{98}
+\newcommand{\allLatinMedian}{\ensuremath{22}}
+\newcommand{\allLatinRate}{1{,}201}
+\newcommand{\allListed}{134}
+\newcommand{\allOthersMedianLow}{\ensuremath{25}}
+\newcommand{\allSecondRate}{394}
+\newcommand{\allSecondRateLetters}{58{,}624}
+\newcommand{\allSecondRateName}{Buryat}
+\newcommand{\allSkippedEmpty}{12}
+\newcommand{\allSkippedScript}{22}
 \newcommand{\caCells}{\ensuremath{-3.4667}}
 \newcommand{\caCellsHigh}{7}
 \newcommand{\cellsChi}{\ensuremath{34.23}}
@@ -69,6 +89,9 @@
 \newcommand{\dirTransforms}{363}
 \newcommand{\doubleBelow}{50}
 \newcommand{\doubleCases}{50}
+\newcommand{\eoFewest}{9}
+\newcommand{\eoLetters}{948{,}257}
+\newcommand{\eoMedian}{\ensuremath{28}}
 \newcommand{\errBestFewest}{15}
 \newcommand{\errBestMedian}{\ensuremath{29}}
 \newcommand{\errCells}{\ensuremath{-3.9003}}
@@ -80,6 +103,10 @@
 \newcommand{\errRandomFewest}{13}
 \newcommand{\errSixteenLow}{\ensuremath{-3.0820}}
 \newcommand{\errWindows}{5{,}116}
+\newcommand{\exAboveAll}{10}
+\newcommand{\exAboveChance}{6}
+\newcommand{\exAboveP}{\ensuremath{0.055}}
+\newcommand{\exCasesAll}{24}
 \newcommand{\exhaustiveCases}{24}
 \newcommand{\exhaustiveCellsLargest}{\ensuremath{0.0698}}
 \newcommand{\exhaustivePlantedSmallest}{\ensuremath{0.0345}}
@@ -104,6 +131,17 @@
 \newcommand{\fsSteps}{1{,}000{,}000}
 \newcommand{\fskReaching}{15}
 \newcommand{\fskWindows}{15}
+\newcommand{\gapCatalan}{\ensuremath{1.14}}
+\newcommand{\gapEnglishLow}{\ensuremath{1.14}}
+\newcommand{\gapHom}{\ensuremath{0.89}}
+\newcommand{\gapHomTab}{\ensuremath{0.88}}
+\newcommand{\gapLatin}{\ensuremath{0.68}}
+\newcommand{\gapLatinHigh}{\ensuremath{1.86}}
+\newcommand{\gapLatinLow}{\ensuremath{0.45}}
+\newcommand{\gapRomanian}{\ensuremath{0.48}}
+\newcommand{\gapRomanianTab}{\ensuremath{0.48}}
+\newcommand{\gapRows}{17}
+\newcommand{\gapUnderOne}{6}
 \newcommand{\grilleJoint}{0 of 4}
 \newcommand{\grilleJointHolesHigh}{18}
 \newcommand{\grilleJointSteps}{8{,}000{,}000}
@@ -156,6 +194,15 @@
 \newcommand{\laSquare}{\ensuremath{-4.5513}}
 \newcommand{\laSquareAsHigh}{5}
 \newcommand{\laTrainLetters}{1{,}983{,}658}
+\newcommand{\latinLettersAll}{\ensuremath{59.8}}
+\newcommand{\latinWithinTwo}{0}
+\newcommand{\libFewest}{4}
+\newcommand{\libLetters}{8{,}944{,}241}
+\newcommand{\libSources}{21}
+\newcommand{\llFewest}{3}
+\newcommand{\llLetters}{50{,}826{,}522}
+\newcommand{\llPages}{1{,}516}
+\newcommand{\llWithinFour}{91}
 \newcommand{\lmFsCellsHigh}{7}
 \newcommand{\lmFsRecovered}{3}
 \newcommand{\lmHomRecovered}{2}
@@ -167,10 +214,18 @@
 \newcommand{\lsCases}{36}
 \newcommand{\lsPlanted}{18}
 \newcommand{\lsRecovered}{15}
+\newcommand{\lwAsHighLow}{1}
+\newcommand{\lwCellsHigh}{\ensuremath{-3.57}}
+\newcommand{\lwCellsLow}{\ensuremath{-4.21}}
+\newcommand{\lwPlanted}{40}
+\newcommand{\lwRecovered}{39}
+\newcommand{\lwWeakestFound}{\ensuremath{-2.95}}
+\newcommand{\nmCellNull}{20{,}000}
 \newcommand{\nmDone}{19}
 \newcommand{\nmFamilyP}{\ensuremath{0.2814}}
 \newcommand{\nmFixed}{8}
 \newcommand{\nmGrille}{3}
+\newcommand{\nmPlantNull}{2{,}000}
 \newcommand{\nmPlanted}{20}
 \newcommand{\nmRandom}{1}
 \newcommand{\nmShift}{10}
@@ -196,9 +251,16 @@
 \newcommand{\quickVariants}{28}
 \newcommand{\roCells}{\ensuremath{-3.1899}}
 \newcommand{\roCellsHigh}{1}
+\newcommand{\roRegroupedFirst}{\ensuremath{-3.3444}}
+\newcommand{\roRegroupedFirstHigh}{0}
+\newcommand{\roRegroupedRerun}{\ensuremath{-3.4164}}
+\newcommand{\roRegroupedRerunAbove}{5}
 \newcommand{\roWideHigh}{13}
 \newcommand{\roWideRegroupedHigh}{12}
 \newcommand{\roWideShuffles}{40}
+\newcommand{\ruFewest}{9}
+\newcommand{\ruRows}{12}
+\newcommand{\ruWithin}{0}
 \newcommand{\screenFrenchFewest}{8}
 \newcommand{\screenGermanFewest}{12}
 \newcommand{\screenLanguages}{39}
@@ -209,6 +271,24 @@
 \newcommand{\screenPerseusFewest}{6}
 \newcommand{\screenPerseusWithin}{82}
 \newcommand{\screenRussianFewest}{13}
+\newcommand{\sgEnAbove}{5}
+\newcommand{\sgEnBest}{\ensuremath{-3.3917}}
+\newcommand{\sgEnCases}{28}
+\newcommand{\sgEnChance}{7}
+\newcommand{\sgEnDraws}{2{,}331}
+\newcommand{\sgEnFewest}{23}
+\newcommand{\sgEnPlanted}{28}
+\newcommand{\sgEnReaching}{0}
+\newcommand{\sgEnRecovered}{26}
+\newcommand{\sgLaAbove}{7}
+\newcommand{\sgLaBest}{\ensuremath{-4.0202}}
+\newcommand{\sgLaCases}{28}
+\newcommand{\sgLaChance}{7}
+\newcommand{\sgLaDraws}{22{,}806}
+\newcommand{\sgLaFewest}{18}
+\newcommand{\sgLaPlanted}{28}
+\newcommand{\sgLaReaching}{0}
+\newcommand{\sgLaRecovered}{25}
 \newcommand{\spacesDistinct}{13}
 \newcommand{\spacesEnglishFewest}{19}
 \newcommand{\spacesEnglishMax}{\ensuremath{8.5}}
