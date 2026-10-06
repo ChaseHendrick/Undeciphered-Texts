@@ -143,13 +143,14 @@ def status_block(data: dict) -> str:
     ]
     for status in _ORDER:
         lines.append(f"| {_LABEL[status]} | {counts[status]} | {_percent(counts[status], total)} percent |")
-    lines += ["", "| Family | Status | Evidence |", "| --- | --- | --- |"]
     for status in _ORDER:
-        for family in sorted(data["families"], key=lambda f: f.get("priority", 0)):
-            if family["status"] != status:
-                continue
+        families = sorted((f for f in data["families"] if f["status"] == status), key=lambda f: f.get("priority", 0))
+        if not families:
+            continue
+        lines += ["", f"### {_LABEL[status]} ({len(families)})", "", "| Family | Evidence |", "| --- | --- |"]
+        for family in families:
             links = ", ".join(f"[log](../logs/{name})" for name in family["logs"])
-            lines.append(f"| {family['family']} | {_LABEL[status]} | {family['evidence']} {links} |")
+            lines.append(f"| {family['family']} | {family['evidence']} {links} |")
     lines += ["", "Generated from [`dagapeyeff-status.json`](dagapeyeff-status.json) by `tools/refresh_docs.py`."]
     return "\n".join(lines)
 
