@@ -93,6 +93,8 @@ from engine.dagapeyeff_double import double_report
 from engine.dagapeyeff_exhaustive10 import exhaustive10_report
 from engine.dagapeyeff_foursquare import foursquare_report
 from engine.dagapeyeff_additive import additive_report
+from engine.dagapeyeff_quick import quick_report
+from engine.dagapeyeff_homophone import homophone_report
 from engine.dagapeyeff_pairmap import pairmap_report
 from engine.dagapeyeff_columnar14c import columnar14c_report
 from engine.dagapeyeff_monotone import monotone_report
@@ -1698,6 +1700,41 @@ def consider_additive() -> dict:
             f"{report['planted_recovered']} of {len(report['planted'])} planted texts; the cells and the regrouping "
             f"reach {report['searched_best']} a letter at best, where planted English is "
             f"{report['planted_lowest_true']} or higher. Not a reading."
+        ),
+    }
+
+
+def consider_quick() -> dict:
+    report = quick_report()
+    spaces = report["spaces"]
+    best = report["searched_best"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "quick_allowed": False,
+        "learned": (
+            f"Nulls by place, the cells reversed and the column digits alone, solved as a keyed square: planted "
+            f"English comes back {report['planted_recovered']} of {len(report['planted'])} times at "
+            f"{report['planted_lowest_true']} a letter or better, and the cells' best is {best['per_letter']} "
+            f"({best['variant']}). Rare symbols as spaces would make words {spaces['mean_word_length']} letters long. "
+            "Not a reading."
+        ),
+    }
+
+
+def consider_homophone() -> dict:
+    report = homophone_report()
+    rows = report["searched"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "homophone_allowed": False,
+        "learned": (
+            f"A many-to-one key, capped at {report['search']['letter_cap']} places a letter, recovers "
+            f"{report['planted_recovered']} of {len(report['planted'])} planted homophonic texts. The cells score "
+            f"{rows['cells']['per_letter']} ({rows['cells']['shuffles_as_high']} of 8 shuffles as high) and the "
+            f"regrouping {rows['regrouped']['per_letter']} ({rows['regrouped']['shuffles_as_high']} of 8), against "
+            f"{report['planted_lowest_true']} for planted English. Not a reading."
         ),
     }
 

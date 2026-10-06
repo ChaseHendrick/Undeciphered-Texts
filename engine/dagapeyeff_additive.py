@@ -122,7 +122,8 @@ def _tables():
     return logp, letters
 
 
-def anneal(cells: list[int], period: int, mode: str, seed: int) -> tuple[float, list[int]]:
+def anneal(cells: list[int], period: int, mode: str, seed: int,
+           restarts: int = _RESTARTS, steps: int = _STEPS) -> tuple[float, list[int]]:
     """Best quadgram score per letter, and the letters behind it as integers."""
     lib = _kernel()
     logp, letters = _tables()
@@ -133,7 +134,7 @@ def anneal(cells: list[int], period: int, mode: str, seed: int) -> tuple[float, 
     dc = ints()
     out = ints()
     total = lib.additive_anneal(ints(*cells), n, period, MODES[mode], logp, letters, ctypes.c_ulonglong(seed),
-                                _RESTARTS, _STEPS, ctypes.c_double(_TEMPERATURE), ctypes.c_double(_KEY_SHARE),
+                                restarts, steps, ctypes.c_double(_TEMPERATURE), ctypes.c_double(_KEY_SHARE),
                                 square, dr, dc, out)
     return total / (n - 3), list(out)
 
