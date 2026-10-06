@@ -53,4 +53,6 @@ Also seen, not checked: Nobel Constant's book *Solving the Unsolvable D'Agapeyef
 
 Not another score on the same 196 cells. Something from outside: d'Agapeyeff's papers or letters, the 1952 and 1959 *Cryptogram* notes if they report anything from him, a second message in the same system, or a crib with a source. Inside the cells, the one open technical job is a search that recovers planted 14-column, grille or double-transposition texts with an unknown key, with errors planted at the book's own rate, before it is run on the cells.
 
+Update, 6 October 2026: the 14-column part is done. A compiled joint search recovered 18 of 18 planted texts, 6 with 8 wrong cells, and the cells stayed inside their shuffles ([note](dagapeyeff-columnar14c-2026-10-06.md)). The compiled grille search still finds a planted grille only with the key given ([note](dagapeyeff-grillec-2026-10-06.md)).
+
 No letter string from this repository's searches is stored.

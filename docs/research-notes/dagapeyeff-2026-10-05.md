@@ -175,7 +175,10 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Two blocks copy a square](../logs/dagapeyeff-tile-2026-10-05.md)
 - [The two runs of three share a column](../logs/dagapeyeff-triples-2026-10-05.md)
 - [Two spaced triples share a column](../logs/dagapeyeff-twospace-2026-10-05.md)
+- [Width-14 columnar with a letter key, compiled, 6 October 2026](../logs/dagapeyeff-columnar14c-2026-10-06.md)
 - [Four-square on the cells, 6 October 2026](../logs/dagapeyeff-foursquare-2026-10-06.md)
+- [A compiled turning-grille search: power only, 6 October 2026](../logs/dagapeyeff-grillec-2026-10-06.md)
+- [Different pairs under any one-to-one pair cipher, 6 October 2026](../logs/dagapeyeff-pairmap-2026-10-06.md)
 <!-- generated-logs:end -->
 
 ## Proposed next comparison

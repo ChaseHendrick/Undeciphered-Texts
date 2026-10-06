@@ -4,15 +4,21 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
-## Session 6 October 2026, four-square
+## Session 6 October 2026, four-square, pair counts, width 14 and the grille
 
-Started from `76d32cb` on `main`.
+Started from `bbcae59` on `main`. The four-square search the previous session left running is now frozen, and three more were added. The cache holds 99 files. The board page, the checks count and the provenance chain were regenerated; the chain ends at `cac84e8e0cdfc52c48a3d3a5896971fcc3412a1743e46f8d3e0a4d525d5d9ad7`.
 
-Four-square fixes how many symbols each side of a cipher pair can use, whatever the key. The printed cells use 13 and 18. Held-out English never has fewer than 19 on its larger side, even with all four squares keyed (0 of 18,500 draws reach the cells). Four-square and horizontal two-square on ordinary English are excluded for the printed cells. The regrouping (21 and 19) is not.
+Four-square fixes how many symbols each side of a cipher pair can use, whatever the key. The printed cells use 13 and 18. Held-out English with both plain squares keyed never has fewer than 20 on its larger side (0 of 7,400 draws reach the cells). The previous note quoted a scratch run of 18,500 draws with a floor of 19; the frozen run draws 20 a window. `engine.dagapeyeff_foursquare.foursquare_report` recovers 4 of 6 planted texts. The cells score -3.56 and -3.55 a letter and the regrouping -3.34 and -3.44, inside their shuffles, against planted English at -2.02 or higher. See `docs/logs/dagapeyeff-foursquare-2026-10-06.md`.
 
-`engine/dagapeyeff_foursquare.c` is a compiled annealing kernel; it recovered 4 of 4 planted 196-letter texts in a scratch run. `engine.dagapeyeff_foursquare.foursquare_report` (search on the cells and the regrouping with shuffle controls) was not finished and is not frozen. Run it next, then add a test, update the cache count, the board page and the provenance chain. See `docs/logs/dagapeyeff-foursquare-2026-10-06.md`.
+`engine.dagapeyeff_pairmap` counts different pairs, which any one-to-one pair cipher keeps (four-square, two-square, Playfair after padding, 2 by 2 Hill, any 625-pair table). The cells' 79 and 80 are ordinary for prose (29,336 and 11,539 of 479,051 windows). The regrouping's 85 is reached by 325 and 161 windows. A code giving each letter one fixed pair of cells is excluded outright. See `docs/logs/dagapeyeff-pairmap-2026-10-06.md`.
 
-Do not describe the count or the search as a decipherment.
+`engine/dagapeyeff_columnar14c.c` anneals a width-14 column order and a letter key together. `engine.dagapeyeff_columnar14c.columnar14c_report` (8 restarts of 16,000,000 steps, four threads, about 25 minutes) recovers 18 of 18 planted 196-letter texts, both directions, 6 of them with 8 wrong cells. The cells and the regrouping score -3.25 to -3.64 a letter, 5 to 12 of 20 shuffles as high, where the weakest planted text was found at -2.63. A complete 14-column transposition over a letter key is closed for the cells with shown power. Rodrigues had needed about 240 letters, and the Python search found 0 of 3. See `docs/logs/dagapeyeff-columnar14c-2026-10-06.md`.
+
+`engine/dagapeyeff_grillec.c` is the same idea for the 14 by 14 turning grille. `engine.dagapeyeff_grillec.grillec_report` recovers 4 of 4 planted grilles with the key given, 0 of 4 with grille and key unknown, and 0 of 4 from a key seeded on row neighbours (a grille leaves about one row neighbour in four as a plaintext pair). A key with 59 percent of cells right was still not enough. The cells were not searched. The grille is the remaining open large-key class; it needs a better joint method, not more steps. See `docs/logs/dagapeyeff-grillec-2026-10-06.md`.
+
+The kernels keep their random state per call, so the thread count does not change a frozen result. Running a report again after deleting its cache file takes minutes to half an hour.
+
+Do not describe any count or search here as a decipherment.
 
 ## Session 5 October 2026, a larger English model, a grille, and an Enigma trial for Bob
 
