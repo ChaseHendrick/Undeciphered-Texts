@@ -31,7 +31,7 @@ NEXT_START = "<!-- generated-next:start -->"
 NEXT_END = "<!-- generated-next:end -->"
 README_STATUS_START = "<!-- dagapeyeff-status:start -->"
 README_STATUS_END = "<!-- dagapeyeff-status:end -->"
-_ORDER = ("closed-with-power", "excluded-by-count", "tested-without-power", "open")
+_ORDER = ("open", "tested-without-power", "excluded-by-count", "closed-with-power")
 _LABEL = {
     "closed-with-power": "Closed with shown power",
     "excluded-by-count": "Excluded by a count",
@@ -143,13 +143,14 @@ def status_block(data: dict) -> str:
     ]
     for status in _ORDER:
         lines.append(f"| {_LABEL[status]} | {counts[status]} | {_percent(counts[status], total)} percent |")
-    lines += ["", "| Family | Status | Evidence |", "| --- | --- | --- |"]
     for status in _ORDER:
-        for family in data["families"]:
-            if family["status"] != status:
-                continue
+        families = sorted((f for f in data["families"] if f["status"] == status), key=lambda f: f.get("priority", 0))
+        if not families:
+            continue
+        lines += ["", f"### {_LABEL[status]} ({len(families)})", "", "| Family | Evidence |", "| --- | --- |"]
+        for family in families:
             links = ", ".join(f"[log](../logs/{name})" for name in family["logs"])
-            lines.append(f"| {family['family']} | {_LABEL[status]} | {family['evidence']} {links} |")
+            lines.append(f"| {family['family']} | {family['evidence']} {links} |")
     lines += ["", "Generated from [`dagapeyeff-status.json`](dagapeyeff-status.json) by `tools/refresh_docs.py`."]
     return "\n".join(lines)
 
