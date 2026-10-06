@@ -1796,6 +1796,45 @@ def consider_direction() -> dict:
     }
 
 
+def _frozen_file(name: str) -> dict:
+    import json
+    from pathlib import Path
+
+    # Read directly: rerunning these probes would fetch outside text.
+    path = Path(__file__).resolve().parents[1] / "data" / "swarm_cache" / f"dagapeyeff-{name}.json"
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def consider_screen() -> dict:
+    report = _frozen_file("screen")
+    closest = report["closest"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "screen_allowed": False,
+        "learned": (
+            f"Of {len(report['languages'])} languages, {closest['treebank']} comes closest to the cells' letter "
+            f"counts: {closest['fewest_errors']} errors at its closest window, {closest['median_errors']} at the "
+            "median. A count fit is a reason to search, not a reading."
+        ),
+    }
+
+
+def consider_latin() -> dict:
+    report = _frozen_file("latin")
+    cells = report["searched"]["cells"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "latin_allowed": False,
+        "learned": (
+            f"Under a Latin model planted Latin comes back {report['planted_recovered']} of 6 times, and "
+            f"{report['planted_with_errors_recovered']} of 6 with 8 slips. The cells' best is {cells['best']} "
+            f"({cells['best_variant']}), and {cells['shuffle_bests_as_high']} of 8 shuffles reach it. Not a reading."
+        ),
+    }
+
+
 def consider_pairmap() -> dict:
     report = pairmap_report()
     cells = report["texts"]["cells"]

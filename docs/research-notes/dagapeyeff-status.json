@@ -115,6 +115,15 @@
       ]
     },
     {
+      "family": "Latin under a one-to-one key, with or without the book's dummy rule and errors",
+      "status": "closed-with-power",
+      "evidence": "Latin is the closest of 39 languages by letter counts (4 errors at its closest window), but planted Latin comes back 6 of 6, also with 8 slips, and 7 of 8 shuffles reach the cells' best under a Latin model.",
+      "logs": [
+        "dagapeyeff-latin-2026-10-06.md",
+        "dagapeyeff-screen-2026-10-06.md"
+      ]
+    },
+    {
       "family": "Any transposition of ordinary English prose under a one-to-one letter key",
       "status": "excluded-by-count",
       "evidence": "A transposition keeps letter counts; none of 479,051 prose windows has the cells' flatness, few letters and rare column together.",
@@ -198,13 +207,14 @@
       ]
     },
     {
-      "family": "A plaintext in another language (French, German, Latin, Russian transliteration and others)",
+      "family": "A plaintext in another language under a large transposition, or in a language not screened",
       "status": "open",
-      "evidence": "Letter counts only: French 2 of 2,000 and Italian 6 of 2,000 draws as flat. The key-invariant transposition searches cover any language; the substitution searches are English only.",
+      "evidence": "39 languages were screened by letter counts; Latin is closest, then Catalan and Romanian. Italian and Latin under a one-to-one key are closed; the 14-column and grille searches were run with English models only.",
       "logs": [
+        "dagapeyeff-screen-2026-10-06.md",
         "dagapeyeff-languages-2026-10-04.md"
       ],
-      "next": "Screen real text in many languages by the fewest errors that reach the cells' counts, then search any language that comes close with its own model and planted texts.",
+      "next": "Rerun the width-14 joint search under the Latin model, with planted Latin, then Catalan and Romanian.",
       "priority": 1
     },
     {
