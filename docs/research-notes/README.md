@@ -15,7 +15,7 @@ The case table is generated. `tools/refresh_docs.py` rewrites it from the `index
 | [Phaistos disc](phaistos-disc-2026-10-03.md) | Undeciphered inscription on one object | Heraklion Museum object description | Reconcile sign inventories before language fitting |
 | [Zodiac Z13 and Z32](zodiac-short-ciphers-2026-10-03.md) | Short cryptograms with many compatible readings | FBI documents and the Z340 solvers' account | Measure ambiguity; reproduce Z340 separately as a control |
 | [Dorabella](dorabella-2026-10-03.md) | Short historical cipher with ambiguous glyph orientations | Authored experimental paper and its facsimile | Compare transcription variants with matched synthetic controls |
-| [D'Agapeyeff challenge](dagapeyeff-2026-10-05.md) | 1939 digit challenge with no public reading; measured structure is not a plaintext | Wikipedia digit block used by the engine, plus the solved exercise as the control | Rerun the width-14 joint search under the Latin model, with planted Latin, then Catalan and Romanian |
+| [D'Agapeyeff challenge](dagapeyeff-2026-10-05.md) | 1939 digit challenge with no public reading; measured structure is not a plaintext | Wikipedia digit block used by the engine, plus the solved exercise as the control | Search Catalan, Romanian and Latin under a 14-column key and under keyed four-square once a method with power exists; screen further languages |
 <!-- case-index:end -->
 
 The case notes carry the citations supporting this table. The [machine-readable source register](source-register-2026-10-03.json) records access limitations and the claim each source supports. This dated collection does not certify current universal agreement or the absence of every proposed solution.
