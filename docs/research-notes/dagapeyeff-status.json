@@ -213,37 +213,40 @@
     },
     {
       "family": "Bifid",
-      "status": "tested-without-power",
-      "evidence": "All periods 1 to 196; 1,109 of 2,000 shuffles reach the cells' best; no planted text.",
+      "status": "excluded-by-count",
+      "evidence": "Under random squares bifid of every period spreads English over at least 22 symbols; the cells use 18 (0 of 7,770 draws).",
       "logs": [
+        "dagapeyeff-mixing-2026-10-06.md",
         "dagapeyeff-bifid-2026-10-04.md"
       ]
     },
     {
       "family": "Autokey on the square",
-      "status": "tested-without-power",
-      "evidence": "37 of 40 shuffles score as well; no planted text.",
+      "status": "excluded-by-count",
+      "evidence": "Under random squares autokey spreads English over at least 23 symbols; the cells use 18 (0 of 1,110 draws).",
       "logs": [
+        "dagapeyeff-mixing-2026-10-06.md",
         "dagapeyeff-autokey-2026-10-04.md"
       ]
     },
     {
       "family": "Running key from texts in the repository, and the book's exercise as a key",
-      "status": "tested-without-power",
-      "evidence": "94,860 alignments and the exercise slid across the cells; shuffles do as well; no planted text.",
+      "status": "excluded-by-count",
+      "evidence": "An English running key spreads English over at least 24 symbols; the cells use 18 (0 of 1,110 draws). The book's exercise is such a key.",
       "logs": [
+        "dagapeyeff-mixing-2026-10-06.md",
         "dagapeyeff-running-2026-10-04.md",
         "dagapeyeff-bookkey-2026-10-04.md"
       ]
     },
     {
       "family": "Caesar, Vigenere, Beaufort, Porta and affine on the cells as letters",
-      "status": "tested-without-power",
-      "evidence": "Under the old model; shuffles score as well; no planted text.",
+      "status": "excluded-by-count",
+      "evidence": "Caesar and affine are one-to-one keys, covered by the corpus count; Vigenere modulo 25 on a keyed alphabet at periods 2 to 14 spreads English over at least 20 symbols (0 of 6,660 draws reach 18). Beaufort behaves the same way; Porta was not screened separately.",
       "logs": [
+        "dagapeyeff-mixing-2026-10-06.md",
         "dagapeyeff-solver-swarm-2026-10-04.md",
-        "dagapeyeff-classic-swarm-2026-10-04.md",
-        "dagapeyeff-anneal-2026-10-05.md"
+        "dagapeyeff-classic-swarm-2026-10-04.md"
       ]
     },
     {
@@ -281,9 +284,10 @@
     {
       "family": "A general pair table (2 by 2 Hill, any 625-pair code)",
       "status": "open",
-      "evidence": "The cells' different-pair count is ordinary for prose, so the count does not exclude it.",
+      "evidence": "The different-pair count does not exclude a general pair table; a 2 by 2 Hill matrix drawn at random spreads English over at least 23 symbols (0 of 1,110 draws reach the cells' 18), so random Hill keys are excluded, but a chosen 625-pair table is not.",
       "logs": [
-        "dagapeyeff-pairmap-2026-10-06.md"
+        "dagapeyeff-pairmap-2026-10-06.md",
+        "dagapeyeff-mixing-2026-10-06.md"
       ],
       "next": "Search 2 by 2 Hill over a keyed square with planted texts.",
       "priority": 4
