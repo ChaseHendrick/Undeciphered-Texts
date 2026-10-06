@@ -7,11 +7,14 @@ run only when engine.egyptian imports.
 
 from __future__ import annotations
 
+import http.client
 import re
+import time
 import unittest
 import hashlib
 import json
 from pathlib import Path
+import urllib.error
 import urllib.request
 
 from engine.known_language_reader import (
@@ -33,13 +36,21 @@ def _collapse(text: str) -> str:
     return _SPACE.sub(" ", text)
 
 
-def _fetch(url: str) -> str:
+def _fetch(url: str, attempts: int = 3) -> str:
+    """Download a cited page. A transfer cut off midway is tried again, at most three times in all."""
     request = urllib.request.Request(
         url,
         headers={"User-Agent": "undeciphered-texts-known-language-reader/1.0"},
     )
-    with urllib.request.urlopen(request, timeout=45) as response:
-        return response.read().decode("utf-8")
+    for attempt in range(attempts):
+        try:
+            with urllib.request.urlopen(request, timeout=45) as response:
+                return response.read().decode("utf-8")
+        except (http.client.IncompleteRead, ConnectionError, urllib.error.URLError):
+            if attempt == attempts - 1:
+                raise
+            time.sleep(2 * (attempt + 1))
+    raise AssertionError("unreachable")
 
 
 def _visible(html: str) -> str:
