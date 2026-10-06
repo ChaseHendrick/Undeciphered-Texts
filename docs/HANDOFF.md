@@ -4,6 +4,16 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 6 October 2026, four-square
+
+Started from `76d32cb` on `main`.
+
+Four-square fixes how many symbols each side of a cipher pair can use, whatever the key. The printed cells use 13 and 18. Held-out English never has fewer than 19 on its larger side, even with all four squares keyed (0 of 18,500 draws reach the cells). Four-square and horizontal two-square on ordinary English are excluded for the printed cells. The regrouping (21 and 19) is not.
+
+`engine/dagapeyeff_foursquare.c` is a compiled annealing kernel; it recovered 4 of 4 planted 196-letter texts in a scratch run. `engine.dagapeyeff_foursquare.foursquare_report` (search on the cells and the regrouping with shuffle controls) was not finished and is not frozen. Run it next, then add a test, update the cache count, the board page and the provenance chain. See `docs/logs/dagapeyeff-foursquare-2026-10-06.md`.
+
+Do not describe the count or the search as a decipherment.
+
 ## Session 5 October 2026, a larger English model, a grille, and an Enigma trial for Bob
 
 Started from `ef2f4a6` on `main`.
