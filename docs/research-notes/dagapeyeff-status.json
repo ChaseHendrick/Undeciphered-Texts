@@ -124,13 +124,13 @@
       ]
     },
     {
-      "family": "A repeating shift on the square (Vigenere-like), periods 2 to 4",
-      "status": "tested-without-power",
-      "evidence": "Searched under the old 8,689-letter model on the book's letter order; nothing found, no planted text.",
+      "family": "A repeating shift on a keyed square (Vigenere-like), periods 2 to 14",
+      "status": "closed-with-power",
+      "evidence": "No English draw of 16,470 reaches the cells' 18 symbols; the joint search recovers 11 of 12 planted texts and the cells' best is -3.33 a letter against -2.08 or better for English.",
       "logs": [
+        "dagapeyeff-additive-2026-10-06.md",
         "dagapeyeff-add-2026-10-04.md",
-        "dagapeyeff-period4-2026-10-04.md",
-        "dagapeyeff-word-2026-10-04.md"
+        "dagapeyeff-period4-2026-10-04.md"
       ]
     },
     {
