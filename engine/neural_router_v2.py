@@ -461,7 +461,9 @@ def _encrypt(family, text, draw):
     return encrypt_family(family, text, draw)
 
 
-def _samples(letters, families, count, seed, english, tables, *, version=FEATURE_VERSION):
+def _samples(letters, families, count, seed, english, tables, *, version=FEATURE_VERSION, broad_enigma=0.):
+    """Generated rows. ``broad_enigma`` is the share of Enigma rows drawn with plugboards and
+    all five rotors; at 0 no extra random draw is made, so the fixed comparisons are unchanged."""
     draw = random.Random(seed)
     if len(letters) < 360:
         raise ValueError("sample prose needs at least360 letters")
@@ -470,7 +472,11 @@ def _samples(letters, families, count, seed, english, tables, *, version=FEATURE
         for _ in range(count):
             length = draw.choice((120, 180, 240))
             start = draw.randrange(len(letters) - length + 1)
-            ciphertext = _encrypt(family, letters[start:start + length], draw)
+            if family == "enigma" and broad_enigma and draw.random() < broad_enigma:
+                from engine.neural_generator_broad import sample_enigma
+                ciphertext = sample_enigma(draw, letters[start:start + length])[1]
+            else:
+                ciphertext = _encrypt(family, letters[start:start + length], draw)
             x.append(_features(ciphertext, english, tables, version=version))
             y.append(label)
     return np.asarray(x), np.asarray(y)
@@ -486,8 +492,12 @@ def promotion_allowed(benchmark_accuracy, baseline_accuracy, overall_accuracy, p
 def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WEIGHTS_PATH,
                  expanded_families=False, hidden=64, ensemble_size=3, warm_start=False, learning_rate=.01,
                  distillation_strength=0., distillation_temperature=2., feature_version=None,
-                 more_prose=False, cost_sensitive=False):
-    """One local pass. Hyperparameters and calibration never use Doyle scores."""
+                 more_prose=False, cost_sensitive=False, broad_enigma=0.):
+    """One local pass. Hyperparameters and calibration never use Doyle scores.
+
+    ``broad_enigma`` mixes plugboard and five-rotor Enigma into the training and
+    validation rows only. Calibration and both fixed comparisons are unchanged.
+    """
     started = time.perf_counter()
     _validate_learning_rate(learning_rate)
     _validate_distillation(distillation_strength, distillation_temperature)
@@ -512,6 +522,8 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
         raise ValueError("cost-sensitive weights require warm_start=True")
     if not isinstance(more_prose, bool):
         raise ValueError("more_prose must be an explicit boolean")
+    if isinstance(broad_enigma, bool) or not isinstance(broad_enigma, (int, float)) or not 0 <= broad_enigma <= 1:
+        raise ValueError("broad_enigma must be a share between 0 and 1")
     full = letters_az(load_training_prose(TRAIN_PATH))
     if more_prose:
         extra_path = DATA / "neural_train_public.txt"
@@ -564,8 +576,10 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
             raise ValueError("warm start must preserve ensemble size")
         if any(len(model["parameters"]["b0"]) != hidden for model in previous["models"]):
             raise ValueError("warm start must preserve hidden width")
-    x, y = _samples(training, families, train_per_class, ROUTER_SEED, english, tables, version=version)
-    vx, vy = _samples(validation, families, 24, ROUTER_SEED + 101, english, tables, version=version)
+    x, y = _samples(training, families, train_per_class, ROUTER_SEED, english, tables, version=version,
+                    broad_enigma=broad_enigma)
+    vx, vy = _samples(validation, families, 24, ROUTER_SEED + 101, english, tables, version=version,
+                      broad_enigma=broad_enigma)
     teacher_options = {}
     if distillation_strength:
         teacher_options = {"teacher_models": previous["models"], "distillation_strength": distillation_strength,
@@ -647,7 +661,7 @@ def train_router(*, epochs=200, train_per_class=128, write=True, weights_path=WE
                "baseline_correct": baseline_correct, "benchmark_total": len(benchmark_y),
                "promoted": promoted, "predecessor_comparison": predecessor_comparison, "train_per_class": train_per_class, "epochs": epochs,
                "hidden":hidden, "ensemble_size":ensemble_size, "more_prose": more_prose,
-               "cost_sensitive": cost_sensitive,
+               "cost_sensitive": cost_sensitive, "broad_enigma": broad_enigma,
                "calibration_sha256": payload["calibration_sha256"],
                "train_sha256": payload["train_sha256"], "validation_sha256": payload["validation_sha256"], "heldout_sha256": payload["heldout_sha256"]}
     metrics["training_types"] = models[0]["training_types"]
