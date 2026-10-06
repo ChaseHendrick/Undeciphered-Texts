@@ -31,7 +31,9 @@ class RefreshDocsTest(unittest.TestCase):
         self.assertEqual(dates, sorted(dates))
         self.assertGreater(len(dates), 1)
         self.assertEqual(dates[0], "2026-10-02")
-        self.assertEqual(dates[-1], "2026-10-05")
+        newest = max(re.findall(r"(\d{4}-\d{2}-\d{2})\.md$", path.name)[0]
+                     for path in (ROOT / "docs" / "logs").glob("dagapeyeff*-????-??-??.md"))
+        self.assertEqual(dates[-1], newest)
 
 
 if __name__ == "__main__":
