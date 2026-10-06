@@ -92,6 +92,7 @@ from engine.dagapeyeff_keywords import keyword_report
 from engine.dagapeyeff_double import double_report
 from engine.dagapeyeff_exhaustive10 import exhaustive10_report
 from engine.dagapeyeff_foursquare import foursquare_report
+from engine.dagapeyeff_additive import additive_report
 from engine.dagapeyeff_pairmap import pairmap_report
 from engine.dagapeyeff_columnar14c import columnar14c_report
 from engine.dagapeyeff_monotone import monotone_report
@@ -1676,6 +1677,27 @@ def consider_foursquare() -> dict:
             f"larger side, even with keyed plain squares. The search recovers {report['planted_recovered']} of "
             f"{len(report['planted'])} planted texts. The cells and the regrouping score near their shuffles, "
             f"{best} a letter at best, where planted English is {report['planted_lowest_true']} or higher. Not a reading."
+        ),
+    }
+
+
+def consider_additive() -> dict:
+    report = additive_report()
+    counts = report["counts"]
+    fewest = min(row["fewest_distinct"] for row in counts["rows"])
+    reaching = sum(row["reaching_cells"] for row in counts["rows"])
+    draws = sum(row["draws"] for row in counts["rows"])
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "additive_allowed": False,
+        "learned": (
+            f"A repeating coordinate shift on a keyed square spreads letters over more cells. The cells use "
+            f"{counts['cells']['distinct']} symbols; held-out English under random squares and shift keys never uses "
+            f"fewer than {fewest}, and {reaching} of {draws} draws reach the cells' counts. The joint search recovers "
+            f"{report['planted_recovered']} of {len(report['planted'])} planted texts; the cells and the regrouping "
+            f"reach {report['searched_best']} a letter at best, where planted English is "
+            f"{report['planted_lowest_true']} or higher. Not a reading."
         ),
     }
 
