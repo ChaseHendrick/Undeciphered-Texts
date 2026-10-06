@@ -144,6 +144,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [The aligned runs sit next to rare cells](../logs/dagapeyeff-contact-2026-10-05.md)
 - [Real prose windows against the cells' counts, 5 October 2026](../logs/dagapeyeff-corpus-2026-10-05.md)
 - [Rare counts sit in order on the square](../logs/dagapeyeff-counts-2026-10-05.md)
+- [Every double transposition up to width 6, any language, 5 October 2026](../logs/dagapeyeff-double-2026-10-05.md)
 - [A spaced triple is echoed](../logs/dagapeyeff-echo-2026-10-05.md)
 - [Every column order up to width 9, any language, 5 October 2026](../logs/dagapeyeff-exhaustive-2026-10-05.md)
 - [Two copies outside the runs](../logs/dagapeyeff-extras-2026-10-05.md)

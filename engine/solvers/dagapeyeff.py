@@ -89,6 +89,7 @@ from engine.dagapeyeff_claims import claims_report
 from engine.dagapeyeff_body import body_report
 from engine.dagapeyeff_exhaustive import exhaustive_report
 from engine.dagapeyeff_keywords import keyword_report
+from engine.dagapeyeff_double import double_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -1623,6 +1624,20 @@ def consider_keywords() -> dict:
             f"{report['keywords']} keywords gave {report['orders_scored']} keyword-ordered transpositions. Every planted "
             f"text surfaced near English; the cells' best, {report['cells_best_mi']}, is under the best of shuffled "
             f"cells, {max(report['null_best_mi'])}. Not a reading."
+        ),
+    }
+
+
+def consider_double() -> dict:
+    report = double_report()
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "double_allowed": False,
+        "learned": (
+            f"Every pair of column orders at widths 2 to 6, both passes undone or both done: in "
+            f"{report['cases_cells_below_planted']} of {report['cases']} cases the cells beat their shuffles by less "
+            "than planted English and German beat theirs. Not a reading."
         ),
     }
 
