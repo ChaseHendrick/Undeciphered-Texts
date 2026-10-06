@@ -4,6 +4,20 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 6 October 2026, a status ledger, errors, languages and Latin
+
+Started from `73f4428` on `main`. The cache holds 107 files; the board page, checks count and provenance chain were regenerated.
+
+`docs/research-notes/dagapeyeff-status.json` is now the one place a family's status lives. `tools/refresh_docs.py` writes from it the status block and next steps on the D'Agapeyeff page, that page's `index-next` line and one status line in the root README. `tests/test_dagapeyeff_status.py` fails when a D'Agapeyeff log is newer than `reviewed_through` or a log from 6 October on is not cited. Add each new log to the ledger.
+
+Closed with shown power this session: a repeating coordinate shift on a keyed square, periods 2 to 14 (`engine.dagapeyeff_additive`, 0 of 16,470 English draws reach the cells' 18 symbols, 11 of 12 planted texts); nulls by place, the cells reversed and the column digits alone (`engine.dagapeyeff_quick`); a homophonic key, capped at 36 places a letter because the default model scores a run of one letter above English (`engine.dagapeyeff_homophone`); the old leads, 363 transforms with family-wise shuffles (`engine.dagapeyeff_direction`); enciphering errors at the book's rate under a one-to-one key (`engine.dagapeyeff_errors`: no held-out window within 8 errors of the cells' counts, random slips never reach them, English with 8 slips still found at -2.49 against the cells' -3.90).
+
+`engine.dagapeyeff_screen` scores 39 languages from Universal Dependencies by the fewest errors that reach the cells' counts. Latin is closest (4 at its closest window, median 22), then Catalan and Romanian. `engine.dagapeyeff_italian` and `engine.dagapeyeff_latin` close Italian and Latin under a one-to-one key with planted texts and 8 slips. Their texts are fetched into the ignored `work/` folder; their tests read the frozen files. The first open step is Latin under the width-14 joint search.
+
+`papers/dagapeyeff-exclusions/` holds a verified bibliography and `code/make_numbers.py`, which writes every number the manuscript will print from the frozen files. The manuscript is not written yet. It is not to be deposited anywhere until the owner says so.
+
+Do not describe any count, screen or search here as a decipherment.
+
 ## Session 6 October 2026, four-square, pair counts, width 14 and the grille
 
 Started from `bbcae59` on `main`. The four-square search the previous session left running is now frozen, and three more were added. The cache holds 99 files. The board page, the checks count and the provenance chain were regenerated; the chain ends at `cac84e8e0cdfc52c48a3d3a5896971fcc3412a1743e46f8d3e0a4d525d5d9ad7`.
