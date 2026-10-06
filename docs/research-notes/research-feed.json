@@ -1209,7 +1209,7 @@
       "unit": "hypothesis families",
       "reviewed_through": "2026-10-06",
       "plaintext_recovered_percent": 0,
-      "summary": "Unsolved. Plaintext recovered: 0 percent. 28 of 34 hypothesis families listed (82 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-06.",
+      "summary": "Unsolved. Plaintext recovered: 0 percent. 29 of 35 hypothesis families listed (83 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-06.",
       "caveat": "Progress here means ruling hypotheses out, not reading part of a message. The percentage is a share of the families listed below, which is not every possible cipher, and a hand construction with no message fits every statistic measured so far. It is not a measure of distance to a reading.",
       "note_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/dagapeyeff-2026-10-05.md",
       "ledger_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/dagapeyeff-status.json",
@@ -1220,7 +1220,7 @@
           "label": "Open",
           "definition": "Open: not searched with shown power, or the search cannot yet find planted texts.",
           "count": 6,
-          "percent": 18
+          "percent": 17
         },
         {
           "status": "tested-without-power",
@@ -1234,14 +1234,14 @@
           "label": "Excluded by a count",
           "definition": "Excluded by a count: a statistic no key can change rules it out for ordinary English, without a search.",
           "count": 12,
-          "percent": 35
+          "percent": 34
         },
         {
           "status": "closed-with-power",
           "label": "Closed with shown power",
           "definition": "Closed with shown power: the search recovers planted texts of this kind, and the cells score like shuffled cells.",
-          "count": 16,
-          "percent": 47
+          "count": 17,
+          "percent": 49
         }
       ],
       "families": [
@@ -1249,15 +1249,18 @@
           "family": "A plaintext in another language under a large transposition, or in a language not screened",
           "status": "open",
           "status_label": "Open",
-          "evidence": "40 languages were screened by letter counts, Russian under four spellings and Esperanto included; Latin is closest, then Catalan and Romanian, and every window of 8.9 million letters of Latin still needs at least 4 errors. Italian and Latin under a one-to-one key are closed; Latin under a 14-column key is closed; the grille has no power in any language.",
+          "evidence": "98 languages with usable text in Universal Dependencies were screened by letter counts, with Russian under four spellings and Esperanto besides; Latin has the lowest median of all and three times the next rate of close windows, though Estonian matches its single closest window. Every window of 59.8 million letters of Latin needs at least 3 errors. Italian and Latin under a one-to-one key are closed; Latin under every column width from 2 to 15 is closed; the grille has no power in any language.",
           "next": "Search Catalan, Romanian and Latin under a 14-column key and under keyed four-square once a method with power exists; screen further languages.",
           "priority": 1,
           "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-alllanguages-2026-10-06.md",
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-screen-2026-10-06.md",
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-russian-2026-10-06.md",
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-esperanto-2026-10-06.md",
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinlib-2026-10-06.md",
-            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-languages-2026-10-04.md"
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinlibrary-2026-10-06.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-languages-2026-10-04.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinw-2026-10-06.md"
           ]
         },
         {
@@ -1302,12 +1305,13 @@
           "family": "Transposition beyond the searched widths, or with nulls and an incomplete rectangle",
           "status": "open",
           "status_label": "Open",
-          "evidence": "The key-invariant method has no power past width 10; double transposition is closed only to width 6.",
-          "next": "A joint search with a letter key, as for width 14, at widths 11 to 13 and for double transposition above width 6.",
+          "evidence": "The key-invariant method has no power past width 10; double transposition is closed only to width 6. For Latin, every columnar width from 2 to 15 is now closed; English under any transposition with a one-to-one key is already excluded by counts.",
+          "next": "A joint search with a letter key above width 15 and for double transposition above width 6, in Latin first, since counts already exclude English under a one-to-one key.",
           "priority": 5,
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-exhaustive-2026-10-05.md",
-            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-double-2026-10-05.md"
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-double-2026-10-05.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinw-2026-10-06.md"
           ]
         },
         {
@@ -1624,6 +1628,17 @@
           ]
         },
         {
+          "family": "Latin under columnar transposition at widths 10 to 13 and 15, with a short last row, and a letter key",
+          "status": "closed-with-power",
+          "status_label": "Closed with shown power",
+          "evidence": "39 of 40 planted Latin texts recovered, classical and 8-error texts included; the cells score -3.57 to -4.21 a letter, below every recovered planted text and inside their shuffles.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinw-2026-10-06.md"
+          ]
+        },
+        {
           "family": "Catalan and Romanian under a one-to-one key, with or without the book's dummy rule and errors",
           "status": "closed-with-power",
           "status_label": "Closed with shown power",
@@ -1665,7 +1680,7 @@
         },
         {
           "family": "Transposition beyond the searched widths, or with nulls and an incomplete rectangle",
-          "next": "A joint search with a letter key, as for width 14, at widths 11 to 13 and for double transposition above width 6."
+          "next": "A joint search with a letter key above width 15 and for double transposition above width 6, in Latin first, since counts already exclude English under a one-to-one key."
         },
         {
           "family": "Four-square with keyed plain squares, and two-square",
@@ -1676,7 +1691,7 @@
         "tagline": "A 1939 puzzle that its own author could not, or would not, explain.",
         "summary": "In 1939 Alexander d'Agapeyeff printed 392 digits at the back of his book Codes and Ciphers as a challenge. Nobody has ever read them, and later editions quietly dropped the puzzle. We have not read it either. What we have done is rule out most of the ordinary ways it could have been made, using tests we first proved can find a hidden message of the same length.",
         "what_it_is": "The digits come in pairs. Each pair names a cell of a 5 by 5 grid of letters, called a Polybius square, so the puzzle is 196 grid cells laid out in a 14 by 14 block. If the grid were simply a letter table, swapping the cells for letters would give a message. It does not: the result reads like random letters in every language tried.",
-        "what_we_found": "Before trusting a negative result we plant a known message of the same length, encipher it the same way, and check that the search finds it. Searches that pass that test and still find nothing on the real puzzle count as closed. Some ideas are ruled out without any search, because the puzzle's letter counts are impossible for them. Latin fits the letter counts better than any of 39 languages, but Latin searches with shown power also came back empty.",
+        "what_we_found": "Before trusting a negative result we plant a known message of the same length, encipher it the same way, and check that the search finds it. Searches that pass that test and still find nothing on the real puzzle count as closed. Some ideas are ruled out without any search, because the puzzle's letter counts are impossible for them. Latin fits the letter counts better than any of 98 languages, but Latin searches with shown power also came back empty.",
         "whats_next": "The biggest open idea is a turning grille, a card with holes rotated over the page, combined with a second step that evens out the letter counts. Our grille search cannot yet find a planted message, so the next job is a better method, not more computer time. It is also possible that there was never a message, or that a mistake in enciphering destroyed it.",
         "faq": [
           {
@@ -1689,7 +1704,7 @@
           },
           {
             "q": "Is it Latin or Russian?",
-            "a": "The letter counts point toward Latin, not Russian. Of 39 languages, Latin windows come closest: some need only 4 changed cells. Russian needs at least 9 under every transliteration tried, which is no closer than English. But Latin under the simple systems was searched and nothing was found, so this is a lead for harder systems, not an answer."
+            "a": "The letter counts point toward Latin, not Russian. Of 98 languages screened, Latin has the lowest typical distance from the cells' counts and three times as many close stretches as any other; among 59.8 million letters of Latin the best 196-letter stretches need only 3 changed cells. Russian needs at least 9 under every transliteration tried, no closer than English. But Latin under the simple systems, and under every column width from 2 to 15, was searched and nothing was found, so this is a lead for harder systems, not an answer."
           },
           {
             "q": "Could it be a hoax?",
@@ -1718,9 +1733,9 @@
       "charts": [
         {
           "id": "language-screen",
-          "log": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-screen-2026-10-06.md",
+          "log": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-alllanguages-2026-10-06.md",
           "title": "How many cells would have to be wrong for each language to fit",
-          "caption": "Fewest single-cell errors that turn a 196-letter window of real text into the cells' letter counts, under any one-to-one key and any order. Lower is a closer fit. English comes from the 1.9 million letter prose corpus; the others from Universal Dependencies treebanks.",
+          "caption": "Fewest single-cell errors that turn a 196-letter window of real text into the cells' letter counts, under any one-to-one key and any order. Lower is a closer fit. 98 languages from Universal Dependencies (non-Latin alphabets romanized), English from the 1.9 million letter prose corpus, Russian under its best of four spellings, and Esperanto from ten books.",
           "kind": "bar",
           "unit": "fewest errors",
           "rows": [
@@ -1731,22 +1746,58 @@
               "within_8": 294
             },
             {
+              "label": "Estonian (EDT)",
+              "value": 4,
+              "median": 28.0,
+              "within_8": 26
+            },
+            {
               "label": "Catalan (AnCora)",
               "value": 5,
               "median": 28.0,
               "within_8": 8
             },
             {
-              "label": "Latin (Perseus)",
-              "value": 6,
-              "median": 23.0,
-              "within_8": 82
+              "label": "Old Occitan (CorAG)",
+              "value": 5,
+              "median": 32.0,
+              "within_8": 42
             },
             {
-              "label": "Romanian (RRT)",
+              "label": "Armenian (ArmTDP) romanized",
+              "value": 6,
+              "median": 27.0,
+              "within_8": 13
+            },
+            {
+              "label": "Spanish (AnCora)",
+              "value": 6,
+              "median": 27.0,
+              "within_8": 5
+            },
+            {
+              "label": "Buryat (BDT) romanized",
+              "value": 6,
+              "median": 30.0,
+              "within_8": 23
+            },
+            {
+              "label": "Icelandic (IcePaHC)",
               "value": 7,
-              "median": 28.0,
-              "within_8": 2
+              "median": 25.0,
+              "within_8": 17
+            },
+            {
+              "label": "Western Armenian (ArmTDP) romanized",
+              "value": 7,
+              "median": 27.0,
+              "within_8": 19
+            },
+            {
+              "label": "Old East Slavic (TOROT) romanized",
+              "value": 7,
+              "median": 32.0,
+              "within_8": 5
             },
             {
               "label": "Welsh (CCG)",
@@ -1755,22 +1806,16 @@
               "within_8": 4
             },
             {
-              "label": "French (GSD)",
-              "value": 8,
-              "median": 28.0,
-              "within_8": 2
-            },
-            {
               "label": "English (prose corpus)",
               "value": 8,
               "median": 28.0,
               "within_8": null
             },
             {
-              "label": "Estonian (EWT)",
+              "label": "Manx (Cadhan)",
               "value": 8,
               "median": 29.0,
-              "within_8": 2
+              "within_8": 3
             },
             {
               "label": "Norwegian (Bokmaal)",
@@ -1779,27 +1824,39 @@
               "within_8": 2
             },
             {
+              "label": "Romanian (Nonstandard)",
+              "value": 8,
+              "median": 31.0,
+              "within_8": 3
+            },
+            {
               "label": "Faroese (FarPaHC)",
               "value": 9,
               "median": 25.0,
               "within_8": 0
             },
             {
-              "label": "Icelandic (Modern)",
+              "label": "Classical Armenian (CAVaL) romanized",
               "value": 9,
               "median": 27.0,
               "within_8": 0
             },
             {
-              "label": "Spanish (GSD)",
+              "label": "Erzya (JR) romanized",
               "value": 9,
               "median": 27.0,
               "within_8": 0
             },
             {
-              "label": "Swedish (Talbanken)",
+              "label": "Greek (GDT) romanized",
               "value": 9,
-              "median": 28.0,
+              "median": 27.0,
+              "within_8": 0
+            },
+            {
+              "label": "Italian (ISDT)",
+              "value": 9,
+              "median": 27.0,
               "within_8": 0
             },
             {
@@ -1833,15 +1890,51 @@
               "within_8": 0
             },
             {
+              "label": "English (CHILDES)",
+              "value": 10,
+              "median": 29.0,
+              "within_8": 0
+            },
+            {
+              "label": "Swedish (LinES)",
+              "value": 10,
+              "median": 29.0,
+              "within_8": 0
+            },
+            {
               "label": "Danish (DDT)",
               "value": 10,
               "median": 30.0,
               "within_8": 0
             },
             {
-              "label": "Portuguese (Bosque)",
+              "label": "Gheg (GPS)",
               "value": 10,
               "median": 30.0,
+              "within_8": 0
+            },
+            {
+              "label": "Portuguese (CINTIL)",
+              "value": 10,
+              "median": 30.0,
+              "within_8": 0
+            },
+            {
+              "label": "Western Sierra Puebla Nahuatl (MesoTree)",
+              "value": 10,
+              "median": 30.0,
+              "within_8": 0
+            },
+            {
+              "label": "Czech (CAC)",
+              "value": 10,
+              "median": 31.0,
+              "within_8": 0
+            },
+            {
+              "label": "Old Church Slavonic (PROIEL) romanized",
+              "value": 10,
+              "median": 32.0,
               "within_8": 0
             },
             {
@@ -1851,9 +1944,63 @@
               "within_8": 0
             },
             {
+              "label": "Kyrgyz (KTMU) romanized",
+              "value": 11,
+              "median": 28.0,
+              "within_8": 0
+            },
+            {
+              "label": "Middle French (PROFITEROLE)",
+              "value": 11,
+              "median": 30.0,
+              "within_8": 0
+            },
+            {
+              "label": "Occitan (TTB)",
+              "value": 11,
+              "median": 30.0,
+              "within_8": 0
+            },
+            {
+              "label": "Old French (PROFITEROLE)",
+              "value": 11,
+              "median": 30.0,
+              "within_8": 0
+            },
+            {
+              "label": "Serbian (SET)",
+              "value": 11,
+              "median": 33.0,
+              "within_8": 0
+            },
+            {
+              "label": "Turkish (Penn)",
+              "value": 11,
+              "median": 34.0,
+              "within_8": 0
+            },
+            {
               "label": "Latvian (LVTB)",
               "value": 11,
               "median": 37.0,
+              "within_8": 0
+            },
+            {
+              "label": "Dutch (LassySmall)",
+              "value": 11,
+              "median": 38.0,
+              "within_8": 0
+            },
+            {
+              "label": "Kazakh (KTB) romanized",
+              "value": 12,
+              "median": 28.0,
+              "within_8": 0
+            },
+            {
+              "label": "Ancient Greek (PROIEL) romanized",
+              "value": 12,
+              "median": 29.0,
               "within_8": 0
             },
             {
@@ -1863,15 +2010,33 @@
               "within_8": 0
             },
             {
-              "label": "Polish (LFG)",
+              "label": "French (FTB)",
               "value": 12,
-              "median": 31.0,
+              "median": 30.0,
               "within_8": 0
             },
             {
               "label": "Afrikaans (AfriBooms)",
               "value": 12,
               "median": 32.0,
+              "within_8": 0
+            },
+            {
+              "label": "Chukchi (HSE) romanized",
+              "value": 12,
+              "median": 32.0,
+              "within_8": 0
+            },
+            {
+              "label": "Slovak (SNK)",
+              "value": 12,
+              "median": 32.0,
+              "within_8": 0
+            },
+            {
+              "label": "Alemannic (DIVITAL)",
+              "value": 12,
+              "median": 33.0,
               "within_8": 0
             },
             {
@@ -1887,7 +2052,7 @@
               "within_8": 0
             },
             {
-              "label": "Turkish (IMST)",
+              "label": "Chintang (CTNTB)",
               "value": 12,
               "median": 34.0,
               "within_8": 0
@@ -1899,15 +2064,45 @@
               "within_8": 0
             },
             {
-              "label": "Russian (GSD)",
+              "label": "Bavarian (MaiBaam)",
               "value": 13,
               "median": 30.0,
               "within_8": 0
             },
             {
-              "label": "Czech (FicTree)",
+              "label": "Bulgarian (BTB) romanized",
+              "value": 13,
+              "median": 31.0,
+              "within_8": 0
+            },
+            {
+              "label": "Russian (GSD) romanized",
+              "value": 13,
+              "median": 31.0,
+              "within_8": 0
+            },
+            {
+              "label": "Highland Puebla Nahuatl (ITML)",
               "value": 13,
               "median": 32.0,
+              "within_8": 0
+            },
+            {
+              "label": "Khoekhoe (KDT)",
+              "value": 13,
+              "median": 35.0,
+              "within_8": 0
+            },
+            {
+              "label": "Georgian (GLC) romanized",
+              "value": 13,
+              "median": 36.0,
+              "within_8": 0
+            },
+            {
+              "label": "Haitian Creole (Adolphe)",
+              "value": 13,
+              "median": 36.0,
               "within_8": 0
             },
             {
@@ -1923,9 +2118,39 @@
               "within_8": 0
             },
             {
+              "label": "Ukrainian (IU) romanized",
+              "value": 13,
+              "median": 37.0,
+              "within_8": 0
+            },
+            {
               "label": "Indonesian (GSD)",
               "value": 13,
               "median": 38.0,
+              "within_8": 0
+            },
+            {
+              "label": "Low Saxon (LSDC)",
+              "value": 13,
+              "median": 38.0,
+              "within_8": 0
+            },
+            {
+              "label": "Guajajara (TuDeT)",
+              "value": 14,
+              "median": 31.0,
+              "within_8": 0
+            },
+            {
+              "label": "Ruuli (RDT)",
+              "value": 14,
+              "median": 31.0,
+              "within_8": 0
+            },
+            {
+              "label": "Polish (PDB)",
+              "value": 14,
+              "median": 32.0,
               "within_8": 0
             },
             {
@@ -1941,15 +2166,75 @@
               "within_8": 0
             },
             {
+              "label": "Turkish German (SAGT)",
+              "value": 14,
+              "median": 34.0,
+              "within_8": 0
+            },
+            {
+              "label": "North Sami (Giella)",
+              "value": 14,
+              "median": 35.0,
+              "within_8": 0
+            },
+            {
+              "label": "Upper Sorbian (UFAL)",
+              "value": 15,
+              "median": 32.0,
+              "within_8": 0
+            },
+            {
               "label": "Croatian (SET)",
               "value": 15,
               "median": 35.0,
               "within_8": 0
             },
             {
-              "label": "Dutch (Alpino)",
+              "label": "Egyptian (PC)",
               "value": 15,
+              "median": 40.0,
+              "within_8": 0
+            },
+            {
+              "label": "Ottoman Turkish (DUDU)",
+              "value": 16,
+              "median": 35.0,
+              "within_8": 0
+            },
+            {
+              "label": "Komi Zyrian (Lattice) romanized",
+              "value": 17,
+              "median": 32.0,
+              "within_8": 0
+            },
+            {
+              "label": "Javanese (CSUI)",
+              "value": 17,
               "median": 38.0,
+              "within_8": 0
+            },
+            {
+              "label": "Maghrebi Arabic French (Arabizi)",
+              "value": 17,
+              "median": 41.0,
+              "within_8": 0
+            },
+            {
+              "label": "Belarusian (HSE) romanized",
+              "value": 17,
+              "median": 42.0,
+              "within_8": 0
+            },
+            {
+              "label": "Sanskrit (Vedic)",
+              "value": 17,
+              "median": 44.0,
+              "within_8": 0
+            },
+            {
+              "label": "Ligurian (GLT)",
+              "value": 18,
+              "median": 34.0,
               "within_8": 0
             },
             {
@@ -1959,9 +2244,69 @@
               "within_8": 0
             },
             {
+              "label": "Zaar (Autogramm)",
+              "value": 18,
+              "median": 37.0,
+              "within_8": 0
+            },
+            {
+              "label": "Bambara (CRB)",
+              "value": 18,
+              "median": 39.0,
+              "within_8": 0
+            },
+            {
               "label": "Maltese (MUDT)",
               "value": 20,
               "median": 40.0,
+              "within_8": 0
+            },
+            {
+              "label": "Bororo (BDT)",
+              "value": 21,
+              "median": 35.0,
+              "within_8": 0
+            },
+            {
+              "label": "Pomak (Philotis)",
+              "value": 21,
+              "median": 38.0,
+              "within_8": 0
+            },
+            {
+              "label": "Sicilian (STB)",
+              "value": 21,
+              "median": 38.0,
+              "within_8": 0
+            },
+            {
+              "label": "Abkhaz (AbNC) romanized",
+              "value": 21,
+              "median": 39.0,
+              "within_8": 0
+            },
+            {
+              "label": "Kiche (IU)",
+              "value": 21,
+              "median": 43.0,
+              "within_8": 0
+            },
+            {
+              "label": "Beja (Autogramm)",
+              "value": 21,
+              "median": 49.0,
+              "within_8": 0
+            },
+            {
+              "label": "Gothic (PROIEL)",
+              "value": 22,
+              "median": 42.0,
+              "within_8": 0
+            },
+            {
+              "label": "Old Georgian (GLC) romanized",
+              "value": 23,
+              "median": 39.0,
               "within_8": 0
             },
             {
@@ -1971,9 +2316,33 @@
               "within_8": 0
             },
             {
+              "label": "Uzbek (UzUDT)",
+              "value": 24,
+              "median": 41.0,
+              "within_8": 0
+            },
+            {
+              "label": "Nheengatu (CompLin)",
+              "value": 27,
+              "median": 42.0,
+              "within_8": 0
+            },
+            {
               "label": "Hausa (NorthernAutogramm)",
               "value": 27,
               "median": 49.0,
+              "within_8": 0
+            },
+            {
+              "label": "Northern Kurdish (Kurmanji)",
+              "value": 32,
+              "median": 49.0,
+              "within_8": 0
+            },
+            {
+              "label": "Coptic (Scriptorium) romanized",
+              "value": 85,
+              "median": 108.0,
               "within_8": 0
             }
           ]

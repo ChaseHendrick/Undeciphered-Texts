@@ -15,7 +15,7 @@
     "tagline": "A 1939 puzzle that its own author could not, or would not, explain.",
     "summary": "In 1939 Alexander d'Agapeyeff printed 392 digits at the back of his book Codes and Ciphers as a challenge. Nobody has ever read them, and later editions quietly dropped the puzzle. We have not read it either. What we have done is rule out most of the ordinary ways it could have been made, using tests we first proved can find a hidden message of the same length.",
     "what_it_is": "The digits come in pairs. Each pair names a cell of a 5 by 5 grid of letters, called a Polybius square, so the puzzle is 196 grid cells laid out in a 14 by 14 block. If the grid were simply a letter table, swapping the cells for letters would give a message. It does not: the result reads like random letters in every language tried.",
-    "what_we_found": "Before trusting a negative result we plant a known message of the same length, encipher it the same way, and check that the search finds it. Searches that pass that test and still find nothing on the real puzzle count as closed. Some ideas are ruled out without any search, because the puzzle's letter counts are impossible for them. Latin fits the letter counts better than any of 39 languages, but Latin searches with shown power also came back empty.",
+    "what_we_found": "Before trusting a negative result we plant a known message of the same length, encipher it the same way, and check that the search finds it. Searches that pass that test and still find nothing on the real puzzle count as closed. Some ideas are ruled out without any search, because the puzzle's letter counts are impossible for them. Latin fits the letter counts better than any of 98 languages, but Latin searches with shown power also came back empty.",
     "whats_next": "The biggest open idea is a turning grille, a card with holes rotated over the page, combined with a second step that evens out the letter counts. Our grille search cannot yet find a planted message, so the next job is a better method, not more computer time. It is also possible that there was never a message, or that a mistake in enciphering destroyed it.",
     "faq": [
       {
@@ -28,7 +28,7 @@
       },
       {
         "q": "Is it Latin or Russian?",
-        "a": "The letter counts point toward Latin, not Russian. Of 39 languages, Latin windows come closest: some need only 4 changed cells. Russian needs at least 9 under every transliteration tried, which is no closer than English. But Latin under the simple systems was searched and nothing was found, so this is a lead for harder systems, not an answer."
+        "a": "The letter counts point toward Latin, not Russian. Of 98 languages screened, Latin has the lowest typical distance from the cells' counts and three times as many close stretches as any other; among 59.8 million letters of Latin the best 196-letter stretches need only 3 changed cells. Russian needs at least 9 under every transliteration tried, no closer than English. But Latin under the simple systems, and under every column width from 2 to 15, was searched and nothing was found, so this is a lead for harder systems, not an answer."
       },
       {
         "q": "Could it be a hoax?",
@@ -58,9 +58,9 @@
     {
       "id": "language-screen",
       "from_cache": "dagapeyeff-screen",
-      "log": "dagapeyeff-screen-2026-10-06.md",
+      "log": "dagapeyeff-alllanguages-2026-10-06.md",
       "title": "How many cells would have to be wrong for each language to fit",
-      "caption": "Fewest single-cell errors that turn a 196-letter window of real text into the cells' letter counts, under any one-to-one key and any order. Lower is a closer fit. English comes from the 1.9 million letter prose corpus; the others from Universal Dependencies treebanks."
+      "caption": "Fewest single-cell errors that turn a 196-letter window of real text into the cells' letter counts, under any one-to-one key and any order. Lower is a closer fit. 98 languages from Universal Dependencies (non-Latin alphabets romanized), English from the 1.9 million letter prose corpus, Russian under its best of four spellings, and Esperanto from ten books."
     }
   ],
   "data": {
@@ -395,6 +395,14 @@
       ]
     },
     {
+      "family": "Latin under columnar transposition at widths 10 to 13 and 15, with a short last row, and a letter key",
+      "status": "closed-with-power",
+      "evidence": "39 of 40 planted Latin texts recovered, classical and 8-error texts included; the cells score -3.57 to -4.21 a letter, below every recovered planted text and inside their shuffles.",
+      "logs": [
+        "dagapeyeff-latinw-2026-10-06.md"
+      ]
+    },
+    {
       "family": "Catalan and Romanian under a one-to-one key, with or without the book's dummy rule and errors",
       "status": "closed-with-power",
       "evidence": "Planted text comes back 3 of 3 in each, also with 8 slips; the cells sit inside their shuffles (Catalan 7 of 8; Romanian 13 of 40 after an edge at 8 shuffles vanished).",
@@ -515,13 +523,16 @@
     {
       "family": "A plaintext in another language under a large transposition, or in a language not screened",
       "status": "open",
-      "evidence": "40 languages were screened by letter counts, Russian under four spellings and Esperanto included; Latin is closest, then Catalan and Romanian, and every window of 8.9 million letters of Latin still needs at least 4 errors. Italian and Latin under a one-to-one key are closed; Latin under a 14-column key is closed; the grille has no power in any language.",
+      "evidence": "98 languages with usable text in Universal Dependencies were screened by letter counts, with Russian under four spellings and Esperanto besides; Latin has the lowest median of all and three times the next rate of close windows, though Estonian matches its single closest window. Every window of 59.8 million letters of Latin needs at least 3 errors. Italian and Latin under a one-to-one key are closed; Latin under every column width from 2 to 15 is closed; the grille has no power in any language.",
       "logs": [
+        "dagapeyeff-alllanguages-2026-10-06.md",
         "dagapeyeff-screen-2026-10-06.md",
         "dagapeyeff-russian-2026-10-06.md",
         "dagapeyeff-esperanto-2026-10-06.md",
         "dagapeyeff-latinlib-2026-10-06.md",
-        "dagapeyeff-languages-2026-10-04.md"
+        "dagapeyeff-latinlibrary-2026-10-06.md",
+        "dagapeyeff-languages-2026-10-04.md",
+        "dagapeyeff-latinw-2026-10-06.md"
       ],
       "next": "Search Catalan, Romanian and Latin under a 14-column key and under keyed four-square once a method with power exists; screen further languages.",
       "priority": 1
@@ -564,12 +575,13 @@
     {
       "family": "Transposition beyond the searched widths, or with nulls and an incomplete rectangle",
       "status": "open",
-      "evidence": "The key-invariant method has no power past width 10; double transposition is closed only to width 6.",
+      "evidence": "The key-invariant method has no power past width 10; double transposition is closed only to width 6. For Latin, every columnar width from 2 to 15 is now closed; English under any transposition with a one-to-one key is already excluded by counts.",
       "logs": [
         "dagapeyeff-exhaustive-2026-10-05.md",
-        "dagapeyeff-double-2026-10-05.md"
+        "dagapeyeff-double-2026-10-05.md",
+        "dagapeyeff-latinw-2026-10-06.md"
       ],
-      "next": "A joint search with a letter key, as for width 14, at widths 11 to 13 and for double transposition above width 6.",
+      "next": "A joint search with a letter key above width 15 and for double transposition above width 6, in Latin first, since counts already exclude English under a one-to-one key.",
       "priority": 5
     },
     {

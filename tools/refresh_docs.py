@@ -237,9 +237,11 @@ def _language(treebank: str) -> str:
 
 
 def _language_screen(chart: dict) -> dict:
-    """Rows from the frozen screens. English's fewest errors are half its sorted-count distance."""
-    screen = _cache("dagapeyeff-screen")
-    rows = [{"label": _language(name), "value": row["fewest_errors"], "median": row["median_errors"], "within_8": row["within_8"]}
+    """Rows from the frozen screens, the 98-language one when present. English's fewest errors are half its sorted-count distance."""
+    wide = CACHE / "dagapeyeff-alllanguages.json"
+    screen = _cache("dagapeyeff-alllanguages" if wide.exists() else "dagapeyeff-screen")
+    rows = [{"label": _language(name) + (" romanized" if row.get("script", "latin") != "latin" else ""),
+             "value": row["fewest_errors"], "median": row["median_errors"], "within_8": row["within_8"]}
             for name, row in ((name, screen["languages"][name]) for name in screen["ranked"])]
     corpus = _cache("dagapeyeff-corpus")
     rows.append({"label": "English (prose corpus)", "value": corpus["closest_sorted_distance"] // 2,
