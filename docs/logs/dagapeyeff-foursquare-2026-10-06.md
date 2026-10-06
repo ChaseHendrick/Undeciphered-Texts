@@ -4,10 +4,20 @@ Not a reading. No letter string is stored.
 
 In four-square, the first symbol of each cipher pair comes from one square and the second from another. Which cell is hit depends only on the plaintext letters' rows and columns in the plain squares, so the number of different symbols on each side is fixed before any cipher key is chosen.
 
-The printed cells use 13 symbols on one side and 18 on the other, at either pair phase. Held-out Austen, Doyle and Wells, cut into 196-letter windows (370 windows) with standard plain squares, never have fewer than 21 symbols on the larger side. With all four squares keyed at random (18,500 draws, 50 a window), the larger side never drops below 19, and 0 draws reach 13 and 18 together. Horizontal two-square is a four-square whose plain and cipher squares coincide, so it is inside the keyed draws. Four-square and two-square on ordinary English prose do not produce the printed cells. The regrouped cells (`01432`) use 21 and 19, which this count does not exclude.
+The printed cells use 13 symbols on one side and 18 on the other, at either pair phase. Held-out Austen, Doyle and Wells, cut into 196-letter windows (370 windows) with standard plain squares, never have fewer than 21 symbols on the larger side. With both plain squares keyed at random (7,400 draws, 20 a window), the larger side never drops below 20, and 0 draws reach 13 and 18 together. The cipher squares cannot change these counts. A scratch run with 50 draws a window (18,500 draws) found a floor of 19 and also 0 draws reaching the cells; the frozen numbers are the 20-a-window run. Horizontal two-square is a four-square whose plain and cipher squares coincide, so it is inside the keyed draws. Four-square and two-square on ordinary English prose do not produce the printed cells. The regrouped cells (`01432`) use 21 and 19, which this count does not exclude.
 
-`engine/dagapeyeff_foursquare.c` is a compiled annealing kernel for the two cipher squares, under the default model with J folded into I. In a scratch run, 10 restarts of 1,000,000 steps at temperature 8 recovered 4 of 4 planted held-out texts of 196 letters (99 to 100 percent of letters), about 6 seconds a text. Temperature 4 recovered 0 of 4 and temperature 15 recovered 2 of 4. Gariazzo reached 83 percent key recovery.
+`engine/dagapeyeff_foursquare.c` is a compiled annealing kernel for the two cipher squares, under the default model with J folded into I. `engine.dagapeyeff_foursquare.foursquare_report` runs it with 10 restarts of 1,000,000 steps at temperature 8.
 
-`engine.dagapeyeff_foursquare.foursquare_report` runs that search on 6 planted texts, then on the cells and the regrouping at both phases, with 20 shuffles each. It was started and not finished in this session, so no frozen result exists yet. Running it takes about ten minutes and writes `engine/data/swarm_cache/dagapeyeff-foursquare.json`; the cache count in `tests/test_dagapeyeff_checks.py`, the board page and the provenance chain then need regenerating.
+| Run | Result |
+| --- | --- |
+| 6 planted held-out texts, 196 letters, both cipher squares random | 4 recovered (98 to 100 percent of letters); 1 at 76 percent; 1 failed at 18 percent |
+| Printed cells, pairs from the first symbol | -3.5591 a letter; 15 of 20 shuffles as high |
+| Printed cells, pairs from the second symbol | -3.5543 a letter; 19 of 20 shuffles as high |
+| Regrouping, pairs from the first symbol | -3.3427 a letter; 9 of 20 shuffles as high |
+| Regrouping, pairs from the second symbol | -3.4407 a letter; 15 of 20 shuffles as high |
+
+Planted English scores -1.76 to -2.02 a letter. The cells and the regrouping score more than 1.3 a letter below the weakest planted text and sit inside their own shuffles. A scratch run before this one recovered 4 of 4; the frozen run recovers 4 of 6, so the search finds a planted key about two times in three at this budget. Gariazzo reached 83 percent key recovery.
+
+[The pair-count note](dagapeyeff-pairmap-2026-10-06.md) adds that any one-to-one pair cipher of ordinary English is very unlikely to give the regrouping, which agrees with this search.
 
 Not a reading. No letter string is stored.

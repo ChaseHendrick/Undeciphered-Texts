@@ -92,6 +92,8 @@ from engine.dagapeyeff_keywords import keyword_report
 from engine.dagapeyeff_double import double_report
 from engine.dagapeyeff_exhaustive10 import exhaustive10_report
 from engine.dagapeyeff_foursquare import foursquare_report
+from engine.dagapeyeff_pairmap import pairmap_report
+from engine.dagapeyeff_columnar14c import columnar14c_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -1662,16 +1664,57 @@ def consider_exhaustive10() -> dict:
 def consider_foursquare() -> dict:
     report = foursquare_report()
     counts = report["counts"]
+    low, high = sorted(counts["texts"]["cells"]["pairs-from-first"])
+    best = max(row["per_letter"] for row in report["searched"].values())
     return {
         "solved": False,
         "claimed_plaintext": None,
         "foursquare_allowed": False,
         "learned": (
             f"Four-square fixes how many symbols each side of a pair can use before any key is chosen. The cells use "
-            f"{counts['texts']['cells']['pairs-from-first']} and held-out English never has fewer than "
-            f"{counts['keyed_fewest_larger_side']} on its larger side, even with keyed plain squares. The search "
-            f"recovers {report['planted_recovered']} of {len(report['planted'])} planted texts and does not lift the "
-            "cells or the regrouping above their shuffles to English. Not a reading."
+            f"{low} and {high}, and held-out English never has fewer than {counts['keyed_fewest_larger_side']} on its "
+            f"larger side, even with keyed plain squares. The search recovers {report['planted_recovered']} of "
+            f"{len(report['planted'])} planted texts. The cells and the regrouping score near their shuffles, "
+            f"{best} a letter at best, where planted English is {report['planted_lowest_true']} or higher. Not a reading."
+        ),
+    }
+
+
+def consider_pairmap() -> dict:
+    report = pairmap_report()
+    cells = report["texts"]["cells"]
+    regrouped = report["texts"]["regrouped"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "pairmap_allowed": False,
+        "learned": (
+            "A cipher that sends each plaintext pair to one fixed cipher pair keeps the number of different pairs. "
+            f"The cells use {cells['phase 0']['different_pairs']} and {cells['phase 1']['different_pairs']}; "
+            f"{cells['phase 0']['windows_as_many']} and {cells['phase 1']['windows_as_many']} of {report['windows']} "
+            "prose windows use as many, so the count does not exclude such a cipher on the cells. The regrouping uses "
+            f"{regrouped['phase 0']['different_pairs']} at both phases, reached by "
+            f"{regrouped['phase 0']['windows_as_many']} and {regrouped['phase 1']['windows_as_many']} windows. "
+            "Not a reading."
+        ),
+    }
+
+
+def consider_columnar14c() -> dict:
+    report = columnar14c_report()
+    recovered = sum(done for done, _ in report["planted_recovered"].values())
+    planted = sum(total for _, total in report["planted_recovered"].values())
+    best = max(row["per_letter"] for row in report["searched"].values())
+    weakest = min(row["found_per_letter"] for row in report["planted"])
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "columnar14c_allowed": False,
+        "learned": (
+            f"A compiled joint search of the 14-column order and the letter key recovers {recovered} of {planted} "
+            "planted 196-letter texts in both directions, some with 8 wrong cells. The cells and the regrouping "
+            f"score {best} a letter at best, inside their shuffles, where the weakest planted text was found at "
+            f"{weakest}. Not a reading."
         ),
     }
 
