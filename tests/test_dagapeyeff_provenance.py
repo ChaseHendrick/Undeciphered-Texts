@@ -37,7 +37,7 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
                 ("board", "3b39a845596491cb92c951d67d82ce49e5773379c082cc005c978c2a80b527a9"),
                 ("infer", "c67768bd2e358814d7b1faea635b909637f2eb2ca249c6053f6889e958c409c0"),
                 ("foresight", "48ceb2bf1c6010816c96eb483fccd9dc5609748da14cb459b638f94f94a29e10"),
-                ("checks", "d68c5f2d9a4d861071f7a74b7c868f5590f642b24fb16b8f2a9105bebd6618ef"),
+                ("checks", "4efa17501da4dc2540ab540b73cb2c1532cde7955c2bf9e4b50e9aa067be8b60"),
                 ("adversary", "27532401beeff15910f3beb80b6bef2095313b8beb709213f46ee2ce8adede86"),
                 ("autokey", "291d0e3ead0bb0903b5a93f7851c44dc9f491060cc3a62a8302759af2a863306"),
                 ("digit-routes", "97547066e834b8423c9edee4d893b838baa6b8a22d530d821c0eb2306f1577af"),
@@ -106,7 +106,7 @@ class DagapeyeffProvenanceTest(unittest.TestCase):
         )
         self.assertEqual(
             report["chain_sha256"],
-            "a98511841f0e63ed4984f0e39e9749157dbb824bfdc0ba7c2a1ea92c2e44cb80",
+            "cde843b42763f11ff1d9b4f37a9ad655e50dde40b8cd97863351b1bf15457d0e",
         )
         self.assertEqual(report["entries"][0]["chain_sha256"], report["entries"][0]["content_sha256"])
         self.assertNotEqual(report["entries"][1]["chain_sha256"], report["entries"][1]["content_sha256"])

@@ -254,7 +254,7 @@
     {
       "family": "No message (a hand construction)",
       "status": "open",
-      "evidence": "Van Eykelen's recipe matches 14 statistics; against random dealings of the cells' own symbols the order gives a family-wise p of 0.28, with a test that flags 19 of 20 keyed-square and done-columnar messages but only 3 of 20 grille messages.",
+      "evidence": "Against random dealings of the cells' own symbols the order gives a family-wise p of 0.28, with a test that flags 19 of 20 keyed-square and done-columnar messages but only 3 of 20 grille messages; a grille-specific statistic has weak power (4 of 12) and the cells sit among their dealings (25 of 40). A message now needs an order-destroying transposition and either count-flattening or an unusual text.",
       "logs": [
         "dagapeyeff-nomessage-2026-10-06.md",
         "dagapeyeff-prior-work-2026-10-05.md"
