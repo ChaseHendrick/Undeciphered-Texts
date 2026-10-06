@@ -14,7 +14,7 @@ class DagapeyeffChecksTest(unittest.TestCase):
         self.assertIs(report["solved"], False)
         self.assertIsNone(report["claimed_plaintext"])
         self.assertTrue(report["sound"])
-        self.assertEqual(report["cache"], {"files": 107, "claiming_a_reading": []})
+        self.assertEqual(report["cache"], {"files": 108, "claiming_a_reading": []})
         self.assertEqual(report["order"]["pairs"], 196)
         self.assertEqual(report["order"]["forward_chi"], 34.23)
         self.assertEqual(report["order"]["reversed_chi"], 34.23)

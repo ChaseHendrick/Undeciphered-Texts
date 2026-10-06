@@ -1,6 +1,5 @@
 # Four-square on the cells, 6 October 2026
 
-Not a reading. No letter string is stored.
 
 In four-square, the first symbol of each cipher pair comes from one square and the second from another. Which cell is hit depends only on the plaintext letters' rows and columns in the plain squares, so the number of different symbols on each side is fixed before any cipher key is chosen.
 
@@ -21,3 +20,10 @@ Planted English scores -1.76 to -2.02 a letter. The cells and the regrouping sco
 [The pair-count note](dagapeyeff-pairmap-2026-10-06.md) adds that any one-to-one pair cipher of ordinary English is very unlikely to give the regrouping, which agrees with this search.
 
 Not a reading. No letter string is stored.
+
+## Correction, 6 October 2026
+
+The side count is fixed by the plaintext and the two plain squares; only the cipher squares drop out. It is key-free only when the plain squares are the standard alphabet. The 7,400 keyed draws above used plain squares drawn at random, which is a statement about random keys, not about every key. `engine.dagapeyeff_fskeyed` climbs the plain squares toward the cells' side counts instead, and with chosen squares 15 of 15 held-out windows reach 13 and 18 exactly ([finding](../../papers/dagapeyeff-exclusions/notes/review-1.md)). The search above also used standard plain squares only. So four-square with standard plain squares is closed; four-square with keyed plain squares, and two-square, whose squares are all keyed, are neither excluded by the count nor searched.
+
+Not a reading. No letter string is stored.
+
