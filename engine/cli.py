@@ -115,6 +115,8 @@ def build_parser() -> argparse.ArgumentParser:
                        help="append the public-domain training file to the Austen slice")
     train.add_argument("--cost-sensitive", action="store_true",
                        help="upweight families the incumbent misses on the training validation split")
+    train.add_argument("--broad-enigma", type=float, default=0.0,
+                       help="share of training and validation Enigma rows drawn with plugboards and five rotors")
     train.add_argument("--dry-run", action="store_true", help="evaluate without writing artifacts")
 
     analyze = sub.add_parser("analyze", help="IC, Friedman, Kasiski, and n-gram counts")
@@ -195,6 +197,7 @@ def main(argv: list[str] | None = None) -> int:
                                           feature_version=args.feature_version,
                                           more_prose=args.more_prose,
                                           cost_sensitive=args.cost_sensitive,
+                                          broad_enigma=args.broad_enigma,
                                           **teacher_options), indent=2))
             return 0
         except (ValueError, TypeError, ImportError, OSError) as exc:
