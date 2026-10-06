@@ -23,7 +23,8 @@ class CliControlsTest(unittest.TestCase):
                 self.assertEqual(main(arguments), 0)
                 fit.assert_called_once_with(epochs=250, train_per_class=256, write=False,
                     expanded_families=False, hidden=96, ensemble_size=3, warm_start=enabled,
-                    learning_rate=rate, feature_version=None, more_prose=False, cost_sensitive=False)
+                    learning_rate=rate, feature_version=None, more_prose=False, cost_sensitive=False,
+                    broad_enigma=0.0)
             self.assertEqual(json.loads(output.getvalue()), {"promoted": False})
 
     def test_unified_registry_and_invocation_commands(self):
