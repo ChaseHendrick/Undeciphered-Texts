@@ -140,6 +140,14 @@
       ]
     },
     {
+      "family": "Latin under a repeating coordinate shift, and under four-square with standard plain squares",
+      "status": "closed-with-power",
+      "evidence": "The shift count does not exclude Latin (1 of 9,774 draws reaches the cells), but the joint search recovers 15 of 18 planted Latin texts and the cells sit with their shuffles; four-square recovers 3 of 3 with the cells inside their shuffles. A capped homophonic key recovers only 2 of 3.",
+      "logs": [
+        "dagapeyeff-latinmore-2026-10-06.md"
+      ]
+    },
+    {
       "family": "Any transposition of ordinary English prose under a one-to-one letter key",
       "status": "excluded-by-count",
       "evidence": "A transposition keeps letter counts; none of 479,051 prose windows has the cells' flatness, few letters and rare column together.",
@@ -246,11 +254,12 @@
     {
       "family": "No message (a hand construction)",
       "status": "open",
-      "evidence": "Van Eykelen's tally-and-deal recipe matches all 14 fingerprint statistics; statistics alone cannot decide.",
+      "evidence": "Van Eykelen's recipe matches 14 statistics; against random dealings of the cells' own symbols the order gives a family-wise p of 0.28, with a test that flags 19 of 20 keyed-square and done-columnar messages but only 3 of 20 grille messages.",
       "logs": [
+        "dagapeyeff-nomessage-2026-10-06.md",
         "dagapeyeff-prior-work-2026-10-05.md"
       ],
-      "next": "A predeclared likelihood test between van Eykelen's tally-and-deal recipe and message-bearing models, calibrated on planted texts.",
+      "next": "Find an order statistic that separates a turning-grille message from a no-message dealing at 196 letters, with planted texts, since the grille is the main message system the order still allows.",
       "priority": 3
     },
     {

@@ -98,6 +98,7 @@ from engine.dagapeyeff_homophone import homophone_report
 from engine.dagapeyeff_errors import errors_report
 from engine.dagapeyeff_direction import direction_report
 from engine.dagapeyeff_fskeyed import fskeyed_report
+from engine.dagapeyeff_nomessage import nomessage_report
 from engine.dagapeyeff_pairmap import pairmap_report
 from engine.dagapeyeff_columnar14c import columnar14c_report
 from engine.dagapeyeff_monotone import monotone_report
@@ -1846,6 +1847,22 @@ def consider_fskeyed() -> dict:
             f"With chosen plain squares {report['reaching']} of {report['windows']} held-out English windows reach the "
             "cells' four-square side counts, so the side count excludes four-square only with standard plain squares, "
             "and does not exclude two-square. Not a reading."
+        ),
+    }
+
+
+def consider_nomessage() -> dict:
+    report = nomessage_report()
+    power = report["power"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "nomessage_allowed": False,
+        "learned": (
+            f"Against random dealings of their own symbols the cells' order gives a family-wise p of "
+            f"{report['cells']['family_p']}, a test that flags a keyed square {power['keyed square']['flagged']} of 20 "
+            f"times and a turning grille {power['turning grille']['flagged']} of 20. The order fits no message, or a "
+            "system that destroys order. Not a reading."
         ),
     }
 
