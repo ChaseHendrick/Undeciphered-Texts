@@ -16,4 +16,13 @@ One of the four joint windows is Project Gutenberg header text, not prose: its t
 
 The compiled grille search has power only with the key given. With grille and key both unknown at 196 letters it found 0 of the 7 planted prose grilles in the joint and seeded cases, so a grille on the cells is neither found nor excluded by searching. Scratch runs of single 64,000,000-step anneals also failed. A grille is a transposition, so the letter-count argument in the [corpus note](dagapeyeff-corpus-2026-10-05.md) still applies to it for ordinary English prose.
 
+## Later scratch runs, same day
+
+These were not frozen. They used four planted held-out texts (true scores -1.84 to -2.00 a letter) and the same grille convention and moves; the tempering code was not kept. None recovered a grille.
+
+- Scored with bigrams or trigrams instead of quadgrams, from a frequency key or from the row-neighbour key, 4 restarts of 4,000,000 steps: 0 of 16. The key reached 66 percent of cells right at best, and the grille stayed at 13 to 22 of 49 holes. By a rough count a bigram score gives about as much information over 196 letters (near 120 nats) as the grille and key have freedom (near 117 nats), so a wrong answer can score as well as the right one.
+- Parallel tempering, 16 replicas from temperature 1 to 30, 32,000,000 steps in all: 0 of 4. Every run settled at -2.80 to -2.93 a letter with 14 to 18 holes right.
+
+The right answer scores far higher than where the searches settle, so the model would recognise it. The searches do not reach it. A turning grille with an unknown letter key stays open.
+
 Not a reading. No letter string is stored.
