@@ -4,6 +4,18 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 6 October 2026, last: no-message test, mixing counts, homophonic grouping, paper review
+
+Work is on branch `claude/gallant-brown-aexxsu` (PR #9). The cache holds 120 files after `dagapeyeff-homgroup`; the board page, checks count and provenance chain were regenerated with the scratch helper but the full test suite was not rerun before the session ended. Run `python -m unittest discover -s tests -p 'test_dagapeyeff_*.py'` first and fix any hash or count mismatch.
+
+New probes, all frozen, each with a test and a log: `engine.dagapeyeff_nomessage` (the cells' order is consistent with a no-message dealing, family-wise p 0.28; power 19 of 20 on keyed square and done width 14, 10 of 20 on the shift, 3 of 20 on the grille), `grilletest`, `phases`, `digitcodes` (straddling checkerboards and Nihilist excluded by digit alternation), `mixing` (Hill, bifid, autokey, running key and Vigenere modulo 25 under random keys never use 18 symbols) and `homgroup`. `homgroup` shows that no English window of 196 letters uses 18 letters or fewer, so a homophonic key under any transposition, a grille included, cannot give the cells; no Latin window groups exactly into the cells' counts, the closest needing at most 3 errors.
+
+What the evidence now says: a message needs an order-destroying transposition such as a turning grille plus a non-homophonic count-flattening key, chosen errors, or an unusual text. No message remains consistent with every measurement. Neither is proved.
+
+Paper (`papers/dagapeyeff-exclusions/`): U6 is still open. Two reviewers returned 20 findings, recorded unverified in `notes/review-2-pending.md`. Verify each, fix the manuscript and `make_numbers.py`, add the grilletest, phases, digitcodes, mixing and homgroup results, rename the file to `review-2.md`, mark U6 and rebuild. Do not deposit the paper anywhere until the owner says so.
+
+Do not describe any of this as a decipherment.
+
 ## Session 6 October 2026, a status ledger, errors, languages and Latin
 
 Started from `73f4428` on `main`. The cache holds 107 files; the board page, checks count and provenance chain were regenerated.
