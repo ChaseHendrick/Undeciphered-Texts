@@ -15,11 +15,17 @@ Dated 6 October 2026. The detailed survey, with quotations and per-source readin
 | Pelling, Cipher Mysteries, 2013 and 2017 | Fetched on 5 October, including comments by Rodrigues and Melichar | Last-column observation; the Kerckhoffs copy; 240-letter remark |
 | Snider, dagapeyeff-col14 | README fetched | Quantified last column |
 | Uygun, Caillahua Mendoza, Leggett (Zenodo) | Records read on 5 October; titles could not be retrieved on 6 October (zenodo.org blocked here) | Published readings, cited by DOI only |
+| Shulman (Ab Struse), *The Cryptogram*, April/May 1952 | Not opened; title from search | Citation; earlier record |
+| Schmeh, MysteryTwister challenge PDF | Title from search | Citation |
+| Ashley and Antigravity, dagapeyeff-cipher-solver, GitHub, 2026, commit 2009392 | README and PAPER.md read on 6 October 2026 | Its index-of-coincidence argument for a monoalphabetic key is discussed in Section 1 |
+| NumberWorld blog, 2013 and 2015; Please Decipher Me blog, 2010 and 2011 | Search summaries | Dictionary-code and ADFGX hypotheses; the 1949 reprint |
 | Ney, Essen and Kneser 1994; Kirkpatrick, Gelatt and Vecchi 1983; Lasry, Kopal and Wacker 2014 | Bibliographic data checked by search | Methods credit |
 
 ## Queries on 6 October 2026
 
 Web searches for the Zenodo record titles, for Barker's DOI, for the Lasry, Kopal and Wacker article, for Ney, Essen and Kneser, for the MsgTrail and Cipher Mysteries titles, and for public Italian and multilingual corpora. Direct fetches of zenodo.org, crossref.org, msgtrail.com, ciphermysteries.com and ruben-gariazzo.fr were blocked by this environment's network policy, so titles were confirmed through search results.
+
+Second search, 6 October 2026, after the owner asked for more prior work: general searches for D'Agapeyeff analyses, for Shulman's 1952 note, for GitHub projects, for Schmeh's MysteryTwister page, for Bauer's *Unsolved!* (2017), whose coverage of this cipher could not be confirmed and which is not cited, and for the NumberWorld series.
 
 ## Novelty bound
 
