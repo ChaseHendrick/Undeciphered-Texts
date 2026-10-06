@@ -1249,7 +1249,7 @@
           "family": "A plaintext in another language under a large transposition, or in a language not screened",
           "status": "open",
           "status_label": "Open",
-          "evidence": "98 languages with usable text in Universal Dependencies were screened by letter counts, with Russian under four spellings and Esperanto besides; Latin has the lowest median of all and three times the next rate of close windows, though Estonian matches its single closest window. Every window of 59.8 million letters of Latin needs at least 3 errors. Italian and Latin under a one-to-one key are closed; Latin under every column width from 2 to 15 is closed; the grille has no power in any language.",
+          "evidence": "98 languages with usable text in Universal Dependencies were screened by letter counts, with Russian under four spellings and Esperanto besides; Latin has the lowest median of all and three times the next rate of close windows, though Estonian matches its single closest window. Every window of 59.8 million letters of Latin needs at least 3 errors. Italian and Latin under a one-to-one key are closed; Latin under columnar transposition at widths 10 to 15 is closed; the grille has no power in any language.",
           "next": "Search Catalan, Romanian and Latin under a 14-column key and under keyed four-square once a method with power exists; screen further languages.",
           "priority": 1,
           "logs": [
@@ -1305,7 +1305,7 @@
           "family": "Transposition beyond the searched widths, or with nulls and an incomplete rectangle",
           "status": "open",
           "status_label": "Open",
-          "evidence": "The key-invariant method has no power past width 10; double transposition is closed only to width 6. For Latin, every columnar width from 2 to 15 is now closed; English under any transposition with a one-to-one key is already excluded by counts.",
+          "evidence": "The key-invariant method has no power past width 10; double transposition is closed only to width 6. Latin is closed by searches with Latin power at widths 10 to 15; the widths 2 to 9 rest on a key-invariant score whose power was shown for English and German; English under any transposition with a one-to-one key is already excluded by counts.",
           "next": "A joint search with a letter key above width 15 and for double transposition above width 6, in Latin first, since counts already exclude English under a one-to-one key.",
           "priority": 5,
           "logs": [
@@ -1704,7 +1704,7 @@
           },
           {
             "q": "Is it Latin or Russian?",
-            "a": "The letter counts point toward Latin, not Russian. Of 98 languages screened, Latin has the lowest typical distance from the cells' counts and three times as many close stretches as any other; among 59.8 million letters of Latin the best 196-letter stretches need only 3 changed cells. Russian needs at least 9 under every transliteration tried, no closer than English. But Latin under the simple systems, and under every column width from 2 to 15, was searched and nothing was found, so this is a lead for harder systems, not an answer."
+            "a": "The letter counts point toward Latin, not Russian. Of 98 languages screened, Latin has the lowest typical distance from the cells' counts and three times as many close stretches as any other; among 59.8 million letters of Latin the best 196-letter stretches need only 3 changed cells. Russian needs at least 9 under every transliteration tried, no closer than English. But Latin under the simple systems, and under columnar transposition at widths 10 to 15, was searched and nothing was found, so this is a lead for harder systems, not an answer."
           },
           {
             "q": "Could it be a hoax?",
@@ -1725,9 +1725,9 @@
       },
       "manuscript": {
         "title": "Excluding Classical Cipher Families for the 1939 D'Agapeyeff Challenge",
-        "stage": "Draft manuscript in internal review",
+        "stage": "Draft 2, 6 October 2026",
         "deposited": false,
-        "status": "Two reviewers' findings are recorded and are being verified. Not deposited or released anywhere; no DOI.",
+        "status": "Both internal readings are done: the proofs reading and a second reading of the numbers, controls and claims, whose 17 findings were all verified and fixed in draft 2. Draft 2 adds the 98-language screen, 59.8 million letters of Latin, Latin at column widths 10 to 15, the remaining shift periods, and Catalan and Romanian at width 14. Not peer reviewed, not deposited, no DOI.",
         "folder": "papers/dagapeyeff-exclusions"
       },
       "charts": [
