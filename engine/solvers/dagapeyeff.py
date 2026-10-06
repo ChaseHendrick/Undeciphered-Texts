@@ -91,6 +91,7 @@ from engine.dagapeyeff_exhaustive import exhaustive_report
 from engine.dagapeyeff_keywords import keyword_report
 from engine.dagapeyeff_double import double_report
 from engine.dagapeyeff_exhaustive10 import exhaustive10_report
+from engine.dagapeyeff_foursquare import foursquare_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -1654,6 +1655,23 @@ def consider_exhaustive10() -> dict:
             f"At width 10 planted English and German still stand out only for {powered}; for the other families a "
             "shuffle of the planted text scores as high, so nothing follows there. Where power holds, the cells do "
             "not beat their shuffles. Not a reading."
+        ),
+    }
+
+
+def consider_foursquare() -> dict:
+    report = foursquare_report()
+    counts = report["counts"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "foursquare_allowed": False,
+        "learned": (
+            f"Four-square fixes how many symbols each side of a pair can use before any key is chosen. The cells use "
+            f"{counts['texts']['cells']['pairs-from-first']} and held-out English never has fewer than "
+            f"{counts['keyed_fewest_larger_side']} on its larger side, even with keyed plain squares. The search "
+            f"recovers {report['planted_recovered']} of {len(report['planted'])} planted texts and does not lift the "
+            "cells or the regrouping above their shuffles to English. Not a reading."
         ),
     }
 
