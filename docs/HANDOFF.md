@@ -4,6 +4,16 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 6 October 2026, later: the grille again, and widths 10 to 15
+
+Started from `7e02781` on `main`. The cache still holds 99 files; nothing new was frozen.
+
+The grille with an unknown key still has no power. Bigram and trigram scoring (0 of 16) and parallel tempering (0 of 4) were tried in scratch runs; every search settles near -2.85 a letter while the true text scores near -2.0. These are written up at the end of `docs/logs/dagapeyeff-grillec-2026-10-06.md`. The tempering code was not kept.
+
+`engine/dagapeyeff_columnarw.c` generalises the width-14 kernel to any width up to 32, with a short last row. In scratch runs (4 restarts) it recovered 2 of 2 planted texts at widths 11 and 13 with 16,000,000 steps, 2 of 2 at width 15 with 64,000,000 steps, and 0 of 2 at each of widths 16, 17, 18 and 20. `engine.dagapeyeff_columnarw.columnarw_report` runs widths 10, 11, 12, 13 and 15, both directions, with planted texts (one with 8 wrong cells), the cells, the regrouping and 10 shuffles each. That is 260 searches, about an hour on four threads. It was stopped about half way when the session ended, so no result exists yet. Run it next, then add a test, a `consider_columnarw` hook, a catalog row and a log, and regenerate the cache count, the board page and the provenance chain.
+
+Do not describe any of this as a decipherment.
+
 ## Session 6 October 2026, four-square, pair counts, width 14 and the grille
 
 Started from `bbcae59` on `main`. The four-square search the previous session left running is now frozen, and three more were added. The cache holds 99 files. The board page, the checks count and the provenance chain were regenerated; the chain ends at `cac84e8e0cdfc52c48a3d3a5896971fcc3412a1743e46f8d3e0a4d525d5d9ad7`.
