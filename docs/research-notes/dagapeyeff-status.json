@@ -124,6 +124,22 @@
       ]
     },
     {
+      "family": "Latin under a complete 14-column transposition with a letter key",
+      "status": "closed-with-power",
+      "evidence": "8 of 8 planted Latin texts recovered in both directions, also classical Latin and with 8 wrong cells; the printed cells sit inside their shuffles (8 and 6 of 10 as high).",
+      "logs": [
+        "dagapeyeff-latin14-2026-10-06.md"
+      ]
+    },
+    {
+      "family": "Catalan and Romanian under a one-to-one key, with or without the book's dummy rule and errors",
+      "status": "closed-with-power",
+      "evidence": "Planted text comes back 3 of 3 in each, also with 8 slips; the cells sit inside their shuffles (Catalan 7 of 8; Romanian 13 of 40 after an edge at 8 shuffles vanished).",
+      "logs": [
+        "dagapeyeff-tongues-2026-10-06.md"
+      ]
+    },
+    {
       "family": "Any transposition of ordinary English prose under a one-to-one letter key",
       "status": "excluded-by-count",
       "evidence": "A transposition keeps letter counts; none of 479,051 prose windows has the cells' flatness, few letters and rare column together.",
@@ -209,12 +225,12 @@
     {
       "family": "A plaintext in another language under a large transposition, or in a language not screened",
       "status": "open",
-      "evidence": "39 languages were screened by letter counts; Latin is closest, then Catalan and Romanian. Italian and Latin under a one-to-one key are closed; the 14-column and grille searches were run with English models only.",
+      "evidence": "39 languages were screened by letter counts; Latin is closest, then Catalan and Romanian. Italian and Latin under a one-to-one key are closed; Latin under a 14-column key is closed; the grille has no power in any language.",
       "logs": [
         "dagapeyeff-screen-2026-10-06.md",
         "dagapeyeff-languages-2026-10-04.md"
       ],
-      "next": "Rerun the width-14 joint search under the Latin model, with planted Latin, then Catalan and Romanian.",
+      "next": "Search Catalan, Romanian and Latin under a 14-column key and under keyed four-square once a method with power exists; screen further languages.",
       "priority": 1
     },
     {
@@ -261,11 +277,12 @@
     {
       "family": "Four-square with keyed plain squares, and two-square",
       "status": "open",
-      "evidence": "With chosen plain squares 15 of 15 held-out English windows reach the cells' side counts, so the count does not exclude these, and the four-square search used standard plain squares only.",
+      "evidence": "With chosen plain squares 15 of 15 held-out English windows reach the cells' side counts; a search annealing all four squares recovers 0 of 6 planted texts at 196 letters, so it has no power yet.",
       "logs": [
-        "dagapeyeff-foursquare-2026-10-06.md"
+        "dagapeyeff-foursquare-2026-10-06.md",
+        "dagapeyeff-keyedsquares-2026-10-06.md"
       ],
-      "next": "Anneal the plain squares as well as the cipher squares, with planted texts under keyed squares, before searching the cells.",
+      "next": "A search with power for keyed squares at 196 letters, for example fixing the Polybius labelling from the cells' structure or using a stronger model, before the cells are searched.",
       "priority": 6
     }
   ]

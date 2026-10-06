@@ -110,3 +110,20 @@ The scheduler plus council integration/audit command also passed 24 tests:
 ```
 
 A real backend adapter smoke on `KHOORZRUOG` used constructed policy-control records, not measured training feedback. Its initial plan was `37/32/31` checks for Normal Man/Hallucinogens/Mechanic. Realized allocations were `37/35/33` after redistribution; actual work was `32/35/0`, or 67 of 100 checks. Current correctness remained unknown. This checks integration and bookkeeping, not adaptive performance.
+
+# Outside cipher projects, 2026-10-06
+
+Public cipher projects were searched for parts this engine could adopt. Licences decide what may be ported: this repository is MIT, so MIT or Apache code may be adapted with attribution, while GPL code is used for ideas only and reimplemented. Nothing below was run here; only Colossus and dagapeyeff-cipher-solver were cloned and read.
+
+| Project | Licence | What it has | Use here |
+| --- | --- | --- | --- |
+| [stblake/colossus](https://github.com/stblake/colossus), commit `68d45e0` | MIT | C solvers for about 60 classical types; slippery shotgun hill climbing with backtracking to the best state; a two-square solver annealing both keyed squares with cell, row and column moves; a Nihilist-substitution solver that rewards the share of legal coordinates to decouple the additive key from the square; ACA-convention generators for every type | The two-square move set was adapted for `engine/dagapeyeff_keyedsquares.c` (credited in its header). The Nihilist validity trick and the generators are candidates for later work and for Bob's training families. Its turning-grille solver is a pure transposition with no letter key, so it does not address the open grille problem. |
+| [ajejfiejof/dagapeyeff-cipher-solver](https://github.com/ajejfiejof/dagapeyeff-cipher-solver), commit `2009392` | AGPL-3.0 | Polybius statistics, a 14 by 14 split, a Kerckhoffs keyword scan | Nothing to adopt; its index-of-coincidence argument is answered in the D'Agapeyeff manuscript. |
+| [doranchak/azdecrypt](https://github.com/doranchak/azdecrypt) | see its repository | Fast homophonic and periodic-transposition hill climbing; scores n-gram sums weighted by entropy | Entropy weighting is an alternative to the letter cap used in `engine.dagapeyeff_homophone`; ideas only until its licence is checked. |
+| [arielb57/homophone](https://github.com/arielb57/homophone) | see its repository | A Rust homophonic solver that measures how much ciphertext it needs before its answers can be trusted | The same idea as this repository's planted-text power checks; worth comparing thresholds. |
+| [beldenge/zenith](https://github.com/beldenge/zenith) | GPL-3.0 | Homophonic solver with simulated annealing and a web interface | Ideas only. |
+| [notPlancha/ciphersleuth](https://github.com/notPlancha/ciphersleuth) | see its repository | Identifies the cipher family from statistics, then breaks it; standard-library Python | A comparison point for Bob, the family router. |
+| [matthewdgreen/decipher](https://github.com/matthewdgreen/decipher) | see its repository | Composite pipelines of substitution, polyalphabetic and transposition stages, with grille masks | Composite pipelines are the shape of the open D'Agapeyeff families; worth reading before a joint grille method. |
+| [CrypTool 2](https://github.com/cryptool-org) | Apache-2.0 | Lasry's analyzers (columnar, Playfair, double transposition) | Reference implementations for divide-and-conquer double transposition. |
+
+Not a reading of any cipher.
