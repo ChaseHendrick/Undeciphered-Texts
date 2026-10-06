@@ -424,15 +424,6 @@ def macros() -> dict[str, str]:
         out[f"sg{tag}Above"] = str(x["cases_cells_above_all_shuffles"])
         out[f"sg{tag}Cases"] = str(len(x["searched"]))
         out[f"sg{tag}Chance"] = str(round(len(x["searched"]) / 4))
-    t14 = load("tongues14")["languages"] if (CACHE / "dagapeyeff-tongues14.json").exists() else {}
-    for lang, tag in (("Catalan-AnCora", "Ca"), ("Romanian-RRT", "Ro")) if t14 else ():
-        x = t14[lang]
-        out[f"t{tag}Recovered"] = str(x["planted_recovered"])
-        out[f"t{tag}Planted"] = str(len(x["planted"]))
-        out[f"t{tag}Best"] = d(max(r["per_letter"] for r in x["searched"].values()))
-    if t14:
-        out["tAsHighLow"] = str(min(r["shuffles_as_high"] for x in t14.values() for r in x["searched"].values()))
-        out["tShuffles"] = str(len(next(iter(next(iter(t14.values()))["searched"].values()))["shuffles"]))
     nm = load("nomessage")
     out["nmCellNull"] = n(20_000)
     out["nmPlantNull"] = n(2_000)
@@ -543,13 +534,6 @@ def power_table() -> str:
             d(min(r["found_per_letter"] for r in x["planted"]), 2),
             d((wide["searched"]["cells"]["best"] if label == "Romanian" else x["searched"]["cells"]["best"]), 2),
             shuffles + "\\textsuperscript{a}")
-    t14 = load("tongues14")["languages"] if (CACHE / "dagapeyeff-tongues14.json").exists() else {}
-    for lang, label in (("Catalan-AnCora", "Catalan"), ("Romanian-RRT", "Romanian")) if t14 else ():
-        x = t14[lang]
-        best = max(x["searched"].values(), key=lambda r: r["per_letter"])
-        row(f"{label}, columnar width 14 (0 and 8 wrong cells)", f"{x['planted_recovered']}/{len(x['planted'])}",
-            d(min(r["found_per_letter"] for r in x["planted"] if r["cells_right"] >= 0.9), 2), d(best["per_letter"], 2),
-            f"{best['shuffles_as_high']}/{len(best['shuffles'])}")
     head = ("\\begin{tabular}{@{}p{0.34\\linewidth}cccc@{}}\n\\toprule\n"
             "Family searched & Planted found & Weakest planted & Cells' best & Shuffles as high \\\\\n\\midrule")
     return head + "\n" + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n"
