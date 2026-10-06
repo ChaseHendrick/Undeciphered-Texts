@@ -90,6 +90,7 @@ from engine.dagapeyeff_body import body_report
 from engine.dagapeyeff_exhaustive import exhaustive_report
 from engine.dagapeyeff_keywords import keyword_report
 from engine.dagapeyeff_double import double_report
+from engine.dagapeyeff_exhaustive10 import exhaustive10_report
 from engine.dagapeyeff_monotone import monotone_report
 from engine.dagapeyeff_straight import straight_report
 from engine.dagapeyeff_diagonal import diagonal_report
@@ -1638,6 +1639,21 @@ def consider_double() -> dict:
             f"Every pair of column orders at widths 2 to 6, both passes undone or both done: in "
             f"{report['cases_cells_below_planted']} of {report['cases']} cases the cells beat their shuffles by less "
             "than planted English and German beat theirs. Not a reading."
+        ),
+    }
+
+
+def consider_exhaustive10() -> dict:
+    report = exhaustive10_report()
+    powered = [row["family"] for row in report["rows"] if min(p["excess"] for p in row["planted"]) > 0]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "exhaustive10_allowed": False,
+        "learned": (
+            f"At width 10 planted English and German still stand out only for {powered}; for the other families a "
+            "shuffle of the planted text scores as high, so nothing follows there. Where power holds, the cells do "
+            "not beat their shuffles. Not a reading."
         ),
     }
 

@@ -18,7 +18,7 @@ Every D'Agapeyeff probe that called the model, `engine.pooled_substitution`, and
 
 `engine.dagapeyeff_spiral` reads 16 spiral, snake and zigzag routes both ways. The best is 0.686, and 567 of 2,000 shuffles match it. See `docs/logs/dagapeyeff-spiral-2026-10-05.md`.
 
-The cache now holds 94 files. The board page and the provenance chain were regenerated; the chain ends at `b0b14f14f4169965e21510787b9fb5b5a847ef8f81aef9be712939eca56d6a87`.
+The cache now holds 95 files. The board page and the provenance chain were regenerated; the chain ends at `3aa4d9467ab4dcc4d03116847f88bdef58bc5ea5ff229d934c006b0019bc28e3`.
 
 Do not describe the grille score, the book square, or the routes as a decipherment.
 
@@ -34,9 +34,13 @@ Bob's weight file was replaced. Format 10 is the format 5 prefix plus a 3-number
 
 `engine.dagapeyeff_exhaustive` tries every order at widths 2 to 9: columnar both ways with ragged rows, and periodic. Its score cannot be changed by a letter key, so the result holds for any plaintext language. In all 24 cases the cells and the regrouping beat their own shuffles by less than planted English and German beat theirs. A first run compared the regrouping with shuffles of the printed cells and showed 1.0187; that was the wrong control and was replaced.
 
+`engine.dagapeyeff_exhaustive10` runs width 10, 3,628,800 orders a family. A shuffle of planted English now reaches its best order for columnar undone and periodic, so the method has no power there; for columnar done it does, and the cells stay below. Width 10 is the limit of this approach.
+
 `engine.dagapeyeff_double` tries every pair of column orders at widths 2 to 6, both passes undone or both done. In all 50 cases the cells beat their shuffles by less than planted English and German beat theirs. See `docs/logs/dagapeyeff-double-2026-10-05.md`.
 
 `engine.dagapeyeff_keywords` applies 379,521 keywords as single, double and square transpositions both ways, 2,208,702 orders. Planted keywords surface near English; the cells' best, 0.8161, is under shuffled cells' 0.829. `engine.dagapeyeff_body` finds the 13 common symbols as flat as equal odds (chi-square 8.66; 5,274 of 20,000 uniform draws as flat; 194 of 479,051 prose windows). A pure-Python four-square search recovered 0 of 2 planted texts at 2.4 million steps, so four-square was not run on the cells; Gariazzo's 20.9 percent coverage is still the furthest anyone has gone.
+
+The searches without power (width-14 columnar, the turning grille, width 10 undone and periodic) are all transpositions. A transposition cannot change letter counts, and `engine.dagapeyeff_corpus` found no window of ordinary English prose with the cells' counts in every respect. So a one-to-one letter key over any transposition of ordinary English prose is already very unlikely, whatever the order. Those searches matter only if the plaintext is not ordinary prose, for example with nulls, abbreviations or another language.
 
 Do not describe any of these as a decipherment.
 

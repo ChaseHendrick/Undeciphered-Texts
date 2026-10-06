@@ -13,3 +13,11 @@ The highest best-order score for the printed cells is 0.7969. Every planted text
 Columnar transposition in either direction with a full or short last row, and periodic transposition, at widths 2 to 9, followed by any one-to-one substitution in any language, do not read the cells.
 
 Not a reading. No letter string is stored.
+
+## Width 10
+
+`engine.dagapeyeff_exhaustive10` runs the same three families at width 10, every one of 3,628,800 orders a family, with two shuffles of each text. More orders lift what noise can reach, and here they reach English.
+
+For columnar undone, planted English's best order scores 1.0355 and a shuffle of the same symbols reaches 1.0446; German beats its shuffle by 0.0193. For periodic, English's best is 1.0599 and a shuffle reaches 1.094. A real text no longer stands out in these two families at width 10, so nothing about the cells follows from them. For columnar done, planted English and German beat their shuffles by 0.1319 and 0.2243, the cells by -0.01 and the regrouping by 0.038.
+
+Width 10 is where this method stops. It closes the done direction there and says nothing about the other two families.
