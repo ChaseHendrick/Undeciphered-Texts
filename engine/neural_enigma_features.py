@@ -27,6 +27,11 @@ from engine.solvers.enigma import _REFLECTORS, _ROTOR_WIRING
 
 ORDERS = (("I", "II", "III"), ("II", "I", "III"), ("III", "II", "I"), ("I", "III", "II"))
 FEATURE_COUNT = 3
+# The trial reads at most this many letters. Every training, benchmark and audit
+# text is 240 letters or fewer, so the cap changes none of them; it keeps a long
+# input from allocating hundreds of megabytes, and the unmodeled double step
+# would spoil a long text anyway.
+MAX_LETTERS = 480
 
 
 def _wiring(name: str) -> np.ndarray:
@@ -122,7 +127,7 @@ def enigma_trial(values: np.ndarray, logdig: np.ndarray, logenglish: np.ndarray)
 
 def enigma_features(text: str, tables: dict) -> list[float]:
     """Three scalars for the router. The setting and decryption are discarded."""
-    values = np.array([ord(ch) - 65 for ch in text.upper() if "A" <= ch <= "Z"], dtype=np.int64)
+    values = np.array([ord(ch) - 65 for ch in text.upper() if "A" <= ch <= "Z"], dtype=np.int64)[:MAX_LETTERS]
     logenglish = np.log(np.maximum(np.asarray(tables["english"], dtype=np.float64), 1e-300))
     found = enigma_trial(values, np.asarray(tables["logdig"], dtype=np.float64), logenglish)
     return [float(found["pair_per_letter"]), float(found["pair_z"]), float(found["single_per_letter"])]

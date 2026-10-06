@@ -1,13 +1,13 @@
 {
   "model_name": "Bob the Neural Net",
-  "format_version": 5,
-  "feature_version": "cipher_statistics_v5",
+  "format_version": 10,
+  "feature_version": "cipher_statistics_v10",
   "warm_start": true,
-  "learning_rate": 0.0005,
+  "learning_rate": 0.005,
   "checkpoint_epochs": [
-    15,
-    0,
-    15
+    35,
+    145,
+    25
   ],
   "families": [
     "caesar",
@@ -31,9 +31,9 @@
     "affine",
     "autokey"
   ],
-  "correct": 429,
+  "correct": 451,
   "total": 480,
-  "accuracy": 0.89375,
+  "accuracy": 0.9395833333333333,
   "top3_correct": 477,
   "per_family": {
     "caesar": {
@@ -41,11 +41,11 @@
       "total": 24
     },
     "vigenere": {
-      "correct": 21,
+      "correct": 22,
       "total": 24
     },
     "keyed-vigenere": {
-      "correct": 19,
+      "correct": 20,
       "total": 24
     },
     "substitution": {
@@ -57,15 +57,15 @@
       "total": 24
     },
     "bifid": {
-      "correct": 21,
+      "correct": 22,
       "total": 24
     },
     "two-square": {
-      "correct": 16,
+      "correct": 17,
       "total": 24
     },
     "four-square": {
-      "correct": 22,
+      "correct": 21,
       "total": 24
     },
     "adfgvx": {
@@ -85,11 +85,11 @@
       "total": 24
     },
     "enigma": {
-      "correct": 12,
+      "correct": 24,
       "total": 24
     },
     "m209": {
-      "correct": 12,
+      "correct": 21,
       "total": 24
     },
     "keel-sieve": {
@@ -105,7 +105,7 @@
       "total": 24
     },
     "rail-fence": {
-      "correct": 21,
+      "correct": 19,
       "total": 24
     },
     "affine": {
@@ -117,16 +117,16 @@
       "total": 24
     }
   },
-  "temperature": 1.0,
-  "calibration_nll": 0.32016130829816414,
-  "heldout_nll": 0.30802439037500007,
-  "benchmark_correct": 193,
+  "temperature": 0.75,
+  "calibration_nll": 0.15757219532816033,
+  "heldout_nll": 0.1856593077201432,
+  "benchmark_correct": 199,
   "baseline_correct": 158,
   "benchmark_total": 204,
   "promoted": true,
   "predecessor_comparison": {
-    "correct_before": 428,
-    "correct_after": 429,
+    "correct_before": 429,
+    "correct_after": 451,
     "total": 480,
     "families_before": [
       "caesar",
@@ -177,13 +177,15 @@
       20
     ],
     "benchmark_correct_before": 193,
-    "benchmark_correct_after": 193,
+    "benchmark_correct_after": 199,
     "benchmark_total": 204
   },
   "train_per_class": 256,
-  "epochs": 80,
+  "epochs": 150,
   "hidden": 96,
   "ensemble_size": 3,
+  "more_prose": false,
+  "cost_sensitive": false,
   "calibration_sha256": "aa0dc75b524b6ab09fb267780db5e9ed92cd017e3aeb2aed40d0c5f8ee2f7add",
   "train_sha256": "e5678102f300af1ba71cb63da50c9b037fbed9282c18a2c2369cee0cf5112bcc",
   "validation_sha256": "fa3e19ce8046fc2d6e7a64c1432d55834313d7e74e1f2a9393a6c0d44a41c02e",
@@ -191,28 +193,16 @@
   "training_types": [
     "supervised_label_smoothing",
     "curriculum_hard_examples",
-    "paired_dropout_consistency",
-    "frozen_incumbent_teacher_kl"
+    "paired_dropout_consistency"
   ],
-  "distillation": {
-    "strength": 0.25,
-    "temperature": 2.0,
-    "source_model_sha256": "d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825",
-    "feature_version": "cipher_statistics_v5",
-    "ensemble_size": 3,
-    "scope": "generated training rows only",
-    "objective": "T^2 KL(teacher || student)",
-    "teacher": "frozen mean-logit incumbent ensemble",
-    "synthetic_labels": "retained at full supervised weight"
-  },
-  "elapsed_seconds": 88.40380817699952,
-  "reward": 0.8629745119276911,
+  "elapsed_seconds": 2017.6191629309997,
+  "reward": 0.8972238631637798,
   "reward_scope": "Synthetic family-label ground truth only; wrong labels receive -1 regardless of speed. Reward never overrides promotion.",
   "model_policy": {
     "status": "promoted",
     "action": "replace incumbent",
     "criterion": "zero additional errors on both fixed benchmarks; speed cannot compensate for incorrect labels"
   },
-  "artifact_bytes": 1573698,
-  "model_sha256": "5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b"
+  "artifact_bytes": 1590199,
+  "model_sha256": "149b88cae9de463b2447c74c5eb138a6a74818cfd01d70d4f6757f084c75c2da"
 }

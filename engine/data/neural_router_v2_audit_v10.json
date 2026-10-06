@@ -1,0 +1,101 @@
+{
+  "kind": "independent_corpus_family_audit",
+  "model_name": "Bob the Neural Net",
+  "claimed_plaintext": null,
+  "correct": 456,
+  "total": 480,
+  "accuracy": 0.95,
+  "top3_correct": 479,
+  "nll": 0.15378977069608238,
+  "seed": 20262003,
+  "samples_per_class": 24,
+  "corpus_sha256": "4331cc10d4e0f3015b9c06a411f6521e57a71a8fb87726a1986dd006200d1e2f",
+  "model_sha256": "149b88cae9de463b2447c74c5eb138a6a74818cfd01d70d4f6757f084c75c2da",
+  "elapsed_seconds": 133.11658227200041,
+  "per_family": {
+    "caesar": {
+      "correct": 24,
+      "total": 24
+    },
+    "vigenere": {
+      "correct": 21,
+      "total": 24
+    },
+    "keyed-vigenere": {
+      "correct": 22,
+      "total": 24
+    },
+    "substitution": {
+      "correct": 24,
+      "total": 24
+    },
+    "playfair": {
+      "correct": 23,
+      "total": 24
+    },
+    "bifid": {
+      "correct": 24,
+      "total": 24
+    },
+    "two-square": {
+      "correct": 22,
+      "total": 24
+    },
+    "four-square": {
+      "correct": 23,
+      "total": 24
+    },
+    "adfgvx": {
+      "correct": 24,
+      "total": 24
+    },
+    "columnar-transposition": {
+      "correct": 20,
+      "total": 24
+    },
+    "beaufort": {
+      "correct": 23,
+      "total": 24
+    },
+    "porta": {
+      "correct": 22,
+      "total": 24
+    },
+    "enigma": {
+      "correct": 23,
+      "total": 24
+    },
+    "m209": {
+      "correct": 22,
+      "total": 24
+    },
+    "keel-sieve": {
+      "correct": 24,
+      "total": 24
+    },
+    "lumen-braid": {
+      "correct": 24,
+      "total": 24
+    },
+    "prism-latch": {
+      "correct": 24,
+      "total": 24
+    },
+    "rail-fence": {
+      "correct": 19,
+      "total": 24
+    },
+    "affine": {
+      "correct": 24,
+      "total": 24
+    },
+    "autokey": {
+      "correct": 24,
+      "total": 24
+    }
+  },
+  "scope": "One fixed model on previously unused prose and fresh synthetic keys; conditional on the disclosed family generators.",
+  "source_metadata": "neural_audit_wells_source.json",
+  "role": "Audit of the format 10 artifact after the gate promoted it. Wells was not used to train, select, calibrate or gate this artifact. Settings were chosen on Austen validation only.",
+  "previous_audit": "neural_router_v2_audit.json (format 5, 429 of 480)"
+}

@@ -2,23 +2,21 @@
 
 **Bob the Neural Net** is the residual router. Bob ranks 20 supported cipher families. It does not recover
 plaintext or establish the family of an unknown historical message. The saved
-format 5 ensemble reaches **428/480 top one**, **477/480 top three** on the fixed
-Doyle development cases and **193/204** on the exact earlier benchmark. The
+format 10 ensemble reaches **451/480 top one**, **477/480 top three** on the fixed
+Doyle development cases and **199/204** on the exact earlier benchmark. The
 requested 480/480 has not been reached. These are family labels, not 480 solved
 historical ciphers.
 
-The Wells audit used previously unused H. G. Wells prose and fresh synthetic
-keys after the earlier model selection stage. That saved format 5 model gets **429/480 top one** and
-**476/480 top three**. Its model SHA-256 is
-`d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825`.
-The [audit report](../engine/data/neural_router_v2_audit.json),
-[source metadata](../engine/data/neural_audit_wells_source.json), and
-[extracted corpus](../engine/data/neural_audit_wells.txt) make this replayable.
+The Wells audit of the format 10 artifact, run after the gate promoted it and with Wells never used to train, select, calibrate or gate it, gets **456/480 top one** and **479/480 top three**, with log loss 0.154. Its SHA-256 is
+`149b88cae9de463b2447c74c5eb138a6a74818cfd01d70d4f6757f084c75c2da` and the report is
+[`neural_router_v2_audit_v10.json`](../engine/data/neural_router_v2_audit_v10.json). The earlier
+[format 5 audit](../engine/data/neural_router_v2_audit.json) (429/480, 476/480) belongs to SHA
+`d8c985dfdaf2d1dd0e17cfdb8412d0f947221b3f9e30318169d9183145c5c825` and is kept.
+[Source metadata](../engine/data/neural_audit_wells_source.json) and the
+[extracted corpus](../engine/data/neural_audit_wells.txt) make both replayable.
 [Project Gutenberg](https://www.gutenberg.org/ebooks/35) identifies the source
-as public domain in the USA. Later authorized training stages excluded Wells
-from fitting and selection. The audit remains specific to the hashed format 5
-artifact; it is not a globally untouched final audit of all later experiments.
-Future tuning against it would make it another development comparison.
+as public domain in the USA. Format 10 is better on its own generator and worse on broad
+Enigma settings; see [the 5 October section](#an-enigma-trial-format-10-5-october-2026).
 
 ## Training and features
 
@@ -58,6 +56,7 @@ predictions containing unknown letters are not treated as complete texts.
 | Format 8 warm start, 148 features, rate 0.01 | 433 | 477 | 191 | Rejected; format 5 retained |
 | Format 8 conservative warm start, rate 0.0003 | 432 | 476 | 191 | Rejected; format 5 retained |
 | Format 5 warm start, same 142 features, rate 0.0005, 80 epochs, distillation 0.25 | 429 | 477 | 193 | Promoted. SHA-256 `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b` |
+| Format 10 warm start, 142 features plus a 3-number Enigma trial, rate 0.005, 150 epochs, no distillation | 451 | 477 | 199 | Promoted 5 October. SHA-256 `149b88cae9de463b2447c74c5eb138a6a74818cfd01d70d4f6757f084c75c2da` |
 
 An earlier expanded 23-family trial scored 362/552 but regressed to 335/480
 on the identical prior 20-family cases against 347/480, so it was rejected.
@@ -174,6 +173,29 @@ The weight file is still `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08
 A longer substitution search, 8000 steps and 16 restarts, is exact on 0 of 6 fresh windows of 200 letters. The default is also 0 of 6. Both recover the known certificate. The default stays. See [the note](logs/solver-train-2026-10-05.md).
 
 On the 196 cells, Bob names substitution and the reader withholds. A swarm with 2000 substitution steps and four restarts loses to shuffled cells: 6 of 6 for Caesar, 4 of 6 for Vigenere, 6 of 6 for substitution. Not a reading. See [the note](logs/dagapeyeff-anneal-2026-10-05.md).
+
+## An Enigma trial, format 10, 5 October 2026
+
+Enigma and M-209 were 24 of the 51 misses on the 480 Doyle cases. The training generator draws Enigma with reflector B, rotors I to III in four orders and no plugboard. `engine.neural_enigma_features` tries every rotor offset and every middle-carry phase for those four orders, 1,835,008 settings a text, and returns three numbers scored with Bob's training-only tables: the best mean digraph log-likelihood, how far that best stands above all settings, and the unigram score of the best setting. On a training draw the lowest Enigma score is 12.62 standard deviations and the highest of any other family is 5.74. See [the note](logs/bob-enigma-2026-10-05.md).
+
+`cipher_statistics_v10` is the format 5 prefix of 142 numbers plus those 3. Settings were chosen on the Austen validation split only: the incumbent scored 446 of 480 there, a warm start at rate 0.0005 for 80 epochs 458, rate 0.002 for 120 epochs 465, rate 0.005 for 150 epochs 466, and a cold fit 463. The official run used the last warm start, 256 samples per family, three 96-unit members, and took 2,018 seconds. The gate compared it with the incumbent on the same cases.
+
+| | Format 5 | Format 10 |
+| --- | ---: | ---: |
+| Doyle 480 top one | 429 | 451 |
+| Doyle 480 top three | 477 | 477 |
+| Earlier 204 benchmark | 193 | 199 |
+| Enigma, of 24 | 12 | 24 |
+| M-209, of 24 | 12 | 21 |
+| Wells audit top one | 429 | 456 |
+| Wells audit Enigma, of 24 | 7 | 23 |
+| Wells audit M-209, of 24 | 12 | 22 |
+
+Some families fell: rail fence from 21 to 19 and four-square from 22 to 21 on the Doyle cases, and Vigenere from 22 to 21 on Wells. The counts above include them.
+
+The broad probe, which adds plugboards and other rotors, moves the other way: broad Enigma falls from 19 of 32 to 0, called M-209 29 times, while broad M-209 rises from 15 to 30. Broad top one falls from 34 to 30 of 64. The trial is blind outside the training generator's settings, and the network has learned to read a blind trial as not Enigma. Real intercepts used plugboards. See [the manifest note](bob-probe-manifest-2026-10-04.md).
+
+The weight file changed. Earlier frozen reports that name SHA `5c271f426812d6307f208a636b80f820201e25b3dc6778333e5d08d4d5aaaf4b` are records of that file.
 
 ## Use and reproducibility
 
