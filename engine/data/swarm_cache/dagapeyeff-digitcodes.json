@@ -1,0 +1,22 @@
+{
+  "cells": 1.0,
+  "claimed_plaintext": null,
+  "solved": false,
+  "systems": {
+    "Nihilist, coordinates 0 to 4": {
+      "best": 0.7628,
+      "draws": 300,
+      "reaching_cells": 0
+    },
+    "Nihilist, coordinates 1 to 5": {
+      "best": 0.8469,
+      "draws": 300,
+      "reaching_cells": 0
+    },
+    "straddling checkerboard": {
+      "best": 0.6505,
+      "draws": 300,
+      "reaching_cells": 0
+    }
+  }
+}

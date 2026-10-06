@@ -15,14 +15,14 @@ The public digit block is the one on the English Wikipedia page for the D'Agapey
 <!-- generated-status:start -->
 ## How close is this to solved?
 
-**Unsolved. Plaintext recovered: 0 percent. 23 of 33 hypothesis families listed (70 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-06.**
+**Unsolved. Plaintext recovered: 0 percent. 24 of 34 hypothesis families listed (71 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-06.**
 
 Progress here means ruling hypotheses out, not reading part of a message. The percentage is a share of the families listed below, which is not every possible cipher, and a hand construction with no message fits every statistic measured so far. It is not a measure of distance to a reading.
 
 | Status | Families | Share |
 | --- | --- | --- |
-| Closed with shown power | 16 | 48 percent |
-| Excluded by a count | 7 | 21 percent |
+| Closed with shown power | 16 | 47 percent |
+| Excluded by a count | 8 | 24 percent |
 | Tested without shown power | 4 | 12 percent |
 | Open | 6 | 18 percent |
 
@@ -51,6 +51,7 @@ Progress here means ruling hypotheses out, not reading part of a message. The pe
 | Only the column digit carries the message | Excluded by a count | The paired column digits are less coincident than any of 373 English windows. [log](../logs/dagapeyeff-quick-2026-10-06.md) |
 | Eight published readings | Excluded by a count | None passes as a full-length reading against the counts the cells force; three fail their own stated method. [log](../logs/dagapeyeff-prior-work-2026-10-05.md) |
 | Periodic independent alphabets (a different one-to-one key at each place modulo p, p from 2 to 14) | Excluded by a count | Applied phase by phase, the error count needs at least 13 chosen errors for any held-out English window at every period; none of 1,558 windows comes within 8. [log](../logs/dagapeyeff-phases-2026-10-06.md) |
+| Straddling checkerboard and Nihilist substitution (digit codes not made of fixed pairs) | Excluded by a count | The cells' 392 digits alternate perfectly between two classes of five digits; 300 planted texts per system under random keys reach at most 0.65 to 0.85 of that alternation, none all of it. [log](../logs/dagapeyeff-digitcodes-2026-10-06.md) |
 | Bifid | Tested without shown power | All periods 1 to 196; 1,109 of 2,000 shuffles reach the cells' best; no planted text. [log](../logs/dagapeyeff-bifid-2026-10-04.md) |
 | Autokey on the square | Tested without shown power | 37 of 40 shuffles score as well; no planted text. [log](../logs/dagapeyeff-autokey-2026-10-04.md) |
 | Running key from texts in the repository, and the book's exercise as a key | Tested without shown power | 94,860 alignments and the exercise slid across the cells; shuffles do as well; no planted text. [log](../logs/dagapeyeff-running-2026-10-04.md), [log](../logs/dagapeyeff-bookkey-2026-10-04.md) |
@@ -230,6 +231,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Two spaced triples share a column](../logs/dagapeyeff-twospace-2026-10-05.md)
 - [A repeating shift on a keyed square, 6 October 2026](../logs/dagapeyeff-additive-2026-10-06.md)
 - [Width-14 columnar with a letter key, compiled, 6 October 2026](../logs/dagapeyeff-columnar14c-2026-10-06.md)
+- [Digit ciphers other than Polybius pairs, 6 October 2026](../logs/dagapeyeff-digitcodes-2026-10-06.md)
 - [A direction swarm: the old leads rerun, 6 October 2026](../logs/dagapeyeff-direction-2026-10-06.md)
 - [Enciphering errors cannot hide English under a one-to-one key, 6 October 2026](../logs/dagapeyeff-errors-2026-10-06.md)
 - [Four-square on the cells, 6 October 2026](../logs/dagapeyeff-foursquare-2026-10-06.md)

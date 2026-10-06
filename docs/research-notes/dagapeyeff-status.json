@@ -204,6 +204,14 @@
       ]
     },
     {
+      "family": "Straddling checkerboard and Nihilist substitution (digit codes not made of fixed pairs)",
+      "status": "excluded-by-count",
+      "evidence": "The cells' 392 digits alternate perfectly between two classes of five digits; 300 planted texts per system under random keys reach at most 0.65 to 0.85 of that alternation, none all of it.",
+      "logs": [
+        "dagapeyeff-digitcodes-2026-10-06.md"
+      ]
+    },
+    {
       "family": "Bifid",
       "status": "tested-without-power",
       "evidence": "All periods 1 to 196; 1,109 of 2,000 shuffles reach the cells' best; no planted text.",
