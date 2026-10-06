@@ -95,6 +95,7 @@ from engine.dagapeyeff_foursquare import foursquare_report
 from engine.dagapeyeff_additive import additive_report
 from engine.dagapeyeff_quick import quick_report
 from engine.dagapeyeff_homophone import homophone_report
+from engine.dagapeyeff_errors import errors_report
 from engine.dagapeyeff_pairmap import pairmap_report
 from engine.dagapeyeff_columnar14c import columnar14c_report
 from engine.dagapeyeff_monotone import monotone_report
@@ -1735,6 +1736,23 @@ def consider_homophone() -> dict:
             f"{rows['cells']['per_letter']} ({rows['cells']['shuffles_as_high']} of 8 shuffles as high) and the "
             f"regrouping {rows['regrouped']['per_letter']} ({rows['regrouped']['shuffles_as_high']} of 8), against "
             f"{report['planted_lowest_true']} for planted English. Not a reading."
+        ),
+    }
+
+
+def consider_errors() -> dict:
+    report = errors_report()
+    counts = report["counts"]
+    eight = report["by_errors"]["8"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "errors_allowed": False,
+        "learned": (
+            f"No held-out English window reaches the cells' counts with fewer than {counts['best_case_fewest']} "
+            f"chosen errors, and random errors reach them 0 times. With 8 digit slips planted English still scores "
+            f"{eight['found_low']} a letter or better against the cells' {report['cells_per_letter']}; English falls "
+            f"to the cells' level only at {report['fewest_errors_at_cells_level']} errors. Not a reading."
         ),
     }
 

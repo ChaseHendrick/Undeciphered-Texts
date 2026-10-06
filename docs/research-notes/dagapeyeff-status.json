@@ -178,6 +178,15 @@
       ]
     },
     {
+      "family": "Enciphering errors at the book's rate under a one-to-one key, with or without a transposition",
+      "status": "closed-with-power",
+      "evidence": "No held-out English window reaches the cells' counts with fewer than 15 chosen errors, random errors never do, and with 8 slips planted English still scores -2.49 a letter or better against the cells' -3.90.",
+      "logs": [
+        "dagapeyeff-errors-2026-10-06.md",
+        "dagapeyeff-corpus-2026-10-05.md"
+      ]
+    },
+    {
       "family": "A plaintext in another language (French, German, Latin, Russian transliteration)",
       "status": "open",
       "evidence": "Letter counts only: French 2 of 2,000 and Italian 6 of 2,000 draws as flat. The key-invariant transposition searches cover any language; the substitution searches are English only.",
@@ -198,17 +207,6 @@
       "priority": 2
     },
     {
-      "family": "Enciphering errors by the author",
-      "status": "open",
-      "evidence": "Four count moves are needed before the counts look English; the width-14 search tolerates 8 wrong cells.",
-      "logs": [
-        "dagapeyeff-swarm-2026-10-04.md",
-        "dagapeyeff-columnar14c-2026-10-06.md"
-      ],
-      "next": "Plant texts with random cell errors and measure how many errors each closed search still tolerates.",
-      "priority": 3
-    },
-    {
       "family": "No message (a hand construction)",
       "status": "open",
       "evidence": "Van Eykelen's tally-and-deal recipe matches all 14 fingerprint statistics; statistics alone cannot decide.",
@@ -216,7 +214,7 @@
         "dagapeyeff-prior-work-2026-10-05.md"
       ],
       "next": "A predeclared likelihood test between van Eykelen's tally-and-deal recipe and message-bearing models, calibrated on planted texts.",
-      "priority": 4
+      "priority": 3
     },
     {
       "family": "A general pair table (2 by 2 Hill, any 625-pair code)",
@@ -226,7 +224,7 @@
         "dagapeyeff-pairmap-2026-10-06.md"
       ],
       "next": "Search 2 by 2 Hill over a keyed square with planted texts.",
-      "priority": 5
+      "priority": 4
     },
     {
       "family": "Transposition beyond the searched widths, or with nulls and an incomplete rectangle",
@@ -237,7 +235,7 @@
         "dagapeyeff-double-2026-10-05.md"
       ],
       "next": "A joint search with a letter key, as for width 14, at widths 11 to 13 and for double transposition above width 6.",
-      "priority": 6
+      "priority": 5
     }
   ]
 }
