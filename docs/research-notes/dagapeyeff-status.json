@@ -263,19 +263,20 @@
     {
       "family": "14 by 14 turning grille with a letter key",
       "status": "open",
-      "evidence": "The compiled search finds 4 of 4 planted grilles with the key given and 0 of 4 with it unknown, and order tests barely tell a grille message from no message (3 of 20; 4 of 12). A grille is a transposition, so under a one-to-one key the letter counts still need at least 8 chosen errors in English and 4 in Latin, and random errors never reach them; a grille stays open mainly with a count-flattening key or an unusual text.",
+      "evidence": "The compiled search finds 4 of 4 planted grilles with the key given and 0 of 4 with it unknown, and order tests barely tell a grille message from no message (3 of 20; 4 of 12). A grille is a transposition, so under a one-to-one key the letter counts still need at least 8 chosen errors in English and 4 in Latin, and random errors never reach them; a grille stays open mainly with a count-flattening key or an unusual text. A homophonic key cannot flatten the counts either: no English window of 196 letters uses 18 letters or fewer, and no Latin window groups exactly into the cells' 18 symbol counts (the closest needs at most 3 errors).",
       "logs": [
         "dagapeyeff-grillec-2026-10-06.md",
         "dagapeyeff-nomessage-2026-10-06.md",
-        "dagapeyeff-errors-2026-10-06.md"
+        "dagapeyeff-errors-2026-10-06.md",
+        "dagapeyeff-homgroup-2026-10-06.md"
       ],
-      "next": "A joint method that recovers planted grilles with the key unknown, before the cells are searched.",
+      "next": "A joint method that recovers planted grilles with the key unknown, before the cells are searched; the count-flattening key left to test is a pair code or keyed squares, since a homophonic key is excluded by counts.",
       "priority": 2
     },
     {
       "family": "No message (a hand construction)",
       "status": "open",
-      "evidence": "Against random dealings of the cells' own symbols the order gives a family-wise p of 0.28, with a test that flags 19 of 20 keyed-square and done-columnar messages but only 3 of 20 grille messages; a grille-specific statistic has weak power (4 of 12) and the cells sit among their dealings (25 of 40). A message now needs an order-destroying transposition and either count-flattening or an unusual text.",
+      "evidence": "Against random dealings of the cells' own symbols the order gives a family-wise p of 0.28, with a test that flags 19 of 20 keyed-square and done-columnar messages but only 3 of 20 grille messages; a grille-specific statistic has weak power (4 of 12) and the cells sit among their dealings (25 of 40). A message now needs an order-destroying transposition and either a non-homophonic count-flattening key, chosen errors or an unusual text.",
       "logs": [
         "dagapeyeff-nomessage-2026-10-06.md",
         "dagapeyeff-prior-work-2026-10-05.md"

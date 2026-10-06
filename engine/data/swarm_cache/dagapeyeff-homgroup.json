@@ -1,0 +1,23 @@
+{
+  "claimed_plaintext": null,
+  "english": {
+    "exact_groupings": 0,
+    "fewest_errors_found": null,
+    "fewest_letters": 19,
+    "median_errors_found": null,
+    "windows": 608,
+    "windows_within_18_letters": 0,
+    "within_4_errors": 0
+  },
+  "latin": {
+    "exact_groupings": 0,
+    "fewest_errors_found": 3,
+    "fewest_letters": 15,
+    "median_errors_found": 19,
+    "windows": 6113,
+    "windows_within_18_letters": 1668,
+    "within_4_errors": 1
+  },
+  "solved": false,
+  "symbols": 18
+}
