@@ -22,6 +22,7 @@ PAPER = Path(__file__).resolve().parents[1] / "paper"
 INPUTS = (
     "corpus", "columnar", "columnar14c", "exhaustive", "exhaustive10", "double", "keywords",
     "foursquare", "pairmap", "grillec", "quick", "homophone", "additive", "direction",
+    "errors", "italian", "screen", "latin",
 )
 
 
@@ -163,6 +164,7 @@ def macros() -> dict[str, str]:
     out["quickShuffleBestAsHigh"] = str(q["shuffle_bests_as_high"])
     sp = q["spaces"]
     out["spacesSeparators"] = str(sp["separators"])
+    out["spacesWords"] = str(sp["separators"] + 1)
     out["spacesLetters"] = str(sp["letters"])
     out["spacesMean"] = p(sp["mean_word_length"])
     out["spacesEnglishMax"] = p(sp["english_longest_mean_word"], 1)
@@ -221,7 +223,69 @@ def macros() -> dict[str, str]:
     out["dirTopTransform"] = top["transform"].replace(":", "{:}")
     out["dirTopZ"] = p(top["z"])
     out["dirTopScore"] = d(top["per_letter"])
+    e = load("errors")
+    ec = e["counts"]
+    out["errWindows"] = n(ec["windows"])
+    out["errBestFewest"] = str(ec["best_case_fewest"])
+    out["errBestMedian"] = p(ec["best_case_median"], 0)
+    out["errRandomDraws"] = n(sum(r["draws"] for r in ec["random"]))
+    out["errRandomFewest"] = str(min(r["fewest_remaining"] for r in ec["random"]))
+    out["errCells"] = d(e["cells_per_letter"])
+    out["errEightLow"] = d(e["by_errors"]["8"]["found_low"])
+    out["errEightRight"] = str(round(100 * e["by_errors"]["8"]["letters_right_low"]))
+    out["errSixteenLow"] = d(e["by_errors"]["16"]["found_low"])
+    out["errLevel"] = str(e["fewest_errors_at_cells_level"])
+    out["errLevelRight"] = str(round(100 * e["by_errors"][str(e["fewest_errors_at_cells_level"])]["letters_right_low"]))
+    out["corpusClosestDistance"] = str(load("corpus")["closest_sorted_distance"] // 2)
+
+    it = json.loads((CACHE / "dagapeyeff-italian.json").read_text(encoding="utf-8"))
+    out["itLetters"] = n(it["counts"]["letters"])
+    out["itWindows"] = n(it["counts"]["windows"])
+    out["itFewest"] = str(it["counts"]["fewest_errors"])
+    out["itMedian"] = p(it["counts"]["median_errors"], 0)
+    out["itCells"] = d(it["cells_per_letter"])
+    out["itAsHigh"] = str(it["shuffles_as_high"])
+    out["itRecovered"] = str(it["planted_recovered"])
+    out["itErrRecovered"] = str(it["planted_with_errors_recovered"])
+
+    sc = load("screen")
+    out["screenLanguages"] = str(len(sc["languages"]))
+    latin = sc["languages"]["Latin-ITTB"]
+    out["screenLatinFewest"] = str(latin["fewest_errors"])
+    out["screenLatinMedian"] = p(latin["median_errors"], 0)
+    out["screenLatinWithin"] = str(latin["within_8"])
+    perseus = sc["languages"]["Latin-Perseus"]
+    out["screenPerseusFewest"] = str(perseus["fewest_errors"])
+    out["screenPerseusWithin"] = str(perseus["within_8"])
+    out["screenGermanFewest"] = str(sc["languages"]["German-GSD"]["fewest_errors"])
+    out["screenRussianFewest"] = str(sc["languages"]["Russian-GSD"]["fewest_errors"])
+    out["screenFrenchFewest"] = str(sc["languages"]["French-GSD"]["fewest_errors"])
+    others = [row["median_errors"] for name, row in sc["languages"].items() if not name.startswith("Latin")]
+    out["screenOthersMedianLow"] = p(min(others), 0)
+
+    la = load("latin")
+    out["laRecovered"] = str(la["planted_recovered"])
+    out["laErrRecovered"] = str(la["planted_with_errors_recovered"])
+    out["laTrainLetters"] = n(la["letters"]["train"])
+    out["laSquare"] = d(la["searched"]["cells"]["square"])
+    out["laSquareAsHigh"] = str(la["searched"]["cells"]["square_shuffles_as_high"])
+    out["laBest"] = d(la["searched"]["cells"]["best"])
+    out["laBestAsHigh"] = str(la["searched"]["cells"]["shuffle_bests_as_high"])
+    out["laClassicalLow"] = d(min(pl["true_per_letter"] for pl in la["planted"] if pl["case"] == "classical 0"))
     return out
+
+
+def screen_table() -> str:
+    sc = load("screen")
+    lines = ["\\begin{tabular}{@{}lrrrr@{}}", "\\toprule",
+             "Treebank & Letters & Fewest & Median & Within 8 \\\\", "\\midrule"]
+    for name in sc["ranked"][:12]:
+        row = sc["languages"][name]
+        label = name.replace("_", " ").replace("-", " (", 1) + ")"
+        lines.append(f"{label} & {n(row['letters'])} & {row['fewest_errors']} & {row['median_errors']:.0f} & "
+                     f"{n(row['within_8'])} \\\\")
+    lines += ["\\bottomrule", "\\end{tabular}"]
+    return "\n".join(lines) + "\n"
 
 
 def power_table() -> str:
@@ -267,7 +331,19 @@ def power_table() -> str:
     row("Delays, nulls 2--14, rails, columns 10--28", f"{dr['planted_recovered']}/{len(dr['planted'])}",
         d(dr["planted_lowest_true"], 2), d(fam["cells_best"], 2),
         f"{fam['shuffle_bests_as_high']}/{len(fam['shuffle_bests'])}\\textsuperscript{{a}}")
-    head = ("\\begin{tabular}{@{}p{0.38\\linewidth}cccc@{}}\n\\toprule\n"
+    e = load("errors")
+    row("Keyed square with 8 enciphering slips", f"{sum(1 for r in e['planted'] if r['errors'] == 8 and r['letters_right'] >= 0.9)}/"
+        f"{sum(1 for r in e['planted'] if r['errors'] == 8)}", d(e["by_errors"]["8"]["found_low"], 2),
+        d(e["cells_per_letter"], 2), "--")
+    it = json.loads((CACHE / "dagapeyeff-italian.json").read_text(encoding="utf-8"))
+    row("Italian keyed square (0 and 8 slips)", f"{it['planted_recovered'] + it['planted_with_errors_recovered']}/8",
+        d(it["planted_with_errors_lowest_found"], 2), d(it["cells_per_letter"], 2), f"{it['shuffles_as_high']}/8")
+    la = load("latin")
+    row("Latin keyed square and dummy rule (0 and 8 slips)",
+        f"{la['planted_recovered'] + la['planted_with_errors_recovered']}/12",
+        d(min(r["found_per_letter"] for r in la["planted"]), 2), d(la["searched"]["cells"]["best"], 2),
+        f"{la['searched']['cells']['shuffle_bests_as_high']}/8\\textsuperscript{{a}}")
+    head = ("\\begin{tabular}{@{}p{0.34\\linewidth}cccc@{}}\n\\toprule\n"
             "Family searched & Planted found & Weakest planted & Cells' best & Shuffles as high \\\\\n\\midrule")
     return head + "\n" + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n"
 
@@ -283,6 +359,7 @@ def render() -> dict[str, str]:
     return {
         "numbers.tex": "\n".join(lines) + "\n",
         "tab_power.tex": "% Written by ../code/make_numbers.py. Do not edit by hand.\n" + power_table(),
+        "tab_screen.tex": "% Written by ../code/make_numbers.py. Do not edit by hand.\n" + screen_table(),
     }
 
 

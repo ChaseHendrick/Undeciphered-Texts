@@ -14,7 +14,7 @@ Closed with shown power this session: a repeating coordinate shift on a keyed sq
 
 `engine.dagapeyeff_screen` scores 39 languages from Universal Dependencies by the fewest errors that reach the cells' counts. Latin is closest (4 at its closest window, median 22), then Catalan and Romanian. `engine.dagapeyeff_italian` and `engine.dagapeyeff_latin` close Italian and Latin under a one-to-one key with planted texts and 8 slips. Their texts are fetched into the ignored `work/` folder; their tests read the frozen files. The first open step is Latin under the width-14 joint search.
 
-`papers/dagapeyeff-exclusions/` holds a verified bibliography and `code/make_numbers.py`, which writes every number the manuscript will print from the frozen files. The manuscript is not written yet. It is not to be deposited anywhere until the owner says so.
+`papers/dagapeyeff-exclusions/` holds a draft manuscript (9 pages), its PDF, a verified bibliography, `code/make_numbers.py`, which writes every number it prints from the frozen files, and a quality record. U6, the adversarial second reading, is still open. It is not to be deposited anywhere until the owner says so.
 
 Do not describe any count, screen or search here as a decipherment.
 
