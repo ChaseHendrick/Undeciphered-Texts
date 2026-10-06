@@ -12,6 +12,16 @@ New probes, all frozen, each with a test and a log: `engine.dagapeyeff_nomessage
 
 What the evidence now says: a message needs an order-destroying transposition such as a turning grille plus a non-homophonic count-flattening key, chosen errors, or an unusual text. No message remains consistent with every measurement. Neither is proved.
 
+Open systems at the end of this session, from the ledger, in priority order:
+
+1. Another language under a large transposition, or one not screened. Latin fits the counts best, then Catalan and Romanian. Catalan and Romanian are not yet searched under a 14-column key or keyed four-square.
+2. The 14 by 14 turning grille. The search finds 0 of 4 planted grilles with the key unknown, so it has no power. Counts leave only a pair code or keyed squares, chosen errors, or an unusual text, since a homophonic key is excluded for English and needs at least 3 errors in Latin.
+3. No message. Consistent with every measurement (order family-wise p 0.28), but the order test is nearly blind to a grille, so it cannot be proved.
+4. A general pair table. Random 2 by 2 Hill keys are excluded by the symbol count; a chosen 625-pair table is not.
+5. Columnar transposition at widths 11 to 13 and above 14, with nulls or a short last row, and double transposition above width 6. `engine.dagapeyeff_columnarw` recovers planted texts at widths 11, 13 and 15, but its full run was never finished.
+6. Four-square with keyed plain squares, and two-square. Counts allow them and the search recovers 0 of 6 planted texts at 196 letters.
+7. Not in the ledger yet: the repeating coordinate shift was searched only at periods 2, 3, 4, 5, 7 and 14, so periods 6 and 8 to 13 are open. Add them to the ledger or run them.
+
 Paper (`papers/dagapeyeff-exclusions/`): U6 is still open. Two reviewers returned 20 findings, recorded unverified in `notes/review-2-pending.md`. Verify each, fix the manuscript and `make_numbers.py`, add the grilletest, phases, digitcodes, mixing and homgroup results, rename the file to `review-2.md`, mark U6 and rebuild. Do not deposit the paper anywhere until the owner says so.
 
 Do not describe any of this as a decipherment.
