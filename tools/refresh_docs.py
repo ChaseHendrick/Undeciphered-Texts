@@ -31,7 +31,7 @@ NEXT_START = "<!-- generated-next:start -->"
 NEXT_END = "<!-- generated-next:end -->"
 README_STATUS_START = "<!-- dagapeyeff-status:start -->"
 README_STATUS_END = "<!-- dagapeyeff-status:end -->"
-_ORDER = ("closed-with-power", "excluded-by-count", "tested-without-power", "open")
+_ORDER = ("open", "tested-without-power", "excluded-by-count", "closed-with-power")
 _LABEL = {
     "closed-with-power": "Closed with shown power",
     "excluded-by-count": "Excluded by a count",
@@ -145,7 +145,7 @@ def status_block(data: dict) -> str:
         lines.append(f"| {_LABEL[status]} | {counts[status]} | {_percent(counts[status], total)} percent |")
     lines += ["", "| Family | Status | Evidence |", "| --- | --- | --- |"]
     for status in _ORDER:
-        for family in data["families"]:
+        for family in sorted(data["families"], key=lambda f: f.get("priority", 0)):
             if family["status"] != status:
                 continue
             links = ", ".join(f"[log](../logs/{name})" for name in family["logs"])
