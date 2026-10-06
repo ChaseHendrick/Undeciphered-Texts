@@ -1,0 +1,243 @@
+{
+  "schema": "dagapeyeff-status-1",
+  "reviewed_through": "2026-10-06",
+  "cite_every_log_from": "2026-10-06",
+  "plaintext_recovered_percent": 0,
+  "statuses": {
+    "closed-with-power": "Closed with shown power: the search recovers planted texts of this kind, and the cells score like shuffled cells.",
+    "excluded-by-count": "Excluded by a count: a statistic no key can change rules it out for ordinary English, without a search.",
+    "tested-without-power": "Tested without shown power: nothing was found, but no planted text was recovered, so nothing is closed.",
+    "open": "Open: not searched with shown power, or the search cannot yet find planted texts."
+  },
+  "families": [
+    {
+      "family": "A keyed Polybius square alone (one-to-one letter key)",
+      "status": "closed-with-power",
+      "evidence": "Planted texts come back; the cells score -3.82 to -3.97 a letter against about -2 for English, also read backwards.",
+      "logs": [
+        "dagapeyeff-columnar-2026-10-05.md",
+        "dagapeyeff-quick-2026-10-06.md"
+      ]
+    },
+    {
+      "family": "Columnar and periodic transposition, every order at widths 2 to 9 (and width 10 done), any language",
+      "status": "closed-with-power",
+      "evidence": "A key-invariant score; planted English and German beat their shuffles by more than the cells in all 24 cases.",
+      "logs": [
+        "dagapeyeff-exhaustive-2026-10-05.md"
+      ]
+    },
+    {
+      "family": "Complete 14-column transposition with a letter key",
+      "status": "closed-with-power",
+      "evidence": "18 of 18 planted texts recovered, both directions; the cells score -3.25 to -3.64 a letter, inside their shuffles.",
+      "logs": [
+        "dagapeyeff-columnar14c-2026-10-06.md"
+      ]
+    },
+    {
+      "family": "Double transposition, every pair of orders at widths 2 to 6",
+      "status": "closed-with-power",
+      "evidence": "In 50 of 50 cases the cells beat their shuffles by less than planted English and German.",
+      "logs": [
+        "dagapeyeff-double-2026-10-05.md"
+      ]
+    },
+    {
+      "family": "Keyword transpositions (379,521 keywords, single, double and square)",
+      "status": "closed-with-power",
+      "evidence": "Planted keywords surface near English; the cells' best is under shuffled cells.",
+      "logs": [
+        "dagapeyeff-keywords-2026-10-05.md"
+      ]
+    },
+    {
+      "family": "Four-square and two-square",
+      "status": "closed-with-power",
+      "evidence": "Excluded by a side count (0 of 7,400 keyed English draws reach the cells) and searched: 4 of 6 planted texts recovered, the cells inside their shuffles.",
+      "logs": [
+        "dagapeyeff-foursquare-2026-10-06.md"
+      ]
+    },
+    {
+      "family": "Nulls by place (every 3rd, 4th, 5th cell, or one grid column)",
+      "status": "closed-with-power",
+      "evidence": "6 of 6 planted texts recovered; the cells' best is -3.28 a letter against -2.14 or better for English.",
+      "logs": [
+        "dagapeyeff-quick-2026-10-06.md"
+      ]
+    },
+    {
+      "family": "Homophonic key (several symbols for one letter)",
+      "status": "closed-with-power",
+      "evidence": "6 of 6 planted homophonic texts recovered; the cells and the regrouping sit inside their shuffles.",
+      "logs": [
+        "dagapeyeff-homophone-2026-10-06.md"
+      ]
+    },
+    {
+      "family": "Any transposition of ordinary English prose under a one-to-one letter key",
+      "status": "excluded-by-count",
+      "evidence": "A transposition keeps letter counts; none of 479,051 prose windows has the cells' flatness, few letters and rare column together.",
+      "logs": [
+        "dagapeyeff-corpus-2026-10-05.md"
+      ]
+    },
+    {
+      "family": "Playfair",
+      "status": "excluded-by-count",
+      "evidence": "10 of 98 pairs repeat a cell, which Playfair never does.",
+      "logs": [
+        "dagapeyeff-angles-2026-10-04.md"
+      ]
+    },
+    {
+      "family": "A fixed code giving each letter one pair of cells",
+      "status": "excluded-by-count",
+      "evidence": "Such a code has at most 25 different pairs; the cells have 79 and 80.",
+      "logs": [
+        "dagapeyeff-pairmap-2026-10-06.md"
+      ]
+    },
+    {
+      "family": "The five rare symbols as word spaces",
+      "status": "excluded-by-count",
+      "evidence": "Words would average 20.89 letters; held-out English never exceeds 8.5.",
+      "logs": [
+        "dagapeyeff-quick-2026-10-06.md"
+      ]
+    },
+    {
+      "family": "Only the column digit carries the message",
+      "status": "excluded-by-count",
+      "evidence": "The paired column digits are less coincident than any of 373 English windows.",
+      "logs": [
+        "dagapeyeff-quick-2026-10-06.md"
+      ]
+    },
+    {
+      "family": "Eight published readings",
+      "status": "excluded-by-count",
+      "evidence": "None passes as a full-length reading against the counts the cells force; three fail their own stated method.",
+      "logs": [
+        "dagapeyeff-prior-work-2026-10-05.md"
+      ]
+    },
+    {
+      "family": "A repeating shift on the square (Vigenere-like), periods 2 to 4",
+      "status": "tested-without-power",
+      "evidence": "Searched under the old 8,689-letter model on the book's letter order; nothing found, no planted text.",
+      "logs": [
+        "dagapeyeff-add-2026-10-04.md",
+        "dagapeyeff-period4-2026-10-04.md",
+        "dagapeyeff-word-2026-10-04.md"
+      ]
+    },
+    {
+      "family": "Delays and routes of the row and column digits",
+      "status": "tested-without-power",
+      "evidence": "Delay 79 reached 3 of 200 shuffles under the old model; no planted text.",
+      "logs": [
+        "dagapeyeff-delay-2026-10-04.md",
+        "dagapeyeff-digit-routes-2026-10-04.md"
+      ]
+    },
+    {
+      "family": "Bifid",
+      "status": "tested-without-power",
+      "evidence": "All periods 1 to 196; 1,109 of 2,000 shuffles reach the cells' best; no planted text.",
+      "logs": [
+        "dagapeyeff-bifid-2026-10-04.md"
+      ]
+    },
+    {
+      "family": "Autokey on the square",
+      "status": "tested-without-power",
+      "evidence": "37 of 40 shuffles score as well; no planted text.",
+      "logs": [
+        "dagapeyeff-autokey-2026-10-04.md"
+      ]
+    },
+    {
+      "family": "Running key from texts in the repository, and the book's exercise as a key",
+      "status": "tested-without-power",
+      "evidence": "94,860 alignments and the exercise slid across the cells; shuffles do as well; no planted text.",
+      "logs": [
+        "dagapeyeff-running-2026-10-04.md",
+        "dagapeyeff-bookkey-2026-10-04.md"
+      ]
+    },
+    {
+      "family": "Caesar, Vigenere, Beaufort, Porta and affine on the cells as letters",
+      "status": "tested-without-power",
+      "evidence": "Under the old model; shuffles score as well; no planted text.",
+      "logs": [
+        "dagapeyeff-solver-swarm-2026-10-04.md",
+        "dagapeyeff-classic-swarm-2026-10-04.md",
+        "dagapeyeff-anneal-2026-10-05.md"
+      ]
+    },
+    {
+      "family": "A plaintext in another language (French, German, Latin, Russian transliteration)",
+      "status": "open",
+      "evidence": "Letter counts only: French 2 of 2,000 and Italian 6 of 2,000 draws as flat. The key-invariant transposition searches cover any language; the substitution searches are English only.",
+      "logs": [
+        "dagapeyeff-languages-2026-10-04.md"
+      ],
+      "next": "Fit quadgram models for French, German, Latin and a Russian transliteration, and rerun the keyed-square, nulls and four-square searches with planted texts in each language.",
+      "priority": 1
+    },
+    {
+      "family": "14 by 14 turning grille with a letter key",
+      "status": "open",
+      "evidence": "The compiled search finds 4 of 4 planted grilles with the key given and 0 of 4 with it unknown.",
+      "logs": [
+        "dagapeyeff-grillec-2026-10-06.md"
+      ],
+      "next": "A joint method that recovers planted grilles with the key unknown, before the cells are searched.",
+      "priority": 2
+    },
+    {
+      "family": "Enciphering errors by the author",
+      "status": "open",
+      "evidence": "Four count moves are needed before the counts look English; the width-14 search tolerates 8 wrong cells.",
+      "logs": [
+        "dagapeyeff-swarm-2026-10-04.md",
+        "dagapeyeff-columnar14c-2026-10-06.md"
+      ],
+      "next": "Plant texts with random cell errors and measure how many errors each closed search still tolerates.",
+      "priority": 3
+    },
+    {
+      "family": "No message (a hand construction)",
+      "status": "open",
+      "evidence": "Van Eykelen's tally-and-deal recipe matches all 14 fingerprint statistics; statistics alone cannot decide.",
+      "logs": [
+        "dagapeyeff-prior-work-2026-10-05.md"
+      ],
+      "next": "A predeclared likelihood test between van Eykelen's tally-and-deal recipe and message-bearing models, calibrated on planted texts.",
+      "priority": 4
+    },
+    {
+      "family": "A general pair table (2 by 2 Hill, any 625-pair code)",
+      "status": "open",
+      "evidence": "The cells' different-pair count is ordinary for prose, so the count does not exclude it.",
+      "logs": [
+        "dagapeyeff-pairmap-2026-10-06.md"
+      ],
+      "next": "Search 2 by 2 Hill over a keyed square with planted texts.",
+      "priority": 5
+    },
+    {
+      "family": "Transposition beyond the searched widths, or with nulls and an incomplete rectangle",
+      "status": "open",
+      "evidence": "The key-invariant method has no power past width 10; double transposition is closed only to width 6.",
+      "logs": [
+        "dagapeyeff-exhaustive-2026-10-05.md",
+        "dagapeyeff-double-2026-10-05.md"
+      ],
+      "next": "A joint search with a letter key, as for width 14, at widths 11 to 13 and for double transposition above width 6.",
+      "priority": 6
+    }
+  ]
+}
