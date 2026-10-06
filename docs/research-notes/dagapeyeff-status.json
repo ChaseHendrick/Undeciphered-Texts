@@ -196,6 +196,14 @@
       ]
     },
     {
+      "family": "Periodic independent alphabets (a different one-to-one key at each place modulo p, p from 2 to 14)",
+      "status": "excluded-by-count",
+      "evidence": "Applied phase by phase, the error count needs at least 13 chosen errors for any held-out English window at every period; none of 1,558 windows comes within 8.",
+      "logs": [
+        "dagapeyeff-phases-2026-10-06.md"
+      ]
+    },
+    {
       "family": "Bifid",
       "status": "tested-without-power",
       "evidence": "All periods 1 to 196; 1,109 of 2,000 shuffles reach the cells' best; no planted text.",
