@@ -87,6 +87,24 @@ python3 -m engine reverse-engineer GUEXZIZICPZCPVOIXZIGSIZZI --crib 0:ATTACK --s
 
 It tests cipher families, unknown Quagmire alphabets, and layout stages within explicit bounds. A letter is shown as forced only after an alternate-value satisfiability check. Example keys, ambiguous positions, incompatible models, and unfinished searches have distinct outputs.
 
+## Research status
+
+One line per case, generated from each note's status ledger in [`docs/research-notes/`](docs/research-notes/). Progress means hypotheses ruled out with shown power, not part of a message read. The same ledgers feed the research pages on [hendrickresearch.com](https://www.hendrickresearch.com/research/undeciphered/).
+
+<!-- research-status:start -->
+| Case | Status |
+| --- | --- |
+| [Kryptos K4](docs/research-notes/kryptos-k4-2026-10-03.md) | Unsolved. Plaintext recovered: 0 percent. 6 of 12 hypothesis families listed (50 percent) are excluded by the clues; 3 are open. Reviewed through 2026-10-04. |
+| [Voynich manuscript](docs/research-notes/voynich-2026-10-03.md) | Undeciphered. Reading recovered: 0 percent. 0 of 4 questions listed (0 percent) are answered with a control; 4 are open. Reviewed through 2026-10-03. |
+| [Linear A](docs/research-notes/linear-a-2026-10-03.md) | Undeciphered. Reading recovered: 0 percent. 0 of 3 questions listed (0 percent) are answered with a control; 3 are open. Reviewed through 2026-10-03. |
+| [Indus signs](docs/research-notes/indus-2026-10-03.md) | Undeciphered. Reading recovered: 0 percent. 0 of 3 questions listed (0 percent) are answered with a control; 3 are open. Reviewed through 2026-10-03. |
+| [Rongorongo](docs/research-notes/rongorongo-2026-10-03.md) | Undeciphered. Reading recovered: 0 percent. 0 of 3 questions listed (0 percent) are answered with a control; 3 are open. Reviewed through 2026-10-03. |
+| [Phaistos disc](docs/research-notes/phaistos-disc-2026-10-03.md) | Undeciphered. Reading recovered: 0 percent. 0 of 2 questions listed (0 percent) are answered with a control; 2 are open. Reviewed through 2026-10-03. |
+| [Zodiac Z13 and Z32](docs/research-notes/zodiac-short-ciphers-2026-10-03.md) | Unsolved. Plaintext recovered: 0 percent. 0 of 3 hypothesis families listed (0 percent) are closed with shown power; 3 are open. Reviewed through 2026-10-03. |
+| [Dorabella](docs/research-notes/dorabella-2026-10-03.md) | Unsolved. Plaintext recovered: 0 percent. 0 of 5 hypothesis families listed (0 percent) are closed with shown power; 3 are open. Reviewed through 2026-10-03. |
+| [D'Agapeyeff challenge](docs/research-notes/dagapeyeff-2026-10-05.md) | Unsolved. Plaintext recovered: 0 percent. 28 of 34 hypothesis families listed (82 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-06. |
+<!-- research-status:end -->
+
 ## What the engine does / does not
 
 Full inventory of solvers and analysis tools (classical, keyed Vigenère, columnar, crib, German scorer, neural trigram, script tools, EM aligner, clustering, HMM, mutual information, compression score, beam search, mural analyzer, OCR, and helpers): [`docs/CATALOG.md`](docs/CATALOG.md).

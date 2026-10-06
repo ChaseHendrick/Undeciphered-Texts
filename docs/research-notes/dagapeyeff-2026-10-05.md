@@ -17,6 +17,8 @@ The public digit block is the one on the English Wikipedia page for the D'Agapey
 
 **Unsolved. Plaintext recovered: 0 percent. 28 of 34 hypothesis families listed (82 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-06.**
 
+**In plain words.** In 1939 Alexander d'Agapeyeff printed 392 digits at the back of his book Codes and Ciphers as a challenge. Nobody has ever read them, and later editions quietly dropped the puzzle. We have not read it either. What we have done is rule out most of the ordinary ways it could have been made, using tests we first proved can find a hidden message of the same length.
+
 Progress here means ruling hypotheses out, not reading part of a message. The percentage is a share of the families listed below, which is not every possible cipher, and a hand construction with no message fits every statistic measured so far. It is not a measure of distance to a reading.
 
 | Status | Families | Share |
@@ -30,7 +32,7 @@ Progress here means ruling hypotheses out, not reading part of a message. The pe
 
 | Family | Evidence |
 | --- | --- |
-| A plaintext in another language under a large transposition, or in a language not screened | 39 languages were screened by letter counts; Latin is closest, then Catalan and Romanian. Italian and Latin under a one-to-one key are closed; Latin under a 14-column key is closed; the grille has no power in any language. [log](../logs/dagapeyeff-screen-2026-10-06.md), [log](../logs/dagapeyeff-languages-2026-10-04.md) |
+| A plaintext in another language under a large transposition, or in a language not screened | 40 languages were screened by letter counts, Russian under four spellings and Esperanto included; Latin is closest, then Catalan and Romanian, and every window of 8.9 million letters of Latin still needs at least 4 errors. Italian and Latin under a one-to-one key are closed; Latin under a 14-column key is closed; the grille has no power in any language. [log](../logs/dagapeyeff-screen-2026-10-06.md), [log](../logs/dagapeyeff-russian-2026-10-06.md), [log](../logs/dagapeyeff-esperanto-2026-10-06.md), [log](../logs/dagapeyeff-latinlib-2026-10-06.md), [log](../logs/dagapeyeff-languages-2026-10-04.md) |
 | 14 by 14 turning grille with a letter key | The compiled search finds 4 of 4 planted grilles with the key given and 0 of 4 with it unknown, and order tests barely tell a grille message from no message (3 of 20; 4 of 12). A grille is a transposition, so under a one-to-one key the letter counts still need at least 8 chosen errors in English and 4 in Latin, and random errors never reach them; a grille stays open mainly with a count-flattening key or an unusual text. A homophonic key cannot flatten the counts either: no English window of 196 letters uses 18 letters or fewer, and no Latin window groups exactly into the cells' 18 symbol counts (the closest needs at most 3 errors). [log](../logs/dagapeyeff-grillec-2026-10-06.md), [log](../logs/dagapeyeff-nomessage-2026-10-06.md), [log](../logs/dagapeyeff-errors-2026-10-06.md), [log](../logs/dagapeyeff-homgroup-2026-10-06.md) |
 | No message (a hand construction) | Against random dealings of the cells' own symbols the order gives a family-wise p of 0.28, with a test that flags 19 of 20 keyed-square and done-columnar messages but only 3 of 20 grille messages; a grille-specific statistic has weak power (4 of 12) and the cells sit among their dealings (25 of 40). A message now needs an order-destroying transposition and either a non-homophonic count-flattening key, chosen errors or an unusual text. [log](../logs/dagapeyeff-nomessage-2026-10-06.md), [log](../logs/dagapeyeff-prior-work-2026-10-05.md) |
 | A general pair table (2 by 2 Hill, any 625-pair code) | The different-pair count does not exclude a general pair table; a 2 by 2 Hill matrix drawn at random spreads English over at least 23 symbols (0 of 1,110 draws reach the cells' 18), so random Hill keys are excluded, but a chosen 625-pair table is not. [log](../logs/dagapeyeff-pairmap-2026-10-06.md), [log](../logs/dagapeyeff-mixing-2026-10-06.md) |
@@ -246,6 +248,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Digit ciphers other than Polybius pairs, 6 October 2026](../logs/dagapeyeff-digitcodes-2026-10-06.md)
 - [A direction swarm: the old leads rerun, 6 October 2026](../logs/dagapeyeff-direction-2026-10-06.md)
 - [Enciphering errors cannot hide English under a one-to-one key, 6 October 2026](../logs/dagapeyeff-errors-2026-10-06.md)
+- [Esperanto against the cells' letter counts, 6 October 2026](../logs/dagapeyeff-esperanto-2026-10-06.md)
 - [Four-square on the cells, 6 October 2026](../logs/dagapeyeff-foursquare-2026-10-06.md)
 - [A compiled turning-grille search: power only, 6 October 2026](../logs/dagapeyeff-grillec-2026-10-06.md)
 - [A homophonic key under any transposition, 6 October 2026](../logs/dagapeyeff-homgroup-2026-10-06.md)
@@ -254,12 +257,14 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Keyed four-square and two-square: power only, 6 October 2026](../logs/dagapeyeff-keyedsquares-2026-10-06.md)
 - [Latin under a one-to-one key, 6 October 2026](../logs/dagapeyeff-latin-2026-10-06.md)
 - [Latin under a 14-column transposition, 6 October 2026](../logs/dagapeyeff-latin14-2026-10-06.md)
+- [Every window of a larger Latin library, 6 October 2026](../logs/dagapeyeff-latinlib-2026-10-06.md)
 - [Latin under a repeating shift, a homophonic key and four-square, 6 October 2026](../logs/dagapeyeff-latinmore-2026-10-06.md)
 - [Ciphers that mix letters, 6 October 2026](../logs/dagapeyeff-mixing-2026-10-06.md)
 - [Starting from no message, 6 October 2026](../logs/dagapeyeff-nomessage-2026-10-06.md)
 - [Different pairs under any one-to-one pair cipher, 6 October 2026](../logs/dagapeyeff-pairmap-2026-10-06.md)
 - [Periodic independent alphabets, 6 October 2026](../logs/dagapeyeff-phases-2026-10-06.md)
 - [Five short attacks, 6 October 2026](../logs/dagapeyeff-quick-2026-10-06.md)
+- [Russian under four transliterations, 6 October 2026](../logs/dagapeyeff-russian-2026-10-06.md)
 - [Which languages could give the cells' letter counts, 6 October 2026](../logs/dagapeyeff-screen-2026-10-06.md)
 - [Catalan and Romanian under a keyed square, 6 October 2026](../logs/dagapeyeff-tongues-2026-10-06.md)
 <!-- generated-logs:end -->

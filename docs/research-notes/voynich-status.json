@@ -1,0 +1,83 @@
+{
+  "schema": "research-status-1",
+  "case": "voynich",
+  "title": "Voynich manuscript",
+  "note": "voynich-2026-10-03.md",
+  "kind": "script",
+  "unit": "questions",
+  "stage": "proposed",
+  "reviewed_through": "2026-10-03",
+  "plaintext_recovered_percent": 0,
+  "caveat": "These are questions about the material that can be measured before anyone proposes a reading. Answering all of them would not decipher the script; it would make a later claim testable. Nothing here is a reading, and no probability of decipherment is assigned.",
+  "lay": {
+    "tagline": "A 15th-century illustrated book in a script nobody can read.",
+    "summary": "The Voynich manuscript is a book of about 240 pages held at Yale, written in an unknown script and full of drawings of plants, stars and bathing figures. Its vellum has been carbon dated to the early 1400s. Nobody knows whether it hides a real language, a cipher or no meaning at all. We have not proposed a reading. The plan is to measure first how much the statistics change when you change how the script is transcribed.",
+    "what_it_is": "The script uses perhaps 20 to 30 distinct signs, written in what look like words. Researchers turn it into Roman letters using schemes such as EVA, but those letters are labels for shapes, not sounds, and different schemes split the signs differently.",
+    "what_we_found": "Nothing has been executed for Voynich in this project yet. Our cipher tools work on the English alphabet, so they do not apply directly.",
+    "whats_next": "Compare two independent transcriptions folio by folio, then measure sign patterns under each, with shuffled controls, keeping ten whole folios unseen for testing.",
+    "faq": [
+      {
+        "q": "Has the Voynich manuscript been deciphered?",
+        "a": "No. Many readings have been announced; none has been shown to work on pages its author did not use to build it."
+      },
+      {
+        "q": "Is it a hoax?",
+        "a": "It is not settled. The vellum is old, but that does not tell us whether the text means anything."
+      }
+    ],
+    "background": "https://en.wikipedia.org/wiki/Voynich_manuscript"
+  },
+  "researcher": {
+    "summary": "Beinecke MS 408. Transliteration ZL 3b (IVTFF 2.0, 13 May 2025) from voynich.nu, to be compared with a second independently authored transliteration. Planned statistics: sign n-grams of orders 1 to 4, token lengths and line-position effects under each declared segmentation, with at most 2,000 seeded nulls preserving word lengths or line lengths, and 10 reserved folios.",
+    "methods": [
+      "Transcription disagreement tables",
+      "Sign n-gram statistics",
+      "Length-preserving permutation nulls",
+      "Held-out folio prediction"
+    ]
+  },
+  "statuses": {
+    "closed-with-power": "Answered with a control: measured on a frozen corpus, with a solved or synthetic control showing the method works.",
+    "tested-without-power": "Measured without a control: a number exists, but no control shows what it would look like if the answer were different.",
+    "open": "Open: proposed here, not yet measured."
+  },
+  "labels": {
+    "closed-with-power": "Answered with a control",
+    "tested-without-power": "Measured without a control",
+    "open": "Open"
+  },
+  "families": [
+    {
+      "family": "Do the statistics survive a change of transcription?",
+      "status": "open",
+      "evidence": "Not measured. ZL 3b is identified; a second independent transliteration is not yet frozen.",
+      "logs": [],
+      "priority": 1,
+      "next": "Freeze ZL 3b and a second independent transliteration with hashes, align shared loci, and publish the disagreement table."
+    },
+    {
+      "family": "Do they survive a change of word segmentation?",
+      "status": "open",
+      "evidence": "Not measured. Uncertain spaces differ between schemes.",
+      "logs": [],
+      "priority": 2,
+      "next": "Recompute token statistics under each declared segmentation and report the range, not the best case."
+    },
+    {
+      "family": "Does the text predict unseen folios better than shuffled text?",
+      "status": "open",
+      "evidence": "Not measured.",
+      "logs": [],
+      "priority": 3,
+      "next": "Reserve 10 whole folios before computing features and compare held-out prediction against word-length and line-length preserving nulls."
+    },
+    {
+      "family": "Is it a simple cipher of a known language?",
+      "status": "open",
+      "evidence": "Out of domain for the A to Z engine; not tested here.",
+      "logs": [],
+      "priority": 4,
+      "next": "Only after the transcription questions: test a declared cipher model on synthetic Voynich-length controls first."
+    }
+  ]
+}

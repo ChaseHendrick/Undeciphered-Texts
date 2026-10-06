@@ -1,0 +1,113 @@
+{
+  "schema": "research-status-1",
+  "case": "dorabella",
+  "title": "Dorabella",
+  "note": "dorabella-2026-10-03.md",
+  "kind": "cipher",
+  "unit": "hypothesis families",
+  "stage": "ongoing",
+  "reviewed_through": "2026-10-03",
+  "plaintext_recovered_percent": 0,
+  "caveat": "Progress here means testing a cipher model with matched-length controls. At 87 symbols even the best-understood model failed to bring back a matched-length control, so a failure on Dorabella closes nothing yet.",
+  "lay": {
+    "tagline": "A note of squiggles Edward Elgar sent a young friend in 1897.",
+    "summary": "In 1897 the composer Edward Elgar sent Dora Penny a short note of 87 small semicircle symbols. She never read it, and nobody has since. We ran standard letter-substitution searches on a published transcription. They produced several different, conflicting outputs, and tests on known messages of the same length showed the method is not yet strong enough at this length to settle anything.",
+    "what_it_is": "Each symbol is one, two or three small arcs turned in one of eight directions, which gives 24 possible symbols. That suggests each symbol stands for a letter, but the note is so short that many different messages fit.",
+    "what_we_found": "Our substitution search read a long known test message perfectly but recovered only 80 of 87 letters of a test message as short as Dorabella, and a looser model only 34 of 87. On the real note, three runs gave three different texts. So the result is undecided, not a failure of the idea.",
+    "whats_next": "Settle the transcription first: two people should mark every symbol's direction independently, since some are ambiguous. Then improve the search on many short known messages before running the real note again.",
+    "faq": [
+      {
+        "q": "Has the Dorabella cipher been solved?",
+        "a": "No reading is accepted. Proposed readings exist, but none has been shown to follow from one fixed method that reproduces every symbol."
+      },
+      {
+        "q": "Could it be music?",
+        "a": "It has been suggested, and the 2021 study we rely on tested it. We have not tested music here."
+      }
+    ],
+    "background": "https://en.wikipedia.org/wiki/Dorabella_Cipher"
+  },
+  "researcher": {
+    "summary": "87-label transcription from the HistoCrypt 2021 deposit (Hauer, Choi, Sundar, Hindle, Smallwood, Kondrak; Zenodo 10.5281/zenodo.4819086). Frequency-rank baseline, bijective annealing (3 seeds) and relaxed homophonic annealing (3 seeds) under one English quadgram model, 336,262 objective operations including controls. Matched-length controls: 80/87 bijective, 34/87 homophonic. Target outputs disagree pairwise at 41, 73 and 82 positions (bijective).",
+    "methods": [
+      "Bijective simulated annealing",
+      "Fixed-temperature homophonic annealing",
+      "Matched-length known-answer controls"
+    ]
+  },
+  "charts": [
+    {
+      "id": "dorabella-controls",
+      "kind": "bar",
+      "title": "How much of a known test message the search got back",
+      "caption": "Share of letters recovered on known-answer controls. Long controls come back fully; controls as short as Dorabella do not, so a miss on the real note is not evidence against the model.",
+      "unit": "percent of letters",
+      "log": "easy-unsolved-attempt-2026-10-03.md",
+      "rows": [
+        {
+          "label": "One-to-one key, 496 letters",
+          "value": 100
+        },
+        {
+          "label": "One-to-one key, 87 letters",
+          "value": 92
+        },
+        {
+          "label": "Many-to-one key, 470 letters",
+          "value": 100
+        },
+        {
+          "label": "Many-to-one key, 87 letters",
+          "value": 39
+        }
+      ]
+    }
+  ],
+  "statuses": {
+    "closed-with-power": "Closed with shown power: the search recovers planted texts of this kind, and the target scores like shuffled text.",
+    "tested-without-power": "Tested, not closed: the search ran, but some hypotheses stay underdetermined, the budget ran out, or matched-length controls did not come back.",
+    "open": "Open: not searched here, or not searched with a method shown to work."
+  },
+  "families": [
+    {
+      "family": "English under a one-to-one symbol key",
+      "status": "tested-without-power",
+      "evidence": "Three annealing runs give three conflicting outputs; the matched-length control recovered 80 of 87 letters, not all.",
+      "logs": [
+        "easy-unsolved-attempt-2026-10-03.md"
+      ]
+    },
+    {
+      "family": "English under a many-to-one (homophonic) key",
+      "status": "tested-without-power",
+      "evidence": "The best output merges ten symbol distinctions without a coherent message; the matched-length control recovered 34 of 87.",
+      "logs": [
+        "easy-unsolved-attempt-2026-10-03.md"
+      ]
+    },
+    {
+      "family": "Alternative transcriptions of the ambiguous symbols",
+      "status": "open",
+      "evidence": "An older participant transcription differs at positions 33 and 77 after relabeling; neither was searched.",
+      "logs": [],
+      "priority": 1,
+      "next": "Two annotators mark orientations independently from permitted images, before seeing any candidate text; freeze at most four inventories."
+    },
+    {
+      "family": "Languages other than English, and spacing rules",
+      "status": "open",
+      "evidence": "The 2021 study's language ranking is conditional model evidence; it was not reproduced here.",
+      "logs": [],
+      "priority": 2,
+      "next": "Build 100 fresh 87-character controls across declared languages, with and without spaces, and report full-recovery rates before searching the target."
+    },
+    {
+      "family": "Music or another non-text encoding",
+      "status": "open",
+      "evidence": "Proposed by others; not tested here.",
+      "logs": [],
+      "priority": 3,
+      "next": "State a fixed symbol-to-note rule in advance and test whether it reproduces all 87 symbols; a pleasing tune is not evidence."
+    }
+  ]
+}
