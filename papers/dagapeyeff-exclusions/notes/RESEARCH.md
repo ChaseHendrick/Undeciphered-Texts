@@ -6,7 +6,9 @@ Dated 6 October 2026, updated for draft 2 on the same day. The detailed survey, 
 
 | Source | Read | Used for |
 | --- | --- | --- |
-| d'Agapeyeff, *Codes and Ciphers*, 1939 | Not inspected | The challenge and the worked exercise are taken from Wikipedia's transcription |
+| d'Agapeyeff, *Codes and Ciphers*, 1939 | Known through Wikipedia's transcription | The challenge and the worked exercise are taken from Wikipedia's transcription |
+| Ashley, dagapeyeff_data.py at commit 2009392; Snider, data/B_no000.txt at commit 2d4d31c | Cloned on 6 October 2026 | Cross-check of the digit block: all 395 digits (196 pairs after the final 000) agree with the transcription used |
+| The London Gazette, issue 37963, 23 May 1947, p. 2318 | Recorded in `engine/data/dagapeyeff_life.json` by an earlier session; thegazette.co.uk was not reachable on 6 October | d'Agapeyeff's former nationality, Russia, the reason Russian is screened |
 | Wikipedia, "D'Agapeyeff cipher", fetched 2 October 2026 | Full page | Digit block, exercise and its square, the ARYA error, the p. 111 dummy rule |
 | Barker, *Cryptologia* 2(2), 1978 | Not opened; bibliographic data checked by search (DOI 10.1080/0161-117891852901) | Citation only |
 | Gariazzo, Zenodo 10.5281/zenodo.22057249 (report) and 10.5281/zenodo.21970478 (code) | Project page and report v2 fetched on 5 October; titles confirmed by search on 6 October | Prior searches, shuffled baseline, four-square coverage |

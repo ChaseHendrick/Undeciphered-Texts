@@ -32,6 +32,7 @@ def frozen(name: str):
         def wrapper():
             return remember(name, fn)
 
+        wrapper.compute = fn
         return wrapper
 
     return decorate

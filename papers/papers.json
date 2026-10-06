@@ -1,0 +1,40 @@
+{
+  "about": "Every paper this repository prepares, and where each one stands. docs/PUBLISHING-PAPERS.md explains the steps and the statuses, following the GENChase runbook; python3 tools/paper_sync.py --check <id> checks an entry against its files. Update this file in the pull request that changes a status.",
+  "author": {
+    "name": "Chase Hendrick",
+    "given-names": "Chase",
+    "family-names": "Hendrick",
+    "affiliation": "Independent Researcher",
+    "email": "chase@hendrickresearch.com",
+    "orcid": "0009-0002-9754-6087"
+  },
+  "statuses": [
+    "draft",
+    "preparing",
+    "ready",
+    "on-arxiv",
+    "submitted",
+    "accepted",
+    "published"
+  ],
+  "papers": [
+    {
+      "id": "dagapeyeff-exclusions",
+      "title": "Excluding Classical Cipher Families for the 1939 D'Agapeyeff Challenge: Key-Free Counts and Searches with Demonstrated Power",
+      "field": "Cryptography",
+      "summary": "which classical cipher families the 1939 D'Agapeyeff challenge excludes, by key-free counts and by searches with demonstrated power",
+      "status": "preparing",
+      "note": "Draft 2 of 6 October 2026, with the second-seed reruns and the third reading. No release yet.",
+      "latex": "papers/dagapeyeff-exclusions/paper/dagapeyeff-exclusions.tex",
+      "pdf": "papers/dagapeyeff-exclusions/paper/dagapeyeff-exclusions.pdf",
+      "companion": "ChaseHendrick/dagapeyeff",
+      "developmentRepository": "ChaseHendrick/Undeciphered-Texts",
+      "companionData": "code/make_numbers.py",
+      "textLicense": "all-rights-reserved",
+      "arxiv": null,
+      "journal": null,
+      "codeDoi": null,
+      "commitments": []
+    }
+  ]
+}

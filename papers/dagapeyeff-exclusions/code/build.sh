@@ -1,18 +1,18 @@
 #!/bin/sh
 # Build the manuscript PDF from its LaTeX source.
 #
-#   sh papers/dagapeyeff-exclusions/code/build.sh
+#   sh code/build.sh   (from the paper folder, or give its path from anywhere)
 #
 # Regenerates numbers.tex and the tables from the frozen results, then runs pdflatex, bibtex and pdflatex
 # twice in a scratch folder, so no .aux or .log files land in the repository. SOURCE_DATE_EPOCH is the date
 # of the last commit that changed the source. Needs pdflatex and bibtex (TeX Live).
 set -eu
 HERE=$(cd "$(dirname "$0")/.." && pwd)
-ROOT=$(cd "$HERE/../.." && pwd)
 python3 "$HERE/code/make_numbers.py"
 TMP=$(mktemp -d); trap 'rm -rf "$TMP"' EXIT
 cp "$HERE"/paper/*.tex "$HERE"/paper/refs.bib "$TMP"/
-SOURCE_DATE_EPOCH=$(git -C "$ROOT" log -1 --format=%ct -- papers/dagapeyeff-exclusions/paper 2>/dev/null || date +%s)
+SOURCE_DATE_EPOCH=$(git -C "$HERE" log -1 --format=%ct -- paper 2>/dev/null || true)
+[ -n "$SOURCE_DATE_EPOCH" ] || SOURCE_DATE_EPOCH=$(date +%s)
 export SOURCE_DATE_EPOCH FORCE_SOURCE_DATE=1
 cd "$TMP"
 pdflatex -interaction=nonstopmode -halt-on-error dagapeyeff-exclusions.tex >/dev/null

@@ -1,0 +1,232 @@
+#!/bin/sh
+# Publishes each paper that papers/papers.json marks "ready" or later to its companion repository, then
+# locks that repository so only its owner can change it. .github/workflows/papers.yml runs this.
+# It is the GENChase publisher (tools/paper-publish.sh there), with tools/paper_sync.py in place of
+# tools/paper-sync.js, so the owner's papers all reach their companions and Zenodo the same way.
+#
+# GH_TOKEN   a fine-grained token with Contents and Administration read and write on the companion
+#            repositories (docs/PUBLISHING-PAPERS.md). Without it nothing happens.
+# PAPER      publish only this paper id (optional).
+# RELEASE    also publish a release with this tag in PAPER's companion, the version written without a
+#            leading v (1.0.0 and so on; owner's decision, 2026-09-26); Zenodo archives it and gives it a
+#            DOI, if Zenodo is switched on for that repository. Its notes are the section "## <version>"
+#            of papers/<id>/RELEASES.md, and a tag without one is refused before anything is published.
+#            For a release that already exists, the run brings its notes up to date; the tag and its
+#            files are never replaced. A release made before 2026-09-26 keeps its tag with the v:
+#            RELEASE=v2.1.0 updates its notes from "## 2.1.0". A new tag with a leading v is refused, and
+#            so is a plain tag whose version the companion already has under its v tag.
+#            A tag with no published release must pass the new-release checks and match the reviewed
+#            candidate tree. A draft release is refused before any repository content is changed.
+#            New releases carry HendrickResearch_<paper-id>_<version>.zip. PAPER_ARCHIVE_MODE says how
+#            Zenodo gets the release:
+#              github-import  Zenodo's GitHub integration is switched on for the companion, so the
+#                             GitHub release itself makes the Zenodo version (of GitHub's source ZIP).
+#                             Needs ZENODO_GITHUB_INTEGRATION_ENABLED=true, the owner's confirmation.
+#              manual-zenodo  As in GENChase: the import is off (ZENODO_GITHUB_INTEGRATION_DISABLED=true),
+#                             and the owner uploads the exact branded asset into a new, unpublished
+#                             version draft of the same DOI family.
+#            This script never changes the Zenodo setting and never publishes to Zenodo itself.
+#
+# Direct edits are kept. The branch undeciphered-sync holds exactly what this repository published, one
+# commit per change, and each run merges it into the companion's default branch. Edits the owner makes
+# there directly survive every run; if an edit and an update touch the same lines, the run stops,
+# pushes nothing, and names the files. tools/paper-pull.sh brings direct edits back into papers/<id>/.
+#
+# The lock, renewed on every run, keeps everyone but the owner out: issues, wiki, projects and
+# discussions off; GitHub's interaction limit at collaborators only for six months; rulesets that
+# forbid deleting or force-pushing the default branch and deleting or moving tags. The owner can still
+# commit to the default branch, on the web or with git.
+set -eu
+ROOT=$(cd "$(dirname "$0")/.." && pwd)
+REMOTE=${PAPERS_REMOTE:-https://github.com}
+if [ -z "${GH_TOKEN:-}" ]; then
+  echo "::notice::The PAPERS_TOKEN secret is not set, so no paper is published (docs/PUBLISHING-PAPERS.md)."
+  exit 0
+fi
+if [ -n "${RELEASE:-}" ]; then
+  echo "$RELEASE" | grep -Eqx 'v?[0-9]+\.[0-9]+\.[0-9]+' || { echo "::error::The release tag must look like 1.0.0."; exit 1; }
+  [ -n "${PAPER:-}" ] || { echo "::error::A release needs the paper id too."; exit 1; }
+fi
+
+# The section of papers/<id>/RELEASES.md headed "## <version>", the version without a leading v (the
+# heading may carry a date after it).
+notes_for() {
+  python3 "$ROOT/tools/paper_sync.py" --notes "$1" "$2" 2>/dev/null || true
+}
+if [ -n "${RELEASE:-}" ] && [ -z "$(notes_for "$PAPER" "$RELEASE" | tr -d '[:space:]')" ]; then
+  echo "::error::papers/$PAPER/RELEASES.md has no notes under '## ${RELEASE#v}'. Write what the release contains there, merge, and run again."
+  exit 1
+fi
+list=$(python3 "$ROOT/tools/paper_sync.py" --list ${PAPER:+--paper "$PAPER"})
+[ -n "$list" ] || { echo "No paper is marked ready in papers/papers.json, so there is nothing to publish."; exit 0; }
+[ "$REMOTE" != https://github.com ] || gh auth setup-git
+
+# Versions are written without a leading v since 2026-09-26 (owner's decision), and the releases made
+# before then keep their v tags. A tag with the v is taken only when the companion has it, to update that
+# release's notes; a plain tag is refused when the companion has the same version under its v tag, so
+# no version is released twice. Tags are never renamed.
+if [ -n "${RELEASE:-}" ]; then
+  repo=$(echo "$list" | awk -v id="$PAPER" '$1 == id { print $2 }')
+  tags=$(GIT_TERMINAL_PROMPT=0 git ls-remote --tags "$REMOTE/$repo.git" 2>/dev/null | sed 's|.*refs/tags/||' || true)
+  case $RELEASE in
+    v*) echo "$tags" | grep -qxF "$RELEASE" ||
+          { echo "::error::Write a new release without a leading v: ${RELEASE#v}, not $RELEASE. Only a release made before 2026-09-26 keeps its v tag."; exit 1; } ;;
+    *) if echo "$tags" | grep -qxF "v$RELEASE"; then
+          echo "::error::$repo already has $RELEASE as v$RELEASE. Run with RELEASE=v$RELEASE to update its notes; a tag is never renamed."; exit 1
+        fi ;;
+  esac
+  # A Git tag alone is not a published release. Only published releases are exempt from
+  # the new-release gates. Refuse drafts explicitly rather than publishing one by accident.
+  published_release=false
+  if release_state=$(gh release view "$RELEASE" -R "$repo" --json isDraft --jq .isDraft 2>/dev/null); then
+    case $release_state in
+      false) published_release=true ;;
+      true) echo "::error::$repo has a draft release $RELEASE. Resolve that draft before running this publisher; no draft is published or edited here."; exit 1 ;;
+      *) echo "::error::Could not determine whether $repo release $RELEASE is published."; exit 1 ;;
+    esac
+  else
+    release_status=$?
+    [ "$release_status" = 1 ] || { echo "::error::Could not inspect $repo release $RELEASE (gh exit $release_status)."; exit 1; }
+  fi
+  if [ "$published_release" = false ]; then
+    case "${PAPER_ARCHIVE_MODE:-}" in
+      manual-zenodo) [ "${ZENODO_GITHUB_INTEGRATION_DISABLED:-}" = true ] || {
+          echo "::error::A manual-zenodo release needs ZENODO_GITHUB_INTEGRATION_DISABLED=true. Confirm the automatic import is disabled, then upload the branded ZIP into an unpublished Zenodo version draft. No repository changes were made."
+          exit 1; } ;;
+      github-import) [ "${ZENODO_GITHUB_INTEGRATION_ENABLED:-}" = true ] || {
+          echo "::error::A github-import release needs ZENODO_GITHUB_INTEGRATION_ENABLED=true: confirm that Zenodo's GitHub integration is switched on for the companion, or the release gets no DOI. No repository changes were made."
+          exit 1; } ;;
+      *) echo "::error::A new paper release needs PAPER_ARCHIVE_MODE=github-import or manual-zenodo. No repository changes were made."; exit 1 ;;
+    esac
+    python3 "$ROOT/tools/paper_sync.py" --release-check "$PAPER"
+  fi
+fi
+
+warn() { echo "::warning::$1"; }
+
+lock() {
+  repo=$1
+  [ "$(gh api "repos/$repo" --jq .visibility)" = public ] || warn "$repo is not public, so readers and Zenodo cannot reach it."
+  gh api -X PATCH "repos/$repo" -F has_issues=false -F has_wiki=false -F has_projects=false -F has_discussions=false >/dev/null ||
+    warn "Could not switch off issues, wiki, projects and discussions on $repo; the token needs Administration: read and write."
+  gh api -X PUT "repos/$repo/interaction-limits" -f limit=collaborators_only -f expiry=six_months >/dev/null ||
+    warn "Could not limit interactions on $repo to collaborators."
+  names=$(gh api "repos/$repo/rulesets" --jq '.[].name' 2>/dev/null || true)
+  echo "$names" | grep -qx 'Protect the record' || gh api -X POST "repos/$repo/rulesets" --input - >/dev/null <<'JSON' || warn "Could not protect the default branch of $repo."
+{"name": "Protect the record", "target": "branch", "enforcement": "active",
+ "conditions": {"ref_name": {"include": ["~DEFAULT_BRANCH"], "exclude": []}},
+ "rules": [{"type": "deletion"}, {"type": "non_fast_forward"}]}
+JSON
+  echo "$names" | grep -qx 'Protect the releases' || gh api -X POST "repos/$repo/rulesets" --input - >/dev/null <<'JSON' || warn "Could not protect the tags of $repo."
+{"name": "Protect the releases", "target": "tag", "enforcement": "active",
+ "conditions": {"ref_name": {"include": ["~ALL"], "exclude": []}},
+ "rules": [{"type": "deletion"}, {"type": "update"}, {"type": "non_fast_forward"}]}
+JSON
+}
+
+SYNC=undeciphered-sync
+# The project identity for every commit and merge here, whatever the environment or git config says.
+GIT_AUTHOR_NAME="Chase Hendrick" GIT_COMMITTER_NAME="Chase Hendrick"
+GIT_AUTHOR_EMAIL=326338179+ChaseHendrick@users.noreply.github.com GIT_COMMITTER_EMAIL=326338179+ChaseHendrick@users.noreply.github.com
+export GIT_AUTHOR_NAME GIT_COMMITTER_NAME GIT_AUTHOR_EMAIL GIT_COMMITTER_EMAIL
+while read -r id repo; do
+  work=$(mktemp -d)
+  python3 "$ROOT/tools/paper_sync.py" --stage "$id" "$work/stage"
+  git clone -q --no-single-branch "$REMOTE/$repo.git" "$work/repo" 2>/dev/null ||
+    { echo "::error::Cannot reach $repo. Create it on GitHub as an empty public repository, and give the token access to it."; exit 1; }
+  cd "$work/repo"
+  if git rev-parse -q --verify HEAD >/dev/null; then branch=$(git symbolic-ref --short HEAD); else branch=main; fi
+  had_sync=$(git rev-parse -q --verify "refs/remotes/origin/$SYNC" || echo none)
+  had_main=$(git rev-parse -q --verify "refs/remotes/origin/$branch" || echo none)
+
+  # 1. undeciphered-sync: exactly what this repository publishes now.
+  if [ "$had_sync" != none ]; then git checkout -q -B "$SYNC" "origin/$SYNC"; else git checkout -q --orphan "$SYNC"; fi
+  find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+  cp -R "$work/stage/." .
+  git add -A
+  if [ "$had_sync" = none ] || ! git diff --cached --quiet; then
+    git commit -q -m "Update the paper, its programs and their output from Undeciphered-Texts"
+  fi
+
+  # 2. Merge it into the default branch, keeping any edits made there directly.
+  if [ "$had_main" != none ]; then
+    git checkout -q -B "$branch" "origin/$branch"
+    if ! git merge -q --no-edit --allow-unrelated-histories -m "Merge the update from Undeciphered-Texts" "$SYNC" >"$work/merge.log" 2>&1; then
+      conflicts=$(git diff --name-only --diff-filter=U | tr '\n' ' ')
+      git merge --abort 2>/dev/null || true
+      echo "::error::$repo was edited directly in the same place as this update (${conflicts:-see the log below}). Nothing was pushed. Run sh tools/paper-pull.sh $id, keep the version you want in papers/$id, merge that, and the next run publishes it."
+      cat "$work/merge.log"
+      exit 1
+    fi
+  else
+    git checkout -q -B "$branch" "$SYNC"
+  fi
+
+  # Inspect the merged tree before pushing anything. A tracked PDF can still be omitted by
+  # export-ignore. Existing releases remain immutable and may have predated the PDF requirement.
+  candidate=$(git rev-parse "$branch")
+  if [ -n "${RELEASE:-}" ] && [ "$id" = "${PAPER:-}" ] && [ "$published_release" = false ]; then
+    archive_ref=$candidate
+    if git rev-parse -q --verify "refs/tags/$RELEASE" >/dev/null; then archive_ref="refs/tags/$RELEASE"; fi
+    python3 "$ROOT/tools/paper-archive-check.py" "$id" "$work/repo" "$archive_ref"
+    if [ "$(git rev-parse "$archive_ref^{tree}")" != "$(git rev-parse "$candidate^{tree}")" ]; then
+      echo "::error::$repo tag $RELEASE differs from the reviewed candidate tree. Choose a new version; existing tags are never changed."
+      exit 1
+    fi
+    python3 "$ROOT/tools/paper-archive-build.py" "$id" "$RELEASE" "$work/repo" "$work/archive" "$archive_ref" > "$work/archive-receipt.json"
+    archive_name=$(python3 -c 'import json, sys; print(json.load(open(sys.argv[1]))["filename"])' "$work/archive-receipt.json")
+    python3 - "$work/archive/${archive_name%.zip}.manifest.json" "$PAPER_ARCHIVE_MODE" "$(git -C "$ROOT" rev-parse HEAD)" <<'PY'
+import json, sys
+from pathlib import Path
+p = Path(sys.argv[1])
+j = json.loads(p.read_text())
+if sys.argv[2] == "manual-zenodo":
+    j["zenodo_deposit_route"] = "manual-unpublished-version-draft"
+    j["owner_confirmed_github_import_disabled"] = True
+else:
+    j["zenodo_deposit_route"] = "zenodo-github-integration"
+    j["owner_confirmed_github_import_enabled"] = True
+j["confirmation_scope"] = "explicit workflow/operator prerequisite; not a remote API check"
+j["development_commit"] = sys.argv[3]
+p.write_text(json.dumps(j, indent=2, sort_keys=True) + "\n")
+PY
+  fi
+
+  if [ "$(git rev-parse "$branch")" = "$had_main" ] && [ "$(git rev-parse "$SYNC")" = "$had_sync" ]; then
+    echo "$repo is already up to date."
+  else
+    git push -q origin "$branch"
+    git push -q origin "$SYNC"
+    echo "Published $id to $repo."
+  fi
+  if [ "$REMOTE" = https://github.com ]; then
+    lock "$repo"
+    if [ -n "${RELEASE:-}" ] && [ "$id" = "${PAPER:-}" ]; then
+      notes_for "$id" "$RELEASE" > "$work/notes.md"
+      if [ "$published_release" = true ]; then
+        if [ "$(gh release view "$RELEASE" -R "$repo" --json body --jq .body)" = "$(cat "$work/notes.md")" ]; then
+          echo "$repo already has the release $RELEASE with these notes; the tag and its files are never replaced."
+        else
+          gh release edit "$RELEASE" -R "$repo" --notes-file "$work/notes.md"
+          echo "Updated the notes of $RELEASE in $repo from papers/$id/RELEASES.md; the tag and its files are unchanged. Zenodo keeps the description it archived."
+        fi
+      else
+        printf '\nPublished from ChaseHendrick/Undeciphered-Texts commit %s.\n' "$(git -C "$ROOT" rev-parse HEAD)" >> "$work/notes.md"
+        if [ "$PAPER_ARCHIVE_MODE" = manual-zenodo ]; then
+          printf '\nPaper archive: %s. Upload this exact asset manually to an unpublished Zenodo version draft; retain the existing concept DOI. Automatic GitHub import was confirmed disabled by the operator. The deposited archive and new version DOI still require verification.\n' "$archive_name" >> "$work/notes.md"
+        else
+          printf '\nPaper archive: %s, the same files as the source ZIP that Zenodo'"'"'s GitHub integration archives for this release. The deposited archive and its version DOI still require verification.\n' "$archive_name" >> "$work/notes.md"
+        fi
+        gh release create "$RELEASE" "$work/archive/$archive_name" "$work/archive/${archive_name%.zip}.manifest.json" -R "$repo" --target "$candidate" --title "$RELEASE" --notes-file "$work/notes.md"
+        if [ "$PAPER_ARCHIVE_MODE" = manual-zenodo ]; then
+          echo "Released $RELEASE of $repo with $archive_name. Zenodo manual upload and verification remain required; no Zenodo publication was performed here."
+        else
+          echo "Released $RELEASE of $repo with $archive_name. Zenodo's GitHub integration makes the version from this release; verify it with tools/paper-zenodo-check.py once it appears."
+        fi
+      fi
+    fi
+  fi
+  cd "$ROOT"; rm -rf "$work"
+done <<EOF
+$list
+EOF

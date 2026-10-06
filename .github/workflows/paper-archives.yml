@@ -1,0 +1,44 @@
+name: verify preprint archives
+
+# Downloads each paper's registered Zenodo version and checks its manuscript against the repository.
+# A paper with no archive yet is skipped. GENChase runs the same audit for its papers.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'papers/papers.json'
+      - 'tools/paper-zenodo-check.py'
+      - '.github/workflows/paper-archives.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '23 6 * * 0'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: paper-archive-audit
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Check the verifier without network access
+        run: python3 tools/paper-zenodo-check.py --self-test
+      - name: Download and inspect every registered preprint archive
+        run: python3 tools/paper-zenodo-check.py --out paper-archive-report.json
+      - name: Preserve the archive report, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-archive-report
+          path: paper-archive-report.json
+          if-no-files-found: warn
+          retention-days: 30

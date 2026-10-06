@@ -1,23 +1,34 @@
 """Write every number and table the manuscript prints from the frozen search results.
 
-    python3 papers/dagapeyeff-exclusions/code/make_numbers.py          # rewrite paper/numbers.tex and tab_*.tex
-    python3 papers/dagapeyeff-exclusions/code/make_numbers.py --check  # fail if they are stale
+    python3 code/make_numbers.py          # rewrite paper/numbers.tex, paper/tab_*.tex and the README abstract
+    python3 code/make_numbers.py --check  # fail if any of them is stale
 
-The inputs are the JSON files in engine/data/swarm_cache, each the frozen output of one probe in engine/.
-Nothing here searches; it only reads and formats. No letter string from any search is read or written.
+The inputs are the frozen outputs of the probes: JSON files, three held-out texts whose letters are
+counted, and the cells. In the companion repository they sit in data/. In the development repository,
+ChaseHendrick/Undeciphered-Texts, they are read from engine/data/ and the cells from the engine, and
+companion_data() gives the files the companion carries. Nothing here searches; it only reads and formats.
+No letter string from any search is read or written.
 """
 
 from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
-CACHE = ROOT / "engine" / "data" / "swarm_cache"
-DATA = ROOT / "engine" / "data"
-PAPER = Path(__file__).resolve().parents[1] / "paper"
+HERE = Path(__file__).resolve().parents[1]
+PAPER = HERE / "paper"
+README = HERE / "README.md"
+COMPANION = (HERE / "data" / "swarm_cache").is_dir()
+if COMPANION:
+    CACHE = HERE / "data" / "swarm_cache"
+    DATA = HERE / "data" / "texts"
+else:
+    ROOT = HERE.parents[1]
+    CACHE = ROOT / "engine" / "data" / "swarm_cache"
+    DATA = ROOT / "engine" / "data"
 
 INPUTS = (
     "corpus", "columnar", "columnar14c", "exhaustive", "exhaustive10", "double", "keywords",
@@ -26,13 +37,29 @@ INPUTS = (
     "keyedsquares", "nomessage", "latinmore", "latinshift",
     "alllanguages", "russian", "esperanto", "latinlib", "latinlibrary", "latinw", "shiftgap",
 )
+HELD = ("neural_train_austen", "neural_heldout_doyle", "neural_audit_wells")
 
 
 def _cells_list() -> list[int]:
+    if COMPANION:
+        return json.loads((HERE / "data" / "cells.json").read_text(encoding="utf-8"))["cells"]
     sys.path.insert(0, str(ROOT))
     from engine.dagapeyeff_add import _cells
 
     return _cells()
+
+
+def companion_data() -> dict[str, bytes]:
+    """The inputs, by their path in the companion repository. Development repository only."""
+    if COMPANION:
+        raise SystemExit("companion_data() reads the development repository")
+    out = {f"data/swarm_cache/dagapeyeff-{name}.json": (CACHE / f"dagapeyeff-{name}.json").read_bytes() for name in INPUTS}
+    out.update({f"data/texts/{name}.txt": (DATA / f"{name}.txt").read_bytes() for name in HELD})
+    out["data/texts/neural_audit_wells_source.json"] = (DATA / "neural_audit_wells_source.json").read_bytes()
+    cells = {"source": "English Wikipedia, D'Agapeyeff cipher, fetched 2 October 2026; final 000 dropped",
+             "coding": "x = 5r + c, rows 6,7,8,9,0 and columns 1,2,3,4,5", "cells": _cells_list()}
+    out["data/cells.json"] = (json.dumps(cells) + "\n").encode("utf-8")
+    return out
 
 
 def load(name: str) -> dict:
@@ -68,7 +95,7 @@ def macros() -> dict[str, str]:
     out["cellsChi"] = p(corpus["cell_chi_square"])
 
     held = {name: len("".join(ch for ch in (DATA / f"{name}.txt").read_text(encoding="utf-8").upper() if "A" <= ch <= "Z"))
-            for name in ("neural_train_austen", "neural_heldout_doyle", "neural_audit_wells")}
+            for name in HELD}
     out["heldAusten"] = n(held["neural_train_austen"])
     out["heldDoyle"] = n(held["neural_heldout_doyle"])
     out["heldWells"] = n(held["neural_audit_wells"])
@@ -353,6 +380,11 @@ def macros() -> dict[str, str]:
     out["allListed"] = str(len(rows) + len(al["skipped"]))
     out["allSkippedScript"] = str(sum(1 for s in al["skipped"] if s["reason"].startswith("script")))
     out["allSkippedEmpty"] = str(sum(1 for s in al["skipped"] if s["reason"].startswith("no sentence")))
+    short = [s for s in al["skipped"] if s["reason"].endswith(" letters")]
+    out["allSkippedShort"] = str(len(short))
+    out["allSkippedShortMost"] = n(max(int(s["reason"].split()[0]) for s in short))
+    if any(not s["reason"].startswith(("script", "no sentence")) and not s["reason"].endswith(" letters") for s in al["skipped"]):
+        raise SystemExit("alllanguages: a skipped treebank has a reason the manuscript does not state")
     latin = rows["Latin-ITTB"]
     others = {k: v for k, v in rows.items() if k != "Latin-ITTB"}
     out["allLatinMedian"] = p(latin["median_errors"], 0)
@@ -568,7 +600,7 @@ def gap_macros() -> dict[str, str]:
 
 def render() -> dict[str, str]:
     values = macros() | gap_macros()
-    lines = ["% Written by ../code/make_numbers.py from engine/data/swarm_cache. Do not edit by hand."]
+    lines = ["% Written by ../code/make_numbers.py from the frozen search results. Do not edit by hand."]
     for name in INPUTS:
         digest = hashlib.sha256((CACHE / f"dagapeyeff-{name}.json").read_bytes()).hexdigest()
         lines.append(f"% dagapeyeff-{name}.json sha256 {digest}")
@@ -581,10 +613,43 @@ def render() -> dict[str, str]:
     }
 
 
+_TEX = (
+    (r"\\ensuremath\{([^{}]*)\}", r"\1"),
+    (r"\\emph\{([^{}]*)\}", r"\1"),
+    (r"\$5 \\times 5\$", "5 by 5"),
+    (r"\$14 \\times 14\$", "14 by 14"),
+    (r"\{,\}", ","),
+    (r"~", " "),
+)
+
+
+def abstract_text(values: dict[str, str]) -> str:
+    """The abstract as plain text, numbers filled in, for the README and so for the Zenodo description."""
+    text = (PAPER / "abstract.tex").read_text(encoding="utf-8").strip()
+    text = re.sub(r"\\([A-Za-z]+)\{\}", lambda m: values[m.group(1)] if m.group(1) in values else m.group(0), text)
+    for pattern, replacement in _TEX:
+        text = re.sub(pattern, replacement, text)
+    left = re.findall(r"\\[A-Za-z]+|\$|[{}]", text)
+    if left:
+        raise SystemExit("abstract.tex keeps TeX with no plain-text form: " + " ".join(sorted(set(left))))
+    return re.sub(r"\s+", " ", text)
+
+
+def readme(values: dict[str, str]) -> str:
+    """README.md with its "## Abstract" section written from abstract.tex."""
+    text = README.read_text(encoding="utf-8")
+    match = re.search(r"^## Abstract\n\n(.*?)\n\n(?=## )", text, flags=re.S | re.M)
+    if not match:
+        raise SystemExit("README.md needs an \"## Abstract\" section followed by another section")
+    return text[:match.start(1)] + abstract_text(values) + text[match.end(1):]
+
+
 def main() -> int:
     stale = []
-    for name, text in render().items():
-        path = PAPER / name
+    files = {PAPER / name: text for name, text in render().items()}
+    files[README] = readme(macros() | gap_macros())
+    for path, text in files.items():
+        name = path.name
         if path.exists() and path.read_text(encoding="utf-8") == text:
             continue
         if "--check" in sys.argv:

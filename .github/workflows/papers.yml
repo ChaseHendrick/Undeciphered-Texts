@@ -1,0 +1,77 @@
+name: publish papers
+
+# Publishes every paper that papers/papers.json marks "ready" or later as a public repository of its
+# own (its companion) and locks that repository so only its owner can change it. Monthly runs renew the
+# lock. It does nothing until the PAPERS_TOKEN secret exists; docs/PUBLISHING-PAPERS.md is the runbook.
+# This is GENChase's "publish papers" workflow for the papers of this repository.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'papers/**'
+      - 'engine/data/swarm_cache/dagapeyeff-*.json'
+      - 'licenses/Apache-2.0.txt'
+      - 'tools/paper_sync.py'
+      - 'tools/paper-publish.sh'
+      - 'tools/paper-archive-check.py'
+      - 'tools/paper-archive-build.py'
+      - '.github/workflows/papers.yml'
+  schedule:
+    - cron: '17 6 1 * *'
+  workflow_dispatch:
+    inputs:
+      paper:
+        description: Paper id (empty publishes every ready paper)
+        required: false
+        default: ''
+      release:
+        description: Make a companion release with a branded paper ZIP (plain version, for example 1.0.0)
+        required: false
+        default: ''
+      archive_mode:
+        description: How Zenodo gets a new release. github-import if Zenodo's GitHub integration is on for the companion; manual-zenodo if it is off and you upload the branded ZIP yourself
+        type: choice
+        options: [github-import, manual-zenodo]
+        default: github-import
+      zenodo_github_import_enabled:
+        description: For github-import, confirm Zenodo's GitHub integration is switched on for the companion
+        type: boolean
+        required: false
+        default: false
+      zenodo_github_import_disabled:
+        description: For manual-zenodo, confirm automatic Zenodo GitHub import is disabled for this release
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: papers
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Check the ready papers
+        run: |
+          for id in $(python3 tools/paper_sync.py --list | cut -d' ' -f1); do
+            python3 tools/paper_sync.py --check "$id"
+          done
+      - name: Publish and lock the companion repositories
+        env:
+          GH_TOKEN: ${{ secrets.PAPERS_TOKEN }}
+          PAPER: ${{ inputs.paper }}
+          RELEASE: ${{ inputs.release }}
+          PAPER_ARCHIVE_MODE: ${{ inputs.archive_mode }}
+          ZENODO_GITHUB_INTEGRATION_ENABLED: ${{ inputs.zenodo_github_import_enabled }}
+          ZENODO_GITHUB_INTEGRATION_DISABLED: ${{ inputs.zenodo_github_import_disabled }}
+        run: sh tools/paper-publish.sh
