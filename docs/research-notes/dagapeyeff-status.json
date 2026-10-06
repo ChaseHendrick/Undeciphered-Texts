@@ -263,9 +263,11 @@
     {
       "family": "14 by 14 turning grille with a letter key",
       "status": "open",
-      "evidence": "The compiled search finds 4 of 4 planted grilles with the key given and 0 of 4 with it unknown.",
+      "evidence": "The compiled search finds 4 of 4 planted grilles with the key given and 0 of 4 with it unknown, and order tests barely tell a grille message from no message (3 of 20; 4 of 12). A grille is a transposition, so under a one-to-one key the letter counts still need at least 8 chosen errors in English and 4 in Latin, and random errors never reach them; a grille stays open mainly with a count-flattening key or an unusual text.",
       "logs": [
-        "dagapeyeff-grillec-2026-10-06.md"
+        "dagapeyeff-grillec-2026-10-06.md",
+        "dagapeyeff-nomessage-2026-10-06.md",
+        "dagapeyeff-errors-2026-10-06.md"
       ],
       "next": "A joint method that recovers planted grilles with the key unknown, before the cells are searched.",
       "priority": 2
