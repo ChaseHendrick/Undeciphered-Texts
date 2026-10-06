@@ -92,6 +92,11 @@ from engine.dagapeyeff_keywords import keyword_report
 from engine.dagapeyeff_double import double_report
 from engine.dagapeyeff_exhaustive10 import exhaustive10_report
 from engine.dagapeyeff_foursquare import foursquare_report
+from engine.dagapeyeff_additive import additive_report
+from engine.dagapeyeff_quick import quick_report
+from engine.dagapeyeff_homophone import homophone_report
+from engine.dagapeyeff_errors import errors_report
+from engine.dagapeyeff_direction import direction_report
 from engine.dagapeyeff_pairmap import pairmap_report
 from engine.dagapeyeff_columnar14c import columnar14c_report
 from engine.dagapeyeff_monotone import monotone_report
@@ -1676,6 +1681,156 @@ def consider_foursquare() -> dict:
             f"larger side, even with keyed plain squares. The search recovers {report['planted_recovered']} of "
             f"{len(report['planted'])} planted texts. The cells and the regrouping score near their shuffles, "
             f"{best} a letter at best, where planted English is {report['planted_lowest_true']} or higher. Not a reading."
+        ),
+    }
+
+
+def consider_additive() -> dict:
+    report = additive_report()
+    counts = report["counts"]
+    fewest = min(row["fewest_distinct"] for row in counts["rows"])
+    reaching = sum(row["reaching_cells"] for row in counts["rows"])
+    draws = sum(row["draws"] for row in counts["rows"])
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "additive_allowed": False,
+        "learned": (
+            f"A repeating coordinate shift on a keyed square spreads letters over more cells. The cells use "
+            f"{counts['cells']['distinct']} symbols; held-out English under random squares and shift keys never uses "
+            f"fewer than {fewest}, and {reaching} of {draws} draws reach the cells' counts. The joint search recovers "
+            f"{report['planted_recovered']} of {len(report['planted'])} planted texts; the cells and the regrouping "
+            f"reach {report['searched_best']} a letter at best, where planted English is "
+            f"{report['planted_lowest_true']} or higher. Not a reading."
+        ),
+    }
+
+
+def consider_quick() -> dict:
+    report = quick_report()
+    spaces = report["spaces"]
+    best = report["searched_best"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "quick_allowed": False,
+        "learned": (
+            f"Nulls by place, the cells reversed and the column digits alone, solved as a keyed square: planted "
+            f"English comes back {report['planted_recovered']} of {len(report['planted'])} times at "
+            f"{report['planted_lowest_true']} a letter or better, and the cells' best is {best['per_letter']} "
+            f"({best['variant']}). Rare symbols as spaces would make words {spaces['mean_word_length']} letters long. "
+            "Not a reading."
+        ),
+    }
+
+
+def consider_homophone() -> dict:
+    report = homophone_report()
+    rows = report["searched"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "homophone_allowed": False,
+        "learned": (
+            f"A many-to-one key, capped at {report['search']['letter_cap']} places a letter, recovers "
+            f"{report['planted_recovered']} of {len(report['planted'])} planted homophonic texts. The cells score "
+            f"{rows['cells']['per_letter']} ({rows['cells']['shuffles_as_high']} of 8 shuffles as high) and the "
+            f"regrouping {rows['regrouped']['per_letter']} ({rows['regrouped']['shuffles_as_high']} of 8), against "
+            f"{report['planted_lowest_true']} for planted English. Not a reading."
+        ),
+    }
+
+
+def consider_errors() -> dict:
+    report = errors_report()
+    counts = report["counts"]
+    eight = report["by_errors"]["8"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "errors_allowed": False,
+        "learned": (
+            f"No held-out English window reaches the cells' counts with fewer than {counts['best_case_fewest']} "
+            f"chosen errors, and random errors reach them 0 times. With 8 digit slips planted English still scores "
+            f"{eight['found_low']} a letter or better against the cells' {report['cells_per_letter']}; English falls "
+            f"to the cells' level only at {report['fewest_errors_at_cells_level']} errors. Not a reading."
+        ),
+    }
+
+
+def consider_italian() -> dict:
+    import json
+    from pathlib import Path
+
+    # The frozen file is read directly: rerunning the probe would fetch the Italian text.
+    path = Path(__file__).resolve().parents[1] / "data" / "swarm_cache" / "dagapeyeff-italian.json"
+    report = json.loads(path.read_text(encoding="utf-8"))
+    counts = report["counts"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "italian_allowed": False,
+        "learned": (
+            f"Manzoni's Italian needs at least {counts['fewest_errors']} chosen errors to reach the cells' counts. "
+            f"Under an Italian model planted Italian comes back {report['planted_recovered']} of 4 times, and "
+            f"{report['planted_with_errors_recovered']} of 4 with 8 slips; the cells score {report['cells_per_letter']}, "
+            f"with {report['shuffles_as_high']} of 8 shuffles as high. Not a reading."
+        ),
+    }
+
+
+def consider_direction() -> dict:
+    report = direction_report()
+    families = report["families"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "direction_allowed": False,
+        "learned": (
+            f"Delays, nulls of period 2 to 14, rails and plain columns, {report['search']['transforms']} transforms "
+            f"solved as a keyed square: planted English comes back {report['planted_recovered']} of "
+            f"{len(report['planted'])} times. The cells' best is {families['all']['cells_best']} and "
+            f"{families['all']['shuffle_bests_as_high']} of {len(families['all']['shuffle_bests'])} shuffles reach "
+            "it. No old lead points anywhere. Not a reading."
+        ),
+    }
+
+
+def _frozen_file(name: str) -> dict:
+    import json
+    from pathlib import Path
+
+    # Read directly: rerunning these probes would fetch outside text.
+    path = Path(__file__).resolve().parents[1] / "data" / "swarm_cache" / f"dagapeyeff-{name}.json"
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def consider_screen() -> dict:
+    report = _frozen_file("screen")
+    closest = report["closest"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "screen_allowed": False,
+        "learned": (
+            f"Of {len(report['languages'])} languages, {closest['treebank']} comes closest to the cells' letter "
+            f"counts: {closest['fewest_errors']} errors at its closest window, {closest['median_errors']} at the "
+            "median. A count fit is a reason to search, not a reading."
+        ),
+    }
+
+
+def consider_latin() -> dict:
+    report = _frozen_file("latin")
+    cells = report["searched"]["cells"]
+    return {
+        "solved": False,
+        "claimed_plaintext": None,
+        "latin_allowed": False,
+        "learned": (
+            f"Under a Latin model planted Latin comes back {report['planted_recovered']} of 6 times, and "
+            f"{report['planted_with_errors_recovered']} of 6 with 8 slips. The cells' best is {cells['best']} "
+            f"({cells['best_variant']}), and {cells['shuffle_bests_as_high']} of 8 shuffles reach it. Not a reading."
         ),
     }
 
