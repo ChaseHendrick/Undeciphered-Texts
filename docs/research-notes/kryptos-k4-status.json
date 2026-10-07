@@ -6,7 +6,7 @@
   "kind": "cipher",
   "unit": "hypothesis families",
   "stage": "ongoing",
-  "reviewed_through": "2026-10-04",
+  "reviewed_through": "2026-10-07",
   "log_glob": "k4-focus/*-????-??-??.md",
   "cite_every_log_from": "2026-10-04",
   "plaintext_recovered_percent": 0,
@@ -112,6 +112,14 @@
       "evidence": "5,000 hypotheses in each fold returned no candidate and stopped at the check limit, so the space is not finished.",
       "logs": [
         "tractable-open-attempt-2026-10-03.md"
+      ]
+    },
+    {
+      "family": "In-place periodic substitution with any alphabets (any Quagmire keyword, keyed Vigenere, Beaufort, Porta) at periods 1-7, 9, 10, 14, 15, 17, 21, 25",
+      "status": "excluded-by-constraint",
+      "evidence": "In one column the same plaintext letter would need two ciphertext letters, or two plaintext letters one ciphertext letter, for any alphabets. Periods 8, 11-13, 16, 18-20, 22-24 and 26-32 are not blocked by this bound; a planted-clue control is never blocked.",
+      "logs": [
+        "k4-focus/periodic-bijection-2026-10-07.md"
       ]
     },
     {
