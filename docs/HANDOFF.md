@@ -4,7 +4,9 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
-## Session 7 October 2026, later: Latin small widths, the last column
+## Session 7 October 2026, last: Latin words
+
+Branch `claude/latin-words`. `engine.dagapeyeff_latinwords` (word coverage of the best Latin decryptions) is frozen with a test, a log, a ledger line and a paper paragraph: 59 of 60 planted Latin texts with up to 32 wrong cells keep more words than the cells, whose best (12.8 percent) 3 of 4 shuffles reach. The cache holds 131 files. The grille, double transposition and error-curve scratch work in the companion branch is still not ported.
 
 Branch `claude/latin-rare-column`. `engine.dagapeyeff_latinsmall` was run and frozen (48 of 48 planted Latin texts, cells' best -3.93), with a test, a log and ledger entries; Latin under a single columnar key is now closed at widths 2 to 15. New probe `engine.dagapeyeff_rarecolumn` counts the two testable readings of the five last-column symbols (padding leaves 13 letters, fewer than any Latin or English window; as rare letters they would need a clustering no window shows). Both are in the paper (Table 1, Sections 3, 6 and 7) and the PDF was rebuilt. The cache holds 130 files; the checks count, provenance chain and board line were updated.
 

@@ -36,7 +36,7 @@ INPUTS = (
     "errors", "italian", "screen", "latin", "fskeyed", "latin14", "tongues", "romanian-wide",
     "keyedsquares", "nomessage", "latinmore", "latinshift",
     "alllanguages", "russian", "esperanto", "latinlib", "latinlibrary", "latinw", "shiftgap",
-    "reseed", "latinsmall", "rarecolumn",
+    "reseed", "latinsmall", "rarecolumn", "latinwords",
 )
 HELD = ("neural_train_austen", "neural_heldout_doyle", "neural_audit_wells")
 
@@ -441,6 +441,25 @@ def macros() -> dict[str, str]:
     out["lsmWeakestFound"] = d(lsm["weakest_recovered_found"], 2)
     out["lsmAbove"] = str(lsm["cases_cells_above_all_shuffles"])
     out["lsmCases"] = str(2 * len(lsm["rows"]))
+    lwd = load("latinwords")
+    pct = lambda share: str(round(100 * share))
+    out["lwdVocab"] = n(lwd["vocabulary"])
+    out["lwdSearches"] = str(lwd["searches_per_source"])
+    out["lwdCellsBest"] = pct(lwd["searched"]["cells"]["best_coverage"])
+    out["lwdCellsAsHigh"] = str(lwd["searched"]["cells"]["shuffles_as_high"])
+    out["lwdShuffles"] = str(len(lwd["searched"]["cells"]["shuffle_best_coverages"]))
+    out["lwdRegroupedBest"] = pct(lwd["searched"]["regrouped"]["best_coverage"])
+    out["lwdRegroupedAsHigh"] = str(lwd["searched"]["regrouped"]["shuffles_as_high"])
+    out["lwdPlanted"] = str(lwd["planted"])
+    out["lwdAbove"] = str(lwd["planted_above_cells"])
+    clean, worst = lwd["planted_by_errors"]["0"], lwd["planted_by_errors"][max(lwd["planted_by_errors"], key=int)]
+    out["lwdErrMax"] = max(lwd["planted_by_errors"], key=int)
+    out["lwdCleanLow"] = pct(min(clean["coverage"]))
+    out["lwdCleanHigh"] = pct(max(clean["coverage"]))
+    out["lwdWorstLow"] = pct(min(worst["coverage"]))
+    out["lwdWorstHigh"] = pct(max(worst["coverage"]))
+    out["lwdWorstRecovered"] = str(worst["recovered"])
+    out["lwdWorstPlanted"] = str(worst["planted"])
     rc = load("rarecolumn")
     out["rcSymbolsRest"] = str(rc["symbols_without_private"])
     out["rcCellsRest"] = str(rc["cells_without_private"])
