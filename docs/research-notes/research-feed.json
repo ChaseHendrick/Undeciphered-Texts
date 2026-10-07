@@ -1614,12 +1614,13 @@
           "family": "Latin under a one-to-one key, with or without the book's dummy rule and errors",
           "status": "closed-with-power",
           "status_label": "Closed with shown power",
-          "evidence": "Latin is the closest of 39 languages by letter counts (4 errors at its closest window), but planted Latin comes back 6 of 6, also with 8 slips, and 7 of 8 shuffles reach the cells' best under a Latin model.",
+          "evidence": "Latin is the closest of 39 languages by letter counts (4 errors at its closest window), but planted Latin comes back 6 of 6, also with 8 slips, and 7 of 8 shuffles reach the cells' best under a Latin model. Word coverage settles heavy errors: with up to 32 wrong cells of 196, 59 of 60 planted Latin texts keep more Latin words than the cells' best decryption (12.8 percent), which 3 of 4 shuffles reach, under the keyed square, the dummy rule and columnar widths 2 to 15.",
           "next": null,
           "priority": null,
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latin-2026-10-06.md",
-            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-screen-2026-10-06.md"
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-screen-2026-10-06.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinwords-2026-10-07.md"
           ]
         },
         {
