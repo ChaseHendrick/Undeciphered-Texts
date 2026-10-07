@@ -28,14 +28,15 @@
 #            This script never changes the Zenodo setting and never publishes to Zenodo itself.
 #
 # Direct edits are kept. The branch undeciphered-sync holds exactly what this repository published, one
-# commit per change, and each run merges it into the companion's default branch. Edits the owner makes
-# there directly survive every run; if an edit and an update touch the same lines, the run stops,
+# commit per change, and each run merges it into the companion's main branch, the record. Edits the owner
+# makes there directly survive every run; if an edit and an update touch the same lines, the run stops,
 # pushes nothing, and names the files. tools/paper-pull.sh brings direct edits back into papers/<id>/.
 #
 # The lock, renewed on every run, keeps everyone but the owner out: issues, wiki, projects and
 # discussions off; GitHub's interaction limit at collaborators only for six months; rulesets that
 # forbid deleting or force-pushing the default branch and deleting or moving tags. The owner can still
-# commit to the default branch, on the web or with git.
+# commit to the default branch, on the web or with git. The lock also makes main the default branch, so a
+# companion that held other work before its first publish shows, and Zenodo archives, only the paper.
 set -eu
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 REMOTE=${PAPERS_REMOTE:-https://github.com}
@@ -107,6 +108,8 @@ warn() { echo "::warning::$1"; }
 lock() {
   repo=$1
   [ "$(gh api "repos/$repo" --jq .visibility)" = public ] || warn "$repo is not public, so readers and Zenodo cannot reach it."
+  [ "$(gh api "repos/$repo" --jq .default_branch)" = main ] || gh api -X PATCH "repos/$repo" -f default_branch=main >/dev/null ||
+    warn "Could not make main the default branch of $repo; the token needs Administration: read and write."
   gh api -X PATCH "repos/$repo" -F has_issues=false -F has_wiki=false -F has_projects=false -F has_discussions=false >/dev/null ||
     warn "Could not switch off issues, wiki, projects and discussions on $repo; the token needs Administration: read and write."
   gh api -X PUT "repos/$repo/interaction-limits" -f limit=collaborators_only -f expiry=six_months >/dev/null ||
@@ -135,7 +138,9 @@ while read -r id repo; do
   git clone -q --no-single-branch "$REMOTE/$repo.git" "$work/repo" 2>/dev/null ||
     { echo "::error::Cannot reach $repo. Create it on GitHub as an empty public repository, and give the token access to it."; exit 1; }
   cd "$work/repo"
-  if git rev-parse -q --verify HEAD >/dev/null; then branch=$(git symbolic-ref --short HEAD); else branch=main; fi
+  # The record is always main. Any other branch, the default one included, is left alone; a companion
+  # with no main yet gets one made from the published tree only.
+  branch=main
   had_sync=$(git rev-parse -q --verify "refs/remotes/origin/$SYNC" || echo none)
   had_main=$(git rev-parse -q --verify "refs/remotes/origin/$branch" || echo none)
 
