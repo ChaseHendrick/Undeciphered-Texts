@@ -1,5 +1,12 @@
 # Changes between drafts
 
+## Preprint text, 7 October 2026
+
+- The third reading (`review-3.md`): ten findings, all fixed. The language screen now accounts for the two treebanks too short to count; the abstract no longer says Latin is closest on every measure; Russian and Esperanto are sourced; "the author" no longer reads as d'Agapeyeff; the draft history is out of Section 4; sources are described by how they were read.
+- A second seed for four-square and the repeating shift at periods 2 to 14 (Section 4, "A second seed").
+- The companion repository is ChaseHendrick/dagapeyeff, defined in Section 9 with the development repository; data availability, funding, Use of AI and rights statements added; the date line reads "Preprint".
+- The digit block was checked against two other public transcriptions.
+
 ## Draft 2, 6 October 2026
 
 New results, each a frozen probe with a test and a dated log in `docs/logs/`:

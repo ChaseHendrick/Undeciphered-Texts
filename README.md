@@ -102,7 +102,7 @@ One line per case, generated from each note's status ledger in [`docs/research-n
 | [Phaistos disc](docs/research-notes/phaistos-disc-2026-10-03.md) | Undeciphered. Reading recovered: 0 percent. 0 of 2 questions listed (0 percent) are answered with a control; 2 are open. Reviewed through 2026-10-03. |
 | [Zodiac Z13 and Z32](docs/research-notes/zodiac-short-ciphers-2026-10-03.md) | Unsolved. Plaintext recovered: 0 percent. 0 of 3 hypothesis families listed (0 percent) are closed with shown power; 3 are open. Reviewed through 2026-10-03. |
 | [Dorabella](docs/research-notes/dorabella-2026-10-03.md) | Unsolved. Plaintext recovered: 0 percent. 0 of 5 hypothesis families listed (0 percent) are closed with shown power; 3 are open. Reviewed through 2026-10-03. |
-| [D'Agapeyeff challenge](docs/research-notes/dagapeyeff-2026-10-05.md) | Unsolved. Plaintext recovered: 0 percent. 29 of 35 hypothesis families listed (83 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-06. |
+| [D'Agapeyeff challenge](docs/research-notes/dagapeyeff-2026-10-05.md) | Unsolved. Plaintext recovered: 0 percent. 29 of 35 hypothesis families listed (83 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-07. |
 <!-- research-status:end -->
 
 ## What the engine does / does not
@@ -148,7 +148,7 @@ Full inventory of solvers and analysis tools (classical, keyed Vigenère, column
 | [`docs/puzzles.md`](docs/puzzles.md) | Bounded Sudoku, word search, and anagrams |
 | [`docs/target-triage.md`](docs/target-triage.md), [`target-shortlist.json`](docs/target-shortlist.json) | Dated source research and feasibility judgments for open targets |
 | [`docs/research-notes/README.md`](docs/research-notes/README.md) | <!-- research-note-count:start -->9 dated primary-source case notes<!-- research-note-count:end -->, corpus limits and proposed experiments for undeciphered scripts and historical ciphers |
-| [`docs/research-notes/dagapeyeff-2026-10-05.md`](docs/research-notes/dagapeyeff-2026-10-05.md) | D'Agapeyeff cipher (1939): <!-- dagapeyeff-status:start -->Unsolved. Plaintext recovered: 0 percent. 29 of 35 hypothesis families listed (83 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-06.<!-- dagapeyeff-status:end --> |
+| [`docs/research-notes/dagapeyeff-2026-10-05.md`](docs/research-notes/dagapeyeff-2026-10-05.md) | D'Agapeyeff cipher (1939): <!-- dagapeyeff-status:start -->Unsolved. Plaintext recovered: 0 percent. 29 of 35 hypothesis families listed (83 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-07.<!-- dagapeyeff-status:end --> |
 | [`docs/k4-focus/evidence-2026-10-03.md`](docs/k4-focus/evidence-2026-10-03.md), [`model-experiments-2026-10-03.md`](docs/k4-focus/model-experiments-2026-10-03.md) | K4 source and clue audit, current custody, and executed bounded composition tests |
 | [`docs/easy-unsolved-attempt-2026-10-03.md`](docs/easy-unsolved-attempt-2026-10-03.md) | Reproducible smaller open-target attacks, controls, ambiguity and verification limits |
 | [`docs/ctf-triage-2026-10-03.md`](docs/ctf-triage-2026-10-03.md) | Public puzzle fixtures and organizer first-solve records; all ten already recorded solved at this check |

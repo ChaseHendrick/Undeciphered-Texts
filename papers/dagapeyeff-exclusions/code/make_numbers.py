@@ -36,6 +36,7 @@ INPUTS = (
     "errors", "italian", "screen", "latin", "fskeyed", "latin14", "tongues", "romanian-wide",
     "keyedsquares", "nomessage", "latinmore", "latinshift",
     "alllanguages", "russian", "esperanto", "latinlib", "latinlibrary", "latinw", "shiftgap",
+    "reseed",
 )
 HELD = ("neural_train_austen", "neural_heldout_doyle", "neural_audit_wells")
 
@@ -380,6 +381,15 @@ def macros() -> dict[str, str]:
     out["allListed"] = str(len(rows) + len(al["skipped"]))
     out["allSkippedScript"] = str(sum(1 for s in al["skipped"] if s["reason"].startswith("script")))
     out["allSkippedEmpty"] = str(sum(1 for s in al["skipped"] if s["reason"].startswith("no sentence")))
+    rs = {row["probe"]: row for row in load("reseed")["rows"]}
+    for key, name in (("Fs", "foursquare"), ("Add", "additive")):
+        second = rs[name]["second"]
+        out[f"rs{key}Recovered"] = str(second["recovered"])
+        out[f"rs{key}Planted"] = str(second["planted"])
+        out[f"rs{key}Best"] = d(second["searched_best"])
+        out[f"rs{key}Gap"] = p(second["gap"])
+        out[f"rs{key}AsHigh"] = str(second["shuffles_as_high"])
+        out[f"rs{key}Shuffles"] = str(second["shuffles"])
     short = [s for s in al["skipped"] if s["reason"].endswith(" letters")]
     out["allSkippedShort"] = str(len(short))
     out["allSkippedShortMost"] = n(max(int(s["reason"].split()[0]) for s in short))

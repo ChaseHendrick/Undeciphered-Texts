@@ -1,0 +1,56 @@
+{
+  "cells_below_weakest_both": true,
+  "claimed_plaintext": null,
+  "offset": 7000001,
+  "rows": [
+    {
+      "first": {
+        "gap": 1.3824,
+        "planted": 6,
+        "recovered": 4,
+        "searched_best": -3.3427,
+        "shuffles": 80,
+        "shuffles_as_high": 58,
+        "weakest_recovered": -1.9603
+      },
+      "first_seed": 20261006,
+      "probe": "foursquare",
+      "second": {
+        "gap": 1.3798,
+        "planted": 6,
+        "recovered": 6,
+        "searched_best": -3.3727,
+        "shuffles": 80,
+        "shuffles_as_high": 36,
+        "weakest_recovered": -1.9929
+      },
+      "second_seed": 27261007,
+      "threshold": 0.95
+    },
+    {
+      "first": {
+        "gap": 1.2472,
+        "planted": 12,
+        "recovered": 11,
+        "searched_best": -3.3261,
+        "shuffles": 72,
+        "shuffles_as_high": 34,
+        "weakest_recovered": -2.0789
+      },
+      "first_seed": 20261006,
+      "probe": "additive",
+      "second": {
+        "gap": 0.9443,
+        "planted": 12,
+        "recovered": 11,
+        "searched_best": -3.408,
+        "shuffles": 72,
+        "shuffles_as_high": 37,
+        "weakest_recovered": -2.4637
+      },
+      "second_seed": 27261007,
+      "threshold": 0.9
+    }
+  ],
+  "solved": false
+}

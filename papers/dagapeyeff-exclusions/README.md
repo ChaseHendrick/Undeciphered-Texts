@@ -14,7 +14,7 @@ The cryptogram that Alexander d'Agapeyeff printed as a challenge in Codes and Ci
 
 - **No reading of the D'Agapeyeff cipher is claimed.** No letter string produced by a search on the cells is recorded anywhere in this repository.
 - **Proved:** Propositions 1 to 3 (Section 3): letter counts under any transposition and one-to-one key, the fewest enciphering errors that reconcile two count vectors, and the key-free side counts of four-square. Proposition 1 is standard.
-- **Numerical:** every other result. Each is a seeded run of a stated program, frozen once, and bound to the manuscript by its SHA-256 hash at the head of `paper/numbers.tex`. The four-square, repeating-shift and Latin searches were also rerun under a second seed.
+- **Numerical:** every other result. Each is a seeded run of a stated program, frozen once, and bound to the manuscript by its SHA-256 hash at the head of `paper/numbers.tex`. Four-square and the repeating shift at periods 2 to 14 were also rerun under a second seed and agree with their first runs.
 - **Open:** the 14 by 14 turning grille, four-square with chosen plain squares and two-square, a general table from letter pairs to cell pairs, columnar transposition at the widths and in the languages Section 7 lists, double transposition above width 6, and a construction with no message, which is consistent with every measurement.
 - **Sources:** the digits are taken from the transcription on the English Wikipedia page for the cipher. The prior work is bounded by the sources the manuscript cites.
 

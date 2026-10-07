@@ -24,7 +24,7 @@
       "field": "Cryptography",
       "summary": "which classical cipher families the 1939 D'Agapeyeff challenge excludes, by key-free counts and by searches with demonstrated power",
       "status": "preparing",
-      "note": "Draft 2 of 6 October 2026, with the second-seed reruns and the third reading. No release yet.",
+      "note": "Preprint text of 7 October 2026, after the third reading. Quality item U2 is open until the Latin searches and the shift at periods 6 and 8 to 13 have a second seed. No release yet.",
       "latex": "papers/dagapeyeff-exclusions/paper/dagapeyeff-exclusions.tex",
       "pdf": "papers/dagapeyeff-exclusions/paper/dagapeyeff-exclusions.pdf",
       "companion": "ChaseHendrick/dagapeyeff",

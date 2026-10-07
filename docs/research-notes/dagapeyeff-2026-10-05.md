@@ -15,7 +15,7 @@ The public digit block is the one on the English Wikipedia page for the D'Agapey
 <!-- generated-status:start -->
 ## How close is this to solved?
 
-**Unsolved. Plaintext recovered: 0 percent. 29 of 35 hypothesis families listed (83 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-06.**
+**Unsolved. Plaintext recovered: 0 percent. 29 of 35 hypothesis families listed (83 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-07.**
 
 **In plain words.** In 1939 Alexander d'Agapeyeff printed 392 digits at the back of his book Codes and Ciphers as a challenge. Nobody has ever read them, and later editions quietly dropped the puzzle. We have not read it either. What we have done is rule out most of the ordinary ways it could have been made, using tests we first proved can find a hidden message of the same length.
 
@@ -65,10 +65,10 @@ Progress here means ruling hypotheses out, not reading part of a message. The pe
 | Complete 14-column transposition with a letter key | 18 of 18 planted texts recovered, both directions; the cells score -3.25 to -3.64 a letter, inside their shuffles. [log](../logs/dagapeyeff-columnar14c-2026-10-06.md) |
 | Double transposition, every pair of orders at widths 2 to 6 | In 50 of 50 cases the cells beat their shuffles by less than planted English and German. [log](../logs/dagapeyeff-double-2026-10-05.md) |
 | Keyword transpositions (379,521 keywords, single, double and square) | Planted keywords surface near English; the cells' best is under shuffled cells. [log](../logs/dagapeyeff-keywords-2026-10-05.md) |
-| Four-square with standard plain squares | Excluded by the side count (0 of 7,400 English draws with random plain squares reach the cells) and searched: 4 of 6 planted texts recovered, the cells inside their shuffles. [log](../logs/dagapeyeff-foursquare-2026-10-06.md) |
+| Four-square with standard plain squares | Excluded by the side count (0 of 7,400 English draws with random plain squares reach the cells) and searched: 4 of 6 planted texts recovered, the cells inside their shuffles. [log](../logs/dagapeyeff-foursquare-2026-10-06.md), [log](../logs/dagapeyeff-reseed-2026-10-07.md) |
 | Nulls by place (every 3rd, 4th, 5th cell, or one grid column) | 6 of 6 planted texts recovered; the cells' best is -3.28 a letter against -2.14 or better for English. [log](../logs/dagapeyeff-quick-2026-10-06.md) |
 | Homophonic key (several symbols for one letter) | 6 of 6 planted homophonic texts recovered; the cells and the regrouping sit inside their shuffles. [log](../logs/dagapeyeff-homophone-2026-10-06.md) |
-| A repeating shift on a keyed square (Vigenere-like), periods 2 to 14 | No English draw at any period from 2 to 14 reaches the cells' 18 symbols (0 of 16,470, then 0 of 2,331 at periods 6 and 8 to 13); the joint search recovers 11 of 12 planted texts at periods 2 to 5, 7 and 14 and 26 of 28 at the others, and the cells' best is -3.39 a letter against -2.16 or better for English. [log](../logs/dagapeyeff-additive-2026-10-06.md), [log](../logs/dagapeyeff-add-2026-10-04.md), [log](../logs/dagapeyeff-period4-2026-10-04.md), [log](../logs/dagapeyeff-shiftgap-2026-10-06.md) |
+| A repeating shift on a keyed square (Vigenere-like), periods 2 to 14 | No English draw at any period from 2 to 14 reaches the cells' 18 symbols (0 of 16,470, then 0 of 2,331 at periods 6 and 8 to 13); the joint search recovers 11 of 12 planted texts at periods 2 to 5, 7 and 14 and 26 of 28 at the others, and the cells' best is -3.39 a letter against -2.16 or better for English. [log](../logs/dagapeyeff-additive-2026-10-06.md), [log](../logs/dagapeyeff-add-2026-10-04.md), [log](../logs/dagapeyeff-period4-2026-10-04.md), [log](../logs/dagapeyeff-shiftgap-2026-10-06.md), [log](../logs/dagapeyeff-reseed-2026-10-07.md) |
 | Enciphering errors at the book's rate under a one-to-one key, with or without a transposition | No held-out English window reaches the cells' counts with fewer than 15 chosen errors, random errors never do, and with 8 slips planted English still scores -2.49 a letter or better against the cells' -3.90. [log](../logs/dagapeyeff-errors-2026-10-06.md), [log](../logs/dagapeyeff-corpus-2026-10-05.md) |
 | Italian under a one-to-one key, with or without errors at the book's rate | Manzoni's Italian needs at least 9 chosen errors to reach the cells' counts; planted Italian comes back 4 of 4, also with 8 slips, and the cells score -4.56 a letter under an Italian model, inside their shuffles. [log](../logs/dagapeyeff-italian-2026-10-06.md), [log](../logs/dagapeyeff-languages-2026-10-04.md), [log](../logs/dagapeyeff-swarm-2026-10-04.md) |
 | Delays, nulls by place (periods 2 to 14), rails and plain column reads | 363 transforms solved as a keyed square; planted English comes back 4 of 4, and in every family 7 or 8 of 8 shuffles reach the cells' best; the old delay-79 lead is not in the top twelve. [log](../logs/dagapeyeff-direction-2026-10-06.md), [log](../logs/dagapeyeff-delay-2026-10-04.md), [log](../logs/dagapeyeff-digit-routes-2026-10-04.md) |
@@ -272,6 +272,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Which languages could give the cells' letter counts, 6 October 2026](../logs/dagapeyeff-screen-2026-10-06.md)
 - [The repeating shift at periods 6 and 8 to 13, 6 October 2026](../logs/dagapeyeff-shiftgap-2026-10-06.md)
 - [Catalan and Romanian under a keyed square, 6 October 2026](../logs/dagapeyeff-tongues-2026-10-06.md)
+- [Four-square and the repeating shift under a second seed, 7 October 2026](../logs/dagapeyeff-reseed-2026-10-07.md)
 <!-- generated-logs:end -->
 
 ## Next steps

@@ -1,4 +1,4 @@
-"""The four-square, repeating-shift and Latin searches again, under a second seed. Not a reading.
+"""The four-square and repeating-shift searches again, under a second seed. Not a reading.
 
 The paper's quality record left one item open: these searches had been run
 under one seed each. This pass calls the same report functions with a new
@@ -8,7 +8,9 @@ thresholds are unchanged.
 
 Each probe is run in turn and kept in the ignored work/reseed/ folder, so a
 stopped run resumes at the next probe. The frozen file keeps a summary of
-both seeds, not the second run in full. No letter string is stored.
+both seeds, not the second run in full. Only four-square and the English
+shift at periods 2 to 14 are frozen so far; the shift at periods 6 and 8 to 13
+and the Latin searches are listed in PENDING. No letter string is stored.
 """
 
 from __future__ import annotations
@@ -23,6 +25,9 @@ from engine.dagapeyeff_cache import _DIR, frozen
 PROBES = (
     ("foursquare", "engine.dagapeyeff_foursquare", "foursquare_report"),
     ("additive", "engine.dagapeyeff_additive", "additive_report"),
+)
+# Not yet rerun: the session ended first. Run each with _second(), then move it to PROBES.
+PENDING = (
     ("shiftgap", "engine.dagapeyeff_shiftgap", "shiftgap_report"),
     ("latin14", "engine.dagapeyeff_latin14", "latin14_report"),
     ("latinw", "engine.dagapeyeff_latinw", "latinw_report"),

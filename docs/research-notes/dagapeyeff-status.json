@@ -6,7 +6,7 @@
   "kind": "cipher",
   "unit": "hypothesis families",
   "stage": "preprint",
-  "reviewed_through": "2026-10-06",
+  "reviewed_through": "2026-10-07",
   "log_glob": "logs/dagapeyeff*-????-??-??.md",
   "cite_every_log_from": "2026-10-06",
   "plaintext_recovered_percent": 0,
@@ -49,9 +49,9 @@
   },
   "manuscript": {
     "title": "Excluding Classical Cipher Families for the 1939 D'Agapeyeff Challenge",
-    "stage": "Draft 2, 6 October 2026",
+    "stage": "Preprint text, 7 October 2026",
     "deposited": false,
-    "status": "Both internal readings are done: the proofs reading and a second reading of the numbers, controls and claims, whose 17 findings were all verified and fixed in draft 2. Draft 2 adds the 98-language screen, 59.8 million letters of Latin, Latin at column widths 10 to 15, and the remaining shift periods 6 and 8 to 13. Not peer reviewed, not deposited, no DOI.",
+    "status": "Three internal readings are done: the proofs reading, a second reading of the numbers, controls and claims (17 findings), and a third reading of the whole preprint text (10 findings), all verified and fixed. Four-square and the repeating shift were rerun under a second seed and agree; the Latin searches and the shift at periods 6 and 8 to 13 still have one seed. The companion repository is ChaseHendrick/dagapeyeff. Not peer reviewed, not yet released, no DOI.",
     "folder": "papers/dagapeyeff-exclusions"
   },
   "charts": [
@@ -319,7 +319,8 @@
       "status": "closed-with-power",
       "evidence": "Excluded by the side count (0 of 7,400 English draws with random plain squares reach the cells) and searched: 4 of 6 planted texts recovered, the cells inside their shuffles.",
       "logs": [
-        "dagapeyeff-foursquare-2026-10-06.md"
+        "dagapeyeff-foursquare-2026-10-06.md",
+        "dagapeyeff-reseed-2026-10-07.md"
       ]
     },
     {
@@ -346,7 +347,8 @@
         "dagapeyeff-additive-2026-10-06.md",
         "dagapeyeff-add-2026-10-04.md",
         "dagapeyeff-period4-2026-10-04.md",
-        "dagapeyeff-shiftgap-2026-10-06.md"
+        "dagapeyeff-shiftgap-2026-10-06.md",
+        "dagapeyeff-reseed-2026-10-07.md"
       ]
     },
     {
