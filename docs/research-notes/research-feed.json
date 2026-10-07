@@ -1268,14 +1268,15 @@
           "family": "14 by 14 turning grille with a letter key",
           "status": "open",
           "status_label": "Open",
-          "evidence": "The compiled search finds 4 of 4 planted grilles with the key given and 0 of 4 with it unknown, and order tests barely tell a grille message from no message (3 of 20; 4 of 12). A grille is a transposition, so under a one-to-one key the letter counts still need at least 8 chosen errors in English and 4 in Latin, and random errors never reach them; a grille stays open mainly with a count-flattening key or an unusual text. A homophonic key cannot flatten the counts either: no English window of 196 letters uses 18 letters or fewer, and no Latin window groups exactly into the cells' 18 symbol counts (the closest needs at most 3 errors).",
+          "evidence": "The compiled search finds 4 of 4 planted grilles with the key given and 0 of 4 with it unknown, and order tests barely tell a grille message from no message (3 of 20; 4 of 12). A grille is a transposition, so under a one-to-one key the letter counts still need at least 8 chosen errors in English and 4 in Latin, and random errors never reach them; a grille stays open mainly with a count-flattening key or an unusual text. A homophonic key cannot flatten the counts either: no English window of 196 letters uses 18 letters or fewer, and no Latin window groups exactly into the cells' 18 symbol counts (the closest needs at most 3 errors). Under the Latin model, with the key held fixed the search recovers 4 of 4 grilles with the true key, 1 of 4 with keys 77 to 82 percent right and 0 of 4 at 65 to 69 percent; re-solving the key at every grille move recovers 0 of 8.",
           "next": "A joint method that recovers planted grilles with the key unknown, before the cells are searched; the count-flattening key left to test is a pair code or keyed squares, since a homophonic key is excluded by counts.",
           "priority": 2,
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-grillec-2026-10-06.md",
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-nomessage-2026-10-06.md",
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-errors-2026-10-06.md",
-            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-homgroup-2026-10-06.md"
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-homgroup-2026-10-06.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latingrille-2026-10-07.md"
           ]
         },
         {
@@ -1307,14 +1308,15 @@
           "family": "Transposition beyond the searched widths, or with nulls and an incomplete rectangle",
           "status": "open",
           "status_label": "Open",
-          "evidence": "The key-invariant method has no power past width 10; double transposition is closed only to width 6. Latin is closed by searches with Latin power at every width from 2 to 15; English under any transposition with a one-to-one key is already excluded by counts.",
+          "evidence": "The key-invariant method has no power past width 10; double transposition is closed only to width 6. Latin is closed by searches with Latin power at every width from 2 to 15; English under any transposition with a one-to-one key is already excluded by counts. Under the Latin model a joint search of both orders and the key recovers planted Latin at 4 by 5 and 5 by 7 (6 of 6) but 1 of 3 at 6 by 8 and none at 7 by 9 or 9 by 11.",
           "next": "A joint search with a letter key above width 15 and for double transposition above width 6, in Latin first, since counts already exclude English under a one-to-one key.",
           "priority": 5,
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-exhaustive-2026-10-05.md",
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-double-2026-10-05.md",
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinw-2026-10-06.md",
-            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinsmall-2026-10-07.md"
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinsmall-2026-10-07.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latindouble-2026-10-07.md"
           ]
         },
         {

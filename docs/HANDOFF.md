@@ -4,6 +4,10 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 7 October 2026, after Latin words: grille and double transposition ported
+
+Branch `claude/latin-grille-double`. The companion-branch scratch searches are now engine probes, power only, cells not searched: `engine.dagapeyeff_latingrille` (with the key held fixed, 4 of 4 grilles from the true key, 1 of 4 at 77 to 82 percent, 0 of 4 at 65 to 69 percent; key re-solved at every move, 0 of 8) and `engine.dagapeyeff_latindouble` (6 of 6 at 4 by 5 and 5 by 7, 1 of 3 at 6 by 8, none at 7 by 9 or 9 by 11). Both are in Section 7 of the paper. The cache holds 133 files. The error-tolerance curve is covered by `dagapeyeff-latinwords`. The scratch branch `claude/inspiring-gates-hzi15a` of `ChaseHendrick/dagapeyeff` can be deleted before the companion is published.
+
 ## Session 7 October 2026, last: Latin words
 
 Branch `claude/latin-words`. `engine.dagapeyeff_latinwords` (word coverage of the best Latin decryptions) is frozen with a test, a log, a ledger line and a paper paragraph: 59 of 60 planted Latin texts with up to 32 wrong cells keep more words than the cells, whose best (12.8 percent) 3 of 4 shuffles reach. The cache holds 131 files. The grille, double transposition and error-curve scratch work in the companion branch is still not ported.
