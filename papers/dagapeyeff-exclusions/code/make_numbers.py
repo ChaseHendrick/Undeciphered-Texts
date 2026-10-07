@@ -1,6 +1,6 @@
 """Write every number and table the manuscript prints from the frozen search results.
 
-    python3 code/make_numbers.py          # rewrite paper/numbers.tex, paper/tab_*.tex and the README abstract
+    python3 code/make_numbers.py          # rewrite paper/numbers.tex, paper/tab_*.tex, paper/fig_*.tex and the README abstract
     python3 code/make_numbers.py --check  # fail if any of them is stale
 
 The inputs are the frozen outputs of the probes: JSON files, three held-out texts whose letters are
@@ -644,6 +644,91 @@ def power_table() -> str:
     return head + "\n" + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n"
 
 
+def _power_rows() -> list[tuple[str, float, float]]:
+    """Each row of the power table as its family, the weakest planted text's score and the cells' best."""
+    out = []
+    for line in power_table().splitlines():
+        found = re.findall(r"\\ensuremath\{(-?[0-9.]+)\}", line)
+        if len(found) >= 2:
+            out.append((line.split("&")[0].strip(), float(found[0]), float(found[1])))
+    return out
+
+
+def power_figure() -> str:
+    """Figure: for each family of the power table, its weakest recovered planted text and the cells' best."""
+    rows = _power_rows()
+    count = len(rows)
+    labels = ",".join("{" + label.replace("--", "\\textendash{}") + "}" for label, _, _ in rows)
+    lines = ["\\begin{tikzpicture}",
+             "\\begin{axis}[width=0.52\\linewidth, height=0.62\\linewidth, xmin=-4.8, xmax=-1.6,",
+             f"  ymin=0.4, ymax={count}.6, ytick={{1,...,{count}}}, yticklabels={{{labels}}},",
+             "  y dir=reverse, yticklabel style={font=\\scriptsize, align=right}, xticklabel style={font=\\scriptsize},",
+             "  xlabel={Score, nats a letter}, xlabel style={font=\\small}, xmajorgrids, grid style={gray!25},",
+             "  legend style={font=\\scriptsize, at={(0.5,1.02)}, anchor=south, legend columns=2, draw=none,\n"
+             "  /tikz/every even column/.append style={column sep=1em}}, legend cell align=left]"]
+    for index, (_, planted, cells) in enumerate(rows, start=1):
+        lines.append(f"\\addplot[gray!60, forget plot] coordinates {{({cells:.2f},{index}) ({planted:.2f},{index})}};")
+    lines.append("\\addplot[only marks, mark=*, mark size=1.6pt, black] coordinates {"
+                 + " ".join(f"({planted:.2f},{index})" for index, (_, planted, _) in enumerate(rows, start=1)) + "};")
+    lines.append("\\addlegendentry{Weakest planted text}")
+    lines.append("\\addplot[only marks, mark=x, mark size=2.4pt, thick, black] coordinates {"
+                 + " ".join(f"({cells:.2f},{index})" for index, (_, _, cells) in enumerate(rows, start=1)) + "};")
+    lines.append("\\addlegendentry{Cells' best}")
+    lines += ["\\end{axis}", "\\end{tikzpicture}"]
+    return "\n".join(lines) + "\n"
+
+
+def screen_figure() -> str:
+    """Figure: how many of the screened languages have each median number of errors, Latin apart."""
+    sc = load("alllanguages")
+    counts: dict[int, int] = {}
+    latin = None
+    for name in sc["ranked"]:
+        median = round(sc["languages"][name]["median_errors"])
+        if name == "Latin-ITTB":
+            latin = median
+            continue
+        counts[median] = counts.get(median, 0) + 1
+    others = " ".join(f"({median},{count})" for median, count in sorted(counts.items()))
+    lines = ["\\begin{tikzpicture}",
+             "\\begin{axis}[width=0.9\\linewidth, height=0.36\\linewidth, ybar=0pt, bar width=3.5pt, bar shift=0pt,",
+             f"  xmin={min(min(counts), latin) - 3}, xmax={max(counts) + 2}, ymin=0, enlarge y limits={{upper, value=0.15}},",
+             "  xlabel={Fewest errors at the median window of 196 letters}, ylabel={Languages},",
+             "  label style={font=\\small}, ticklabel style={font=\\scriptsize}, ymajorgrids, grid style={gray!25},",
+             "  legend style={font=\\scriptsize, draw=none, at={(0.98,0.95)}, anchor=north east}, legend cell align=left, area legend]",
+             f"\\addplot[fill=gray!45, draw=gray!70] coordinates {{{others}}};",
+             f"\\addlegendentry{{Other languages ({len(sc['ranked']) - 1})}}",
+             f"\\addplot[fill=black, draw=black] coordinates {{({latin},1)}};",
+             "\\addlegendentry{Latin (ITTB)}",
+             "\\end{axis}", "\\end{tikzpicture}"]
+    return "\n".join(lines) + "\n"
+
+
+def words_figure() -> str:
+    """Figure: Latin word coverage of the planted texts by wrong cells, against the cells' and shuffles' best."""
+    lw = load("latinwords")
+    by = lw["planted_by_errors"]
+    errors = sorted(by, key=int)
+    points = " ".join(f"({e},{100 * c:.1f})" for e in errors for c in by[e]["coverage"])
+    cells = 100 * lw["searched"]["cells"]["best_coverage"]
+    shuffle = 100 * max(lw["searched"]["cells"]["shuffle_best_coverages"])
+    low, high = int(errors[0]) - 3, int(errors[-1]) + 3
+    lines = ["\\begin{tikzpicture}",
+             "\\begin{axis}[width=0.9\\linewidth, height=0.42\\linewidth,",
+             f"  xmin={low}, xmax={high}, ymin=0, ymax=90, xtick={{{','.join(errors)}}},",
+             "  xlabel={Wrong cells in the planted text, of 196}, ylabel={Letters in Latin words, \\%},",
+             "  label style={font=\\small}, ticklabel style={font=\\scriptsize}, ymajorgrids, grid style={gray!25},",
+             "  legend style={font=\\scriptsize, draw=none, at={(0.98,0.95)}, anchor=north east}, legend cell align=left]",
+             f"\\addplot[only marks, mark=o, mark size=1.5pt, black] coordinates {{{points}}};",
+             "\\addlegendentry{Planted Latin, decrypted with the key found}",
+             f"\\addplot[dashed, thick, black] coordinates {{({low},{cells:.1f}) ({high},{cells:.1f})}};",
+             "\\addlegendentry{Cells' best}",
+             f"\\addplot[dotted, thick, gray] coordinates {{({low},{shuffle:.1f}) ({high},{shuffle:.1f})}};",
+             "\\addlegendentry{Shuffles' best}",
+             "\\end{axis}", "\\end{tikzpicture}"]
+    return "\n".join(lines) + "\n"
+
+
 def power_gaps() -> dict[str, float]:
     """Weakest planted score minus the cells' best, for each row of the power table."""
     import re
@@ -683,6 +768,9 @@ def render() -> dict[str, str]:
         "numbers.tex": "\n".join(lines) + "\n",
         "tab_power.tex": "% Written by ../code/make_numbers.py. Do not edit by hand.\n" + power_table(),
         "tab_screen.tex": "% Written by ../code/make_numbers.py. Do not edit by hand.\n" + screen_table(),
+        "fig_power.tex": "% Written by ../code/make_numbers.py. Do not edit by hand.\n" + power_figure(),
+        "fig_screen.tex": "% Written by ../code/make_numbers.py. Do not edit by hand.\n" + screen_figure(),
+        "fig_words.tex": "% Written by ../code/make_numbers.py. Do not edit by hand.\n" + words_figure(),
     }
 
 
@@ -705,7 +793,7 @@ def abstract_text(values: dict[str, str]) -> str:
     left = re.findall(r"\\[A-Za-z]+|\$|[{}]", text)
     if left:
         raise SystemExit("abstract.tex keeps TeX with no plain-text form: " + " ".join(sorted(set(left))))
-    return re.sub(r"\s+", " ", text)
+    return "\n\n".join(re.sub(r"\s+", " ", part).strip() for part in re.split(r"\n\s*\n", text) if part.strip())
 
 
 def readme(values: dict[str, str]) -> str:
