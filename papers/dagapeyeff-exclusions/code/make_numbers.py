@@ -36,7 +36,7 @@ INPUTS = (
     "errors", "italian", "screen", "latin", "fskeyed", "latin14", "tongues", "romanian-wide",
     "keyedsquares", "nomessage", "latinmore", "latinshift",
     "alllanguages", "russian", "esperanto", "latinlib", "latinlibrary", "latinw", "shiftgap",
-    "reseed",
+    "reseed", "latinsmall", "rarecolumn",
 )
 HELD = ("neural_train_austen", "neural_heldout_doyle", "neural_audit_wells")
 
@@ -434,6 +434,26 @@ def macros() -> dict[str, str]:
     out["lwCellsHigh"] = d(max(r["cells"]["per_letter"] for r in lw["rows"]), 2)
     out["lwWeakestFound"] = d(min(pl["found_per_letter"] for r in lw["rows"] for pl in r["planted"] if pl["cells_right"] >= 0.9), 2)
     out["lwAsHighLow"] = str(min(r["cells"]["shuffles_as_high"] for r in lw["rows"]))
+    lsm = load("latinsmall")
+    out["lsmRecovered"] = str(lsm["planted_recovered"])
+    out["lsmPlanted"] = str(lsm["planted"])
+    out["lsmBest"] = d(lsm["searched_best"], 2)
+    out["lsmWeakestFound"] = d(lsm["weakest_recovered_found"], 2)
+    out["lsmAbove"] = str(lsm["cases_cells_above_all_shuffles"])
+    out["lsmCases"] = str(2 * len(lsm["rows"]))
+    rc = load("rarecolumn")
+    out["rcSymbolsRest"] = str(rc["symbols_without_private"])
+    out["rcCellsRest"] = str(rc["cells_without_private"])
+    latin_pad = {k: v for k, v in rc["padding"].items() if k.startswith("Latin")}
+    english_pad = {k: v for k, v in rc["padding"].items() if k.startswith("English")}
+    out["rcLatinFewest"] = str(min(v["fewest"] for v in latin_pad.values()))
+    out["rcClassicalFewest"] = str(next(v["fewest"] for k, v in latin_pad.items() if "classical" in k))
+    out["rcEnglishFewest"] = str(min(v["fewest"] for v in english_pad.values()))
+    out["rcPadWindows"] = n(sum(v["windows"] for v in rc["padding"].values()))
+    out["rcRareWindows"] = n(sum(v["windows"] for v in rc["rare_letters"].values()))
+    out["rcRareEnough"] = n(sum(v["five_or_more_rare"] for v in rc["rare_letters"].values()))
+    out["rcPacked"] = str(sum(v["rare_in_one_stretch"] for v in rc["rare_letters"].values()))
+    out["rcPrivateCells"] = str(rc["private_cells"])
     # Review 2: gaps between the cells and the weakest planted text found, and counts against chance.
     la = load("latin")
     out["gapLatin"] = p(min(pl["found_per_letter"] for pl in la["planted"]) - la["searched"]["cells"]["best"], 2)
@@ -557,6 +577,11 @@ def power_table() -> str:
     row("Latin, columnar widths 10--13, 15 (0 and 8 wrong cells)", f"{lw['planted_recovered']}/{lw['planted']}",
         d(min(pl["found_per_letter"] for r in lw["rows"] for pl in r["planted"] if pl["cells_right"] >= 0.9), 2),
         d(best["per_letter"], 2), f"{best['shuffles_as_high']}/{len(best['shuffles'])}")
+    lsm = load("latinsmall")
+    best = max((r["cells"] for r in lsm["rows"]), key=lambda c: c["per_letter"])
+    row("Latin, columnar widths 2--9 (0 and 8 wrong cells)", f"{lsm['planted_recovered']}/{lsm['planted']}",
+        d(lsm["weakest_recovered_found"], 2), d(best["per_letter"], 2),
+        f"{best['shuffles_as_high']}/{len(best['shuffles'])}")
     ls = load("latinshift")
     row("Latin, repeating shift, periods 2--5, 7, 14", f"{ls['planted_recovered']}/{len(ls['planted'])}",
         d(min(r["true_per_letter"] for r in ls["planted"]), 2), d(ls["searched_best"]["per_letter"], 2),

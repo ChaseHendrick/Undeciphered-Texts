@@ -1249,7 +1249,7 @@
           "family": "A plaintext in another language under a large transposition, or in a language not screened",
           "status": "open",
           "status_label": "Open",
-          "evidence": "98 languages with usable text in Universal Dependencies were screened by letter counts, with Russian under four spellings and Esperanto besides; Latin has the lowest median of all and three times the next rate of close windows, though Estonian matches its single closest window. Every window of 59.8 million letters of Latin needs at least 3 errors. Italian and Latin under a one-to-one key are closed; Latin under columnar transposition at widths 10 to 15 is closed; the grille has no power in any language.",
+          "evidence": "98 languages with usable text in Universal Dependencies were screened by letter counts, with Russian under four spellings and Esperanto besides; Latin has the lowest median of all and three times the next rate of close windows, though Estonian matches its single closest window. Every window of 59.8 million letters of Latin needs at least 3 errors. Italian and Latin under a one-to-one key are closed; Latin under columnar transposition at widths 2 to 15 is closed; the grille has no power in any language.",
           "next": "Search Catalan, Romanian and Latin under a 14-column key and under keyed four-square once a method with power exists; screen further languages.",
           "priority": 1,
           "logs": [
@@ -1260,7 +1260,8 @@
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinlib-2026-10-06.md",
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinlibrary-2026-10-06.md",
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-languages-2026-10-04.md",
-            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinw-2026-10-06.md"
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinw-2026-10-06.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinsmall-2026-10-07.md"
           ]
         },
         {
@@ -1281,12 +1282,13 @@
           "family": "No message (a hand construction)",
           "status": "open",
           "status_label": "Open",
-          "evidence": "Against random dealings of the cells' own symbols the order gives a family-wise p of 0.28, with a test that flags 19 of 20 keyed-square and done-columnar messages but only 3 of 20 grille messages; a grille-specific statistic has weak power (4 of 12) and the cells sit among their dealings (25 of 40). A message now needs an order-destroying transposition and either a non-homophonic count-flattening key, chosen errors or an unusual text.",
+          "evidence": "Against random dealings of the cells' own symbols the order gives a family-wise p of 0.28, with a test that flags 19 of 20 keyed-square and done-columnar messages but only 3 of 20 grille messages; a grille-specific statistic has weak power (4 of 12) and the cells sit among their dealings (25 of 40). A message now needs an order-destroying transposition and either a non-homophonic count-flattening key, chosen errors or an unusual text. The five last-column symbols fit neither plain reading: as padding the other 188 cells use 13 letters, fewer than any window of 188 letters of Latin (fewest 14) or English (fewest 19); as real rare letters they would have to cluster where no Latin or English window clusters them.",
           "next": "Find an order statistic that separates a turning-grille message from a no-message dealing at 196 letters, with planted texts, since the grille is the main message system the order still allows.",
           "priority": 3,
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-nomessage-2026-10-06.md",
-            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-prior-work-2026-10-05.md"
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-prior-work-2026-10-05.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-rarecolumn-2026-10-07.md"
           ]
         },
         {
@@ -1305,13 +1307,14 @@
           "family": "Transposition beyond the searched widths, or with nulls and an incomplete rectangle",
           "status": "open",
           "status_label": "Open",
-          "evidence": "The key-invariant method has no power past width 10; double transposition is closed only to width 6. Latin is closed by searches with Latin power at widths 10 to 15; the widths 2 to 9 rest on a key-invariant score whose power was shown for English and German; English under any transposition with a one-to-one key is already excluded by counts.",
+          "evidence": "The key-invariant method has no power past width 10; double transposition is closed only to width 6. Latin is closed by searches with Latin power at every width from 2 to 15; English under any transposition with a one-to-one key is already excluded by counts.",
           "next": "A joint search with a letter key above width 15 and for double transposition above width 6, in Latin first, since counts already exclude English under a one-to-one key.",
           "priority": 5,
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-exhaustive-2026-10-05.md",
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-double-2026-10-05.md",
-            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinw-2026-10-06.md"
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinw-2026-10-06.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinsmall-2026-10-07.md"
           ]
         },
         {
@@ -1631,14 +1634,15 @@
           ]
         },
         {
-          "family": "Latin under columnar transposition at widths 10 to 13 and 15, with a short last row, and a letter key",
+          "family": "Latin under columnar transposition at widths 2 to 13 and 15, with a short last row, and a letter key",
           "status": "closed-with-power",
           "status_label": "Closed with shown power",
-          "evidence": "39 of 40 planted Latin texts recovered, classical and 8-error texts included; the cells score -3.57 to -4.21 a letter, below every recovered planted text and inside their shuffles.",
+          "evidence": "87 of 88 planted Latin texts recovered at widths 2 to 13 and 15, classical and 8-error texts included; the cells score -3.57 to -4.59 a letter, below every recovered planted text and inside their shuffles (at widths 2 to 9, 4 of 32 cases beat all five shuffles, about what chance gives).",
           "next": null,
           "priority": null,
           "logs": [
-            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinw-2026-10-06.md"
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinw-2026-10-06.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-latinsmall-2026-10-07.md"
           ]
         },
         {

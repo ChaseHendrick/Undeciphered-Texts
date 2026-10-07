@@ -4,6 +4,12 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 7 October 2026, later: Latin small widths, the last column
+
+Branch `claude/latin-rare-column`. `engine.dagapeyeff_latinsmall` was run and frozen (48 of 48 planted Latin texts, cells' best -3.93), with a test, a log and ledger entries; Latin under a single columnar key is now closed at widths 2 to 15. New probe `engine.dagapeyeff_rarecolumn` counts the two testable readings of the five last-column symbols (padding leaves 13 letters, fewer than any Latin or English window; as rare letters they would need a clustering no window shows). Both are in the paper (Table 1, Sections 3, 6 and 7) and the PDF was rebuilt. The cache holds 130 files; the checks count, provenance chain and board line were updated.
+
+Scratch work in a separate branch of the companion repository (`ChaseHendrick/dagapeyeff`, branch `claude/inspiring-gates-hzi15a`, not main) has Latin searches not yet ported into `engine/`: an error-tolerance curve (planted Latin recovered up to about 24 wrong cells of 196), a turning-grille search that re-solves the key at every move (still 0 of 4 planted grilles; with the key held fixed it needs about 80 percent of cells right), a double-transposition joint search (power at 4 by 5 and 5 by 7 only), and a Latin word-coverage test. Port them as engine probes before citing them.
+
 ## Session 7 October 2026: companion repository, Zenodo publishing, third reading, second seed
 
 Work was on branch `claude/dagapeyeff-paper-zenodo-setup-alx0sm` (PR #12), which started from PR #11's draft 2. The cache holds 128 files after `dagapeyeff-reseed`; the checks count, the provenance chain and the board line were updated, and `tools/refresh_docs.py` was run.
