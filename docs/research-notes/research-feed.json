@@ -9,9 +9,9 @@
       "kind": "cipher",
       "stage": "ongoing",
       "unit": "hypothesis families",
-      "reviewed_through": "2026-10-04",
+      "reviewed_through": "2026-10-07",
       "plaintext_recovered_percent": 0,
-      "summary": "Unsolved. Plaintext recovered: 0 percent. 6 of 12 hypothesis families listed (50 percent) are excluded by the clues; 3 are open. Reviewed through 2026-10-04.",
+      "summary": "Unsolved. Plaintext recovered: 0 percent. 7 of 13 hypothesis families listed (54 percent) are excluded by the clues; 3 are open. Reviewed through 2026-10-07.",
       "caveat": "Progress here means ruling cipher models out against the artist's disclosed clues, fitting one clue and holding the other back. The plaintext is reported to sit in a private archive sold in November 2025, and the custodian still lists K4 as unsolved; the question here is a public method, not whether anyone knows the answer. The share is of the families listed, not of every cipher.",
       "note_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/kryptos-k4-2026-10-03.md",
       "ledger_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/kryptos-k4-status.json",
@@ -22,21 +22,21 @@
           "label": "Open",
           "definition": "Open: not searched here, or not searched with a method shown to work.",
           "count": 3,
-          "percent": 25
+          "percent": 23
         },
         {
           "status": "tested-without-power",
           "label": "Tested without shown power",
           "definition": "Tested, not closed: the search ran, but some hypotheses stay underdetermined, the budget ran out, or matched-length controls did not come back.",
           "count": 3,
-          "percent": 25
+          "percent": 23
         },
         {
           "status": "excluded-by-constraint",
           "label": "Excluded by the clues",
           "definition": "Excluded by the clues: every complete key the model allows contradicts a disclosed clue held back from fitting, or the model cannot place the clues at all.",
-          "count": 6,
-          "percent": 50
+          "count": 7,
+          "percent": 54
         }
       ],
       "families": [
@@ -99,6 +99,17 @@
           "priority": null,
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/tractable-open-attempt-2026-10-03.md"
+          ]
+        },
+        {
+          "family": "In-place periodic substitution with any alphabets (any Quagmire keyword, keyed Vigenere, Beaufort, Porta) at periods 1-7, 9, 10, 14, 15, 17, 21, 25",
+          "status": "excluded-by-constraint",
+          "status_label": "Excluded by the clues",
+          "evidence": "In one column the same plaintext letter would need two ciphertext letters, or two plaintext letters one ciphertext letter, for any alphabets. Periods 8, 11-13, 16, 18-20, 22-24 and 26-32 are not blocked by this bound; a planted-clue control is never blocked.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/periodic-bijection-2026-10-07.md"
           ]
         },
         {
