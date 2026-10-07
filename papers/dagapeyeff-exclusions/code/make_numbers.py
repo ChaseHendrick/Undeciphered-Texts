@@ -36,7 +36,7 @@ INPUTS = (
     "errors", "italian", "screen", "latin", "fskeyed", "latin14", "tongues", "romanian-wide",
     "keyedsquares", "nomessage", "latinmore", "latinshift",
     "alllanguages", "russian", "esperanto", "latinlib", "latinlibrary", "latinw", "shiftgap",
-    "reseed", "latinsmall", "rarecolumn", "latinwords",
+    "reseed", "latinsmall", "rarecolumn", "latinwords", "latingrille", "latindouble",
 )
 HELD = ("neural_train_austen", "neural_heldout_doyle", "neural_audit_wells")
 
@@ -460,6 +460,25 @@ def macros() -> dict[str, str]:
     out["lwdWorstHigh"] = pct(max(worst["coverage"]))
     out["lwdWorstRecovered"] = str(worst["recovered"])
     out["lwdWorstPlanted"] = str(worst["planted"])
+    lg = load("latingrille")
+    fx = lg["fixed_by_spoiled"]
+    out["lgPlanted"] = str(fx["0.0"]["of"])
+    out["lgExact"] = str(fx["0.0"]["recovered"])
+    out["lgMid"] = str(fx["0.15"]["recovered"])
+    out["lgMidLow"] = str(round(100 * min(fx["0.15"]["key_cells_right"])))
+    out["lgMidHigh"] = str(round(100 * max(fx["0.15"]["key_cells_right"])))
+    out["lgLow"] = str(fx["0.3"]["recovered"])
+    out["lgLowLow"] = str(round(100 * min(fx["0.3"]["key_cells_right"])))
+    out["lgLowHigh"] = str(round(100 * max(fx["0.3"]["key_cells_right"])))
+    out["lgNested"] = str(lg["nested_recovered"])
+    out["lgNestedOf"] = str(len(lg["nested"]))
+    out["lgNestedHoles"] = str(lg["nested_holes_high"])
+    ld = load("latindouble")["by_size"]
+    out["ldSmall"] = str(ld["4x5"]["recovered"] + ld["5x7"]["recovered"])
+    out["ldSmallOf"] = str(ld["4x5"]["of"] + ld["5x7"]["of"])
+    out["ldSix"] = str(ld["6x8"]["recovered"])
+    out["ldSixOf"] = str(ld["6x8"]["of"])
+    out["ldLarge"] = str(ld["7x9"]["recovered"] + ld["9x11"]["recovered"])
     rc = load("rarecolumn")
     out["rcSymbolsRest"] = str(rc["symbols_without_private"])
     out["rcCellsRest"] = str(rc["cells_without_private"])
