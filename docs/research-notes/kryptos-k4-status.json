@@ -1,0 +1,191 @@
+{
+  "schema": "research-status-1",
+  "case": "kryptos-k4",
+  "title": "Kryptos K4",
+  "note": "kryptos-k4-2026-10-03.md",
+  "kind": "cipher",
+  "unit": "hypothesis families",
+  "stage": "ongoing",
+  "reviewed_through": "2026-10-04",
+  "log_glob": "k4-focus/*-????-??-??.md",
+  "cite_every_log_from": "2026-10-04",
+  "plaintext_recovered_percent": 0,
+  "caveat": "Progress here means ruling cipher models out against the artist's disclosed clues, fitting one clue and holding the other back. The plaintext is reported to sit in a private archive sold in November 2025, and the custodian still lists K4 as unsolved; the question here is a public method, not whether anyone knows the answer. The share is of the families listed, not of every cipher.",
+  "lay": {
+    "tagline": "The last unsolved panel of a sculpture outside CIA headquarters.",
+    "summary": "Kryptos is a sculpture unveiled at CIA headquarters in 1990. Three of its four enciphered panels were read in the 1990s; the fourth, 97 letters long, has never been publicly solved. The artist has released a few words of the answer and where they sit. We use one of those clues to fit a cipher and keep the other back to check it, so a cipher that only fits by luck is caught.",
+    "what_it_is": "K4 is 97 capital letters on a copper sheet. Jim Sanborn, the artist, has said that the letters at certain positions spell EASTNORTHEAST and BERLINCLOCK. Any proposed method must turn the 97 letters into a text with those words in exactly those places.",
+    "what_we_found": "Every cipher model we searched to completion either cannot place the clues at all or, when its key is fully pinned down by one clue, gets the other clue wrong. 888 complete keys from layered Vigenere, autokey and Beaufort models with column shuffles all failed the held-back clue. Some partial keys are still undecided.",
+    "whats_next": "Only add a new cipher model when there is a reason the artist could have used it, fix the clue positions before fitting, and keep one clue for checking. The artist's archive and the custodian's answer checker are private; a matching answer from them would be a reference, not a method.",
+    "faq": [
+      {
+        "q": "Has Kryptos K4 been solved?",
+        "a": "Not publicly. An archive with the plaintext was auctioned in November 2025, and the new custodian runs a private answer checker, but no full method has been published in the sources we checked."
+      },
+      {
+        "q": "Why not just try every cipher?",
+        "a": "With only 97 letters, many wrong keys can produce a few English-looking words. Holding one clue back is how we tell a real fit from a lucky one."
+      }
+    ],
+    "background": "https://en.wikipedia.org/wiki/Kryptos"
+  },
+  "researcher": {
+    "summary": "97-letter K4 (ASCII SHA-256 eea81357...). Clues fitted and reserved in reciprocal folds: EASTNORTHEAST at zero-based plaintext offset 21 and BERLINCLOCK at 63. A reserved exact prediction requires a complete key and every reserved letter equal. Completed spaces: ragged columnar (widths to 32, both read orders, A-Z and KRYPTOS alphabets) composed either side of repeating, plaintext-autokey, ciphertext-autokey and Beaufort substitution at periods to 32 (65,024 hypotheses), 0 reserved exact predictions.",
+    "methods": [
+      "Reciprocal clue folds",
+      "Exact crib-constraint inference",
+      "Symbolic synthesis (optional Z3)",
+      "Bounded transposition portfolios"
+    ]
+  },
+  "charts": [
+    {
+      "id": "k4-model-finish",
+      "kind": "bar",
+      "title": "What happened to 65,024 layered cipher hypotheses",
+      "caption": "Ragged columnar transposition composed with repeating, autokey and Beaufort substitution, both clue folds. A reserved exact prediction would need a complete key that spells the held-back clue.",
+      "unit": "hypotheses",
+      "log": "k4-focus/model-finish-2026-10-04.md",
+      "rows": [
+        {
+          "label": "Fit the training clue",
+          "value": 20776
+        },
+        {
+          "label": "Contradicted the held-back clue",
+          "value": 18213
+        },
+        {
+          "label": "Still undetermined",
+          "value": 2563
+        },
+        {
+          "label": "Complete keys",
+          "value": 888
+        },
+        {
+          "label": "Predicted the held-back clue",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "data": {
+    "ciphertext": "OBKRUOXOGHULBSOLIFBBWFLRVQQPRNGKSSOTWTQSJQSSEKZZWATJKLUDIAWINFBNYPVTTMZFPKWGDKZXTJCDIGKUHUAUEKCAR",
+    "clues": [
+      {
+        "offset": 21,
+        "text": "EASTNORTHEAST"
+      },
+      {
+        "offset": 63,
+        "text": "BERLINCLOCK"
+      }
+    ]
+  },
+  "statuses": {
+    "excluded-by-constraint": "Excluded by the clues: every complete key the model allows contradicts a disclosed clue held back from fitting, or the model cannot place the clues at all.",
+    "tested-without-power": "Tested, not closed: the search ran, but some hypotheses stay underdetermined, the budget ran out, or matched-length controls did not come back.",
+    "open": "Open: not searched here, or not searched with a method shown to work."
+  },
+  "families": [
+    {
+      "family": "Ragged columnar transposition with repeating, autokey or Beaufort substitution, either order, periods and widths to 32",
+      "status": "tested-without-power",
+      "evidence": "All 65,024 hypotheses of both folds were checked; 888 have complete keys and all 888 contradict the held-back clue, but 2,563 stay undetermined and no planted-text control at 97 letters is recorded.",
+      "logs": [
+        "k4-focus/model-finish-2026-10-04.md",
+        "k4-focus/model-experiments-2026-10-03.md"
+      ]
+    },
+    {
+      "family": "Progressive key on a straight alphabet, periods 1 to 32",
+      "status": "tested-without-power",
+      "evidence": "832 settings in each fold; every fully determined candidate fails the held-back phrase, and partial keys remain underdetermined.",
+      "logs": [
+        "open-target-attempt-2026-10-03.md"
+      ]
+    },
+    {
+      "family": "Reversal or rotation followed by affine substitution",
+      "status": "tested-without-power",
+      "evidence": "5,000 hypotheses in each fold returned no candidate and stopped at the check limit, so the space is not finished.",
+      "logs": [
+        "tractable-open-attempt-2026-10-03.md"
+      ]
+    },
+    {
+      "family": "Pure columnar transposition in complete rectangles",
+      "status": "excluded-by-constraint",
+      "evidence": "97 is prime, so no complete rectangle of width 2 to 32 exists; ragged rectangles are the family above.",
+      "logs": [
+        "open-target-attempt-2026-10-03.md"
+      ]
+    },
+    {
+      "family": "Condi with 20 guessed keywords",
+      "status": "excluded-by-constraint",
+      "evidence": "13,520 settings in each fold produced no candidate that fits the training clue.",
+      "logs": [
+        "open-target-attempt-2026-10-03.md"
+      ]
+    },
+    {
+      "family": "In-place ACA Gromark with digits 0 to 9, any keyword, and Myszkowski under KRYPTOS, PALIMPSEST or ABSCISSA on either side",
+      "status": "excluded-by-constraint",
+      "evidence": "Ciphertext letters F, K and P cannot share one alphabet index with both clues, for any keyword or primer; a control with both clues planted is not blocked.",
+      "logs": [
+        "k4-focus/innovative-swarm-2026-10-04.md"
+      ]
+    },
+    {
+      "family": "Quagmire I to IV with the three published keywords",
+      "status": "excluded-by-constraint",
+      "evidence": "11,310 settings decrypted; none places a clue.",
+      "logs": [
+        "k4-focus/innovative-swarm-2026-10-04.md"
+      ]
+    },
+    {
+      "family": "Porta, Playfair, two-square and periodic Gromark with the three published keywords",
+      "status": "excluded-by-constraint",
+      "evidence": "Porta and periodic Gromark place neither clue; Playfair and two-square cannot take an odd length without a pad the sculpture does not show.",
+      "logs": [
+        "k4-focus/keyword-panel-2026-10-04.md",
+        "k4-focus/innovative-swarm-2026-10-04.md"
+      ]
+    },
+    {
+      "family": "Running key from the K3 plaintext, and 2 by 2 Hill",
+      "status": "excluded-by-constraint",
+      "evidence": "240 K3 offsets place no clue; 2 by 2 Hill on either 96-letter window has no inverse row that fits the training clue, in both folds.",
+      "logs": [
+        "k4-focus/running-key-hill-2026-10-04.md"
+      ]
+    },
+    {
+      "family": "Keyed alphabets other than A to Z and KRYPTOS, under the layered models",
+      "status": "open",
+      "evidence": "The completed space used two alphabets only.",
+      "logs": [],
+      "priority": 1,
+      "next": "Add unknown Quagmire-style alphabets to the layered search with the optional symbolic engine, clue positions frozen before fitting and one clue held back."
+    },
+    {
+      "family": "Transpositions other than ragged columnar (routes, grilles, Myszkowski with other keys) combined with substitution",
+      "status": "open",
+      "evidence": "Only ragged columnar layouts and the three published keywords were composed with substitution.",
+      "logs": [],
+      "priority": 2,
+      "next": "Choose one transposition with a stated construction reason, cap the portfolio at 10,000 checks, and validate it on fresh synthetic keys before running K4."
+    },
+    {
+      "family": "Running keys from texts other than K3, and Hill matrices larger than 2 by 2",
+      "status": "open",
+      "evidence": "Only the K3 plaintext was tried as a running key; only 2 by 2 Hill was run.",
+      "logs": [],
+      "priority": 3,
+      "next": "Freeze a short list of sourced candidate key texts with hashes before any search, and run them with the same reciprocal folds."
+    }
+  ]
+}

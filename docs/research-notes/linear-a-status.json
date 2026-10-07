@@ -1,0 +1,75 @@
+{
+  "schema": "research-status-1",
+  "case": "linear-a",
+  "title": "Linear A",
+  "note": "linear-a-2026-10-03.md",
+  "kind": "script",
+  "unit": "questions",
+  "stage": "proposed",
+  "reviewed_through": "2026-10-03",
+  "plaintext_recovered_percent": 0,
+  "caveat": "These are questions about the material that can be measured before anyone proposes a reading. Answering all of them would not decipher the script; it would make a later claim testable. Nothing here is a reading, and no probability of decipherment is assigned.",
+  "lay": {
+    "tagline": "The writing of Minoan Crete, readable as sounds but not as a language.",
+    "summary": "Linear A was used on Minoan Crete from about 1800 to 1450 BC, mostly on clay tablets for keeping accounts. Many of its signs look like signs of the later Linear B, which was deciphered as Greek in 1952, so scholars can pronounce Linear A roughly. But the language behind it is unknown, so the words cannot be understood. We have not proposed a reading. The plan is to test which repeated sign sequences hold up across different find sites.",
+    "what_it_is": "More than a thousand short inscriptions survive, many only a few signs long. The SigLA database records each sign, its shape and where it was found.",
+    "what_we_found": "Nothing has been executed for Linear A in this project yet.",
+    "whats_next": "Take a versioned export of the database, check a sample of it by hand, and see whether patterns found at some sites predict inscriptions from a site held back.",
+    "faq": [
+      {
+        "q": "Can anyone read Linear A?",
+        "a": "Scholars can sound out many signs using Linear B values, but the language is unknown, so the texts are not understood."
+      },
+      {
+        "q": "Is Linear A Greek?",
+        "a": "There is no accepted evidence that it is. Linear B, which is Greek, is a solved comparison, not proof about Linear A."
+      }
+    ],
+    "background": "https://en.wikipedia.org/wiki/Linear_A"
+  },
+  "researcher": {
+    "summary": "SigLA (Salgarella and Castellan) sign occurrences with GORILA-derived inscription metadata. Planned: at most 300 documents from a versioned export with recorded reuse terms, 30 double-annotated, n-gram orders 1 to 3 with at most 2,000 document-length-preserving permutations, and one find-place reserved before feature selection.",
+    "methods": [
+      "Double annotation",
+      "Sign n-gram statistics",
+      "Document-length-preserving nulls",
+      "Held-out find-place prediction"
+    ]
+  },
+  "statuses": {
+    "closed-with-power": "Answered with a control: measured on a frozen corpus, with a solved or synthetic control showing the method works.",
+    "tested-without-power": "Measured without a control: a number exists, but no control shows what it would look like if the answer were different.",
+    "open": "Open: proposed here, not yet measured."
+  },
+  "labels": {
+    "closed-with-power": "Answered with a control",
+    "tested-without-power": "Measured without a control",
+    "open": "Open"
+  },
+  "families": [
+    {
+      "family": "Do repeated sign sequences recur at a held-out find site?",
+      "status": "open",
+      "evidence": "Not measured.",
+      "logs": [],
+      "priority": 1,
+      "next": "Reserve one find-place with enough documents, then test repeated-sequence predictions on it, separately for administrative and other supports."
+    },
+    {
+      "family": "Do graphic variants of a sign behave differently?",
+      "status": "open",
+      "evidence": "Not measured.",
+      "logs": [],
+      "priority": 2,
+      "next": "Compare canonical sign numbers with an inventory that keeps declared variants, and report where they disagree."
+    },
+    {
+      "family": "How often do two annotators agree on a sign?",
+      "status": "open",
+      "evidence": "Not measured.",
+      "logs": [],
+      "priority": 3,
+      "next": "Double-annotate 30 documents against the displayed occurrences and publish the disagreement count."
+    }
+  ]
+}

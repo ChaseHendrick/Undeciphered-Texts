@@ -1,0 +1,75 @@
+{
+  "schema": "research-status-1",
+  "case": "rongorongo",
+  "title": "Rongorongo",
+  "note": "rongorongo-2026-10-03.md",
+  "kind": "script",
+  "unit": "questions",
+  "stage": "proposed",
+  "reviewed_through": "2026-10-03",
+  "plaintext_recovered_percent": 0,
+  "caveat": "These are questions about the material that can be measured before anyone proposes a reading. Answering all of them would not decipher the script; it would make a later claim testable. Nothing here is a reading, and no probability of decipherment is assigned.",
+  "lay": {
+    "tagline": "Carved wooden tablets from Rapa Nui (Easter Island) that nobody can read.",
+    "summary": "Rongorongo is a script of small carved figures found on about two dozen wooden objects from Rapa Nui. Lines alternate direction, so the tablet is turned upside down at the end of each line. A 2024 study dated the wood of one tablet to before European contact, but the wood could have been carved later. We have not proposed a reading. The plan is first to keep originals, plaster casts and photos of the same object from being counted as separate texts.",
+    "what_it_is": "Surviving objects are scattered across museums. Some museum records are casts of other objects, which can inflate the apparent corpus.",
+    "what_we_found": "Nothing has been executed for Rongorongo in this project yet.",
+    "whats_next": "Build a ledger of every object with its museum number and whether it is an original or a cast, then look for repeated passages across originals only.",
+    "faq": [
+      {
+        "q": "Has rongorongo been deciphered?",
+        "a": "No. A calendar on one tablet is widely discussed, but the script as a whole is unread."
+      },
+      {
+        "q": "Does old wood prove the writing is old?",
+        "a": "No. Old wood shows when the tree grew; the carving could be later, as the 2024 study itself notes."
+      }
+    ],
+    "background": "https://en.wikipedia.org/wiki/Rongorongo"
+  },
+  "researcher": {
+    "summary": "Ferrara et al. 2024 (Scientific Reports, doi 10.1038/s41598-024-53063-7) for wood dates; British Museum records Oc1903,-.150 (original) and Oc1981,Q.1642 (plaster cast). Planned: an object ledger, two annotators on at most 200 sign occurrences of four originals, and repeated-sequence search (lengths 2 to 8, at most 10,000 pair comparisons) with one whole tablet reserved.",
+    "methods": [
+      "Object provenance ledger",
+      "Double annotation",
+      "Parallel-passage search",
+      "Line-length-preserving nulls"
+    ]
+  },
+  "statuses": {
+    "closed-with-power": "Answered with a control: measured on a frozen corpus, with a solved or synthetic control showing the method works.",
+    "tested-without-power": "Measured without a control: a number exists, but no control shows what it would look like if the answer were different.",
+    "open": "Open: proposed here, not yet measured."
+  },
+  "labels": {
+    "closed-with-power": "Answered with a control",
+    "tested-without-power": "Measured without a control",
+    "open": "Open"
+  },
+  "families": [
+    {
+      "family": "Which records are originals, casts or copies?",
+      "status": "open",
+      "evidence": "Two British Museum records checked: one original, one cast.",
+      "logs": [],
+      "priority": 1,
+      "next": "List every object with custodian ID, original or cast, sides and line starts, before counting signs."
+    },
+    {
+      "family": "Do repeated passages survive on a held-out original tablet?",
+      "status": "open",
+      "evidence": "Not measured.",
+      "logs": [],
+      "priority": 2,
+      "next": "Reserve one whole original, then search repeated sequences on the others against line-length-preserving shuffles."
+    },
+    {
+      "family": "How often do two annotators agree on a sign?",
+      "status": "open",
+      "evidence": "Not measured.",
+      "logs": [],
+      "priority": 3,
+      "next": "Two annotators align at most 200 occurrences without seeing a proposed translation; publish the disagreements."
+    }
+  ]
+}

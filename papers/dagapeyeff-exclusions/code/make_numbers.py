@@ -1,37 +1,66 @@
 """Write every number and table the manuscript prints from the frozen search results.
 
-    python3 papers/dagapeyeff-exclusions/code/make_numbers.py          # rewrite paper/numbers.tex and tab_*.tex
-    python3 papers/dagapeyeff-exclusions/code/make_numbers.py --check  # fail if they are stale
+    python3 code/make_numbers.py          # rewrite paper/numbers.tex, paper/tab_*.tex and the README abstract
+    python3 code/make_numbers.py --check  # fail if any of them is stale
 
-The inputs are the JSON files in engine/data/swarm_cache, each the frozen output of one probe in engine/.
-Nothing here searches; it only reads and formats. No letter string from any search is read or written.
+The inputs are the frozen outputs of the probes: JSON files, three held-out texts whose letters are
+counted, and the cells. In the companion repository they sit in data/. In the development repository,
+ChaseHendrick/Undeciphered-Texts, they are read from engine/data/ and the cells from the engine, and
+companion_data() gives the files the companion carries. Nothing here searches; it only reads and formats.
+No letter string from any search is read or written.
 """
 
 from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
-CACHE = ROOT / "engine" / "data" / "swarm_cache"
-DATA = ROOT / "engine" / "data"
-PAPER = Path(__file__).resolve().parents[1] / "paper"
+HERE = Path(__file__).resolve().parents[1]
+PAPER = HERE / "paper"
+README = HERE / "README.md"
+COMPANION = (HERE / "data" / "swarm_cache").is_dir()
+if COMPANION:
+    CACHE = HERE / "data" / "swarm_cache"
+    DATA = HERE / "data" / "texts"
+else:
+    ROOT = HERE.parents[1]
+    CACHE = ROOT / "engine" / "data" / "swarm_cache"
+    DATA = ROOT / "engine" / "data"
 
 INPUTS = (
     "corpus", "columnar", "columnar14c", "exhaustive", "exhaustive10", "double", "keywords",
     "foursquare", "pairmap", "grillec", "quick", "homophone", "additive", "direction",
     "errors", "italian", "screen", "latin", "fskeyed", "latin14", "tongues", "romanian-wide",
     "keyedsquares", "nomessage", "latinmore", "latinshift",
+    "alllanguages", "russian", "esperanto", "latinlib", "latinlibrary", "latinw", "shiftgap",
+    "reseed",
 )
+HELD = ("neural_train_austen", "neural_heldout_doyle", "neural_audit_wells")
 
 
 def _cells_list() -> list[int]:
+    if COMPANION:
+        return json.loads((HERE / "data" / "cells.json").read_text(encoding="utf-8"))["cells"]
     sys.path.insert(0, str(ROOT))
     from engine.dagapeyeff_add import _cells
 
     return _cells()
+
+
+def companion_data() -> dict[str, bytes]:
+    """The inputs, by their path in the companion repository. Development repository only."""
+    if COMPANION:
+        raise SystemExit("companion_data() reads the development repository")
+    out = {f"data/swarm_cache/dagapeyeff-{name}.json": (CACHE / f"dagapeyeff-{name}.json").read_bytes() for name in INPUTS}
+    out.update({f"data/texts/{name}.txt": (DATA / f"{name}.txt").read_bytes() for name in HELD})
+    out["data/texts/neural_audit_wells_source.json"] = (DATA / "neural_audit_wells_source.json").read_bytes()
+    cells = {"source": "English Wikipedia, D'Agapeyeff cipher, fetched 2 October 2026; final 000 dropped",
+             "coding": "x = 5r + c, rows 6,7,8,9,0 and columns 1,2,3,4,5", "cells": _cells_list()}
+    out["data/cells.json"] = (json.dumps(cells) + "\n").encode("utf-8")
+    return out
 
 
 def load(name: str) -> dict:
@@ -67,7 +96,7 @@ def macros() -> dict[str, str]:
     out["cellsChi"] = p(corpus["cell_chi_square"])
 
     held = {name: len("".join(ch for ch in (DATA / f"{name}.txt").read_text(encoding="utf-8").upper() if "A" <= ch <= "Z"))
-            for name in ("neural_train_austen", "neural_heldout_doyle", "neural_audit_wells")}
+            for name in HELD}
     out["heldAusten"] = n(held["neural_train_austen"])
     out["heldDoyle"] = n(held["neural_heldout_doyle"])
     out["heldWells"] = n(held["neural_audit_wells"])
@@ -345,18 +374,115 @@ def macros() -> dict[str, str]:
     out["lsBest"] = d(ls["searched_best"]["per_letter"])
     out["lsAbove"] = str(ls["cases_cells_above_all_shuffles"])
     out["lsCases"] = str(len(ls["searched"]))
+    # Draft 2: every language, more Latin, and Latin at widths 10 to 15.
+    al = load("alllanguages")
+    rows = al["languages"]
+    out["allLanguages"] = str(len(rows))
+    out["allListed"] = str(len(rows) + len(al["skipped"]))
+    out["allSkippedScript"] = str(sum(1 for s in al["skipped"] if s["reason"].startswith("script")))
+    out["allSkippedEmpty"] = str(sum(1 for s in al["skipped"] if s["reason"].startswith("no sentence")))
+    rs = {row["probe"]: row for row in load("reseed")["rows"]}
+    for key, name in (("Fs", "foursquare"), ("Add", "additive")):
+        second = rs[name]["second"]
+        out[f"rs{key}Recovered"] = str(second["recovered"])
+        out[f"rs{key}Planted"] = str(second["planted"])
+        out[f"rs{key}Best"] = d(second["searched_best"])
+        out[f"rs{key}Gap"] = p(second["gap"])
+        out[f"rs{key}AsHigh"] = str(second["shuffles_as_high"])
+        out[f"rs{key}Shuffles"] = str(second["shuffles"])
+    short = [s for s in al["skipped"] if s["reason"].endswith(" letters")]
+    out["allSkippedShort"] = str(len(short))
+    out["allSkippedShortMost"] = n(max(int(s["reason"].split()[0]) for s in short))
+    if any(not s["reason"].startswith(("script", "no sentence")) and not s["reason"].endswith(" letters") for s in al["skipped"]):
+        raise SystemExit("alllanguages: a skipped treebank has a reason the manuscript does not state")
+    latin = rows["Latin-ITTB"]
+    others = {k: v for k, v in rows.items() if k != "Latin-ITTB"}
+    out["allLatinMedian"] = p(latin["median_errors"], 0)
+    out["allOthersMedianLow"] = p(min(v["median_errors"] for v in others.values()), 0)
+    out["allLatinRate"] = n(round(latin["within_8_per_million_windows"]))
+    second = max(others, key=lambda k: others[k]["within_8_per_million_windows"])
+    out["allSecondRate"] = n(round(others[second]["within_8_per_million_windows"]))
+    out["allSecondRateName"] = second.split("-")[0].replace("_", " ")
+    out["allSecondRateLetters"] = n(others[second]["letters"])
+    big = {k: v for k, v in others.items() if v["letters"] >= 1_000_000}
+    out["allBigRateHigh"] = n(round(max(v["within_8_per_million_windows"] for v in big.values())))
+    out["allEstonianFewest"] = str(rows["Estonian-EDT"]["fewest_errors"])
+    out["allEstonianMedian"] = p(rows["Estonian-EDT"]["median_errors"], 0)
+    ru = load("russian")
+    out["ruFewest"] = str(ru["fewest_errors"])
+    out["ruWithin"] = str(ru["windows_within_8"])
+    out["ruRows"] = str(len(ru["rows"]))
+    eo = load("esperanto")
+    out["eoFewest"] = str(eo["esperanto"]["fewest_errors"])
+    out["eoMedian"] = p(eo["esperanto"]["median_errors"], 0)
+    out["eoLetters"] = n(eo["esperanto"]["letters"])
+    lib = load("latinlib")
+    ll = load("latinlibrary")
+    out["libLetters"] = n(lib["letters"])
+    out["libSources"] = str(len(lib["sources"]))
+    out["libFewest"] = str(lib["fewest_errors"])
+    out["llLetters"] = n(ll["letters"])
+    out["llPages"] = n(ll["pages_screened"])
+    out["llFewest"] = str(ll["fewest_errors"])
+    out["llWithinFour"] = str(ll["within_4"])
+    out["latinLettersAll"] = p((lib["letters"] + ll["letters"]) / 1e6, 1)
+    out["latinWithinTwo"] = str(lib["within_2"] + ll["within_2"])
+    lw = load("latinw")
+    out["lwRecovered"] = str(lw["planted_recovered"])
+    out["lwPlanted"] = str(lw["planted"])
+    out["lwCellsLow"] = d(min(r["cells"]["per_letter"] for r in lw["rows"]), 2)
+    out["lwCellsHigh"] = d(max(r["cells"]["per_letter"] for r in lw["rows"]), 2)
+    out["lwWeakestFound"] = d(min(pl["found_per_letter"] for r in lw["rows"] for pl in r["planted"] if pl["cells_right"] >= 0.9), 2)
+    out["lwAsHighLow"] = str(min(r["cells"]["shuffles_as_high"] for r in lw["rows"]))
+    # Review 2: gaps between the cells and the weakest planted text found, and counts against chance.
+    la = load("latin")
+    out["gapLatin"] = p(min(pl["found_per_letter"] for pl in la["planted"]) - la["searched"]["cells"]["best"], 2)
+    tg = load("tongues")["languages"]
+    out["gapRomanian"] = p(min(pl["found_per_letter"] for pl in tg["Romanian-RRT"]["planted"]) - tg["Romanian-RRT"]["searched"]["cells"]["best"], 2)
+    out["gapCatalan"] = p(min(pl["found_per_letter"] for pl in tg["Catalan-AnCora"]["planted"]) - tg["Catalan-AnCora"]["searched"]["cells"]["best"], 2)
+    h = load("homophone")
+    out["gapHom"] = p(min(pl["found_per_letter"] for pl in h["planted"]) - max(r["per_letter"] for r in h["searched"].values()), 2)
+    out["roRegroupedFirst"] = d(tg["Romanian-RRT"]["searched"]["regrouped"]["best"])
+    out["roRegroupedFirstHigh"] = str(tg["Romanian-RRT"]["searched"]["regrouped"]["shuffle_bests_as_high"])
+    wide = load("romanian-wide")
+    out["roRegroupedRerun"] = d(wide["searched"]["regrouped"]["best"])
+    out["roRegroupedRerunAbove"] = str(sum(s > tg["Romanian-RRT"]["searched"]["regrouped"]["best"] for s in wide["searched"]["regrouped"]["shuffle_bests_high"]))
+    ex = load("exhaustive")["rows"]
+    out["exAboveAll"] = str(sum(r["cells"]["shuffles_as_high"] == 0 for r in ex))
+    out["exCasesAll"] = str(len(ex))
+    from math import comb
+    k, m = sum(r["cells"]["shuffles_as_high"] == 0 for r in ex), len(ex)
+    out["exAboveP"] = p(sum(comb(m, j) * 0.25 ** j * 0.75 ** (m - j) for j in range(k, m + 1)), 3)
+    out["exAboveChance"] = str(round(m / 4))
+    sg = load("shiftgap")
+    for lang, tag in (("english", "En"), ("latin", "La")):
+        x = sg[lang]
+        out[f"sg{tag}Draws"] = n(sum(r["draws"] for r in x["counts"]))
+        out[f"sg{tag}Fewest"] = str(min(r["fewest_distinct"] for r in x["counts"]))
+        out[f"sg{tag}Reaching"] = str(sum(r["reaching_cells"] for r in x["counts"]))
+        out[f"sg{tag}Recovered"] = str(x["planted_recovered"])
+        out[f"sg{tag}Planted"] = str(len(x["planted"]))
+        out[f"sg{tag}Best"] = d(x["searched_best"]["per_letter"])
+        out[f"sg{tag}Above"] = str(x["cases_cells_above_all_shuffles"])
+        out[f"sg{tag}Cases"] = str(len(x["searched"]))
+        out[f"sg{tag}Chance"] = str(round(len(x["searched"]) / 4))
+    nm = load("nomessage")
+    out["nmCellNull"] = n(20_000)
+    out["nmPlantNull"] = n(2_000)
     return out
 
 
 def screen_table() -> str:
-    sc = load("screen")
+    sc = load("alllanguages")
     lines = ["\\begin{tabular}{@{}lrrrr@{}}", "\\toprule",
-             "Treebank & Letters & Fewest & Median & Within 8 \\\\", "\\midrule"]
+             "Treebank & Letters & Fewest & Median & Within 8 per million \\\\", "\\midrule"]
     for name in sc["ranked"][:12]:
         row = sc["languages"][name]
         label = name.replace("_", " ").replace("-", " (", 1) + ")"
+        if row["script"] != "latin":
+            label += ", romanized"
         lines.append(f"{label} & {n(row['letters'])} & {row['fewest_errors']} & {row['median_errors']:.0f} & "
-                     f"{n(row['within_8'])} \\\\")
+                     f"{n(round(row['within_8_per_million_windows']))} \\\\")
     lines += ["\\bottomrule", "\\end{tabular}"]
     return "\n".join(lines) + "\n"
 
@@ -388,9 +514,14 @@ def power_table() -> str:
         d(best["per_letter"], 2), f"{best['shuffles_as_high']}/{len(best['shuffles'])}")
     a = load("additive")
     best = max(a["searched"].values(), key=lambda r: r["per_letter"])
-    row("Repeating shift, periods 2--14", f"{a['planted_recovered']}/{len(a['planted'])}",
+    row("Repeating shift, periods 2--5, 7, 14", f"{a['planted_recovered']}/{len(a['planted'])}",
         d(a["planted_lowest_true"], 2), d(best["per_letter"], 2),
         f"{best['shuffles_as_high']}/{len(best['shuffles'])}")
+    sg = load("shiftgap")
+    for lang, label in (("english", "Repeating shift, periods 6, 8--13"),):
+        x = sg[lang]
+        row(label, f"{x['planted_recovered']}/{len(x['planted'])}", d(min(r["true_per_letter"] for r in x["planted"]), 2),
+            d(x["searched_best"]["per_letter"], 2), f"{x['searched_best']['shuffles_as_high']}/{len(x['searched_best']['shuffles'])}")
     q = load("quick")
     row("Nulls by place; reversed; column digits", f"{q['planted_recovered']}/{len(q['planted'])}",
         d(q["planted_lowest_true"], 2), d(q["searched_best"]["per_letter"], 2),
@@ -421,10 +552,19 @@ def power_table() -> str:
     row("Latin, columnar width 14 (0 and 8 wrong cells)", f"{l14['planted_recovered']}/{len(l14['planted'])}",
         d(min(r["found_per_letter"] for r in l14["planted"]), 2), d(best["per_letter"], 2),
         f"{best['shuffles_as_high']}/{len(best['shuffles'])}")
+    lw = load("latinw")
+    best = max((r["cells"] for r in lw["rows"]), key=lambda c: c["per_letter"])
+    row("Latin, columnar widths 10--13, 15 (0 and 8 wrong cells)", f"{lw['planted_recovered']}/{lw['planted']}",
+        d(min(pl["found_per_letter"] for r in lw["rows"] for pl in r["planted"] if pl["cells_right"] >= 0.9), 2),
+        d(best["per_letter"], 2), f"{best['shuffles_as_high']}/{len(best['shuffles'])}")
     ls = load("latinshift")
-    row("Latin, repeating shift, periods 2--14", f"{ls['planted_recovered']}/{len(ls['planted'])}",
+    row("Latin, repeating shift, periods 2--5, 7, 14", f"{ls['planted_recovered']}/{len(ls['planted'])}",
         d(min(r["true_per_letter"] for r in ls["planted"]), 2), d(ls["searched_best"]["per_letter"], 2),
         f"{ls['searched_best']['shuffles_as_high']}/{len(ls['searched_best']['shuffles'])}")
+    x = sg["latin"]
+    row("Latin, repeating shift, periods 6, 8--13", f"{x['planted_recovered']}/{len(x['planted'])}",
+        d(min(r["true_per_letter"] for r in x["planted"]), 2), d(x["searched_best"]["per_letter"], 2),
+        f"{x['searched_best']['shuffles_as_high']}/{len(x['searched_best']['shuffles'])}")
     wide = load("romanian-wide")
     tg = load("tongues")["languages"]
     for lang, label in (("Catalan-AnCora", "Catalan"), ("Romanian-RRT", "Romanian")):
@@ -441,9 +581,36 @@ def power_table() -> str:
     return head + "\n" + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n"
 
 
+def power_gaps() -> dict[str, float]:
+    """Weakest planted score minus the cells' best, for each row of the power table."""
+    import re
+
+    gaps = {}
+    for line in power_table().splitlines():
+        found = re.findall(r"\\ensuremath\{(-?[0-9.]+)\}", line)
+        if len(found) >= 2:
+            gaps[line.split("&")[0].strip()] = float(found[0]) - float(found[1])
+    return gaps
+
+
+def gap_macros() -> dict[str, str]:
+    gaps = power_gaps()
+    latin = [v for k, v in gaps.items() if k.startswith("Latin")]
+    english = [v for k, v in gaps.items() if not k.startswith(("Latin", "Romanian", "Catalan", "Italian"))
+               and not k.startswith("Homophonic")]
+    return {
+        "gapLatinLow": p(min(latin)), "gapLatinHigh": p(max(latin)),
+        "gapRomanianTab": p(next(v for k, v in gaps.items() if k.startswith("Romanian"))),
+        "gapHomTab": p(next(v for k, v in gaps.items() if k.startswith("Homophonic"))),
+        "gapEnglishLow": p(min(english)),
+        "gapUnderOne": str(sum(v < 1 for v in gaps.values())),
+        "gapRows": str(len(gaps)),
+    }
+
+
 def render() -> dict[str, str]:
-    values = macros()
-    lines = ["% Written by ../code/make_numbers.py from engine/data/swarm_cache. Do not edit by hand."]
+    values = macros() | gap_macros()
+    lines = ["% Written by ../code/make_numbers.py from the frozen search results. Do not edit by hand."]
     for name in INPUTS:
         digest = hashlib.sha256((CACHE / f"dagapeyeff-{name}.json").read_bytes()).hexdigest()
         lines.append(f"% dagapeyeff-{name}.json sha256 {digest}")
@@ -456,10 +623,43 @@ def render() -> dict[str, str]:
     }
 
 
+_TEX = (
+    (r"\\ensuremath\{([^{}]*)\}", r"\1"),
+    (r"\\emph\{([^{}]*)\}", r"\1"),
+    (r"\$5 \\times 5\$", "5 by 5"),
+    (r"\$14 \\times 14\$", "14 by 14"),
+    (r"\{,\}", ","),
+    (r"~", " "),
+)
+
+
+def abstract_text(values: dict[str, str]) -> str:
+    """The abstract as plain text, numbers filled in, for the README and so for the Zenodo description."""
+    text = (PAPER / "abstract.tex").read_text(encoding="utf-8").strip()
+    text = re.sub(r"\\([A-Za-z]+)\{\}", lambda m: values[m.group(1)] if m.group(1) in values else m.group(0), text)
+    for pattern, replacement in _TEX:
+        text = re.sub(pattern, replacement, text)
+    left = re.findall(r"\\[A-Za-z]+|\$|[{}]", text)
+    if left:
+        raise SystemExit("abstract.tex keeps TeX with no plain-text form: " + " ".join(sorted(set(left))))
+    return re.sub(r"\s+", " ", text)
+
+
+def readme(values: dict[str, str]) -> str:
+    """README.md with its "## Abstract" section written from abstract.tex."""
+    text = README.read_text(encoding="utf-8")
+    match = re.search(r"^## Abstract\n\n(.*?)\n\n(?=## )", text, flags=re.S | re.M)
+    if not match:
+        raise SystemExit("README.md needs an \"## Abstract\" section followed by another section")
+    return text[:match.start(1)] + abstract_text(values) + text[match.end(1):]
+
+
 def main() -> int:
     stale = []
-    for name, text in render().items():
-        path = PAPER / name
+    files = {PAPER / name: text for name, text in render().items()}
+    files[README] = readme(macros() | gap_macros())
+    for path, text in files.items():
+        name = path.name
         if path.exists() and path.read_text(encoding="utf-8") == text:
             continue
         if "--check" in sys.argv:

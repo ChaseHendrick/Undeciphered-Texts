@@ -4,6 +4,18 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 7 October 2026: companion repository, Zenodo publishing, third reading, second seed
+
+Work was on branch `claude/dagapeyeff-paper-zenodo-setup-alx0sm` (PR #12), which started from PR #11's draft 2. The cache holds 128 files after `dagapeyeff-reseed`; the checks count, the provenance chain and the board line were updated, and `tools/refresh_docs.py` was run.
+
+Publishing now follows GENChase. `papers/papers.json` registers the paper with its companion, `ChaseHendrick/dagapeyeff` (empty until the first publish; Zenodo's GitHub integration is switched on for it). `tools/paper_sync.py` stages the companion: the paper folder without `notes/`, the frozen inputs under `data/` from `make_numbers.companion_data()`, and a LICENSE, CITATION.cff and .zenodo.json in GENChase's shape. `--check` also runs `make_numbers.py --check` inside the staged copy. `tools/paper-publish.sh`, `paper-pull.sh` and the archive and Zenodo tools are GENChase's; the publisher gained a `github-import` mode. `.github/workflows/papers.yml` publishes on merge once the `PAPERS_TOKEN` secret exists and status is `ready`; a release is a manual run with the version and archive mode. `docs/PUBLISHING-PAPERS.md` is the runbook. The owner has not yet added the secret, and nothing has been pushed to `dagapeyeff`.
+
+Paper: a third reading (`notes/review-3.md`, 10 findings, all fixed). U4 and U6 are closed. U2 is open: four-square and the English shift at periods 2 to 14 were rerun under a second seed and agree (`docs/logs/dagapeyeff-reseed-2026-10-07.md`); `shiftgap`, `latin14`, `latinw`, `latinmore` and `latinshift` are listed in `PENDING` in `engine/dagapeyeff_reseed.py`, about two and a half hours in all, `latinw` most of it. Run each with `_second()` (results land in the ignored `work/reseed/`), move it to `PROBES`, delete `dagapeyeff-reseed.json`, refreeze, and update the counts, chain, macros and the "A second seed" paragraph. Then set the status to `ready`, write `RELEASES.md` under `## 1.0.0`, and the owner runs **publish papers**.
+
+The owner asked to focus on Latin with short searches, not English. `engine.dagapeyeff_latinsmall` (Latin joint search at widths 2 to 9, both directions, 4 restarts of 4,000,000 steps, 3 planted texts and 5 shuffles each) is written and not run; a scratch check recovered planted Latin at widths 3 and 8 with every cell right in about 10 seconds a search, so the full run is about 15 minutes. Run it, then add a test, a ledger entry and a log. The English widths 10 to 15 (`engine.dagapeyeff_columnarw`) were dropped at the owner's request.
+
+Do not describe any of this as a decipherment.
+
 ## Session 6 October 2026, last: no-message test, mixing counts, homophonic grouping, paper review
 
 Work is on branch `claude/gallant-brown-aexxsu` (PR #9). The cache holds 120 files after `dagapeyeff-homgroup`; the board page, checks count and provenance chain were regenerated with the scratch helper but the full test suite was not rerun before the session ended. Run `python -m unittest discover -s tests -p 'test_dagapeyeff_*.py'` first and fix any hash or count mismatch.

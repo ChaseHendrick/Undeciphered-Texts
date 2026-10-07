@@ -8,6 +8,7 @@ import unittest
 from tools.refresh_docs import ROOT, STATUS, ledger, render, status_summary, tally
 
 _STATUSES = {"closed-with-power", "excluded-by-count", "tested-without-power", "open"}
+
 _LOGS = ROOT / "docs" / "logs"
 
 
@@ -19,7 +20,8 @@ def _date(name: str) -> str:
 class DagapeyeffStatusTest(unittest.TestCase):
     def test_every_family_is_well_formed_and_cites_a_real_log(self) -> None:
         data = ledger()
-        self.assertEqual(data["schema"], "dagapeyeff-status-1")
+        self.assertEqual(data["schema"], "research-status-1")
+        self.assertEqual(data["case"], "dagapeyeff")
         self.assertEqual(data["plaintext_recovered_percent"], 0)
         self.assertEqual(set(data["statuses"]), _STATUSES)
         priorities = []

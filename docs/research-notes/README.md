@@ -7,14 +7,14 @@ The case table is generated. `tools/refresh_docs.py` rewrites it from the `index
 <!-- case-index:start -->
 | Case | Problem represented here | Data entry point | Next measurable task |
 | --- | --- | --- | --- |
-| [Kryptos K4](kryptos-k4-2026-10-03.md) | Public cryptanalytic method not established by the checked sources; private archival knowledge documented | Sculpture transcription and disclosed clue coordinates | Separate fitted clues from reserved evidence |
-| [Voynich manuscript](voynich-2026-10-03.md) | Unidentified script; encipherment uncertain | Yale MS 408 images and versioned transliterations | Measure sensitivity to transcription and segmentation |
-| [Linear A](linear-a-2026-10-03.md) | Undeciphered language with conventional partial sign readings | SigLA sign occurrences and inscription metadata | Compare repeated sequences across held-out sites |
-| [Indus signs](indus-2026-10-03.md) | Unresolved sign system and language | Authored studies and named concordances | Test sign prediction without duplicate-artifact leakage |
-| [Rongorongo](rongorongo-2026-10-03.md) | Undeciphered script with material and reading uncertainties | Museum object records and authored tablet study | Separate originals, casts and line orientations |
-| [Phaistos disc](phaistos-disc-2026-10-03.md) | Undeciphered inscription on one object | Heraklion Museum object description | Reconcile sign inventories before language fitting |
-| [Zodiac Z13 and Z32](zodiac-short-ciphers-2026-10-03.md) | Short cryptograms with many compatible readings | FBI documents and the Z340 solvers' account | Measure ambiguity; reproduce Z340 separately as a control |
-| [Dorabella](dorabella-2026-10-03.md) | Short historical cipher with ambiguous glyph orientations | Authored experimental paper and its facsimile | Compare transcription variants with matched synthetic controls |
+| [Kryptos K4](kryptos-k4-2026-10-03.md) | Public cryptanalytic method not established by the checked sources; private archival knowledge documented | Sculpture transcription and disclosed clue coordinates | Add unknown Quagmire-style alphabets to the layered search with the optional symbolic engine, clue positions frozen before fitting and one clue held back |
+| [Voynich manuscript](voynich-2026-10-03.md) | Unidentified script; encipherment uncertain | Yale MS 408 images and versioned transliterations | Freeze ZL 3b and a second independent transliteration with hashes, align shared loci, and publish the disagreement table |
+| [Linear A](linear-a-2026-10-03.md) | Undeciphered language with conventional partial sign readings | SigLA sign occurrences and inscription metadata | Reserve one find-place with enough documents, then test repeated-sequence predictions on it, separately for administrative and other supports |
+| [Indus signs](indus-2026-10-03.md) | Unresolved sign system and language | Authored studies and named concordances | Group duplicates, reserve 20 percent of groups, and compare n-gram prediction with unigram and position baselines |
+| [Rongorongo](rongorongo-2026-10-03.md) | Undeciphered script with material and reading uncertainties | Museum object records and authored tablet study | List every object with custodian ID, original or cast, sides and line starts, before counting signs |
+| [Phaistos disc](phaistos-disc-2026-10-03.md) | Undeciphered inscription on one object | Heraklion Museum object description | Reconcile two independent annotations location by location against the museum count and keep every discrepancy |
+| [Zodiac Z13 and Z32](zodiac-short-ciphers-2026-10-03.md) | Short cryptograms with many compatible readings | FBI documents and the Z340 solvers' account | Replay the published Z340 substitution and transposition, with its documented irregularities, against every symbol |
+| [Dorabella](dorabella-2026-10-03.md) | Short historical cipher with ambiguous glyph orientations | Authored experimental paper and its facsimile | Two annotators mark orientations independently from permitted images, before seeing any candidate text; freeze at most four inventories |
 | [D'Agapeyeff challenge](dagapeyeff-2026-10-05.md) | 1939 digit challenge with no public reading; measured structure is not a plaintext | Wikipedia digit block used by the engine, plus the solved exercise as the control | Search Catalan, Romanian and Latin under a 14-column key and under keyed four-square once a method with power exists; screen further languages |
 <!-- case-index:end -->
 

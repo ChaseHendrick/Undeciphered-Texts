@@ -1,0 +1,69 @@
+{
+  "schema": "research-status-1",
+  "case": "zodiac",
+  "title": "Zodiac Z13 and Z32",
+  "note": "zodiac-short-ciphers-2026-10-03.md",
+  "kind": "cipher",
+  "unit": "hypothesis families",
+  "stage": "proposed",
+  "reviewed_through": "2026-10-03",
+  "plaintext_recovered_percent": 0,
+  "caveat": "These ciphers are so short that many different readings fit the same symbols. Progress means measuring that ambiguity honestly, not picking a favorite reading. Nothing here names or accuses anyone.",
+  "lay": {
+    "tagline": "Two short ciphers from the Zodiac letters that are still unread.",
+    "summary": "The Zodiac killer sent several ciphers to newspapers in 1969 and 1970. The long 340-symbol cipher was solved in 2020 and confirmed by the FBI. Two short ones, of 13 and 32 symbols, remain unread. They are too short to have a unique answer under simple substitution, so many readings fit. We have not run these yet; the plan is to measure how many readings fit rather than to pick one.",
+    "what_it_is": "Z13 is 13 symbols, sent with the claim that it contained the writer's name. Z32 is 32 symbols, sent with a map. With so few symbols, almost any short phrase with the right pattern of repeats can be made to fit.",
+    "what_we_found": "Nothing has been executed for these ciphers in this project. The solved Z340 is kept separate, as a control to reproduce, not a target.",
+    "whats_next": "First reproduce the published Z340 solution exactly, as a check of the tools. Then, for Z13 and Z32, count how many readings from a fixed word list fit each one, and publish several, not one.",
+    "faq": [
+      {
+        "q": "Has Z13 been solved?",
+        "a": "No unique reading is established. Many names and phrases fit 13 symbols, so a fit alone proves nothing."
+      },
+      {
+        "q": "Was the Zodiac 340 cipher solved?",
+        "a": "Yes. Oranchak, Blake and Van Eycke solved Z340 in December 2020, and the FBI confirmed it."
+      }
+    ],
+    "background": "https://en.wikipedia.org/wiki/Zodiac_Killer"
+  },
+  "researcher": {
+    "summary": "Status follows the Z340 solvers' account (Oranchak, Blake, Van Eycke, arXiv 2403.17350, sections 5.5 and 8.2): Z13 and Z32 unresolved, with many compatible readings under simple substitution. Planned: exact Z340 replay as a solved control, then bounded pattern-compatible enumeration (at most 10,000 checks, 20 stored witnesses) over a hashed lexicon.",
+    "methods": [
+      "Solved-control replay",
+      "Word-pattern constraint enumeration",
+      "Ambiguity counting"
+    ]
+  },
+  "statuses": {
+    "closed-with-power": "Closed with shown power: the search recovers planted texts of this kind, and the target scores like shuffled text.",
+    "tested-without-power": "Tested, not closed: the search ran, but some hypotheses stay underdetermined, the budget ran out, or matched-length controls did not come back.",
+    "open": "Open: not searched here, or not searched with a method shown to work."
+  },
+  "families": [
+    {
+      "family": "Z340 reproduced as a solved control",
+      "status": "open",
+      "evidence": "Not yet reproduced here.",
+      "logs": [],
+      "priority": 1,
+      "next": "Replay the published Z340 substitution and transposition, with its documented irregularities, against every symbol."
+    },
+    {
+      "family": "Z13 under simple substitution",
+      "status": "open",
+      "evidence": "The source reports many compatible readings; not counted here.",
+      "logs": [],
+      "priority": 2,
+      "next": "Freeze a sourced lexicon with its hash, cap pattern checks at 10,000, and report the total number of compatible readings with several examples."
+    },
+    {
+      "family": "Z32 under simple substitution, with or without the map as a constraint",
+      "status": "open",
+      "evidence": "32 symbols with many distinct ones; not counted here.",
+      "logs": [],
+      "priority": 3,
+      "next": "Run the same count, declaring any map-derived constraint and its uncertainty before ranking."
+    }
+  ]
+}
