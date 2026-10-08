@@ -1,0 +1,53 @@
+{
+ "solved": false,
+ "claimed_plaintext": null,
+ "private_symbols": [
+  5,
+  16,
+  17,
+  18,
+  23
+ ],
+ "private_cells": 8,
+ "last_column_private": 8,
+ "symbols": 18,
+ "symbols_without_private": 13,
+ "cells_without_private": 188,
+ "padding_test": {
+  "Latin, Aquinas (ITTB, first 600,000 letters)": {
+   "windows": 85688,
+   "fewest": 14,
+   "median": 18,
+   "at_most_13": 0
+  },
+  "Latin, classical (Perseus)": {
+   "windows": 20060,
+   "fewest": 16,
+   "median": 20,
+   "at_most_13": 0
+  },
+  "English (held-out)": {
+   "windows": 5172,
+   "fewest": 19,
+   "median": 22,
+   "at_most_13": 0
+  }
+ },
+ "rare_letter_test": {
+  "Latin, Aquinas (ITTB, first 600,000 letters)": {
+   "windows": 6184,
+   "five_or_more_rare": 2623,
+   "rare_in_one_14_stretch": 0
+  },
+  "Latin, classical (Perseus)": {
+   "windows": 1448,
+   "five_or_more_rare": 958,
+   "rare_in_one_14_stretch": 0
+  },
+  "English (held-out)": {
+   "windows": 374,
+   "five_or_more_rare": 267,
+   "rare_in_one_14_stretch": 0
+  }
+ }
+}

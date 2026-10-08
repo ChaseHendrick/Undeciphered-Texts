@@ -26,7 +26,13 @@ The paper's numbers are written by `code/make_numbers.py` from frozen results in
 `python3 code/make_numbers.py --check` works in the companion without this repository. The search programs
 stay here; each release's notes name the commit of this repository it was published from.
 
-Its companion is `ChaseHendrick/dagapeyeff`, with Zenodo's GitHub integration switched on.
+Its companion is `ChaseHendrick/dagapeyeff`, with Zenodo's GitHub integration switched on. The companion holds
+only what this repository publishes; research, scratch searches included, belongs here. Before the first
+publish a session had pushed Latin scratch work there as `claude/inspiring-gates-hzi15a`, which became its
+default branch. That work is now in this repository (`docs/logs/dagapeyeff-companion-scratch-2026-10-07.md`),
+and the publisher no longer follows the companion's default branch: the record is always `main`, made from the
+published tree alone on the first run, and every run makes `main` the default branch. The two `claude/` branches
+of the companion can then be deleted on GitHub.
 
 ## Setup, once
 
@@ -34,6 +40,9 @@ Its companion is `ChaseHendrick/dagapeyeff`, with Zenodo's GitHub integration sw
    token with Contents and Administration read and write on the companion repositories. GENChase's token
    works if it covers all repositories. Until the secret exists the workflow does nothing.
 2. On zenodo.org, under GitHub, switch the companion on (done for `dagapeyeff`).
+
+As of 7 October 2026 the secret is still missing: every run of **publish papers** so far ended with "The
+PAPERS_TOKEN secret is not set". Nothing reaches the companion until it is added.
 
 ## Each release
 
@@ -51,4 +60,5 @@ Its companion is `ChaseHendrick/dagapeyeff`, with Zenodo's GitHub integration sw
 4. When Zenodo shows the version, set `codeDoi` and `archiveVersion` in the registry (and `archiveFilename`
    and `archiveManuscript` for a branded deposit), put the DOI in the README's first lines and the
    manuscript's data availability paragraph, rebuild, and merge. `paper-archives.yml` then downloads the
-   archive and compares its PDF with the repository's.
+   archive and compares its PDF with the repository's. hendrickresearch.com lists the paper within six hours of that merge:
+   its paper sync reads this repository's `papers/papers.json` as well as GENChase's.

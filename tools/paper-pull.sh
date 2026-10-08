@@ -5,7 +5,7 @@
 #
 #   sh tools/paper-pull.sh dagapeyeff-exclusions
 #
-# Every file on the companion's default branch is copied into papers/<id>/, except LICENSE,
+# Every file on the companion's main branch, the record, is copied into papers/<id>/, except LICENSE,
 # CITATION.cff and .zenodo.json, which the workflow writes from papers/papers.json, and data/, which
 # it copies from engine/data. notes/ and
 # submission/ are never touched. A file that exists here but no longer in the companion is listed,
@@ -18,7 +18,7 @@ repo=$(python3 "$ROOT/tools/paper_sync.py" --companion "$ID")
 DEST="$ROOT/papers/$ID"
 [ -d "$DEST" ] || { echo "No folder papers/$ID"; exit 2; }
 tmp=$(mktemp -d); trap 'rm -rf "$tmp"' EXIT
-git clone -q --depth 1 "$REMOTE/$repo.git" "$tmp/c" || { echo "Cannot clone $repo."; exit 1; }
+git clone -q --depth 1 --branch main "$REMOTE/$repo.git" "$tmp/c" || { echo "Cannot clone $repo."; exit 1; }
 (cd "$tmp/c" && git ls-files) > "$tmp/files"
 n=0
 while IFS= read -r f; do

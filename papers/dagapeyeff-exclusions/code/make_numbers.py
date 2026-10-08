@@ -1,6 +1,6 @@
 """Write every number and table the manuscript prints from the frozen search results.
 
-    python3 code/make_numbers.py          # rewrite paper/numbers.tex, paper/tab_*.tex and the README abstract
+    python3 code/make_numbers.py          # rewrite paper/numbers.tex, paper/tab_*.tex, paper/fig_*.tex and the README abstract
     python3 code/make_numbers.py --check  # fail if any of them is stale
 
 The inputs are the frozen outputs of the probes: JSON files, three held-out texts whose letters are
@@ -390,6 +390,26 @@ def macros() -> dict[str, str]:
         out[f"rs{key}Gap"] = p(second["gap"])
         out[f"rs{key}AsHigh"] = str(second["shuffles_as_high"])
         out[f"rs{key}Shuffles"] = str(second["shuffles"])
+    english = [row for row in rs.values() if not row["probe"].startswith(("latin", "shiftgap latin"))]
+    weakest = min(english, key=lambda row: row["second"]["gap"])
+    out["rsRows"] = str(len(rs))
+    out["rsEnglishLow"] = p(weakest["second"]["gap"])
+    out["rsEnglishLowFound"] = d(weakest["second"]["weakest_recovered"])
+    out["rsEnglishLowCells"] = d(weakest["second"]["searched_best"])
+    out["rsEnglishLowFirstCells"] = d(weakest["first"]["searched_best"])
+    out["rsGapLow"] = p(min(row[run]["gap"] for row in rs.values() for run in ("first", "second")))
+    lfs = rs["latinmore foursquare"]
+    out["rsLaFsRecovered"] = str(lfs["second"]["recovered"])
+    out["rsLaFsPlanted"] = str(lfs["second"]["planted"])
+    out["corpusMedianErrors"] = str(load("corpus")["median_sorted_distance"] // 2)
+    outliers = []
+    for name, median in screen_outliers():
+        row = al["languages"][name]
+        label = name.replace("_", " ").replace("-", " (", 1) + ")"
+        outliers.append(label + (", romanized" if row["script"] != "latin" else "") + f", at {median}")
+    if len(outliers) != 1:
+        raise SystemExit("alllanguages: Figure 2's caption names exactly one language off its scale")
+    out["screenOutliers"] = outliers[0]
     short = [s for s in al["skipped"] if s["reason"].endswith(" letters")]
     out["allSkippedShort"] = str(len(short))
     out["allSkippedShortMost"] = n(max(int(s["reason"].split()[0]) for s in short))
@@ -644,6 +664,147 @@ def power_table() -> str:
     return head + "\n" + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}\n"
 
 
+def _power_rows() -> list[tuple[str, float, float]]:
+    """Each row of the power table as its family, the weakest planted text's score and the cells' best."""
+    out = []
+    for line in power_table().splitlines():
+        found = re.findall(r"\\ensuremath\{(-?[0-9.]+)\}", line)
+        if len(found) >= 2:
+            out.append((line.split("&")[0].strip(), float(found[0]), float(found[1])))
+    return out
+
+
+def power_figure() -> str:
+    """Figure: for each family of the power table, its weakest recovered planted text and the cells' best."""
+    rows = _power_rows()
+    count = len(rows)
+    labels = ",".join("{" + label.replace("--", "\\textendash{}") + "}" for label, _, _ in rows)
+    lines = ["\\begin{tikzpicture}",
+             "\\begin{axis}[width=0.52\\linewidth, height=0.62\\linewidth, xmin=-4.8, xmax=-1.6,",
+             f"  ymin=0.4, ymax={count}.6, ytick={{1,...,{count}}}, yticklabels={{{labels}}},",
+             "  y dir=reverse, yticklabel style={font=\\scriptsize, align=right}, xticklabel style={font=\\scriptsize},",
+             "  xlabel={Score, nats a letter}, xlabel style={font=\\small}, xmajorgrids, grid style={gray!25},",
+             "  legend style={font=\\scriptsize, at={(0.5,1.02)}, anchor=south, legend columns=2, draw=none,\n"
+             "  /tikz/every even column/.append style={column sep=1em}}, legend cell align=left]"]
+    for index, (_, planted, cells) in enumerate(rows, start=1):
+        lines.append(f"\\addplot[gray!60, forget plot] coordinates {{({cells:.2f},{index}) ({planted:.2f},{index})}};")
+    lines.append("\\addplot[only marks, mark=*, mark size=1.6pt, black] coordinates {"
+                 + " ".join(f"({planted:.2f},{index})" for index, (_, planted, _) in enumerate(rows, start=1)) + "};")
+    lines.append("\\addlegendentry{Weakest planted text}")
+    lines.append("\\addplot[only marks, mark=x, mark size=2.4pt, thick, black] coordinates {"
+                 + " ".join(f"({cells:.2f},{index})" for index, (_, _, cells) in enumerate(rows, start=1)) + "};")
+    lines.append("\\addlegendentry{Cells' best}")
+    lines += ["\\end{axis}", "\\end{tikzpicture}"]
+    return "\n".join(lines) + "\n"
+
+
+SCREEN_CLIP = 60
+
+
+def screen_outliers() -> list[tuple[str, int]]:
+    """Languages whose median is off the scale of Figure 2, by name and median."""
+    sc = load("alllanguages")
+    return [(name, round(sc["languages"][name]["median_errors"])) for name in sc["ranked"]
+            if round(sc["languages"][name]["median_errors"]) > SCREEN_CLIP]
+
+
+def screen_figure() -> str:
+    """Figure: how many of the screened languages have each median number of errors, Latin apart."""
+    sc = load("alllanguages")
+    counts: dict[int, int] = {}
+    latin = None
+    for name in sc["ranked"]:
+        median = round(sc["languages"][name]["median_errors"])
+        if name == "Latin-ITTB":
+            latin = median
+            continue
+        if median > SCREEN_CLIP:
+            continue
+        counts[median] = counts.get(median, 0) + 1
+    others = " ".join(f"({median},{count})" for median, count in sorted(counts.items()))
+    lines = ["\\begin{tikzpicture}",
+             "\\begin{axis}[width=0.9\\linewidth, height=0.36\\linewidth, ybar=0pt, bar width=3.5pt, bar shift=0pt,",
+             f"  xmin={min(min(counts), latin) - 3}, xmax={max(counts) + 2}, ymin=0, enlarge y limits={{upper, value=0.15}},",
+             "  xlabel={Fewest errors at the median window of 196 letters}, ylabel={Languages},",
+             "  label style={font=\\small}, ticklabel style={font=\\scriptsize}, ymajorgrids, grid style={gray!25},",
+             "  legend style={font=\\scriptsize, draw=none, at={(0.98,0.95)}, anchor=north east}, legend cell align=left, area legend]",
+             f"\\addplot[fill=gray!45, draw=gray!70] coordinates {{{others}}};",
+             f"\\addlegendentry{{Other languages ({len(sc['ranked']) - 1 - len(screen_outliers())} shown)}}",
+             f"\\addplot[fill=black, draw=black] coordinates {{({latin},1)}};",
+             "\\addlegendentry{Latin (ITTB)}",
+             "\\end{axis}", "\\end{tikzpicture}"]
+    return "\n".join(lines) + "\n"
+
+
+def words_figure() -> str:
+    """Figure: Latin word coverage of the planted texts by wrong cells, against the cells' and shuffles' best."""
+    lw = load("latinwords")
+    by = lw["planted_by_errors"]
+    errors = sorted(by, key=int)
+    planted = [r for r in lw["rows"] if r["kind"] == "planted"]
+    if sorted(round(r["coverage"], 4) for r in planted) != sorted(c for e in errors for c in by[e]["coverage"]):
+        raise SystemExit("latinwords: the planted rows and planted_by_errors disagree")
+    def place(rows: list[dict]) -> str:
+        out = []
+        for e in errors:
+            column = sorted((r for r in rows if str(r["errors"]) == e), key=lambda r: r["coverage"])
+            for i, r in enumerate(column):
+                out.append(f"({int(e) + 0.5 * ((i % 5) - 2):.1f},{100 * r['coverage']:.1f})")
+        return " ".join(out)
+    found = place([r for r in planted if r["clean_cells_right"] >= 0.9])
+    missed = place([r for r in planted if r["clean_cells_right"] < 0.9])
+    cells = 100 * lw["searched"]["cells"]["best_coverage"]
+    shuffle = 100 * max(lw["searched"]["cells"]["shuffle_best_coverages"])
+    low, high = int(errors[0]) - 3, int(errors[-1]) + 3
+    lines = ["\\begin{tikzpicture}",
+             "\\begin{axis}[width=0.9\\linewidth, height=0.42\\linewidth,",
+             f"  xmin={low}, xmax={high}, ymin=0, ymax=90, xtick={{{','.join(errors)}}},",
+             "  xlabel={Wrong cells in the planted text, of 196}, ylabel={Letters in Latin words, \\%},",
+             "  label style={font=\\small}, ticklabel style={font=\\scriptsize}, ymajorgrids, grid style={gray!25},",
+             "  legend style={font=\\scriptsize, draw=none, at={(0.98,0.95)}, anchor=north east}, legend cell align=left]",
+             f"\\addplot[only marks, mark=*, mark size=1.5pt, black] coordinates {{{found}}};",
+             "\\addlegendentry{Planted Latin, recovered}",
+             f"\\addplot[only marks, mark=o, mark size=1.5pt, black] coordinates {{{missed}}};",
+             "\\addlegendentry{Planted Latin, not recovered}",
+             f"\\addplot[dashed, thick, black] coordinates {{({low},{cells:.1f}) ({high},{cells:.1f})}};",
+             "\\addlegendentry{Cells' best}",
+             f"\\addplot[dotted, thick, gray] coordinates {{({low},{shuffle:.1f}) ({high},{shuffle:.1f})}};",
+             "\\addlegendentry{Shuffles' best}",
+             "\\end{axis}", "\\end{tikzpicture}"]
+    return "\n".join(lines) + "\n"
+
+
+_RESEED_LABELS = {
+    "foursquare": "Four-square",
+    "additive": "Repeating shift, periods 2--5, 7, 14",
+    "shiftgap english": "Repeating shift, periods 6, 8--13",
+    "shiftgap latin": "Latin, repeating shift, periods 6, 8--13",
+    "latin14": "Latin, columnar width 14",
+    "latinw": "Latin, columnar widths 10--13, 15",
+    "latinmore foursquare": "Latin, four-square",
+    "latinmore homophone": "Latin, capped homophonic key",
+    "latinshift": "Latin, repeating shift, periods 2--5, 7, 14",
+}
+
+
+def reseed_table() -> str:
+    """Each rerun search under its first and its second seed."""
+    rows = load("reseed")["rows"]
+    if [row["probe"] for row in rows] != list(_RESEED_LABELS):
+        raise SystemExit("reseed: the frozen rows are not the ones the manuscript's table names")
+    lines = ["\\begin{tabular}{@{}p{0.38\\linewidth}lccccc@{}}", "\\toprule",
+             "Search & Seed & Found & Weakest & Cells' best & Gap & As high \\\\", "\\midrule"]
+    for index, row in enumerate(rows):
+        for run, label in (("first", _RESEED_LABELS[row["probe"]]), ("second", "")):
+            x = row[run]
+            lines.append(f"{label} & {run} & {x['recovered']}/{x['planted']} & {d(x['weakest_recovered'], 2)} & "
+                         f"{d(x['searched_best'], 2)} & {p(x['gap'])} & {x['shuffles_as_high']}/{x['shuffles']} \\\\")
+        if index < len(rows) - 1:
+            lines.append("\\addlinespace[2pt]")
+    lines += ["\\bottomrule", "\\end{tabular}"]
+    return "\n".join(lines) + "\n"
+
+
 def power_gaps() -> dict[str, float]:
     """Weakest planted score minus the cells' best, for each row of the power table."""
     import re
@@ -666,6 +827,9 @@ def gap_macros() -> dict[str, str]:
         "gapRomanianTab": p(next(v for k, v in gaps.items() if k.startswith("Romanian"))),
         "gapHomTab": p(next(v for k, v in gaps.items() if k.startswith("Homophonic"))),
         "gapEnglishLow": p(min(english)),
+        "gapLatinRows": str(len(latin)),
+        "gapLatinUnder": str(sum(v < 1 for v in latin)),
+        "gapLatinUnderHigh": p(max(v for v in latin if v < 1)),
         "gapUnderOne": str(sum(v < 1 for v in gaps.values())),
         "gapRows": str(len(gaps)),
     }
@@ -683,6 +847,10 @@ def render() -> dict[str, str]:
         "numbers.tex": "\n".join(lines) + "\n",
         "tab_power.tex": "% Written by ../code/make_numbers.py. Do not edit by hand.\n" + power_table(),
         "tab_screen.tex": "% Written by ../code/make_numbers.py. Do not edit by hand.\n" + screen_table(),
+        "tab_reseed.tex": "% Written by ../code/make_numbers.py. Do not edit by hand.\n" + reseed_table(),
+        "fig_power.tex": "% Written by ../code/make_numbers.py. Do not edit by hand.\n" + power_figure(),
+        "fig_screen.tex": "% Written by ../code/make_numbers.py. Do not edit by hand.\n" + screen_figure(),
+        "fig_words.tex": "% Written by ../code/make_numbers.py. Do not edit by hand.\n" + words_figure(),
     }
 
 
@@ -705,7 +873,7 @@ def abstract_text(values: dict[str, str]) -> str:
     left = re.findall(r"\\[A-Za-z]+|\$|[{}]", text)
     if left:
         raise SystemExit("abstract.tex keeps TeX with no plain-text form: " + " ".join(sorted(set(left))))
-    return re.sub(r"\s+", " ", text)
+    return "\n\n".join(re.sub(r"\s+", " ", part).strip() for part in re.split(r"\n\s*\n", text) if part.strip())
 
 
 def readme(values: dict[str, str]) -> str:

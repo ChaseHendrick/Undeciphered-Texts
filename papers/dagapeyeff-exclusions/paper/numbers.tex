@@ -32,7 +32,7 @@
 % dagapeyeff-latinlibrary.json sha256 a5125e5cdf46777f46e13971bfe0f275081a3ffcf35a321421d7b34757e08842
 % dagapeyeff-latinw.json sha256 bb4802299aadd20fb53d0a7d18b73ffda3b8030d83827f94d54661d43e14301e
 % dagapeyeff-shiftgap.json sha256 797856a17f1d5956103f243938b6c1d6d66615f2bd68af437e6bef88d3959120
-% dagapeyeff-reseed.json sha256 6c00675aece82ed69b153a964063f48633b80fa84976d936262279952b7ff669
+% dagapeyeff-reseed.json sha256 92ec3d646cbd09da4f19a2ea00bfb28d929d6c0b1ad0a513daff47b1b2f2b677
 % dagapeyeff-latinsmall.json sha256 d4889f28a06d74ed47bbf27f558177302c012bef9ae4475cd52e380bc6a05835
 % dagapeyeff-rarecolumn.json sha256 13709d7547ceb027d3a9fa6b84f7e30b47565e74ec9a85122db47afec3319958
 % dagapeyeff-latinwords.json sha256 d11a102cc5439f1520a66975deba5905759b27ec615d602f637ac3b7af85858d
@@ -82,6 +82,7 @@
 \newcommand{\corpusAllThree}{0}
 \newcommand{\corpusClosestDistance}{8}
 \newcommand{\corpusLetters}{1{,}916{,}398}
+\newcommand{\corpusMedianErrors}{28}
 \newcommand{\corpusWindows}{479{,}051}
 \newcommand{\dirAsHigh}{7}
 \newcommand{\dirBest}{\ensuremath{-3.2848}}
@@ -146,6 +147,9 @@
 \newcommand{\gapLatin}{\ensuremath{0.68}}
 \newcommand{\gapLatinHigh}{\ensuremath{1.86}}
 \newcommand{\gapLatinLow}{\ensuremath{0.45}}
+\newcommand{\gapLatinRows}{6}
+\newcommand{\gapLatinUnder}{5}
+\newcommand{\gapLatinUnderHigh}{\ensuremath{0.97}}
 \newcommand{\gapRomanian}{\ensuremath{0.48}}
 \newcommand{\gapRomanianTab}{\ensuremath{0.48}}
 \newcommand{\gapRows}{18}
@@ -320,12 +324,20 @@
 \newcommand{\rsAddPlanted}{12}
 \newcommand{\rsAddRecovered}{11}
 \newcommand{\rsAddShuffles}{72}
+\newcommand{\rsEnglishLow}{\ensuremath{0.75}}
+\newcommand{\rsEnglishLowCells}{\ensuremath{-3.3664}}
+\newcommand{\rsEnglishLowFirstCells}{\ensuremath{-3.3917}}
+\newcommand{\rsEnglishLowFound}{\ensuremath{-2.6208}}
 \newcommand{\rsFsAsHigh}{36}
 \newcommand{\rsFsBest}{\ensuremath{-3.3727}}
 \newcommand{\rsFsGap}{\ensuremath{1.38}}
 \newcommand{\rsFsPlanted}{6}
 \newcommand{\rsFsRecovered}{6}
 \newcommand{\rsFsShuffles}{80}
+\newcommand{\rsGapLow}{\ensuremath{0.45}}
+\newcommand{\rsLaFsPlanted}{3}
+\newcommand{\rsLaFsRecovered}{2}
+\newcommand{\rsRows}{9}
 \newcommand{\ruFewest}{9}
 \newcommand{\ruRows}{12}
 \newcommand{\ruWithin}{0}
@@ -336,6 +348,7 @@
 \newcommand{\screenLatinMedian}{\ensuremath{22}}
 \newcommand{\screenLatinWithin}{294}
 \newcommand{\screenOthersMedianLow}{\ensuremath{25}}
+\newcommand{\screenOutliers}{Coptic (Scriptorium), romanized, at 108}
 \newcommand{\screenPerseusFewest}{6}
 \newcommand{\screenPerseusWithin}{82}
 \newcommand{\screenRussianFewest}{13}
