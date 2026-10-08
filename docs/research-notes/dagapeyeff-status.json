@@ -49,9 +49,9 @@
   },
   "manuscript": {
     "title": "Excluding Classical Cipher Families for the 1939 D'Agapeyeff Challenge",
-    "stage": "Preprint, ready for release, 7 October 2026",
-    "deposited": false,
-    "status": "Four internal readings are done: the proofs reading, a second reading of the numbers, controls and claims (17 findings), a third reading of the whole preprint text (10 findings), and a fourth reading of the Conclusion and figures (13 findings), all verified and fixed. Seven searches, four-square, the shift at periods 2 to 14 and the five Latin searches, were rerun under a second seed and agree with their first runs. Ready for release 1.0.0; the companion repository is ChaseHendrick/dagapeyeff. Not peer reviewed, not yet released, no DOI.",
+    "stage": "Preprint 1.0.0, 8 October 2026",
+    "deposited": true,
+    "status": "Released as preprint 1.0.0 on 8 October 2026 and archived on Zenodo, doi:10.5281/zenodo.23241304 (every version: doi:10.5281/zenodo.23241303), verified by tools/paper-zenodo-check.py. Four internal readings were done and fixed; seven searches were rerun under a second seed and agree. The companion repository is ChaseHendrick/dagapeyeff. Not peer reviewed.",
     "folder": "papers/dagapeyeff-exclusions"
   },
   "charts": [
