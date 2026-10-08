@@ -24,7 +24,7 @@
       "field": "Cryptography",
       "summary": "which classical cipher families the 1939 D'Agapeyeff challenge excludes, by key-free counts and by searches with demonstrated power",
       "status": "ready",
-      "note": "Preprint text of 7 October 2026, after four readings. Every quality item is closed: the searches the abstract relies on that were rerun under a second seed agree with their first runs. Ready for release 1.0.0; no release yet, and the owner starts it.",
+      "note": "Preprint 1.0.0 released on 8 October 2026 and archived on Zenodo (version DOI 10.5281/zenodo.23241304; concept DOI 10.5281/zenodo.23241303). Every quality item is closed; four in-project readings, no peer review.",
       "latex": "papers/dagapeyeff-exclusions/paper/dagapeyeff-exclusions.tex",
       "pdf": "papers/dagapeyeff-exclusions/paper/dagapeyeff-exclusions.pdf",
       "companion": "ChaseHendrick/dagapeyeff",
@@ -33,8 +33,16 @@
       "textLicense": "all-rights-reserved",
       "arxiv": null,
       "journal": null,
-      "codeDoi": null,
-      "commitments": []
+      "codeDoi": "10.5281/zenodo.23241304",
+      "commitments": [],
+      "archiveVersion": "1.0.0",
+      "archiveManuscript": {
+        "version": "1.0.0",
+        "doi": "10.5281/zenodo.23241304",
+        "path": "paper/dagapeyeff-exclusions.pdf",
+        "tagCommit": "1d609424f8c8c13cd2813ca2d3767e7a5694cd27",
+        "sha256": "e86315c2526beda84c24ddd09637daaa18e7928deb83db52ce152144d851c4f4"
+      }
     }
   ]
 }
