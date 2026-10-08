@@ -60,4 +60,5 @@ PAPERS_TOKEN secret is not set". Nothing reaches the companion until it is added
 4. When Zenodo shows the version, set `codeDoi` and `archiveVersion` in the registry (and `archiveFilename`
    and `archiveManuscript` for a branded deposit), put the DOI in the README's first lines and the
    manuscript's data availability paragraph, rebuild, and merge. `paper-archives.yml` then downloads the
-   archive and compares its PDF with the repository's.
+   archive and compares its PDF with the repository's. hendrickresearch.com lists the paper within six hours of that merge:
+   its paper sync reads this repository's `papers/papers.json` as well as GENChase's.

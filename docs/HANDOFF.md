@@ -4,6 +4,16 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 7 to 8 October 2026: paper ready, companion fixed, second seeds, fourth reading
+
+Branch `claude/friendly-pascal-m4b8j5`, pull request 17. The D'Agapeyeff paper is `ready` in `papers/papers.json` with every quality item closed and `## 1.0.0` notes in its `RELEASES.md`; no release has been made, and the owner starts it (Actions, publish papers, 1.0.0, github-import).
+
+- The companion `ChaseHendrick/dagapeyeff` had Latin scratch work on `claude/inspiring-gates-hzi15a`, its default branch. That tree is kept in `docs/logs/dagapeyeff-companion-scratch-2026-10-07/` with a mapping log. `tools/paper-publish.sh` now always publishes to `main` and makes it the default branch; tested against a local mock. The `PAPERS_TOKEN` secret is still unset, so nothing has reached the companion. Once it has, the two `claude/` branches there can be deleted.
+- U2: all seven searches the quality record named have a second seed (`engine.dagapeyeff_reseed`, `PENDING` empty, Table 2 of the paper). Two second-seed rows are weaker and reported: the English shift at periods 6 and 8 to 13 closes by 0.75; Latin four-square recovers 2 of 3.
+- The paper gained a Conclusion (the owner's answer: no reading; not ordinary English under a one-to-one key unless about 8 errors were chosen; Latin singled out; "most likely no message" labelled an interpretation), an abstract in paragraphs, three generated figures, and the fourth reading's 13 fixes (`notes/review-4.md`).
+- `code/build.sh` dates the PDF by the last commit to the paper source, not counting the PDF. Commit the source first, then build, then commit the PDF, and two builds are byte-identical.
+- hendrickresearch.com now syncs `docs/research-notes/research-feed.json` and this repository's `papers/papers.json` (its own pull request). Keep the feed's fields stable: id, title, stage, unit, reviewed_through, summary, note_url, ledger_url, statuses, and plaintext_recovered_percent, which the site refuses unless it is 0.
+
 ## Session 7 October 2026, after Latin words: grille and double transposition ported
 
 Branch `claude/latin-grille-double`. The companion-branch scratch searches are now engine probes, power only, cells not searched: `engine.dagapeyeff_latingrille` (with the key held fixed, 4 of 4 grilles from the true key, 1 of 4 at 77 to 82 percent, 0 of 4 at 65 to 69 percent; key re-solved at every move, 0 of 8) and `engine.dagapeyeff_latindouble` (6 of 6 at 4 by 5 and 5 by 7, 1 of 3 at 6 by 8, none at 7 by 9 or 9 by 11). Both are in Section 7 of the paper. The cache holds 133 files. The error-tolerance curve is covered by `dagapeyeff-latinwords`. The scratch branch `claude/inspiring-gates-hzi15a` of `ChaseHendrick/dagapeyeff` can be deleted before the companion is published.
