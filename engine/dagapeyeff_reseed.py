@@ -1,4 +1,4 @@
-"""The four-square and repeating-shift searches again, under a second seed. Not a reading.
+"""The four-square, repeating-shift and Latin searches again, under a second seed. Not a reading.
 
 The paper's quality record left one item open: these searches had been run
 under one seed each. This pass calls the same report functions with a new
@@ -8,9 +8,10 @@ thresholds are unchanged.
 
 Each probe is run in turn and kept in the ignored work/reseed/ folder, so a
 stopped run resumes at the next probe. The frozen file keeps a summary of
-both seeds, not the second run in full. Only four-square and the English
-shift at periods 2 to 14 are frozen so far; the shift at periods 6 and 8 to 13
-and the Latin searches are listed in PENDING. No letter string is stored.
+both seeds, not the second run in full. Four-square and the English shift at
+periods 2, 3, 4, 5, 7 and 14 were frozen first; the shift at periods 6 and 8 to
+13 and the Latin searches followed on 7 October 2026, about two hours on four
+cores. PENDING is empty. No letter string is stored.
 """
 
 from __future__ import annotations
@@ -25,15 +26,14 @@ from engine.dagapeyeff_cache import _DIR, frozen
 PROBES = (
     ("foursquare", "engine.dagapeyeff_foursquare", "foursquare_report"),
     ("additive", "engine.dagapeyeff_additive", "additive_report"),
-)
-# Not yet rerun: the session ended first. Run each with _second(), then move it to PROBES.
-PENDING = (
     ("shiftgap", "engine.dagapeyeff_shiftgap", "shiftgap_report"),
     ("latin14", "engine.dagapeyeff_latin14", "latin14_report"),
     ("latinw", "engine.dagapeyeff_latinw", "latinw_report"),
     ("latinmore", "engine.dagapeyeff_latinmore", "latinmore_report"),
     ("latinshift", "engine.dagapeyeff_latinmore", "latinshift_report"),
 )
+# Probes with one seed only. Run each with _second(), then move it to PROBES.
+PENDING = ()
 # Probes holding more than one family, each summarised on its own because their scores differ in scale.
 _PARTS = {"latinmore": ("foursquare", "homophone"), "shiftgap": ("english", "latin")}
 # Added to each module's own seed, so no second run shares a first run's draws.

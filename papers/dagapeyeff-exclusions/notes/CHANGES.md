@@ -1,5 +1,11 @@
 # Changes between drafts
 
+## Second seeds, fourth reading, 7 October 2026
+
+- U2 is closed. The shift at periods 6 and 8 to 13 and the five Latin searches were rerun under a second seed, joining four-square and the shift at periods 2 to 14. A new Table 2 gives both runs of all nine rows; Section 4's "A second seed" now reports them all, including the two weaker second-seed rows (the English shift at periods 6 and 8 to 13 closes by 0.75; Latin four-square recovers 2 of 3).
+- The fourth reading (`review-4.md`): 13 findings, all verified and fixed. The Conclusion limits its English claim to one-to-one keys, keeps the "chosen errors" qualifier, gives the second-seed floor and the homophonic 0.88 separately, and moves the language claim into the interpretation, scoped to a one-to-one key, with Latin singled out and its daughter languages not. The abstract follows; its Latin range is now 0.45 to 0.97 in 5 of 6 Latin rows. Romanian is placed correctly (14th, not in Table 3). Figure 3 marks recovered and unrecovered texts; Figure 2 names its off-scale outlier.
+- `build.sh` dates the PDF by the last commit to the paper's source, not counting the PDF.
+
 ## Conclusion, figures and layout, 7 October 2026
 
 - A Conclusion (Section 8) states the owner's answer and bounds it. Two statements are results: the cells are not ordinary English under any one-to-one key, with or without a transposition, and Latin is the closest of the 98 languages screened, with Catalan, Old Occitan and Spanish, which descend from it, among the twelve closest. The third is labelled an interpretation: the challenge most likely carries no message. The challenge's omission from the editions of 1952 onward and the unsourced report that its author forgot the method are mentioned and given no weight, because they fit a lost key equally well.

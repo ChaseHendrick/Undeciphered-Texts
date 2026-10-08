@@ -280,7 +280,7 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Latin under columnar transposition at widths 2 to 9, 7 October 2026](../logs/dagapeyeff-latinsmall-2026-10-07.md)
 - [Latin words in the cells' best decryptions, 7 October 2026](../logs/dagapeyeff-latinwords-2026-10-07.md)
 - [The last-column symbols as padding or as rare letters, 7 October 2026](../logs/dagapeyeff-rarecolumn-2026-10-07.md)
-- [Four-square and the repeating shift under a second seed, 7 October 2026](../logs/dagapeyeff-reseed-2026-10-07.md)
+- [Four-square, the repeating shift and the Latin searches under a second seed, 7 October 2026](../logs/dagapeyeff-reseed-2026-10-07.md)
 <!-- generated-logs:end -->
 
 ## Next steps
