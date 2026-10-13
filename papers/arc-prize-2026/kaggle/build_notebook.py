@@ -11,6 +11,11 @@ import re
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 COMPETITION = "arc-prize-2026-arc-agi-2"
+# Verified 13 October 2026 from a live competition notebook. The directory is
+# competitions/<slug>, not the slug alone.
+COMPETITION_CHALLENGES = (
+    "/kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_test_challenges.json"
+)
 POLICIES = ("first_programs", "first_distinct", "group_vote")
 
 
@@ -74,16 +79,17 @@ sys.path.insert(0, str(SOURCE_ROOT))
 from arc_kaggle_adapter import run_file
 (WORK / "source-manifest.json").write_text(json.dumps(SOURCE_MANIFEST, sort_keys=True, indent=2) + "\\n")
 """
-    run = """# The competition supplies the test challenge file at rerun time.
-INPUT = Path(os.environ.get("ARC_INPUT_PATH",
-    "/kaggle/input/arc-prize-2026-arc-agi-2/arc-agi_test_challenges.json"))
-audit = run_file(INPUT, WORK / "submission.json", WORK / "submission-audit.json",
-    max_candidates=SOURCE_MANIFEST["max_candidates_per_task"],
-    policy=SOURCE_MANIFEST["policy"], source_manifest=SOURCE_MANIFEST)
-print(json.dumps({key: audit[key] for key in
-    ("status", "task_count", "test_input_count", "fallback_attempt_count", "submission_sha256")},
-    sort_keys=True, indent=2))
-"""
+    run = (
+        "# The competition supplies the test challenge file at rerun time.\n"
+        "INPUT = Path(os.environ.get(\"ARC_INPUT_PATH\",\n"
+        f"    \"{COMPETITION_CHALLENGES}\"))\n"
+        "audit = run_file(INPUT, WORK / \"submission.json\", WORK / \"submission-audit.json\",\n"
+        "    max_candidates=SOURCE_MANIFEST[\"max_candidates_per_task\"],\n"
+        "    policy=SOURCE_MANIFEST[\"policy\"], source_manifest=SOURCE_MANIFEST)\n"
+        "print(json.dumps({key: audit[key] for key in\n"
+        "    (\"status\", \"task_count\", \"test_input_count\", \"fallback_attempt_count\", \"submission_sha256\")},\n"
+        "    sort_keys=True, indent=2))\n"
+    )
     notebook = {
         "nbformat": 4, "nbformat_minor": 5,
         "metadata": {
