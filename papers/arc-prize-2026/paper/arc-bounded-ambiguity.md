@@ -4,8 +4,6 @@ Chase Hendrick
 Independent Researcher  
 ORCID 0009-0002-9754-6087  
 
-Preprint, 13 October 2026. Not peer reviewed.
-
 ## Abstract
 
 At a fixed candidate budget of 4096 programs of depth at most two in a declared grid DSL, does selecting the two largest groups of demonstration-consistent predictions improve exact test-output accuracy over the first two distinct predictions? On the official ARC-AGI-2 public data the answer is no under this grammar. Output-weighted accuracy for the primary policy `group_vote` is 0.0257 on the development partition (800 tasks), 0.0273 on locked validation (200 tasks), and 0.0000 on the public evaluation set (120 tasks). The same figures hold for the `first_distinct` baseline. All results are numerical. No general reasoning architecture or prize is claimed.
