@@ -44,7 +44,7 @@ The user stopped work for a handoff at 1% remaining usage. No jobs remain runnin
 
 ## What remains absent
 
-Real ARC scores, measured end-to-end runtime, evaluator, full-suite run, finished independent review, manuscript/PDF, evidence-generated tables, complete new-component license grant, Kaggle upload/run/submission receipt, public notebook URL, linked paper submission, Zenodo release. Do not imply any exists.
+Leaderboard score, paper-track submission, public notebook, PDF, Zenodo release. Do not invent a score.
 
 ## Update 13 October 2026 (sandbox continuation)
 
@@ -55,3 +55,14 @@ Real public scores measured under frozen protocol v1, max_candidates=4096, group
 - Public evaluation (120 tasks, 167 outputs): all policies 0.0000
 
 Evaluator added at papers/arc-prize-2026/code/evaluate.py. Manuscript at papers/arc-prize-2026/paper/arc-bounded-ambiguity.md. Notebook built locally (not uploaded). Branch pushed (commit 727efe4). Kaggle upload/submission and paper-track linking remain pending signed-in Chrome session. No prize claimed. Protocol preserved. No PR, no Modal.
+
+## Update 13 October 2026 (Kaggle submission)
+
+Uploaded with the account token. Kaggle created the private notebook from the title slug, not the requested id.
+
+- Notebook: https://www.kaggle.com/code/chasehendrick/bounded-ambiguity-in-arc-program-search
+- Kernel id 138465788. Version 1 failed: the challenge file is at /kaggle/input/competitions/arc-prize-2026-arc-agi-2/arc-agi_test_challenges.json. Version 2 used that path, CPU, internet off, and completed.
+- Version 2 output: 240 tasks, 259 test inputs, 511 fallback attempts of 518, submission.json SHA-256 10f7aa8890613a2040fc0318e8d34e27523cf6a71fe6ca0ec9682aadf13109ee.
+- Submission ref 57137736, description "Frozen group_vote 4096", status PENDING as of 09:06 UTC. No public or private score yet. scriptVersionId 357936640.
+- Builder path corrected on the branch in commit e5fd0ec. The running notebook was a path-only patch of the already built bundle, not a rebuild.
+- Today's submission allowance is used. Do not submit again today. Revoke the exposed API token. No prize claimed. No PR. No Modal.
