@@ -45,3 +45,13 @@ The user stopped work for a handoff at 1% remaining usage. No jobs remain runnin
 ## What remains absent
 
 Real ARC scores, measured end-to-end runtime, evaluator, full-suite run, finished independent review, manuscript/PDF, evidence-generated tables, complete new-component license grant, Kaggle upload/run/submission receipt, public notebook URL, linked paper submission, Zenodo release. Do not imply any exists.
+
+## Update 13 October 2026 (sandbox continuation)
+
+Real public scores measured under frozen protocol v1, max_candidates=4096, group_vote primary:
+
+- Development (800 tasks, 856 outputs): first_programs 0.0245, first_distinct 0.0257, group_vote 0.0257
+- Validation (200 tasks, 220 outputs): all policies 0.0273
+- Public evaluation (120 tasks, 167 outputs): all policies 0.0000
+
+Evaluator added at papers/arc-prize-2026/code/evaluate.py. Manuscript at papers/arc-prize-2026/paper/arc-bounded-ambiguity.md. Notebook built locally (not uploaded). Branch pushed (commit 727efe4). Kaggle upload/submission and paper-track linking remain pending signed-in Chrome session. No prize claimed. Protocol preserved. No PR, no Modal.
