@@ -237,6 +237,22 @@
       ]
     },
     {
+      "family": "In-place keyed Vigenere with any alphabet even if one clue letter is wrong (a misspelling like those in K1 to K3), periods 1 to 18, 20 to 22 and 25",
+      "status": "excluded-by-constraint",
+      "evidence": "MaxSAT shows K4 needs at least two dropped clue letters at those periods; random strings need about as many or fewer, and 208 family and period settings show nothing significant (period 19 fits 1 to 4 percent of random strings).",
+      "logs": [
+        "k4-focus/sat-errors-twokey-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "Two repeating keys added on one keyed alphabet: 37 Vigenere-sense and 31 Beaufort-sense length pairs whose combined cycle exceeds 26",
+      "status": "excluded-by-constraint",
+      "evidence": "Exact SAT with the alphabet left free; every pair of lengths 2 to 26 was checked and planted controls always fit.",
+      "logs": [
+        "k4-focus/sat-errors-twokey-2026-10-18.md"
+      ]
+    },
+    {
       "family": "Any English-prose running key, in place, under those 12 tableaux",
       "status": "excluded-by-count",
       "evidence": "The two clue fragments of the key score at the 0.0000 percentile of 1,916,325 aligned English fragment pairs under every tableau, read either way; none of 7,981 planted clean-prose keys scores as low as K4's best.",
