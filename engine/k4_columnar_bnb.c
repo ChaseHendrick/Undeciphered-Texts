@@ -135,3 +135,99 @@ void bnb(int n, const int *ct, int ncl, const int *cpos, const int *cpl, const i
     out[2] = s.nodes;
     out[3] = s.stopped;
 }
+
+/* Direction 1 (write columns in order, read rows) by slot patterns.
+ *
+ * Only the long or short type of earlier read slots fixes where a slot's
+ * plaintext range starts, so the search walks the slots in order, picks a
+ * type for each, and picks an actual column only for slots whose range
+ * holds clue letters. Past the last clue position nothing else can be
+ * checked, and the remaining choices are counted, not listed:
+ * C(open slots, open long slots) * (unused long columns)! * (unused short columns)!.
+ * Columns c < n mod w are the long ones, as in the enumeration.
+ */
+typedef struct {
+    Search *s;
+    int last;          /* largest clue plaintext position */
+    int nlong, nshort; /* column counts by type */
+    double fact[MAXW + 1];
+    double total, complete;
+} Slots;
+
+static double choose(int n, int k) {
+    double r = 1;
+    if (k < 0 || k > n) return 0;
+    for (int i = 1; i <= k; i++) r = r * (n - k + i) / i;
+    return r;
+}
+
+static void slot_dfs(Slots *z, int depth, int cum, int long_used, int short_used, int long_cols_used,
+                     int short_cols_used, unsigned used) {
+    Search *s = z->s;
+    if (++s->nodes > s->node_limit && s->node_limit > 0) {
+        s->stopped = 1;
+        return;
+    }
+    if (s->stopped) return;
+    if (cum > z->last || depth == s->w) {
+        int open = s->w - depth;
+        int open_long = z->nlong - long_used;
+        double ways = choose(open, open_long) * z->fact[z->nlong - long_cols_used] * z->fact[z->nshort - short_cols_used];
+        z->total += ways;
+        if (s->v != 4 && s->filled == s->p) z->complete += ways;
+        return;
+    }
+    for (int type = 0; type < 2; type++) { /* 0 long, 1 short */
+        if (type == 0 && long_used == z->nlong) continue;
+        if (type == 1 && short_used == z->nshort) continue;
+        int len = type == 0 ? s->len[0] : s->len[s->w - 1];
+        int holds = 0;
+        for (int k = 0; k < s->ncl; k++)
+            if (s->cpos[k] >= cum && s->cpos[k] < cum + len) { holds = 1; break; }
+        if (!holds) {
+            slot_dfs(z, depth + 1, cum + len, long_used + (type == 0), short_used + (type == 1),
+                     long_cols_used, short_cols_used, used);
+            continue;
+        }
+        int lo = type == 0 ? 0 : z->nlong, hi = type == 0 ? z->nlong : s->w;
+        for (int c = lo; c < hi; c++) {
+            if (used & (1u << c)) continue;
+            int undo[2 * MAXCL], nundo = 0, ok = 1;
+            for (int k = 0; k < s->ncl && ok; k++) {
+                int j = s->cpos[k];
+                if (j < cum || j >= cum + len) continue;
+                ok = place(s, k, (j - cum) * s->w + c, undo, &nundo);
+            }
+            if (ok)
+                slot_dfs(z, depth + 1, cum + len, long_used + (type == 0), short_used + (type == 1),
+                         long_cols_used + (type == 0), short_cols_used + (type == 1), used | (1u << c));
+            unplace(s, undo, nundo);
+        }
+    }
+}
+
+/* Direction 1 counts. out_d[0] surviving orders, out_d[1] complete keys;
+ * out[0] nodes, out[1] 1 if the node limit stopped it. */
+void bnb_dir1(int n, const int *ct, int ncl, const int *cpos, const int *cpl, const int *rank,
+              int w, int comp, int p, int v, long long node_limit, double *out_d, long long *out) {
+    Search s;
+    Slots z;
+    memset(&s, 0, sizeof s);
+    memset(&z, 0, sizeof z);
+    s.n = n; s.w = w; s.dir = 1; s.comp = comp; s.p = p; s.v = v; s.ncl = ncl;
+    s.ct = ct; s.cpos = cpos; s.cpl = cpl; s.rank = rank; s.node_limit = node_limit;
+    int rows = (n + w - 1) / w, full = n % w;
+    for (int c = 0; c < w; c++) s.len[c] = (full == 0 || c < full) ? rows : rows - 1;
+    for (int i = 0; i < p; i++) s.key[i] = -1;
+    z.s = &s;
+    z.nlong = full == 0 ? w : full;
+    z.nshort = w - z.nlong;
+    for (int k = 0; k < ncl; k++) if (cpos[k] > z.last) z.last = cpos[k];
+    z.fact[0] = 1;
+    for (int i = 1; i <= MAXW; i++) z.fact[i] = z.fact[i - 1] * i;
+    slot_dfs(&z, 0, 0, 0, 0, 0, 0, 0u);
+    out_d[0] = z.total;
+    out_d[1] = z.complete;
+    out[0] = s.nodes;
+    out[1] = s.stopped;
+}

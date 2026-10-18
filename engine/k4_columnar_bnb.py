@@ -37,6 +37,7 @@ def _kernel():
     subprocess.run([compiler, "-O3", "-shared", "-fPIC", "-o", str(built), str(_SOURCE)], check=True)
     lib = ctypes.CDLL(str(built))
     lib.bnb.restype = None
+    lib.bnb_dir1.restype = None
     return lib
 
 
@@ -56,6 +57,20 @@ def search(s: dict, w: int, direction: int, comp: int, p: int, variant: int, nod
     kept = min(out[1], cap)
     orders = [tuple(found[i * w : (i + 1) * w]) for i in range(kept)]
     return {"leaves": out[0], "complete": out[1], "nodes": out[2], "stopped": bool(out[3]), "orders": orders}
+
+
+def count_dir1(s: dict, w: int, comp: int, p: int, variant: int, node_limit: int = 0) -> dict:
+    """Direction 1 surviving-order counts by slot patterns (no orders listed)."""
+    lib = _kernel()
+    ncl = len(s["cpos"])
+    ct = (ctypes.c_int * s["n"])(*s["ct"])
+    cpos = (ctypes.c_int * ncl)(*s["cpos"])
+    cpl = (ctypes.c_int * ncl)(*s["cpl"])
+    rank = (ctypes.c_int * 52)(*(_ranks()[0] + _ranks()[1]))
+    out_d = (ctypes.c_double * 2)()
+    out = (ctypes.c_longlong * 2)()
+    lib.bnb_dir1(s["n"], ct, ncl, cpos, cpl, rank, w, comp, p, variant, ctypes.c_longlong(node_limit), out_d, out)
+    return {"leaves": int(round(out_d[0])), "complete": int(round(out_d[1])), "nodes": out[0], "stopped": bool(out[1])}
 
 
 def _job(args):
