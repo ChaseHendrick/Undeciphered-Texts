@@ -17,7 +17,7 @@ Same branch. K4 is not solved and nothing here is a reading. Each result has a d
 - Hill (`engine.k4_hill_large`): 11 of 20 settings at 5 by 5 excluded exactly, 3 enumerated with no English-level key; 6 by 6 and up are not testable by the clues.
 - `engine.k4_sat` (PySAT, pinned in `requirements-synthesis.txt`) replaces Z3 for these checks, about 100 times faster. MaxSAT shows one misspelled clue letter does not rescue keyed Vigenere at periods 1 to 18, 20 to 22, 25. Two added keys are excluded for 68 length pairs.
 - `engine.k4_family_net`: a neural family prior. K4 sits with random letters, Gromark and trifid; that opened a fractionation and Gromark family as the next lead.
-- The most unusual setting found is Quagmire I, II and IV at period 19, which fit both clues exactly; 1 to 4 percent of random strings do too, so it is not significant after 208 settings. A language search there is in `engine.k4_quagmire19` if it was finished; see its log.
+- The most unusual setting found is Quagmire I, II and IV at period 19, which fit both clues exactly; 1 to 4 percent of random strings do too, so it is not significant after 208 settings. `engine.k4_quagmire19` (annealing, C) has power for Quagmire I (9 to 10 of 10 planted texts) and K4 is noise there; for Quagmire II and IV it has little or none, so those stay untested. Not a lead.
 - Modal is not configured in this container. If the owner adds `MODAL_TOKEN_ID` and `MODAL_TOKEN_SECRET` as environment secrets, wide-width SAT runs can be fanned out there.
 
 ## Session 18 October 2026: D'Agapeyeff research closed

@@ -140,6 +140,14 @@
       ]
     },
     {
+      "family": "In-place Quagmire II and IV at period 19",
+      "status": "tested-without-power",
+      "evidence": "The same search recovers only 2 of 10 planted Quagmire II texts and none for Quagmire IV, so its negative result on K4 says little.",
+      "logs": [
+        "k4-focus/quagmire19-2026-10-18.md"
+      ]
+    },
+    {
       "family": "In-place periodic substitution with any alphabets (any Quagmire keyword, keyed Vigenere, Beaufort, Porta) at periods 1-7, 9, 10, 14, 15, 17, 21, 25",
       "status": "excluded-by-constraint",
       "evidence": "In one column the same plaintext letter would need two ciphertext letters, or two plaintext letters one ciphertext letter, for any alphabets. Periods 8, 11-13, 16, 18-20, 22-24 and 26-32 are not blocked by this bound; a planted-clue control is never blocked.",
@@ -274,6 +282,14 @@
       "evidence": "All 26^5 clue-consistent keys per setting were decrypted; the best K4 quadgram score (-4.77 a quadgram) is far below the worst of 239 English windows (-2.67) and inside the range random text reaches. Planted English keys come first in 88 of 90 controls.",
       "logs": [
         "k4-focus/hill-large-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "In-place Quagmire I at period 19, for English plaintext",
+      "status": "excluded-by-count",
+      "evidence": "The one setting where K4 fit the clues more often than most random strings. An annealing search recovers 9 to 10 of 10 planted English texts to at least half their letters; the best K4 fit that keeps every clue letter scores -343.4 nats, below all 20 null runs and about 110 nats under the planted range.",
+      "logs": [
+        "k4-focus/quagmire19-2026-10-18.md"
       ]
     },
     {

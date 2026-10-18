@@ -12,7 +12,7 @@
       "unit": "hypothesis families",
       "reviewed_through": "2026-10-18",
       "plaintext_recovered_percent": 0,
-      "summary": "Unsolved. Plaintext recovered: 0 percent. 17 of 27 hypothesis families listed (63 percent) are excluded by a count or excluded by the clues; 4 are open. Reviewed through 2026-10-18.",
+      "summary": "Unsolved. Plaintext recovered: 0 percent. 18 of 29 hypothesis families listed (62 percent) are excluded by a count or excluded by the clues; 4 are open. Reviewed through 2026-10-18.",
       "caveat": "Progress here means ruling cipher models out against the artist's disclosed clues, fitting one clue and holding the other back. The plaintext is reported to sit in a private archive sold in November 2025, and the custodian still lists K4 as unsolved; the question here is a public method, not whether anyone knows the answer. The share is of the families listed, not of every cipher.",
       "note_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/kryptos-k4-2026-10-03.md",
       "ledger_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/kryptos-k4-status.json",
@@ -23,28 +23,28 @@
           "label": "Open",
           "definition": "Open: not searched here, or not searched with a method shown to work.",
           "count": 4,
-          "percent": 15
+          "percent": 14
         },
         {
           "status": "tested-without-power",
           "label": "Tested without shown power",
           "definition": "Tested, not closed: the search ran, but some hypotheses stay underdetermined, the budget ran out, or matched-length controls did not come back.",
-          "count": 6,
-          "percent": 22
+          "count": 7,
+          "percent": 24
         },
         {
           "status": "excluded-by-constraint",
           "label": "Excluded by the clues",
           "definition": "Excluded by the clues: every complete key the model allows contradicts a disclosed clue held back from fitting, or the model cannot place the clues at all.",
           "count": 15,
-          "percent": 56
+          "percent": 52
         },
         {
           "status": "excluded-by-count",
           "label": "Excluded by a count",
           "definition": "Excluded by a count: a measured statistic falls outside a threshold fixed before K4 was scored and checked on planted controls. This is statistical, not exact.",
-          "count": 2,
-          "percent": 7
+          "count": 3,
+          "percent": 10
         }
       ],
       "families": [
@@ -151,6 +151,17 @@
           "priority": null,
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/hill-large-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "In-place Quagmire II and IV at period 19",
+          "status": "tested-without-power",
+          "status_label": "Tested without shown power",
+          "evidence": "The same search recovers only 2 of 10 planted Quagmire II texts and none for Quagmire IV, so its negative result on K4 says little.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/quagmire19-2026-10-18.md"
           ]
         },
         {
@@ -339,6 +350,17 @@
           "priority": null,
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/hill-large-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "In-place Quagmire I at period 19, for English plaintext",
+          "status": "excluded-by-count",
+          "status_label": "Excluded by a count",
+          "evidence": "The one setting where K4 fit the clues more often than most random strings. An annealing search recovers 9 to 10 of 10 planted English texts to at least half their letters; the best K4 fit that keeps every clue letter scores -343.4 nats, below all 20 null runs and about 110 nats under the planted range.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/quagmire19-2026-10-18.md"
           ]
         }
       ],
