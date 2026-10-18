@@ -86,6 +86,7 @@
   "statuses": {
     "excluded-by-constraint": "Excluded by the clues: every complete key the model allows contradicts a disclosed clue held back from fitting, or the model cannot place the clues at all.",
     "tested-without-power": "Tested, not closed: the search ran, but some hypotheses stay underdetermined, the budget ran out, or matched-length controls did not come back.",
+    "excluded-by-count": "Excluded by a count: a measured statistic falls outside a threshold fixed before K4 was scored and checked on planted controls. This is statistical, not exact.",
     "open": "Open: not searched here, or not searched with a method shown to work."
   },
   "families": [
@@ -120,6 +121,14 @@
       "evidence": "For the 137 such settings up to 32, fitting one clue forces 8 of 3,288 held-back letters (all right) and leaves 3,280 free, so the clues cannot test these settings.",
       "logs": [
         "k4-focus/unknown-alphabets-hill-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "The same transpositions with any alphabet in each column, periods 3 to 26",
+      "status": "tested-without-power",
+      "evidence": "The bijection bound excludes periods 1 and 2 everywhere and period 3 when substitution comes first; at higher periods it removes about the share it removes from planted wrong hypotheses, so the survivors are what chance leaves. Complete keys exist only at periods 21 to 24 and test at most 3 clue letters.",
+      "logs": [
+        "k4-focus/transposition-substitution-2026-10-18.md"
       ]
     },
     {
@@ -196,6 +205,30 @@
       ]
     },
     {
+      "family": "Every column order to width 10, K3-style double rotation, route reads and keyword orders, composed either way with straight or KRYPTOS-keyed Vigenere or Beaufort at periods 1 to 20, on 97 letters or 98 with the K3 question mark",
+      "status": "excluded-by-constraint",
+      "evidence": "855,465,832 hypotheses in all; no hypothesis at periods 1 to 20 lets one shift per column place both clues. The C kernel matches the Python reference, the family code reproduces K3 from its plaintext, and 200 planted controls per family are never excluded.",
+      "logs": [
+        "k4-focus/transposition-substitution-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "Running keys from 19 frozen texts (K1 to K3 plaintext and ciphertext, Carter's Tutankhamun volumes, the King James Bible, the Declaration and Constitution, English and German novels) under Vigenere, Beaufort and variant Beaufort on A-Z, KRYPTOS, PALIMPSEST or ABSCISSA, read either way",
+      "status": "excluded-by-constraint",
+      "evidence": "No offset in any text places all 24 clue key letters under any of the 12 tableaux; the best partial matches (3 to 9 of 24) are what chance gives. Planted keys are found at the right offset.",
+      "logs": [
+        "k4-focus/running-key-texts-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "Any English-prose running key, in place, under those 12 tableaux",
+      "status": "excluded-by-count",
+      "evidence": "The two clue fragments of the key score at the 0.0000 percentile of 1,916,325 aligned English fragment pairs under every tableau, read either way; none of 7,981 planted clean-prose keys scores as low as K4's best.",
+      "logs": [
+        "k4-focus/running-key-texts-2026-10-18.md"
+      ]
+    },
+    {
       "family": "Keyed alphabets other than A to Z and KRYPTOS, under the layered models",
       "status": "open",
       "evidence": "The layered space used two alphabets only. In place, unknown alphabets are now checked exactly, so the open question is unknown alphabets combined with a transposition.",
@@ -204,20 +237,20 @@
       "next": "Add unknown Quagmire-style alphabets to the layered search with the optional symbolic engine, clue positions frozen before fitting and one clue held back."
     },
     {
-      "family": "Transpositions other than ragged columnar (routes, grilles, Myszkowski with other keys) combined with substitution",
+      "family": "Column orders of width 11 and above, double columnar, grilles and other transpositions combined with substitution, and transposition with substitution at periods above 20",
       "status": "open",
-      "evidence": "Only ragged columnar layouts and the three published keywords were composed with substitution.",
+      "evidence": "Every column order to width 10, K3-style double rotation, routes and keyword orders are done for Vigenere and Beaufort at periods 1 to 20; the bijection bound has no power above period 3.",
       "logs": [],
       "priority": 2,
-      "next": "Choose one transposition with a stated construction reason, cap the portfolio at 10,000 checks, and validate it on fresh synthetic keys before running K4."
+      "next": "Run widths 11 and 12 in the C kernel (about 5 and 50 minutes a length), then double columnar with a stated construction reason, with planted controls."
     },
     {
-      "family": "Running keys from texts other than K3, and Hill matrices of 5 by 5 or larger",
+      "family": "Running keys that are not English prose or not in the frozen list, and Hill matrices of 5 by 5 or larger",
       "status": "open",
-      "evidence": "Only the K3 plaintext was tried as a running key; in-place Hill up to 4 by 4 is excluded, and two clues give too few known blocks to pin a 5 by 5 row.",
+      "evidence": "19 frozen texts are excluded exactly and English prose statistically; other languages, lists and non-prose keys are not.",
       "logs": [],
       "priority": 3,
-      "next": "Freeze a short list of sourced candidate key texts with hashes before any search, and run them with the same reciprocal folds."
+      "next": "Add sourced non-English key texts with hashes before any search, and finish the Hill 5 by 5 enumeration with planted controls."
     }
   ]
 }
