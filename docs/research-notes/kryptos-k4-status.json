@@ -253,6 +253,14 @@
       ]
     },
     {
+      "family": "Every column order at widths 11 to 16, composed either way with straight or KRYPTOS-keyed Vigenere or Beaufort, at periods 1 to 16 (widths 11 to 14), 1 to 15 (width 15) and 1 to 14 (width 16), on 97 or 98 letters",
+      "status": "excluded-by-constraint",
+      "evidence": "Branch and bound (widths 11 to 13) and a SAT model (14 to 16) find no fitting order; both agree with the full enumeration where it can run, and planted keys are found. Orders that fit at longer periods decrypt to random-like text.",
+      "logs": [
+        "k4-focus/columnar-wide-2026-10-18.md"
+      ]
+    },
+    {
       "family": "Any English-prose running key, in place, under those 12 tableaux",
       "status": "excluded-by-count",
       "evidence": "The two clue fragments of the key score at the 0.0000 percentile of 1,916,325 aligned English fragment pairs under every tableau, read either way; none of 7,981 planted clean-prose keys scores as low as K4's best.",
@@ -277,12 +285,12 @@
       "next": "Add unknown Quagmire-style alphabets to the layered search with the optional symbolic engine, clue positions frozen before fitting and one clue held back."
     },
     {
-      "family": "Column orders of width 11 and above, double columnar, grilles and other transpositions combined with substitution, and transposition with substitution at periods above 20",
+      "family": "Column orders of width 17 and above, longer periods at widths 11 to 16, double columnar, grilles and other transpositions combined with substitution",
       "status": "open",
-      "evidence": "Every column order to width 10, K3-style double rotation, routes and keyword orders are done for Vigenere and Beaufort at periods 1 to 20; the bijection bound has no power above period 3.",
+      "evidence": "Every column order to width 16 is done for Vigenere and Beaufort on A-Z and KRYPTOS at periods up to 14 to 16; a widths 17 to 24 SAT run was stopped unfinished.",
       "logs": [],
       "priority": 2,
-      "next": "Run widths 11 and 12 in the C kernel (about 5 and 50 minutes a length), then double columnar with a stated construction reason, with planted controls."
+      "next": "Finish widths 17 to 24 with engine.k4_columnar_sat (a few CPU hours, splittable), then double columnar with a stated construction reason, with planted controls."
     },
     {
       "family": "Running keys that are not English prose or not in the frozen list",

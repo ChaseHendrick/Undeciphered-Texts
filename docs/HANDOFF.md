@@ -8,6 +8,18 @@ Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
 Branch `claude/festive-maxwell-2inp3p`. K4 is not solved and nothing here is a reading. Two exact, clue-only checks were added; neither uses a language model, so they hold whatever language the rest of K4 is in. `engine.k4_alphabet_csp` (optional Z3) checks ten in-place families with every alphabet left free, periods and lags 1 to 96: keyed Vigenere with any keyword is blocked at every period 1 to 26, and the other families at the periods in `docs/k4-focus/unknown-alphabets-hill-2026-10-18.md`. Where the clues do not block, a fit on one clue forces 8 of 3,288 held-back letters, so those settings are untested. `engine.k4_hill_rows` tries every decryption row of 2 by 2 to 4 by 4 Hill at every alignment under four letter numberings: all 36 settings are blocked. Planted controls are never blocked (`tests/test_k4_alphabet_csp.py`). The ledger gained two excluded families and one tested without power. What is left open is a transposition combined with substitution, running keys other than K3, and Hill at 5 by 5 and above.
 
+## Session 18 October 2026, later: the three open K4 families, faster solvers, and leads
+
+Same branch. K4 is not solved and nothing here is a reading. Each result has a dated log in `docs/k4-focus/` and a ledger entry; the README row reads 17 of 27 families excluded, 4 open.
+
+- Transposition plus substitution (`engine.k4_transposition_sub`, C kernel): every column order to width 10, K3-style double rotation (reproduces K3), routes and keyword orders, with Vigenere or Beaufort on A-Z or KRYPTOS, excluded at periods 1 to 20. `engine.k4_columnar_bnb` (branch and bound, slot-pattern counting) and `engine.k4_columnar_sat` (CaDiCaL) extend this to widths 11 to 16 at periods to 14 to 16. Widths 17 to 24 were stopped unfinished after 30 minutes (about 2 hours left); run `python3 -m engine.k4_columnar_sat 17 24 <workers> 20` next.
+- Running keys (`engine.k4_running_key_texts`): 19 frozen, hashed texts place no clue under 12 tableaux; an English-prose key is excluded statistically. Texts sit in the ignored `work/`.
+- Hill (`engine.k4_hill_large`): 11 of 20 settings at 5 by 5 excluded exactly, 3 enumerated with no English-level key; 6 by 6 and up are not testable by the clues.
+- `engine.k4_sat` (PySAT, pinned in `requirements-synthesis.txt`) replaces Z3 for these checks, about 100 times faster. MaxSAT shows one misspelled clue letter does not rescue keyed Vigenere at periods 1 to 18, 20 to 22, 25. Two added keys are excluded for 68 length pairs.
+- `engine.k4_family_net`: a neural family prior. K4 sits with random letters, Gromark and trifid; that opened a fractionation and Gromark family as the next lead.
+- The most unusual setting found is Quagmire I, II and IV at period 19, which fit both clues exactly; 1 to 4 percent of random strings do too, so it is not significant after 208 settings. A language search there is in `engine.k4_quagmire19` if it was finished; see its log.
+- Modal is not configured in this container. If the owner adds `MODAL_TOKEN_ID` and `MODAL_TOKEN_SECRET` as environment secrets, wide-width SAT runs can be fanned out there.
+
 ## Session 18 October 2026: D'Agapeyeff research closed
 
 The owner has closed research on the D'Agapeyeff challenge for now. The owner's view is that there is probably no recoverable message. That is an interpretation, not a proof, and nothing here is a decipherment. No search was run and no family changed status. The exclusions, the ledger and preprint 1.0.0 (`papers/dagapeyeff-exclusions`, doi:10.5281/zenodo.23241304) stand as published. The decision is logged in `docs/logs/dagapeyeff-closed-2026-10-18.md`.
