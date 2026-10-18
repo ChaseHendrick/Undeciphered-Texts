@@ -4,6 +4,16 @@ This continuation began from verified `origin/main` commit `1ce3727dd419c80fd798
 
 Use plain sentences. Do not put U+2014 or U+2013 in new text.
 
+## Session 18 October 2026: K4 in place on unknown alphabets, and Hill to 4 by 4
+
+Branch `claude/festive-maxwell-2inp3p`. K4 is not solved and nothing here is a reading. Two exact, clue-only checks were added; neither uses a language model, so they hold whatever language the rest of K4 is in. `engine.k4_alphabet_csp` (optional Z3) checks ten in-place families with every alphabet left free, periods and lags 1 to 96: keyed Vigenere with any keyword is blocked at every period 1 to 26, and the other families at the periods in `docs/k4-focus/unknown-alphabets-hill-2026-10-18.md`. Where the clues do not block, a fit on one clue forces 8 of 3,288 held-back letters, so those settings are untested. `engine.k4_hill_rows` tries every decryption row of 2 by 2 to 4 by 4 Hill at every alignment under four letter numberings: all 36 settings are blocked. Planted controls are never blocked (`tests/test_k4_alphabet_csp.py`). The ledger gained two excluded families and one tested without power. What is left open is a transposition combined with substitution, running keys other than K3, and Hill at 5 by 5 and above.
+
+## Session 18 October 2026: D'Agapeyeff research closed
+
+The owner has closed research on the D'Agapeyeff challenge for now. The owner's view is that there is probably no recoverable message. That is an interpretation, not a proof, and nothing here is a decipherment. No search was run and no family changed status. The exclusions, the ledger and preprint 1.0.0 (`papers/dagapeyeff-exclusions`, doi:10.5281/zenodo.23241304) stand as published. The decision is logged in `docs/logs/dagapeyeff-closed-2026-10-18.md`.
+
+The ledger stage is now `closed`, with a `closure` block (date, log, summary, detail), and `reviewed_through` is 2026-10-18. `tools/refresh_docs.py` accepts the new stage: the closure summary joins the status line in the README table and the note, the six open families are shown as left open with their planned next steps, and the note's `index-next` reads "None planned". The site feed keeps its fields and gains `closure`, which is null for every other case; hendrickresearch.com may need to accept the stage `closed`. Do not start new D'Agapeyeff searches unless the owner reopens the case. If it reopens, set the stage back, remove the `closure` block and start from the grille, the first open job.
+
 ## Session 7 to 8 October 2026: paper ready, companion fixed, second seeds, fourth reading
 
 Branch `claude/friendly-pascal-m4b8j5`, pull request 17. The D'Agapeyeff paper is `ready` in `papers/papers.json` with every quality item closed and `## 1.0.0` notes in its `RELEASES.md`; no release has been made, and the owner starts it (Actions, publish papers, 1.0.0, github-import).

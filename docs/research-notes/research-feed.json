@@ -8,10 +8,11 @@
       "title": "Kryptos K4",
       "kind": "cipher",
       "stage": "ongoing",
+      "closure": null,
       "unit": "hypothesis families",
-      "reviewed_through": "2026-10-07",
+      "reviewed_through": "2026-10-18",
       "plaintext_recovered_percent": 0,
-      "summary": "Unsolved. Plaintext recovered: 0 percent. 7 of 13 hypothesis families listed (54 percent) are excluded by the clues; 3 are open. Reviewed through 2026-10-07.",
+      "summary": "Unsolved. Plaintext recovered: 0 percent. 9 of 16 hypothesis families listed (56 percent) are excluded by the clues; 3 are open. Reviewed through 2026-10-18.",
       "caveat": "Progress here means ruling cipher models out against the artist's disclosed clues, fitting one clue and holding the other back. The plaintext is reported to sit in a private archive sold in November 2025, and the custodian still lists K4 as unsolved; the question here is a public method, not whether anyone knows the answer. The share is of the families listed, not of every cipher.",
       "note_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/kryptos-k4-2026-10-03.md",
       "ledger_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/kryptos-k4-status.json",
@@ -22,21 +23,21 @@
           "label": "Open",
           "definition": "Open: not searched here, or not searched with a method shown to work.",
           "count": 3,
-          "percent": 23
+          "percent": 19
         },
         {
           "status": "tested-without-power",
           "label": "Tested without shown power",
           "definition": "Tested, not closed: the search ran, but some hypotheses stay underdetermined, the budget ran out, or matched-length controls did not come back.",
-          "count": 3,
-          "percent": 23
+          "count": 4,
+          "percent": 25
         },
         {
           "status": "excluded-by-constraint",
           "label": "Excluded by the clues",
           "definition": "Excluded by the clues: every complete key the model allows contradicts a disclosed clue held back from fitting, or the model cannot place the clues at all.",
-          "count": 7,
-          "percent": 54
+          "count": 9,
+          "percent": 56
         }
       ],
       "families": [
@@ -44,7 +45,7 @@
           "family": "Keyed alphabets other than A to Z and KRYPTOS, under the layered models",
           "status": "open",
           "status_label": "Open",
-          "evidence": "The completed space used two alphabets only.",
+          "evidence": "The layered space used two alphabets only. In place, unknown alphabets are now checked exactly, so the open question is unknown alphabets combined with a transposition.",
           "next": "Add unknown Quagmire-style alphabets to the layered search with the optional symbolic engine, clue positions frozen before fitting and one clue held back.",
           "priority": 1,
           "logs": []
@@ -59,10 +60,10 @@
           "logs": []
         },
         {
-          "family": "Running keys from texts other than K3, and Hill matrices larger than 2 by 2",
+          "family": "Running keys from texts other than K3, and Hill matrices of 5 by 5 or larger",
           "status": "open",
           "status_label": "Open",
-          "evidence": "Only the K3 plaintext was tried as a running key; only 2 by 2 Hill was run.",
+          "evidence": "Only the K3 plaintext was tried as a running key; in-place Hill up to 4 by 4 is excluded, and two clues give too few known blocks to pin a 5 by 5 row.",
           "next": "Freeze a short list of sourced candidate key texts with hashes before any search, and run them with the same reciprocal folds.",
           "priority": 3,
           "logs": []
@@ -99,6 +100,17 @@
           "priority": null,
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/tractable-open-attempt-2026-10-03.md"
+          ]
+        },
+        {
+          "family": "In-place Quagmire, progressive and autokey forms on unknown alphabets at the periods and lags the clues do not block",
+          "status": "tested-without-power",
+          "status_label": "Tested without shown power",
+          "evidence": "For the 137 such settings up to 32, fitting one clue forces 8 of 3,288 held-back letters (all right) and leaves 3,280 free, so the clues cannot test these settings.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/unknown-alphabets-hill-2026-10-18.md"
           ]
         },
         {
@@ -178,6 +190,28 @@
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/running-key-hill-2026-10-04.md"
           ]
+        },
+        {
+          "family": "In-place keyed Vigenere (Quagmire III, the K1 and K2 system) with any alphabet and keyword at every period 1 to 26, and other Quagmire, progressive and autokey forms on unknown alphabets at the periods and lags listed in the log",
+          "status": "excluded-by-constraint",
+          "status_label": "Excluded by the clues",
+          "evidence": "An exact Z3 check of both clues, with every alphabet left free, is unsatisfiable at those periods and lags across ten families; no language model is used, so it holds whatever language the rest of K4 is in. A control with both clues planted under each family is never blocked.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/unknown-alphabets-hill-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "In-place Hill, 2 by 2 to 4 by 4, every block alignment, letters numbered A to Z, KRYPTOS, PALIMPSEST or ABSCISSA",
+          "status": "excluded-by-constraint",
+          "status_label": "Excluded by the clues",
+          "evidence": "Every one of the 26^n candidate decryption rows was tried. At 2 by 2 and 3 by 3 no row fits both clues; at 4 by 4 no fitting rows form a matrix invertible mod 26. Planted controls are never excluded, and at 3 by 3 one clue pins all of the other under a planted key.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/unknown-alphabets-hill-2026-10-18.md"
+          ]
         }
       ],
       "next": [
@@ -190,7 +224,7 @@
           "next": "Choose one transposition with a stated construction reason, cap the portfolio at 10,000 checks, and validate it on fresh synthetic keys before running K4."
         },
         {
-          "family": "Running keys from texts other than K3, and Hill matrices larger than 2 by 2",
+          "family": "Running keys from texts other than K3, and Hill matrices of 5 by 5 or larger",
           "next": "Freeze a short list of sourced candidate key texts with hashes before any search, and run them with the same reciprocal folds."
         }
       ],
@@ -315,6 +349,7 @@
       "title": "Voynich manuscript",
       "kind": "script",
       "stage": "proposed",
+      "closure": null,
       "unit": "questions",
       "reviewed_through": "2026-10-03",
       "plaintext_recovered_percent": 0,
@@ -456,6 +491,7 @@
       "title": "Linear A",
       "kind": "script",
       "stage": "proposed",
+      "closure": null,
       "unit": "questions",
       "reviewed_through": "2026-10-03",
       "plaintext_recovered_percent": 0,
@@ -576,6 +612,7 @@
       "title": "Indus signs",
       "kind": "script",
       "stage": "proposed",
+      "closure": null,
       "unit": "questions",
       "reviewed_through": "2026-10-03",
       "plaintext_recovered_percent": 0,
@@ -696,6 +733,7 @@
       "title": "Rongorongo",
       "kind": "script",
       "stage": "proposed",
+      "closure": null,
       "unit": "questions",
       "reviewed_through": "2026-10-03",
       "plaintext_recovered_percent": 0,
@@ -824,6 +862,7 @@
       "title": "Phaistos disc",
       "kind": "script",
       "stage": "proposed",
+      "closure": null,
       "unit": "questions",
       "reviewed_through": "2026-10-03",
       "plaintext_recovered_percent": 0,
@@ -930,6 +969,7 @@
       "title": "Zodiac Z13 and Z32",
       "kind": "cipher",
       "stage": "proposed",
+      "closure": null,
       "unit": "hypothesis families",
       "reviewed_through": "2026-10-03",
       "plaintext_recovered_percent": 0,
@@ -1049,6 +1089,7 @@
       "title": "Dorabella",
       "kind": "cipher",
       "stage": "ongoing",
+      "closure": null,
       "unit": "hypothesis families",
       "reviewed_through": "2026-10-03",
       "plaintext_recovered_percent": 0,
@@ -1216,11 +1257,17 @@
       "id": "dagapeyeff",
       "title": "D'Agapeyeff challenge",
       "kind": "cipher",
-      "stage": "preprint",
+      "stage": "closed",
+      "closure": {
+        "date": "2026-10-18",
+        "summary": "Research closed on 2026-10-18 by the owner's decision; the owner's view is that there is probably no message, which is an interpretation, not a proof.",
+        "detail": "The owner closed research on this case for now because, in the owner's view, there is probably no recoverable message. That is an interpretation, not a proof: a construction with no message fits every statistic measured, but the order test barely tells a turning-grille message from no message, and the grille search cannot yet find a planted grille. No family changed status with the decision. The exclusions and the preprint (papers/dagapeyeff-exclusions, doi:10.5281/zenodo.23241304) stand as published, and the open families keep their planned next steps in case the work reopens.",
+        "log": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-closed-2026-10-18.md"
+      },
       "unit": "hypothesis families",
-      "reviewed_through": "2026-10-07",
+      "reviewed_through": "2026-10-18",
       "plaintext_recovered_percent": 0,
-      "summary": "Unsolved. Plaintext recovered: 0 percent. 29 of 35 hypothesis families listed (83 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-07.",
+      "summary": "Unsolved. Plaintext recovered: 0 percent. Research closed on 2026-10-18 by the owner's decision; the owner's view is that there is probably no message, which is an interpretation, not a proof. 29 of 35 hypothesis families listed (83 percent) are closed with shown power or excluded by a count; 6 are left open. Reviewed through 2026-10-18.",
       "caveat": "Progress here means ruling hypotheses out, not reading part of a message. The percentage is a share of the families listed below, which is not every possible cipher, and a hand construction with no message fits every statistic measured so far. It is not a measure of distance to a reading.",
       "note_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/dagapeyeff-2026-10-05.md",
       "ledger_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/dagapeyeff-status.json",
@@ -1715,7 +1762,7 @@
         "summary": "In 1939 Alexander d'Agapeyeff printed 392 digits at the back of his book Codes and Ciphers as a challenge. Nobody has ever read them, and later editions quietly dropped the puzzle. We have not read it either. What we have done is rule out most of the ordinary ways it could have been made, using tests we first proved can find a hidden message of the same length.",
         "what_it_is": "The digits come in pairs. Each pair names a cell of a 5 by 5 grid of letters, called a Polybius square, so the puzzle is 196 grid cells laid out in a 14 by 14 block. If the grid were simply a letter table, swapping the cells for letters would give a message. It does not: the result reads like random letters in every language tried.",
         "what_we_found": "Before trusting a negative result we plant a known message of the same length, encipher it the same way, and check that the search finds it. Searches that pass that test and still find nothing on the real puzzle count as closed. Some ideas are ruled out without any search, because the puzzle's letter counts are impossible for them. Latin fits the letter counts better than any of 98 languages, but Latin searches with shown power also came back empty.",
-        "whats_next": "The biggest open idea is a turning grille, a card with holes rotated over the page, combined with a second step that evens out the letter counts. Our grille search cannot yet find a planted message, so the next job is a better method, not more computer time. It is also possible that there was never a message, or that a mistake in enciphering destroyed it.",
+        "whats_next": "Nothing, for now. On 18 October 2026 we closed this research, because we think there was probably never a message. That is an interpretation, not a proof. The biggest idea still open is a turning grille, a card with holes rotated over the page, combined with a second step that evens out the letter counts, and our grille search cannot yet find a planted message, so a grille message is not ruled out. The exclusions and the paper stand as published. If the work reopens, the first job is a grille method that can find a planted message, not more computer time.",
         "faq": [
           {
             "q": "Has anyone solved the D'Agapeyeff cipher?",
