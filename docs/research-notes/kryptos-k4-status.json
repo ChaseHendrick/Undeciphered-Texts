@@ -269,6 +269,22 @@
       ]
     },
     {
+      "family": "Any cipher whose letters come from one 25-cell square: bifid, conjugated-matrix bifid, Playfair, seriated Playfair, two-square, four-square, Phillips and Polybius substitutions",
+      "status": "excluded-by-constraint",
+      "evidence": "Such a cipher can write at most 25 different letters and K4 uses all 26, whatever the key, period or language.",
+      "logs": [
+        "k4-focus/fractionation-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "Trifid with any 27-symbol cube at every period, on 97 letters or 98 with the K3 question mark as the 27th symbol",
+      "status": "excluded-by-constraint",
+      "evidence": "An exact SAT model with the cube left free finds no fit at periods 1 to 97 and 1 to 98; EASTNORTHEAST alone blocks 96 of 97. 80 planted trifid texts from the repo's encipherment are never blocked.",
+      "logs": [
+        "k4-focus/fractionation-2026-10-18.md"
+      ]
+    },
+    {
       "family": "Any English-prose running key, in place, under those 12 tableaux",
       "status": "excluded-by-count",
       "evidence": "The two clue fragments of the key score at the 0.0000 percentile of 1,916,325 aligned English fragment pairs under every tableau, read either way; none of 7,981 planted clean-prose keys scores as low as K4's best.",
@@ -317,14 +333,14 @@
       "next": "Add sourced non-English key texts with hashes before any search, with planted keys as controls."
     },
     {
-      "family": "Fractionating ciphers (bifid, trifid) and Gromark variants beyond the ACA digit rule",
+      "family": "Gromark variants beyond the ACA digit rule, and fractionation other than 25-cell squares and standard trifid",
       "status": "open",
-      "evidence": "A calibrated neural family prior trained on planted 97-letter ciphertexts puts K4 with random letters (0.36), Gromark (0.32) and trifid (0.12), and far from short periods, autokey, running key, Hill and pure transposition. A prior is a search order, not evidence of a method.",
+      "evidence": "5 by 5 square ciphers and standard trifid are excluded; the neural prior also pointed at Gromark, which is excluded only for the ACA digit rule on one keyed alphabet.",
       "logs": [
         "k4-focus/family-net-2026-10-18.md"
       ],
       "priority": 4,
-      "next": "Write clue-only checks for in-place bifid and trifid with unknown squares and for Gromark with other digit rules, with planted controls, before any language-scored search."
+      "next": "Check Gromark with digit keys on two keyed alphabets and lagged-Fibonacci letter keys exactly, with planted controls."
     }
   ]
 }

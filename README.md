@@ -94,7 +94,7 @@ One line per case, generated from each note's status ledger in [`docs/research-n
 <!-- research-status:start -->
 | Case | Status |
 | --- | --- |
-| [Kryptos K4](docs/research-notes/kryptos-k4-2026-10-03.md) | Unsolved. Plaintext recovered: 0 percent. 18 of 29 hypothesis families listed (62 percent) are excluded by a count or excluded by the clues; 4 are open. Reviewed through 2026-10-18. |
+| [Kryptos K4](docs/research-notes/kryptos-k4-2026-10-03.md) | Unsolved. Plaintext recovered: 0 percent. 20 of 31 hypothesis families listed (65 percent) are excluded by a count or excluded by the clues; 4 are open. Reviewed through 2026-10-18. |
 | [Voynich manuscript](docs/research-notes/voynich-2026-10-03.md) | Undeciphered. Reading recovered: 0 percent. 0 of 4 questions listed (0 percent) are answered with a control; 4 are open. Reviewed through 2026-10-03. |
 | [Linear A](docs/research-notes/linear-a-2026-10-03.md) | Undeciphered. Reading recovered: 0 percent. 0 of 3 questions listed (0 percent) are answered with a control; 3 are open. Reviewed through 2026-10-03. |
 | [Indus signs](docs/research-notes/indus-2026-10-03.md) | Undeciphered. Reading recovered: 0 percent. 0 of 3 questions listed (0 percent) are answered with a control; 3 are open. Reviewed through 2026-10-03. |
