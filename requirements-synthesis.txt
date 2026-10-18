@@ -1,2 +1,4 @@
 # Optional exact symbolic cipher inference. Core classical solvers remain stdlib-only.
 z3-solver==5.1.0.0
+# Optional SAT and MaxSAT for the K4 alphabet checks (engine/k4_sat.py). PySAT publishes only dev releases.
+python-sat==1.9.dev16
