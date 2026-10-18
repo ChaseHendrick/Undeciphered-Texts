@@ -12,7 +12,7 @@
       "unit": "hypothesis families",
       "reviewed_through": "2026-10-18",
       "plaintext_recovered_percent": 0,
-      "summary": "Unsolved. Plaintext recovered: 0 percent. 12 of 20 hypothesis families listed (60 percent) are excluded by a count or excluded by the clues; 3 are open. Reviewed through 2026-10-18.",
+      "summary": "Unsolved. Plaintext recovered: 0 percent. 14 of 23 hypothesis families listed (61 percent) are excluded by a count or excluded by the clues; 3 are open. Reviewed through 2026-10-18.",
       "caveat": "Progress here means ruling cipher models out against the artist's disclosed clues, fitting one clue and holding the other back. The plaintext is reported to sit in a private archive sold in November 2025, and the custodian still lists K4 as unsolved; the question here is a public method, not whether anyone knows the answer. The share is of the families listed, not of every cipher.",
       "note_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/kryptos-k4-2026-10-03.md",
       "ledger_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/kryptos-k4-status.json",
@@ -23,28 +23,28 @@
           "label": "Open",
           "definition": "Open: not searched here, or not searched with a method shown to work.",
           "count": 3,
-          "percent": 15
+          "percent": 13
         },
         {
           "status": "tested-without-power",
           "label": "Tested without shown power",
           "definition": "Tested, not closed: the search ran, but some hypotheses stay underdetermined, the budget ran out, or matched-length controls did not come back.",
-          "count": 5,
-          "percent": 25
+          "count": 6,
+          "percent": 26
         },
         {
           "status": "excluded-by-constraint",
           "label": "Excluded by the clues",
           "definition": "Excluded by the clues: every complete key the model allows contradicts a disclosed clue held back from fitting, or the model cannot place the clues at all.",
-          "count": 11,
-          "percent": 55
+          "count": 12,
+          "percent": 52
         },
         {
           "status": "excluded-by-count",
           "label": "Excluded by a count",
           "definition": "Excluded by a count: a measured statistic falls outside a threshold fixed before K4 was scored and checked on planted controls. This is statistical, not exact.",
-          "count": 1,
-          "percent": 5
+          "count": 2,
+          "percent": 9
         }
       ],
       "families": [
@@ -67,11 +67,11 @@
           "logs": []
         },
         {
-          "family": "Running keys that are not English prose or not in the frozen list, and Hill matrices of 5 by 5 or larger",
+          "family": "Running keys that are not English prose or not in the frozen list",
           "status": "open",
           "status_label": "Open",
           "evidence": "19 frozen texts are excluded exactly and English prose statistically; other languages, lists and non-prose keys are not.",
-          "next": "Add sourced non-English key texts with hashes before any search, and finish the Hill 5 by 5 enumeration with planted controls.",
+          "next": "Add sourced non-English key texts with hashes before any search, with planted keys as controls.",
           "priority": 3,
           "logs": []
         },
@@ -129,6 +129,17 @@
           "priority": null,
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/transposition-substitution-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "In-place Hill 6 by 6 to 10 by 10, and Hill 5 by 5 at 6 settings",
+          "status": "tested-without-power",
+          "status_label": "Tested without shown power",
+          "evidence": "Every row fits and an invertible fit exists, and fitting one clue forces no letter of the other, so the clues cannot test these sizes; listing the keys (1.4e14 to beyond 1e140) is out of reach.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/hill-large-2026-10-18.md"
           ]
         },
         {
@@ -254,6 +265,17 @@
           ]
         },
         {
+          "family": "In-place Hill 5 by 5 at 11 of its 20 alignment and numbering settings",
+          "status": "excluded-by-constraint",
+          "status_label": "Excluded by the clues",
+          "evidence": "Solving each row mod 2 and mod 13 shows that some row cannot fit both clues or that no fitting rows form a matrix invertible mod 26; the row counts match brute force over all 26^5 rows, and planted keys are never excluded.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/hill-large-2026-10-18.md"
+          ]
+        },
+        {
           "family": "Any English-prose running key, in place, under those 12 tableaux",
           "status": "excluded-by-count",
           "status_label": "Excluded by a count",
@@ -262,6 +284,17 @@
           "priority": null,
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/running-key-texts-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "In-place Hill 5 by 5 at the 3 settings small enough to list in full, for English plaintext",
+          "status": "excluded-by-count",
+          "status_label": "Excluded by a count",
+          "evidence": "All 26^5 clue-consistent keys per setting were decrypted; the best K4 quadgram score (-4.77 a quadgram) is far below the worst of 239 English windows (-2.67) and inside the range random text reaches. Planted English keys come first in 88 of 90 controls.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/hill-large-2026-10-18.md"
           ]
         }
       ],
@@ -275,8 +308,8 @@
           "next": "Run widths 11 and 12 in the C kernel (about 5 and 50 minutes a length), then double columnar with a stated construction reason, with planted controls."
         },
         {
-          "family": "Running keys that are not English prose or not in the frozen list, and Hill matrices of 5 by 5 or larger",
-          "next": "Add sourced non-English key texts with hashes before any search, and finish the Hill 5 by 5 enumeration with planted controls."
+          "family": "Running keys that are not English prose or not in the frozen list",
+          "next": "Add sourced non-English key texts with hashes before any search, with planted keys as controls."
         }
       ],
       "lay": {
