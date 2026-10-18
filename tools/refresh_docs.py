@@ -7,6 +7,10 @@ Each `docs/research-notes/<case>-status.json` ledger writes the status block
 and next steps of its note, that note's `index-next` line, one row of the
 status table in the root README, and its entry in `research-feed.json`, the
 file hendrickresearch.com reads to build its research pages.
+
+A ledger whose stage is "closed" also carries a `closure` block (date, log,
+summary, detail). Its summary joins the status line, the open families are
+shown as left open, and the note's `index-next` line says no work is planned.
 """
 
 from __future__ import annotations
@@ -52,6 +56,8 @@ _LABEL = {
     "tested-without-power": "Tested without shown power",
     "open": "Open",
 }
+
+STAGES = ("proposed", "ongoing", "preprint", "closed")
 
 _FIELD = re.compile(r"^index-(id|title|problem|data|next): (.*)$", re.M)
 _DATE = re.compile(r"(20\d\d-\d\d-\d\d)")
@@ -159,12 +165,19 @@ def status_summary(data: dict) -> str:
     opening = "Undeciphered. Reading recovered" if script else "Unsolved. Plaintext recovered"
     unit = data.get("unit", "hypothesis families")
     verb = "is" if shut == 1 else "are"
+    closure = f"{data['closure']['summary']} " if closed(data) else ""
+    still = "left open" if closed(data) else "open"
     return (
-        f"{opening}: {data['plaintext_recovered_percent']} percent. "
+        f"{opening}: {data['plaintext_recovered_percent']} percent. {closure}"
         f"{shut} of {total} {unit} listed ({_percent(shut, total)} percent) {verb} {phrase}; "
-        f"{counts.get('open', 0)} {'is' if counts.get('open', 0) == 1 else 'are'} open. "
+        f"{counts.get('open', 0)} {'is' if counts.get('open', 0) == 1 else 'are'} {still}. "
         f"Reviewed through {data['reviewed_through']}."
     )
+
+
+def closed(data: dict) -> bool:
+    """Research on the case is closed by decision; the open families stay open."""
+    return data.get("stage") == "closed"
 
 
 def _links(data: dict, family: dict, prefix: str) -> str:
@@ -175,6 +188,10 @@ def status_block(data: dict) -> str:
     counts = tally(data)
     total = sum(counts.values())
     lines = ["## How close is this to solved?", "", f"**{status_summary(data)}**", ""]
+    if closed(data):
+        closure = data["closure"]
+        lines += [f"**Research closed on {closure['date']}.** {closure['detail']} "
+                  f"[log](../{log_path(closure['log'])})", ""]
     if data.get("lay", {}).get("summary"):
         lines += [f"**In plain words.** {data['lay']['summary']}", ""]
     column = "Questions" if data.get("kind") == "script" else "Families"
@@ -201,7 +218,11 @@ def _open(data: dict) -> list[dict]:
 
 def next_block(data: dict) -> str:
     column = "Open questions" if data.get("kind") == "script" else "Open families"
-    lines = [f"{column}, in the order they are planned:", ""]
+    if closed(data):
+        lines = [f"Research closed on {data['closure']['date']}, so no work is planned. "
+                 f"If it reopens, the {column.lower()} keep these next steps, in the order they were planned:", ""]
+    else:
+        lines = [f"{column}, in the order they are planned:", ""]
     for rank, family in enumerate(_open(data), start=1):
         lines.append(f"{rank}. **{family['family'].rstrip('?.')}.** {family['next']}")
     lines += ["", f"Generated from [`{data['_file']}`]({data['_file']}) by `tools/refresh_docs.py`."]
@@ -291,6 +312,8 @@ def feed_case(data: dict, note: str) -> dict:
         "title": data["title"],
         "kind": data.get("kind", "cipher"),
         "stage": data.get("stage", "ongoing"),
+        "closure": ({key: value for key, value in data["closure"].items() if key != "log"}
+                    | {"log": BLOB + "docs/" + log_path(data["closure"]["log"])}) if closed(data) else None,
         "unit": data.get("unit", "hypothesis families"),
         "reviewed_through": data["reviewed_through"],
         "plaintext_recovered_percent": data["plaintext_recovered_percent"],
@@ -334,7 +357,10 @@ def render() -> dict[str, str]:
         note = notes[data["note"]]
         note = _replace(note, STATUS_START, STATUS_END, status_block(data))
         note = _replace(note, NEXT_START, NEXT_END, next_block(data))
-        if _open(data):
+        if closed(data):
+            note = re.sub(r"^index-next: .*$", f"index-next: None planned; research closed on {data['closure']['date']}",
+                          note, count=1, flags=re.M)
+        elif _open(data):
             note = re.sub(r"^index-next: .*$", "index-next: " + _open(data)[0]["next"].rstrip("."), note,
                           count=1, flags=re.M)
         notes[data["note"]] = note

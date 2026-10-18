@@ -6,7 +6,7 @@
   "kind": "cipher",
   "unit": "hypothesis families",
   "stage": "ongoing",
-  "reviewed_through": "2026-10-07",
+  "reviewed_through": "2026-10-18",
   "log_glob": "k4-focus/*-????-??-??.md",
   "cite_every_log_from": "2026-10-04",
   "plaintext_recovered_percent": 0,
@@ -86,6 +86,7 @@
   "statuses": {
     "excluded-by-constraint": "Excluded by the clues: every complete key the model allows contradicts a disclosed clue held back from fitting, or the model cannot place the clues at all.",
     "tested-without-power": "Tested, not closed: the search ran, but some hypotheses stay underdetermined, the budget ran out, or matched-length controls did not come back.",
+    "excluded-by-count": "Excluded by a count: a measured statistic falls outside a threshold fixed before K4 was scored and checked on planted controls. This is statistical, not exact.",
     "open": "Open: not searched here, or not searched with a method shown to work."
   },
   "families": [
@@ -112,6 +113,38 @@
       "evidence": "5,000 hypotheses in each fold returned no candidate and stopped at the check limit, so the space is not finished.",
       "logs": [
         "tractable-open-attempt-2026-10-03.md"
+      ]
+    },
+    {
+      "family": "In-place Quagmire, progressive and autokey forms on unknown alphabets at the periods and lags the clues do not block",
+      "status": "tested-without-power",
+      "evidence": "For the 137 such settings up to 32, fitting one clue forces 8 of 3,288 held-back letters (all right) and leaves 3,280 free, so the clues cannot test these settings.",
+      "logs": [
+        "k4-focus/unknown-alphabets-hill-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "The same transpositions with any alphabet in each column, periods 3 to 26",
+      "status": "tested-without-power",
+      "evidence": "The bijection bound excludes periods 1 and 2 everywhere and period 3 when substitution comes first; at higher periods it removes about the share it removes from planted wrong hypotheses, so the survivors are what chance leaves. Complete keys exist only at periods 21 to 24 and test at most 3 clue letters.",
+      "logs": [
+        "k4-focus/transposition-substitution-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "In-place Hill 6 by 6 to 10 by 10, and Hill 5 by 5 at 6 settings",
+      "status": "tested-without-power",
+      "evidence": "Every row fits and an invertible fit exists, and fitting one clue forces no letter of the other, so the clues cannot test these sizes; listing the keys (1.4e14 to beyond 1e140) is out of reach.",
+      "logs": [
+        "k4-focus/hill-large-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "In-place Quagmire II and IV at period 19",
+      "status": "tested-without-power",
+      "evidence": "The same search recovers only 2 of 10 planted Quagmire II texts and none for Quagmire IV, so its negative result on K4 says little.",
+      "logs": [
+        "k4-focus/quagmire19-2026-10-18.md"
       ]
     },
     {
@@ -172,28 +205,126 @@
       ]
     },
     {
+      "family": "In-place keyed Vigenere (Quagmire III, the K1 and K2 system) with any alphabet and keyword at every period 1 to 26, and other Quagmire, progressive and autokey forms on unknown alphabets at the periods and lags listed in the log",
+      "status": "excluded-by-constraint",
+      "evidence": "An exact Z3 check of both clues, with every alphabet left free, is unsatisfiable at those periods and lags across ten families; no language model is used, so it holds whatever language the rest of K4 is in. A control with both clues planted under each family is never blocked.",
+      "logs": [
+        "k4-focus/unknown-alphabets-hill-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "In-place Hill, 2 by 2 to 4 by 4, every block alignment, letters numbered A to Z, KRYPTOS, PALIMPSEST or ABSCISSA",
+      "status": "excluded-by-constraint",
+      "evidence": "Every one of the 26^n candidate decryption rows was tried. At 2 by 2 and 3 by 3 no row fits both clues; at 4 by 4 no fitting rows form a matrix invertible mod 26. Planted controls are never excluded, and at 3 by 3 one clue pins all of the other under a planted key.",
+      "logs": [
+        "k4-focus/unknown-alphabets-hill-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "Every column order to width 10, K3-style double rotation, route reads and keyword orders, composed either way with straight or KRYPTOS-keyed Vigenere or Beaufort at periods 1 to 20, on 97 letters or 98 with the K3 question mark",
+      "status": "excluded-by-constraint",
+      "evidence": "855,465,832 hypotheses in all; no hypothesis at periods 1 to 20 lets one shift per column place both clues. The C kernel matches the Python reference, the family code reproduces K3 from its plaintext, and 200 planted controls per family are never excluded.",
+      "logs": [
+        "k4-focus/transposition-substitution-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "Running keys from 19 frozen texts (K1 to K3 plaintext and ciphertext, Carter's Tutankhamun volumes, the King James Bible, the Declaration and Constitution, English and German novels) under Vigenere, Beaufort and variant Beaufort on A-Z, KRYPTOS, PALIMPSEST or ABSCISSA, read either way",
+      "status": "excluded-by-constraint",
+      "evidence": "No offset in any text places all 24 clue key letters under any of the 12 tableaux; the best partial matches (3 to 9 of 24) are what chance gives. Planted keys are found at the right offset.",
+      "logs": [
+        "k4-focus/running-key-texts-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "In-place Hill 5 by 5 at 11 of its 20 alignment and numbering settings",
+      "status": "excluded-by-constraint",
+      "evidence": "Solving each row mod 2 and mod 13 shows that some row cannot fit both clues or that no fitting rows form a matrix invertible mod 26; the row counts match brute force over all 26^5 rows, and planted keys are never excluded.",
+      "logs": [
+        "k4-focus/hill-large-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "In-place keyed Vigenere with any alphabet even if one clue letter is wrong (a misspelling like those in K1 to K3), periods 1 to 18, 20 to 22 and 25",
+      "status": "excluded-by-constraint",
+      "evidence": "MaxSAT shows K4 needs at least two dropped clue letters at those periods; random strings need about as many or fewer, and 208 family and period settings show nothing significant (period 19 fits 1 to 4 percent of random strings).",
+      "logs": [
+        "k4-focus/sat-errors-twokey-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "Two repeating keys added on one keyed alphabet: 37 Vigenere-sense and 31 Beaufort-sense length pairs whose combined cycle exceeds 26",
+      "status": "excluded-by-constraint",
+      "evidence": "Exact SAT with the alphabet left free; every pair of lengths 2 to 26 was checked and planted controls always fit.",
+      "logs": [
+        "k4-focus/sat-errors-twokey-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "Every column order at widths 11 to 16, composed either way with straight or KRYPTOS-keyed Vigenere or Beaufort, at periods 1 to 16 (widths 11 to 14), 1 to 15 (width 15) and 1 to 14 (width 16), on 97 or 98 letters",
+      "status": "excluded-by-constraint",
+      "evidence": "Branch and bound (widths 11 to 13) and a SAT model (14 to 16) find no fitting order; both agree with the full enumeration where it can run, and planted keys are found. Orders that fit at longer periods decrypt to random-like text.",
+      "logs": [
+        "k4-focus/columnar-wide-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "Any English-prose running key, in place, under those 12 tableaux",
+      "status": "excluded-by-count",
+      "evidence": "The two clue fragments of the key score at the 0.0000 percentile of 1,916,325 aligned English fragment pairs under every tableau, read either way; none of 7,981 planted clean-prose keys scores as low as K4's best.",
+      "logs": [
+        "k4-focus/running-key-texts-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "In-place Hill 5 by 5 at the 3 settings small enough to list in full, for English plaintext",
+      "status": "excluded-by-count",
+      "evidence": "All 26^5 clue-consistent keys per setting were decrypted; the best K4 quadgram score (-4.77 a quadgram) is far below the worst of 239 English windows (-2.67) and inside the range random text reaches. Planted English keys come first in 88 of 90 controls.",
+      "logs": [
+        "k4-focus/hill-large-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "In-place Quagmire I at period 19, for English plaintext",
+      "status": "excluded-by-count",
+      "evidence": "The one setting where K4 fit the clues more often than most random strings. An annealing search recovers 9 to 10 of 10 planted English texts to at least half their letters; the best K4 fit that keeps every clue letter scores -343.4 nats, below all 20 null runs and about 110 nats under the planted range.",
+      "logs": [
+        "k4-focus/quagmire19-2026-10-18.md"
+      ]
+    },
+    {
       "family": "Keyed alphabets other than A to Z and KRYPTOS, under the layered models",
       "status": "open",
-      "evidence": "The completed space used two alphabets only.",
+      "evidence": "The layered space used two alphabets only. In place, unknown alphabets are now checked exactly, so the open question is unknown alphabets combined with a transposition.",
       "logs": [],
       "priority": 1,
       "next": "Add unknown Quagmire-style alphabets to the layered search with the optional symbolic engine, clue positions frozen before fitting and one clue held back."
     },
     {
-      "family": "Transpositions other than ragged columnar (routes, grilles, Myszkowski with other keys) combined with substitution",
+      "family": "Column orders of width 17 and above, longer periods at widths 11 to 16, double columnar, grilles and other transpositions combined with substitution",
       "status": "open",
-      "evidence": "Only ragged columnar layouts and the three published keywords were composed with substitution.",
+      "evidence": "Every column order to width 16 is done for Vigenere and Beaufort on A-Z and KRYPTOS at periods up to 14 to 16; a widths 17 to 24 SAT run was stopped unfinished.",
       "logs": [],
       "priority": 2,
-      "next": "Choose one transposition with a stated construction reason, cap the portfolio at 10,000 checks, and validate it on fresh synthetic keys before running K4."
+      "next": "Finish widths 17 to 24 with engine.k4_columnar_sat (a few CPU hours, splittable), then double columnar with a stated construction reason, with planted controls."
     },
     {
-      "family": "Running keys from texts other than K3, and Hill matrices larger than 2 by 2",
+      "family": "Running keys that are not English prose or not in the frozen list",
       "status": "open",
-      "evidence": "Only the K3 plaintext was tried as a running key; only 2 by 2 Hill was run.",
+      "evidence": "19 frozen texts are excluded exactly and English prose statistically; other languages, lists and non-prose keys are not.",
       "logs": [],
       "priority": 3,
-      "next": "Freeze a short list of sourced candidate key texts with hashes before any search, and run them with the same reciprocal folds."
+      "next": "Add sourced non-English key texts with hashes before any search, with planted keys as controls."
+    },
+    {
+      "family": "Fractionating ciphers (bifid, trifid) and Gromark variants beyond the ACA digit rule",
+      "status": "open",
+      "evidence": "A calibrated neural family prior trained on planted 97-letter ciphertexts puts K4 with random letters (0.36), Gromark (0.32) and trifid (0.12), and far from short periods, autokey, running key, Hill and pure transposition. A prior is a search order, not evidence of a method.",
+      "logs": [
+        "k4-focus/family-net-2026-10-18.md"
+      ],
+      "priority": 4,
+      "next": "Write clue-only checks for in-place bifid and trifid with unknown squares and for Gromark with other digit rules, with planted controls, before any language-scored search."
     }
   ]
 }

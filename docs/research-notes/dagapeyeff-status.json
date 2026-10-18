@@ -5,8 +5,14 @@
   "note": "dagapeyeff-2026-10-05.md",
   "kind": "cipher",
   "unit": "hypothesis families",
-  "stage": "preprint",
-  "reviewed_through": "2026-10-07",
+  "stage": "closed",
+  "reviewed_through": "2026-10-18",
+  "closure": {
+    "date": "2026-10-18",
+    "log": "dagapeyeff-closed-2026-10-18.md",
+    "summary": "Research closed on 2026-10-18 by the owner's decision; the owner's view is that there is probably no message, which is an interpretation, not a proof.",
+    "detail": "The owner closed research on this case for now because, in the owner's view, there is probably no recoverable message. That is an interpretation, not a proof: a construction with no message fits every statistic measured, but the order test barely tells a turning-grille message from no message, and the grille search cannot yet find a planted grille. No family changed status with the decision. The exclusions and the preprint (papers/dagapeyeff-exclusions, doi:10.5281/zenodo.23241304) stand as published, and the open families keep their planned next steps in case the work reopens."
+  },
   "log_glob": "logs/dagapeyeff*-????-??-??.md",
   "cite_every_log_from": "2026-10-06",
   "plaintext_recovered_percent": 0,
@@ -16,7 +22,7 @@
     "summary": "In 1939 Alexander d'Agapeyeff printed 392 digits at the back of his book Codes and Ciphers as a challenge. Nobody has ever read them, and later editions quietly dropped the puzzle. We have not read it either. What we have done is rule out most of the ordinary ways it could have been made, using tests we first proved can find a hidden message of the same length.",
     "what_it_is": "The digits come in pairs. Each pair names a cell of a 5 by 5 grid of letters, called a Polybius square, so the puzzle is 196 grid cells laid out in a 14 by 14 block. If the grid were simply a letter table, swapping the cells for letters would give a message. It does not: the result reads like random letters in every language tried.",
     "what_we_found": "Before trusting a negative result we plant a known message of the same length, encipher it the same way, and check that the search finds it. Searches that pass that test and still find nothing on the real puzzle count as closed. Some ideas are ruled out without any search, because the puzzle's letter counts are impossible for them. Latin fits the letter counts better than any of 98 languages, but Latin searches with shown power also came back empty.",
-    "whats_next": "The biggest open idea is a turning grille, a card with holes rotated over the page, combined with a second step that evens out the letter counts. Our grille search cannot yet find a planted message, so the next job is a better method, not more computer time. It is also possible that there was never a message, or that a mistake in enciphering destroyed it.",
+    "whats_next": "Nothing, for now. On 18 October 2026 we closed this research, because we think there was probably never a message. That is an interpretation, not a proof. The biggest idea still open is a turning grille, a card with holes rotated over the page, combined with a second step that evens out the letter counts, and our grille search cannot yet find a planted message, so a grille message is not ruled out. The exclusions and the paper stand as published. If the work reopens, the first job is a grille method that can find a planted message, not more computer time.",
     "faq": [
       {
         "q": "Has anyone solved the D'Agapeyeff cipher?",

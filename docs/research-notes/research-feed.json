@@ -8,10 +8,11 @@
       "title": "Kryptos K4",
       "kind": "cipher",
       "stage": "ongoing",
+      "closure": null,
       "unit": "hypothesis families",
-      "reviewed_through": "2026-10-07",
+      "reviewed_through": "2026-10-18",
       "plaintext_recovered_percent": 0,
-      "summary": "Unsolved. Plaintext recovered: 0 percent. 7 of 13 hypothesis families listed (54 percent) are excluded by the clues; 3 are open. Reviewed through 2026-10-07.",
+      "summary": "Unsolved. Plaintext recovered: 0 percent. 18 of 29 hypothesis families listed (62 percent) are excluded by a count or excluded by the clues; 4 are open. Reviewed through 2026-10-18.",
       "caveat": "Progress here means ruling cipher models out against the artist's disclosed clues, fitting one clue and holding the other back. The plaintext is reported to sit in a private archive sold in November 2025, and the custodian still lists K4 as unsolved; the question here is a public method, not whether anyone knows the answer. The share is of the families listed, not of every cipher.",
       "note_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/kryptos-k4-2026-10-03.md",
       "ledger_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/kryptos-k4-status.json",
@@ -21,22 +22,29 @@
           "status": "open",
           "label": "Open",
           "definition": "Open: not searched here, or not searched with a method shown to work.",
-          "count": 3,
-          "percent": 23
+          "count": 4,
+          "percent": 14
         },
         {
           "status": "tested-without-power",
           "label": "Tested without shown power",
           "definition": "Tested, not closed: the search ran, but some hypotheses stay underdetermined, the budget ran out, or matched-length controls did not come back.",
-          "count": 3,
-          "percent": 23
+          "count": 7,
+          "percent": 24
         },
         {
           "status": "excluded-by-constraint",
           "label": "Excluded by the clues",
           "definition": "Excluded by the clues: every complete key the model allows contradicts a disclosed clue held back from fitting, or the model cannot place the clues at all.",
-          "count": 7,
-          "percent": 54
+          "count": 15,
+          "percent": 52
+        },
+        {
+          "status": "excluded-by-count",
+          "label": "Excluded by a count",
+          "definition": "Excluded by a count: a measured statistic falls outside a threshold fixed before K4 was scored and checked on planted controls. This is statistical, not exact.",
+          "count": 3,
+          "percent": 10
         }
       ],
       "families": [
@@ -44,28 +52,39 @@
           "family": "Keyed alphabets other than A to Z and KRYPTOS, under the layered models",
           "status": "open",
           "status_label": "Open",
-          "evidence": "The completed space used two alphabets only.",
+          "evidence": "The layered space used two alphabets only. In place, unknown alphabets are now checked exactly, so the open question is unknown alphabets combined with a transposition.",
           "next": "Add unknown Quagmire-style alphabets to the layered search with the optional symbolic engine, clue positions frozen before fitting and one clue held back.",
           "priority": 1,
           "logs": []
         },
         {
-          "family": "Transpositions other than ragged columnar (routes, grilles, Myszkowski with other keys) combined with substitution",
+          "family": "Column orders of width 17 and above, longer periods at widths 11 to 16, double columnar, grilles and other transpositions combined with substitution",
           "status": "open",
           "status_label": "Open",
-          "evidence": "Only ragged columnar layouts and the three published keywords were composed with substitution.",
-          "next": "Choose one transposition with a stated construction reason, cap the portfolio at 10,000 checks, and validate it on fresh synthetic keys before running K4.",
+          "evidence": "Every column order to width 16 is done for Vigenere and Beaufort on A-Z and KRYPTOS at periods up to 14 to 16; a widths 17 to 24 SAT run was stopped unfinished.",
+          "next": "Finish widths 17 to 24 with engine.k4_columnar_sat (a few CPU hours, splittable), then double columnar with a stated construction reason, with planted controls.",
           "priority": 2,
           "logs": []
         },
         {
-          "family": "Running keys from texts other than K3, and Hill matrices larger than 2 by 2",
+          "family": "Running keys that are not English prose or not in the frozen list",
           "status": "open",
           "status_label": "Open",
-          "evidence": "Only the K3 plaintext was tried as a running key; only 2 by 2 Hill was run.",
-          "next": "Freeze a short list of sourced candidate key texts with hashes before any search, and run them with the same reciprocal folds.",
+          "evidence": "19 frozen texts are excluded exactly and English prose statistically; other languages, lists and non-prose keys are not.",
+          "next": "Add sourced non-English key texts with hashes before any search, with planted keys as controls.",
           "priority": 3,
           "logs": []
+        },
+        {
+          "family": "Fractionating ciphers (bifid, trifid) and Gromark variants beyond the ACA digit rule",
+          "status": "open",
+          "status_label": "Open",
+          "evidence": "A calibrated neural family prior trained on planted 97-letter ciphertexts puts K4 with random letters (0.36), Gromark (0.32) and trifid (0.12), and far from short periods, autokey, running key, Hill and pure transposition. A prior is a search order, not evidence of a method.",
+          "next": "Write clue-only checks for in-place bifid and trifid with unknown squares and for Gromark with other digit rules, with planted controls, before any language-scored search.",
+          "priority": 4,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/family-net-2026-10-18.md"
+          ]
         },
         {
           "family": "Ragged columnar transposition with repeating, autokey or Beaufort substitution, either order, periods and widths to 32",
@@ -99,6 +118,50 @@
           "priority": null,
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/tractable-open-attempt-2026-10-03.md"
+          ]
+        },
+        {
+          "family": "In-place Quagmire, progressive and autokey forms on unknown alphabets at the periods and lags the clues do not block",
+          "status": "tested-without-power",
+          "status_label": "Tested without shown power",
+          "evidence": "For the 137 such settings up to 32, fitting one clue forces 8 of 3,288 held-back letters (all right) and leaves 3,280 free, so the clues cannot test these settings.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/unknown-alphabets-hill-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "The same transpositions with any alphabet in each column, periods 3 to 26",
+          "status": "tested-without-power",
+          "status_label": "Tested without shown power",
+          "evidence": "The bijection bound excludes periods 1 and 2 everywhere and period 3 when substitution comes first; at higher periods it removes about the share it removes from planted wrong hypotheses, so the survivors are what chance leaves. Complete keys exist only at periods 21 to 24 and test at most 3 clue letters.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/transposition-substitution-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "In-place Hill 6 by 6 to 10 by 10, and Hill 5 by 5 at 6 settings",
+          "status": "tested-without-power",
+          "status_label": "Tested without shown power",
+          "evidence": "Every row fits and an invertible fit exists, and fitting one clue forces no letter of the other, so the clues cannot test these sizes; listing the keys (1.4e14 to beyond 1e140) is out of reach.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/hill-large-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "In-place Quagmire II and IV at period 19",
+          "status": "tested-without-power",
+          "status_label": "Tested without shown power",
+          "evidence": "The same search recovers only 2 of 10 planted Quagmire II texts and none for Quagmire IV, so its negative result on K4 says little.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/quagmire19-2026-10-18.md"
           ]
         },
         {
@@ -178,6 +241,127 @@
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/running-key-hill-2026-10-04.md"
           ]
+        },
+        {
+          "family": "In-place keyed Vigenere (Quagmire III, the K1 and K2 system) with any alphabet and keyword at every period 1 to 26, and other Quagmire, progressive and autokey forms on unknown alphabets at the periods and lags listed in the log",
+          "status": "excluded-by-constraint",
+          "status_label": "Excluded by the clues",
+          "evidence": "An exact Z3 check of both clues, with every alphabet left free, is unsatisfiable at those periods and lags across ten families; no language model is used, so it holds whatever language the rest of K4 is in. A control with both clues planted under each family is never blocked.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/unknown-alphabets-hill-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "In-place Hill, 2 by 2 to 4 by 4, every block alignment, letters numbered A to Z, KRYPTOS, PALIMPSEST or ABSCISSA",
+          "status": "excluded-by-constraint",
+          "status_label": "Excluded by the clues",
+          "evidence": "Every one of the 26^n candidate decryption rows was tried. At 2 by 2 and 3 by 3 no row fits both clues; at 4 by 4 no fitting rows form a matrix invertible mod 26. Planted controls are never excluded, and at 3 by 3 one clue pins all of the other under a planted key.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/unknown-alphabets-hill-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "Every column order to width 10, K3-style double rotation, route reads and keyword orders, composed either way with straight or KRYPTOS-keyed Vigenere or Beaufort at periods 1 to 20, on 97 letters or 98 with the K3 question mark",
+          "status": "excluded-by-constraint",
+          "status_label": "Excluded by the clues",
+          "evidence": "855,465,832 hypotheses in all; no hypothesis at periods 1 to 20 lets one shift per column place both clues. The C kernel matches the Python reference, the family code reproduces K3 from its plaintext, and 200 planted controls per family are never excluded.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/transposition-substitution-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "Running keys from 19 frozen texts (K1 to K3 plaintext and ciphertext, Carter's Tutankhamun volumes, the King James Bible, the Declaration and Constitution, English and German novels) under Vigenere, Beaufort and variant Beaufort on A-Z, KRYPTOS, PALIMPSEST or ABSCISSA, read either way",
+          "status": "excluded-by-constraint",
+          "status_label": "Excluded by the clues",
+          "evidence": "No offset in any text places all 24 clue key letters under any of the 12 tableaux; the best partial matches (3 to 9 of 24) are what chance gives. Planted keys are found at the right offset.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/running-key-texts-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "In-place Hill 5 by 5 at 11 of its 20 alignment and numbering settings",
+          "status": "excluded-by-constraint",
+          "status_label": "Excluded by the clues",
+          "evidence": "Solving each row mod 2 and mod 13 shows that some row cannot fit both clues or that no fitting rows form a matrix invertible mod 26; the row counts match brute force over all 26^5 rows, and planted keys are never excluded.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/hill-large-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "In-place keyed Vigenere with any alphabet even if one clue letter is wrong (a misspelling like those in K1 to K3), periods 1 to 18, 20 to 22 and 25",
+          "status": "excluded-by-constraint",
+          "status_label": "Excluded by the clues",
+          "evidence": "MaxSAT shows K4 needs at least two dropped clue letters at those periods; random strings need about as many or fewer, and 208 family and period settings show nothing significant (period 19 fits 1 to 4 percent of random strings).",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/sat-errors-twokey-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "Two repeating keys added on one keyed alphabet: 37 Vigenere-sense and 31 Beaufort-sense length pairs whose combined cycle exceeds 26",
+          "status": "excluded-by-constraint",
+          "status_label": "Excluded by the clues",
+          "evidence": "Exact SAT with the alphabet left free; every pair of lengths 2 to 26 was checked and planted controls always fit.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/sat-errors-twokey-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "Every column order at widths 11 to 16, composed either way with straight or KRYPTOS-keyed Vigenere or Beaufort, at periods 1 to 16 (widths 11 to 14), 1 to 15 (width 15) and 1 to 14 (width 16), on 97 or 98 letters",
+          "status": "excluded-by-constraint",
+          "status_label": "Excluded by the clues",
+          "evidence": "Branch and bound (widths 11 to 13) and a SAT model (14 to 16) find no fitting order; both agree with the full enumeration where it can run, and planted keys are found. Orders that fit at longer periods decrypt to random-like text.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/columnar-wide-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "Any English-prose running key, in place, under those 12 tableaux",
+          "status": "excluded-by-count",
+          "status_label": "Excluded by a count",
+          "evidence": "The two clue fragments of the key score at the 0.0000 percentile of 1,916,325 aligned English fragment pairs under every tableau, read either way; none of 7,981 planted clean-prose keys scores as low as K4's best.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/running-key-texts-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "In-place Hill 5 by 5 at the 3 settings small enough to list in full, for English plaintext",
+          "status": "excluded-by-count",
+          "status_label": "Excluded by a count",
+          "evidence": "All 26^5 clue-consistent keys per setting were decrypted; the best K4 quadgram score (-4.77 a quadgram) is far below the worst of 239 English windows (-2.67) and inside the range random text reaches. Planted English keys come first in 88 of 90 controls.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/hill-large-2026-10-18.md"
+          ]
+        },
+        {
+          "family": "In-place Quagmire I at period 19, for English plaintext",
+          "status": "excluded-by-count",
+          "status_label": "Excluded by a count",
+          "evidence": "The one setting where K4 fit the clues more often than most random strings. An annealing search recovers 9 to 10 of 10 planted English texts to at least half their letters; the best K4 fit that keeps every clue letter scores -343.4 nats, below all 20 null runs and about 110 nats under the planted range.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/quagmire19-2026-10-18.md"
+          ]
         }
       ],
       "next": [
@@ -186,12 +370,16 @@
           "next": "Add unknown Quagmire-style alphabets to the layered search with the optional symbolic engine, clue positions frozen before fitting and one clue held back."
         },
         {
-          "family": "Transpositions other than ragged columnar (routes, grilles, Myszkowski with other keys) combined with substitution",
-          "next": "Choose one transposition with a stated construction reason, cap the portfolio at 10,000 checks, and validate it on fresh synthetic keys before running K4."
+          "family": "Column orders of width 17 and above, longer periods at widths 11 to 16, double columnar, grilles and other transpositions combined with substitution",
+          "next": "Finish widths 17 to 24 with engine.k4_columnar_sat (a few CPU hours, splittable), then double columnar with a stated construction reason, with planted controls."
         },
         {
-          "family": "Running keys from texts other than K3, and Hill matrices larger than 2 by 2",
-          "next": "Freeze a short list of sourced candidate key texts with hashes before any search, and run them with the same reciprocal folds."
+          "family": "Running keys that are not English prose or not in the frozen list",
+          "next": "Add sourced non-English key texts with hashes before any search, with planted keys as controls."
+        },
+        {
+          "family": "Fractionating ciphers (bifid, trifid) and Gromark variants beyond the ACA digit rule",
+          "next": "Write clue-only checks for in-place bifid and trifid with unknown squares and for Gromark with other digit rules, with planted controls, before any language-scored search."
         }
       ],
       "lay": {
@@ -315,6 +503,7 @@
       "title": "Voynich manuscript",
       "kind": "script",
       "stage": "proposed",
+      "closure": null,
       "unit": "questions",
       "reviewed_through": "2026-10-03",
       "plaintext_recovered_percent": 0,
@@ -456,6 +645,7 @@
       "title": "Linear A",
       "kind": "script",
       "stage": "proposed",
+      "closure": null,
       "unit": "questions",
       "reviewed_through": "2026-10-03",
       "plaintext_recovered_percent": 0,
@@ -576,6 +766,7 @@
       "title": "Indus signs",
       "kind": "script",
       "stage": "proposed",
+      "closure": null,
       "unit": "questions",
       "reviewed_through": "2026-10-03",
       "plaintext_recovered_percent": 0,
@@ -696,6 +887,7 @@
       "title": "Rongorongo",
       "kind": "script",
       "stage": "proposed",
+      "closure": null,
       "unit": "questions",
       "reviewed_through": "2026-10-03",
       "plaintext_recovered_percent": 0,
@@ -824,6 +1016,7 @@
       "title": "Phaistos disc",
       "kind": "script",
       "stage": "proposed",
+      "closure": null,
       "unit": "questions",
       "reviewed_through": "2026-10-03",
       "plaintext_recovered_percent": 0,
@@ -930,6 +1123,7 @@
       "title": "Zodiac Z13 and Z32",
       "kind": "cipher",
       "stage": "proposed",
+      "closure": null,
       "unit": "hypothesis families",
       "reviewed_through": "2026-10-03",
       "plaintext_recovered_percent": 0,
@@ -1049,6 +1243,7 @@
       "title": "Dorabella",
       "kind": "cipher",
       "stage": "ongoing",
+      "closure": null,
       "unit": "hypothesis families",
       "reviewed_through": "2026-10-03",
       "plaintext_recovered_percent": 0,
@@ -1216,11 +1411,17 @@
       "id": "dagapeyeff",
       "title": "D'Agapeyeff challenge",
       "kind": "cipher",
-      "stage": "preprint",
+      "stage": "closed",
+      "closure": {
+        "date": "2026-10-18",
+        "summary": "Research closed on 2026-10-18 by the owner's decision; the owner's view is that there is probably no message, which is an interpretation, not a proof.",
+        "detail": "The owner closed research on this case for now because, in the owner's view, there is probably no recoverable message. That is an interpretation, not a proof: a construction with no message fits every statistic measured, but the order test barely tells a turning-grille message from no message, and the grille search cannot yet find a planted grille. No family changed status with the decision. The exclusions and the preprint (papers/dagapeyeff-exclusions, doi:10.5281/zenodo.23241304) stand as published, and the open families keep their planned next steps in case the work reopens.",
+        "log": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dagapeyeff-closed-2026-10-18.md"
+      },
       "unit": "hypothesis families",
-      "reviewed_through": "2026-10-07",
+      "reviewed_through": "2026-10-18",
       "plaintext_recovered_percent": 0,
-      "summary": "Unsolved. Plaintext recovered: 0 percent. 29 of 35 hypothesis families listed (83 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-07.",
+      "summary": "Unsolved. Plaintext recovered: 0 percent. Research closed on 2026-10-18 by the owner's decision; the owner's view is that there is probably no message, which is an interpretation, not a proof. 29 of 35 hypothesis families listed (83 percent) are closed with shown power or excluded by a count; 6 are left open. Reviewed through 2026-10-18.",
       "caveat": "Progress here means ruling hypotheses out, not reading part of a message. The percentage is a share of the families listed below, which is not every possible cipher, and a hand construction with no message fits every statistic measured so far. It is not a measure of distance to a reading.",
       "note_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/dagapeyeff-2026-10-05.md",
       "ledger_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/dagapeyeff-status.json",
@@ -1715,7 +1916,7 @@
         "summary": "In 1939 Alexander d'Agapeyeff printed 392 digits at the back of his book Codes and Ciphers as a challenge. Nobody has ever read them, and later editions quietly dropped the puzzle. We have not read it either. What we have done is rule out most of the ordinary ways it could have been made, using tests we first proved can find a hidden message of the same length.",
         "what_it_is": "The digits come in pairs. Each pair names a cell of a 5 by 5 grid of letters, called a Polybius square, so the puzzle is 196 grid cells laid out in a 14 by 14 block. If the grid were simply a letter table, swapping the cells for letters would give a message. It does not: the result reads like random letters in every language tried.",
         "what_we_found": "Before trusting a negative result we plant a known message of the same length, encipher it the same way, and check that the search finds it. Searches that pass that test and still find nothing on the real puzzle count as closed. Some ideas are ruled out without any search, because the puzzle's letter counts are impossible for them. Latin fits the letter counts better than any of 98 languages, but Latin searches with shown power also came back empty.",
-        "whats_next": "The biggest open idea is a turning grille, a card with holes rotated over the page, combined with a second step that evens out the letter counts. Our grille search cannot yet find a planted message, so the next job is a better method, not more computer time. It is also possible that there was never a message, or that a mistake in enciphering destroyed it.",
+        "whats_next": "Nothing, for now. On 18 October 2026 we closed this research, because we think there was probably never a message. That is an interpretation, not a proof. The biggest idea still open is a turning grille, a card with holes rotated over the page, combined with a second step that evens out the letter counts, and our grille search cannot yet find a planted message, so a grille message is not ruled out. The exclusions and the paper stand as published. If the work reopens, the first job is a grille method that can find a planted message, not more computer time.",
         "faq": [
           {
             "q": "Has anyone solved the D'Agapeyeff cipher?",

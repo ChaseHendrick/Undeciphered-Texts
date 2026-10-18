@@ -5,7 +5,7 @@ index-id: dagapeyeff
 index-title: D'Agapeyeff challenge
 index-problem: 1939 digit challenge with no public reading; measured structure is not a plaintext
 index-data: Wikipedia digit block used by the engine, plus the solved exercise as the control
-index-next: Search Catalan, Romanian and Latin under a 14-column key and under keyed four-square once a method with power exists; screen further languages
+index-next: None planned; research closed on 2026-10-18
 -->
 
 Source check: **2026-10-05**. Category: historical cipher. No reading is claimed.
@@ -15,7 +15,9 @@ The public digit block is the one on the English Wikipedia page for the D'Agapey
 <!-- generated-status:start -->
 ## How close is this to solved?
 
-**Unsolved. Plaintext recovered: 0 percent. 29 of 35 hypothesis families listed (83 percent) are closed with shown power or excluded by a count; 6 are open. Reviewed through 2026-10-07.**
+**Unsolved. Plaintext recovered: 0 percent. Research closed on 2026-10-18 by the owner's decision; the owner's view is that there is probably no message, which is an interpretation, not a proof. 29 of 35 hypothesis families listed (83 percent) are closed with shown power or excluded by a count; 6 are left open. Reviewed through 2026-10-18.**
+
+**Research closed on 2026-10-18.** The owner closed research on this case for now because, in the owner's view, there is probably no recoverable message. That is an interpretation, not a proof: a construction with no message fits every statistic measured, but the order test barely tells a turning-grille message from no message, and the grille search cannot yet find a planted grille. No family changed status with the decision. The exclusions and the preprint (papers/dagapeyeff-exclusions, doi:10.5281/zenodo.23241304) stand as published, and the open families keep their planned next steps in case the work reopens. [log](../logs/dagapeyeff-closed-2026-10-18.md)
 
 **In plain words.** In 1939 Alexander d'Agapeyeff printed 392 digits at the back of his book Codes and Ciphers as a challenge. Nobody has ever read them, and later editions quietly dropped the puzzle. We have not read it either. What we have done is rule out most of the ordinary ways it could have been made, using tests we first proved can find a hidden message of the same length.
 
@@ -281,12 +283,13 @@ The list below is rewritten from `docs/logs/dagapeyeff*.md` on every push to mai
 - [Latin words in the cells' best decryptions, 7 October 2026](../logs/dagapeyeff-latinwords-2026-10-07.md)
 - [The last-column symbols as padding or as rare letters, 7 October 2026](../logs/dagapeyeff-rarecolumn-2026-10-07.md)
 - [Four-square, the repeating shift and the Latin searches under a second seed, 7 October 2026](../logs/dagapeyeff-reseed-2026-10-07.md)
+- [D'Agapeyeff research closed for now, 18 October 2026](../logs/dagapeyeff-closed-2026-10-18.md)
 <!-- generated-logs:end -->
 
 ## Next steps
 
 <!-- generated-next:start -->
-Open families, in the order they are planned:
+Research closed on 2026-10-18, so no work is planned. If it reopens, the open families keep these next steps, in the order they were planned:
 
 1. **A plaintext in another language under a large transposition, or in a language not screened.** Search Catalan, Romanian and Latin under a 14-column key and under keyed four-square once a method with power exists; screen further languages.
 2. **14 by 14 turning grille with a letter key.** A joint method that recovers planted grilles with the key unknown, before the cells are searched; the count-flattening key left to test is a pair code or keyed squares, since a homophonic key is excluded by counts.
