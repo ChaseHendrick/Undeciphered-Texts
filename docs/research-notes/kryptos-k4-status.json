@@ -275,6 +275,16 @@
       "logs": [],
       "priority": 3,
       "next": "Add sourced non-English key texts with hashes before any search, with planted keys as controls."
+    },
+    {
+      "family": "Fractionating ciphers (bifid, trifid) and Gromark variants beyond the ACA digit rule",
+      "status": "open",
+      "evidence": "A calibrated neural family prior trained on planted 97-letter ciphertexts puts K4 with random letters (0.36), Gromark (0.32) and trifid (0.12), and far from short periods, autokey, running key, Hill and pure transposition. A prior is a search order, not evidence of a method.",
+      "logs": [
+        "k4-focus/family-net-2026-10-18.md"
+      ],
+      "priority": 4,
+      "next": "Write clue-only checks for in-place bifid and trifid with unknown squares and for Gromark with other digit rules, with planted controls, before any language-scored search."
     }
   ]
 }

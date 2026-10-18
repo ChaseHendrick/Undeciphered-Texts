@@ -12,7 +12,7 @@
       "unit": "hypothesis families",
       "reviewed_through": "2026-10-18",
       "plaintext_recovered_percent": 0,
-      "summary": "Unsolved. Plaintext recovered: 0 percent. 14 of 23 hypothesis families listed (61 percent) are excluded by a count or excluded by the clues; 3 are open. Reviewed through 2026-10-18.",
+      "summary": "Unsolved. Plaintext recovered: 0 percent. 14 of 24 hypothesis families listed (58 percent) are excluded by a count or excluded by the clues; 4 are open. Reviewed through 2026-10-18.",
       "caveat": "Progress here means ruling cipher models out against the artist's disclosed clues, fitting one clue and holding the other back. The plaintext is reported to sit in a private archive sold in November 2025, and the custodian still lists K4 as unsolved; the question here is a public method, not whether anyone knows the answer. The share is of the families listed, not of every cipher.",
       "note_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/kryptos-k4-2026-10-03.md",
       "ledger_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/kryptos-k4-status.json",
@@ -22,29 +22,29 @@
           "status": "open",
           "label": "Open",
           "definition": "Open: not searched here, or not searched with a method shown to work.",
-          "count": 3,
-          "percent": 13
+          "count": 4,
+          "percent": 17
         },
         {
           "status": "tested-without-power",
           "label": "Tested without shown power",
           "definition": "Tested, not closed: the search ran, but some hypotheses stay underdetermined, the budget ran out, or matched-length controls did not come back.",
           "count": 6,
-          "percent": 26
+          "percent": 25
         },
         {
           "status": "excluded-by-constraint",
           "label": "Excluded by the clues",
           "definition": "Excluded by the clues: every complete key the model allows contradicts a disclosed clue held back from fitting, or the model cannot place the clues at all.",
           "count": 12,
-          "percent": 52
+          "percent": 50
         },
         {
           "status": "excluded-by-count",
           "label": "Excluded by a count",
           "definition": "Excluded by a count: a measured statistic falls outside a threshold fixed before K4 was scored and checked on planted controls. This is statistical, not exact.",
           "count": 2,
-          "percent": 9
+          "percent": 8
         }
       ],
       "families": [
@@ -74,6 +74,17 @@
           "next": "Add sourced non-English key texts with hashes before any search, with planted keys as controls.",
           "priority": 3,
           "logs": []
+        },
+        {
+          "family": "Fractionating ciphers (bifid, trifid) and Gromark variants beyond the ACA digit rule",
+          "status": "open",
+          "status_label": "Open",
+          "evidence": "A calibrated neural family prior trained on planted 97-letter ciphertexts puts K4 with random letters (0.36), Gromark (0.32) and trifid (0.12), and far from short periods, autokey, running key, Hill and pure transposition. A prior is a search order, not evidence of a method.",
+          "next": "Write clue-only checks for in-place bifid and trifid with unknown squares and for Gromark with other digit rules, with planted controls, before any language-scored search.",
+          "priority": 4,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/family-net-2026-10-18.md"
+          ]
         },
         {
           "family": "Ragged columnar transposition with repeating, autokey or Beaufort substitution, either order, periods and widths to 32",
@@ -310,6 +321,10 @@
         {
           "family": "Running keys that are not English prose or not in the frozen list",
           "next": "Add sourced non-English key texts with hashes before any search, with planted keys as controls."
+        },
+        {
+          "family": "Fractionating ciphers (bifid, trifid) and Gromark variants beyond the ACA digit rule",
+          "next": "Write clue-only checks for in-place bifid and trifid with unknown squares and for Gromark with other digit rules, with planted controls, before any language-scored search."
         }
       ],
       "lay": {
