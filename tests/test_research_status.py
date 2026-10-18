@@ -7,7 +7,7 @@ import json
 import re
 import unittest
 
-from tools.refresh_docs import DOCS, FEED, NOTES, ROOT, _ORDER, ledgers, log_path, render, status_summary, tally
+from tools.refresh_docs import DOCS, FEED, NOTES, ROOT, STAGES, _ORDER, closed, ledgers, log_path, render, status_summary, tally
 
 _DATE = re.compile(r"(\d{4}-\d{2}-\d{2})\.md$")
 
@@ -23,7 +23,17 @@ class ResearchStatusTest(unittest.TestCase):
                 self.assertEqual(data["schema"], "research-status-1")
                 self.assertEqual(data["plaintext_recovered_percent"], 0)
                 self.assertIn(data["kind"], ("cipher", "script"))
-                self.assertIn(data["stage"], ("proposed", "ongoing", "preprint"))
+                self.assertIn(data["stage"], STAGES)
+                if closed(data):
+                    closure = data["closure"]
+                    self.assertRegex(closure["date"], r"^\d{4}-\d{2}-\d{2}$")
+                    self.assertTrue((DOCS / log_path(closure["log"])).exists(), closure["log"])
+                    self.assertTrue(closure["summary"].startswith(f"Research closed on {closure['date']}"))
+                    self.assertIn("not a proof", closure["summary"])
+                    self.assertTrue(closure["detail"])
+                    self.assertGreaterEqual(data["reviewed_through"], closure["date"])
+                else:
+                    self.assertNotIn("closure", data)
                 self.assertTrue(set(data["statuses"]) <= set(_ORDER))
                 self.assertTrue(data["caveat"])
                 for field in ("tagline", "summary", "what_it_is", "what_we_found", "whats_next", "faq", "background"):
@@ -54,6 +64,8 @@ class ResearchStatusTest(unittest.TestCase):
                 newest = max(_DATE.findall(path.name)[0] for path in dated)
                 self.assertGreaterEqual(data["reviewed_through"], newest)
                 cited = {log_path(name) for family in data["families"] for name in family["logs"]}
+                if closed(data):
+                    cited.add(log_path(data["closure"]["log"]))
                 uncited = sorted(path.name for path in dated if _DATE.findall(path.name)[0] >= data["cite_every_log_from"]
                                  and f"{folder}/{path.name}" not in cited)
                 self.assertEqual(uncited, [], f"cite these in docs/research-notes/{data['_file']}")
@@ -72,6 +84,10 @@ class ResearchStatusTest(unittest.TestCase):
                 self.assertEqual(case["summary"], summary)
                 self.assertEqual(sum(row["count"] for row in case["statuses"]), sum(tally(data).values()))
                 self.assertNotIn("claimed_plaintext", json.dumps(case))
+                self.assertEqual(case["stage"], data["stage"])
+                self.assertEqual(case["closure"] is not None, closed(data))
+                if closed(data):
+                    self.assertIn(data["closure"]["summary"], summary)
 
 
 if __name__ == "__main__":

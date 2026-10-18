@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 import unittest
 
-from tools.refresh_docs import ROOT, STATUS, ledger, render, status_summary, tally
+from tools.refresh_docs import ROOT, STATUS, closed, ledger, render, status_summary, tally
 
 _STATUSES = {"closed-with-power", "excluded-by-count", "tested-without-power", "open"}
 
@@ -43,13 +43,34 @@ class DagapeyeffStatusTest(unittest.TestCase):
         dated = [path.name for path in _LOGS.glob("dagapeyeff*-????-??-??.md")]
         self.assertGreaterEqual(data["reviewed_through"], max(_date(name) for name in dated))
         cited = {name for family in data["families"] for name in family["logs"]}
+        if closed(data):
+            cited.add(data["closure"]["log"])
         uncited = sorted(name for name in dated if _date(name) >= data["cite_every_log_from"] and name not in cited)
         self.assertEqual(uncited, [], "add these logs to docs/research-notes/dagapeyeff-status.json")
+
+    def test_research_is_closed_by_decision_without_a_claim(self) -> None:
+        data = ledger()
+        self.assertEqual(data["stage"], "closed")
+        closure = data["closure"]
+        self.assertTrue((_LOGS / closure["log"]).exists())
+        self.assertEqual(_date(closure["log"]), closure["date"])
+        self.assertIn("owner's decision", closure["summary"])
+        self.assertIn("interpretation, not a proof", closure["summary"])
+        self.assertIn("10.5281/zenodo.23241304", closure["detail"])
+        self.assertTrue(any(family["status"] == "open" for family in data["families"]))
+        for text in (closure["summary"], closure["detail"], (_LOGS / closure["log"]).read_text()):
+            self.assertNotIn("—", text)
+            self.assertNotIn("–", text)
+        pages = render()
+        self.assertIn("Research closed on " + closure["date"], pages["README.md"])
+        self.assertIn("index-next: None planned; research closed on " + closure["date"],
+                      pages["docs/research-notes/dagapeyeff-2026-10-05.md"])
 
     def test_the_status_is_generated_into_the_page_and_the_readme(self) -> None:
         data = ledger()
         summary = status_summary(data)
         self.assertTrue(summary.startswith("Unsolved. Plaintext recovered: 0 percent."))
+        self.assertNotIn("solved", summary.replace("Unsolved", ""))
         self.assertEqual(sum(tally(data).values()), len(data["families"]))
         pages = render()
         self.assertIn(summary, pages["README.md"])
