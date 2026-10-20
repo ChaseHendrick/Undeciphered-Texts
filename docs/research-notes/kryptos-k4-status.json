@@ -30,7 +30,7 @@
     "background": "https://en.wikipedia.org/wiki/Kryptos"
   },
   "researcher": {
-    "summary": "97-letter K4 (ASCII SHA-256 eea81357...). Clues fitted and reserved in reciprocal folds: EASTNORTHEAST at zero-based plaintext offset 21 and BERLINCLOCK at 63. A reserved exact prediction requires a complete key and every reserved letter equal. Completed spaces: ragged columnar (widths to 32, both read orders, A-Z and KRYPTOS alphabets) composed either side of repeating, plaintext-autokey, ciphertext-autokey and Beaufort substitution at periods to 32 (65,024 hypotheses), 0 reserved exact predictions. The Gromark family opened by the family prior is closed in place: any one-alphabet digit key (either sense, any stream) and Periodic Gromark with any keyword at head lengths 2 to 9 are excluded by a digit bound and by SAT over relaxed supersets, cross-checked by exhaustive enumeration at head lengths 2 and 3 and planted controls.",
+    "summary": "97-letter K4 (ASCII SHA-256 eea81357...). Clues fitted and reserved in reciprocal folds: EASTNORTHEAST at zero-based plaintext offset 21 and BERLINCLOCK at 63. A reserved exact prediction requires a complete key and every reserved letter equal. Completed spaces: ragged columnar (widths to 32, both read orders, A-Z and KRYPTOS alphabets) composed either side of repeating, plaintext-autokey, ciphertext-autokey and Beaufort substitution at periods to 32 (65,024 hypotheses), 0 reserved exact predictions. The Gromark family opened by the family prior is closed in place: any one-alphabet digit key (either sense, any stream) and Periodic Gromark with any keyword at head lengths 2 to 9 are excluded by a digit bound and by SAT over relaxed supersets, cross-checked by exhaustive enumeration at head lengths 2 and 3 and planted controls. Letter chains over letters (mod 26) are settled exactly where the chain still binds: every lag pair at primer lengths 2 to 9, and at 10 every lag pair but (8, 10), by Gaussian elimination over the primer cross-checked by SAT, with the first models appearing at primer length 11 (12 for the subtract recurrence).",
     "methods": [
       "Reciprocal clue folds",
       "Exact crib-constraint inference",
@@ -294,6 +294,14 @@
       ]
     },
     {
+      "family": "In-place lagged-Fibonacci letter keys, chain binding the clues: any lag pair and sign combination at primer lengths 2 to 9, and at 10 every lag pair except (8, 10), except that with the subtract recurrence lag (2, 10) also admits models",
+      "status": "excluded-by-constraint",
+      "evidence": "The same-crib-letter equations are congruences in the primer, so Gaussian elimination over mod 26 enumerates the whole affine space of key streams: of 336 lag shapes at primer lengths 2 to 10 (both stream senses, both application senses), 330 are excluded. The exact SAT resolves every pair the elimination could not count and agrees at the boundary (20 of 26 resolved shapes excluded), and confirms the three surviving shapes at primer length 10: lag (8, 10) in both stream senses and lag (2, 10) with the subtract recurrence, which stay open with longer primers. Planted primers are recovered and planted ciphertexts are never blocked.",
+      "logs": [
+        "k4-focus/letter-chain-2026-10-19.md"
+      ]
+    },
+    {
       "family": "Any English-prose running key, in place, under those 12 tableaux",
       "status": "excluded-by-count",
       "evidence": "The two clue fragments of the key score at the 0.0000 percentile of 1,916,325 aligned English fragment pairs under every tableau, read either way; none of 7,981 planted clean-prose keys scores as low as K4's best.",
@@ -342,15 +350,16 @@
       "next": "Add sourced non-English key texts with hashes before any search, with planted keys as controls."
     },
     {
-      "family": "Fractionation beyond one 25-cell square and standard trifid: bigger squares and cubes, other cell counts and reading conventions, fractionated Morse",
+      "family": "Fractionation beyond one 25-cell square and standard trifid, and the in-place Gromark shapes whose models survive the clues: fractionated Morse, bigger squares and cubes, other cell counts and reading conventions, letter chains from primer length 11 (12 with the subtract recurrence), lag (8, 10) chains in both stream senses and lag (2, 10) chains with the subtract recurrence at primer length 10, and digit chains over two keyed alphabets",
       "status": "open",
-      "evidence": "The neural prior also pointed at Gromark; that half is done, in place, at this length: any digit-keyed alphabet and Periodic Gromark with any keyword are excluded above. What stays open is fractionation whose cells can hold all 26 letters or whose letters do not keep their positions at the published indexes: a 6 by 6 bifid square, cubes beyond 27 cells, other reading conventions, and fractionated Morse, which moves the clue letters, so the published positions cannot be used as they stand.",
+      "evidence": "The neural prior also pointed at Gromark, and most of that half is done in place: any digit-keyed alphabet, Periodic Gromark with any keyword, and letter chains through the primer lengths the chain still binds are excluded above. What stays open here is fractionation whose cells can hold all 26 letters or whose letters do not keep their positions at the published indexes (a 6 by 6 bifid square, cubes beyond 27 cells, other reading conventions, and fractionated Morse, which moves the clue letters, so the published positions cannot be used as they stand), and the chain shapes listed in the title, whose models the clues do not separate.",
       "logs": [
         "k4-focus/family-net-2026-10-18.md",
-        "k4-focus/gromark-variants-2026-10-19.md"
+        "k4-focus/gromark-variants-2026-10-19.md",
+        "k4-focus/letter-chain-2026-10-19.md"
       ],
       "priority": 4,
-      "next": "Search exactly, with planted controls, only after a sourced convention fixes how the clues sit: a 6 by 6 bifid square or larger cubes first; do not start a Morse-framed search without one."
+      "next": "Search exactly, with planted controls, only after a sourced convention fixes how the clues sit: a 6 by 6 bifid square or larger cubes first; size the surviving chain space by counting placements per primer before any language search; do not start a Morse-framed search without a sourced convention."
     }
   ]
 }
