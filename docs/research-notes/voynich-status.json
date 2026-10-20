@@ -50,10 +50,12 @@
     {
       "family": "Do the statistics survive a change of transcription?",
       "status": "open",
-      "evidence": "Not measured. ZL 3b is identified; a second independent transliteration is not yet frozen.",
-      "logs": [],
+      "evidence": "Corpus frozen 19 October 2026: ZL 3b primary, with independently authored GC 2a (v101 alphabet) and IT 2a (Takahashi in EVA-T) as comparison files, all IVTFF 2.0 with SHA-256 recorded. Alignment and the disagreement table are not yet computed. RF was deliberately not frozen because it is a derived combination of ZL and GC.",
+      "logs": [
+        "voynich-transcripts-2026-10-19.md"
+      ],
       "priority": 1,
-      "next": "Freeze ZL 3b and a second independent transliteration with hashes, align shared loci, and publish the disagreement table."
+      "next": "Build an IVTFF parser, align shared loci across ZL/GC/IT, and publish the disagreement table (per-comparison, stating any alphabet conversion applied)."
     },
     {
       "family": "Do they survive a change of word segmentation?",
