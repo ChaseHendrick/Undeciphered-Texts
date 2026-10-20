@@ -108,4 +108,38 @@ If a future K4 session adopts it, the rules do not change: planted controls,
 shown power, dated logs in `docs/k4-focus/`, and nothing is a plaintext until
 it survives the usual verification.
 
+### Constraint, SAT, and model counting (the current K4 method spine)
+
+The 2026 K4 exclusions are exact SAT over one-hot encodings. These are the
+reference tools of that layer, none vendored; the engine already installs
+PySat, which itself bundles CaDiCaL, Glucose and MiniSat.
+
+| Resource | Why it matters here | URL |
+|----------|--------------------|-----|
+| **PySat** | The SAT framework the K4 modules are actually written on | https://github.com/pysathq/pysat |
+| **Kissat (Biere)** | Flagship-class SAT solver; a faster drop-in alternative to CaDiCaL for the wide CNF heads | https://github.com/arminbiere/kissat |
+| **Z3** | SMT: native all-different, arithmetic and bit-vector models for structured cipher constraints | https://github.com/Z3Prover/z3 |
+| **Google OR-Tools (CP-SAT)** | Constraint programming with all-different and counting constraints; useful for the sizing steps the ledger asks for before language searches | https://github.com/google/or-tools |
+| **ApproxMC (Meel group)** | Approximate model counter: counts the satisfying set without enumerating it — the missing piece between "SAT" and "excluded-by-count" for families whose survivors are too many to list, e.g. the surviving letter-chain shapes | https://github.com/meelgroup/approxmc |
+
+### Cipher web toolboxes (cross-checks, not search targets)
+
+| Resource | Why it matters here | URL |
+|----------|--------------------|-----|
+| **dCode.fr** | Solver and identifier zoo for hundreds of classical cipher types | https://www.dcode.fr/ |
+| **Guballa solvers** | Community-standard online substitution and Vigenère hill-climbers, useful as an independent second opinion on our engine's results | https://www.guballa.de/substitution-solver |
+| **Zodiac ciphers site (Oranchak)** | The webtoy workbench and the full Z340 solution archive, including the hill-climb methodology notes | https://zodiackillerciphers.com/ |
+| **MysteryTwister C3 (MTC3)** | Challenge archive with known plaintexts — a calibration set for new solvers before their results are trusted on K4 | https://www.mysterytwisterc3.org/ |
+| **Crypto Museum** | Hardware and archive references for rotor machines and landmark cipher devices | https://www.cryptomuseum.com/ |
+
+### Running-key and language corpora (the open running-key family is corpus-starved)
+
+| Resource | Why it matters here | URL |
+|----------|--------------------|-----|
+| **Chronicling America (Library of Congress)** | OCR'd US newspapers from 1756 to 1963 with a search API — a plausible source class for a K4-era running key | https://chroniclingamerica.loc.gov/ |
+| **Papers Past (National Library NZ)** | OCR'd newspapers 1839-2014, freely searchable at scale | https://paperspast.natlib.govt.nz/ |
+| **Project Gutenberg** | Mass public-domain prose for language models beyond the repo's 1.9M-letter training file | https://www.gutenberg.org/ |
+| **Norvig n-gram tables** | Word and letter count tables for building stronger scoring models | https://norvig.com/ngrams/ |
+| **Google Books Ngram Viewer** | Very large historical English frequency data, with a downloadable dataset | https://books.google.com/ngrams |
+
 Narrative with the numbers and the negative results: [ai-already-helped.md](ai-already-helped.md), [vesuvius-scrolls.md](vesuvius-scrolls.md).
