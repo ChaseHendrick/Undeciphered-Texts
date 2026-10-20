@@ -95,4 +95,17 @@ Pointers only, different problem than classical substitution annealing:
 - https://www.transkribus.org/
 - https://github.com/leitro/Decipher-from-Pixels-Copiale
 
+### Agent harnessing (tools for how this repo itself is run)
+
+Pointer found via a public X post by Shubham Saboo, 18 October 2026; the
+project page and paper are the source of record. This repo has **not** used it.
+
+| Resource | Why it is adjacent here | URL |
+|----------|------------------------|-----|
+| **Harness²** (Google Research) | Recursive harnessing: a Propose–Probe–Compose loop refines the system around a fixed-weight model — prompts, guardrails, memory, tool guidance, subagents, skills, scripts, plugins — for tasks unseen during harness design; supports OpenCode and Codex executors, which is how this repo's K4 runs are driven. Source-not-used experiment status: their paper reports gains of up to 11.5 points on WorkBuddy-Bench, 4.5 on JobBench, and 11.8 points on LAB's partial pass with one recursion step (arXiv:2610.14224, Apache-2.0). | https://github.com/google-research/harness2 · https://arxiv.org/abs/2610.14224 |
+
+If a future K4 session adopts it, the rules do not change: planted controls,
+shown power, dated logs in `docs/k4-focus/`, and nothing is a plaintext until
+it survives the usual verification.
+
 Narrative with the numbers and the negative results: [ai-already-helped.md](ai-already-helped.md), [vesuvius-scrolls.md](vesuvius-scrolls.md).
