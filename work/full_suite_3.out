@@ -1,0 +1,138 @@
+........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................MAP_ACCURACY 0.8846 CHAR_ACCURACY 0.9872 SIGNS 26 ITERATIONS 30
+................................................../Users/chasehendrick/Documents/Codex/undeciphered-texts-ship/k4-claude/glyph_reader.py:156: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  return width, height, list(gray.getdata())
+...............................................................................................................................................................................................EE..................................................................................................................................................................................E............................................................................................................................................................................................................................................................................................................................................................................................................................................................................../Users/chasehendrick/Documents/Codex/undeciphered-texts-ship/k4-claude/engine/stroke_geometry.py:92: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  raw = list(gray.getdata())
+................................................................................................................
+======================================================================
+ERROR: test_each_included_language_glosses_one_fetched_cited_phrase (test_known_language_reader.KnownLanguageReaderTest.test_each_included_language_glosses_one_fetched_cited_phrase) (language='english')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 1344, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 1386, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 1432, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 1381, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 1141, in _send_output
+    self.send(msg)
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 1085, in send
+    self.connect()
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 1527, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/ssl.py", line 457, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/ssl.py", line 1053, in _create
+    self.do_handshake()
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/ssl.py", line 1331, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chasehendrick/Documents/Codex/undeciphered-texts-ship/k4-claude/tests/test_known_language_reader.py", line 145, in test_each_included_language_glosses_one_fetched_cited_phrase
+    raw = _fetch(case["url"])
+          ^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/Documents/Codex/undeciphered-texts-ship/k4-claude/tests/test_known_language_reader.py", line 47, in _fetch
+    with urllib.request.urlopen(request, timeout=45) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 1392, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 1347, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>
+
+======================================================================
+ERROR: test_each_included_language_glosses_one_fetched_cited_phrase (test_known_language_reader.KnownLanguageReaderTest.test_each_included_language_glosses_one_fetched_cited_phrase) (language='german')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 1344, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 1386, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 1432, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 1381, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 1141, in _send_output
+    self.send(msg)
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 1085, in send
+    self.connect()
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/http/client.py", line 1527, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/ssl.py", line 457, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/ssl.py", line 1053, in _create
+    self.do_handshake()
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/ssl.py", line 1331, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chasehendrick/Documents/Codex/undeciphered-texts-ship/k4-claude/tests/test_known_language_reader.py", line 145, in test_each_included_language_glosses_one_fetched_cited_phrase
+    raw = _fetch(case["url"])
+          ^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/Documents/Codex/undeciphered-texts-ship/k4-claude/tests/test_known_language_reader.py", line 47, in _fetch
+    with urllib.request.urlopen(request, timeout=45) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 1392, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 1347, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>
+
+======================================================================
+ERROR: test_generated_line_roundtrip (test_ocr.OcrDemoTest.test_generated_line_roundtrip)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chasehendrick/Documents/Codex/undeciphered-texts-ship/k4-claude/tests/test_ocr.py", line 157, in test_generated_line_roundtrip
+    got = read_image(path, backend="auto", timeout=60).replace(" ", "").upper()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/Documents/Codex/undeciphered-texts-ship/k4-claude/engine/ocr.py", line 232, in read_image
+    runtime = _vision_runtime(timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chasehendrick/Documents/Codex/undeciphered-texts-ship/k4-claude/engine/ocr.py", line 166, in _vision_runtime
+    _run([compiler, str(_VISION_SOURCE), "-o", str(temporary), "-module-cache-path",
+  File "/Users/chasehendrick/Documents/Codex/undeciphered-texts-ship/k4-claude/engine/ocr.py", line 104, in _run
+    raise RuntimeError(f"{operation} failed: {error}")
+RuntimeError: Apple Vision helper compilation failed: <unknown>:0: error: unable to load standard library for target 'arm64-apple-macosx27.0.0'
+
+----------------------------------------------------------------------
+Ran 1467 tests in 337.846s
+
+FAILED (errors=3)

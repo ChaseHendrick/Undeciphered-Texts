@@ -1,0 +1,210 @@
+[
+ {
+  "m": 9,
+  "a": 2,
+  "b": 3,
+  "rec_sign": 1,
+  "apply_sign": 1,
+  "answer": "unsat"
+ },
+ {
+  "m": 9,
+  "a": 2,
+  "b": 6,
+  "rec_sign": 1,
+  "apply_sign": 1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 2,
+  "b": 10,
+  "rec_sign": 1,
+  "apply_sign": 1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 3,
+  "b": 9,
+  "rec_sign": 1,
+  "apply_sign": 1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 6,
+  "b": 9,
+  "rec_sign": 1,
+  "apply_sign": 1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 8,
+  "b": 10,
+  "rec_sign": 1,
+  "apply_sign": 1,
+  "answer": "sat"
+ },
+ {
+  "m": 9,
+  "a": 2,
+  "b": 3,
+  "rec_sign": 1,
+  "apply_sign": -1,
+  "answer": "unsat"
+ },
+ {
+  "m": 9,
+  "a": 2,
+  "b": 6,
+  "rec_sign": 1,
+  "apply_sign": -1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 2,
+  "b": 10,
+  "rec_sign": 1,
+  "apply_sign": -1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 3,
+  "b": 9,
+  "rec_sign": 1,
+  "apply_sign": -1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 6,
+  "b": 9,
+  "rec_sign": 1,
+  "apply_sign": -1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 8,
+  "b": 10,
+  "rec_sign": 1,
+  "apply_sign": -1,
+  "answer": "sat"
+ },
+ {
+  "m": 9,
+  "a": 2,
+  "b": 6,
+  "rec_sign": -1,
+  "apply_sign": 1,
+  "answer": "unsat"
+ },
+ {
+  "m": 9,
+  "a": 3,
+  "b": 9,
+  "rec_sign": -1,
+  "apply_sign": 1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 2,
+  "b": 6,
+  "rec_sign": -1,
+  "apply_sign": 1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 2,
+  "b": 10,
+  "rec_sign": -1,
+  "apply_sign": 1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 3,
+  "b": 9,
+  "rec_sign": -1,
+  "apply_sign": 1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 6,
+  "b": 9,
+  "rec_sign": -1,
+  "apply_sign": 1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 8,
+  "b": 10,
+  "rec_sign": -1,
+  "apply_sign": 1,
+  "answer": "sat"
+ },
+ {
+  "m": 9,
+  "a": 2,
+  "b": 6,
+  "rec_sign": -1,
+  "apply_sign": -1,
+  "answer": "unsat"
+ },
+ {
+  "m": 9,
+  "a": 3,
+  "b": 9,
+  "rec_sign": -1,
+  "apply_sign": -1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 2,
+  "b": 6,
+  "rec_sign": -1,
+  "apply_sign": -1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 2,
+  "b": 10,
+  "rec_sign": -1,
+  "apply_sign": -1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 3,
+  "b": 9,
+  "rec_sign": -1,
+  "apply_sign": -1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 6,
+  "b": 9,
+  "rec_sign": -1,
+  "apply_sign": -1,
+  "answer": "unsat"
+ },
+ {
+  "m": 10,
+  "a": 8,
+  "b": 10,
+  "rec_sign": -1,
+  "apply_sign": -1,
+  "answer": "sat"
+ }
+]
