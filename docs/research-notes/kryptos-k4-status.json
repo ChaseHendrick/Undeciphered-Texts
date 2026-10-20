@@ -6,7 +6,7 @@
   "kind": "cipher",
   "unit": "hypothesis families",
   "stage": "ongoing",
-  "reviewed_through": "2026-10-18",
+  "reviewed_through": "2026-10-19",
   "log_glob": "k4-focus/*-????-??-??.md",
   "cite_every_log_from": "2026-10-04",
   "plaintext_recovered_percent": 0,
@@ -30,7 +30,7 @@
     "background": "https://en.wikipedia.org/wiki/Kryptos"
   },
   "researcher": {
-    "summary": "97-letter K4 (ASCII SHA-256 eea81357...). Clues fitted and reserved in reciprocal folds: EASTNORTHEAST at zero-based plaintext offset 21 and BERLINCLOCK at 63. A reserved exact prediction requires a complete key and every reserved letter equal. Completed spaces: ragged columnar (widths to 32, both read orders, A-Z and KRYPTOS alphabets) composed either side of repeating, plaintext-autokey, ciphertext-autokey and Beaufort substitution at periods to 32 (65,024 hypotheses), 0 reserved exact predictions.",
+    "summary": "97-letter K4 (ASCII SHA-256 eea81357...). Clues fitted and reserved in reciprocal folds: EASTNORTHEAST at zero-based plaintext offset 21 and BERLINCLOCK at 63. A reserved exact prediction requires a complete key and every reserved letter equal. Completed spaces: ragged columnar (widths to 32, both read orders, A-Z and KRYPTOS alphabets) composed either side of repeating, plaintext-autokey, ciphertext-autokey and Beaufort substitution at periods to 32 (65,024 hypotheses), 0 reserved exact predictions. The Gromark family opened by the family prior is closed in place: any one-alphabet digit key (either sense, any stream) and Periodic Gromark with any keyword at head lengths 2 to 9 are excluded by a digit bound and by SAT over relaxed supersets, cross-checked by exhaustive enumeration at head lengths 2 and 3 and planted controls.",
     "methods": [
       "Reciprocal clue folds",
       "Exact crib-constraint inference",
@@ -172,11 +172,12 @@
       ]
     },
     {
-      "family": "In-place ACA Gromark with digits 0 to 9, any keyword, and Myszkowski under KRYPTOS, PALIMPSEST or ABSCISSA on either side",
+      "family": "In-place Gromark-family digit keys: one cipher alphabet and shifts by digits 0 to 9 from any stream (ACA Gromark itself, any primer length, recurrence and lag), added or subtracted; Myszkowski under KRYPTOS, PALIMPSEST or ABSCISSA on either side",
       "status": "excluded-by-constraint",
-      "evidence": "Ciphertext letters F, K and P cannot share one alphabet index with both clues, for any keyword or primer; a control with both clues planted is not blocked.",
+      "evidence": "Ciphertext letters F, K and P cannot share one alphabet index with both clues, for any keyword or primer; the bound uses no stream connection, so it holds for the Beaufort sense and for any digit stream too. Planted controls with both clues are never blocked.",
       "logs": [
-        "k4-focus/innovative-swarm-2026-10-04.md"
+        "k4-focus/innovative-swarm-2026-10-04.md",
+        "k4-focus/gromark-variants-2026-10-19.md"
       ]
     },
     {
@@ -285,6 +286,14 @@
       ]
     },
     {
+      "family": "In-place ACA Periodic Gromark with any keyword, head lengths 2 to 9",
+      "status": "excluded-by-constraint",
+      "evidence": "SAT over a relaxed space that is a superset of every keyword (any distinct alphabet positions for the head letters, any rank permutation as the primer, cipher indexes free per crib letter) fits no head length from 2 to 9 with both clues. EASTNORTHEAST cannot be placed at all at head lengths 2, 4 and 5, and BERLINCLOCK at 2 and 3; the fits that run force held-back letters wrong (fitting EASTNORTHEAST: 6 of 11 at head length 3, 2 of 11 at 6, 3 of 11 at 7; fitting BERLINCLOCK: 3 of 13 at 4 and 5, 2 of 13 at 7); head lengths 8 and 9 fit each clue alone but no key places both. Exhaustive enumeration of the relaxed space agrees at head lengths 2 and 3 (1,300 and 93,600 configs). 16 planted texts under random keywords are never blocked and planted held-back letters are never forced wrong.",
+      "logs": [
+        "k4-focus/gromark-variants-2026-10-19.md"
+      ]
+    },
+    {
       "family": "Any English-prose running key, in place, under those 12 tableaux",
       "status": "excluded-by-count",
       "evidence": "The two clue fragments of the key score at the 0.0000 percentile of 1,916,325 aligned English fragment pairs under every tableau, read either way; none of 7,981 planted clean-prose keys scores as low as K4's best.",
@@ -333,14 +342,15 @@
       "next": "Add sourced non-English key texts with hashes before any search, with planted keys as controls."
     },
     {
-      "family": "Gromark variants beyond the ACA digit rule, and fractionation other than 25-cell squares and standard trifid",
+      "family": "Fractionation beyond one 25-cell square and standard trifid: bigger squares and cubes, other cell counts and reading conventions, fractionated Morse",
       "status": "open",
-      "evidence": "5 by 5 square ciphers and standard trifid are excluded; the neural prior also pointed at Gromark, which is excluded only for the ACA digit rule on one keyed alphabet.",
+      "evidence": "The neural prior also pointed at Gromark; that half is done, in place, at this length: any digit-keyed alphabet and Periodic Gromark with any keyword are excluded above. What stays open is fractionation whose cells can hold all 26 letters or whose letters do not keep their positions at the published indexes: a 6 by 6 bifid square, cubes beyond 27 cells, other reading conventions, and fractionated Morse, which moves the clue letters, so the published positions cannot be used as they stand.",
       "logs": [
-        "k4-focus/family-net-2026-10-18.md"
+        "k4-focus/family-net-2026-10-18.md",
+        "k4-focus/gromark-variants-2026-10-19.md"
       ],
       "priority": 4,
-      "next": "Check Gromark with digit keys on two keyed alphabets and lagged-Fibonacci letter keys exactly, with planted controls."
+      "next": "Search exactly, with planted controls, only after a sourced convention fixes how the clues sit: a 6 by 6 bifid square or larger cubes first; do not start a Morse-framed search without one."
     }
   ]
 }

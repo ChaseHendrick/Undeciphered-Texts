@@ -10,9 +10,9 @@
       "stage": "ongoing",
       "closure": null,
       "unit": "hypothesis families",
-      "reviewed_through": "2026-10-18",
+      "reviewed_through": "2026-10-19",
       "plaintext_recovered_percent": 0,
-      "summary": "Unsolved. Plaintext recovered: 0 percent. 20 of 31 hypothesis families listed (65 percent) are excluded by a count or excluded by the clues; 4 are open. Reviewed through 2026-10-18.",
+      "summary": "Unsolved. Plaintext recovered: 0 percent. 21 of 32 hypothesis families listed (66 percent) are excluded by a count or excluded by the clues; 4 are open. Reviewed through 2026-10-19.",
       "caveat": "Progress here means ruling cipher models out against the artist's disclosed clues, fitting one clue and holding the other back. The plaintext is reported to sit in a private archive sold in November 2025, and the custodian still lists K4 as unsolved; the question here is a public method, not whether anyone knows the answer. The share is of the families listed, not of every cipher.",
       "note_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/kryptos-k4-2026-10-03.md",
       "ledger_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/kryptos-k4-status.json",
@@ -23,28 +23,28 @@
           "label": "Open",
           "definition": "Open: not searched here, or not searched with a method shown to work.",
           "count": 4,
-          "percent": 13
+          "percent": 12
         },
         {
           "status": "tested-without-power",
           "label": "Tested without shown power",
           "definition": "Tested, not closed: the search ran, but some hypotheses stay underdetermined, the budget ran out, or matched-length controls did not come back.",
           "count": 7,
-          "percent": 23
+          "percent": 22
         },
         {
           "status": "excluded-by-constraint",
           "label": "Excluded by the clues",
           "definition": "Excluded by the clues: every complete key the model allows contradicts a disclosed clue held back from fitting, or the model cannot place the clues at all.",
-          "count": 17,
-          "percent": 55
+          "count": 18,
+          "percent": 56
         },
         {
           "status": "excluded-by-count",
           "label": "Excluded by a count",
           "definition": "Excluded by a count: a measured statistic falls outside a threshold fixed before K4 was scored and checked on planted controls. This is statistical, not exact.",
           "count": 3,
-          "percent": 10
+          "percent": 9
         }
       ],
       "families": [
@@ -76,14 +76,15 @@
           "logs": []
         },
         {
-          "family": "Gromark variants beyond the ACA digit rule, and fractionation other than 25-cell squares and standard trifid",
+          "family": "Fractionation beyond one 25-cell square and standard trifid: bigger squares and cubes, other cell counts and reading conventions, fractionated Morse",
           "status": "open",
           "status_label": "Open",
-          "evidence": "5 by 5 square ciphers and standard trifid are excluded; the neural prior also pointed at Gromark, which is excluded only for the ACA digit rule on one keyed alphabet.",
-          "next": "Check Gromark with digit keys on two keyed alphabets and lagged-Fibonacci letter keys exactly, with planted controls.",
+          "evidence": "The neural prior also pointed at Gromark; that half is done, in place, at this length: any digit-keyed alphabet and Periodic Gromark with any keyword are excluded above. What stays open is fractionation whose cells can hold all 26 letters or whose letters do not keep their positions at the published indexes: a 6 by 6 bifid square, cubes beyond 27 cells, other reading conventions, and fractionated Morse, which moves the clue letters, so the published positions cannot be used as they stand.",
+          "next": "Search exactly, with planted controls, only after a sourced convention fixes how the clues sit: a 6 by 6 bifid square or larger cubes first; do not start a Morse-framed search without one.",
           "priority": 4,
           "logs": [
-            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/family-net-2026-10-18.md"
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/family-net-2026-10-18.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/gromark-variants-2026-10-19.md"
           ]
         },
         {
@@ -198,14 +199,15 @@
           ]
         },
         {
-          "family": "In-place ACA Gromark with digits 0 to 9, any keyword, and Myszkowski under KRYPTOS, PALIMPSEST or ABSCISSA on either side",
+          "family": "In-place Gromark-family digit keys: one cipher alphabet and shifts by digits 0 to 9 from any stream (ACA Gromark itself, any primer length, recurrence and lag), added or subtracted; Myszkowski under KRYPTOS, PALIMPSEST or ABSCISSA on either side",
           "status": "excluded-by-constraint",
           "status_label": "Excluded by the clues",
-          "evidence": "Ciphertext letters F, K and P cannot share one alphabet index with both clues, for any keyword or primer; a control with both clues planted is not blocked.",
+          "evidence": "Ciphertext letters F, K and P cannot share one alphabet index with both clues, for any keyword or primer; the bound uses no stream connection, so it holds for the Beaufort sense and for any digit stream too. Planted controls with both clues are never blocked.",
           "next": null,
           "priority": null,
           "logs": [
-            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/innovative-swarm-2026-10-04.md"
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/innovative-swarm-2026-10-04.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/gromark-variants-2026-10-19.md"
           ]
         },
         {
@@ -353,6 +355,17 @@
           ]
         },
         {
+          "family": "In-place ACA Periodic Gromark with any keyword, head lengths 2 to 9",
+          "status": "excluded-by-constraint",
+          "status_label": "Excluded by the clues",
+          "evidence": "SAT over a relaxed space that is a superset of every keyword (any distinct alphabet positions for the head letters, any rank permutation as the primer, cipher indexes free per crib letter) fits no head length from 2 to 9 with both clues. EASTNORTHEAST cannot be placed at all at head lengths 2, 4 and 5, and BERLINCLOCK at 2 and 3; the fits that run force held-back letters wrong (fitting EASTNORTHEAST: 6 of 11 at head length 3, 2 of 11 at 6, 3 of 11 at 7; fitting BERLINCLOCK: 3 of 13 at 4 and 5, 2 of 13 at 7); head lengths 8 and 9 fit each clue alone but no key places both. Exhaustive enumeration of the relaxed space agrees at head lengths 2 and 3 (1,300 and 93,600 configs). 16 planted texts under random keywords are never blocked and planted held-back letters are never forced wrong.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/k4-focus/gromark-variants-2026-10-19.md"
+          ]
+        },
+        {
           "family": "Any English-prose running key, in place, under those 12 tableaux",
           "status": "excluded-by-count",
           "status_label": "Excluded by a count",
@@ -400,8 +413,8 @@
           "next": "Add sourced non-English key texts with hashes before any search, with planted keys as controls."
         },
         {
-          "family": "Gromark variants beyond the ACA digit rule, and fractionation other than 25-cell squares and standard trifid",
-          "next": "Check Gromark with digit keys on two keyed alphabets and lagged-Fibonacci letter keys exactly, with planted controls."
+          "family": "Fractionation beyond one 25-cell square and standard trifid: bigger squares and cubes, other cell counts and reading conventions, fractionated Morse",
+          "next": "Search exactly, with planted controls, only after a sourced convention fixes how the clues sit: a 6 by 6 bifid square or larger cubes first; do not start a Morse-framed search without one."
         }
       ],
       "lay": {
@@ -423,7 +436,7 @@
         "background": "https://en.wikipedia.org/wiki/Kryptos"
       },
       "researcher": {
-        "summary": "97-letter K4 (ASCII SHA-256 eea81357...). Clues fitted and reserved in reciprocal folds: EASTNORTHEAST at zero-based plaintext offset 21 and BERLINCLOCK at 63. A reserved exact prediction requires a complete key and every reserved letter equal. Completed spaces: ragged columnar (widths to 32, both read orders, A-Z and KRYPTOS alphabets) composed either side of repeating, plaintext-autokey, ciphertext-autokey and Beaufort substitution at periods to 32 (65,024 hypotheses), 0 reserved exact predictions.",
+        "summary": "97-letter K4 (ASCII SHA-256 eea81357...). Clues fitted and reserved in reciprocal folds: EASTNORTHEAST at zero-based plaintext offset 21 and BERLINCLOCK at 63. A reserved exact prediction requires a complete key and every reserved letter equal. Completed spaces: ragged columnar (widths to 32, both read orders, A-Z and KRYPTOS alphabets) composed either side of repeating, plaintext-autokey, ciphertext-autokey and Beaufort substitution at periods to 32 (65,024 hypotheses), 0 reserved exact predictions. The Gromark family opened by the family prior is closed in place: any one-alphabet digit key (either sense, any stream) and Periodic Gromark with any keyword at head lengths 2 to 9 are excluded by a digit bound and by SAT over relaxed supersets, cross-checked by exhaustive enumeration at head lengths 2 and 3 and planted controls.",
         "methods": [
           "Reciprocal clue folds",
           "Exact crib-constraint inference",
