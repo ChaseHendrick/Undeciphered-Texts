@@ -554,7 +554,7 @@
       "unit": "questions",
       "reviewed_through": "2026-10-20",
       "plaintext_recovered_percent": 0,
-      "summary": "Undeciphered. Reading recovered: 0 percent. 2 of 4 questions listed (50 percent) are answered with a control; 2 are open. Reviewed through 2026-10-20.",
+      "summary": "Undeciphered. Reading recovered: 0 percent. 3 of 4 questions listed (75 percent) are answered with a control; 1 is open. Reviewed through 2026-10-20.",
       "caveat": "These are questions about the material that can be measured before anyone proposes a reading. Answering all of them would not decipher the script; it would make a later claim testable. Nothing here is a reading, and no probability of decipherment is assigned.",
       "note_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/voynich-2026-10-03.md",
       "ledger_url": "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/research-notes/voynich-status.json",
@@ -564,8 +564,8 @@
           "status": "open",
           "label": "Open",
           "definition": "Open: proposed here, not yet measured.",
-          "count": 2,
-          "percent": 50
+          "count": 1,
+          "percent": 25
         },
         {
           "status": "tested-without-power",
@@ -578,27 +578,18 @@
           "status": "closed-with-power",
           "label": "Answered with a control",
           "definition": "Answered with a control: measured on a frozen corpus, with a solved or synthetic control showing the method works.",
-          "count": 2,
-          "percent": 50
+          "count": 3,
+          "percent": 75
         }
       ],
       "families": [
-        {
-          "family": "Does the text predict unseen folios better than shuffled text?",
-          "status": "open",
-          "status_label": "Open",
-          "evidence": "Not measured. Ten whole folios reserved 20 October 2026, by seed-keyed hash, statistics-blind: f87r, f96v, f95r2, f68v1, f32v, f106r, f67r1, f36r, f82v, f24r.",
-          "next": "Compare held-out prediction of the reserved folios against word-length and line-length preserving nulls.",
-          "priority": 1,
-          "logs": []
-        },
         {
           "family": "Is it a simple cipher of a known language?",
           "status": "open",
           "status_label": "Open",
           "evidence": "Out of domain for the A to Z engine; not tested here.",
-          "next": "Only after the transcription questions: test a declared cipher model on synthetic Voynich-length controls first.",
-          "priority": 2,
+          "next": "Test a declared substitution model with Voynich-length synthetic controls before any real-text claim, and declare its own held-out discipline.",
+          "priority": 1,
           "logs": []
         },
         {
@@ -624,24 +615,31 @@
           "logs": [
             "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/voynich-segmentation-range-2026-10-20.md"
           ]
+        },
+        {
+          "family": "Does the text predict unseen folios better than shuffled text?",
+          "status": "closed-with-power",
+          "status_label": "Answered with a control",
+          "evidence": "Measured 20 October 2026 under pre-declared statistics, nulls, seeds and verdict rules. Ten whole folios reserved statistics-blind (f87r, f96v, f95r2, f68v1, f32v, f106r, f67r1, f36r, f82v, f24r) were scored against 1,000 seeded permutations per cell in three files of independent authorship: every cell's real statistic sat below all 1,000 null values, p 0.0010, the budget's floor. Within-word glyph-order structure transferred at 30 to 39 percent below the null floor; word-adjacency structure transferred weakly but beyond all noise at 0.5 to 0.8 percent below the null floor, so most transferable structure lives inside words. Machinery power demonstrated in both directions on planted synthetic corpora; stored null heads and real statistics recompute exactly from the declared per-replicate seeds. This is a necessary condition for language-like structure, not a sufficient one; no language, cipher or meaning conclusion follows. The reservation's testing role is discharged; family 4 must declare its own held-out discipline.",
+          "next": null,
+          "priority": null,
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/voynich-heldout-prediction-2026-10-20.md"
+          ]
         }
       ],
       "next": [
         {
-          "family": "Does the text predict unseen folios better than shuffled text?",
-          "next": "Compare held-out prediction of the reserved folios against word-length and line-length preserving nulls."
-        },
-        {
           "family": "Is it a simple cipher of a known language?",
-          "next": "Only after the transcription questions: test a declared cipher model on synthetic Voynich-length controls first."
+          "next": "Test a declared substitution model with Voynich-length synthetic controls before any real-text claim, and declare its own held-out discipline."
         }
       ],
       "lay": {
         "tagline": "A 15th-century illustrated book in a script nobody can read.",
         "summary": "The Voynich manuscript is a book of about 240 pages held at Yale, written in an unknown script and full of drawings of plants, stars and bathing figures. Its vellum has been carbon dated to the early 1400s. Nobody knows whether it hides a real language, a cipher or no meaning at all. We have not proposed a reading. The plan is to measure first how much the statistics change when you change how the script is transcribed.",
         "what_it_is": "The script uses perhaps 20 to 30 distinct signs, written in what look like words. Researchers turn it into Roman letters using schemes such as EVA, but those letters are labels for shapes, not sounds, and different schemes split the signs differently.",
-        "what_we_found": "Both the transcription and the segmentation questions are now measured. The two independent EVA transcriptions agree as statistics at or above their own resampling ceilings (glyph frequency 0.999, word tokens 0.901), and the agreement does not depend on which declared word segmentation is used. Uncertain spaces exist only in ZL and GC (2,603 and 2,321 of them on the measured loci); sign frequencies are exactly invariant under every declared segmentation, token counts move by exactly the join count, and part of the apparent vocabulary size is segmentation, not words. No conclusion about language or meaning is drawn.",
-        "whats_next": "Family 3: measure whether the text predicts the ten reserved whole folios better than shuffled text does, against word-length and line-length preserving nulls, with at most 2,000 seeded permutations.",
+        "what_we_found": "Three of four structural questions are now measured. The declared statistics survive both transcription choice and word segmentation (glyph frequency agreement 0.999; sign frequencies exactly invariant under every segmentation). The held-out test answered yes: unseen folios are predicted better than every one of 1,000 declared shuffles, in all three files, with the transferable structure concentrating inside words (word adjacency contributes little). No conclusion about language or meaning is drawn.",
+        "whats_next": "Family 4: test a declared cipher hypothesis of a known language on Voynich-length synthetic controls first, with its own held-out discipline now that the old reservation has served its role.",
         "faq": [
           {
             "q": "Has the Voynich manuscript been deciphered?",
