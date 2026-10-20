@@ -1,0 +1,270 @@
+{
+  "what": "The declared substitution screen: family 4's hypothesis class is one-to-one substitution of a known language with carried word divisions, the alphabet's cipher symbols inside the 26 most frequent glyph characters plus the word-boundary mark, scored as the best mean bigram nats per counted pair under an add-one model of the declared reference language. Power instruments: seeded substitution plants of the same reference and seeded multiset floors of the same stream. The recovered mappings are not recorded; nothing here is a reading.",
+  "declared": {
+    "base_seed": 20261020,
+    "mapped_letters": 26,
+    "restarts": 16,
+    "sweep_cap": 200,
+    "plants": 5,
+    "floors": 5,
+    "reserved_folios_excluded": true,
+    "verdict_rule": "real >= min(plants): consistent-with-substitution; real <= max(floors): not-consistent; otherwise indeterminate.",
+    "references": {
+      "english": {
+        "file": "substref_english_pg1342.txt",
+        "ebook": 1342,
+        "url": "https://www.gutenberg.org/cache/epub/1342/pg1342.txt",
+        "sha256": "3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75",
+        "processed_symbols": 692537,
+        "space_share": 0.1857
+      },
+      "latin": {
+        "file": "substref_latin_pg33849.txt",
+        "ebook": 33849,
+        "url": "https://www.gutenberg.org/cache/epub/33849/pg33849.txt",
+        "sha256": "30287aab673c861ae500f06fe55d4396f529a0c251b37178e7220b6c51317189",
+        "processed_symbols": 858522,
+        "space_share": 0.1581
+      }
+    }
+  },
+  "files": {
+    "ZL": {
+      "mapped_chars": [
+        "o",
+        "e",
+        "h",
+        "y",
+        "a",
+        "c",
+        "d",
+        "i",
+        "k",
+        "l",
+        "r",
+        "s",
+        "t",
+        "n",
+        "q",
+        "p",
+        "m",
+        "f",
+        "g",
+        "?",
+        "'",
+        "x",
+        "b",
+        "v",
+        "\u0184",
+        "\u0185",
+        "\u0000"
+      ],
+      "stream": {
+        "total_events": 218663,
+        "kept_events": 218473,
+        "kept_share": 0.9991,
+        "word_count": 34354,
+        "boundary_share": 0.1571
+      },
+      "english": {
+        "real_best_mean_nats": -5.2832,
+        "plants_best_mean_nats": [
+          -5.1422,
+          -5.1422,
+          -5.1422,
+          -5.1422,
+          -5.1422
+        ],
+        "floors_best_mean_nats": [
+          -6.6139,
+          -6.6068,
+          -6.6075,
+          -6.6105,
+          -6.6072
+        ],
+        "plant_floor_gap": 1.4646,
+        "real_margin_to_floor_max": 1.3236,
+        "real_margin_to_plant_min": -0.141,
+        "verdict": "indeterminate"
+      },
+      "latin": {
+        "real_best_mean_nats": -5.3162,
+        "plants_best_mean_nats": [
+          -5.0742,
+          -5.0742,
+          -5.0742,
+          -5.0742,
+          -5.0742
+        ],
+        "floors_best_mean_nats": [
+          -6.4987,
+          -6.5001,
+          -6.5028,
+          -6.4986,
+          -6.4983
+        ],
+        "plant_floor_gap": 1.4241,
+        "real_margin_to_floor_max": 1.1821,
+        "real_margin_to_plant_min": -0.242,
+        "verdict": "indeterminate"
+      }
+    },
+    "GC": {
+      "mapped_chars": [
+        "o",
+        "9",
+        "a",
+        "c",
+        "1",
+        "e",
+        "8",
+        "h",
+        "y",
+        "k",
+        "4",
+        "m",
+        "2",
+        "C",
+        "7",
+        "s",
+        "n",
+        "p",
+        "K",
+        "g",
+        "H",
+        "A",
+        "j",
+        "3",
+        "z",
+        "(",
+        "\u0000"
+      ],
+      "stream": {
+        "total_events": 186708,
+        "kept_events": 182887,
+        "kept_share": 0.9795,
+        "word_count": 36232,
+        "boundary_share": 0.1941
+      },
+      "english": {
+        "real_best_mean_nats": -5.3536,
+        "plants_best_mean_nats": [
+          -5.143,
+          -5.143,
+          -5.143,
+          -5.143,
+          -5.143
+        ],
+        "floors_best_mean_nats": [
+          -6.5878,
+          -6.5804,
+          -6.5868,
+          -6.5788,
+          -6.5893
+        ],
+        "plant_floor_gap": 1.4358,
+        "real_margin_to_floor_max": 1.2252,
+        "real_margin_to_plant_min": -0.2106,
+        "verdict": "indeterminate"
+      },
+      "latin": {
+        "real_best_mean_nats": -5.3883,
+        "plants_best_mean_nats": [
+          -5.0743,
+          -5.0743,
+          -5.0743,
+          -5.0743,
+          -5.0743
+        ],
+        "floors_best_mean_nats": [
+          -6.5638,
+          -6.5659,
+          -6.5687,
+          -6.5628,
+          -6.5584
+        ],
+        "plant_floor_gap": 1.4841,
+        "real_margin_to_floor_max": 1.1701,
+        "real_margin_to_plant_min": -0.314,
+        "verdict": "indeterminate"
+      }
+    },
+    "IT": {
+      "mapped_chars": [
+        "o",
+        "e",
+        "h",
+        "y",
+        "a",
+        "c",
+        "d",
+        "i",
+        "k",
+        "l",
+        "r",
+        "s",
+        "t",
+        "n",
+        "q",
+        "p",
+        "m",
+        "f",
+        "?",
+        "g",
+        "x",
+        "v",
+        "z",
+        "\u0000"
+      ],
+      "stream": {
+        "total_events": 220532,
+        "kept_events": 220532,
+        "kept_share": 1.0,
+        "word_count": 36441,
+        "boundary_share": 0.1652
+      },
+      "english": {
+        "real_best_mean_nats": -5.2541,
+        "plants_best_mean_nats": [
+          -5.1422,
+          -5.1422,
+          -5.1422,
+          -5.1422,
+          -5.1422
+        ],
+        "floors_best_mean_nats": [
+          -6.5943,
+          -6.5855,
+          -6.5958,
+          -6.5886,
+          -6.5863
+        ],
+        "plant_floor_gap": 1.4433,
+        "real_margin_to_floor_max": 1.3314,
+        "real_margin_to_plant_min": -0.1119,
+        "verdict": "indeterminate"
+      },
+      "latin": {
+        "real_best_mean_nats": -5.2933,
+        "plants_best_mean_nats": [
+          -5.074,
+          -5.074,
+          -5.074,
+          -5.074,
+          -5.074
+        ],
+        "floors_best_mean_nats": [
+          -6.4789,
+          -6.474,
+          -6.4814,
+          -6.4869,
+          -6.4866
+        ],
+        "plant_floor_gap": 1.4,
+        "real_margin_to_floor_max": 1.1807,
+        "real_margin_to_plant_min": -0.2193,
+        "verdict": "indeterminate"
+      }
+    }
+  }
+}

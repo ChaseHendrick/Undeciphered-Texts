@@ -587,10 +587,12 @@
           "family": "Is it a simple cipher of a known language?",
           "status": "open",
           "status_label": "Open",
-          "evidence": "Out of domain for the A to Z engine; not tested here.",
-          "next": "Test a declared substitution model with Voynich-length synthetic controls before any real-text claim, and declare its own held-out discipline.",
+          "evidence": "First measurement 20 October 2026: the declared substitution screen (one-to-one substitution with carried word divisions, the alphabet's cipher symbols inside the file's most frequent glyph characters up to 26 plus the word-boundary mark, add-one bigram scoring, greedy swap search with 16 seeded restarts, plants and floors per cell) against two frozen reference proeses, English (Pride and Prejudice, Gutenberg 1342) and Latin (Augustinus Confessiones, Gutenberg 33849). All six (file, language) cells scored indeterminate per the declared rule: real best sits 0.11 to 0.31 nats per counted pair below plant self-parity and 1.17 to 1.33 nats per counted pair above its own destroyed-adjacency floors, consistent across ZL, GC and IT. Plants reached parity exactly 20 of 20 times, so the machinery recognizes a substitution when the material is one; the self-calibrated plant band cannot yet exclude a member of the class scored cross-reference, which is precisely the declared next instrument (a second reference prose per language for a cross-text calibration band). Not covered by this unit: homophonic or polyalphabetic substitution, word-level ciphers, transpositions, nulls, abbreviations. No mapping is published; nothing here is a reading.",
+          "next": "Cross-text calibration: declare a second reference prose per language, measure the cross-text plant band with the same machinery, and only then read the real text's position against the band it should fall in if it is a member of the declared class. If the class survives at bigram resolution, declare a trigram-resolution pass before any wider claim.",
           "priority": 1,
-          "logs": []
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/voynich-substitution-screen-2026-10-20.md"
+          ]
         },
         {
           "family": "Do the statistics survive a change of transcription?",
@@ -631,15 +633,15 @@
       "next": [
         {
           "family": "Is it a simple cipher of a known language?",
-          "next": "Test a declared substitution model with Voynich-length synthetic controls before any real-text claim, and declare its own held-out discipline."
+          "next": "Cross-text calibration: declare a second reference prose per language, measure the cross-text plant band with the same machinery, and only then read the real text's position against the band it should fall in if it is a member of the declared class. If the class survives at bigram resolution, declare a trigram-resolution pass before any wider claim."
         }
       ],
       "lay": {
         "tagline": "A 15th-century illustrated book in a script nobody can read.",
         "summary": "The Voynich manuscript is a book of about 240 pages held at Yale, written in an unknown script and full of drawings of plants, stars and bathing figures. Its vellum has been carbon dated to the early 1400s. Nobody knows whether it hides a real language, a cipher or no meaning at all. We have not proposed a reading. The plan is to measure first how much the statistics change when you change how the script is transcribed.",
         "what_it_is": "The script uses perhaps 20 to 30 distinct signs, written in what look like words. Researchers turn it into Roman letters using schemes such as EVA, but those letters are labels for shapes, not sounds, and different schemes split the signs differently.",
-        "what_we_found": "Three of four structural questions are now measured. The declared statistics survive both transcription choice and word segmentation (glyph frequency agreement 0.999; sign frequencies exactly invariant under every segmentation). The held-out test answered yes: unseen folios are predicted better than every one of 1,000 declared shuffles, in all three files, with the transferable structure concentrating inside words (word adjacency contributes little). No conclusion about language or meaning is drawn.",
-        "whats_next": "Family 4: test a declared cipher hypothesis of a known language on Voynich-length synthetic controls first, with its own held-out discipline now that the old reservation has served its role.",
+        "what_we_found": "Three of four structural questions are measured and the first cipher-shaped test is now in. The declared statistics survive both transcription choice and word segmentation (glyph frequency agreement 0.999; sign frequencies exactly invariant under every segmentation). The held-out test answered yes: unseen folios are predicted better than every one of 1,000 declared shuffles, with the transferable structure concentrating inside words. The substitution screen's first pass is indeterminate by its own declared rule: under the declared search, no relabelling of the text reached the reference proeses' substitution parity (0.11 to 0.31 nats per pair below it), yet the text stood 1.17 to 1.33 nats per pair above its own destroyed-adjacency floors, and the machinery reached parity on all 20 of 20 plants. Cross-text calibration is the declared next instrument. No conclusion about language or meaning is drawn.",
+        "whats_next": "Family 4's cross-text calibration: declare a second reference prose per language, measure the cross-text plant band with the same machinery, and read the real text's position against the band a class member would occupy; then any surviving class gets a declared trigram-resolution pass.",
         "faq": [
           {
             "q": "Has the Voynich manuscript been deciphered?",
@@ -658,7 +660,8 @@
           "Transcription disagreement tables",
           "Sign n-gram statistics",
           "Length-preserving permutation nulls",
-          "Held-out folio prediction"
+          "Held-out folio prediction",
+          "Declared substitution screen with plant and floor bands"
         ]
       },
       "manuscript": null,
