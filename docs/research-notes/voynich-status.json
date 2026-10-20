@@ -6,15 +6,15 @@
   "kind": "script",
   "unit": "questions",
   "stage": "proposed",
-  "reviewed_through": "2026-10-03",
+  "reviewed_through": "2026-10-20",
   "plaintext_recovered_percent": 0,
   "caveat": "These are questions about the material that can be measured before anyone proposes a reading. Answering all of them would not decipher the script; it would make a later claim testable. Nothing here is a reading, and no probability of decipherment is assigned.",
   "lay": {
     "tagline": "A 15th-century illustrated book in a script nobody can read.",
     "summary": "The Voynich manuscript is a book of about 240 pages held at Yale, written in an unknown script and full of drawings of plants, stars and bathing figures. Its vellum has been carbon dated to the early 1400s. Nobody knows whether it hides a real language, a cipher or no meaning at all. We have not proposed a reading. The plan is to measure first how much the statistics change when you change how the script is transcribed.",
     "what_it_is": "The script uses perhaps 20 to 30 distinct signs, written in what look like words. Researchers turn it into Roman letters using schemes such as EVA, but those letters are labels for shapes, not sounds, and different schemes split the signs differently.",
-    "what_we_found": "The frozen transcriptions have been parsed and compared. Two EVA-alphabet files agree on 80.5 percent of words placed the same way, and the disagreements cluster in the circular astronomical and cosmological text. No statistics on the letters have been run yet, so no conclusion about language or meaning is drawn.",
-    "whats_next": "Measure sign patterns under each transcription, with shuffled controls, keeping ten whole folios unseen for testing; the folio-by-folio comparison of the transcriptions itself is done.",
+    "what_we_found": "The declared statistics survive the transcription change: between the two independent EVA transcriptions, glyph frequency ranks agree at 0.999, bigrams at 0.965, and word tokens at 0.901 on 5,013 shared loci, at or above the metric's own resampling ceiling. What differs is segmentation: 34,354 against 36,441 tokens for the same glyph content. No conclusion about language or meaning is drawn.",
+    "whats_next": "Declare the segmentation choices and measure the range of the statistics under each, with shuffled controls, keeping ten whole folios unseen for testing.",
     "faq": [
       {
         "q": "Has the Voynich manuscript been deciphered?",
@@ -49,37 +49,36 @@
   "families": [
     {
       "family": "Do the statistics survive a change of transcription?",
-      "status": "open",
-      "evidence": "Corpus frozen 19 October 2026: ZL 3b primary, with independently authored GC 2a (v101 alphabet) and IT 2a (Takahashi in EVA-T) as comparison files, all IVTFF 2.0 with SHA-256 recorded. The parser (engine/voynich_ivtff.py) reproduces the published loci, paragraph and long-word counts exactly for all three files. Locus alignment by (folio, locus number) is computed (engine/voynich_compare.py, full table in docs/research-notes/voynich-transcript-agreement.json): ZL vs IT share 5,214 loci, 43.0 percent with identical word tuples and 80.5 percent of words matched in place; cross-alphabet pairs match word counts only (ZL vs GC 69.2, GC vs IT 74.2 percent). Least agreement clusters in the circular astronomical and cosmological text of folios f67 to f73. The descriptive table is not yet the family measurement: statistics on the text (sign and word frequencies, n-grams, token lengths) are not computed. RF was deliberately not frozen because it is a derived combination of ZL and GC.",
+      "status": "closed-with-power",
+      "evidence": "Measured 20 October 2026 on the 5,013 worded loci shared by ZL 3b and IT 2a outside ten reserved whole folios. Spearman rank correlation over shared types: glyph frequency 0.999, bigrams 0.965, trigrams 0.937, quadgrams 0.915, word tokens 0.901. Glyph totals match within 218 of 184,310; the files split 34,354 and 36,441 tokens (6.1 percent), so the residue is segmentation, not the statistics. Controls: the within-file half-split resampling baseline is 0.73 for word tokens and 0.84 to 1.00 for the rest, so the cross-transcription agreement is at or above the metric's own ceiling; a planted cyclic relabelling of the ten most frequent EVA characters of IT drops bigram agreement to 0.40, trigrams to 0.10, quadgrams to -0.07 and words to 0.26, margins of 0.56 or more; planted miniature files control the pipeline itself. Nothing follows about language or meaning.",
       "logs": [
         "voynich-transcripts-2026-10-19.md",
-        "voynich-parse-and-agreement-2026-10-19.md"
-      ],
-      "priority": 1,
-      "next": "Compute the declared statistics (sign and word frequencies, n-grams of orders 1 to 4, token lengths) on the shared loci of ZL and IT, then the range under declared segmentations, before any reading would be testable."
+        "voynich-parse-and-agreement-2026-10-19.md",
+        "voynich-transcript-stats-2026-10-20.md"
+      ]
     },
     {
       "family": "Do they survive a change of word segmentation?",
       "status": "open",
-      "evidence": "Not measured. Uncertain spaces differ between schemes.",
+      "evidence": "Not measured. The measured 6.1 percent token difference for the same glyph content is this family's opening fact.",
       "logs": [],
-      "priority": 2,
-      "next": "Recompute token statistics under each declared segmentation and report the range, not the best case."
+      "priority": 1,
+      "next": "Declare the segmentation choices and recompute the declared statistics under each on the shared loci, reporting the range, not the best case."
     },
     {
       "family": "Does the text predict unseen folios better than shuffled text?",
       "status": "open",
-      "evidence": "Not measured.",
+      "evidence": "Not measured. Ten whole folios reserved 20 October 2026, by seed-keyed hash, statistics-blind: f87r, f96v, f95r2, f68v1, f32v, f106r, f67r1, f36r, f82v, f24r.",
       "logs": [],
-      "priority": 3,
-      "next": "Reserve 10 whole folios before computing features and compare held-out prediction against word-length and line-length preserving nulls."
+      "priority": 2,
+      "next": "Compare held-out prediction of the reserved folios against word-length and line-length preserving nulls."
     },
     {
       "family": "Is it a simple cipher of a known language?",
       "status": "open",
       "evidence": "Out of domain for the A to Z engine; not tested here.",
       "logs": [],
-      "priority": 4,
+      "priority": 3,
       "next": "Only after the transcription questions: test a declared cipher model on synthetic Voynich-length controls first."
     }
   ]
