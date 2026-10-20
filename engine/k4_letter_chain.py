@@ -34,7 +34,14 @@ import random
 from engine.k4_gromark_obstruction import CRIB_SPANS, crib_pairs
 from engine.k4_gromark_variants import _Cnf
 from engine.solvers.k4_attempt import K4_CIPHERTEXT
-from pysat.solvers import Solver
+
+
+def _pysat():
+    try:
+        from pysat.solvers import Solver
+    except ImportError as exc:  # pragma: no cover - optional dependency
+        raise RuntimeError("k4_letter_chain needs the optional python-sat package") from exc
+    return Solver
 
 LET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 ALPHABET_INDEX = {ch: i for i, ch in enumerate(LET)}
@@ -214,6 +221,7 @@ def check(m: int, a: int = None, b: int = None, rec_sign: int = 1, apply_sign: i
     if a is None:
         a, b = m, m - 1
     cnf = chain_cnf(m, a, b, rec_sign, apply_sign, ciphertext, spans)
+    Solver = _pysat()
     with Solver(name="cadical153", bootstrap_with=cnf["f"].clauses) as solver:
         return "sat" if solver.solve() else "unsat"
 

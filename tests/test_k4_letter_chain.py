@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
+import importlib.util
 import unittest
+
+_HAS_SAT = importlib.util.find_spec("pysat") is not None
 
 
 class LetterChainLinearTest(unittest.TestCase):
@@ -55,6 +58,7 @@ class LetterChainLinearTest(unittest.TestCase):
         self.assertIsNone(report["claimed_plaintext"])
 
 
+@unittest.skipUnless(_HAS_SAT, "optional python-sat not installed")
 class LetterChainSatTest(unittest.TestCase):
     def test_k4_unsat_at_sample_short_primers(self) -> None:
         from engine.k4_letter_chain import check
