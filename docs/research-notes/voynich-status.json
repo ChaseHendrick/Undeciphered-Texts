@@ -13,8 +13,8 @@
     "tagline": "A 15th-century illustrated book in a script nobody can read.",
     "summary": "The Voynich manuscript is a book of about 240 pages held at Yale, written in an unknown script and full of drawings of plants, stars and bathing figures. Its vellum has been carbon dated to the early 1400s. Nobody knows whether it hides a real language, a cipher or no meaning at all. We have not proposed a reading. The plan is to measure first how much the statistics change when you change how the script is transcribed.",
     "what_it_is": "The script uses perhaps 20 to 30 distinct signs, written in what look like words. Researchers turn it into Roman letters using schemes such as EVA, but those letters are labels for shapes, not sounds, and different schemes split the signs differently.",
-    "what_we_found": "The declared statistics survive the transcription change: between the two independent EVA transcriptions, glyph frequency ranks agree at 0.999, bigrams at 0.965, and word tokens at 0.901 on 5,013 shared loci, at or above the metric's own resampling ceiling. What differs is segmentation: 34,354 against 36,441 tokens for the same glyph content. No conclusion about language or meaning is drawn.",
-    "whats_next": "Declare the segmentation choices and measure the range of the statistics under each, with shuffled controls, keeping ten whole folios unseen for testing.",
+    "what_we_found": "Both the transcription and the segmentation questions are now measured. The two independent EVA transcriptions agree as statistics at or above their own resampling ceilings (glyph frequency 0.999, word tokens 0.901), and the agreement does not depend on which declared word segmentation is used. Uncertain spaces exist only in ZL and GC (2,603 and 2,321 of them on the measured loci); sign frequencies are exactly invariant under every declared segmentation, token counts move by exactly the join count, and part of the apparent vocabulary size is segmentation, not words. No conclusion about language or meaning is drawn.",
+    "whats_next": "Family 3: measure whether the text predicts the ten reserved whole folios better than shuffled text does, against word-length and line-length preserving nulls, with at most 2,000 seeded permutations.",
     "faq": [
       {
         "q": "Has the Voynich manuscript been deciphered?",
@@ -59,18 +59,18 @@
     },
     {
       "family": "Do they survive a change of word segmentation?",
-      "status": "open",
-      "evidence": "Not measured. The measured 6.1 percent token difference for the same glyph content is this family's opening fact.",
-      "logs": [],
-      "priority": 1,
-      "next": "Declare the segmentation choices and recompute the declared statistics under each on the shared loci, reporting the range, not the best case."
+      "status": "closed-with-power",
+      "evidence": "Measured 20 October 2026 on the same 5,013 worded shared loci under two declared segmentations: the frozen long-word convention (delegated to the frozen parser and locked to it on every locus of all three files) and the identical normalisation with every uncertain space cut as definite. IT carries no uncertain spaces, so its two policies agree exactly: a built-in zero-join control. ZL has 2,603 joins: tokens 34,354 to 36,957, the delta exactly the join count; word types fall 8,988 to 7,959 (splitting recycles joined hapaxes, so a large share of measured vocabulary size is segmentation); mean length 5.365 to 4.987. GC behaves the same with 2,321 joins. Sign frequencies are exactly invariant (delta 0 in every file). Word-frequency ranks move to rho 0.942 (ZL) and 0.947 (GC) between their own two policies, not collapse. Cross-file ZL-IT agreement holds at 0.90 or better at every order under both policies, and the split values are all at or above the long-word values (word tokens 0.901 to 0.915), so family 1's conclusion does not depend on segmentation. Planted synthetic loci reproduce the exact token-delta identity. No reading and no language claim.",
+      "logs": [
+        "voynich-segmentation-range-2026-10-20.md"
+      ]
     },
     {
       "family": "Does the text predict unseen folios better than shuffled text?",
       "status": "open",
       "evidence": "Not measured. Ten whole folios reserved 20 October 2026, by seed-keyed hash, statistics-blind: f87r, f96v, f95r2, f68v1, f32v, f106r, f67r1, f36r, f82v, f24r.",
       "logs": [],
-      "priority": 2,
+      "priority": 1,
       "next": "Compare held-out prediction of the reserved folios against word-length and line-length preserving nulls."
     },
     {
@@ -78,7 +78,7 @@
       "status": "open",
       "evidence": "Out of domain for the A to Z engine; not tested here.",
       "logs": [],
-      "priority": 3,
+      "priority": 2,
       "next": "Only after the transcription questions: test a declared cipher model on synthetic Voynich-length controls first."
     }
   ]
