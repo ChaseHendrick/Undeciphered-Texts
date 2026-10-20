@@ -1,0 +1,265 @@
+{
+ "cross_file_agreement": {
+  "join": {
+   "char1": 0.9990118577075099,
+   "ngram2": 0.9647349486463687,
+   "ngram3": 0.9364600519278066,
+   "ngram4": 0.9145724077745467,
+   "shared_word_types": 6335,
+   "word1": 0.901524852881318
+  },
+  "split": {
+   "char1": 0.9990118577075099,
+   "ngram2": 0.9703444786351922,
+   "ngram3": 0.9475519653983628,
+   "ngram4": 0.9334187832272383,
+   "shared_word_types": 6284,
+   "word1": 0.9147108890213981
+  }
+ },
+ "files": {
+  "GC": {
+   "join": {
+    "glyphs": 150477,
+    "length_shares": {
+     "1": 0.027738,
+     "10": 0.001408,
+     "11": 0.000331,
+     "12": 0.000248,
+     "2": 0.106177,
+     "3": 0.221186,
+     "4": 0.244977,
+     "5": 0.220523,
+     "6": 0.11661,
+     "7": 0.044546,
+     "8": 0.012116,
+     "9": 0.004002
+    },
+    "loci_absent": 1,
+    "mean_length": 4.153152,
+    "ngram_totals": {
+     "ngram2": 114245,
+     "ngram3": 79018,
+     "ngram4": 47638
+    },
+    "ngram_types": {
+     "ngram2": 1348,
+     "ngram3": 4461,
+     "ngram4": 8012
+    },
+    "share_length_over_12": 0.000138,
+    "token_ratio": 0.279863,
+    "tokens": 36232,
+    "types": 10140,
+    "uncertain_joins": 2321
+   },
+   "split": {
+    "glyphs": 150477,
+    "length_shares": {
+     "1": 0.047623,
+     "10": 0.000363,
+     "11": 2.6e-05,
+     "12": 5.2e-05,
+     "2": 0.135943,
+     "3": 0.230851,
+     "4": 0.238503,
+     "5": 0.202215,
+     "6": 0.100667,
+     "7": 0.034472,
+     "8": 0.007444,
+     "9": 0.001842
+    },
+    "loci_absent": 1,
+    "mean_length": 3.90312,
+    "ngram_totals": {
+     "ngram2": 111924,
+     "ngram3": 75207,
+     "ngram4": 43731
+    },
+    "ngram_types": {
+     "ngram2": 1316,
+     "ngram3": 4202,
+     "ngram4": 7184
+    },
+    "share_length_over_12": 0.0,
+    "token_ratio": 0.244806,
+    "tokens": 38553,
+    "types": 9438,
+    "uncertain_joins": 2321
+   }
+  },
+  "IT": {
+   "join": {
+    "glyphs": 184092,
+    "length_shares": {
+     "1": 0.021157,
+     "10": 0.005296,
+     "11": 0.001153,
+     "12": 0.000686,
+     "2": 0.060756,
+     "3": 0.093494,
+     "4": 0.180456,
+     "5": 0.254411,
+     "6": 0.200516,
+     "7": 0.117478,
+     "8": 0.047254,
+     "9": 0.017069
+    },
+    "loci_absent": 0,
+    "mean_length": 5.051782,
+    "ngram_totals": {
+     "ngram2": 147651,
+     "ngram3": 111981,
+     "ngram4": 78525
+    },
+    "ngram_types": {
+     "ngram2": 312,
+     "ngram3": 1582,
+     "ngram4": 4010
+    },
+    "share_length_over_12": 0.000274,
+    "token_ratio": 0.216816,
+    "tokens": 36441,
+    "types": 7901,
+    "uncertain_joins": 0
+   },
+   "split": {
+    "glyphs": 184092,
+    "length_shares": {
+     "1": 0.021157,
+     "10": 0.005296,
+     "11": 0.001153,
+     "12": 0.000686,
+     "2": 0.060756,
+     "3": 0.093494,
+     "4": 0.180456,
+     "5": 0.254411,
+     "6": 0.200516,
+     "7": 0.117478,
+     "8": 0.047254,
+     "9": 0.017069
+    },
+    "loci_absent": 0,
+    "mean_length": 5.051782,
+    "ngram_totals": {
+     "ngram2": 147651,
+     "ngram3": 111981,
+     "ngram4": 78525
+    },
+    "ngram_types": {
+     "ngram2": 312,
+     "ngram3": 1582,
+     "ngram4": 4010
+    },
+    "share_length_over_12": 0.000274,
+    "token_ratio": 0.216816,
+    "tokens": 36441,
+    "types": 7901,
+    "uncertain_joins": 0
+   }
+  },
+  "ZL": {
+   "join": {
+    "glyphs": 184310,
+    "length_shares": {
+     "1": 0.018717,
+     "10": 0.011876,
+     "11": 0.005152,
+     "12": 0.002853,
+     "2": 0.044856,
+     "3": 0.077342,
+     "4": 0.163125,
+     "5": 0.24623,
+     "6": 0.208447,
+     "7": 0.131571,
+     "8": 0.060342,
+     "9": 0.027217
+    },
+    "loci_absent": 0,
+    "mean_length": 5.365023,
+    "ngram_totals": {
+     "ngram2": 149956,
+     "ngram3": 116245,
+     "ngram4": 84075
+    },
+    "ngram_types": {
+     "ngram2": 496,
+     "ngram3": 1947,
+     "ngram4": 4704
+    },
+    "share_length_over_12": 0.00227,
+    "token_ratio": 0.261629,
+    "tokens": 34354,
+    "types": 8988,
+    "uncertain_joins": 2603
+   },
+   "split": {
+    "glyphs": 184310,
+    "length_shares": {
+     "1": 0.036529,
+     "10": 0.005791,
+     "11": 0.001542,
+     "12": 0.000649,
+     "2": 0.063236,
+     "3": 0.091539,
+     "4": 0.178451,
+     "5": 0.247017,
+     "6": 0.194605,
+     "7": 0.114457,
+     "8": 0.047866,
+     "9": 0.017994
+    },
+    "loci_absent": 0,
+    "mean_length": 4.987147,
+    "ngram_totals": {
+     "ngram2": 147353,
+     "ngram3": 111746,
+     "ngram4": 78476
+    },
+    "ngram_types": {
+     "ngram2": 480,
+     "ngram3": 1819,
+     "ngram4": 4140
+    },
+    "share_length_over_12": 0.000325,
+    "token_ratio": 0.215358,
+    "tokens": 36957,
+    "types": 7959,
+    "uncertain_joins": 2603
+   }
+  }
+ },
+ "reserved_folios": [
+  "f87r",
+  "f96v",
+  "f95r2",
+  "f68v1",
+  "f32v",
+  "f106r",
+  "f67r1",
+  "f36r",
+  "f82v",
+  "f24r"
+ ],
+ "used_loci": 5013,
+ "word_statistic_movement": {
+  "GC": {
+   "shared_word_types": 9051,
+   "sign_frequency_delta": 0,
+   "token_delta": 2321,
+   "word_frequency_rho_join_vs_split": 0.9473355294032847
+  },
+  "IT": {
+   "shared_word_types": 7901,
+   "sign_frequency_delta": 0,
+   "token_delta": 0,
+   "word_frequency_rho_join_vs_split": 1.0
+  },
+  "ZL": {
+   "shared_word_types": 7507,
+   "sign_frequency_delta": 0,
+   "token_delta": 2603,
+   "word_frequency_rho_join_vs_split": 0.9417881235037171
+  }
+ }
+}
