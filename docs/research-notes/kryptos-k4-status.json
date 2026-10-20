@@ -6,7 +6,7 @@
   "kind": "cipher",
   "unit": "hypothesis families",
   "stage": "ongoing",
-  "reviewed_through": "2026-10-18",
+  "reviewed_through": "2026-10-19",
   "log_glob": "k4-focus/*-????-??-??.md",
   "cite_every_log_from": "2026-10-04",
   "plaintext_recovered_percent": 0,
@@ -30,7 +30,7 @@
     "background": "https://en.wikipedia.org/wiki/Kryptos"
   },
   "researcher": {
-    "summary": "97-letter K4 (ASCII SHA-256 eea81357...). Clues fitted and reserved in reciprocal folds: EASTNORTHEAST at zero-based plaintext offset 21 and BERLINCLOCK at 63. A reserved exact prediction requires a complete key and every reserved letter equal. Completed spaces: ragged columnar (widths to 32, both read orders, A-Z and KRYPTOS alphabets) composed either side of repeating, plaintext-autokey, ciphertext-autokey and Beaufort substitution at periods to 32 (65,024 hypotheses), 0 reserved exact predictions.",
+    "summary": "97-letter K4 (ASCII SHA-256 eea81357...). Clues fitted and reserved in reciprocal folds: EASTNORTHEAST at zero-based plaintext offset 21 and BERLINCLOCK at 63. A reserved exact prediction requires a complete key and every reserved letter equal. Completed spaces: ragged columnar (widths to 32, both read orders, A-Z and KRYPTOS alphabets) composed either side of repeating, plaintext-autokey, ciphertext-autokey and Beaufort substitution at periods to 32 (65,024 hypotheses), 0 reserved exact predictions. The Gromark family opened by the family prior is closed in place: any one-alphabet digit key (either sense, any stream) and Periodic Gromark with any keyword at head lengths 2 to 9 are excluded by a digit bound and by SAT over relaxed supersets, cross-checked by exhaustive enumeration at head lengths 2 and 3 and planted controls. Letter chains over letters (mod 26) are settled exactly where the chain still binds: every lag pair at primer lengths 2 to 9, and at 10 every lag pair but (8, 10), by Gaussian elimination over the primer cross-checked by SAT, with the first models appearing at primer length 11 (12 for the subtract recurrence).",
     "methods": [
       "Reciprocal clue folds",
       "Exact crib-constraint inference",
@@ -172,11 +172,12 @@
       ]
     },
     {
-      "family": "In-place ACA Gromark with digits 0 to 9, any keyword, and Myszkowski under KRYPTOS, PALIMPSEST or ABSCISSA on either side",
+      "family": "In-place Gromark-family digit keys: one cipher alphabet and shifts by digits 0 to 9 from any stream (ACA Gromark itself, any primer length, recurrence and lag), added or subtracted; Myszkowski under KRYPTOS, PALIMPSEST or ABSCISSA on either side",
       "status": "excluded-by-constraint",
-      "evidence": "Ciphertext letters F, K and P cannot share one alphabet index with both clues, for any keyword or primer; a control with both clues planted is not blocked.",
+      "evidence": "Ciphertext letters F, K and P cannot share one alphabet index with both clues, for any keyword or primer; the bound uses no stream connection, so it holds for the Beaufort sense and for any digit stream too. Planted controls with both clues are never blocked.",
       "logs": [
-        "k4-focus/innovative-swarm-2026-10-04.md"
+        "k4-focus/innovative-swarm-2026-10-04.md",
+        "k4-focus/gromark-variants-2026-10-19.md"
       ]
     },
     {
@@ -269,6 +270,38 @@
       ]
     },
     {
+      "family": "Any cipher whose letters come from one 25-cell square: bifid, conjugated-matrix bifid, Playfair, seriated Playfair, two-square, four-square, Phillips and Polybius substitutions",
+      "status": "excluded-by-constraint",
+      "evidence": "Such a cipher can write at most 25 different letters and K4 uses all 26, whatever the key, period or language.",
+      "logs": [
+        "k4-focus/fractionation-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "Trifid with any 27-symbol cube at every period, on 97 letters or 98 with the K3 question mark as the 27th symbol",
+      "status": "excluded-by-constraint",
+      "evidence": "An exact SAT model with the cube left free finds no fit at periods 1 to 97 and 1 to 98; EASTNORTHEAST alone blocks 96 of 97. 80 planted trifid texts from the repo's encipherment are never blocked.",
+      "logs": [
+        "k4-focus/fractionation-2026-10-18.md"
+      ]
+    },
+    {
+      "family": "In-place ACA Periodic Gromark with any keyword, head lengths 2 to 9",
+      "status": "excluded-by-constraint",
+      "evidence": "SAT over a relaxed space that is a superset of every keyword (any distinct alphabet positions for the head letters, any rank permutation as the primer, cipher indexes free per crib letter) fits no head length from 2 to 9 with both clues. EASTNORTHEAST cannot be placed at all at head lengths 2, 4 and 5, and BERLINCLOCK at 2 and 3; the fits that run force held-back letters wrong (fitting EASTNORTHEAST: 6 of 11 at head length 3, 2 of 11 at 6, 3 of 11 at 7; fitting BERLINCLOCK: 3 of 13 at 4 and 5, 2 of 13 at 7); head lengths 8 and 9 fit each clue alone but no key places both. Exhaustive enumeration of the relaxed space agrees at head lengths 2 and 3 (1,300 and 93,600 configs). 16 planted texts under random keywords are never blocked and planted held-back letters are never forced wrong.",
+      "logs": [
+        "k4-focus/gromark-variants-2026-10-19.md"
+      ]
+    },
+    {
+      "family": "In-place lagged-Fibonacci letter keys, chain binding the clues: any lag pair and sign combination at primer lengths 2 to 9, and at 10 every lag pair except (8, 10), except that with the subtract recurrence lag (2, 10) also admits models",
+      "status": "excluded-by-constraint",
+      "evidence": "The same-crib-letter equations are congruences in the primer, so Gaussian elimination over mod 26 enumerates the whole affine space of key streams: of 336 lag shapes at primer lengths 2 to 10 (both stream senses, both application senses), 330 are excluded. The exact SAT resolves every pair the elimination could not count and agrees at the boundary (20 of 26 resolved shapes excluded), and confirms the three surviving shapes at primer length 10: lag (8, 10) in both stream senses and lag (2, 10) with the subtract recurrence, which stay open with longer primers. Planted primers are recovered and planted ciphertexts are never blocked.",
+      "logs": [
+        "k4-focus/letter-chain-2026-10-19.md"
+      ]
+    },
+    {
       "family": "Any English-prose running key, in place, under those 12 tableaux",
       "status": "excluded-by-count",
       "evidence": "The two clue fragments of the key score at the 0.0000 percentile of 1,916,325 aligned English fragment pairs under every tableau, read either way; none of 7,981 planted clean-prose keys scores as low as K4's best.",
@@ -317,14 +350,16 @@
       "next": "Add sourced non-English key texts with hashes before any search, with planted keys as controls."
     },
     {
-      "family": "Fractionating ciphers (bifid, trifid) and Gromark variants beyond the ACA digit rule",
+      "family": "Fractionation beyond one 25-cell square and standard trifid, and the in-place Gromark shapes whose models survive the clues: fractionated Morse, bigger squares and cubes, other cell counts and reading conventions, letter chains from primer length 11 (12 with the subtract recurrence), lag (8, 10) chains in both stream senses and lag (2, 10) chains with the subtract recurrence at primer length 10, and digit chains over two keyed alphabets",
       "status": "open",
-      "evidence": "A calibrated neural family prior trained on planted 97-letter ciphertexts puts K4 with random letters (0.36), Gromark (0.32) and trifid (0.12), and far from short periods, autokey, running key, Hill and pure transposition. A prior is a search order, not evidence of a method.",
+      "evidence": "The neural prior also pointed at Gromark, and most of that half is done in place: any digit-keyed alphabet, Periodic Gromark with any keyword, and letter chains through the primer lengths the chain still binds are excluded above. What stays open here is fractionation whose cells can hold all 26 letters or whose letters do not keep their positions at the published indexes (a 6 by 6 bifid square, cubes beyond 27 cells, other reading conventions, and fractionated Morse, which moves the clue letters, so the published positions cannot be used as they stand), and the chain shapes listed in the title, whose models the clues do not separate.",
       "logs": [
-        "k4-focus/family-net-2026-10-18.md"
+        "k4-focus/family-net-2026-10-18.md",
+        "k4-focus/gromark-variants-2026-10-19.md",
+        "k4-focus/letter-chain-2026-10-19.md"
       ],
       "priority": 4,
-      "next": "Write clue-only checks for in-place bifid and trifid with unknown squares and for Gromark with other digit rules, with planted controls, before any language-scored search."
+      "next": "Search exactly, with planted controls, only after a sourced convention fixes how the clues sit: a 6 by 6 bifid square or larger cubes first; size the surviving chain space by counting placements per primer before any language search; do not start a Morse-framed search without a sourced convention."
     }
   ]
 }
