@@ -1,0 +1,397 @@
+{
+ "files": {
+  "GC": {
+   "alphabet_code": "v101",
+   "format_version": "2.0",
+   "glyphs_our_convention": 158954,
+   "invalid_loci": 1,
+   "loci": 5367,
+   "long_words": 38242,
+   "pages": 226,
+   "paragraphs": 775,
+   "warnings": 0
+  },
+  "IT": {
+   "alphabet_code": "EvaT",
+   "format_version": "2.0",
+   "glyphs_our_convention": 191742,
+   "invalid_loci": 1,
+   "loci": 5215,
+   "long_words": 37919,
+   "pages": 225,
+   "paragraphs": 772,
+   "warnings": 0
+  },
+  "ZL": {
+   "alphabet_code": "Eva-",
+   "format_version": "2.0",
+   "glyphs_our_convention": 194715,
+   "invalid_loci": 0,
+   "loci": 5385,
+   "long_words": 36278,
+   "pages": 227,
+   "paragraphs": 740,
+   "warnings": 0
+  }
+ },
+ "method": {
+  "convention": "Words are the frozen-count long words: definite separators '.' '<->' '<~>'; commas, the uncertain spaces, join; uncertain readings resolve to their first option; ligature braces are removed; one '@nnn;' is one glyph.",
+  "locus_key": "(folio, locus num)",
+  "string_comparison": "allowed for ZL-IT only (both EVA-family)",
+  "word_similarity": "order-preserving difflib match over the words of one shared locus, for the same-alphabet pair"
+ },
+ "pairs": {
+  "GC-IT": {
+   "kind": "cross-alphabet",
+   "loci_a": 5367,
+   "loci_b": 5215,
+   "loci_word_identical": null,
+   "loci_word_identical_share": null,
+   "note": "Different transliteration alphabets (EVA-family versus v101), so word strings are not compared; the word-count agreement is given without string evidence.",
+   "only_a": 153,
+   "only_a_by_folio": [
+    [
+     "fRos",
+     148
+    ],
+    [
+     "f102r2",
+     2
+    ],
+    [
+     "f102v1",
+     1
+    ],
+    [
+     "f106r",
+     1
+    ],
+    [
+     "f67v2",
+     1
+    ]
+   ],
+   "only_b": 1,
+   "only_b_by_folio": [
+    [
+     "f67r2",
+     1
+    ]
+   ],
+   "same_alphabet": false,
+   "shared_loci": 5214,
+   "shared_word_count_equal": 3867,
+   "shared_word_count_equal_share": 0.741657,
+   "stats_a": {
+    "alphabet_code": "v101",
+    "format_version": "2.0",
+    "glyphs_our_convention": 158954,
+    "invalid_loci": 1,
+    "loci": 5367,
+    "long_words": 38242,
+    "pages": 226,
+    "paragraphs": 775,
+    "warnings": 0
+   },
+   "stats_b": {
+    "alphabet_code": "EvaT",
+    "format_version": "2.0",
+    "glyphs_our_convention": 191742,
+    "invalid_loci": 1,
+    "loci": 5215,
+    "long_words": 37919,
+    "pages": 225,
+    "paragraphs": 772,
+    "warnings": 0
+   }
+  },
+  "ZL-GC": {
+   "kind": "cross-alphabet",
+   "loci_a": 5385,
+   "loci_b": 5367,
+   "loci_word_identical": null,
+   "loci_word_identical_share": null,
+   "note": "Different transliteration alphabets (EVA-family versus v101), so word strings are not compared; the word-count agreement is given without string evidence.",
+   "only_a": 19,
+   "only_a_by_folio": [
+    [
+     "fRos",
+     12
+    ],
+    [
+     "f2r",
+     2
+    ],
+    [
+     "f116v",
+     1
+    ],
+    [
+     "f11v",
+     1
+    ],
+    [
+     "f17r",
+     1
+    ],
+    [
+     "f67r2",
+     1
+    ],
+    [
+     "f67v2",
+     1
+    ]
+   ],
+   "only_b": 1,
+   "only_b_by_folio": [
+    [
+     "f89v2",
+     1
+    ]
+   ],
+   "same_alphabet": false,
+   "shared_loci": 5366,
+   "shared_word_count_equal": 3713,
+   "shared_word_count_equal_share": 0.691949,
+   "stats_a": {
+    "alphabet_code": "Eva-",
+    "format_version": "2.0",
+    "glyphs_our_convention": 194715,
+    "invalid_loci": 0,
+    "loci": 5385,
+    "long_words": 36278,
+    "pages": 227,
+    "paragraphs": 740,
+    "warnings": 0
+   },
+   "stats_b": {
+    "alphabet_code": "v101",
+    "format_version": "2.0",
+    "glyphs_our_convention": 158954,
+    "invalid_loci": 1,
+    "loci": 5367,
+    "long_words": 38242,
+    "pages": 226,
+    "paragraphs": 775,
+    "warnings": 0
+   }
+  },
+  "ZL-IT": {
+   "agreement_band_counts": {
+    "identical": 2240,
+    "one-third-to-two-thirds": 713,
+    "two-thirds-to-one": 1935,
+    "under-one-third": 326
+   },
+   "examples_under_one_third_match": [
+    {
+     "A": "oraro",
+     "B": "osaro",
+     "folio": "f100r",
+     "match": 0.0,
+     "num": 6
+    },
+    {
+     "A": "sofam",
+     "B": "sofal",
+     "folio": "f100r",
+     "match": 0.0,
+     "num": 11
+    },
+    {
+     "A": "solsy",
+     "B": "rolsy",
+     "folio": "f100v",
+     "match": 0.0,
+     "num": 4
+    },
+    {
+     "A": "soleesos",
+     "B": "sol eesos",
+     "folio": "f100v",
+     "match": 0.0,
+     "num": 5
+    },
+    {
+     "A": "otol",
+     "B": "otal",
+     "folio": "f101v",
+     "match": 0.0,
+     "num": 3
+    },
+    {
+     "A": "ytal",
+     "B": "yta",
+     "folio": "f101v",
+     "match": 0.0,
+     "num": 4
+    },
+    {
+     "A": "otarar",
+     "B": "otorar",
+     "folio": "f101v",
+     "match": 0.0,
+     "num": 7
+    },
+    {
+     "A": "otoly",
+     "B": "otala",
+     "folio": "f101v",
+     "match": 0.0,
+     "num": 8
+    },
+    {
+     "A": "oraram",
+     "B": "orar am",
+     "folio": "f101v",
+     "match": 0.0,
+     "num": 12
+    },
+    {
+     "A": "oraeep",
+     "B": "or?",
+     "folio": "f101v",
+     "match": 0.0,
+     "num": 13
+    },
+    {
+     "A": "dytolg",
+     "B": "dytoly",
+     "folio": "f101v",
+     "match": 0.0,
+     "num": 14
+    },
+    {
+     "A": "daarod",
+     "B": "dordod",
+     "folio": "f102r1",
+     "match": 0.0,
+     "num": 1
+    }
+   ],
+   "kind": "same-alphabet",
+   "loci_a": 5385,
+   "loci_b": 5215,
+   "loci_word_identical": 2240,
+   "loci_word_identical_share": 0.429613,
+   "only_a": 171,
+   "only_a_by_folio": [
+    [
+     "fRos",
+     160
+    ],
+    [
+     "f102r2",
+     2
+    ],
+    [
+     "f2r",
+     2
+    ],
+    [
+     "f67v2",
+     2
+    ],
+    [
+     "f102v1",
+     1
+    ],
+    [
+     "f106r",
+     1
+    ],
+    [
+     "f116v",
+     1
+    ],
+    [
+     "f11v",
+     1
+    ],
+    [
+     "f17r",
+     1
+    ]
+   ],
+   "only_b": 1,
+   "only_b_by_folio": [
+    [
+     "f89v2",
+     1
+    ]
+   ],
+   "same_alphabet": true,
+   "shared_loci": 5214,
+   "shared_word_count_equal": 3511,
+   "shared_word_count_equal_share": 0.673379,
+   "stats_a": {
+    "alphabet_code": "Eva-",
+    "format_version": "2.0",
+    "glyphs_our_convention": 194715,
+    "invalid_loci": 0,
+    "loci": 5385,
+    "long_words": 36278,
+    "pages": 227,
+    "paragraphs": 740,
+    "warnings": 0
+   },
+   "stats_b": {
+    "alphabet_code": "EvaT",
+    "format_version": "2.0",
+    "glyphs_our_convention": 191742,
+    "invalid_loci": 1,
+    "loci": 5215,
+    "long_words": 37919,
+    "pages": 225,
+    "paragraphs": 772,
+    "warnings": 0
+   },
+   "words_matched_in_place": 30625,
+   "words_matched_share": 0.805285,
+   "words_total": 38030,
+   "worst_folio_rates": [
+    {
+     "folio": "f72v3",
+     "matched_share": 0.347107,
+     "shared_words": 121
+    },
+    {
+     "folio": "f72v2",
+     "matched_share": 0.436364,
+     "shared_words": 110
+    },
+    {
+     "folio": "f67v2",
+     "matched_share": 0.451613,
+     "shared_words": 62
+    },
+    {
+     "folio": "f72r3",
+     "matched_share": 0.532544,
+     "shared_words": 169
+    },
+    {
+     "folio": "f67v1",
+     "matched_share": 0.540541,
+     "shared_words": 74
+    },
+    {
+     "folio": "f73r",
+     "matched_share": 0.583333,
+     "shared_words": 96
+    },
+    {
+     "folio": "f69v",
+     "matched_share": 0.605839,
+     "shared_words": 137
+    },
+    {
+     "folio": "f70r1",
+     "matched_share": 0.610619,
+     "shared_words": 113
+    }
+   ]
+  }
+ }
+}
