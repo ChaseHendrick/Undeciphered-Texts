@@ -13,8 +13,8 @@
     "tagline": "A 15th-century illustrated book in a script nobody can read.",
     "summary": "The Voynich manuscript is a book of about 240 pages held at Yale, written in an unknown script and full of drawings of plants, stars and bathing figures. Its vellum has been carbon dated to the early 1400s. Nobody knows whether it hides a real language, a cipher or no meaning at all. We have not proposed a reading. The plan is to measure first how much the statistics change when you change how the script is transcribed.",
     "what_it_is": "The script uses perhaps 20 to 30 distinct signs, written in what look like words. Researchers turn it into Roman letters using schemes such as EVA, but those letters are labels for shapes, not sounds, and different schemes split the signs differently.",
-    "what_we_found": "Nothing has been executed for Voynich in this project yet. Our cipher tools work on the English alphabet, so they do not apply directly.",
-    "whats_next": "Compare two independent transcriptions folio by folio, then measure sign patterns under each, with shuffled controls, keeping ten whole folios unseen for testing.",
+    "what_we_found": "The frozen transcriptions have been parsed and compared. Two EVA-alphabet files agree on 80.5 percent of words placed the same way, and the disagreements cluster in the circular astronomical and cosmological text. No statistics on the letters have been run yet, so no conclusion about language or meaning is drawn.",
+    "whats_next": "Measure sign patterns under each transcription, with shuffled controls, keeping ten whole folios unseen for testing; the folio-by-folio comparison of the transcriptions itself is done.",
     "faq": [
       {
         "q": "Has the Voynich manuscript been deciphered?",
@@ -50,12 +50,13 @@
     {
       "family": "Do the statistics survive a change of transcription?",
       "status": "open",
-      "evidence": "Corpus frozen 19 October 2026: ZL 3b primary, with independently authored GC 2a (v101 alphabet) and IT 2a (Takahashi in EVA-T) as comparison files, all IVTFF 2.0 with SHA-256 recorded. Alignment and the disagreement table are not yet computed. RF was deliberately not frozen because it is a derived combination of ZL and GC.",
+      "evidence": "Corpus frozen 19 October 2026: ZL 3b primary, with independently authored GC 2a (v101 alphabet) and IT 2a (Takahashi in EVA-T) as comparison files, all IVTFF 2.0 with SHA-256 recorded. The parser (engine/voynich_ivtff.py) reproduces the published loci, paragraph and long-word counts exactly for all three files. Locus alignment by (folio, locus number) is computed (engine/voynich_compare.py, full table in docs/research-notes/voynich-transcript-agreement.json): ZL vs IT share 5,214 loci, 43.0 percent with identical word tuples and 80.5 percent of words matched in place; cross-alphabet pairs match word counts only (ZL vs GC 69.2, GC vs IT 74.2 percent). Least agreement clusters in the circular astronomical and cosmological text of folios f67 to f73. The descriptive table is not yet the family measurement: statistics on the text (sign and word frequencies, n-grams, token lengths) are not computed. RF was deliberately not frozen because it is a derived combination of ZL and GC.",
       "logs": [
-        "voynich-transcripts-2026-10-19.md"
+        "voynich-transcripts-2026-10-19.md",
+        "voynich-parse-and-agreement-2026-10-19.md"
       ],
       "priority": 1,
-      "next": "Build an IVTFF parser, align shared loci across ZL/GC/IT, and publish the disagreement table (per-comparison, stating any alphabet conversion applied)."
+      "next": "Compute the declared statistics (sign and word frequencies, n-grams of orders 1 to 4, token lengths) on the shared loci of ZL and IT, then the range under declared segmentations, before any reading would be testable."
     },
     {
       "family": "Do they survive a change of word segmentation?",
