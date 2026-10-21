@@ -144,6 +144,52 @@ above the smallest best in the widened band is
 verdict keeps the declared interpretation limits: the band is sampled,
 not exhaustive, and its threshold is the weakest member, which the log
 reads out with the per-text margins.
+
+Fourth declared measurement, the trigram resolution pass, declared
+after the widened band's six below-widened-band verdicts and before
+its own run: the identical declared streams, mapped set and greedy
+swap search are re-scored at trigram resolution. The language model is
+the declared add-one trigram model of the first reference prose per
+language (the same frozen files as the first screen): P(third symbol |
+first two) = (n(first, second, third) + 1) / (n(first, second) + 27),
+built once from the reference's processed stream under the identical
+declared processing. Counts: a counted trigram is three consecutive
+counted positions of a stream; in the real streams the three events
+must be pairwise originally adjacent, gaps excluded exactly as the
+bigram counts exclude them, and the statistic is the best mean nats
+per counted trigram. The search machinery is the identical greedy swap
+hill-climb (one rank init plus 16 seeded restarts, sweep cap 200) over
+the 27 x 27 x 27 count tensor. Power instruments at this resolution,
+measured and never assumed: five seeded self-parity plants of the
+reference prose, where a planted substitution must again reach the
+reference's own clean identity score, recorded per language alongside
+the plants; and five seeded multiset floors of the real stream. The
+widened cross band recomputes at this resolution: five plants per
+(file, language, text) for every declared cross text of the third
+measurement, truncated to min(the file's stream length, the text's
+processed length), scored under the first language's trigram table.
+Seed kinds, declared before the run: trigram plant permutation 12 and
+trigram plant machinery 13 with the plant index in the seed; trigram
+floor permutation 14 and trigram floor machinery 15 with the floor
+index; for the cross texts trigram cross permutation 16 and trigram
+cross machinery 17 with the text position in the seed, one rng per
+(file, language, text) drawing the five permutations and one running
+the five machinery calls in plant order. The real statistic recomputes
+from its declared seed kind 1, the same seed as the first screen; the
+machinery's internal consumption differs by resolution, and the value
+reproduces by replay. Verdict rule, declared before this run: real at
+or above the smallest cross plant best is
+`consistent-with-substitution`; real at or below the largest floor is
+`not-consistent`; real strictly between is `below-trigram-band`. The
+declared reading limits: the sampled population is the third
+measurement's, abbreviated scribal usage stays outside the class, and
+a real text below the widened band at trigram resolution as well as
+bigram resolution makes the class exclusion declinable in its own
+declared format; no tie-breaker with the bigram artifact is material
+and none is claimed. Plant parity anchor, resolved before the run by a
+design probe: the plants are truncated streams, so the anchor per
+(file, language) cell is the truncated plant stream's own identity
+score under the same declared model, recorded alongside the plants.
 """
 
 from __future__ import annotations
@@ -172,7 +218,10 @@ LANGS = ("english", "latin")
 LANG_ID = {"english": 0, "latin": 1}
 KIND_ID = {"real": 1, "plant_perm": 2, "plant_mach": 3,
            "floor_perm": 4, "floor_mach": 5,
-           "cross_perm": 6, "cross_mach": 7}
+           "cross_perm": 6, "cross_mach": 7,
+           "tri_plant_perm": 12, "tri_plant_mach": 13,
+           "tri_floor_perm": 14, "tri_floor_mach": 15,
+           "tri_cross_perm": 16, "tri_cross_mach": 17}
 
 REFERENCE_FILES = {
     "english": ("substref_english_pg1342.txt", 1342),
@@ -451,6 +500,155 @@ def machinery_best(
 
 def _seed(file_cell: int, kind: int, language: int, index: int) -> list[int]:
     return [BASE_SEED, file_cell, kind, language, index]
+
+
+# --------------------------------------------------------------------------
+# The trigram resolution, the fourth declared measurement
+# --------------------------------------------------------------------------
+
+
+_TRI_REFERENCE: dict[str, tuple[np.ndarray, float, list[int]]] = {}
+
+
+def tri_table_from_stream(stream: list[int]) -> np.ndarray:
+    """The declared add-one trigram table of one stream, flat.
+
+    P(third | first, second) = (n(first, second, third) + 1)
+    / (n(first, second) + 27); position (a, b, c) lives at
+    (a * 27 + b) * 27 + c in the flattened log table. Shared by the
+    frozen references and by the tests' synthetic streams, so the score
+    family stays one formula at both resolutions.
+    """
+    ids = np.array(stream, dtype=np.int64)
+    codes = (ids[:-2] * 27 + ids[1:-1]) * 27 + ids[2:]
+    counts = np.zeros(27 ** 3)
+    np.add.at(counts, codes, 1.0)
+    context = counts.reshape(27, 27, 27).sum(axis=2)
+    flat_context = np.repeat(context.reshape(-1), 27)
+    return np.log((counts + 1.0) / (flat_context + 27.0))
+
+
+def _tri_decompose(codes: np.ndarray) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Split flat codes back into their three symbol digits."""
+    first = codes // 729
+    rest = codes % 729
+    return first, rest // 27, rest % 27
+
+
+def _tri_bincount(flats: list[np.ndarray]) -> tuple[np.ndarray, np.ndarray, float]:
+    """Observed trigram codes, their counts, and the trigram total."""
+    codes = (flats[0] * 27 + flats[1]) * 27 + flats[2]
+    counted = np.bincount(codes, minlength=27 ** 3)
+    observed = np.nonzero(counted)[0].astype(np.int64)
+    weights = counted[observed].astype(np.float64)
+    return observed, weights, float(counted.sum())
+
+
+def _tri_observed_full(stream_ids: np.ndarray):
+    """Counted trigrams of a full stream: every consecutive triple."""
+    ids = np.asarray(stream_ids, dtype=np.int64)
+    return _tri_bincount([ids[:-2], ids[1:-1], ids[2:]])
+
+
+def _tri_observed_masked(events_ids: np.ndarray, mask: np.ndarray):
+    """Counted trigrams of a gapped stream, gaps excluded exactly as the
+    bigram counts exclude them: the three positions are pairwise
+    originally adjacent."""
+    kept = np.where(mask)[0]
+    values = events_ids[kept]
+    adjacent = kept[1:] == kept[:-1] + 1
+    triple = adjacent[:-1] & adjacent[1:]
+    return _tri_bincount(
+        [values[:-2][triple], values[1:-1][triple], values[2:][triple]]
+    )
+
+
+def _tri_score(
+    decomposed: tuple[np.ndarray, np.ndarray, np.ndarray],
+    weights: np.ndarray,
+    logp_flat: np.ndarray,
+    sigma: list[int],
+) -> float:
+    """Sum of weighted log probabilities under one candidate mapping."""
+    mapped = np.asarray(sigma, dtype=np.int64)
+    first, second, third = decomposed
+    joined = (mapped[first] * 27 + mapped[second]) * 27 + mapped[third]
+    return float((weights * logp_flat[joined]).sum())
+
+
+def _tri_climb(
+    decomposed: tuple[np.ndarray, np.ndarray, np.ndarray],
+    weights: np.ndarray,
+    logp_flat: np.ndarray,
+    sigma0: list[int],
+) -> tuple[float, int]:
+    """The identical greedy swap hill-climb at trigram resolution."""
+    sigma = np.array(sigma0, dtype=np.int64)
+    best = _tri_score(decomposed, weights, logp_flat, sigma)
+    sweeps = 0
+    improved = True
+    while improved and sweeps < SWEEP_CAP:
+        improved = False
+        sweeps += 1
+        for first in range(26):
+            for second in range(first + 1, 27):
+                sigma[first], sigma[second] = sigma[second], sigma[first]
+                score = _tri_score(decomposed, weights, logp_flat, sigma)
+                if score > best + 1e-12:
+                    best = score
+                    improved = True
+                else:
+                    sigma[first], sigma[second] = sigma[second], sigma[first]
+    return best, sweeps
+
+
+def machinery_best_tri(
+    codes: np.ndarray,
+    weights: np.ndarray,
+    logp_flat: np.ndarray,
+    total_counts: np.ndarray,
+    rng: np.random.Generator,
+    restarts: int = N_RESTARTS,
+) -> float:
+    """Best mean nats per counted trigram over the declared restarts.
+
+    Restarts consume the generator deterministically and identically to
+    the bigram machinery: restart 0 is the rank initialisation, builds
+    on the trigram marginals, and consumes no generator draws; restarts
+    1 onward are seeded permutations.
+    """
+    decomposed = _tri_decompose(codes)
+    marginals = sum(
+        np.bincount(part, minlength=27) for part in decomposed
+    ).astype(np.float64)
+    glyph_rank = np.argsort(-marginals, kind="stable")
+    letter_rank = np.argsort(-total_counts, kind="stable")
+    sigma = [0] * 27
+    for glyph_position, letter_position in zip(glyph_rank, letter_rank):
+        sigma[int(glyph_position)] = int(letter_position)
+    best, _sweeps = _tri_climb(decomposed, weights, logp_flat, sigma)
+    for _index in range(restarts - 1):
+        start = list(rng.permutation(27))
+        score, _sweeps = _tri_climb(decomposed, weights, logp_flat, start)
+        best = max(best, score)
+    return best / weights.sum()
+
+
+def _reference_tri(language: str) -> tuple[np.ndarray, float, np.ndarray]:
+    """The declared trigram model, the reference's own clean identity
+    score per counted trigram (the plant parity anchor), and the
+    letter counts, computed once."""
+    if language in _TRI_REFERENCE:
+        return _TRI_REFERENCE[language]
+    stream = _reference_stream(language)
+    logp_flat = tri_table_from_stream(stream)
+    codes, weights, _total = _tri_observed_full(np.array(stream, dtype=np.int64))
+    clean = _tri_score(
+        _tri_decompose(codes), weights, logp_flat, list(range(27))
+    ) / weights.sum()
+    _table_bigram, letter_counts, _stream = _reference(language)
+    _TRI_REFERENCE[language] = (logp_flat, round(float(clean), 4), letter_counts)
+    return _TRI_REFERENCE[language]
 
 
 # --------------------------------------------------------------------------
@@ -972,7 +1170,237 @@ def main_widened() -> None:
     print(WIDENED_ARTIFACT_PATH)
 
 
+TRIGRAM_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes" / "voynich-substitution-trigram.json"
+)
+
+
+def _tri_cell_facts(code: str, stream: FileStream, language: str):
+    """Real trigram score, self-parity plants with their anchor, and
+    floors for one cell."""
+    logp_flat, clean, letter_counts = _reference_tri(language)
+    total = int(stream.total_events)
+    scoped = np.full(total, -1, dtype=np.int64)
+    scoped[stream.kept_mask] = stream.kept_ids
+    codes, weights, counted = _tri_observed_masked(scoped, stream.kept_mask)
+    real_rng = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["real"], LANG_ID[language], 0)
+    )
+    real_best = machinery_best_tri(
+        codes, weights, logp_flat, letter_counts, real_rng
+    )
+    reference_stream = _reference_stream(language)
+    truncation = np.array(reference_stream[:total], dtype=np.int64)
+    target_codes, target_weights, _total = _tri_observed_full(truncation)
+    anchor = round(
+        _tri_score(_tri_decompose(target_codes), target_weights,
+                   logp_flat, list(range(27))) / target_weights.sum(),
+        4,
+    )
+    plants = []
+    for index in range(5):
+        rng_perm = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["tri_plant_perm"],
+                  LANG_ID[language], index)
+        )
+        permutation = list(rng_perm.permutation(27))
+        plant = np.array(
+            [permutation[value] for value in truncation],
+            dtype=np.int64,
+        )
+        plant_codes, plant_weights, _total = _tri_observed_full(plant)
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["tri_plant_mach"],
+                  LANG_ID[language], index)
+        )
+        plants.append(round(machinery_best_tri(
+            plant_codes, plant_weights, logp_flat, letter_counts, rng_mach
+        ), 4))
+    floors = []
+    for index in range(N_FLOORS):
+        rng_perm = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["tri_floor_perm"],
+                  LANG_ID[language], index)
+        )
+        values = stream.kept_ids.copy()
+        rng_perm.shuffle(values)
+        floor = np.full(total, -1, dtype=np.int64)
+        floor[stream.kept_mask] = values
+        floor_codes, floor_weights, _total = _tri_observed_masked(
+            floor, stream.kept_mask
+        )
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["tri_floor_mach"],
+                  LANG_ID[language], index)
+        )
+        floors.append(round(machinery_best_tri(
+            floor_codes, floor_weights, logp_flat, letter_counts, rng_mach
+        ), 4))
+    return (
+        round(real_best, 4), int(counted), anchor, plants, floors,
+    )
+
+
+def _tri_band_for(
+    code: str,
+    language: str,
+    text_stream: list[int],
+    logp_flat: np.ndarray,
+    letter_counts: np.ndarray,
+    seed_index: int,
+) -> tuple[list[float], int]:
+    """Five widened-band plants of one cross text at trigram resolution.
+
+    The declared sequential scheme: one rng per (file, language, text)
+    draws the five permutations, and one runs the five machinery calls
+    in plant order; the plant length is min(the file's stream length,
+    the text's processed length).
+    """
+    total = int(_real_stream(code).total_events)
+    length = min(total, len(text_stream))
+    rng_perm = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["tri_cross_perm"],
+              LANG_ID[language], seed_index)
+    )
+    rng_mach = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["tri_cross_mach"],
+              LANG_ID[language], seed_index)
+    )
+    plants = []
+    for _index in range(5):
+        permutation = list(rng_perm.permutation(27))
+        plant = np.array(
+            [permutation[value] for value in text_stream[:length]],
+            dtype=np.int64,
+        )
+        codes, weights, _total = _tri_observed_full(plant)
+        plants.append(
+            round(machinery_best_tri(
+                codes, weights, logp_flat, letter_counts, rng_mach
+            ), 4)
+        )
+    return plants, length
+
+
+def substitution_trigram_screen() -> dict:
+    """The declared trigram resolution pass, all three files, both
+    languages.
+
+    The identical declared streams, mapped set and search machinery,
+    re-scored under the declared add-one trigram model of the first
+    reference prose. The widened cross band recomputes here with
+    cross-text rngs declared for this run; the verdict rule and the
+    reading limits are those declared in the module header before the
+    run.
+    """
+    artifact: dict = {
+        "what": "The declared trigram resolution pass: the substitution "
+        "class as scoped, and the widened cross band of the third "
+        "measurement, re-scored at trigram resolution under the add-one "
+        "trigram model of the first reference prose per language. The "
+        "declared verdict rule: real at or above the smallest cross "
+        "plant best is consistent-with-substitution; real at or below "
+        "the largest floor is not-consistent; strictly between is "
+        "below-trigram-band. The recovered mappings are not recorded; "
+        "nothing here is a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "plants_per_text": N_PLANTS,
+            "floors": N_FLOORS,
+            "seed_kinds": {
+                "tri_plant": [KIND_ID["tri_plant_perm"],
+                              KIND_ID["tri_plant_mach"]],
+                "tri_floor": [KIND_ID["tri_floor_perm"],
+                              KIND_ID["tri_floor_mach"]],
+                "tri_cross": [KIND_ID["tri_cross_perm"],
+                              KIND_ID["tri_cross_mach"]],
+            },
+            "smoothing_rule": "P(third | first, second) = (n(first, "
+            "second, third) + 1) / (n(first, second) + 27), flat table "
+            "position (a * 27 + b) * 27 + c",
+            "cross_scheme": "one rng per (file, language, text) draws "
+            "the five permutations, and one runs the five machinery "
+            "calls in plant order, the text position in the seed",
+            "verdict_rule": "real at or above the smallest cross plant "
+            "best is consistent-with-substitution; real at or below the "
+            "largest floor is not-consistent; strictly between is "
+            "below-trigram-band",
+            "models": {},
+        },
+        "files": {},
+    }
+    for language in LANGS:
+        logp_flat, clean, _counts = _reference_tri(language)
+        artifact["declared"]["models"][language] = {
+            "file": REFERENCE_FILES[language][0],
+            "ebook": REFERENCE_FILES[language][1],
+            "clean_identity_mean_nats_per_trigram": clean,
+        }
+    for code in FILES:
+        stream = _real_stream(code)
+        cell: dict = {}
+        for language in LANGS:
+            logp_flat, clean, letter_counts = _reference_tri(language)
+            real, counted, anchor, self_plants, floors = _tri_cell_facts(
+                code, stream, language
+            )
+            band_texts: list[tuple[str, int, int]] = []
+            name_c, ebook_c = CROSS_REFERENCE_FILES[language]
+            band_texts.append((name_c, ebook_c, 0))
+            for addition, (name_w, ebook_w, _label) in enumerate(
+                WIDENED_REFERENCE_FILES[language]
+            ):
+                band_texts.append((name_w, ebook_w, addition + 1))
+            band = []
+            for name, ebook, seed_index in band_texts:
+                text_stream = _reference_stream(language, file=name)
+                plants, length = _tri_band_for(
+                    code, language, text_stream, logp_flat,
+                    letter_counts, seed_index,
+                )
+                band.append({
+                    "file": name,
+                    "ebook": ebook,
+                    "plant_length": length,
+                    "plants": plants,
+                })
+            plant_min = min(min(entry["plants"]) for entry in band)
+            plant_max = max(max(entry["plants"]) for entry in band)
+            floor_max = max(floors)
+            if real >= plant_min:
+                verdict = "consistent-with-substitution"
+            elif real <= floor_max:
+                verdict = "not-consistent"
+            else:
+                verdict = "below-trigram-band"
+            cell[language] = {
+                "real_best_mean_nats": real,
+                "counted_trigrams": counted,
+                "self_plants_best_mean_nats": self_plants,
+                "plant_parity_anchor_mean_nats": anchor,
+                "reference_clean_mean_nats": clean,
+                "floors_best_mean_nats": floors,
+                "band": band,
+                "band_min": round(plant_min, 4),
+                "band_max": round(plant_max, 4),
+                "real_margin_to_floor_max": round(real - floor_max, 4),
+                "real_margin_to_band_min": round(real - plant_min, 4),
+                "real_margin_to_band_max": round(real - plant_max, 4),
+                "verdict": verdict,
+            }
+        artifact["files"][code] = cell
+    return artifact
+
+
+def main_trigram() -> None:
+    artifact = substitution_trigram_screen()
+    TRIGRAM_ARTIFACT_PATH.write_text(json.dumps(artifact, indent=2) + "\n")
+    print(TRIGRAM_ARTIFACT_PATH)
+
+
 if __name__ == "__main__":
     main()
     main_cross()
     main_widened()
+    main_trigram()

@@ -246,6 +246,111 @@ WIDENED_PLANT_LENGTHS = {
               "IT": [143947, 77572, 220532, 77529]},
 }
 
+# The frozen trigram resolution pass of 21 October 2026, declared after
+# the widened band's six below-widened-band verdicts and before its own
+# run: identical streams, machinery and mapped set, re-scored under the
+# declared add-one trigram model of the first reference prose. Self
+# plants restated the truncated-stream anchor exactly (30 of 30); Latin
+# cross plants converged (within 0.0001); the English band's Moby Dick
+# draws disclose search noise (stuck draws near the floors' region),
+# recorded as measured and read in the log. The real text stands below
+# every best-recovered member in all six cells.
+TRIGRAM_ARTIFACT = (
+    Path("docs/research-notes/voynich-substitution-trigram.json").resolve()
+)
+TRIGRAM_MODELS = {"english": -1.7939, "latin": -1.9243}
+TRIGRAM_CELLS = {
+    ("ZL", "english"): {
+        "real": -3.0925, "counted": 218127, "anchor": -1.8109,
+        "floors": [-3.4901, -3.4883, -3.4881, -3.4891, -3.4883],
+        "band": {
+            "substref_english2_pg84.txt": [-1.9327] * 5,
+            "substref_english3_pg2701.txt": [
+                -2.0449, -2.0449, -3.4296, -2.0449, -2.0449],
+            "substref_english4_pg1251.txt": [-1.9337] * 5,
+        },
+        "gap_to_weakest_recovered": -1.0476,
+        "verdict": "consistent-with-substitution",
+        "margins": {"to_band_min": 0.3371, "to_band_max": -1.1598,
+                    "to_floor": 0.3956},
+    },
+    ("ZL", "latin"): {
+        "real": -2.8468, "counted": 218127, "anchor": -1.9129,
+        "floors": [-3.4135, -3.4134, -3.4145, -3.4146, -3.4132],
+        "band": {
+            "substref_latin2_pg218.txt": [-2.0592] * 5,
+            "substref_latin3_pg828.txt": [-2.0809] * 5,
+            "substref_latin4_pg17859.txt": [-2.0676] * 5,
+            "substref_latin5_pg27655.txt": [
+                -2.1587, -2.1587, -2.1588, -2.1587, -2.1587],
+        },
+        "gap_to_weakest_recovered": -0.6881,
+        "verdict": "below-trigram-band",
+        "margins": {"to_band_min": -0.688, "to_band_max": -0.7876,
+                    "to_floor": 0.5664},
+    },
+    ("GC", "english"): {
+        "real": -2.9878, "counted": 175543, "anchor": -1.8146,
+        "floors": [-3.5194, -3.5202, -3.5196, -3.5194, -3.5191],
+        "band": {
+            "substref_english2_pg84.txt": [
+                -1.9358, -1.9358, -1.9358, -1.9358, -3.4309],
+            "substref_english3_pg2701.txt": [
+                -2.0487, -2.0487, -2.0487, -3.4271, -3.4272],
+            "substref_english4_pg1251.txt": [-1.9398] * 5,
+        },
+        "gap_to_weakest_recovered": -0.9391,
+        "verdict": "consistent-with-substitution",
+        "margins": {"to_band_min": 0.4431, "to_band_max": -1.052,
+                    "to_floor": 0.5313},
+    },
+    ("GC", "latin"): {
+        "real": -2.9182, "counted": 175543, "anchor": -1.9138,
+        "floors": [-3.4389, -3.4387, -3.4392, -3.4395, -3.4396],
+        "band": {
+            "substref_latin2_pg218.txt": [-2.0592] * 5,
+            "substref_latin3_pg828.txt": [-2.0809] * 5,
+            "substref_latin4_pg17859.txt": [-2.0687] * 5,
+            "substref_latin5_pg27655.txt": [
+                -2.1588, -2.1587, -2.1588, -2.1588, -2.1588],
+        },
+        "gap_to_weakest_recovered": -0.7595,
+        "verdict": "below-trigram-band",
+        "margins": {"to_band_min": -0.7594, "to_band_max": -0.859,
+                    "to_floor": 0.5205},
+    },
+    ("IT", "english"): {
+        "real": -3.121, "counted": 220530, "anchor": -1.8107,
+        "floors": [-3.4849, -3.4855, -3.4843, -3.4853, -3.4851],
+        "band": {
+            "substref_english2_pg84.txt": [
+                -3.4397, -1.9327, -1.9327, -1.9327, -1.9327],
+            "substref_english3_pg2701.txt": [
+                -2.0447, -3.4392, -2.0447, -2.0447, -3.4451],
+            "substref_english4_pg1251.txt": [-1.9331] * 5,
+        },
+        "gap_to_weakest_recovered": -1.0763,
+        "verdict": "consistent-with-substitution",
+        "margins": {"to_band_min": 0.3241, "to_band_max": -1.1883,
+                    "to_floor": 0.3633},
+    },
+    ("IT", "latin"): {
+        "real": -2.6908, "counted": 220530, "anchor": -1.9127,
+        "floors": [-3.4107, -3.4109, -3.4104, -3.4107, -3.4111],
+        "band": {
+            "substref_latin2_pg218.txt": [-2.0592] * 5,
+            "substref_latin3_pg828.txt": [-2.0809] * 5,
+            "substref_latin4_pg17859.txt": [-2.0677] * 5,
+            "substref_latin5_pg27655.txt": [
+                -2.1588, -2.1587, -2.1587, -2.1587, -2.1587],
+        },
+        "gap_to_weakest_recovered": -0.5321,
+        "verdict": "below-trigram-band",
+        "margins": {"to_band_min": -0.532, "to_band_max": -0.6316,
+                    "to_floor": 0.7196},
+    },
+}
+
 ZL_MAPPED = (
     "oehyacdiklrstnqpmfg?'xbv" + chr(0x184) + chr(0x185) + sub.BOUNDARY
 )
@@ -753,6 +858,182 @@ class WidenedTest(unittest.TestCase):
                              "ZL.latin heptaplomeres, seed holders 10 and 11")
         finally:
             sub._REAL_STREAMS.clear()
+
+
+class TrigramTest(unittest.TestCase):
+    """The declared trigram resolution pass and its frozen measurement."""
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.artifact = json.loads(TRIGRAM_ARTIFACT.read_text())
+
+    def test_declared_trigram_bookkeeping(self) -> None:
+        declared = self.artifact["declared"]
+        self.assertEqual(20261020, declared["base_seed"])
+        self.assertEqual(5, declared["plants_per_text"])
+        self.assertEqual(5, declared["floors"])
+        self.assertEqual(
+            {"tri_plant": [12, 13], "tri_floor": [14, 15],
+             "tri_cross": [16, 17]},
+            declared["seed_kinds"],
+        )
+        for language, clean in TRIGRAM_MODELS.items():
+            model = declared["models"][language]
+            self.assertEqual(clean, model["clean_identity_mean_nats_per_trigram"],
+                             language)
+            self.assertEqual(model["ebook"],
+                             REFERENCE_FACTS[language]["ebook"], language)
+        self.assertIn("(n(first, second, third) + 1)",
+                      declared["smoothing_rule"])
+        self.assertIn("in plant order", declared["cross_scheme"])
+        for phrase in ("consistent-with-substitution", "not-consistent",
+                       "below-trigram-band"):
+            self.assertIn(phrase, declared["verdict_rule"])
+        self.assertIn("below-trigram-band", self.artifact["what"])
+
+    def test_all_six_cells_match_the_frozen_trigram_measurement(self) -> None:
+        for (code, language), facts in sorted(TRIGRAM_CELLS.items()):
+            cell = self.artifact["files"][code][language]
+            self.assertEqual(facts["real"], cell["real_best_mean_nats"],
+                             f"{code}.{language} real")
+            self.assertEqual(facts["counted"], cell["counted_trigrams"],
+                             f"{code}.{language} counted trigrams")
+            self.assertEqual(facts["anchor"],
+                             cell["plant_parity_anchor_mean_nats"],
+                             f"{code}.{language} anchor")
+            self.assertEqual(facts["floors"], cell["floors_best_mean_nats"],
+                             f"{code}.{language} floors")
+            for key, key_name in (("to_band_min", "real_margin_to_band_min"),
+                                  ("to_band_max", "real_margin_to_band_max"),
+                                  ("to_floor", "real_margin_to_floor_max")):
+                self.assertEqual(
+                    facts["margins"][key], cell[key_name],
+                    f"{code}.{language} margin {key}",
+                )
+            # the verdict recomputes per the declared rule
+            real = cell["real_best_mean_nats"]
+            plant_min = cell["band_min"]
+            floor_max = max(cell["floors_best_mean_nats"])
+            if real >= plant_min:
+                rule_verdict = "consistent-with-substitution"
+            elif real <= floor_max:
+                rule_verdict = "not-consistent"
+            else:
+                rule_verdict = "below-trigram-band"
+            self.assertEqual(rule_verdict, cell["verdict"],
+                             f"{code}.{language} rule applied")
+            self.assertEqual(facts["verdict"], cell["verdict"],
+                             f"{code}.{language} frozen verdict")
+
+    def test_self_plants_reach_the_declared_anchor_everywhere(self) -> None:
+        for (code, language), facts in sorted(TRIGRAM_CELLS.items()):
+            cell = self.artifact["files"][code][language]
+            plants = cell["self_plants_best_mean_nats"]
+            self.assertEqual([facts["anchor"]] * 5, plants,
+                             f"{code}.{language} plant parity")
+            self.assertEqual(facts["anchor"],
+                             cell["plant_parity_anchor_mean_nats"],
+                             f"{code}.{language} anchor")
+
+    def test_band_members_match_their_frozen_draws(self) -> None:
+        for (code, language), facts in sorted(TRIGRAM_CELLS.items()):
+            stored = self.artifact["files"][code][language]["band"]
+            self.assertEqual(facts["band"].keys(), {b["file"] for b in stored},
+                             f"{code}.{language} band files")
+            for entry in stored:
+                self.assertEqual(facts["band"][entry["file"]], entry["plants"],
+                                 f"{code}.{language} {entry['file']}")
+                if language == "latin":
+                    self.assertLessEqual(
+                        max(entry["plants"]) - min(entry["plants"]), 0.0001,
+                        f"{code}.{language} latin draws converge",
+                    )
+            # the central finding: below every best-recovered member
+            recovered_min = min(max(entry["plants"]) for entry in stored)
+            self.assertEqual(
+                facts["gap_to_weakest_recovered"],
+                round(real_of(self.artifact, code, language) - recovered_min,
+                      4),
+                f"{code}.{language} gap to the weakest recovered member",
+            )
+            self.assertLess(
+                real_of(self.artifact, code, language), recovered_min,
+                f"{code}.{language} real below every recovered member",
+            )
+            # and above the floors with the search noise disclosed
+            self.assertGreater(
+                real_of(self.artifact, code, language),
+                max(self.artifact["files"][code][language]["floors_best_mean_nats"]),
+                f"{code}.{language} real above the floors",
+            )
+
+    def test_one_trigram_real_cell_recomputes_from_the_declared_seed(self) -> None:
+        sub._REAL_STREAMS.clear()
+        try:
+            stream = sub._real_stream("ZL")
+            total = int(stream.total_events)
+            scoped = np.full(total, -1, dtype=np.int64)
+            scoped[stream.kept_mask] = stream.kept_ids
+            codes, weights, _total = sub._tri_observed_masked(
+                scoped, stream.kept_mask
+            )
+            logp, _clean, letter_counts = sub._reference_tri("english")
+            rng = np.random.default_rng(
+                sub._seed(sub.CELL_ID["ZL"], sub.KIND_ID["real"], 0, 0)
+            )
+            value = round(
+                sub.machinery_best_tri(
+                    codes, weights, logp, letter_counts, rng
+                ),
+                4,
+            )
+            self.assertEqual(
+                TRIGRAM_CELLS[("ZL", "english")]["real"], value,
+                "ZL.english trigram real, seed kind 1",
+            )
+        finally:
+            sub._REAL_STREAMS.clear()
+
+    def test_one_trigram_band_entry_recomputes_from_the_declared_seeds(self) -> None:
+        sub._REAL_STREAMS.clear()
+        try:
+            total = int(sub._real_stream("ZL").total_events)
+            text_stream = sub._reference_stream(
+                "english", file="substref_english3_pg2701.txt"
+            )
+            length = min(total, len(text_stream))
+            logp, _clean, letter_counts = sub._reference_tri("english")
+            rng_perm = np.random.default_rng(
+                sub._seed(sub.CELL_ID["ZL"], sub.KIND_ID["tri_cross_perm"],
+                          sub.LANG_ID["english"], 1)
+            )
+            rng_mach = np.random.default_rng(
+                sub._seed(sub.CELL_ID["ZL"], sub.KIND_ID["tri_cross_mach"],
+                          sub.LANG_ID["english"], 1)
+            )
+            values = []
+            for _index in range(5):
+                permutation = list(rng_perm.permutation(27))
+                plant = np.array(
+                    [permutation[value] for value in text_stream[:length]],
+                    dtype=np.int64,
+                )
+                codes, weights, _total = sub._tri_observed_full(plant)
+                values.append(round(sub.machinery_best_tri(
+                    codes, weights, logp, letter_counts, rng_mach
+                ), 4))
+            facts = TRIGRAM_CELLS[("ZL", "english")]["band"][
+                "substref_english3_pg2701.txt"
+            ]
+            self.assertEqual(facts, values,
+                             "ZL.english Moby Dick, seed holders 16 and 17")
+        finally:
+            sub._REAL_STREAMS.clear()
+
+
+def real_of(artifact, code, language) -> float:
+    """The stored real statistic of one cell."""
+    return artifact["files"][code][language]["real_best_mean_nats"]
 
 
 if __name__ == "__main__":
