@@ -102,6 +102,48 @@ REFERENCE_FACTS = {
     },
 }
 
+# The frozen cross-text calibration of 20 October 2026: cross plants from
+# the second reference proeses (Frankenstein, Caesar's De Bello Gallico
+# I-IV), scored under the first language's table. Cross plants converge
+# to one value each; floors recompute the first artifact's values.
+CROSS_ARTIFACT = (
+    Path("docs/research-notes/voynich-substitution-crossband.json").resolve()
+)
+CROSS_REFERENCE_FACTS = {
+    "english": {
+        "file": "substref_english2_pg84.txt",
+        "ebook": 84,
+        "sha256": "7810cd483cffcf2cc8a1d8f0d5807931e69d4f48cd14149b8c76f88af82fead3",
+        "processed_symbols": 407795,
+        "space_share": 0.1847,
+    },
+    "latin": {
+        "file": "substref_latin2_pg218.txt",
+        "ebook": 218,
+        "sha256": "84ac8411841a4d8f5f4a49b6a2cd1f466917c6a5af72916d5e0b2b1ecb2f659c",
+        "processed_symbols": 143947,
+        "space_share": 0.1428,
+    },
+}
+CROSS_CELLS = {
+    ("ZL", "english"): {"plant": -5.1603, "real": -5.2832,
+                        "margin_cross": -0.1229, "verdict": "below-cross-band"},
+    ("ZL", "latin"): {"plant": -5.1345, "real": -5.3162,
+                      "margin_cross": -0.1817, "verdict": "below-cross-band"},
+    ("GC", "english"): {"plant": -5.1646, "real": -5.3536,
+                        "margin_cross": -0.189, "verdict": "below-cross-band"},
+    ("GC", "latin"): {"plant": -5.1345, "real": -5.3883,
+                      "margin_cross": -0.2538, "verdict": "below-cross-band"},
+    ("IT", "english"): {"plant": -5.1603, "real": -5.2541,
+                        "margin_cross": -0.0938, "verdict": "below-cross-band"},
+    ("IT", "latin"): {"plant": -5.1345, "real": -5.2933,
+                      "margin_cross": -0.1588, "verdict": "below-cross-band"},
+}
+CROSS_PLANT_LENGTH = {
+    "english": {"ZL": 218663, "GC": 186708, "IT": 220532},
+    "latin": {"ZL": 143947, "GC": 143947, "IT": 143947},
+}
+
 ZL_MAPPED = (
     "oehyacdiklrstnqpmfg?'xbv" + chr(0x184) + chr(0x185) + sub.BOUNDARY
 )
@@ -330,6 +372,92 @@ class MachineryTest(unittest.TestCase):
             restarts=self.RESTARTS,
         )
         self.assertAlmostEqual(best, again, places=6)
+
+
+class CrossBandTest(unittest.TestCase):
+    """The declared cross-text calibration and its frozen measurement."""
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.first = json.loads(ARTIFACT.read_text())
+        cls.artifact = json.loads(CROSS_ARTIFACT.read_text())
+
+    def test_declared_cross_bookkeeping(self) -> None:
+        declared = self.artifact["declared"]
+        self.assertEqual(5, declared["cross_plants"])
+        self.assertEqual(5, declared["cross_floors"])
+        for language, facts in CROSS_REFERENCE_FACTS.items():
+            stored = declared["cross_references"][language]
+            self.assertEqual(facts["file"], stored["file"], language)
+            self.assertEqual(facts["ebook"], stored["ebook"], language)
+            self.assertEqual(facts["sha256"], stored["sha256"], language)
+            self.assertEqual(facts["processed_symbols"],
+                             stored["processed_symbols"], language)
+            self.assertEqual(facts["space_share"], stored["space_share"],
+                             language)
+
+    def test_all_six_cells_below_the_cross_band(self) -> None:
+        for (code, language), facts in sorted(CROSS_CELLS.items()):
+            cell = self.artifact["files"][code][language]
+            self.assertEqual(facts["real"], cell["real_best_mean_nats"],
+                             f"{code}.{language} real")
+            self.assertEqual(
+                [facts["plant"]] * HEAD,
+                cell["cross_plants_best_mean_nats"],
+                f"{code}.{language} cross plant convergence",
+            )
+            # floors recompute the first artifact's values exactly
+            self.assertEqual(
+                self.first["files"][code][language]["floors_best_mean_nats"],
+                cell["floors_best_mean_nats"],
+                f"{code}.{language} floors reproduce the first artifact",
+            )
+            self.assertEqual(len(set(cell["plant_lengths"])), 1,
+                             f"{code}.{language} plant length")
+            self.assertEqual(
+                CROSS_PLANT_LENGTH[language][code], cell["plant_lengths"][0],
+                f"{code}.{language} plant length rule",
+            )
+            self.assertEqual(
+                facts["verdict"], cell["verdict"], f"{code}.{language}"
+            )
+            self.assertAlmostEqual(
+                facts["margin_cross"], cell["real_margin_to_cross_min"],
+                places=9, msg=f"{code}.{language} cross margin",
+            )
+            self.assertLess(
+                facts["real"], facts["plant"], f"{code}.{language} below band"
+            )
+
+    def test_cross_plant_cell_recomputes_from_the_declared_seed(self) -> None:
+        sub._REAL_STREAMS.clear()
+        try:
+            stream = sub._real_stream("ZL")
+            table, counts, _text = sub._reference("english")
+            cross_stream = sub._reference_stream("english", cross=True)
+            length = min(stream.total_events, len(cross_stream))
+            self.assertEqual(length, CROSS_PLANT_LENGTH["english"]["ZL"])
+            rng_perm = np.random.default_rng(
+                sub._seed(sub.CELL_ID["ZL"], sub.KIND_ID["cross_perm"], 0, 0)
+            )
+            permutation = list(rng_perm.permutation(27))
+            plant = np.array(
+                [permutation[value] for value in cross_stream[:length]],
+                dtype=np.int64,
+            )
+            matrix = sub._full_matrix(plant)
+            rng_mach = np.random.default_rng(
+                sub._seed(sub.CELL_ID["ZL"], sub.KIND_ID["cross_mach"], 0, 0)
+            )
+            value = round(
+                sub.machinery_best(matrix, table, counts, rng_mach), 4
+            )
+            self.assertEqual(
+                value, CROSS_CELLS[("ZL", "english")]["plant"],
+                "ZL.english cross plant, seed holder 6 and 7",
+            )
+        finally:
+            sub._REAL_STREAMS.clear()
 
 
 if __name__ == "__main__":
