@@ -431,6 +431,92 @@ mapping is published anywhere in this artifact, no recovered
 assignment is stored as a key, plaintext_recovered_percent stays 0,
 the reference prose is modern printed text outside the manuscript's
 century, and nothing here is a reading or a language claim.
+
+Fourth declared measurement, the shape-priced re-measure, declared
+after the ladder's no-shrink, no-separation outcome put the score
+table's shape under suspect and before any run of it, around disclosed
+pre-run probes.
+
+The declared design, before the run: the held-out screen's six (file,
+language) cells, plants, floors and band re-measured at the top budget
+with the mapped set (36 glyphs plus the word-boundary mark), streams,
+held-out split, seed kinds, machinery, restart and sweep budgets
+unchanged, and the declared score table rebuilt in an
+exploitation-resistant leave-one-out form. The truthful question,
+declared in advance: does the real's margin above the band survive a
+model the climb cannot feed on - a yes says the margin rides the
+manuscript's statistics, a no records which instrument carried it. The
+family's declared exclusion format is not re-scoped by this artifact:
+it keys to the declared 36-slot class under the inherited add-one
+form exactly as the held-out screen declared it, so the verdicts
+recorded here are shape-instrument evidence on the declared table
+form, and the family stays open unless the declared exclusion fires.
+
+The leave-one-out form, declared before the run: the inherited
+add-one form of the reference pair table is log((n_ab + 1)/(N + 729))
+with N the reference stream's total counted pairs; in the
+leave-one-out form every pair type (a, b) present in the reference
+pair table is scored with one occurrence of (a, b) removed from the
+reference counts, log(n_ab/(N + 728)), and a type with no counted
+occurrence keeps the inherited add-one entry log(1/(N + 729)) - every
+occurring type is re-priced one occurrence more severely and the
+unseen-type floor is unchanged. The letter marginals are the
+reference's unigram counts, unchanged: the rank initialisation
+consumes the same marginals and starts identically to the held-out
+screen, and the declared conditional on re-deriving the matrix
+arithmetic resolves as not needed - the model stays the reference's
+aggregate and the score one fixed 27 x 27 table per language summed by
+assignment aggregation (the sum over pair occurrences of table[first
+label, second label]), so the declared matrix-product form survives
+without re-derivation. The encodings and the floor shuffles are
+byte-identical replays of the frozen measurement's declared draws:
+only the scoring changes, and no new seed kind is consumed.
+
+A bridge gate, declared before the run and enforced in code: before
+the leave-one-out cells run, this measurement's full first cell (ZL
+english: the real, its five plants, its five floors and its three band
+members) computed under the inherited add-one table must equal the
+held-out screen's own outputs field for field; any divergence aborts
+and nothing is written. Each band member additionally records
+draws_climb_exact, its five climb-half totals at full precision, as
+the ladder's regenerated artifact disclosed, so the declared selection
+stays re-derivable from the stored artifact. Verdict and margin rules
+are the held-out screen's rules applied to the leave-one-out-scale
+numbers; the verdict strings describe consistency under this
+artifact's declared form and do not restate the add-one form's
+verdicts, and the margin is computed from the stored rounded values as
+the ladder's artifact declared.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+leave-one-out form's shape facts: english 490 pair types present of
+729 over 692,526 counted pairs, the largest single-entry repricing
+0.693146 nats (log 2, at any type counted once; highest at type
+(0, 9), add-one -12.756020 to leave-one-out -13.449166), the mean
+repricing over occurring types -0.065165 nats, and the reference
+stream's clean identity mean moving -5.1311 to -5.1318 (a -0.0007
+shift); latin 452 pair types present of 729 over 858,521 counted
+pairs, the same 0.693146 largest single-entry repricing (type
+(0, 10), -12.970668 to -13.663814), the mean repricing -0.083226, the
+clean identity mean -5.0999 to -5.1004 (a -0.0005 shift). Probe 2,
+the bridge gate rehearsed before the run: the shape instrument's full
+first cell under the inherited table equals the held-out screen's own
+outputs field for field (57 fields compared, no problem). Probe 3,
+engine health under the leave-one-out table: ZL english's real
+machinery call scores -4.4256 held-out (-4.4317 climb view, cap
+False) against the frozen add-one -4.4252, and its anchor sits at
+-5.1438; IT english's real call scores -4.3880 (-4.3914 climb view,
+cap False) against the frozen add-one -4.3878, its anchor at -5.1439
+- the real's held-out value moves at most 0.0004 nats under the
+repricing while every occurring pair type is re-priced more severely.
+The remaining numbers inside this module are unseen until the
+declared runs.
+
+The standing limitations are inherited from the held-out screen: no
+mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays 0,
+the reference prose is modern printed text outside the manuscript's
+century, and nothing here is a reading or a language claim.
 """
 
 from __future__ import annotations
@@ -2343,3 +2429,598 @@ def main_ladder() -> None:
     artifact = substitution_homophonic_ladder()
     LADDER_ARTIFACT_PATH.write_text(json.dumps(artifact, indent=2) + "\n")
     print(LADDER_ARTIFACT_PATH)
+
+
+# --------------------------------------------------------------------------
+# The shape-priced re-measure, the family's fourth declared measurement
+# --------------------------------------------------------------------------
+
+
+SHAPE_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes" / "voynich-homophonic-shape-priced.json"
+)
+
+_SHAPE_MODELS: dict[str, dict] = {}
+
+
+def _shape_table(language: str) -> dict:
+    """The declared leave-one-out form of the reference bigram table.
+
+    The inherited add-one form of the reference pair table is
+    log((n_ab + 1) / (N + 729)) with N the reference stream's total
+    counted pairs. In the leave-one-out form every pair type (a, b)
+    present in the reference pair table has its probability computed
+    with one occurrence of (a, b) removed from the reference counts,
+    log(n_ab / (N - 1 + 729)) = log(n_ab / (N + 728)), and a type with
+    no counted occurrence keeps the inherited add-one entry
+    log(1 / (N + 729)): the leave-one-out form re-prices every
+    occurring pair type one occurrence more severely and leaves the
+    unseen-type floor unchanged. The letter marginals are the
+    reference's unigram counts, unchanged: the leave-one-out form
+    re-prices pair types, not the letter alphabet, so the rank
+    initialisation starts identically to the held-out screen and the
+    declared conditional on re-deriving the matrix arithmetic resolves
+    as not needed, the model staying the reference's aggregate."""
+    if language in _SHAPE_MODELS:
+        return _SHAPE_MODELS[language]
+    stream = _reference_stream(language)
+    add_one, letter_counts = table_from_stream(stream)
+    ids = np.array(stream, dtype=np.int64)
+    matrix = np.zeros((27, 27))
+    np.add.at(matrix, (ids[:-1], ids[1:]), 1.0)
+    total = int(matrix.sum())
+    table = add_one.copy()
+    present = matrix >= 1.0
+    table[present] = np.log(matrix[present] / float(total + 728.0))
+    delta = table - add_one
+    argmax = np.unravel_index(
+        int(np.argmax(np.abs(delta))), delta.shape
+    )
+    model = {
+        "table": table,
+        "letter_counts": letter_counts,
+        "add_one_table": add_one,
+        "pair_types_present": int(present.sum()),
+        "total_pairs": total,
+        "max_abs_entry_delta": round(float(np.abs(delta).max()), 6),
+        "max_delta_type": [int(argmax[0]), int(argmax[1])],
+        "mean_entry_delta_over_present": round(
+            float(delta[present].mean()), 6
+        ),
+    }
+    _SHAPE_MODELS[language] = model
+    return model
+
+
+def _shape_cell_facts(
+    code: str, language: str,
+    table: np.ndarray, letter_counts: np.ndarray,
+) -> dict:
+    """Real, plants with their held-out anchor, and floors for one
+    cell, each under the declared split, the exact reassignment climb
+    on the climb half and the exact pricing on the score half, with
+    the exact full-data side call recorded beside each score: the
+    held-out screen's cell facts with the scoring table supplied
+    instead of fetched."""
+    real_stream = _homo_real_stream(code)
+    first, second = _kept_pairs(
+        real_stream["event_ids"], real_stream["kept_mask"]
+    )
+    climb_first, climb_second, score_first, score_second = _split_pairs(
+        first, second
+    )
+    climb_matrix = _matrix_from_pairs(climb_first, climb_second)
+    score_matrix = _matrix_from_pairs(score_first, score_second)
+    full_matrix = _count_matrix_37(
+        real_stream["event_ids"], real_stream["kept_mask"]
+    )
+    counted = int(full_matrix.sum())
+    climb_pairs = int(climb_matrix.sum())
+    score_pairs = int(score_matrix.sum())
+    real_rng = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["real"], LANG_ID[language], 0)
+    )
+    held_value, climb_value, cap_hit = machinery_best_held(
+        climb_matrix, score_matrix, table, letter_counts, real_rng,
+        restarts=N_RESTARTS,
+    )
+    real_held = round(held_value, 4)
+    real_climb = round(climb_value, 4)
+    real_hit = bool(cap_hit)
+    full_rng = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["real"], LANG_ID[language], 0)
+    )
+    full_value, full_hit = machinery_exact_full(
+        full_matrix, table, letter_counts, full_rng, restarts=N_RESTARTS
+    )
+    real_full = round(full_value, 4)
+    truncated = _truncated_reference(code, language)
+    anchor, anchor_climb, _climb_half, _score_half = _identity_half_means(
+        truncated, table
+    )
+    anchor = round(anchor, 4)
+    anchor_climb = round(anchor_climb, 4)
+    plants_held = []
+    plants_full = []
+    plants_hits = []
+    plants_full_hits = []
+    for index in range(N_PLANTS):
+        groups = _partition_groups(truncated, MAPPED_HOMO)
+        rng_enc = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_plant_enc"],
+                  LANG_ID[language], index)
+        )
+        plant = _encode(truncated, groups, rng_enc, MAPPED_HOMO)
+        plant_first, plant_second = _full_pairs(plant)
+        p_climb_first, p_climb_second, p_score_first, p_score_second = (
+            _split_pairs(plant_first, plant_second)
+        )
+        p_climb = _matrix_from_pairs(p_climb_first, p_climb_second)
+        p_score = _matrix_from_pairs(p_score_first, p_score_second)
+        p_full = _full_matrix_37(plant)
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_plant_mach"],
+                  LANG_ID[language], index)
+        )
+        value, _view, hit = machinery_best_held(
+            p_climb, p_score, table, letter_counts, rng_mach,
+            restarts=N_RESTARTS,
+        )
+        plants_held.append(round(value, 4))
+        plants_hits.append(bool(hit))
+        rng_full = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_plant_mach"],
+                  LANG_ID[language], index)
+        )
+        value_full, hit_full = machinery_exact_full(
+            p_full, table, letter_counts, rng_full, restarts=N_RESTARTS
+        )
+        plants_full.append(round(value_full, 4))
+        plants_full_hits.append(bool(hit_full))
+    floors_held = []
+    floors_full = []
+    floors_hits = []
+    floors_full_hits = []
+    for index in range(N_FLOORS):
+        rng_perm = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_floor_perm"],
+                  LANG_ID[language], index)
+        )
+        values = real_stream["kept_ids"].copy()
+        rng_perm.shuffle(values)
+        full = real_stream["event_ids"].copy()
+        full[real_stream["kept_mask"]] = values
+        floor_full = _count_matrix_37(full, real_stream["kept_mask"])
+        floor_first, floor_second = _kept_pairs(
+            full, real_stream["kept_mask"]
+        )
+        f_climb_first, f_climb_second, f_score_first, f_score_second = (
+            _split_pairs(floor_first, floor_second)
+        )
+        f_climb = _matrix_from_pairs(f_climb_first, f_climb_second)
+        f_score = _matrix_from_pairs(f_score_first, f_score_second)
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_floor_mach"],
+                  LANG_ID[language], index)
+        )
+        value, _view, hit = machinery_best_held(
+            f_climb, f_score, table, letter_counts, rng_mach,
+            restarts=N_RESTARTS,
+        )
+        floors_held.append(round(value, 4))
+        floors_hits.append(bool(hit))
+        rng_full = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_floor_mach"],
+                  LANG_ID[language], index)
+        )
+        value_full, hit_full = machinery_exact_full(
+            floor_full, table, letter_counts, rng_full, restarts=N_RESTARTS
+        )
+        floors_full.append(round(value_full, 4))
+        floors_full_hits.append(bool(hit_full))
+    return {
+        "real_held": real_held,
+        "real_climb": real_climb,
+        "real_hit": real_hit,
+        "real_full": real_full,
+        "real_full_hit": bool(full_hit),
+        "counted": counted,
+        "climb_pairs": climb_pairs,
+        "score_pairs": score_pairs,
+        "anchor": anchor,
+        "anchor_climb": anchor_climb,
+        "plants_held": plants_held,
+        "plants_full": plants_full,
+        "plants_hits": plants_hits,
+        "plants_full_hits": plants_full_hits,
+        "floors_held": floors_held,
+        "floors_full": floors_full,
+        "floors_hits": floors_hits,
+        "floors_full_hits": floors_full_hits,
+    }
+
+
+def _shape_band_for(
+    code: str, language: str, seed_index: int,
+    table: np.ndarray, letter_counts: np.ndarray,
+) -> dict:
+    """Five encodings of one class-member text under the first
+    screen's per-text sequential scheme, each scored by the held-out
+    machinery and by the exact full-data side call, with the member's
+    held-out anchor, climb-half identity, the selected draw's index
+    and the member's band value: the held-out screen's band facts with
+    the scoring table supplied instead of fetched, and the member's
+    five climb-half totals additionally recorded at full precision so
+    the declared selection is re-derivable from the stored artifact."""
+    name, ebook = (
+        [CROSS_REFERENCE_FILES[language]]
+        + list(WIDENED_REFERENCE_FILES[language])
+    )[seed_index][:2]
+    truncated = _truncated_reference(code, language, file=name)
+    anchor, anchor_climb, _climb_half, _score_half = _identity_half_means(
+        truncated, table
+    )
+    anchor = round(anchor, 4)
+    anchor_climb = round(anchor_climb, 4)
+    rng_enc = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["homo_cross_enc"],
+              LANG_ID[language], seed_index)
+    )
+    draws_held = []
+    draws_climb = []
+    climbs_exact = []
+    draws_full = []
+    draw_hits = []
+    draw_full_hits = []
+    climb_totals = []
+    for _index in range(N_PLANTS):
+        groups = _partition_groups(truncated, MAPPED_HOMO)
+        encoded = _encode(truncated, groups, rng_enc, MAPPED_HOMO)
+        enc_first, enc_second = _full_pairs(encoded)
+        e_climb_first, e_climb_second, e_score_first, e_score_second = (
+            _split_pairs(enc_first, enc_second)
+        )
+        e_climb = _matrix_from_pairs(e_climb_first, e_climb_second)
+        e_score = _matrix_from_pairs(e_score_first, e_score_second)
+        e_full = _full_matrix_37(encoded)
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_cross_mach"],
+                  LANG_ID[language], seed_index)
+        )
+        value, climb_view, hit = machinery_best_held(
+            e_climb, e_score, table, letter_counts, rng_mach,
+            restarts=N_RESTARTS,
+        )
+        rng_full = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_cross_mach"],
+                  LANG_ID[language], seed_index)
+        )
+        value_full, hit_full = machinery_exact_full(
+            e_full, table, letter_counts, rng_full, restarts=N_RESTARTS
+        )
+        draws_held.append(round(value, 4))
+        draws_climb.append(round(climb_view, 4))
+        climbs_exact.append(float(climb_view))
+        draws_full.append(round(value_full, 4))
+        draw_hits.append(bool(hit))
+        draw_full_hits.append(bool(hit_full))
+        climb_totals.append(climb_view)
+    selected = 0
+    best_climb = climb_totals[0]
+    for position, total in enumerate(climb_totals):
+        if total > best_climb + 1e-12:
+            best_climb = total
+            selected = position
+    spread = round(max(draws_held) - min(draws_held), 4)
+    return {
+        "file": name,
+        "ebook": ebook,
+        "plant_length": len(truncated),
+        "anchor": anchor,
+        "anchor_climb": anchor_climb,
+        "draws": draws_held,
+        "draws_climb": draws_climb,
+        "draws_climb_exact": climbs_exact,
+        "draws_full": draws_full,
+        "draw_sweep_budget_hits": draw_hits,
+        "draw_full_sweep_budget_hits": draw_full_hits,
+        "selected_draw_index": selected,
+        "recovered_best": draws_held[selected],
+        "spread": spread,
+    }
+
+
+def _compare_shape_cell_to_heldout() -> tuple[list[str], int]:
+    """The declared bridge gate: the shape instrument's full first cell
+    (ZL english: the real, its five plants, its five floors and its
+    three band members) computed through this measurement's code under
+    the inherited add-one table must equal the held-out screen's own
+    outputs field for field, so the leave-one-out artifact's only
+    difference from the frozen measurement is the scoring table. Any
+    divergence aborts with nothing written."""
+    problems: list[str] = []
+    fields = 0
+    code, language = "ZL", "english"
+    stream = _reference_stream(language)
+    table, letter_counts = table_from_stream(stream)
+    shape_facts = _shape_cell_facts(
+        code, language, table, letter_counts
+    )
+    held_facts = _held_cell_facts(code, language)
+    for key, value in held_facts.items():
+        fields += 1
+        if shape_facts[key] != value:
+            problems.append(
+                f"cell/{key}: held {value!r} vs shape {shape_facts[key]!r}"
+            )
+    for seed_index in (0, 1, 2):
+        shape_member = _shape_band_for(
+            code, language, seed_index, table, letter_counts
+        )
+        held_member = _held_band_for(code, language, seed_index)
+        for key, value in held_member.items():
+            fields += 1
+            if shape_member[key] != value:
+                problems.append(
+                    f"band/{seed_index}/{key}: held {value!r} vs shape "
+                    f"{shape_member[key]!r}"
+                )
+    return problems, fields
+
+
+def substitution_homophonic_shape_priced() -> dict:
+    """The declared shape-priced re-measure: the held-out screen's six
+    (file, language) cells, plants, floors and band re-measured at the
+    top budget with every stream, split, seed kind and machinery rule
+    unchanged and the declared score table rebuilt in its
+    exploitation-resistant leave-one-out form, after the bridge gate
+    proves this measurement's code reproduces the frozen measurement
+    field for field under the inherited table."""
+    problems, fields = _compare_shape_cell_to_heldout()
+    if problems:
+        raise RuntimeError(
+            "the bridge gate failed: " + "; ".join(problems[:12])
+        )
+    artifact: dict = {
+        "what": "The declared shape-priced re-measure: the held-out "
+        "homophonic screen's six (file, language) cells re-measured "
+        "with the mapped set, streams, split, seeds, machinery, "
+        "restarts, sweep cap, plants, floors and band unchanged and "
+        "the declared score table rebuilt in its leave-one-out form, "
+        "so the climb searches the same space against a table whose "
+        "occurring pair types carry one occurrence more severity. The "
+        "bridge gate re-derived the frozen measurement under the "
+        "inherited table through this measurement's code before the "
+        "leave-one-out cells ran. The declared truthful question: "
+        "does the real's margin above the band survive a model the "
+        "climb cannot feed on - a yes says the margin rides the "
+        "manuscript's statistics, a no records which instrument "
+        "carried it. No mapping is published; nothing here is a "
+        "reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "restarts": N_RESTARTS,
+            "sweep_cap": SWEEP_CAP,
+            "plants_per_cell": N_PLANTS,
+            "floors": N_FLOORS,
+            "loo_rule": "the declared score table rebuilt: the "
+            "inherited add-one form is log((n_ab + 1) / (N + 729)) "
+            "with N the reference stream's total counted pairs; in "
+            "the leave-one-out form every pair type (a, b) present in "
+            "the reference pair table is scored with one occurrence "
+            "of (a, b) removed from the reference counts, "
+            "log(n_ab / (N + 728)), and a type with no counted "
+            "occurrence keeps the inherited add-one entry "
+            "log(1 / (N + 729)); every occurring type is re-priced "
+            "one occurrence more severely and the unseen-type floor "
+            "is unchanged; the declared conditional on re-deriving "
+            "the matrix arithmetic resolves as not needed, the model "
+            "staying the reference's aggregate and the score one "
+            "fixed 27 x 27 table per language summed by assignment "
+            "aggregation (the sum over pair occurrences of "
+            "table[first label, second label])",
+            "letter_counts_rule": "the model's letter marginals are "
+            "the reference unigram counts, unchanged by the "
+            "leave-one-out re-pricing, so the rank initialisation "
+            "consumes the same marginals and starts identically to "
+            "the held-out screen",
+            "measured_facts_rule": "the mapped set, streams, split, "
+            "seeds, machinery, restarts, sweep cap, plants, floors "
+            "and band are the held-out screen's declarations replayed "
+            "unchanged; the encodings and shuffles are byte-identical "
+            "replays of the frozen measurement's draws and only the "
+            "scoring changes; each side's exact full-data side call "
+            "is recorded beside its held-out value for attribution "
+            "only",
+            "split_rule": "the counted pairs of each side, in stream "
+            "order, split by pair-index parity: even indices the "
+            "climb half, odd indices the score half it may never "
+            "touch; deterministic, consuming no seed, as the held-out "
+            "screen declared",
+            "machinery_rule": "unchanged from the held-out screen: "
+            "the exact greedy reassignment climb on the climb half, "
+            "exact pricing on the score half, restart 0 the rank "
+            "initialisation from the climb half, restarts 1 onward "
+            "the seeded permutations of the 27 letter tokens under "
+            "the wrap rule, the best restart the best exact "
+            "climb-half total with ties to the first; no assignment "
+            "is stored",
+            "seed_kinds": {
+                "real": KIND_ID["real"],
+                "homo_plant": [KIND_ID["homo_plant_enc"],
+                               KIND_ID["homo_plant_mach"]],
+                "homo_floor": [KIND_ID["homo_floor_perm"],
+                               KIND_ID["homo_floor_mach"]],
+                "homo_cross": [KIND_ID["homo_cross_enc"],
+                               KIND_ID["homo_cross_mach"]],
+            },
+            "seed_sharing": "no new seed kinds are consumed; the "
+            "declared draws are replayed from the declared kinds and "
+            "this measurement consumes none of any other module's "
+            "declared draws",
+            "bridge_gate": "before the leave-one-out cells run, the "
+            "shape instrument's full first cell (ZL english: the "
+            "real, its five plants, its five floors and its three "
+            "band members) is computed through this measurement's "
+            "code under the inherited add-one table and compared "
+            "field for field against the held-out screen's own "
+            "outputs; any divergence aborts with nothing written",
+            "band_record_rule": "membership, selection, ties and "
+            "spreads are declared unchanged from the held-out screen "
+            "(a member's band value the held-out value of the draw "
+            "whose exact climb-half total is best, strict beyond "
+            "1e-12, ties to the first draw); each member additionally "
+            "records draws_climb_exact, its five climb-half totals at "
+            "full precision, so the declared selection is "
+            "re-derivable from the stored artifact, because "
+            "four-decimal rounded totals can coincide where exact "
+            "totals differ",
+            "verdict_rule": "unchanged from the held-out screen and "
+            "applied to the leave-one-out-scale numbers: the real "
+            "held-out at or above the smallest member band value is "
+            "consistent-with-substitution, at or below the largest "
+            "floor's held-out value is not-consistent, strictly "
+            "between is below-held-band; the strings describe "
+            "consistency under this artifact's declared leave-one-out "
+            "form and do not restate the add-one form's verdicts",
+            "margin_rule": "the margin is computed from the stored "
+            "rounded values: the real held-out mean minus the "
+            "smallest member band value, rounded to four decimals",
+            "exclusion_rule": "the family's declared exclusion format "
+            "is not re-scoped by this artifact: it keys to the "
+            "declared 36-slot class under the inherited add-one form "
+            "exactly as the held-out screen declared it, so a "
+            "leave-one-out verdict is shape-instrument evidence and "
+            "the ladder-arc verdicts stand untouched by this "
+            "artifact's numbers",
+            "truthful_question": "declared in advance: does the "
+            "real's margin above the band survive a model the climb "
+            "cannot feed on - a yes says the margin rides the "
+            "manuscript's statistics, a no records which instrument "
+            "carried it; if the margin does not survive, record "
+            "which instrument carried it",
+            "models": {},
+        },
+        "bridge_gate": {},
+        "files": {},
+    }
+    for language in LANGS:
+        name, ebook = REFERENCE_FILES[language]
+        stream = _reference_stream(language)
+        model = _shape_table(language)
+        table = model["table"]
+        held_mean, climb_mean, _cp, _sp = _identity_half_means(
+            stream, table
+        )
+        full_matrix = _stream_matrix_27(stream)
+        add_one_held, add_one_climb, _acp, _asp = _identity_half_means(
+            stream, model["add_one_table"]
+        )
+        artifact["declared"]["models"][language] = {
+            "file": name,
+            "ebook": ebook,
+            "clean_identity_mean_nats_per_pair": round(
+                float((full_matrix * table).sum())
+                / float(full_matrix.sum()),
+                4,
+            ),
+            "identity_climb_half_mean_nats_per_pair": round(climb_mean, 4),
+            "identity_score_half_mean_nats_per_pair": round(held_mean, 4),
+            "add_one_identity_score_half_mean_nats_per_pair": round(
+                add_one_held, 4
+            ),
+            "pair_types_present": model["pair_types_present"],
+            "total_pairs": model["total_pairs"],
+            "max_abs_entry_delta": model["max_abs_entry_delta"],
+            "max_delta_type": model["max_delta_type"],
+            "mean_entry_delta_over_present": (
+                model["mean_entry_delta_over_present"]
+            ),
+        }
+    for code in FILES:
+        cell: dict = {}
+        for language in LANGS:
+            model = _shape_table(language)
+            facts = _shape_cell_facts(
+                code, language, model["table"], model["letter_counts"]
+            )
+            members = []
+            if language == "english":
+                positions = (0, 1, 2)
+            else:
+                positions = (0, 1, 2, 3)
+            for seed_index in positions:
+                members.append(
+                    _shape_band_for(
+                        code, language, seed_index,
+                        model["table"], model["letter_counts"],
+                    )
+                )
+            member_values = [
+                member["recovered_best"] for member in members
+            ]
+            floor_max = max(facts["floors_held"])
+            band_min = min(member_values)
+            band_max = max(member_values)
+            if facts["real_held"] >= band_min:
+                verdict = "consistent-with-substitution"
+            elif facts["real_held"] <= floor_max:
+                verdict = "not-consistent"
+            else:
+                verdict = "below-held-band"
+            parity = [
+                bool(value >= facts["anchor"] - 0.0001)
+                for value in facts["plants_held"]
+            ]
+            above_anchor = [
+                round(value - facts["anchor"], 4)
+                for value in facts["plants_held"]
+                if value > facts["anchor"] + 0.0001
+            ]
+            cell[language] = {
+                "real_held_mean_nats": facts["real_held"],
+                "real_climb_mean_nats": facts["real_climb"],
+                "real_sweep_budget_hit": facts["real_hit"],
+                "real_full_exact_mean_nats": facts["real_full"],
+                "real_full_sweep_budget_hit": facts["real_full_hit"],
+                "counted_pairs": facts["counted"],
+                "climb_pairs": facts["climb_pairs"],
+                "score_pairs": facts["score_pairs"],
+                "plant_parity_anchor_mean_nats": facts["anchor"],
+                "plant_climb_identity_mean_nats": facts["anchor_climb"],
+                "self_plants_held_mean_nats": facts["plants_held"],
+                "self_plants_full_exact_mean_nats": facts["plants_full"],
+                "self_plants_at_parity": parity,
+                "self_plants_sweep_budget_hits": facts["plants_hits"],
+                "self_plants_full_sweep_budget_hits": (
+                    facts["plants_full_hits"]
+                ),
+                "machinery_above_anchor_excesses": above_anchor,
+                "floors_held_mean_nats": facts["floors_held"],
+                "floors_full_exact_mean_nats": facts["floors_full"],
+                "floors_sweep_budget_hits": facts["floors_hits"],
+                "floors_full_sweep_budget_hits": (
+                    facts["floors_full_hits"]
+                ),
+                "band": members,
+                "band_min": band_min,
+                "band_max": band_max,
+                "real_margin_over_band_min": round(
+                    facts["real_held"] - band_min, 4
+                ),
+                "verdict": verdict,
+            }
+        artifact["files"][code] = cell
+    artifact["bridge_gate"] = {
+        "status": "verified",
+        "fields_compared": fields,
+    }
+    return artifact
+
+
+def main_shape_priced() -> None:
+    artifact = substitution_homophonic_shape_priced()
+    SHAPE_ARTIFACT_PATH.write_text(json.dumps(artifact, indent=2) + "\n")
+    print(SHAPE_ARTIFACT_PATH)
