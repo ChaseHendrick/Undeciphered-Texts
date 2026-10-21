@@ -1,0 +1,1526 @@
+{
+  "what": "The declared held-out homophonic screen: the counted pairs of every stream - the real, the plants, the floors and the seven band members of the first screen - are split by declared pair-index parity into a climb half the machinery may search and a score half it may never touch. The search is the exact greedy reassignment climb, declared when the first screen's candidate rule was found inexact away from the current label; its add-one exploitation is disclosed as systematic across the split, so this instrument prices the data-specific component only, and an exact full-data side call is recorded for attribution. The declared seeds of the first screen are replayed unchanged; nothing is redrawn and no mapping is published; nothing here is a reading.",
+  "declared": {
+    "base_seed": 20261020,
+    "mapped": 36,
+    "restarts": 16,
+    "sweep_cap": 200,
+    "plants_per_cell": 5,
+    "floors": 5,
+    "split_rule": "the counted pairs of each side, in stream order, split by pair-index parity: even indices form the climb half the machinery may search, odd indices the score half it may never touch; the halves share no counted pair and together they are the flat list, while across the halves adjacent pairs share a symbol position by construction (every interior position carries one climbed pair and one scored pair), so the score half is fresh to the search in the pair sense but not an independent sample of the stream; the split is deterministic and consumes no seed; both halves' sizes are recorded per cell",
+    "machinery_rule": "the exact greedy reassignment climb: candidates are the exact new totals with the symbol's self-pair correction included, the running best is itself exact, and adoption needs a strict improvement beyond 1e-12; the climb runs only on the climb half, restart 0 the rank initialisation computed from the climb half, restarts 1 onward seeded permutations of the 27 letter tokens under the wrap rule, the best restart the best exact climb-half total with ties to the first restart; the held-out number is the chosen assignment's mean nats per scored pair on the score half, evaluated exactly; no assignment is stored",
+    "seed_kinds": {
+      "real": 1,
+      "homo_plant": [
+        24,
+        25
+      ],
+      "homo_floor": [
+        26,
+        27
+      ],
+      "homo_cross": [
+        28,
+        29
+      ]
+    },
+    "seed_sharing": "no new kinds are consumed; the first screen's declared draws are replayed from the declared kinds and the split adds no draw",
+    "anchor_rule": "a plant's or member's anchor is its true configuration's mean nats per pair on the score half, algebraically the truncated stream's odd-half identity mean under the declared table, recorded with the climb-half identity mean",
+    "plant_rule": "a plant passes at or above its anchor minus 0.0001 on the held-out statistic; an exact pass counts as parity; best above the anchor counts as parity with the excess recorded as machinery-above-anchor; a plant below the anchor by more than 0.0001 fails parity",
+    "band_rule": "membership is unconditional as the first screen; a member's band value is the held-out value of the draw whose exact climb-half total is best among its five draws, ties to the first draw; the smallest member value sets the band threshold for its cell",
+    "side_instrument": "the identical exact climb over the unsplit full data, recorded for attribution; no verdict is built on it",
+    "verdict_rule": "real held-out at or above the smallest member band value is consistent-with-substitution; real held-out at or below the largest floor's held-out value is not-consistent; strictly between is below-held-band; machinery-noise-unresolved is retained formally for a memberless band, which cannot arise",
+    "exclusion_rule": "if the real text stands below the smallest member band value in all six cells with plant parity green and every floor's held-out value below the real, the scoped homophonic class is excluded by count for the measured statistics, with the standing caveats",
+    "models": {
+      "english": {
+        "file": "substref_english_pg1342.txt",
+        "ebook": 1342,
+        "clean_identity_mean_nats_per_pair": -5.1311,
+        "identity_climb_half_mean_nats_per_pair": -5.1314,
+        "identity_score_half_mean_nats_per_pair": -5.1309
+      },
+      "latin": {
+        "file": "substref_latin_pg33849.txt",
+        "ebook": 33849,
+        "clean_identity_mean_nats_per_pair": -5.0999,
+        "identity_climb_half_mean_nats_per_pair": -5.0979,
+        "identity_score_half_mean_nats_per_pair": -5.1019
+      }
+    }
+  },
+  "files": {
+    "ZL": {
+      "english": {
+        "real_held_mean_nats": -4.4252,
+        "real_climb_mean_nats": -4.4313,
+        "real_sweep_budget_hit": false,
+        "real_full_exact_mean_nats": -4.4437,
+        "real_full_sweep_budget_hit": false,
+        "counted_pairs": 218415,
+        "climb_pairs": 109208,
+        "score_pairs": 109207,
+        "plant_parity_anchor_mean_nats": -5.143,
+        "plant_climb_identity_mean_nats": -5.1415,
+        "self_plants_held_mean_nats": [
+          -4.6625,
+          -4.7236,
+          -4.7041,
+          -4.7236,
+          -4.7236
+        ],
+        "self_plants_full_exact_mean_nats": [
+          -4.7411,
+          -4.7256,
+          -4.6595,
+          -4.7256,
+          -4.7256
+        ],
+        "self_plants_at_parity": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "self_plants_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "self_plants_full_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "machinery_above_anchor_excesses": [
+          0.4805,
+          0.4194,
+          0.4389,
+          0.4194,
+          0.4194
+        ],
+        "floors_held_mean_nats": [
+          -5.2324,
+          -5.2375,
+          -5.2334,
+          -5.2336,
+          -5.2354
+        ],
+        "floors_full_exact_mean_nats": [
+          -5.2291,
+          -5.2276,
+          -5.2309,
+          -5.2264,
+          -5.2307
+        ],
+        "floors_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "floors_full_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "band": [
+          {
+            "file": "substref_english2_pg84.txt",
+            "ebook": 84,
+            "plant_length": 218663,
+            "anchor": -5.1585,
+            "anchor_climb": -5.1621,
+            "draws": [
+              -4.738,
+              -4.738,
+              -4.738,
+              -4.6992,
+              -4.6992
+            ],
+            "draws_climb": [
+              -4.7379,
+              -4.7379,
+              -4.7379,
+              -4.7003,
+              -4.7003
+            ],
+            "draws_full": [
+              -4.6997,
+              -4.6997,
+              -4.738,
+              -4.738,
+              -4.6997
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 3,
+            "recovered_best": -4.6992,
+            "spread": 0.0388
+          },
+          {
+            "file": "substref_english3_pg2701.txt",
+            "ebook": 2701,
+            "plant_length": 218663,
+            "anchor": -5.1885,
+            "anchor_climb": -5.1902,
+            "draws": [
+              -4.6997,
+              -4.6997,
+              -4.6997,
+              -4.6997,
+              -4.6997
+            ],
+            "draws_climb": [
+              -4.7025,
+              -4.7025,
+              -4.7025,
+              -4.7025,
+              -4.7025
+            ],
+            "draws_full": [
+              -4.7011,
+              -4.7011,
+              -4.7011,
+              -4.7011,
+              -4.7011
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 0,
+            "recovered_best": -4.6997,
+            "spread": 0.0
+          },
+          {
+            "file": "substref_english4_pg1251.txt",
+            "ebook": 1251,
+            "plant_length": 218663,
+            "anchor": -5.0993,
+            "anchor_climb": -5.1016,
+            "draws": [
+              -4.6712,
+              -4.6708,
+              -4.6708,
+              -4.6708,
+              -4.6708
+            ],
+            "draws_climb": [
+              -4.668,
+              -4.67,
+              -4.67,
+              -4.67,
+              -4.67
+            ],
+            "draws_full": [
+              -4.6699,
+              -4.6699,
+              -4.6699,
+              -4.6699,
+              -4.6699
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 0,
+            "recovered_best": -4.6712,
+            "spread": 0.0004
+          }
+        ],
+        "band_min": -4.6997,
+        "band_max": -4.6712,
+        "verdict": "consistent-with-substitution"
+      },
+      "latin": {
+        "real_held_mean_nats": -4.3743,
+        "real_climb_mean_nats": -4.3826,
+        "real_sweep_budget_hit": false,
+        "real_full_exact_mean_nats": -4.3784,
+        "real_full_sweep_budget_hit": false,
+        "counted_pairs": 218415,
+        "climb_pairs": 109208,
+        "score_pairs": 109207,
+        "plant_parity_anchor_mean_nats": -5.0755,
+        "plant_climb_identity_mean_nats": -5.0729,
+        "self_plants_held_mean_nats": [
+          -4.5771,
+          -4.5771,
+          -4.5771,
+          -4.5775,
+          -4.5771
+        ],
+        "self_plants_full_exact_mean_nats": [
+          -4.5764,
+          -4.5764,
+          -4.5764,
+          -4.5772,
+          -4.5764
+        ],
+        "self_plants_at_parity": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "self_plants_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "self_plants_full_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "machinery_above_anchor_excesses": [
+          0.4984,
+          0.4984,
+          0.4984,
+          0.498,
+          0.4984
+        ],
+        "floors_held_mean_nats": [
+          -5.1764,
+          -5.171,
+          -5.1741,
+          -5.1744,
+          -5.1707
+        ],
+        "floors_full_exact_mean_nats": [
+          -5.1664,
+          -5.167,
+          -5.1682,
+          -5.1673,
+          -5.1667
+        ],
+        "floors_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "floors_full_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "band": [
+          {
+            "file": "substref_latin2_pg218.txt",
+            "ebook": 218,
+            "plant_length": 143947,
+            "anchor": -5.1338,
+            "anchor_climb": -5.1351,
+            "draws": [
+              -4.6063,
+              -4.6081,
+              -4.6081,
+              -4.6081,
+              -4.6081
+            ],
+            "draws_climb": [
+              -4.6074,
+              -4.6066,
+              -4.6066,
+              -4.6066,
+              -4.6066
+            ],
+            "draws_full": [
+              -4.6068,
+              -4.6068,
+              -4.6074,
+              -4.6068,
+              -4.6068
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 1,
+            "recovered_best": -4.6081,
+            "spread": 0.0018
+          },
+          {
+            "file": "substref_latin3_pg828.txt",
+            "ebook": 828,
+            "plant_length": 77572,
+            "anchor": -5.1465,
+            "anchor_climb": -5.1453,
+            "draws": [
+              -4.583,
+              -4.583,
+              -4.5816,
+              -4.583,
+              -4.583
+            ],
+            "draws_climb": [
+              -4.5905,
+              -4.5905,
+              -4.5832,
+              -4.5905,
+              -4.5905
+            ],
+            "draws_full": [
+              -4.5867,
+              -4.5867,
+              -4.5867,
+              -4.5867,
+              -4.5867
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 2,
+            "recovered_best": -4.5816,
+            "spread": 0.0014
+          },
+          {
+            "file": "substref_latin4_pg17859.txt",
+            "ebook": 17859,
+            "plant_length": 218663,
+            "anchor": -5.1684,
+            "anchor_climb": -5.1686,
+            "draws": [
+              -4.6068,
+              -4.6068,
+              -4.6068,
+              -4.6068,
+              -4.6068
+            ],
+            "draws_climb": [
+              -4.6036,
+              -4.6036,
+              -4.6036,
+              -4.6036,
+              -4.6036
+            ],
+            "draws_full": [
+              -4.6052,
+              -4.6052,
+              -4.6052,
+              -4.6052,
+              -4.6052
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 0,
+            "recovered_best": -4.6068,
+            "spread": 0.0
+          },
+          {
+            "file": "substref_latin5_pg27655.txt",
+            "ebook": 27655,
+            "plant_length": 77529,
+            "anchor": -5.2038,
+            "anchor_climb": -5.2106,
+            "draws": [
+              -4.5788,
+              -4.5788,
+              -4.5788,
+              -4.5788,
+              -4.5788
+            ],
+            "draws_climb": [
+              -4.5978,
+              -4.5978,
+              -4.5978,
+              -4.5978,
+              -4.5978
+            ],
+            "draws_full": [
+              -4.5883,
+              -4.5883,
+              -4.5883,
+              -4.5883,
+              -4.5883
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 0,
+            "recovered_best": -4.5788,
+            "spread": 0.0
+          }
+        ],
+        "band_min": -4.6081,
+        "band_max": -4.5788,
+        "verdict": "consistent-with-substitution"
+      }
+    },
+    "GC": {
+      "english": {
+        "real_held_mean_nats": -4.3534,
+        "real_climb_mean_nats": -4.353,
+        "real_sweep_budget_hit": false,
+        "real_full_exact_mean_nats": -4.3527,
+        "real_full_sweep_budget_hit": false,
+        "counted_pairs": 183199,
+        "climb_pairs": 91600,
+        "score_pairs": 91599,
+        "plant_parity_anchor_mean_nats": -5.1444,
+        "plant_climb_identity_mean_nats": -5.1415,
+        "self_plants_held_mean_nats": [
+          -4.7256,
+          -4.6627,
+          -4.6627,
+          -4.6627,
+          -4.6609
+        ],
+        "self_plants_full_exact_mean_nats": [
+          -4.7271,
+          -4.6592,
+          -4.6592,
+          -4.6592,
+          -4.6592
+        ],
+        "self_plants_at_parity": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "self_plants_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "self_plants_full_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "machinery_above_anchor_excesses": [
+          0.4188,
+          0.4817,
+          0.4817,
+          0.4817,
+          0.4835
+        ],
+        "floors_held_mean_nats": [
+          -5.2356,
+          -5.2389,
+          -5.2334,
+          -5.2321,
+          -5.2378
+        ],
+        "floors_full_exact_mean_nats": [
+          -5.2251,
+          -5.2302,
+          -5.2242,
+          -5.2253,
+          -5.2275
+        ],
+        "floors_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "floors_full_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "band": [
+          {
+            "file": "substref_english2_pg84.txt",
+            "ebook": 84,
+            "plant_length": 186708,
+            "anchor": -5.1627,
+            "anchor_climb": -5.1665,
+            "draws": [
+              -4.7278,
+              -4.7278,
+              -4.6989,
+              -4.6989,
+              -4.6989
+            ],
+            "draws_climb": [
+              -4.731,
+              -4.731,
+              -4.7024,
+              -4.7024,
+              -4.7024
+            ],
+            "draws_full": [
+              -4.7294,
+              -4.7294,
+              -4.7004,
+              -4.7294,
+              -4.7294
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 2,
+            "recovered_best": -4.6989,
+            "spread": 0.0289
+          },
+          {
+            "file": "substref_english3_pg2701.txt",
+            "ebook": 2701,
+            "plant_length": 186708,
+            "anchor": -5.1878,
+            "anchor_climb": -5.1896,
+            "draws": [
+              -4.6362,
+              -4.7556,
+              -4.7,
+              -4.6362,
+              -4.7
+            ],
+            "draws_climb": [
+              -4.639,
+              -4.7508,
+              -4.7042,
+              -4.639,
+              -4.7042
+            ],
+            "draws_full": [
+              -4.7521,
+              -4.7021,
+              -4.7021,
+              -4.7521,
+              -4.7021
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 0,
+            "recovered_best": -4.6362,
+            "spread": 0.1194
+          },
+          {
+            "file": "substref_english4_pg1251.txt",
+            "ebook": 1251,
+            "plant_length": 186708,
+            "anchor": -5.1067,
+            "anchor_climb": -5.1099,
+            "draws": [
+              -4.6729,
+              -4.6688,
+              -4.6688,
+              -4.6688,
+              -4.6729
+            ],
+            "draws_climb": [
+              -4.6711,
+              -4.6691,
+              -4.6691,
+              -4.6691,
+              -4.6711
+            ],
+            "draws_full": [
+              -4.6711,
+              -4.6715,
+              -4.6715,
+              -4.6715,
+              -4.6715
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 1,
+            "recovered_best": -4.6688,
+            "spread": 0.0041
+          }
+        ],
+        "band_min": -4.6989,
+        "band_max": -4.6362,
+        "verdict": "consistent-with-substitution"
+      },
+      "latin": {
+        "real_held_mean_nats": -4.4318,
+        "real_climb_mean_nats": -4.4276,
+        "real_sweep_budget_hit": false,
+        "real_full_exact_mean_nats": -4.3896,
+        "real_full_sweep_budget_hit": false,
+        "counted_pairs": 183199,
+        "climb_pairs": 91600,
+        "score_pairs": 91599,
+        "plant_parity_anchor_mean_nats": -5.076,
+        "plant_climb_identity_mean_nats": -5.0726,
+        "self_plants_held_mean_nats": [
+          -4.5776,
+          -4.5774,
+          -4.5774,
+          -4.5774,
+          -4.5774
+        ],
+        "self_plants_full_exact_mean_nats": [
+          -4.5761,
+          -4.5761,
+          -4.5761,
+          -4.5761,
+          -4.5761
+        ],
+        "self_plants_at_parity": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "self_plants_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "self_plants_full_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "machinery_above_anchor_excesses": [
+          0.4984,
+          0.4986,
+          0.4986,
+          0.4986,
+          0.4986
+        ],
+        "floors_held_mean_nats": [
+          -5.1725,
+          -5.1719,
+          -5.1745,
+          -5.1677,
+          -5.1796
+        ],
+        "floors_full_exact_mean_nats": [
+          -5.1599,
+          -5.1632,
+          -5.1608,
+          -5.161,
+          -5.1584
+        ],
+        "floors_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "floors_full_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "band": [
+          {
+            "file": "substref_latin2_pg218.txt",
+            "ebook": 218,
+            "plant_length": 143947,
+            "anchor": -5.1338,
+            "anchor_climb": -5.1351,
+            "draws": [
+              -4.6081,
+              -4.6081,
+              -4.6081,
+              -4.6063,
+              -4.6081
+            ],
+            "draws_climb": [
+              -4.6066,
+              -4.6066,
+              -4.6066,
+              -4.6074,
+              -4.6066
+            ],
+            "draws_full": [
+              -4.6074,
+              -4.6068,
+              -4.6074,
+              -4.6068,
+              -4.6068
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 0,
+            "recovered_best": -4.6081,
+            "spread": 0.0018
+          },
+          {
+            "file": "substref_latin3_pg828.txt",
+            "ebook": 828,
+            "plant_length": 77572,
+            "anchor": -5.1465,
+            "anchor_climb": -5.1453,
+            "draws": [
+              -4.583,
+              -4.5816,
+              -4.5816,
+              -4.5816,
+              -4.583
+            ],
+            "draws_climb": [
+              -4.5905,
+              -4.5832,
+              -4.5832,
+              -4.5832,
+              -4.5905
+            ],
+            "draws_full": [
+              -4.5867,
+              -4.5867,
+              -4.5867,
+              -4.5804,
+              -4.5867
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 1,
+            "recovered_best": -4.5816,
+            "spread": 0.0014
+          },
+          {
+            "file": "substref_latin4_pg17859.txt",
+            "ebook": 17859,
+            "plant_length": 186708,
+            "anchor": -5.1659,
+            "anchor_climb": -5.167,
+            "draws": [
+              -4.605,
+              -4.605,
+              -4.605,
+              -4.605,
+              -4.5974
+            ],
+            "draws_climb": [
+              -4.6037,
+              -4.6037,
+              -4.6037,
+              -4.6037,
+              -4.5968
+            ],
+            "draws_full": [
+              -4.6044,
+              -4.6044,
+              -4.5971,
+              -4.6044,
+              -4.5971
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 4,
+            "recovered_best": -4.5974,
+            "spread": 0.0076
+          },
+          {
+            "file": "substref_latin5_pg27655.txt",
+            "ebook": 27655,
+            "plant_length": 77529,
+            "anchor": -5.2038,
+            "anchor_climb": -5.2106,
+            "draws": [
+              -4.5788,
+              -4.5788,
+              -4.5788,
+              -4.5788,
+              -4.5788
+            ],
+            "draws_climb": [
+              -4.5978,
+              -4.5978,
+              -4.5978,
+              -4.5978,
+              -4.5978
+            ],
+            "draws_full": [
+              -4.5883,
+              -4.5883,
+              -4.5883,
+              -4.5883,
+              -4.5883
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 0,
+            "recovered_best": -4.5788,
+            "spread": 0.0
+          }
+        ],
+        "band_min": -4.6081,
+        "band_max": -4.5788,
+        "verdict": "consistent-with-substitution"
+      }
+    },
+    "IT": {
+      "english": {
+        "real_held_mean_nats": -4.3878,
+        "real_climb_mean_nats": -4.3912,
+        "real_sweep_budget_hit": false,
+        "real_full_exact_mean_nats": -4.3895,
+        "real_full_sweep_budget_hit": false,
+        "counted_pairs": 220531,
+        "climb_pairs": 110266,
+        "score_pairs": 110265,
+        "plant_parity_anchor_mean_nats": -5.1431,
+        "plant_climb_identity_mean_nats": -5.1414,
+        "self_plants_held_mean_nats": [
+          -4.7482,
+          -4.7234,
+          -4.7425,
+          -4.7496,
+          -4.7521
+        ],
+        "self_plants_full_exact_mean_nats": [
+          -4.7477,
+          -4.726,
+          -4.7412,
+          -4.7488,
+          -4.7488
+        ],
+        "self_plants_at_parity": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "self_plants_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "self_plants_full_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "machinery_above_anchor_excesses": [
+          0.3949,
+          0.4197,
+          0.4006,
+          0.3935,
+          0.391
+        ],
+        "floors_held_mean_nats": [
+          -5.2295,
+          -5.2376,
+          -5.2285,
+          -5.2354,
+          -5.229
+        ],
+        "floors_full_exact_mean_nats": [
+          -5.2296,
+          -5.2293,
+          -5.2261,
+          -5.2307,
+          -5.2262
+        ],
+        "floors_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "floors_full_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "band": [
+          {
+            "file": "substref_english2_pg84.txt",
+            "ebook": 84,
+            "plant_length": 220532,
+            "anchor": -5.1588,
+            "anchor_climb": -5.1618,
+            "draws": [
+              -4.6992,
+              -4.7378,
+              -4.7378,
+              -4.6992,
+              -4.7378
+            ],
+            "draws_climb": [
+              -4.7002,
+              -4.7376,
+              -4.7376,
+              -4.7002,
+              -4.7376
+            ],
+            "draws_full": [
+              -4.6997,
+              -4.7377,
+              -4.7377,
+              -4.6997,
+              -4.7377
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 0,
+            "recovered_best": -4.6992,
+            "spread": 0.0386
+          },
+          {
+            "file": "substref_english3_pg2701.txt",
+            "ebook": 2701,
+            "plant_length": 220532,
+            "anchor": -5.1894,
+            "anchor_climb": -5.1916,
+            "draws": [
+              -4.6998,
+              -4.6354,
+              -4.6998,
+              -4.6354,
+              -4.6354
+            ],
+            "draws_climb": [
+              -4.7028,
+              -4.6391,
+              -4.7028,
+              -4.6391,
+              -4.6391
+            ],
+            "draws_full": [
+              -4.6373,
+              -4.6373,
+              -4.7013,
+              -4.6373,
+              -4.7013
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 1,
+            "recovered_best": -4.6354,
+            "spread": 0.0644
+          },
+          {
+            "file": "substref_english4_pg1251.txt",
+            "ebook": 1251,
+            "plant_length": 220532,
+            "anchor": -5.0985,
+            "anchor_climb": -5.1012,
+            "draws": [
+              -4.6713,
+              -4.6713,
+              -4.6713,
+              -4.6713,
+              -4.6713
+            ],
+            "draws_climb": [
+              -4.6678,
+              -4.6678,
+              -4.6678,
+              -4.6678,
+              -4.6678
+            ],
+            "draws_full": [
+              -4.6691,
+              -4.6691,
+              -4.6691,
+              -4.6691,
+              -4.6691
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 0,
+            "recovered_best": -4.6713,
+            "spread": 0.0
+          }
+        ],
+        "band_min": -4.6992,
+        "band_max": -4.6354,
+        "verdict": "consistent-with-substitution"
+      },
+      "latin": {
+        "real_held_mean_nats": -4.3707,
+        "real_climb_mean_nats": -4.3756,
+        "real_sweep_budget_hit": false,
+        "real_full_exact_mean_nats": -4.3732,
+        "real_full_sweep_budget_hit": false,
+        "counted_pairs": 220531,
+        "climb_pairs": 110266,
+        "score_pairs": 110265,
+        "plant_parity_anchor_mean_nats": -5.0753,
+        "plant_climb_identity_mean_nats": -5.0727,
+        "self_plants_held_mean_nats": [
+          -4.577,
+          -4.577,
+          -4.5986,
+          -4.577,
+          -4.577
+        ],
+        "self_plants_full_exact_mean_nats": [
+          -4.5765,
+          -4.5765,
+          -4.5765,
+          -4.5765,
+          -4.5765
+        ],
+        "self_plants_at_parity": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "self_plants_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "self_plants_full_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "machinery_above_anchor_excesses": [
+          0.4983,
+          0.4983,
+          0.4767,
+          0.4983,
+          0.4983
+        ],
+        "floors_held_mean_nats": [
+          -5.1749,
+          -5.1703,
+          -5.1808,
+          -5.167,
+          -5.1766
+        ],
+        "floors_full_exact_mean_nats": [
+          -5.1642,
+          -5.1667,
+          -5.1668,
+          -5.1643,
+          -5.168
+        ],
+        "floors_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "floors_full_sweep_budget_hits": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "band": [
+          {
+            "file": "substref_latin2_pg218.txt",
+            "ebook": 218,
+            "plant_length": 143947,
+            "anchor": -5.1338,
+            "anchor_climb": -5.1351,
+            "draws": [
+              -4.6081,
+              -4.6081,
+              -4.6081,
+              -4.6063,
+              -4.6063
+            ],
+            "draws_climb": [
+              -4.6066,
+              -4.6066,
+              -4.6066,
+              -4.6074,
+              -4.6074
+            ],
+            "draws_full": [
+              -4.6074,
+              -4.6074,
+              -4.6074,
+              -4.6068,
+              -4.6068
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 0,
+            "recovered_best": -4.6081,
+            "spread": 0.0018
+          },
+          {
+            "file": "substref_latin3_pg828.txt",
+            "ebook": 828,
+            "plant_length": 77572,
+            "anchor": -5.1465,
+            "anchor_climb": -5.1453,
+            "draws": [
+              -4.5816,
+              -4.5816,
+              -4.5816,
+              -4.5816,
+              -4.5816
+            ],
+            "draws_climb": [
+              -4.5832,
+              -4.5832,
+              -4.5832,
+              -4.5832,
+              -4.5832
+            ],
+            "draws_full": [
+              -4.5804,
+              -4.5804,
+              -4.5804,
+              -4.5804,
+              -4.5804
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 0,
+            "recovered_best": -4.5816,
+            "spread": 0.0
+          },
+          {
+            "file": "substref_latin4_pg17859.txt",
+            "ebook": 17859,
+            "plant_length": 220532,
+            "anchor": -5.1682,
+            "anchor_climb": -5.1688,
+            "draws": [
+              -4.6064,
+              -4.6064,
+              -4.6064,
+              -4.6064,
+              -4.6064
+            ],
+            "draws_climb": [
+              -4.6038,
+              -4.6038,
+              -4.6038,
+              -4.6038,
+              -4.6038
+            ],
+            "draws_full": [
+              -4.6051,
+              -4.6051,
+              -4.6051,
+              -4.6051,
+              -4.6051
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 0,
+            "recovered_best": -4.6064,
+            "spread": 0.0
+          },
+          {
+            "file": "substref_latin5_pg27655.txt",
+            "ebook": 27655,
+            "plant_length": 77529,
+            "anchor": -5.2038,
+            "anchor_climb": -5.2106,
+            "draws": [
+              -4.5788,
+              -4.5788,
+              -4.5788,
+              -4.5788,
+              -4.5788
+            ],
+            "draws_climb": [
+              -4.5978,
+              -4.5978,
+              -4.5978,
+              -4.5978,
+              -4.5978
+            ],
+            "draws_full": [
+              -4.5883,
+              -4.5883,
+              -4.5883,
+              -4.5883,
+              -4.5883
+            ],
+            "draw_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "draw_full_sweep_budget_hits": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "selected_draw_index": 0,
+            "recovered_best": -4.5788,
+            "spread": 0.0
+          }
+        ],
+        "band_min": -4.6081,
+        "band_max": -4.5788,
+        "verdict": "consistent-with-substitution"
+      }
+    }
+  }
+}
