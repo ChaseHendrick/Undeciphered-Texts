@@ -155,10 +155,167 @@ no mapping published). If any cell flips otherwise, the family stays
 open with the disclosure, exactly as the ledger's family 4 arc
 demanded before its own closure.
 
-The standing limitations, declared before the run: no mapping is
-published anywhere in this artifact, the recovered assignment is
-never stored as a key, plaintext_recovered_percent stays 0, the
-reference prose is modern printed text outside the manuscript's
+Second declared measurement, the held-out homophonic screen, declared
+after the first screen's six consistent-with-substitution verdicts and
+before its own run, and declared around two disclosed pre-run
+findings.
+
+Finding (a), disclosed: the first screen's climb was declared as an
+exact candidate evaluation, but its implemented rule evaluates
+candidates exactly at the current label only. For a symbol s with
+self-pair count n = matrix[s, s] and current label c = f[s], its
+implemented candidates for other labels l misstate the exact new
+totals by n * (t[l, c] + t[c, l] - 2 * t[l, l]), t the declared
+add-one table; a brute-force check on one random small matrix with
+n = 1 measured candidate errors up to 16.9 nats, and the errors
+compound across a climb's adoptions into drifting walk-time totals -
+on that small matrix the walk-time total reached +23430 nats where the
+returned assignment re-evaluated to -20520. Every stored number of the
+first screen's artifact still stands: that module re-evaluates the
+returned assignment exactly, so the recorded scores are exact scores
+of real assignments, and the real, plants, floors and band were scored
+through one shared machinery, so the recorded comparisons remain
+comparisons through that machinery. The drift was a search-path
+phenomenon; this measurement repairs the rule and measures again.
+
+Finding (b), disclosed: the exact greedy reassignment climb, verified
+against brute force to 9.1e-13 and run on the first screen's
+instruments, keeps the disclosed exploitation of the add-one table
+above a planted key alive while converging far before the declared
+cap. Disclosed pre-run probes ran on ZL's truncated English and Latin
+streams, three planted encodings per language, every encoding through
+both the held-out call and the exact full-data side call, twelve
+machinery calls, 204 exact climbs, none reaching the sweep cap.
+English: the truncated plant stream is 218,662 plaintext pairs,
+splitting to 109,331 climb and 109,331 score pairs; the identity score
+is -5.1422 nats per pair over the full stream and -5.1430 over the
+score half. The exact climb's bests on the full planted data ran from
+-4.7533 to -4.7256, excesses +0.389 to +0.417 over the full-stream
+identity, the same magnitude as the first screen's stored plant
+excesses for this cell (0.4005 to 0.4166), so the first screen's
+recorded exploitation measured a real exploit and not the drift; the
+held-out values ran from -4.7514 to -4.6625, excesses +0.392 to +0.481
+over the held-out anchor. Latin: identity -5.0742, held anchor
+-5.0755; full-data exact bests from -4.5772 to -4.5764, excesses
++0.497 to +0.498; held-out values -4.5771 to -4.5775, excesses +0.498
+for all three. The exploitation is systematic across the split: both
+halves are drawn from one generated structure and the exploit rides
+the model's shape, so the held-out statistic prices the data-specific
+component only; that is the declared instrument's honest reach and
+this artifact records it.
+
+The held-out split, declared before the run: each side's counted pairs
+are pooled as one flat ordered pair list - the real stream's occupied
+adjacent pairs under the first screen's pair rule, every plant's and
+every band member's full consecutive pairs of its encoded stream, and
+every floor's occupied adjacent pairs after its declared shuffle -
+then split by pair-index parity: even-index pairs form the climb half
+the machinery may search, odd-index pairs the score half it may never
+touch. The halves share no counted pair: every pair of the flat list
+belongs to exactly one half, and within each half pairs two indices
+apart share no symbol. Across the halves the pairs are interleaved
+and every interior symbol position carries one climbed pair and one
+scored pair, so the score half is fresh to the search at the pair
+level but is not an independent sample of the stream; it prices the
+chosen assignment once after the search and returns nothing of it to
+the machinery. The split is deterministic, consumes no seed, and both
+halves' sizes are recorded per cell.
+
+The machinery, declared before the run: the exact greedy reassignment
+climb of finding (b) - candidates the exact new totals, the running
+best updated only by exact candidate values, adoption only on strict
+improvement beyond 1e-12 - runs only on the climb half. Restart 0 is
+the rank initialisation computed from the climb half under the
+declared wrap rule; each later restart consumes one seeded permutation
+of the 27 letter tokens under the same wrap rule; among the restarts
+the best is the best exact climb-half total with ties to the first
+restart, so every choice of the search reads only data its climbs
+saw. The reported held-out number is the chosen assignment's mean nats
+per scored pair on the score half, evaluated exactly, and the chosen
+assignment's climb-half mean is recorded beside it for the real. No
+assignment is returned, stored or published anywhere in this
+artifact. Every machinery call records whether any of its climbs
+reached the declared sweep cap 200, which finding (b) says does not
+happen under the exact rule.
+
+Seed sharing, declared before the run: this measurement consumes no
+new seed kinds. The real recomputes from the standing kind 1 under the
+standing seed scheme; the plants are the first screen's encodings
+replayed from kinds 24 and 25, the floors its shuffles replayed from
+kinds 26 and 27, the band members its encodings replayed from kinds 28
+and 29, and every restart permutation is the first screen's declared
+permutation draw for the same call, replayed in the same order; the
+side instrument's separate rng object replays the same declared draws.
+The split adds no draw; nothing is redrawn.
+
+Anchors, declared before the run: a plant's anchor is its true
+configuration's mean nats per pair on the score half - algebraically
+the truncated plaintext stream's odd-half identity mean under the same
+declared table, whatever the sampled choices are - recorded per cell
+with the climb-half identity mean and both half sizes for context.
+Band members carry the same anchor rule per member text. Plant parity
+keeps the first screen's declared rule on the held-out statistic: a
+plant passes at or above its anchor minus 0.0001, an exact pass counts
+as parity, a best above the anchor counts as parity with the excess
+recorded and disclosed as machinery-above-anchor, and a plant below
+the anchor by more than 0.0001 fails parity and is recorded.
+
+Floors, declared before the run: the first screen's destroyed-adjacency
+multiset shuffles, redrawn from their declared seeds, split by the
+same rule, each scored by the same held-out machinery; every floor
+must land below the real's held-out value.
+
+Band, declared before the run: the seven unconditional members of the
+first screen - English (Frankenstein, Moby Dick, Le Morte d'Arthur
+volume 1) and Latin (Caesar's De Bello Gallico I-IV, Vulgate Daniel,
+Colloquium heptaplomeres, De Rariorum Animalium atque Stirpium
+Historia) - each re-encoded under the first screen's per-text
+sequential scheme from its declared kinds, each producing five draws;
+all five held-out values, their climb-half means, their cap hits and
+their spread are recorded, and the member's band value is the held-out
+value of the draw whose exact climb-half total is best among the five,
+ties to the first draw; the smallest member value sets the band
+threshold for its cell; the special outcome machinery-noise-unresolved
+is retained formally for a memberless band, which cannot arise.
+
+A disclosed side instrument, declared before the run, attribution
+only: the identical exact climb over the unsplit full data of each
+cell's real, five plants and five floors, and of every band member's
+five draws, all values and cap hits recorded beside the held-out ones,
+so the first screen's two effects - the surrogate drift and the add-one
+exploitation - can be attributed separately and the exact rule's
+agreement with the first screen's stored magnitudes is measured on the
+declared data in the artifact. No verdict is built on the side
+instrument.
+
+Declared verdict rule, before the run: the real's held-out value at or
+above the smallest member band value is consistent-with-substitution;
+the real's held-out value at or below the largest floor's held-out
+value is not-consistent; strictly between is below-held-band.
+Declared exclusion format, agreed here before the run: if the real
+text stands below the smallest member band value in all six (file,
+language) cells with plant parity green and every floor's held-out
+value below the real, then the scoped homophonic class - several
+cipher symbols per plaintext letter inside the declared 36-slot mapped
+alphabet, word divisions carried, no abbreviation, no transposition,
+no nulls, the sampled reference population - is excluded by count for
+the manuscript's statistics as measured, and the family closes with
+that wording plus the standing caveats (abbreviated scribal usage
+outside the class, population sampled not exhaustive, nothing is a
+reading, no mapping published). If any cell flips otherwise, the
+family stays open with the disclosure, per the ledger's declared next
+for family 5. The truthful question declared in advance: does the
+direction of the verdicts reverse when the surrogate drift is repaired
+and the data-specific part of the exploitation is priced out; if the
+class is still not separated, the artifact says so and the family
+stays open with the disclosure. A consistent verdict under the
+held-out statistic is NOT read as a cipher identification, exactly as
+in the first screen.
+
+The standing limitations are inherited from the first screen: no
+mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays 0,
+the reference prose is modern printed text outside the manuscript's
 century, and nothing here is a reading or a language claim.
 """
 
@@ -484,6 +641,205 @@ def _identity_score(
 
 
 # --------------------------------------------------------------------------
+# The held-out split and the held-out machinery
+# --------------------------------------------------------------------------
+
+
+def _kept_pairs(
+    events_ids: np.ndarray, mask: np.ndarray,
+) -> tuple[np.ndarray, np.ndarray]:
+    """The stream's occupied adjacent pairs as flat (first, second)
+    arrays over mapped symbol ids, the pair source of the real and
+    floor matrices."""
+    kept = np.where(mask)[0]
+    values = events_ids[kept]
+    adjacent = kept[1:] == kept[:-1] + 1
+    first = values[:-1][adjacent]
+    second = values[1:][adjacent]
+    return first, second
+
+
+def _full_pairs(stream_ids: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
+    """A full stream's consecutive pairs as flat (first, second)
+    arrays, the pair source of the plant and band matrices."""
+    ids = np.asarray(stream_ids, dtype=np.int64)
+    return ids[:-1], ids[1:]
+
+
+def _split_pairs(
+    first: np.ndarray, second: np.ndarray,
+) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    """The declared split of a stream's counted pairs by pair-index
+    parity: even-index pairs form the climb half the machinery may
+    search, odd-index pairs the score half it may never touch. The
+    halves share no counted pair and together they are the flat list;
+    within each half pairs two indices apart share no symbol, while
+    across the halves adjacent pairs share a symbol position by
+    construction."""
+    even = np.arange(len(first)) % 2 == 0
+    return first[even], second[even], first[~even], second[~even]
+
+
+def _matrix_from_pairs(
+    first: np.ndarray, second: np.ndarray,
+) -> np.ndarray:
+    matrix = np.zeros((37, 37))
+    np.add.at(matrix, (first, second), 1.0)
+    return matrix
+
+
+def _held_climb(
+    matrix: np.ndarray,
+    table: np.ndarray,
+    f0: list[int],
+) -> tuple[float, int, np.ndarray]:
+    """The declared exact greedy reassignment climb.
+
+    For every symbol s with self-pair count n = matrix[s, s] and
+    current label c = f[s], each candidate label l is evaluated as the
+    exact new total of s's pairs under l:
+    candidates[l] = best - hold + outbound[l] + inbound[l]
+                    - n * (table[l, c] + table[c, l] - table[l, l]),
+    where outbound[l] and inbound[l] count the symbol's pairs into and
+    out of every symbol under candidate label l (the j = s term
+    included), and hold is the symbol's exact current contribution
+    outbound[c] + inbound[c] - n * table[c, c]. The candidate at the
+    current label is best by construction. A label is adopted only on
+    a strict improvement beyond 1e-12 against the running best, which
+    is itself updated only by these exact values, so no incremental
+    drift reaches the search or any stored number; the returned total
+    is the exact re-evaluation of the tracked best assignment.
+    """
+    f = np.array(f0, dtype=np.int64)
+    best = _score(f, matrix, table)
+    f_best = f.copy()
+    diag_table = np.diag(table).copy()
+    sweeps = 0
+    improved = True
+    while improved and sweeps < SWEEP_CAP:
+        improved = False
+        sweeps += 1
+        for symbol in range(len(f)):
+            outbound = table[:, f] @ matrix[symbol]
+            inbound = matrix[:, symbol] @ table[f, :]
+            current = f[symbol]
+            n = matrix[symbol, symbol]
+            hold = outbound[current] + inbound[current] - n * table[
+                current, current
+            ]
+            candidates = (
+                best
+                + outbound
+                + inbound
+                - hold
+                - n * table[:, current]
+                - n * table[current, :]
+                + n * diag_table
+            )
+            candidates[current] = best
+            pick = int(np.argmax(candidates))
+            if candidates[pick] > best + 1e-12:
+                best = float(candidates[pick])
+                f[symbol] = pick
+                f_best = f.copy()
+                improved = True
+    return _score(f_best, matrix, table), sweeps, f_best
+
+
+def machinery_exact_full(
+    matrix: np.ndarray,
+    table: np.ndarray,
+    letter_counts: np.ndarray,
+    rng: np.random.Generator,
+    restarts: int = N_RESTARTS,
+) -> tuple[float, bool]:
+    """The declared exact climb over one unsplit matrix, the
+    attribution side instrument of the held-out measurement.
+
+    Restart 0 is the rank initialisation; each later restart consumes
+    one seeded permutation of the 27 letter tokens under the same wrap
+    rule, in the same order as the first screen's machinery. Returns
+    the best exact mean nats per counted pair over the unsplit matrix
+    and whether any climb hit the declared sweep cap.
+    """
+    symbols = matrix.shape[0]
+    best, sweeps, _assignment = _held_climb(
+        matrix, table, _rank_init(matrix, letter_counts)
+    )
+    cap_hit = sweeps >= SWEEP_CAP
+    for _index in range(restarts - 1):
+        permutation = list(rng.permutation(27))
+        start = [permutation[symbol % 27] for symbol in range(symbols)]
+        score, sweeps, _assignment = _held_climb(matrix, table, start)
+        cap_hit = cap_hit or sweeps >= SWEEP_CAP
+        best = max(best, score)
+    return best / matrix.sum(), bool(cap_hit)
+
+
+def machinery_best_held(
+    climb_matrix: np.ndarray,
+    score_matrix: np.ndarray,
+    table: np.ndarray,
+    letter_counts: np.ndarray,
+    rng: np.random.Generator,
+    restarts: int = N_RESTARTS,
+) -> tuple[float, float, bool]:
+    """The held-out machinery: climb on the climb half, price the best
+    assignment exactly on the score half.
+
+    Restart 0 is the rank initialisation computed from the climb half;
+    each later restart consumes one seeded permutation of the 27 letter
+    tokens under the same wrap rule, consumed in the same order as the
+    first screen's machinery. Among the restarts the best is the best
+    exact climb-half total, ties resolved to the first restart, so the
+    search's every choice reads only data its climbs saw. Returns the
+    chosen assignment's mean nats per scored pair on the score half,
+    its mean nats per climb pair on the climb half, and whether any
+    climb hit the declared sweep cap. No assignment is returned and
+    none is stored: the recovered mapping is never published.
+    """
+    symbols = climb_matrix.shape[0]
+    climb_total, sweeps, f_best = _held_climb(
+        climb_matrix, table, _rank_init(climb_matrix, letter_counts)
+    )
+    cap_hit = sweeps >= SWEEP_CAP
+    for _index in range(restarts - 1):
+        permutation = list(rng.permutation(27))
+        start = [permutation[symbol % 27] for symbol in range(symbols)]
+        score, sweeps, f = _held_climb(climb_matrix, table, start)
+        cap_hit = cap_hit or sweeps >= SWEEP_CAP
+        if score > climb_total + 1e-12:
+            climb_total = score
+            f_best = f
+    climb_pairs = climb_matrix.sum()
+    score_pairs = score_matrix.sum()
+    climb_mean = float(climb_total) / float(climb_pairs)
+    held_mean = (
+        float((score_matrix * table[f_best][:, f_best]).sum())
+        / float(score_pairs)
+    )
+    return held_mean, climb_mean, bool(cap_hit)
+
+
+def _identity_half_means(
+    truncated: list[int], table: np.ndarray,
+) -> tuple[float, float, int, int]:
+    """The truncated plaintext stream's identity means under the
+    declared table, per half: the climb-half mean (the machinery's own
+    view of its true configuration), the score-half mean (the true
+    configuration's held-out anchor), and both half sizes. Boundary
+    pairs are counted exactly as every counted pair of the stream."""
+    ids = np.asarray(truncated, dtype=np.int64)
+    first, second = ids[:-1], ids[1:]
+    first_c, second_c, first_s, second_s = _split_pairs(first, second)
+    climb_pairs = len(first_c)
+    score_pairs = len(first_s)
+    climb_mean = float(table[first_c, second_c].sum()) / climb_pairs
+    held_mean = float(table[first_s, second_s].sum()) / score_pairs
+    return held_mean, climb_mean, climb_pairs, score_pairs
+
+
+# --------------------------------------------------------------------------
 # The screen
 # --------------------------------------------------------------------------
 
@@ -735,3 +1091,431 @@ def main() -> None:
     artifact = substitution_homophonic_screen()
     HOMO_ARTIFACT_PATH.write_text(json.dumps(artifact, indent=2) + "\n")
     print(HOMO_ARTIFACT_PATH)
+
+
+# --------------------------------------------------------------------------
+# The held-out screen, the second declared measurement
+# --------------------------------------------------------------------------
+
+
+HELD_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes" / "voynich-homophonic-heldout.json"
+)
+
+
+def _held_cell_facts(code: str, language: str) -> dict:
+    """Real, plants with their held-out anchor, and floors for one
+    cell, each under the declared split, the exact reassignment climb
+    on the climb half and the exact pricing on the score half, with
+    the exact full-data side call recorded beside each score."""
+    table, letter_counts = table_from_stream(
+        _reference_stream(language)
+    )
+    real_stream = _homo_real_stream(code)
+    first, second = _kept_pairs(
+        real_stream["event_ids"], real_stream["kept_mask"]
+    )
+    climb_first, climb_second, score_first, score_second = _split_pairs(
+        first, second
+    )
+    climb_matrix = _matrix_from_pairs(climb_first, climb_second)
+    score_matrix = _matrix_from_pairs(score_first, score_second)
+    full_matrix = _count_matrix_37(
+        real_stream["event_ids"], real_stream["kept_mask"]
+    )
+    counted = int(full_matrix.sum())
+    climb_pairs = int(climb_matrix.sum())
+    score_pairs = int(score_matrix.sum())
+    real_rng = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["real"], LANG_ID[language], 0)
+    )
+    held_value, climb_value, cap_hit = machinery_best_held(
+        climb_matrix, score_matrix, table, letter_counts, real_rng,
+        restarts=N_RESTARTS,
+    )
+    real_held = round(held_value, 4)
+    real_climb = round(climb_value, 4)
+    real_hit = bool(cap_hit)
+    full_rng = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["real"], LANG_ID[language], 0)
+    )
+    full_value, full_hit = machinery_exact_full(
+        full_matrix, table, letter_counts, full_rng, restarts=N_RESTARTS
+    )
+    real_full = round(full_value, 4)
+    truncated = _truncated_reference(code, language)
+    anchor, anchor_climb, _climb_half, _score_half = _identity_half_means(
+        truncated, table
+    )
+    anchor = round(anchor, 4)
+    anchor_climb = round(anchor_climb, 4)
+    plants_held = []
+    plants_full = []
+    plants_hits = []
+    plants_full_hits = []
+    for index in range(N_PLANTS):
+        groups = _partition_groups(truncated, MAPPED_HOMO)
+        rng_enc = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_plant_enc"],
+                  LANG_ID[language], index)
+        )
+        plant = _encode(truncated, groups, rng_enc, MAPPED_HOMO)
+        plant_first, plant_second = _full_pairs(plant)
+        p_climb_first, p_climb_second, p_score_first, p_score_second = (
+            _split_pairs(plant_first, plant_second)
+        )
+        p_climb = _matrix_from_pairs(p_climb_first, p_climb_second)
+        p_score = _matrix_from_pairs(p_score_first, p_score_second)
+        p_full = _full_matrix_37(plant)
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_plant_mach"],
+                  LANG_ID[language], index)
+        )
+        value, _view, hit = machinery_best_held(
+            p_climb, p_score, table, letter_counts, rng_mach,
+            restarts=N_RESTARTS,
+        )
+        plants_held.append(round(value, 4))
+        plants_hits.append(bool(hit))
+        rng_full = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_plant_mach"],
+                  LANG_ID[language], index)
+        )
+        value_full, hit_full = machinery_exact_full(
+            p_full, table, letter_counts, rng_full, restarts=N_RESTARTS
+        )
+        plants_full.append(round(value_full, 4))
+        plants_full_hits.append(bool(hit_full))
+    floors_held = []
+    floors_full = []
+    floors_hits = []
+    floors_full_hits = []
+    for index in range(N_FLOORS):
+        rng_perm = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_floor_perm"],
+                  LANG_ID[language], index)
+        )
+        values = real_stream["kept_ids"].copy()
+        rng_perm.shuffle(values)
+        full = real_stream["event_ids"].copy()
+        full[real_stream["kept_mask"]] = values
+        floor_full = _count_matrix_37(full, real_stream["kept_mask"])
+        floor_first, floor_second = _kept_pairs(
+            full, real_stream["kept_mask"]
+        )
+        f_climb_first, f_climb_second, f_score_first, f_score_second = (
+            _split_pairs(floor_first, floor_second)
+        )
+        f_climb = _matrix_from_pairs(f_climb_first, f_climb_second)
+        f_score = _matrix_from_pairs(f_score_first, f_score_second)
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_floor_mach"],
+                  LANG_ID[language], index)
+        )
+        value, _view, hit = machinery_best_held(
+            f_climb, f_score, table, letter_counts, rng_mach,
+            restarts=N_RESTARTS,
+        )
+        floors_held.append(round(value, 4))
+        floors_hits.append(bool(hit))
+        rng_full = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_floor_mach"],
+                  LANG_ID[language], index)
+        )
+        value_full, hit_full = machinery_exact_full(
+            floor_full, table, letter_counts, rng_full, restarts=N_RESTARTS
+        )
+        floors_full.append(round(value_full, 4))
+        floors_full_hits.append(bool(hit_full))
+    return {
+        "real_held": real_held,
+        "real_climb": real_climb,
+        "real_hit": real_hit,
+        "real_full": real_full,
+        "real_full_hit": bool(full_hit),
+        "counted": counted,
+        "climb_pairs": climb_pairs,
+        "score_pairs": score_pairs,
+        "anchor": anchor,
+        "anchor_climb": anchor_climb,
+        "plants_held": plants_held,
+        "plants_full": plants_full,
+        "plants_hits": plants_hits,
+        "plants_full_hits": plants_full_hits,
+        "floors_held": floors_held,
+        "floors_full": floors_full,
+        "floors_hits": floors_hits,
+        "floors_full_hits": floors_full_hits,
+    }
+
+
+def _held_band_for(code: str, language: str, seed_index: int) -> dict:
+    """Five encodings of one class-member text under the first
+    screen's per-text sequential scheme, each scored by the held-out
+    machinery and by the exact full-data side call, with the member's
+    held-out anchor, climb-half identity, the selected draw's index
+    and the member's band value."""
+    table, letter_counts = table_from_stream(
+        _reference_stream(language)
+    )
+    name, ebook = (
+        [CROSS_REFERENCE_FILES[language]]
+        + list(WIDENED_REFERENCE_FILES[language])
+    )[seed_index][:2]
+    truncated = _truncated_reference(code, language, file=name)
+    anchor, anchor_climb, _climb_half, _score_half = _identity_half_means(
+        truncated, table
+    )
+    anchor = round(anchor, 4)
+    anchor_climb = round(anchor_climb, 4)
+    rng_enc = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["homo_cross_enc"],
+              LANG_ID[language], seed_index)
+    )
+    draws_held = []
+    draws_climb = []
+    draws_full = []
+    draw_hits = []
+    draw_full_hits = []
+    climb_totals = []
+    for _index in range(N_PLANTS):
+        groups = _partition_groups(truncated, MAPPED_HOMO)
+        encoded = _encode(truncated, groups, rng_enc, MAPPED_HOMO)
+        enc_first, enc_second = _full_pairs(encoded)
+        e_climb_first, e_climb_second, e_score_first, e_score_second = (
+            _split_pairs(enc_first, enc_second)
+        )
+        e_climb = _matrix_from_pairs(e_climb_first, e_climb_second)
+        e_score = _matrix_from_pairs(e_score_first, e_score_second)
+        e_full = _full_matrix_37(encoded)
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_cross_mach"],
+                  LANG_ID[language], seed_index)
+        )
+        value, climb_view, hit = machinery_best_held(
+            e_climb, e_score, table, letter_counts, rng_mach,
+            restarts=N_RESTARTS,
+        )
+        rng_full = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_cross_mach"],
+                  LANG_ID[language], seed_index)
+        )
+        value_full, hit_full = machinery_exact_full(
+            e_full, table, letter_counts, rng_full, restarts=N_RESTARTS
+        )
+        draws_held.append(round(value, 4))
+        draws_climb.append(round(climb_view, 4))
+        draws_full.append(round(value_full, 4))
+        draw_hits.append(bool(hit))
+        draw_full_hits.append(bool(hit_full))
+        climb_totals.append(climb_view)
+    selected = 0
+    best_climb = climb_totals[0]
+    for position, total in enumerate(climb_totals):
+        if total > best_climb + 1e-12:
+            best_climb = total
+            selected = position
+    spread = round(max(draws_held) - min(draws_held), 4)
+    return {
+        "file": name,
+        "ebook": ebook,
+        "plant_length": len(truncated),
+        "anchor": anchor,
+        "anchor_climb": anchor_climb,
+        "draws": draws_held,
+        "draws_climb": draws_climb,
+        "draws_full": draws_full,
+        "draw_sweep_budget_hits": draw_hits,
+        "draw_full_sweep_budget_hits": draw_full_hits,
+        "selected_draw_index": selected,
+        "recovered_best": draws_held[selected],
+        "spread": spread,
+    }
+
+
+def substitution_homophonic_heldout() -> dict:
+    """The declared held-out homophonic screen: all three files, both
+    languages, plants, floors, and the seven-text cross band, every
+    side split by pair-index parity into a climb half and a score
+    half, every assignment searched on the climb half under the exact
+    reassignment rule and priced exactly on the score half."""
+    artifact: dict = {
+        "what": "The declared held-out homophonic screen: the counted "
+        "pairs of every stream - the real, the plants, the floors and "
+        "the seven band members of the first screen - are split by "
+        "declared pair-index parity into a climb half the machinery "
+        "may search and a score half it may never touch. The search is "
+        "the exact greedy reassignment climb, declared when the first "
+        "screen's candidate rule was found inexact away from the "
+        "current label; its add-one exploitation is disclosed as "
+        "systematic across the split, so this instrument prices the "
+        "data-specific component only, and an exact full-data side "
+        "call is recorded for attribution. The declared seeds of the "
+        "first screen are replayed unchanged; nothing is redrawn and "
+        "no mapping is published; nothing here is a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "restarts": N_RESTARTS,
+            "sweep_cap": SWEEP_CAP,
+            "plants_per_cell": N_PLANTS,
+            "floors": N_FLOORS,
+            "split_rule": "the counted pairs of each side, in stream "
+            "order, split by pair-index parity: even indices form the "
+            "climb half the machinery may search, odd indices the "
+            "score half it may never touch; the halves share no "
+            "counted pair and together they are the flat list, while "
+            "across the halves adjacent pairs share a symbol position "
+            "by construction (every interior position carries one "
+            "climbed pair and one scored pair), so the score half is "
+            "fresh to the search in the pair sense but not an "
+            "independent sample of the stream; the split is "
+            "deterministic and consumes no seed; both halves' sizes "
+            "are recorded per cell",
+            "machinery_rule": "the exact greedy reassignment climb: "
+            "candidates are the exact new totals with the symbol's "
+            "self-pair correction included, the running best is itself "
+            "exact, and adoption needs a strict improvement beyond "
+            "1e-12; the climb runs only on the climb half, restart 0 "
+            "the rank initialisation computed from the climb half, "
+            "restarts 1 onward seeded permutations of the 27 letter "
+            "tokens under the wrap rule, the best restart the best "
+            "exact climb-half total with ties to the first restart; "
+            "the held-out number is the chosen assignment's mean nats "
+            "per scored pair on the score half, evaluated exactly; no "
+            "assignment is stored",
+            "seed_kinds": {
+                "real": KIND_ID["real"],
+                "homo_plant": [KIND_ID["homo_plant_enc"],
+                               KIND_ID["homo_plant_mach"]],
+                "homo_floor": [KIND_ID["homo_floor_perm"],
+                               KIND_ID["homo_floor_mach"]],
+                "homo_cross": [KIND_ID["homo_cross_enc"],
+                               KIND_ID["homo_cross_mach"]],
+            },
+            "seed_sharing": "no new kinds are consumed; the first "
+            "screen's declared draws are replayed from the declared "
+            "kinds and the split adds no draw",
+            "anchor_rule": "a plant's or member's anchor is its true "
+            "configuration's mean nats per pair on the score half, "
+            "algebraically the truncated stream's odd-half identity "
+            "mean under the declared table, recorded with the "
+            "climb-half identity mean",
+            "plant_rule": "a plant passes at or above its anchor minus "
+            "0.0001 on the held-out statistic; an exact pass counts as "
+            "parity; best above the anchor counts as parity with the "
+            "excess recorded as machinery-above-anchor; a plant below "
+            "the anchor by more than 0.0001 fails parity",
+            "band_rule": "membership is unconditional as the first "
+            "screen; a member's band value is the held-out value of "
+            "the draw whose exact climb-half total is best among its "
+            "five draws, ties to the first draw; the smallest member "
+            "value sets the band threshold for its cell",
+            "side_instrument": "the identical exact climb over the "
+            "unsplit full data, recorded for attribution; no verdict "
+            "is built on it",
+            "verdict_rule": "real held-out at or above the smallest "
+            "member band value is consistent-with-substitution; real "
+            "held-out at or below the largest floor's held-out value "
+            "is not-consistent; strictly between is below-held-band; "
+            "machinery-noise-unresolved is retained formally for a "
+            "memberless band, which cannot arise",
+            "exclusion_rule": "if the real text stands below the "
+            "smallest member band value in all six cells with plant "
+            "parity green and every floor's held-out value below the "
+            "real, the scoped homophonic class is excluded by count "
+            "for the measured statistics, with the standing caveats",
+            "models": {},
+        },
+        "files": {},
+    }
+    for language in LANGS:
+        name, ebook = REFERENCE_FILES[language]
+        stream = _reference_stream(language)
+        table, _counts = table_from_stream(stream)
+        held_mean, climb_mean, _cp, _sp = _identity_half_means(
+            stream, table
+        )
+        full_matrix = _stream_matrix_27(stream)
+        artifact["declared"]["models"][language] = {
+            "file": name,
+            "ebook": ebook,
+            "clean_identity_mean_nats_per_pair": round(
+                float((full_matrix * table).sum())
+                / float(full_matrix.sum()),
+                4,
+            ),
+            "identity_climb_half_mean_nats_per_pair": round(climb_mean, 4),
+            "identity_score_half_mean_nats_per_pair": round(held_mean, 4),
+        }
+    for code in FILES:
+        cell: dict = {}
+        for language in LANGS:
+            facts = _held_cell_facts(code, language)
+            members = []
+            if language == "english":
+                positions = (0, 1, 2)
+            else:
+                positions = (0, 1, 2, 3)
+            for seed_index in positions:
+                members.append(_held_band_for(code, language, seed_index))
+            member_values = [
+                member["recovered_best"] for member in members
+            ]
+            floor_max = max(facts["floors_held"])
+            band_min = min(member_values)
+            band_max = max(member_values)
+            if facts["real_held"] >= band_min:
+                verdict = "consistent-with-substitution"
+            elif facts["real_held"] <= floor_max:
+                verdict = "not-consistent"
+            else:
+                verdict = "below-held-band"
+            parity = [
+                bool(value >= facts["anchor"] - 0.0001)
+                for value in facts["plants_held"]
+            ]
+            above_anchor = [
+                round(value - facts["anchor"], 4)
+                for value in facts["plants_held"]
+                if value > facts["anchor"] + 0.0001
+            ]
+            cell[language] = {
+                "real_held_mean_nats": facts["real_held"],
+                "real_climb_mean_nats": facts["real_climb"],
+                "real_sweep_budget_hit": facts["real_hit"],
+                "real_full_exact_mean_nats": facts["real_full"],
+                "real_full_sweep_budget_hit": facts["real_full_hit"],
+                "counted_pairs": facts["counted"],
+                "climb_pairs": facts["climb_pairs"],
+                "score_pairs": facts["score_pairs"],
+                "plant_parity_anchor_mean_nats": facts["anchor"],
+                "plant_climb_identity_mean_nats": facts["anchor_climb"],
+                "self_plants_held_mean_nats": facts["plants_held"],
+                "self_plants_full_exact_mean_nats": facts["plants_full"],
+                "self_plants_at_parity": parity,
+                "self_plants_sweep_budget_hits": facts["plants_hits"],
+                "self_plants_full_sweep_budget_hits": (
+                    facts["plants_full_hits"]
+                ),
+                "machinery_above_anchor_excesses": above_anchor,
+                "floors_held_mean_nats": facts["floors_held"],
+                "floors_full_exact_mean_nats": facts["floors_full"],
+                "floors_sweep_budget_hits": facts["floors_hits"],
+                "floors_full_sweep_budget_hits": (
+                    facts["floors_full_hits"]
+                ),
+                "band": members,
+                "band_min": band_min,
+                "band_max": band_max,
+                "verdict": verdict,
+            }
+        artifact["files"][code] = cell
+    return artifact
+
+
+def main_heldout() -> None:
+    artifact = substitution_homophonic_heldout()
+    HELD_ARTIFACT_PATH.write_text(json.dumps(artifact, indent=2) + "\n")
+    print(HELD_ARTIFACT_PATH)
