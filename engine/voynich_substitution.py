@@ -115,6 +115,35 @@ not membership-grade evidence and excludes the class only with the
 population caveat that the band is five draws from two cross texts.
 Margins to both bands are recorded whatever the verdict. Kind ids: cross
 permutation 6, cross machinery 7.
+
+Third declared measurement, the widened band, declared after the cross
+screen's six below-cross-band verdicts and before its own run: the band
+is widened from two cross texts per language to four (English) and five
+(Latin) class members, adding declared second-wave references frozen in
+engine/data with sha256 provenance, processed by the identical declared
+rules. English adds Moby Dick (Herman Melville, Project Gutenberg ebook
+2701) and Le Morte D'Arthur volume 1 (Thomas Malory, the 1485 Caxton
+prose, the sampled population's period-appropriate member, ebook 1251).
+Latin adds Vulgate Daniel (ebook 828, late-antique biblical prose),
+Colloquium heptaplomeres (Jean Bodin, Renaissance philosophical dialogue,
+ebook 17859), and De Rariorum Animalium atque Stirpium Historia
+(early-modern natural-history Latin, ebook 27655). Every member of the
+widened band, including the cross screen's own cross texts, is scored by
+the identical machinery and counts; five seeded plants per cross text
+per (file, language); plant length min(the file's stream length, the
+text's processed length), recorded per plant. The cross screen's own
+plant values recompute here from their declared seeds and the tests pin
+them equal to the cross artifact. Seed kinds for the added texts:
+widened permutation 10, widened machinery 11, one rng per (file,
+language, text) drawing the five permutations, and one per (file,
+language, text) drawing the five machinery runs in plant order, declared
+here before the run. Verdict rule, declared before this run: real at or
+above the smallest best in the widened band is
+`consistent-with-substitution`; real at or below the largest floor is
+`not-consistent`; real strictly between is `below-widened-band`. The
+verdict keeps the declared interpretation limits: the band is sampled,
+not exhaustive, and its threshold is the weakest member, which the log
+reads out with the per-text margins.
 """
 
 from __future__ import annotations
@@ -155,6 +184,22 @@ CROSS_REFERENCE_FILES = {
     "latin": ("substref_latin2_pg218.txt", 218),
 }
 
+# Widened-band additions: (file, ebook, label). This list is the declared
+# sampled population of the third measurement.
+WIDENED_REFERENCE_FILES = {
+    "english": [
+        ("substref_english3_pg2701.txt", 2701, "Moby Dick (Melville)"),
+        ("substref_english4_pg1251.txt", 1251, "Le Morte D'Arthur vol 1 (Malory, 1485 Caxton)"),
+    ],
+    "latin": [
+        ("substref_latin3_pg828.txt", 828, "Vulgata Daniel"),
+        ("substref_latin4_pg17859.txt", 17859, "Colloquium heptaplomeres (Bodin)"),
+        ("substref_latin5_pg27655.txt", 27655, "De Rariorum Animalium atque Stirpium Historia"),
+    ],
+}
+
+WIDENED_SEED_KINDS = (10, 11)  # widened permutation, widened machinery
+
 # The declared boundary mark: never a glyph character of any corpus.
 BOUNDARY = "\x00"
 
@@ -169,10 +214,19 @@ ARTIFACT_PATH = (
 # --------------------------------------------------------------------------
 
 
-def _reference_text(language: str, cross: bool = False) -> str:
-    """A frozen source file's body between the Gutenberg markers."""
-    files = CROSS_REFERENCE_FILES if cross else REFERENCE_FILES
-    name, _ebook = files[language]
+def _reference_text(
+    language: str, cross: bool = False, file: str | None = None
+) -> str:
+    """A frozen source file's body between the Gutenberg markers.
+
+    An explicit file name takes precedence over the language's default
+    (the first reference, or the cross text when cross is True).
+    """
+    if file is not None:
+        name = file
+    else:
+        files = CROSS_REFERENCE_FILES if cross else REFERENCE_FILES
+        name, _ebook = files[language]
     text = (Path(DATA_DIR).resolve().parent / name).read_text(
         encoding="utf-8", errors="replace"
     )
@@ -188,9 +242,11 @@ _LIGATURES = {
 }
 
 
-def _reference_stream(language: str, cross: bool = False) -> list[int]:
+def _reference_stream(
+    language: str, cross: bool = False, file: str | None = None
+) -> list[int]:
     """The declared processed stream: letters 0 to 25, space 26."""
-    body = _reference_text(language, cross)
+    body = _reference_text(language, cross, file=file)
     body = "".join(_LIGATURES.get(char, char) for char in body)
     body = unicodedata.normalize("NFD", body).casefold()
     stream: list[int] = []
@@ -673,6 +729,11 @@ CROSS_ARTIFACT_PATH = (
     / "docs" / "research-notes" / "voynich-substitution-crossband.json"
 )
 
+WIDENED_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes" / "voynich-substitution-widened.json"
+)
+
 
 def main_cross() -> None:
     artifact = substitution_cross_screen()
@@ -680,6 +741,238 @@ def main_cross() -> None:
     print(CROSS_ARTIFACT_PATH)
 
 
+def _screen_facts(code: str, total: int, stream: FileStream, language: str):
+    """Real best, floor values, and the floor matrix share for one cell."""
+    table, counts, _stream = _reference(language)
+    real_rng = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["real"], LANG_ID[language], 0)
+    )
+    scoped = np.full(total, -1, dtype=np.int64)
+    scoped[stream.kept_mask] = stream.kept_ids
+    real_matrix = _count_matrix(scoped, stream.kept_mask)
+    real_best = machinery_best(real_matrix, table, counts, real_rng)
+    floors = []
+    for index in range(N_FLOORS):
+        rng_perm = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["floor_perm"],
+                  LANG_ID[language], index)
+        )
+        values = stream.kept_ids.copy()
+        rng_perm.shuffle(values)
+        floor = np.full(total, -1, dtype=np.int64)
+        floor[stream.kept_mask] = values
+        floor_matrix = _count_matrix(floor, stream.kept_mask)
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["floor_mach"],
+                  LANG_ID[language], index)
+        )
+        floors.append(
+            round(machinery_best(floor_matrix, table, counts, rng_mach), 4)
+        )
+    return real_best, floors
+
+
+def _plants_for(
+    code: str,
+    language: str,
+    reference_stream: list[int],
+    table: np.ndarray,
+    counts: np.ndarray,
+    seed_kind_perm: int,
+    seed_kind_mach: int,
+    seed_index: int,
+    legacy: bool,
+) -> tuple[list[float], int]:
+    """Five seeded plants of one cross text, scored by the machinery.
+
+    legacy=True reproduces the cross screen's declared per-plant seeds:
+    one rng per plant, kinds 6 and 7, the plant index in the seed, so the
+    cross screen's own texts recompute exactly their cross-artifact
+    values. legacy=False is the widened scheme declared in the module
+    header: one rng drawing the five permutations, and one rng running
+    the five machinery runs in plant order, both seeded with the text
+    position (kinds 10 and 11). The plant length is min(the file's
+    stream length, the text's processed length); the truncated tail is
+    not scored.
+    """
+    total_stream = _real_stream(code)
+    length = min(int(total_stream.total_events), len(reference_stream))
+    plants: list[float] = []
+    generators: list[tuple] = []
+    if legacy:
+        for index in range(5):
+            generators.append((
+                np.random.default_rng(
+                    _seed(CELL_ID[code], seed_kind_perm,
+                          LANG_ID[language], index)
+                ),
+                np.random.default_rng(
+                    _seed(CELL_ID[code], seed_kind_mach,
+                          LANG_ID[language], index)
+                ),
+            ))
+    else:
+        # Widened scheme: five permutations drawn sequentially from one
+        # rng, five machinery runs sequentially from one rng.
+        rng_perm = np.random.default_rng(
+            _seed(CELL_ID[code], seed_kind_perm,
+                  LANG_ID[language], seed_index)
+        )
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], seed_kind_mach,
+                  LANG_ID[language], seed_index)
+        )
+        for _index in range(5):
+            generators.append((rng_perm, rng_mach))
+    for rng_perm, rng_mach in generators:
+        permutation = list(rng_perm.permutation(27))
+        plant = np.array(
+            [permutation[value] for value in reference_stream[:length]],
+            dtype=np.int64,
+        )
+        matrix = _full_matrix(plant)
+        plants.append(
+            round(machinery_best(matrix, table, counts, rng_mach), 4)
+        )
+    return plants, length
+
+
+def substitution_widened_screen() -> dict:
+    """The declared widened-band measurement, all three files, both languages.
+
+    The band holds every declared cross text: the cross screen's two
+    references (their plants recompute from the declared seeds and stay
+    identical to the cross artifact) plus the widened additions. The
+    verdict rule and interpretation limits are those declared in the
+    module header before this run.
+    """
+    artifact: dict = {
+        "what": "The declared widened substitution band: the hypothesis "
+        "class's sampled members now number three proeses (English: Pride "
+        "and Prejudice as model with Frankenstein, Moby Dick and Le Morte "
+        "D'Arthur vol 1 as cross plants) and five proeses (Latin: "
+        "Confessiones as model with Caesar's De Bello Gallico I-IV, "
+        "Vulgate Daniel, Colloquium heptaplomeres, De Rariorum Animalium "
+        "as cross plants), all scored by the identical machinery. The "
+        "declared verdict rule: real at or above the smallest band best "
+        "is consistent-with-substitution; real at or below the largest "
+        "floor is not-consistent; strictly between is "
+        "below-widened-band. The threshold is the weakest sampled "
+        "member, and the per-text margins carry the interpretation. No "
+        "mapping is published; nothing here is a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "plants_per_text": N_PLANTS,
+            "floors": N_FLOORS,
+            "seed_kinds": {"cross_screen": [6, 7], "widened": [10, 11]},
+            "legacy_rule": (
+                "The cross screen's own texts replay their declared "
+                "per-plant seeds; their plants must equal the cross "
+                "artifact's values exactly."
+            ),
+            "widened_scheme": (
+                "For the added texts, one rng per (file, language, text) "
+                "draws the five permutations, and one rng per (file, "
+                "language, text) runs the five machinery calls in plant "
+                "order."
+            ),
+            "verdict_rule": (
+                "real at or above the smallest band best is "
+                "consistent-with-substitution; real at or below the "
+                "largest floor is not-consistent; strictly between is "
+                "below-widened-band."
+            ),
+            "references": {},
+        },
+        "files": {},
+    }
+    for language in LANGS:
+        entries = []
+        name, ebook = CROSS_REFERENCE_FILES[language]
+        entries.append((name, ebook, "cross screen text"))
+        for name_w, ebook_w, label in WIDENED_REFERENCE_FILES[language]:
+            entries.append((name_w, ebook_w, label))
+        for name, ebook, label in entries:
+            path = Path(DATA_DIR).resolve().parent / name
+            stream = _reference_stream(language, file=name)
+            share = float(
+                np.bincount(np.array(stream, dtype=np.int64),
+                            minlength=27)[26]
+            ) / len(stream)
+            artifact["declared"]["references"].setdefault(language, []).append({
+                "file": name,
+                "ebook": ebook,
+                "label": label,
+                "url": "https://www.gutenberg.org/cache/epub/"
+                       f"{ebook}/pg{ebook}.txt",
+                "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                "processed_symbols": len(stream),
+                "space_share": round(share, 4),
+            })
+    for code in FILES:
+        stream = _real_stream(code)
+        total = int(stream.total_events)
+        cell: dict = {}
+        for language in LANGS:
+            real_best, floors = _screen_facts(code, total, stream, language)
+            table, counts, _primary = _reference(language)
+            entries: list[tuple[str, int, bool, int]] = []
+            name, ebook = CROSS_REFERENCE_FILES[language]
+            # The cross screen's own text: legacy per-plant seeds so its
+            # values recompute exactly the cross artifact's numbers.
+            entries.append((name, ebook, True, 0))
+            for text_position, (name_w, ebook_w, _label) in enumerate(
+                WIDENED_REFERENCE_FILES[language]
+            ):
+                entries.append((name_w, ebook_w, False, text_position))
+            band = []
+            for name, ebook, legacy_mode, seed_index in entries:
+                text_stream = _reference_stream(language, file=name)
+                plants, length = _plants_for(
+                    code, language, text_stream, table, counts,
+                    KIND_ID["cross_perm"] if legacy_mode
+                    else WIDENED_SEED_KINDS[0],
+                    KIND_ID["cross_mach"] if legacy_mode
+                    else WIDENED_SEED_KINDS[1],
+                    seed_index, legacy_mode,
+                )
+                band.append({
+                    "file": name,
+                    "ebook": ebook,
+                    "plant_length": length,
+                    "plants": plants,
+                })
+            plant_min = min(min(entry["plants"]) for entry in band)
+            plant_max = max(max(entry["plants"]) for entry in band)
+            floor_max = max(floors)
+            if real_best >= plant_min:
+                verdict = "consistent-with-substitution"
+            elif real_best <= floor_max:
+                verdict = "not-consistent"
+            else:
+                verdict = "below-widened-band"
+            cell[language] = {
+                "real_best_mean_nats": round(real_best, 4),
+                "band": band,
+                "floors_best_mean_nats": floors,
+                "band_min": round(plant_min, 4),
+                "band_max": round(plant_max, 4),
+                "real_margin_to_floor_max": round(real_best - floor_max, 4),
+                "real_margin_to_band_min": round(real_best - plant_min, 4),
+                "real_margin_to_band_max": round(real_best - plant_max, 4),
+                "verdict": verdict,
+            }
+        artifact["files"][code] = cell
+    return artifact
+
+
+def main_widened() -> None:
+    artifact = substitution_widened_screen()
+    WIDENED_ARTIFACT_PATH.write_text(json.dumps(artifact, indent=2) + "\n")
+    print(WIDENED_ARTIFACT_PATH)
+
+
 if __name__ == "__main__":
     main()
     main_cross()
+    main_widened()
