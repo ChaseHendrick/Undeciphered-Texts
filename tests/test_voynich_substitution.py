@@ -144,6 +144,108 @@ CROSS_PLANT_LENGTH = {
     "latin": {"ZL": 143947, "GC": 143947, "IT": 143947},
 }
 
+# The frozen widened band of 21 October 2026: the cross screen's own
+# texts plus the declared second-wave members (Moby Dick and Le Morte
+# D'Arthur under the English model; Vulgate Daniel, Colloquium
+# heptaplomeres, and De Rariorum Animalium under the Latin model), five
+# plants per text per cell, converged to one value each.
+WIDENED_ARTIFACT = (
+    Path("docs/research-notes/voynich-substitution-widened.json").resolve()
+)
+WIDENED_REFERENCE_FACTS = {
+    "english": [
+        {"file": "substref_english3_pg2701.txt", "ebook": 2701,
+         "sha256": ("b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66"
+                    "def97a1aecd9cfcc87d"),
+         "processed_symbols": 1174300, "space_share": 0.1865},
+        {"file": "substref_english4_pg1251.txt", "ebook": 1251,
+         "sha256": ("5dae4564bb198fe0291956a681c556497ceed562de75f84a"
+                    "82592032505c9fee"),
+         "processed_symbols": 854142, "space_share": 0.1986},
+    ],
+    "latin": [
+        {"file": "substref_latin3_pg828.txt", "ebook": 828,
+         "sha256": ("7787b590956462f5d651b96f201e9caaaa8d4ea37034832c3"
+                    "adc3119205aae1d"),
+         "processed_symbols": 77572, "space_share": 0.1568},
+        {"file": "substref_latin4_pg17859.txt", "ebook": 17859,
+         "sha256": ("39b5e9363328e4e474f0a605cc6a7218a9a230121686edaa8"
+                    "6cf3941e9eb7614"),
+         "processed_symbols": 938855, "space_share": 0.1441},
+        {"file": "substref_latin5_pg27655.txt", "ebook": 27655,
+         "sha256": ("d4c7591a3985fa0162b3f4a3f856d72a94e18862b5cdaa0a4"
+                    "0d9db8942d7bcda"),
+         "processed_symbols": 77529, "space_share": 0.1512},
+    ],
+}
+WIDENED_CELLS = {
+    ("ZL", "english"): {
+        "real": -5.2832,
+        "plants": {"substref_english2_pg84.txt": -5.1603,
+                   "substref_english3_pg2701.txt": -5.1893,
+                   "substref_english4_pg1251.txt": -5.1004},
+        "band_min": -5.1893,
+        "floors": [-6.6139, -6.6068, -6.6075, -6.6105, -6.6072],
+        "verdict": "below-widened-band",
+    },
+    ("ZL", "latin"): {
+        "real": -5.3162,
+        "plants": {"substref_latin2_pg218.txt": -5.1345,
+                   "substref_latin3_pg828.txt": -5.1439,
+                   "substref_latin4_pg17859.txt": -5.1682,
+                   "substref_latin5_pg27655.txt": -5.2063},
+        "band_min": -5.2063,
+        "floors": [-6.4987, -6.5001, -6.5028, -6.4986, -6.4983],
+        "verdict": "below-widened-band",
+    },
+    ("GC", "english"): {
+        "real": -5.3536,
+        "plants": {"substref_english2_pg84.txt": -5.1646,
+                   "substref_english3_pg2701.txt": -5.1887,
+                   "substref_english4_pg1251.txt": -5.1083},
+        "band_min": -5.1887,
+        "floors": [-6.5878, -6.5804, -6.5868, -6.5788, -6.5893],
+        "verdict": "below-widened-band",
+    },
+    ("GC", "latin"): {
+        "real": -5.3883,
+        "plants": {"substref_latin2_pg218.txt": -5.1345,
+                   "substref_latin3_pg828.txt": -5.1439,
+                   "substref_latin4_pg17859.txt": -5.1662,
+                   "substref_latin5_pg27655.txt": -5.2063},
+        "band_min": -5.2063,
+        "floors": [-6.5638, -6.5659, -6.5687, -6.5628, -6.5584],
+        "verdict": "below-widened-band",
+    },
+    ("IT", "english"): {
+        "real": -5.2541,
+        "plants": {"substref_english2_pg84.txt": -5.1603,
+                   "substref_english3_pg2701.txt": -5.1905,
+                   "substref_english4_pg1251.txt": -5.0999},
+        "band_min": -5.1905,
+        "floors": [-6.5943, -6.5855, -6.5958, -6.5886, -6.5863],
+        "verdict": "below-widened-band",
+    },
+    ("IT", "latin"): {
+        "real": -5.2933,
+        "plants": {"substref_latin2_pg218.txt": -5.1345,
+                   "substref_latin3_pg828.txt": -5.1439,
+                   "substref_latin4_pg17859.txt": -5.1683,
+                   "substref_latin5_pg27655.txt": -5.2063},
+        "band_min": -5.2063,
+        "floors": [-6.4789, -6.474, -6.4814, -6.4869, -6.4866],
+        "verdict": "below-widened-band",
+    },
+}
+WIDENED_PLANT_LENGTHS = {
+    "english": {"ZL": [218663, 218663, 218663],
+                "GC": [186708, 186708, 186708],
+                "IT": [220532, 220532, 220532]},
+    "latin": {"ZL": [143947, 77572, 218663, 77529],
+              "GC": [143947, 77572, 186708, 77529],
+              "IT": [143947, 77572, 220532, 77529]},
+}
+
 ZL_MAPPED = (
     "oehyacdiklrstnqpmfg?'xbv" + chr(0x184) + chr(0x185) + sub.BOUNDARY
 )
@@ -456,6 +558,199 @@ class CrossBandTest(unittest.TestCase):
                 value, CROSS_CELLS[("ZL", "english")]["plant"],
                 "ZL.english cross plant, seed holder 6 and 7",
             )
+        finally:
+            sub._REAL_STREAMS.clear()
+
+
+class WidenedTest(unittest.TestCase):
+    """The declared widened band and its frozen measurement."""
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.first = json.loads(ARTIFACT.read_text())
+        cls.cross = json.loads(CROSS_ARTIFACT.read_text())
+        cls.artifact = json.loads(WIDENED_ARTIFACT.read_text())
+
+    def test_declared_widened_bookkeeping(self) -> None:
+        declared = self.artifact["declared"]
+        self.assertEqual(20261020, declared["base_seed"])
+        self.assertEqual(5, declared["plants_per_text"])
+        self.assertEqual(5, declared["floors"])
+        self.assertEqual({"cross_screen": [6, 7], "widened": [10, 11]},
+                         declared["seed_kinds"])
+        self.assertEqual((sub.WIDENED_SEED_KINDS[0],
+                          sub.WIDENED_SEED_KINDS[1]), (10, 11))
+        for key in ("legacy_rule", "widened_scheme", "verdict_rule"):
+            self.assertTrue(declared[key], key)
+        self.assertIn("consistent-with-substitution", declared["verdict_rule"])
+        self.assertIn("not-consistent", declared["verdict_rule"])
+        self.assertIn("below-widened-band", declared["verdict_rule"])
+        self.assertIn("below-widened-band", self.artifact["what"])
+
+    def test_widened_reference_provenance(self) -> None:
+        for language, additions in WIDENED_REFERENCE_FACTS.items():
+            stored = self.artifact["declared"]["references"][language]
+            # entry 0 is the cross screen's own text, sha-pinned already
+            self.assertEqual(CROSS_REFERENCE_FACTS[language]["file"],
+                             stored[0]["file"], language)
+            self.assertEqual(len(additions) + 1, len(stored), language)
+            for position, facts in enumerate(additions, start=1):
+                entry = stored[position]
+                self.assertEqual(facts["file"], entry["file"], language)
+                self.assertEqual(facts["ebook"], entry["ebook"], language)
+                self.assertEqual(facts["sha256"], entry["sha256"], language)
+                self.assertEqual(facts["processed_symbols"],
+                                 entry["processed_symbols"], language)
+                self.assertEqual(facts["space_share"], entry["space_share"],
+                                 language)
+                self.assertTrue(entry["url"].endswith(
+                    f"/pg{facts['ebook']}.txt"), language)
+
+    def test_all_six_cells_stay_below_the_widened_band(self) -> None:
+        for (code, language), facts in sorted(WIDENED_CELLS.items()):
+            cell = self.artifact["files"][code][language]
+            # the real and the floors reproduce the first artifact exactly
+            self.assertEqual(
+                self.first["files"][code][language]["real_best_mean_nats"],
+                cell["real_best_mean_nats"],
+                f"{code}.{language} real reproduces the first artifact",
+            )
+            self.assertEqual(
+                self.first["files"][code][language]["floors_best_mean_nats"],
+                cell["floors_best_mean_nats"],
+                f"{code}.{language} floors reproduce the first artifact",
+            )
+            self.assertEqual(
+                facts["floors"], cell["floors_best_mean_nats"],
+                f"{code}.{language} floors frozen",
+            )
+            # band composition in declared order
+            expected_files = ([CROSS_REFERENCE_FACTS[language]["file"]]
+                              + [facts["file"] for facts
+                                 in WIDENED_REFERENCE_FACTS[language]])
+            self.assertEqual(
+                expected_files, [entry["file"] for entry in cell["band"]],
+                f"{code}.{language} band order",
+            )
+            converged = []
+            for entry in cell["band"]:
+                expected = facts["plants"][entry["file"]]
+                self.assertEqual([expected] * HEAD, entry["plants"],
+                                 f"{code}.{language} {entry['file']}")
+                converged.append(expected)
+            self.assertEqual(
+                facts["band_min"], cell["band_min"],
+                f"{code}.{language} band min stored",
+            )
+            self.assertEqual(
+                facts["band_min"], min(converged),
+                f"{code}.{language} band min is the weakest member",
+            )
+            # verdict recomputed from the declared rule
+            real = cell["real_best_mean_nats"]
+            floor_max = max(cell["floors_best_mean_nats"])
+            if real >= cell["band_min"]:
+                rule_verdict = "consistent-with-substitution"
+            elif real <= floor_max:
+                rule_verdict = "not-consistent"
+            else:
+                rule_verdict = "below-widened-band"
+            self.assertEqual(rule_verdict, cell["verdict"],
+                             f"{code}.{language} rule applied")
+            self.assertEqual(facts["verdict"], cell["verdict"],
+                             f"{code}.{language} frozen verdict")
+            self.assertLess(real, facts["band_min"],
+                            f"{code}.{language} real below the band")
+            self.assertGreater(real, floor_max,
+                               f"{code}.{language} real above the floors")
+        # the verdict wording is the declared exact string everywhere
+        for cell in self.artifact["files"].values():
+            for language_cell in cell.values():
+                self.assertEqual(
+                    "below-widened-band", language_cell["verdict"],
+                    f"{language_cell['real_best_mean_nats']} stayed "
+                    "below-widened-band",
+                )
+
+    def test_plant_lengths_follow_the_declared_rule(self) -> None:
+        for (code, language), facts in sorted(WIDENED_CELLS.items()):
+            lengths = [
+                entry["plant_length"]
+                for entry in self.artifact["files"][code][language]["band"]
+            ]
+            self.assertEqual(
+                WIDENED_PLANT_LENGTHS[language][code], lengths,
+                f"{code}.{language} lengths frozen",
+            )
+        # the rule re-reads: length = min(the file's stream, the text)
+        sub._REAL_STREAMS.clear()
+        try:
+            it_total = sub._real_stream("IT").total_events
+            daniel = len(sub._reference_stream(
+                "latin", file="substref_latin3_pg828.txt"))
+            self.assertEqual(min(it_total, daniel),
+                             WIDENED_PLANT_LENGTHS["latin"]["IT"][1],
+                             "IT.latin Daniel length rule")
+            gc_total = sub._real_stream("GC").total_events
+            rariorum = len(sub._reference_stream(
+                "latin", file="substref_latin5_pg27655.txt"))
+            self.assertEqual(min(gc_total, rariorum),
+                             WIDENED_PLANT_LENGTHS["latin"]["GC"][3],
+                             "GC.latin Rariorum length rule")
+        finally:
+            sub._REAL_STREAMS.clear()
+
+    def test_legacy_plants_reproduce_the_cross_artifact(self) -> None:
+        for code, cell in self.artifact["files"].items():
+            for language in ("english", "latin"):
+                widened_entry = self.artifact["files"][code][language]["band"][0]
+                cross_cell = self.cross["files"][code][language]
+                self.assertEqual(
+                    cross_cell["cross_plants_best_mean_nats"],
+                    widened_entry["plants"],
+                    f"{code}.{language} legacy plants replay",
+                )
+                self.assertEqual(
+                    cross_cell["plant_lengths"][0],
+                    widened_entry["plant_length"],
+                    f"{code}.{language} legacy length replay",
+                )
+
+    def test_one_widened_cell_recomputes_from_the_declared_seeds(self) -> None:
+        sub._REAL_STREAMS.clear()
+        try:
+            zl_total = sub._real_stream("ZL").total_events
+            text_stream = sub._reference_stream(
+                "latin", file="substref_latin4_pg17859.txt"
+            )
+            length = min(zl_total, len(text_stream))
+            self.assertEqual(length, WIDENED_PLANT_LENGTHS["latin"]["ZL"][2])
+            table, counts, _primary = sub._reference("latin")
+            rng_perm = np.random.default_rng(
+                sub._seed(sub.CELL_ID["ZL"], sub.WIDENED_SEED_KINDS[0],
+                          sub.LANG_ID["latin"], 1)
+            )
+            rng_mach = np.random.default_rng(
+                sub._seed(sub.CELL_ID["ZL"], sub.WIDENED_SEED_KINDS[1],
+                          sub.LANG_ID["latin"], 1)
+            )
+            values = []
+            for _index in range(5):
+                permutation = list(rng_perm.permutation(27))
+                plant = np.array(
+                    [permutation[value] for value in text_stream[:length]],
+                    dtype=np.int64,
+                )
+                matrix = sub._full_matrix(plant)
+                values.append(
+                    round(sub.machinery_best(matrix, table, counts, rng_mach),
+                          4)
+                )
+            facts = WIDENED_CELLS[("ZL", "latin")]["plants"][
+                "substref_latin4_pg17859.txt"
+            ]
+            self.assertEqual([facts] * 5, values,
+                             "ZL.latin heptaplomeres, seed holders 10 and 11")
         finally:
             sub._REAL_STREAMS.clear()
 

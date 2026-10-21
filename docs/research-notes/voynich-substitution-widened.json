@@ -1,0 +1,458 @@
+{
+  "what": "The declared widened substitution band: the hypothesis class's sampled members now number three proeses (English: Pride and Prejudice as model with Frankenstein, Moby Dick and Le Morte D'Arthur vol 1 as cross plants) and five proeses (Latin: Confessiones as model with Caesar's De Bello Gallico I-IV, Vulgate Daniel, Colloquium heptaplomeres, De Rariorum Animalium as cross plants), all scored by the identical machinery. The declared verdict rule: real at or above the smallest band best is consistent-with-substitution; real at or below the largest floor is not-consistent; strictly between is below-widened-band. The threshold is the weakest sampled member, and the per-text margins carry the interpretation. No mapping is published; nothing here is a reading.",
+  "declared": {
+    "base_seed": 20261020,
+    "plants_per_text": 5,
+    "floors": 5,
+    "seed_kinds": {
+      "cross_screen": [
+        6,
+        7
+      ],
+      "widened": [
+        10,
+        11
+      ]
+    },
+    "legacy_rule": "The cross screen's own texts replay their declared per-plant seeds; their plants must equal the cross artifact's values exactly.",
+    "widened_scheme": "For the added texts, one rng per (file, language, text) draws the five permutations, and one rng per (file, language, text) runs the five machinery calls in plant order.",
+    "verdict_rule": "real at or above the smallest band best is consistent-with-substitution; real at or below the largest floor is not-consistent; strictly between is below-widened-band.",
+    "references": {
+      "english": [
+        {
+          "file": "substref_english2_pg84.txt",
+          "ebook": 84,
+          "label": "cross screen text",
+          "url": "https://www.gutenberg.org/cache/epub/84/pg84.txt",
+          "sha256": "7810cd483cffcf2cc8a1d8f0d5807931e69d4f48cd14149b8c76f88af82fead3",
+          "processed_symbols": 407795,
+          "space_share": 0.1847
+        },
+        {
+          "file": "substref_english3_pg2701.txt",
+          "ebook": 2701,
+          "label": "Moby Dick (Melville)",
+          "url": "https://www.gutenberg.org/cache/epub/2701/pg2701.txt",
+          "sha256": "b5e88b71a1cda068e9ab1d94344c9d932338ba6da1a66def97a1aecd9cfcc87d",
+          "processed_symbols": 1174300,
+          "space_share": 0.1865
+        },
+        {
+          "file": "substref_english4_pg1251.txt",
+          "ebook": 1251,
+          "label": "Le Morte D'Arthur vol 1 (Malory, 1485 Caxton)",
+          "url": "https://www.gutenberg.org/cache/epub/1251/pg1251.txt",
+          "sha256": "5dae4564bb198fe0291956a681c556497ceed562de75f84a82592032505c9fee",
+          "processed_symbols": 854142,
+          "space_share": 0.1986
+        }
+      ],
+      "latin": [
+        {
+          "file": "substref_latin2_pg218.txt",
+          "ebook": 218,
+          "label": "cross screen text",
+          "url": "https://www.gutenberg.org/cache/epub/218/pg218.txt",
+          "sha256": "84ac8411841a4d8f5f4a49b6a2cd1f466917c6a5af72916d5e0b2b1ecb2f659c",
+          "processed_symbols": 143947,
+          "space_share": 0.1428
+        },
+        {
+          "file": "substref_latin3_pg828.txt",
+          "ebook": 828,
+          "label": "Vulgata Daniel",
+          "url": "https://www.gutenberg.org/cache/epub/828/pg828.txt",
+          "sha256": "7787b590956462f5d651b96f201e9caaaa8d4ea37034832c3adc3119205aae1d",
+          "processed_symbols": 77572,
+          "space_share": 0.1568
+        },
+        {
+          "file": "substref_latin4_pg17859.txt",
+          "ebook": 17859,
+          "label": "Colloquium heptaplomeres (Bodin)",
+          "url": "https://www.gutenberg.org/cache/epub/17859/pg17859.txt",
+          "sha256": "39b5e9363328e4e474f0a605cc6a7218a9a230121686edaa86cf3941e9eb7614",
+          "processed_symbols": 938855,
+          "space_share": 0.1441
+        },
+        {
+          "file": "substref_latin5_pg27655.txt",
+          "ebook": 27655,
+          "label": "De Rariorum Animalium atque Stirpium Historia",
+          "url": "https://www.gutenberg.org/cache/epub/27655/pg27655.txt",
+          "sha256": "d4c7591a3985fa0162b3f4a3f856d72a94e18862b5cdaa0a40d9db8942d7bcda",
+          "processed_symbols": 77529,
+          "space_share": 0.1512
+        }
+      ]
+    }
+  },
+  "files": {
+    "ZL": {
+      "english": {
+        "real_best_mean_nats": -5.2832,
+        "band": [
+          {
+            "file": "substref_english2_pg84.txt",
+            "ebook": 84,
+            "plant_length": 218663,
+            "plants": [
+              -5.1603,
+              -5.1603,
+              -5.1603,
+              -5.1603,
+              -5.1603
+            ]
+          },
+          {
+            "file": "substref_english3_pg2701.txt",
+            "ebook": 2701,
+            "plant_length": 218663,
+            "plants": [
+              -5.1893,
+              -5.1893,
+              -5.1893,
+              -5.1893,
+              -5.1893
+            ]
+          },
+          {
+            "file": "substref_english4_pg1251.txt",
+            "ebook": 1251,
+            "plant_length": 218663,
+            "plants": [
+              -5.1004,
+              -5.1004,
+              -5.1004,
+              -5.1004,
+              -5.1004
+            ]
+          }
+        ],
+        "floors_best_mean_nats": [
+          -6.6139,
+          -6.6068,
+          -6.6075,
+          -6.6105,
+          -6.6072
+        ],
+        "band_min": -5.1893,
+        "band_max": -5.1004,
+        "real_margin_to_floor_max": 1.3236,
+        "real_margin_to_band_min": -0.0939,
+        "real_margin_to_band_max": -0.1828,
+        "verdict": "below-widened-band"
+      },
+      "latin": {
+        "real_best_mean_nats": -5.3162,
+        "band": [
+          {
+            "file": "substref_latin2_pg218.txt",
+            "ebook": 218,
+            "plant_length": 143947,
+            "plants": [
+              -5.1345,
+              -5.1345,
+              -5.1345,
+              -5.1345,
+              -5.1345
+            ]
+          },
+          {
+            "file": "substref_latin3_pg828.txt",
+            "ebook": 828,
+            "plant_length": 77572,
+            "plants": [
+              -5.1439,
+              -5.1439,
+              -5.1439,
+              -5.1439,
+              -5.1439
+            ]
+          },
+          {
+            "file": "substref_latin4_pg17859.txt",
+            "ebook": 17859,
+            "plant_length": 218663,
+            "plants": [
+              -5.1682,
+              -5.1682,
+              -5.1682,
+              -5.1682,
+              -5.1682
+            ]
+          },
+          {
+            "file": "substref_latin5_pg27655.txt",
+            "ebook": 27655,
+            "plant_length": 77529,
+            "plants": [
+              -5.2063,
+              -5.2063,
+              -5.2063,
+              -5.2063,
+              -5.2063
+            ]
+          }
+        ],
+        "floors_best_mean_nats": [
+          -6.4987,
+          -6.5001,
+          -6.5028,
+          -6.4986,
+          -6.4983
+        ],
+        "band_min": -5.2063,
+        "band_max": -5.1345,
+        "real_margin_to_floor_max": 1.1821,
+        "real_margin_to_band_min": -0.1099,
+        "real_margin_to_band_max": -0.1817,
+        "verdict": "below-widened-band"
+      }
+    },
+    "GC": {
+      "english": {
+        "real_best_mean_nats": -5.3536,
+        "band": [
+          {
+            "file": "substref_english2_pg84.txt",
+            "ebook": 84,
+            "plant_length": 186708,
+            "plants": [
+              -5.1646,
+              -5.1646,
+              -5.1646,
+              -5.1646,
+              -5.1646
+            ]
+          },
+          {
+            "file": "substref_english3_pg2701.txt",
+            "ebook": 2701,
+            "plant_length": 186708,
+            "plants": [
+              -5.1887,
+              -5.1887,
+              -5.1887,
+              -5.1887,
+              -5.1887
+            ]
+          },
+          {
+            "file": "substref_english4_pg1251.txt",
+            "ebook": 1251,
+            "plant_length": 186708,
+            "plants": [
+              -5.1083,
+              -5.1083,
+              -5.1083,
+              -5.1083,
+              -5.1083
+            ]
+          }
+        ],
+        "floors_best_mean_nats": [
+          -6.5878,
+          -6.5804,
+          -6.5868,
+          -6.5788,
+          -6.5893
+        ],
+        "band_min": -5.1887,
+        "band_max": -5.1083,
+        "real_margin_to_floor_max": 1.2252,
+        "real_margin_to_band_min": -0.1649,
+        "real_margin_to_band_max": -0.2453,
+        "verdict": "below-widened-band"
+      },
+      "latin": {
+        "real_best_mean_nats": -5.3883,
+        "band": [
+          {
+            "file": "substref_latin2_pg218.txt",
+            "ebook": 218,
+            "plant_length": 143947,
+            "plants": [
+              -5.1345,
+              -5.1345,
+              -5.1345,
+              -5.1345,
+              -5.1345
+            ]
+          },
+          {
+            "file": "substref_latin3_pg828.txt",
+            "ebook": 828,
+            "plant_length": 77572,
+            "plants": [
+              -5.1439,
+              -5.1439,
+              -5.1439,
+              -5.1439,
+              -5.1439
+            ]
+          },
+          {
+            "file": "substref_latin4_pg17859.txt",
+            "ebook": 17859,
+            "plant_length": 186708,
+            "plants": [
+              -5.1662,
+              -5.1662,
+              -5.1662,
+              -5.1662,
+              -5.1662
+            ]
+          },
+          {
+            "file": "substref_latin5_pg27655.txt",
+            "ebook": 27655,
+            "plant_length": 77529,
+            "plants": [
+              -5.2063,
+              -5.2063,
+              -5.2063,
+              -5.2063,
+              -5.2063
+            ]
+          }
+        ],
+        "floors_best_mean_nats": [
+          -6.5638,
+          -6.5659,
+          -6.5687,
+          -6.5628,
+          -6.5584
+        ],
+        "band_min": -5.2063,
+        "band_max": -5.1345,
+        "real_margin_to_floor_max": 1.1701,
+        "real_margin_to_band_min": -0.182,
+        "real_margin_to_band_max": -0.2538,
+        "verdict": "below-widened-band"
+      }
+    },
+    "IT": {
+      "english": {
+        "real_best_mean_nats": -5.2541,
+        "band": [
+          {
+            "file": "substref_english2_pg84.txt",
+            "ebook": 84,
+            "plant_length": 220532,
+            "plants": [
+              -5.1603,
+              -5.1603,
+              -5.1603,
+              -5.1603,
+              -5.1603
+            ]
+          },
+          {
+            "file": "substref_english3_pg2701.txt",
+            "ebook": 2701,
+            "plant_length": 220532,
+            "plants": [
+              -5.1905,
+              -5.1905,
+              -5.1905,
+              -5.1905,
+              -5.1905
+            ]
+          },
+          {
+            "file": "substref_english4_pg1251.txt",
+            "ebook": 1251,
+            "plant_length": 220532,
+            "plants": [
+              -5.0999,
+              -5.0999,
+              -5.0999,
+              -5.0999,
+              -5.0999
+            ]
+          }
+        ],
+        "floors_best_mean_nats": [
+          -6.5943,
+          -6.5855,
+          -6.5958,
+          -6.5886,
+          -6.5863
+        ],
+        "band_min": -5.1905,
+        "band_max": -5.0999,
+        "real_margin_to_floor_max": 1.3314,
+        "real_margin_to_band_min": -0.0636,
+        "real_margin_to_band_max": -0.1542,
+        "verdict": "below-widened-band"
+      },
+      "latin": {
+        "real_best_mean_nats": -5.2933,
+        "band": [
+          {
+            "file": "substref_latin2_pg218.txt",
+            "ebook": 218,
+            "plant_length": 143947,
+            "plants": [
+              -5.1345,
+              -5.1345,
+              -5.1345,
+              -5.1345,
+              -5.1345
+            ]
+          },
+          {
+            "file": "substref_latin3_pg828.txt",
+            "ebook": 828,
+            "plant_length": 77572,
+            "plants": [
+              -5.1439,
+              -5.1439,
+              -5.1439,
+              -5.1439,
+              -5.1439
+            ]
+          },
+          {
+            "file": "substref_latin4_pg17859.txt",
+            "ebook": 17859,
+            "plant_length": 220532,
+            "plants": [
+              -5.1683,
+              -5.1683,
+              -5.1683,
+              -5.1683,
+              -5.1683
+            ]
+          },
+          {
+            "file": "substref_latin5_pg27655.txt",
+            "ebook": 27655,
+            "plant_length": 77529,
+            "plants": [
+              -5.2063,
+              -5.2063,
+              -5.2063,
+              -5.2063,
+              -5.2063
+            ]
+          }
+        ],
+        "floors_best_mean_nats": [
+          -6.4789,
+          -6.474,
+          -6.4814,
+          -6.4869,
+          -6.4866
+        ],
+        "band_min": -5.2063,
+        "band_max": -5.1345,
+        "real_margin_to_floor_max": 1.1807,
+        "real_margin_to_band_min": -0.087,
+        "real_margin_to_band_max": -0.1588,
+        "verdict": "below-widened-band"
+      }
+    }
+  }
+}
