@@ -90,6 +90,31 @@ smallest plant's best is `consistent-with-substitution`; real at or below
 the largest floor's best is `not-consistent`; anything between is
 `indeterminate`. The margins to both bands are recorded whatever the
 verdict.
+
+Second declared measurement, the cross-text calibration, declared after
+the first screen's indeterminate verdicts and before its own run: the
+first screen's plant band is self-parity, text and model of the same
+prose, so a genuine member of the class scored against a different prose
+of its language sits below self-parity by an unmeasured penalty, which
+plausibly covers the first screen's margins. The cross screen calibrates
+that band with second reference proeses, English (Frankenstein, Project
+Gutenberg ebook 84) and Latin (C. Iuli Caesaris De Bello Gallico, I-IV,
+Project Gutenberg ebook 218), processed by the identical declared rules
+and frozen in engine/data with sha256 provenance. Cross plants, 5 per
+(file, language): the second text's processed stream encoded through a
+seeded permutation and truncated to min(the file's stream length, the
+second text's processed length), scored by the same machinery under the
+first language's table. The cross plant is exactly what the class says
+the real text could be: another prose of the language under substitution,
+fairly scored. Floors are recomputed from their declared seeds and must
+reproduce the first artifact's values. Verdict rule, declared here
+before the cross run: real at or above the smallest cross plant is
+`consistent-with-substitution`; real at or below the largest floor is
+`not-consistent`; real strictly between is `below-cross-band`, which is
+not membership-grade evidence and excludes the class only with the
+population caveat that the band is five draws from two cross texts.
+Margins to both bands are recorded whatever the verdict. Kind ids: cross
+permutation 6, cross machinery 7.
 """
 
 from __future__ import annotations
@@ -117,11 +142,17 @@ N_FLOORS = 5
 LANGS = ("english", "latin")
 LANG_ID = {"english": 0, "latin": 1}
 KIND_ID = {"real": 1, "plant_perm": 2, "plant_mach": 3,
-           "floor_perm": 4, "floor_mach": 5}
+           "floor_perm": 4, "floor_mach": 5,
+           "cross_perm": 6, "cross_mach": 7}
 
 REFERENCE_FILES = {
     "english": ("substref_english_pg1342.txt", 1342),
     "latin": ("substref_latin_pg33849.txt", 33849),
+}
+
+CROSS_REFERENCE_FILES = {
+    "english": ("substref_english2_pg84.txt", 84),
+    "latin": ("substref_latin2_pg218.txt", 218),
 }
 
 # The declared boundary mark: never a glyph character of any corpus.
@@ -138,9 +169,10 @@ ARTIFACT_PATH = (
 # --------------------------------------------------------------------------
 
 
-def _reference_text(language: str) -> str:
-    """The frozen source file's body between the Gutenberg markers."""
-    name, _ebook = REFERENCE_FILES[language]
+def _reference_text(language: str, cross: bool = False) -> str:
+    """A frozen source file's body between the Gutenberg markers."""
+    files = CROSS_REFERENCE_FILES if cross else REFERENCE_FILES
+    name, _ebook = files[language]
     text = (Path(DATA_DIR).resolve().parent / name).read_text(
         encoding="utf-8", errors="replace"
     )
@@ -156,9 +188,9 @@ _LIGATURES = {
 }
 
 
-def _reference_stream(language: str) -> list[int]:
+def _reference_stream(language: str, cross: bool = False) -> list[int]:
     """The declared processed stream: letters 0 to 25, space 26."""
-    body = _reference_text(language)
+    body = _reference_text(language, cross)
     body = "".join(_LIGATURES.get(char, char) for char in body)
     body = unicodedata.normalize("NFD", body).casefold()
     stream: list[int] = []
@@ -505,5 +537,149 @@ def main() -> None:
     print(ARTIFACT_PATH)
 
 
+def substitution_cross_screen() -> dict:
+    """The declared cross-text calibration, all three files, both languages.
+
+    Cross plants are built from the declared second reference proeses and
+    scored under the first language's table, so the band is a sample of
+    what the hypothesis class actually looks like with this machinery:
+    another prose of the language under substitution, fairly scored.
+    Floors recompute from their declared seeds and are checked against
+    the first artifact's values by the tests.
+    """
+    artifact: dict = {
+        "what": "The declared cross-text calibration of the substitution "
+        "screen: cross plants from the declared second reference proeses "
+        "(Frankenstein for English, Caesar's De Bello Gallico I-IV for "
+        "Latin), each encoded through a seeded permutation of the mapped "
+        "positions, truncated to min(the file's stream length, the second "
+        "text's processed length), and scored by the same machinery under "
+        "the first language's table. The declared verdict rule: real at or "
+        "above the smallest cross plant is consistent-with-substitution; "
+        "real at or below the largest floor is not-consistent; real "
+        "strictly between is below-cross-band, which is not grade to "
+        "exclude the class because the band is five draws from two cross "
+        "texts. Floors recompute from their declared seeds.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "cross_plants": N_PLANTS,
+            "cross_floors": N_FLOORS,
+            "cross_references": {},
+        },
+        "files": {},
+    }
+    for language in LANGS:
+        name, ebook = CROSS_REFERENCE_FILES[language]
+        path = Path(DATA_DIR).resolve().parent / name
+        stream = _reference_stream(language, cross=True)
+        share = float(
+            np.bincount(np.array(stream, dtype=np.int64), minlength=27)[26]
+        ) / len(stream)
+        artifact["declared"]["cross_references"][language] = {
+            "file": name,
+            "ebook": ebook,
+            "url": "https://www.gutenberg.org/cache/epub/"
+                   f"{ebook}/pg{ebook}.txt",
+            "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+            "processed_symbols": len(stream),
+            "space_share": round(share, 4),
+        }
+    for code in FILES:
+        stream = _real_stream(code)
+        total = int(stream.total_events)
+        scoped = np.full(total, -1, dtype=np.int64)
+        scoped[stream.kept_mask] = stream.kept_ids
+        real_matrix = _count_matrix(scoped, stream.kept_mask)
+        cell: dict = {
+            "plant_length_rule": "min(stream length, cross text length)",
+        }
+        for language in LANGS:
+            table, counts, _primary = _reference(language)
+            real_rng = np.random.default_rng(
+                _seed(CELL_ID[code], KIND_ID["real"], LANG_ID[language], 0)
+            )
+            real_best = machinery_best(real_matrix, table, counts, real_rng)
+            cross_stream = _reference_stream(language, cross=True)
+            plant_length = min(total, len(cross_stream))
+            cross_plants = []
+            plant_lengths = []
+            for index in range(N_PLANTS):
+                rng_perm = np.random.default_rng(
+                    _seed(CELL_ID[code], KIND_ID["cross_perm"],
+                          LANG_ID[language], index)
+                )
+                permutation = list(rng_perm.permutation(27))
+                plant = np.array(
+                    [permutation[value]
+                     for value in cross_stream[:plant_length]],
+                    dtype=np.int64,
+                )
+                plant_lengths.append(plant_length)
+                matrix = _full_matrix(plant)
+                rng_mach = np.random.default_rng(
+                    _seed(CELL_ID[code], KIND_ID["cross_mach"],
+                          LANG_ID[language], index)
+                )
+                cross_plants.append(
+                    round(machinery_best(matrix, table, counts, rng_mach), 4)
+                )
+            floors = []
+            for index in range(N_FLOORS):
+                rng_perm = np.random.default_rng(
+                    _seed(CELL_ID[code], KIND_ID["floor_perm"],
+                          LANG_ID[language], index)
+                )
+                values = stream.kept_ids.copy()
+                rng_perm.shuffle(values)
+                floor = np.full(total, -1, dtype=np.int64)
+                floor[stream.kept_mask] = values
+                floor_matrix = _count_matrix(floor, stream.kept_mask)
+                rng_mach = np.random.default_rng(
+                    _seed(CELL_ID[code], KIND_ID["floor_mach"],
+                          LANG_ID[language], index)
+                )
+                floors.append(
+                    round(machinery_best(
+                        floor_matrix, table, counts, rng_mach
+                    ), 4)
+                )
+            plant_min = min(cross_plants)
+            plant_max = max(cross_plants)
+            floor_max = max(floors)
+            if real_best >= plant_min:
+                verdict = "consistent-with-substitution"
+            elif real_best <= floor_max:
+                verdict = "not-consistent"
+            else:
+                verdict = "below-cross-band"
+            real_rounded = round(real_best, 4)
+            cell[language] = {
+                "real_best_mean_nats": real_rounded,
+                "cross_plants_best_mean_nats": cross_plants,
+                "plant_lengths": plant_lengths,
+                "floors_best_mean_nats": floors,
+                "plant_floor_gap": round(plant_min - floor_max, 4),
+                "real_margin_to_floor_max": round(real_best - floor_max, 4),
+                "real_margin_to_cross_min": round(real_best - plant_min, 4),
+                "real_margin_to_cross_max": round(real_best - plant_max, 4),
+                "verdict": verdict,
+            }
+        artifact["files"][code] = cell
+    return artifact
+
+
+CROSS_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes" / "voynich-substitution-crossband.json"
+)
+
+
+def main_cross() -> None:
+    artifact = substitution_cross_screen()
+    CROSS_ARTIFACT_PATH.write_text(json.dumps(artifact, indent=2) + "\n")
+    print(CROSS_ARTIFACT_PATH)
+
+
 if __name__ == "__main__":
     main()
+    main_cross()

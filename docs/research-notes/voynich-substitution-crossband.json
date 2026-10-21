@@ -1,0 +1,211 @@
+{
+  "what": "The declared cross-text calibration of the substitution screen: cross plants from the declared second reference proeses (Frankenstein for English, Caesar's De Bello Gallico I-IV for Latin), each encoded through a seeded permutation of the mapped positions, truncated to min(the file's stream length, the second text's processed length), and scored by the same machinery under the first language's table. The declared verdict rule: real at or above the smallest cross plant is consistent-with-substitution; real at or below the largest floor is not-consistent; real strictly between is below-cross-band, which is not grade to exclude the class because the band is five draws from two cross texts. Floors recompute from their declared seeds.",
+  "declared": {
+    "base_seed": 20261020,
+    "cross_plants": 5,
+    "cross_floors": 5,
+    "cross_references": {
+      "english": {
+        "file": "substref_english2_pg84.txt",
+        "ebook": 84,
+        "url": "https://www.gutenberg.org/cache/epub/84/pg84.txt",
+        "sha256": "7810cd483cffcf2cc8a1d8f0d5807931e69d4f48cd14149b8c76f88af82fead3",
+        "processed_symbols": 407795,
+        "space_share": 0.1847
+      },
+      "latin": {
+        "file": "substref_latin2_pg218.txt",
+        "ebook": 218,
+        "url": "https://www.gutenberg.org/cache/epub/218/pg218.txt",
+        "sha256": "84ac8411841a4d8f5f4a49b6a2cd1f466917c6a5af72916d5e0b2b1ecb2f659c",
+        "processed_symbols": 143947,
+        "space_share": 0.1428
+      }
+    }
+  },
+  "files": {
+    "ZL": {
+      "plant_length_rule": "min(stream length, cross text length)",
+      "english": {
+        "real_best_mean_nats": -5.2832,
+        "cross_plants_best_mean_nats": [
+          -5.1603,
+          -5.1603,
+          -5.1603,
+          -5.1603,
+          -5.1603
+        ],
+        "plant_lengths": [
+          218663,
+          218663,
+          218663,
+          218663,
+          218663
+        ],
+        "floors_best_mean_nats": [
+          -6.6139,
+          -6.6068,
+          -6.6075,
+          -6.6105,
+          -6.6072
+        ],
+        "plant_floor_gap": 1.4465,
+        "real_margin_to_floor_max": 1.3236,
+        "real_margin_to_cross_min": -0.1229,
+        "real_margin_to_cross_max": -0.1229,
+        "verdict": "below-cross-band"
+      },
+      "latin": {
+        "real_best_mean_nats": -5.3162,
+        "cross_plants_best_mean_nats": [
+          -5.1345,
+          -5.1345,
+          -5.1345,
+          -5.1345,
+          -5.1345
+        ],
+        "plant_lengths": [
+          143947,
+          143947,
+          143947,
+          143947,
+          143947
+        ],
+        "floors_best_mean_nats": [
+          -6.4987,
+          -6.5001,
+          -6.5028,
+          -6.4986,
+          -6.4983
+        ],
+        "plant_floor_gap": 1.3638,
+        "real_margin_to_floor_max": 1.1821,
+        "real_margin_to_cross_min": -0.1817,
+        "real_margin_to_cross_max": -0.1817,
+        "verdict": "below-cross-band"
+      }
+    },
+    "GC": {
+      "plant_length_rule": "min(stream length, cross text length)",
+      "english": {
+        "real_best_mean_nats": -5.3536,
+        "cross_plants_best_mean_nats": [
+          -5.1646,
+          -5.1646,
+          -5.1646,
+          -5.1646,
+          -5.1646
+        ],
+        "plant_lengths": [
+          186708,
+          186708,
+          186708,
+          186708,
+          186708
+        ],
+        "floors_best_mean_nats": [
+          -6.5878,
+          -6.5804,
+          -6.5868,
+          -6.5788,
+          -6.5893
+        ],
+        "plant_floor_gap": 1.4142,
+        "real_margin_to_floor_max": 1.2252,
+        "real_margin_to_cross_min": -0.189,
+        "real_margin_to_cross_max": -0.189,
+        "verdict": "below-cross-band"
+      },
+      "latin": {
+        "real_best_mean_nats": -5.3883,
+        "cross_plants_best_mean_nats": [
+          -5.1345,
+          -5.1345,
+          -5.1345,
+          -5.1345,
+          -5.1345
+        ],
+        "plant_lengths": [
+          143947,
+          143947,
+          143947,
+          143947,
+          143947
+        ],
+        "floors_best_mean_nats": [
+          -6.5638,
+          -6.5659,
+          -6.5687,
+          -6.5628,
+          -6.5584
+        ],
+        "plant_floor_gap": 1.4239,
+        "real_margin_to_floor_max": 1.1701,
+        "real_margin_to_cross_min": -0.2538,
+        "real_margin_to_cross_max": -0.2538,
+        "verdict": "below-cross-band"
+      }
+    },
+    "IT": {
+      "plant_length_rule": "min(stream length, cross text length)",
+      "english": {
+        "real_best_mean_nats": -5.2541,
+        "cross_plants_best_mean_nats": [
+          -5.1603,
+          -5.1603,
+          -5.1603,
+          -5.1603,
+          -5.1603
+        ],
+        "plant_lengths": [
+          220532,
+          220532,
+          220532,
+          220532,
+          220532
+        ],
+        "floors_best_mean_nats": [
+          -6.5943,
+          -6.5855,
+          -6.5958,
+          -6.5886,
+          -6.5863
+        ],
+        "plant_floor_gap": 1.4252,
+        "real_margin_to_floor_max": 1.3314,
+        "real_margin_to_cross_min": -0.0938,
+        "real_margin_to_cross_max": -0.0938,
+        "verdict": "below-cross-band"
+      },
+      "latin": {
+        "real_best_mean_nats": -5.2933,
+        "cross_plants_best_mean_nats": [
+          -5.1345,
+          -5.1345,
+          -5.1345,
+          -5.1345,
+          -5.1345
+        ],
+        "plant_lengths": [
+          143947,
+          143947,
+          143947,
+          143947,
+          143947
+        ],
+        "floors_best_mean_nats": [
+          -6.4789,
+          -6.474,
+          -6.4814,
+          -6.4869,
+          -6.4866
+        ],
+        "plant_floor_gap": 1.3395,
+        "real_margin_to_floor_max": 1.1807,
+        "real_margin_to_cross_min": -0.1588,
+        "real_margin_to_cross_max": -0.1588,
+        "verdict": "below-cross-band"
+      }
+    }
+  }
+}
