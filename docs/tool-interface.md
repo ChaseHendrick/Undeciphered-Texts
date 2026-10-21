@@ -20,6 +20,30 @@ The adapter caps raw input at 8,192 characters, RSA values at 4,096 bits, parame
 
 Some repository experiments accept callbacks, lists of ciphertexts or physical-device signals; those require their documented Python APIs. They are not silently forced into a text invocation. `run` reports successful execution under the selected tool's assumptions. A recovered candidate, score, crib fit or reencryption check still requires independent evidence before a historical solve claim.
 
+`substitution-tempering` searches unknown bijective keys using several logical
+temperature chains, sparse quadgram swap deltas, and replica exchanges. It
+returns a score-ranked `SolveResult`, actual work counters and the reason it
+stopped. Its finite proposal allowance includes greedy polishing. The optional
+dense `logp` table belongs to the Python API: 456,976 entries exceed this JSON
+adapter's sequence limit. The default uses the existing English model.
+See [replica exchange](substitution-parallel-tempering.md).
+
+`unspaced-substitution` jointly infers word boundaries and a global bijective
+mapping using a supplied lexicon. Node, frontier, candidate and time limits
+remain explicit; exhausting a limit does not establish uniqueness. Complete
+search excludes only the supplied vocabulary and word-length model. This adapter
+accepts at most 1,000 lexicon entries within 64 KiB of parameters; the direct
+Python API has separate larger finite bounds. See [unspaced constraints](unspaced-substitution.md).
+
+```sh
+python3 -m engine run substitution-tempering CEIOPFIFCIKIGCEIKDDOPFGCEIFCEIDCEIKOIFQPOICDOIICEAOCEIKIAFCEIODKFAFMCEIWTIKIPNNKIPGWPFG --params '{"seed":1729,"restarts":4,"sweeps":5000,"max_proposals":180000,"timeout_seconds":20}'
+python3 -m engine run unspaced-substitution DTTZQZZITUQZT --params '{"lexicon":["MEET","AT","THE","GATE"],"max_nodes":10000}'
+```
+
+Both examples recover constructed controls without receiving their keys.
+The [Dorabella campaign](logs/dorabella-force-2026-10-03.md) records actual
+target searches, independent replay audits, and failed short controls.
+
 `k4-models` is a conditional composition tester usable on any 4 through 512
 ASCII-letter input, despite its K4 research origin. It requires at least one
 aligned crib and tests repeating, Beaufort, plaintext-autokey and

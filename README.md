@@ -78,6 +78,13 @@ clue reserved for verification. The [smaller-target attempt](docs/easy-unsolved-
 records executed attacks and their limits. Neither English plausibility nor a
 forward replay establishes an unknown historical reading.
 
+The [harder Dorabella campaign](docs/logs/dorabella-force-2026-10-03.md)
+adds sparse-delta replica exchange, two published transcriptions with physical
+row layouts, a larger frozen English corpus, and dictionary search that infers
+word boundaries. The connected tools are `substitution-tempering` and
+`unspaced-substitution`. Known-answer failures and shuffled-input controls are
+retained alongside candidates; higher language fitness does not verify a reading.
+
 For exact constraints and compositions, install the optional [symbolic engine](docs/cipher-synthesis.md):
 
 ```bash

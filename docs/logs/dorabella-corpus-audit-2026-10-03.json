@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "campaign_report_sha256": "92ef1c102e5d903f2b91f1e1dafdf6f8a25b312369b800688b462bfde00d375d",
+  "reconstructed_score_table_sha256": "b1faefa99148d86e185e6b9b0e110120a8aa5640114a51cbb042c51d4ac8e07b",
+  "score_table_exact_match": true,
+  "all_forward_replays_match": true,
+  "all_scores_match": true,
+  "control_objective_audit": [
+    {
+      "name": "matched87-control-0",
+      "reference_score": -179.731291084334,
+      "recovered_score": -176.0087939964155,
+      "candidate_minus_reference": 3.722497087918498,
+      "exact_recovery": false,
+      "matching_positions": 84,
+      "wrong_candidate_outscores_reference": true
+    },
+    {
+      "name": "matched87-control-1",
+      "reference_score": -172.0806575495364,
+      "recovered_score": -171.87939797881222,
+      "candidate_minus_reference": 0.20125957072417577,
+      "exact_recovery": false,
+      "matching_positions": 85,
+      "wrong_candidate_outscores_reference": true
+    },
+    {
+      "name": "matched87-control-2",
+      "reference_score": -157.23166897801627,
+      "recovered_score": -157.23166897801627,
+      "candidate_minus_reference": 0.0,
+      "exact_recovery": true,
+      "matching_positions": 87,
+      "wrong_candidate_outscores_reference": false
+    }
+  ],
+  "runs_replayed": 13,
+  "retained_candidates_replayed": 59,
+  "historical_correctness_verified": false,
+  "claimed_plaintext": null
+}

@@ -1,0 +1,40 @@
+{
+  "tool_name": "substitution-tempering",
+  "algorithm_identifier": "substitution-parallel-tempering",
+  "kind": "constructed independent 87-letter prefix, not a historical solve",
+  "algorithm_reference": "https://arxiv.org/abs/cond-mat/0407273",
+  "plaintext": "THEMANENTEREDTHEROOMANDTHENTHEOTHERMENCAMETOMEETHIMTHEREINTHEMORNINGTHEYWEREALLREADYAND",
+  "ciphertext": "CEIOPFIFCIKIGCEIKDDOPFGCEIFCEIDCEIKOIFQPOICDOIICEAOCEIKIAFCEIODKFAFMCEIWTIKIPNNKIPGWPFG",
+  "plaintext_sha256": "6f3038e1f2db4234fda1a0c215e63aa8e1a035d1ee2afa8f224d67853b632768",
+  "recovered_plaintext_sha256": "6f3038e1f2db4234fda1a0c215e63aa8e1a035d1ee2afa8f224d67853b632768",
+  "recovered_key": "PRQGIVMEALYNOFDUHKJCBSTXWZ",
+  "key_direction": "plaintext A-Z to ciphertext glyph labels",
+  "key_supplied": false,
+  "cribs_supplied": false,
+  "score_table": "unchanged engine/data/english.txt quadgram model",
+  "search_limits": {
+    "seed": 1729,
+    "restarts": 4,
+    "sweeps_per_restart": 5000,
+    "temperatures": [
+      0.25,
+      0.5,
+      0.9,
+      1.5,
+      2.5,
+      4.0,
+      7.0,
+      12.0
+    ],
+    "exchange_interval": 25,
+    "max_proposals": 180000,
+    "timeout_seconds": 20,
+    "polish_passes": 8
+  },
+  "actual_proposals": 161350,
+  "exact_forward_match": true,
+  "exact_reference_match": true,
+  "distinct_plain_letters": 15,
+  "claimed_plaintext": null,
+  "scope": "Blind recovery of one original constructed 87-letter prose prefix under the default frozen quadgram objective. The prefix has fewer distinct symbols than Dorabella. A same-length courier control fails, so this is not a general accuracy or historical decipherment certificate."
+}

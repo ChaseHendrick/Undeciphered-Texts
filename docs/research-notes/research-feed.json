@@ -1349,19 +1349,24 @@
           "family": "Alternative transcriptions of the ambiguous symbols",
           "status": "open",
           "status_label": "Open",
-          "evidence": "An older participant transcription differs at positions 33 and 77 after relabeling; neither was searched.",
+          "evidence": "An older participant transcription differs at positions 33 and 77 after relabeling; neither was searched. The layouts branch, recorded 3 October 2026, grounded the geometry in the two published transcriptions: Hauer 2021's rows of 29, 31 and 27 glyphs with 20 labels, and Schmeh 2018's printed lines of 29, 31 and 27 with 21 labels, disagreeing on 43 pairwise symbol-equality relations that no English score was allowed to adjudicate. Sixteen reversible reading orders (both row directions times eight reversal masks) were verified against an independent inverse implementation, and every retained candidate was replayed in both the ordered and the original coordinates. The 96 baseline searches over both inventories and the 31 supplemental replica-exchange runs on the remaining ordered streams all finished inside the 6,000,000 counted-evaluation ceiling (actual 4,420,222 full calls plus 1,252,175 delta proposals); one of four distinct layout controls recovered exactly and the others recovered 83, 86 and 86 of 87; no verified reading. Orientation- or arc-count alphabets and invented letter geometry remain outside the searches, so the family stays open.",
           "next": "Two annotators mark orientations independently from permitted images, before seeing any candidate text; freeze at most four inventories.",
           "priority": 1,
-          "logs": []
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dorabella-force-2026-10-03.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dorabella-layouts-2026-10-03.md"
+          ]
         },
         {
           "family": "Languages other than English, and spacing rules",
           "status": "open",
           "status_label": "Open",
-          "evidence": "The 2021 study's language ranking is conditional model evidence; it was not reproduced here.",
+          "evidence": "The 2021 study's language ranking is conditional model evidence; it was not reproduced here. The unspaced dictionary branch, recorded 3 October 2026, declared a joint search for both the letter map and the word boundaries over finite supplied vocabularies. Two vocabularies were frozen before the target runs (1,153 and 14,638 word types, hashes recorded): the broader 1-to-32 model found 21 witnesses over 6 distinct plaintexts and 4 boundary patterns but stopped at its candidate cap as an incomplete model, while the training-vocabulary, the strict 2-to-16 and the A/I-singleton-supplement models each consumed their node budget with model unknown, so zero candidates is not an exhaustion claim. An independently constructed 87-letter control recovered all letters and the exact boundaries in 883 exhausted nodes under a 28-word vocabulary containing distractors, and a deliberately missing-word control exhausted in 43 nodes, so finite-dictionary failure cannot exclude English. An independent review fixed a solution-witness against boundary-ambiguity counting bug before any verdict was stored, with the search behaviour unchanged. The family stays open; declared per-language fresh controls remain its next.",
           "next": "Build 100 fresh 87-character controls across declared languages, with and without spaces, and report full-recovery rates before searching the target.",
           "priority": 2,
-          "logs": []
+          "logs": [
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dorabella-word-constraints-2026-10-03.md"
+          ]
         },
         {
           "family": "Music or another non-text encoding",
@@ -1376,11 +1381,14 @@
           "family": "English under a one-to-one symbol key",
           "status": "tested-without-power",
           "status_label": "Tested without shown power",
-          "evidence": "Three annealing runs give three conflicting outputs; the matched-length control recovered 80 of 87 letters, not all.",
+          "evidence": "Three annealing runs give three conflicting outputs; the matched-length control recovered 80 of 87 letters, not all. The heavier attack unit, recorded 3 October 2026 and landed through the declared pipeline 21 October 2026, added two bounded unknown-key tools and two declared campaigns with no verified reading: the replica-exchange solver (eight logical temperatures 0.25 to 12, exact sparse quadgram deltas, greedy polish sharing the proposal cap, seeds 1729 through 20261005) made 10,016,740 target key-swap proposals over 10 frozen seeds and evaluated 234,387,022 affected quadgram windows with no cap hit and 50 distinct candidate plaintexts retained, and the best fitness moved from -223.139627 to -218.493116; its independently constructed 87-letter control recovered 87 of 87 while a deliberately kept 496-letter courier fixture preserved a same-length wrong answer that scores higher than truth, so high English fitness is not historical correctness. The wider-corpus campaign (the existing scorer refitted once before search to 1,352,054 public-domain letters, its table sha256 recorded) recovered controls at 84, 85 and 87 of 87, and its two same-count shuffled nulls also produced English-looking fragments, so an English-looking fragment is not evidence; its 8 target seeds ran 8,000,000 proposals each and remain without a verified reading, and an independent audit reconstructed the score table and checked 59 candidate records across all 13 runs with every forward replay and recomputed score agreeing. Every stored candidate forward-re-enciphers the full 87-symbol stream, and the observed keyspace (26! over 6! observed mappings) is not excluded by any sampled run; the family stays tested-without-power.",
           "next": null,
           "priority": null,
           "logs": [
-            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/easy-unsolved-attempt-2026-10-03.md"
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/easy-unsolved-attempt-2026-10-03.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dorabella-force-2026-10-03.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dorabella-tempering-2026-10-03.md",
+            "https://github.com/ChaseHendrick/Undeciphered-Texts/blob/main/docs/logs/dorabella-corpus-2026-10-03.md"
           ]
         },
         {
@@ -1413,7 +1421,7 @@
         "tagline": "A note of squiggles Edward Elgar sent a young friend in 1897.",
         "summary": "In 1897 the composer Edward Elgar sent Dora Penny a short note of 87 small semicircle symbols. She never read it, and nobody has since. We ran standard letter-substitution searches on a published transcription. They produced several different, conflicting outputs, and tests on known messages of the same length showed the method is not yet strong enough at this length to settle anything.",
         "what_it_is": "Each symbol is one, two or three small arcs turned in one of eight directions, which gives 24 possible symbols. That suggests each symbol stands for a letter, but the note is so short that many different messages fit.",
-        "what_we_found": "Our substitution search read a long known test message perfectly but recovered only 80 of 87 letters of a test message as short as Dorabella, and a looser model only 34 of 87. On the real note, three runs gave three different texts. So the result is undecided, not a failure of the idea.",
+        "what_we_found": "Our substitution search read a long known test message perfectly but recovered only 80 of 87 letters of a test message as short as Dorabella, and a looser model only 34 of 87. On the real note, three runs gave three different texts. So the result is undecided, not a failure of the idea. A separately staged heavier-attack unit (replica-exchange substitution over millions of sampled proposals, a wider corpus whose score table was fixed before the search, the physical layouts of two published transcriptions, and a dictionary-and-boundary search) then landed: known-answer controls recovered up to exactly, a deliberate wrong-but-higher-scoring control was kept as a published failure, shuffled same-count nulls also yielded English-looking fragments, and none of the four branches produced a verified reading.",
         "whats_next": "Settle the transcription first: two people should mark every symbol's direction independently, since some are ambiguous. Then improve the search on many short known messages before running the real note again.",
         "faq": [
           {

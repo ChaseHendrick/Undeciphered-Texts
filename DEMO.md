@@ -5,7 +5,7 @@ Each ciphertext was produced here from a known plaintext. The solver
 received only the ciphertext. Spaces and punctuation stay in place and
 are not used as word-length constraints.
 
-- overall seconds: 3.632
+- overall seconds: 3.421
 - failures: none
 
 Reference index of coincidence on the Vigenère letter stream is 0.04211; Friedman estimate 7.237.
@@ -16,7 +16,7 @@ Reference index of coincidence on the Vigenère letter stream is 0.04211; Friedm
 - recovered shift: 11
 - chi-square of recovered text: 27.832
 - exact letter match: True
-- seconds: 0.000
+- seconds: 0.001
 
 ### Ciphertext
 
@@ -40,7 +40,7 @@ The harbor bell rang twice before dawn, and the small boats left the quay with n
 - Kasiski (period:votes): 2:29, 3:27, 6:27, 4:15, 12:14, 9:10
 - ciphertext trigrams: KOE:4 KIS:3 AHV:3 OCR:2 HKO:2 OEG:2
 - exact letter match: True
-- seconds: 0.175
+- seconds: 0.183
 
 ### Ciphertext
 
@@ -64,7 +64,7 @@ A printer on Oak Street kept the presses running after dark whenever a ship brou
 - restarts: 10
 - anneal steps per restart: 4000
 - seed: 20261002
-- seconds: 3.455
+- seconds: 3.235
 
 ### Ciphertext
 
