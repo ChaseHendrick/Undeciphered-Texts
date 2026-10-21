@@ -190,6 +190,48 @@ and none is claimed. Plant parity anchor, resolved before the run by a
 design probe: the plants are truncated streams, so the anchor per
 (file, language) cell is the truncated plant stream's own identity
 score under the same declared model, recorded alongside the plants.
+
+Fifth declared measurement, the noise-controlled trigram band, declared
+after the trigram pass's split verdicts and its disclosed search
+pathology, and before its own run: the identical streams, model and
+search, re-measured with a raised restart budget as a declared
+parameter of this measurement - 48 restarts (one rank init plus 47
+seeded permutations), sweep cap unchanged at 200 - and a declared
+per-text convergence criterion. The criterion, declared here: a cross
+text enters the band of its cell only when its five plant draws agree
+to within 0.0001 nats per trigram; a text whose draws disagree is
+recorded with its recovered best and spread, does not set the band
+threshold, and the disclosure names the runs. The real statistic is
+re-measured under the same raised budget, so the real and the plants
+work under one budget rule; the real's declared seed stays kind 1 and
+the search trajectory recomputes by replay. Power instruments at this
+budget: five self-parity plants per (file, language) with their
+per-cell truncated anchors (the plant draws must re-converge to the
+anchors; recorded and pinned), and five multiset floors per (file,
+language) under the raised budget. Seed kinds, declared before the
+run: controlled plant permutation 18, controlled plant machinery 19
+(the plant index in the seed); controlled floor permutation 20,
+controlled floor machinery 21 (the floor index); controlled cross
+permutation 22, controlled cross machinery 23 (the text position in
+the seed, same text order as the trigram pass, one rng per (file,
+language, text) drawing the five permutations and one running the five
+machinery calls in plant order). Verdict rule, declared before this
+run: real at or above the smallest entered-band value is
+`consistent-with-substitution`; real at or below the largest floor is
+`not-consistent`; real strictly between is `below-controlled-band`;
+special outcome declared in advance - if a language cell's entered
+band is empty after the criterion, the cell's verdict is
+`band-unresolvable-noise` and no exclusion derives from it. Declared
+exclusion format, agreed here before the run: if the real text stands
+below the smallest entered-band value in all six (file, language)
+cells, then the scoped class - one-to-one substitution of a known
+language, word divisions carried, no abbreviation, no transposition,
+no nulls, the sampled population of seven proeses - is excluded by
+count for the manuscript's statistics as measured, and the family
+closes with that wording plus the standing caveats (abbreviated
+scribal usage outside the class, population sampled not exhaustive,
+nothing is a reading, no mapping published). If any cell flips
+otherwise, the family stays open with the disclosure.
 """
 
 from __future__ import annotations
@@ -221,7 +263,10 @@ KIND_ID = {"real": 1, "plant_perm": 2, "plant_mach": 3,
            "cross_perm": 6, "cross_mach": 7,
            "tri_plant_perm": 12, "tri_plant_mach": 13,
            "tri_floor_perm": 14, "tri_floor_mach": 15,
-           "tri_cross_perm": 16, "tri_cross_mach": 17}
+           "tri_cross_perm": 16, "tri_cross_mach": 17,
+           "ctrl_plant_perm": 18, "ctrl_plant_mach": 19,
+           "ctrl_floor_perm": 20, "ctrl_floor_mach": 21,
+           "ctrl_cross_perm": 22, "ctrl_cross_mach": 23}
 
 REFERENCE_FILES = {
     "english": ("substref_english_pg1342.txt", 1342),
@@ -1399,8 +1444,252 @@ def main_trigram() -> None:
     print(TRIGRAM_ARTIFACT_PATH)
 
 
+RESTARTS_CONTROL = 48  # the fifth declared measurement's restart budget
+
+CONTROLLED_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes" / "voynich-substitution-controlled.json"
+)
+
+
+def _tri_control_cell_facts(code: str, stream: FileStream, language: str):
+    """Real, self-parity plants with anchor, and floors for one cell,
+    all under the fifth measurement's declared 48-restart budget."""
+    logp_flat, clean, letter_counts = _reference_tri(language)
+    total = int(stream.total_events)
+    scoped = np.full(total, -1, dtype=np.int64)
+    scoped[stream.kept_mask] = stream.kept_ids
+    codes, weights, counted = _tri_observed_masked(scoped, stream.kept_mask)
+    real_rng = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["real"], LANG_ID[language], 0)
+    )
+    real_best = machinery_best_tri(
+        codes, weights, logp_flat, letter_counts, real_rng,
+        restarts=RESTARTS_CONTROL,
+    )
+    reference_stream = _reference_stream(language)
+    truncation = np.array(reference_stream[:total], dtype=np.int64)
+    target_codes, target_weights, _total = _tri_observed_full(truncation)
+    anchor = round(
+        _tri_score(_tri_decompose(target_codes), target_weights,
+                   logp_flat, list(range(27))) / target_weights.sum(),
+        4,
+    )
+    plants = []
+    for index in range(5):
+        rng_perm = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["ctrl_plant_perm"],
+                  LANG_ID[language], index)
+        )
+        permutation = list(rng_perm.permutation(27))
+        plant = np.array(
+            [permutation[value] for value in truncation],
+            dtype=np.int64,
+        )
+        plant_codes, plant_weights, _total = _tri_observed_full(plant)
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["ctrl_plant_mach"],
+                  LANG_ID[language], index)
+        )
+        plants.append(round(machinery_best_tri(
+            plant_codes, plant_weights, logp_flat, letter_counts, rng_mach,
+            restarts=RESTARTS_CONTROL,
+        ), 4))
+    floors = []
+    for index in range(N_FLOORS):
+        rng_perm = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["ctrl_floor_perm"],
+                  LANG_ID[language], index)
+        )
+        values = stream.kept_ids.copy()
+        rng_perm.shuffle(values)
+        floor = np.full(total, -1, dtype=np.int64)
+        floor[stream.kept_mask] = values
+        floor_codes, floor_weights, _total = _tri_observed_masked(
+            floor, stream.kept_mask
+        )
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["ctrl_floor_mach"],
+                  LANG_ID[language], index)
+        )
+        floors.append(round(machinery_best_tri(
+            floor_codes, floor_weights, logp_flat, letter_counts, rng_mach,
+            restarts=RESTARTS_CONTROL,
+        ), 4))
+    return (
+        round(real_best, 4), int(counted), anchor, plants, floors,
+    )
+
+
+def _tri_control_band_for(
+    code: str,
+    language: str,
+    text_stream: list[int],
+    logp_flat: np.ndarray,
+    letter_counts: np.ndarray,
+    seed_index: int,
+) -> list[float]:
+    """Five controlled-band draws of one cross text at the 48-restart
+    budget: the declared sequential scheme (one rng draws the five
+    permutations, one runs the five machinery calls in plant order)."""
+    total = int(_real_stream(code).total_events)
+    length = min(total, len(text_stream))
+    rng_perm = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["ctrl_cross_perm"],
+              LANG_ID[language], seed_index)
+    )
+    rng_mach = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["ctrl_cross_mach"],
+              LANG_ID[language], seed_index)
+    )
+    plants = []
+    for _index in range(5):
+        permutation = list(rng_perm.permutation(27))
+        plant = np.array(
+            [permutation[value] for value in text_stream[:length]],
+            dtype=np.int64,
+        )
+        codes, weights, _total = _tri_observed_full(plant)
+        plants.append(
+            round(machinery_best_tri(
+                codes, weights, logp_flat, letter_counts, rng_mach,
+                restarts=RESTARTS_CONTROL,
+            ), 4)
+        )
+    return plants
+
+
+def substitution_control_screen() -> dict:
+    """The declared noise-controlled trigram band, all three files,
+    both languages, under the fifth measurement's 48-restart budget and
+    the declared per-text convergence criterion."""
+    artifact: dict = {
+        "what": "The declared noise-controlled trigram band: identical "
+        "streams, model and search as the trigram pass, re-measured "
+        "under the declared 48-restart budget with the declared "
+        "per-text convergence criterion (a cross text enters the band "
+        "only when its five plant draws agree within 0.0001 nats per "
+        "trigram; failing texts are recorded and do not set the "
+        "threshold). The declared verdict rule: real at or above the "
+        "smallest entered-band value is consistent-with-substitution; "
+        "real at or below the largest floor is not-consistent; "
+        "strictly between is below-controlled-band; an empty entered "
+        "band is band-unresolvable-noise. No mapping is published; "
+        "nothing here is a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "restarts": RESTARTS_CONTROL,
+            "sweep_cap": SWEEP_CAP,
+            "plants_per_text": N_PLANTS,
+            "floors": N_FLOORS,
+            "convergence_criterion": "max(plant draws) - min(plant "
+            "draws) <= 0.0001 nats per trigram, all on identical data",
+            "seed_kinds": {
+                "ctrl_plant": [KIND_ID["ctrl_plant_perm"],
+                               KIND_ID["ctrl_plant_mach"]],
+                "ctrl_floor": [KIND_ID["ctrl_floor_perm"],
+                               KIND_ID["ctrl_floor_mach"]],
+                "ctrl_cross": [KIND_ID["ctrl_cross_perm"],
+                               KIND_ID["ctrl_cross_mach"]],
+            },
+            "smoothing_rule": "P(third | first, second) = (n(first, "
+            "second, third) + 1) / (n(first, second) + 27), flat table "
+            "position (a * 27 + b) * 27 + c",
+            "verdict_rule": "real at or above the smallest entered-band "
+            "value is consistent-with-substitution; real at or below "
+            "the largest floor is not-consistent; strictly between is "
+            "below-controlled-band; empty entered band is "
+            "band-unresolvable-noise",
+            "exclusion_rule": "if the real text stands below the "
+            "smallest entered-band value in all six cells, the scoped "
+            "class is excluded by count for the measured statistics, "
+            "with the standing caveats (abbreviated scribal usage "
+            "outside the class, population sampled not exhaustive)",
+            "models": {},
+        },
+        "files": {},
+    }
+    for language in LANGS:
+        logp_flat, clean, _counts = _reference_tri(language)
+        artifact["declared"]["models"][language] = {
+            "file": REFERENCE_FILES[language][0],
+            "ebook": REFERENCE_FILES[language][1],
+            "clean_identity_mean_nats_per_trigram": clean,
+            "restarts": RESTARTS_CONTROL,
+        }
+    for code in FILES:
+        stream = _real_stream(code)
+        cell: dict = {}
+        for language in LANGS:
+            logp_flat, clean, letter_counts = _reference_tri(language)
+            real, counted, anchor, self_plants, floors = (
+                _tri_control_cell_facts(code, stream, language)
+            )
+            band_texts: list[tuple[str, int, int]] = []
+            name_c, ebook_c = CROSS_REFERENCE_FILES[language]
+            band_texts.append((name_c, ebook_c, 0))
+            for addition, (name_w, ebook_w, _label) in enumerate(
+                WIDENED_REFERENCE_FILES[language]
+            ):
+                band_texts.append((name_w, ebook_w, addition + 1))
+            band = []
+            for name, ebook, seed_index in band_texts:
+                text_stream = _reference_stream(language, file=name)
+                plants = _tri_control_band_for(
+                    code, language, text_stream, logp_flat,
+                    letter_counts, seed_index,
+                )
+                spread = round(max(plants) - min(plants), 4)
+                band.append({
+                    "file": name,
+                    "ebook": ebook,
+                    "plant_length": min(
+                        int(stream.total_events), len(text_stream)),
+                    "plants": plants,
+                    "recovered_best": max(plants),
+                    "spread": spread,
+                    "enters_band": bool(spread <= 0.0001),
+                })
+            entered = [entry["recovered_best"]
+                       for entry in band if entry["enters_band"]]
+            floor_max = max(floors)
+            if entered:
+                band_min = min(entered)
+                band_max = max(entered)
+                if real >= band_min:
+                    verdict = "consistent-with-substitution"
+                elif real <= floor_max:
+                    verdict = "not-consistent"
+                else:
+                    verdict = "below-controlled-band"
+            else:
+                band_min = None
+                band_max = None
+                verdict = "band-unresolvable-noise"
+            cell[language] = {
+                "real_best_mean_nats": real,
+                "counted_trigrams": counted,
+                "self_plants_best_mean_nats": self_plants,
+                "plant_parity_anchor_mean_nats": anchor,
+                "floors_best_mean_nats": floors,
+                "band": band,
+                "band_min": band_min,
+                "band_max": band_max,
+                "verdict": verdict,
+            }
+        artifact["files"][code] = cell
+    return artifact
+
+
+def main_control() -> None:
+    artifact = substitution_control_screen()
+    CONTROLLED_ARTIFACT_PATH.write_text(json.dumps(artifact, indent=2) + "\n")
+    print(CONTROLLED_ARTIFACT_PATH)
+
+
 if __name__ == "__main__":
     main()
     main_cross()
     main_widened()
     main_trigram()
+    main_control()
