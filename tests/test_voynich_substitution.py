@@ -351,6 +351,96 @@ TRIGRAM_CELLS = {
     },
 }
 
+# The frozen noise-controlled band of 21 October 2026, the fifth
+# declared measurement, declared after the trigram pass split verdicts
+# and before this run: identical streams, model and search under the
+# declared 48-restart budget with the declared per-text convergence
+# criterion (a member enters the band only when its five draws agree
+# within 0.0001; failing texts are recorded and do not set the
+# threshold). All 30 self plants re-converged to their anchors exactly;
+# the real text stands below the smallest entered-band value in all six
+# cells per the declared rule - the declared exclusion format's
+# condition, measured.
+CONTROLLED_ARTIFACT = (
+    Path("docs/research-notes/voynich-substitution-controlled.json").resolve()
+)
+CONTROLLED_CELLS = {
+    ("ZL", "english"): {
+        "real": -3.0514, "counted": 218127, "anchor": -1.8109,
+        "floors": [-3.4888, -3.4895, -3.4883, -3.488, -3.4903],
+        "band_min": -2.0449, "band_max": -1.9327,
+        "verdict": "below-controlled-band",
+        "band": {
+            "substref_english2_pg84.txt": ([-1.9327] * 5, True, 0.0),
+            "substref_english3_pg2701.txt": ([-2.0449] * 5, True, 0.0),
+            "substref_english4_pg1251.txt": ([-1.9337] * 5, True, 0.0),
+        },
+    },
+    ("ZL", "latin"): {
+        "real": -2.8468, "counted": 218127, "anchor": -1.9129,
+        "floors": [-3.4128, -3.4139, -3.4132, -3.4141, -3.4135],
+        "band_min": -2.1587, "band_max": -2.0592,
+        "verdict": "below-controlled-band",
+        "band": {
+            "substref_latin2_pg218.txt": ([-2.0592] * 5, True, 0.0),
+            "substref_latin3_pg828.txt": ([-2.0809] * 5, True, 0.0),
+            "substref_latin4_pg17859.txt": ([-2.0676] * 5, True, 0.0),
+            "substref_latin5_pg27655.txt": (
+                [-2.1587, -2.1587, -2.1587, -2.1587, -2.1588], True, 0.0001),
+        },
+    },
+    ("GC", "english"): {
+        "real": -2.9878, "counted": 175543, "anchor": -1.8146,
+        "floors": [-3.5201, -3.5182, -3.5184, -3.5192, -3.5187],
+        "band_min": -1.9398, "band_max": -1.9398,
+        "verdict": "below-controlled-band",
+        "band": {
+            "substref_english2_pg84.txt": (
+                [-1.9358, -1.9358, -1.9358, -3.4332, -1.9358], False, 1.4974),
+            "substref_english3_pg2701.txt": (
+                [-2.0487, -3.4272, -3.422, -2.0487, -2.0487], False, 1.3785),
+            "substref_english4_pg1251.txt": ([-1.9398] * 5, True, 0.0),
+        },
+    },
+    ("GC", "latin"): {
+        "real": -2.8934, "counted": 175543, "anchor": -1.9138,
+        "floors": [-3.4393, -3.4408, -3.4398, -3.4378, -3.4384],
+        "band_min": -2.1587, "band_max": -2.0592,
+        "verdict": "below-controlled-band",
+        "band": {
+            "substref_latin2_pg218.txt": ([-2.0592] * 5, True, 0.0),
+            "substref_latin3_pg828.txt": ([-2.0809] * 5, True, 0.0),
+            "substref_latin4_pg17859.txt": ([-2.0687] * 5, True, 0.0),
+            "substref_latin5_pg27655.txt": ([-2.1587] * 5, True, 0.0),
+        },
+    },
+    ("IT", "english"): {
+        "real": -3.121, "counted": 220530, "anchor": -1.8107,
+        "floors": [-3.4842, -3.4857, -3.4852, -3.486, -3.4845],
+        "band_min": -1.9331, "band_max": -1.9327,
+        "verdict": "below-controlled-band",
+        "band": {
+            "substref_english2_pg84.txt": ([-1.9327] * 5, True, 0.0),
+            "substref_english3_pg2701.txt": (
+                [-2.0447, -3.4255, -2.0447, -2.0447, -2.0447], False, 1.3808),
+            "substref_english4_pg1251.txt": ([-1.9331] * 5, True, 0.0),
+        },
+    },
+    ("IT", "latin"): {
+        "real": -2.6908, "counted": 220530, "anchor": -1.9127,
+        "floors": [-3.4112, -3.4093, -3.4107, -3.4103, -3.411],
+        "band_min": -2.1587, "band_max": -2.0592,
+        "verdict": "below-controlled-band",
+        "band": {
+            "substref_latin2_pg218.txt": ([-2.0592] * 5, True, 0.0),
+            "substref_latin3_pg828.txt": ([-2.0809] * 5, True, 0.0),
+            "substref_latin4_pg17859.txt": ([-2.0677] * 5, True, 0.0),
+            "substref_latin5_pg27655.txt": (
+                [-2.1587, -2.1588, -2.1587, -2.1587, -2.1587], True, 0.0001),
+        },
+    },
+}
+
 ZL_MAPPED = (
     "oehyacdiklrstnqpmfg?'xbv" + chr(0x184) + chr(0x185) + sub.BOUNDARY
 )
@@ -1027,6 +1117,184 @@ class TrigramTest(unittest.TestCase):
             ]
             self.assertEqual(facts, values,
                              "ZL.english Moby Dick, seed holders 16 and 17")
+        finally:
+            sub._REAL_STREAMS.clear()
+
+
+class ControlledTest(unittest.TestCase):
+    """The declared noise-controlled band and its frozen measurement,
+    the fifth declared measurement: identical streams, model and search
+    under the declared 48-restart budget with the declared per-text
+    convergence criterion. The declared exclusion format's condition,
+    measured."""
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.artifact = json.loads(CONTROLLED_ARTIFACT.read_text())
+
+    def test_declared_controlled_bookkeeping(self) -> None:
+        declared = self.artifact["declared"]
+        self.assertEqual(20261020, declared["base_seed"])
+        self.assertEqual(48, declared["restarts"])
+        self.assertEqual(200, declared["sweep_cap"])
+        self.assertEqual(5, declared["plants_per_text"])
+        self.assertEqual(5, declared["floors"])
+        self.assertEqual(
+            {"ctrl_plant": [18, 19], "ctrl_floor": [20, 21],
+             "ctrl_cross": [22, 23]},
+            declared["seed_kinds"],
+        )
+        self.assertIn("0.0001", declared["convergence_criterion"])
+        self.assertIn("on identical data", declared["convergence_criterion"])
+        for language in ("english", "latin"):
+            self.assertEqual(
+                48, declared["models"][language]["restarts"], language)
+        for phrase in ("consistent-with-substitution", "not-consistent",
+                       "below-controlled-band", "band-unresolvable-noise"):
+            self.assertIn(phrase, declared["verdict_rule"])
+        self.assertIn("excluded by count", declared["exclusion_rule"])
+        self.assertIn("convergence criterion", self.artifact["what"])
+
+    def test_all_six_cells_match_the_frozen_controlled_measurement(self) -> None:
+        for (code, language), facts in sorted(CONTROLLED_CELLS.items()):
+            cell = self.artifact["files"][code][language]
+            self.assertEqual(facts["real"], cell["real_best_mean_nats"],
+                             f"{code}.{language} real")
+            self.assertEqual(facts["counted"], cell["counted_trigrams"],
+                             f"{code}.{language} counted trigrams")
+            self.assertEqual(facts["anchor"],
+                             cell["plant_parity_anchor_mean_nats"],
+                             f"{code}.{language} anchor")
+            self.assertEqual(facts["floors"], cell["floors_best_mean_nats"],
+                             f"{code}.{language} floors")
+            self.assertEqual(facts["band_min"], cell["band_min"],
+                             f"{code}.{language} band_min")
+            self.assertEqual(facts["band_max"], cell["band_max"],
+                             f"{code}.{language} band_max")
+            # the verdict recomputes per the declared rule
+            real = cell["real_best_mean_nats"]
+            entered = [max(entry["plants"]) for entry in cell["band"]
+                       if entry["enters_band"]]
+            floor_max = max(cell["floors_best_mean_nats"])
+            if not entered:
+                rule_verdict = "band-unresolvable-noise"
+            elif real >= min(entered):
+                rule_verdict = "consistent-with-substitution"
+            elif real <= floor_max:
+                rule_verdict = "not-consistent"
+            else:
+                rule_verdict = "below-controlled-band"
+            self.assertEqual(rule_verdict, cell["verdict"],
+                             f"{code}.{language} rule applied")
+            self.assertEqual(facts["verdict"], cell["verdict"],
+                             f"{code}.{language} frozen verdict")
+
+    def test_self_plants_reach_the_declared_anchor_under_the_budget(self) -> None:
+        for (code, language), facts in sorted(CONTROLLED_CELLS.items()):
+            cell = self.artifact["files"][code][language]
+            self.assertEqual([facts["anchor"]] * 5,
+                             cell["self_plants_best_mean_nats"],
+                             f"{code}.{language} plant parity at 48 restarts")
+            self.assertEqual(facts["anchor"],
+                             cell["plant_parity_anchor_mean_nats"],
+                             f"{code}.{language} anchor")
+
+    def test_band_membership_follows_the_declared_criterion(self) -> None:
+        for (code, language), facts in sorted(CONTROLLED_CELLS.items()):
+            cell = self.artifact["files"][code][language]
+            self.assertEqual(facts["band"].keys(),
+                             {entry["file"] for entry in cell["band"]},
+                             f"{code}.{language} band files")
+            for entry in cell["band"]:
+                spread = round(max(entry["plants"]) - min(entry["plants"]), 4)
+                self.assertEqual((entry["plants"], entry["enters_band"],
+                                  spread),
+                                 facts["band"][entry["file"]],
+                                 f"{code}.{language} {entry['file']}")
+                self.assertEqual(spread, entry["spread"],
+                                 f"{code}.{language} {entry['file']} spread")
+                self.assertEqual(spread <= 0.0001, entry["enters_band"],
+                                 f"{code}.{language} {entry['file']} criterion")
+                self.assertEqual(max(entry["plants"]), entry["recovered_best"],
+                                 f"{code}.{language} {entry['file']} best")
+            entered = [entry["recovered_best"] for entry in cell["band"]
+                       if entry["enters_band"]]
+            self.assertGreater(len(entered), 0,
+                               f"{code}.{language} entered band nonempty")
+            self.assertEqual(min(entered), cell["band_min"],
+                             f"{code}.{language} band_min over entered texts")
+            self.assertEqual(max(entered), cell["band_max"],
+                             f"{code}.{language} band_max over entered texts")
+
+    def test_the_real_stands_below_the_band_in_all_six_cells(self) -> None:
+        margins = {
+            ("ZL", "english"): (-1.0065, 0.4366),
+            ("ZL", "latin"): (-0.6881, 0.566),
+            ("GC", "english"): (-1.048, 0.5304),
+            ("GC", "latin"): (-0.7347, 0.5444),
+            ("IT", "english"): (-1.1879, 0.3632),
+            ("IT", "latin"): (-0.5321, 0.7185),
+        }
+        for (code, language), (to_band, to_floor) in sorted(margins.items()):
+            cell = self.artifact["files"][code][language]
+            real = cell["real_best_mean_nats"]
+            self.assertEqual(
+                round(real - cell["band_min"], 4), to_band,
+                f"{code}.{language} real margin to band_min",
+            )
+            self.assertEqual(
+                round(real - max(cell["floors_best_mean_nats"]), 4), to_floor,
+                f"{code}.{language} real margin to floor_max",
+            )
+            self.assertLess(real, cell["band_min"],
+                            f"{code}.{language} real below the band")
+            self.assertGreater(real, max(cell["floors_best_mean_nats"]),
+                               f"{code}.{language} real above the floors")
+
+    def test_one_controlled_real_recomputes_from_the_declared_seed(self) -> None:
+        sub._REAL_STREAMS.clear()
+        try:
+            stream = sub._real_stream("ZL")
+            total = int(stream.total_events)
+            scoped = np.full(total, -1, dtype=np.int64)
+            scoped[stream.kept_mask] = stream.kept_ids
+            codes, weights, _total = sub._tri_observed_masked(
+                scoped, stream.kept_mask
+            )
+            logp, _clean, letter_counts = sub._reference_tri("english")
+            rng = np.random.default_rng(
+                sub._seed(sub.CELL_ID["ZL"], sub.KIND_ID["real"],
+                          sub.LANG_ID["english"], 0)
+            )
+            value = round(
+                sub.machinery_best_tri(
+                    codes, weights, logp, letter_counts, rng,
+                    restarts=sub.RESTARTS_CONTROL,
+                ),
+                4,
+            )
+            self.assertEqual(
+                CONTROLLED_CELLS[("ZL", "english")]["real"], value,
+                "ZL.english controlled real, seed kind 1, 48 restarts",
+            )
+        finally:
+            sub._REAL_STREAMS.clear()
+
+    def test_one_controlled_band_entry_recomputes_from_the_seeds(self) -> None:
+        sub._REAL_STREAMS.clear()
+        try:
+            text_stream = sub._reference_stream(
+                "english", file="substref_english3_pg2701.txt"
+            )
+            logp, _clean, letter_counts = sub._reference_tri("english")
+            values = sub._tri_control_band_for(
+                "ZL", "english", text_stream, logp, letter_counts, 1
+            )
+            self.assertEqual(
+                [-2.0449] * 5, values,
+                "ZL.english Moby Dick, seed holders 22 and 23, "
+                "sequential draws at the 48-restart budget",
+            )
         finally:
             sub._REAL_STREAMS.clear()
 
