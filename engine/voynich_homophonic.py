@@ -888,6 +888,86 @@ mapping is published anywhere in this artifact, no recovered
 assignment is stored as a key, plaintext_recovered_percent stays 0,
 the reference prose is modern printed text outside the manuscript's
 century, and nothing here is a reading or a language claim.
+
+Eighth declared measurement, the split's ratio, declared after the
+alternate reference corpora held their margins and before any run of
+it beyond the probes it discloses.
+
+The declared design, before the run: the widened band measurement's
+six (file, language) cells re-measured at the top budget with the
+mapped set, streams, seed kinds, machinery, restart and sweep
+budgets, plants, floors, widened band population (seven english and
+eight latin members), reference texts and leave-one-out tables
+carried forward unchanged, and each side's counted pairs re-folded
+under the declared 25/75 block split: the climb part the first
+floor(N/4) pairs of each side in stream order, the score part the
+remaining pairs the search may never touch, the block fold's own
+first-block convention (the smaller share on a remainder) at one
+quarter of the pairs, consuming no seed. Every identity anchor's
+halves fold by the same rule. The real, every plant and every band
+member's encodings are byte-identical replays of the frozen widened
+artifact's declared draws; only the split's ratio changes, so the
+machinery re-climbs on the smaller climb part and prices three
+quarters of each side's pairs fresh. The truthful question, declared
+in advance: does the real's held-out score-half value still stand
+above the band when the climb part shrinks to a quarter of each
+side's counted pairs - a yes extends the separation to a smaller
+search freedom, a no records that the margin rode the climb half's
+size. The family's declared exclusion format is not re-scoped by
+this artifact: it keys to the declared 36-slot class under the
+inherited add-one form exactly as the held-out screen declared it,
+so the verdicts recorded here are split-geometry evidence, the
+widened band's verdicts stand untouched, and the family stays open
+unless the declared exclusion fires.
+
+Corpus discipline: no new corpus files and no new candidates - the
+band population is the frozen widened band's declared roster and the
+references are the standing references' frozen files, all stored raw
+with their markers and processed by the standing declared
+processing.
+
+Mechanics, declared: the bridge gate first - before the ratio cells
+run, this measurement's full first cell (ZL english: the real, its
+five plants, its five floors and all seven widened band members)
+computed through this measurement's code with the block fold's
+standing split supplied must equal the frozen widened-band
+artifact's own first cell field for field; any divergence aborts and
+nothing is written. The band re-scores its same members, same
+encodings and same draws at the same positions (english 0 to 6,
+latin 0 to 7) under the ratio split; the selection rule re-prices
+the five exact climb-half totals and may pick a new best draw;
+verdict and margin rules are the held-out screen's rules applied to
+the split-ratio numbers; the strings describe consistency under
+this artifact's declared split ratio and do not restate the widened
+band's verdicts.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+bridge gate rehearsed: the split-ratio instrument's full first cell
+through the standing split equals the frozen widened-band
+artifact's first cell field for field (116 fields compared: the 18
+cell facts and all seven members' 14 record keys each, no
+problem). Probe 2, the ratio split's halves' counts: the real
+streams' counted pairs re-fold at 54,603 climb and 163,812 score
+(ZL's 218,415), 45,799 and 137,400 (GC's 183,199), 55,132 and
+165,399 (IT's 220,531), against the block fold's half-and-half
+splits. Probe 3, the re-folded english anchors: ZL's truncated
+reference anchor -5.1391 at half sizes 54,665 and 163,997 (the
+block fold's -5.1397), GC's -5.1373 at 46,676 and 140,031 (the
+block fold's -5.1436), IT's -5.1392 at 55,132 and 165,399 (the
+block fold's -5.1398). Probe 4, the first cell's real under the
+ratio split ahead of the run: ZL english real_held -4.3841 (climb
+-4.4171, full -4.444, no cap hit), climb pair columns 54,603 against
+score 163,812, anchor -5.1391, plants -4.7409, -4.7229, -4.6645,
+-4.7229, -4.7229 (no cap hits, above the anchor), floors -5.233,
+-5.2371, -5.2357, -5.233, -5.236. The band values under the ratio
+split and the other five cells are unseen until the declared run.
+
+The standing limitations are inherited from the held-out screen: no
+mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays 0,
+the reference prose is modern printed text outside the manuscript's
+century, and nothing here is a reading or a language claim.
 """
 
 from __future__ import annotations
@@ -4948,3 +5028,352 @@ def main_alternate_reference() -> None:
         json.dumps(artifact, indent=2) + "\n"
     )
     print(ALTERNATE_ARTIFACT_PATH)
+
+
+# --------------------------------------------------------------------------
+# The split ratio measurement, the eighth declared measurement
+# --------------------------------------------------------------------------
+
+
+RATIO_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes" / "voynich-homophonic-split-ratio.json"
+)
+
+
+def _quarter_pairs(
+    first: np.ndarray, second: np.ndarray,
+) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    """The declared split-ratio split of a stream's counted pairs: the
+    pairs kept in stream order split into contiguous blocks at the
+    quarter mark, the first floor(N/4) pairs the climb part the
+    machinery may search and the remaining pairs the score part it
+    may never touch, the block fold's own first-block convention (the
+    smaller share on a remainder) at one quarter of the pairs. The
+    halves share no counted pair, no pair of the climb part lies in
+    the scored block's index range, and the scored pairs stay fresh
+    to the search in the span sense."""
+    climb_len = len(first) // 4
+    return (first[:climb_len], second[:climb_len],
+            first[climb_len:], second[climb_len:])
+
+
+def _compare_ratio_to_widened() -> tuple[list[str], int]:
+    """The declared bridge gate: the split-ratio instrument's full
+    first cell (ZL english: the real, its five plants, its five
+    floors and all seven widened band members) computed through this
+    measurement's code with the block fold's standing split supplied
+    must equal the frozen widened-band artifact's own first cell
+    field for field, so the only difference from the frozen widened
+    measurement is the split's ratio. Any divergence aborts with
+    nothing written."""
+    problems: list[str] = []
+    fields = 0
+    code, language = "ZL", "english"
+    frozen = json.loads(WIDENED_BAND_ARTIFACT_PATH.read_text())
+    stored = frozen["files"][code][language]
+    model = _shape_table(language)
+    facts = _block_cell_facts(
+        code, language, model["table"], model["letter_counts"],
+        split_pairs=_block_pairs,
+    )
+    for key, value in facts.items():
+        fields += 1
+        if stored[_CELL_FIELD_MAP[key]] != value:
+            problems.append(
+                f"cell/{key}: stored {stored[_CELL_FIELD_MAP[key]]!r} vs "
+                f"fresh {value!r}"
+            )
+    members = _extended_reference_members(language)
+    for seed_index in _extended_band_positions(language):
+        fresh = _block_band_for(
+            code, language, seed_index,
+            model["table"], model["letter_counts"],
+            split_pairs=_block_pairs, members=members,
+        )
+        stored_member = stored["band"][seed_index]
+        for key, value in fresh.items():
+            fields += 1
+            if stored_member[key] != value:
+                problems.append(
+                    f"band/{seed_index}/{key}: stored "
+                    f"{stored_member[key]!r} vs fresh {value!r}"
+                )
+    return problems, fields
+
+
+def substitution_homophonic_split_ratio() -> dict:
+    """The declared split's ratio: the widened band measurement's six
+    (file, language) cells with their real, plants, floors, band
+    population, seeds, machinery, leave-one-out tables and reference
+    texts replayed unchanged, re-measured under the declared 25/75
+    block split - the climb part the first quarter of each side's
+    counted pairs, the score part the remaining pairs the search may
+    never touch - after the bridge gate proves this measurement's
+    code reproduces the frozen widened-band artifact's first cell
+    field for field through the standing split."""
+    problems, fields = _compare_ratio_to_widened()
+    if problems:
+        raise RuntimeError(
+            "the bridge gate failed: " + "; ".join(problems[:12])
+        )
+    artifact: dict = {
+        "what": "The declared split's ratio: the widened band "
+        "measurement's six (file, language) cells re-measured with "
+        "the mapped set, streams, seeds, machinery, restarts, sweep "
+        "cap, plants, floors, block population and leave-one-out "
+        "tables carried forward unchanged, and each side's counted "
+        "pairs re-fold under the declared 25/75 block split, so the "
+        "real is priced above the same band with the machinery's "
+        "climb freedom shrunk to a quarter of each side's pairs. The "
+        "bridge gate re-derived the frozen widened-band artifact's "
+        "first cell through the standing split before the ratio cells "
+        "ran. The declared truthful question: does the real's "
+        "held-out score-half value still stand above the band when "
+        "the climb part shrinks to a quarter of each side's pairs. "
+        "No mapping is published; nothing here is a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "restarts": N_RESTARTS,
+            "sweep_cap": SWEEP_CAP,
+            "plants_per_cell": N_PLANTS,
+            "floors": N_FLOORS,
+            "band_positions": {
+                language: len(_extended_reference_members(language))
+                for language in LANGS
+            },
+            "split_rule": "the counted pairs of each side, in stream "
+            "order, split into contiguous blocks at the quarter mark: "
+            "the first floor(N/4) pairs the climb part the machinery "
+            "may search, the remaining pairs the score part it may "
+            "never touch; the block fold's own first-block convention "
+            "(the smaller share on a remainder) at one quarter of the "
+            "pairs; the halves share no counted pair and every "
+            "identity anchor's halves fold by the same rule; "
+            "deterministic, consuming no seed",
+            "loo_rule": "the shape measurement's leave-one-out table "
+            "carried forward unchanged: the inherited add-one form is "
+            "log((n_ab + 1) / (N + 729)) with N the standing "
+            "reference stream's total counted pairs; every pair type "
+            "(a, b) present in the reference pair table is scored "
+            "with one occurrence of (a, b) removed from the reference "
+            "counts, log(n_ab / (N + 728)), and a type with no "
+            "counted occurrence keeps the inherited add-one entry "
+            "log(1 / (N + 729)); the letter marginals and rank "
+            "initialisation unchanged, the matrix arithmetic needing "
+            "no re-derivation as the shape measurement declared",
+            "measured_facts_rule": "the mapped set, streams, seeds, "
+            "machinery, restarts, sweep cap, plants, floors, band "
+            "population and reference texts are the held-out "
+            "screen's, block-fold measurement's and widened band's "
+            "declarations carried unchanged; the real, plants, "
+            "floors and every band member's encodings are "
+            "byte-identical replays of the frozen widened-band "
+            "artifact's declared draws and only the split's ratio "
+            "changes: every side's counted pairs re-fold at the "
+            "quarter mark, every identity anchor's halves fold by "
+            "the same rule, and the machinery re-climbs on the "
+            "smaller climb part with ties to the first restart; each "
+            "member records draws_climb_exact, its five climb-half "
+            "totals at full precision; each side's exact full-data "
+            "side call is recorded beside its held-out value for "
+            "attribution only",
+            "machinery_rule": "unchanged from the held-out screen: "
+            "the exact greedy reassignment climb on the climb half, "
+            "exact pricing on the score half, restart 0 the rank "
+            "initialisation from the climb half, restarts 1 onward "
+            "the seeded permutations of the 27 letter tokens under "
+            "the wrap rule, the best restart the best exact "
+            "climb-half total with ties to the first; no assignment "
+            "is stored",
+            "seed_kinds": {
+                "real": KIND_ID["real"],
+                "homo_plant": [KIND_ID["homo_plant_enc"],
+                               KIND_ID["homo_plant_mach"]],
+                "homo_floor": [KIND_ID["homo_floor_perm"],
+                               KIND_ID["homo_floor_mach"]],
+                "homo_cross": [KIND_ID["homo_cross_enc"],
+                               KIND_ID["homo_cross_mach"]],
+            },
+            "seed_sharing": "no new seed kinds are consumed: the "
+            "real, plants, floors and band members replay the "
+            "declared draws from the declared kinds at the declared "
+            "positions exactly as the frozen widened band consumed "
+            "them, and the split consumes no seed; consuming none of "
+            "any other module's declared draws",
+            "bridge_gate": "before the ratio cells run, the "
+            "split-ratio instrument's full first cell (ZL english: "
+            "the real, its five plants, its five floors and its "
+            "seven widened band members) is computed through this "
+            "measurement's code with the block fold's standing "
+            "split supplied and compared field for field against "
+            "the frozen widened-band artifact's own first cell; any "
+            "divergence aborts with nothing written",
+            "corpus_source_rule": "no new corpus files: this "
+            "measurement declares no candidates and records no "
+            "corpus roster; the band population is the frozen "
+            "widened band's declared roster and the references are "
+            "the standing references' frozen files, all stored raw "
+            "with their Gutenberg markers and processed by the "
+            "standing declared processing",
+            "band_record_rule": "membership, selection, ties and "
+            "spreads are declared unchanged from the held-out screen "
+            "(a member's band value the held-out value of the draw "
+            "whose exact climb-half total is best, strict beyond "
+            "1e-12, ties to the first draw); each member records "
+            "draws_climb_exact, its five climb-half totals at full "
+            "precision, so the declared selection is re-derivable "
+            "from the stored artifact; membership unconditional: "
+            "every band member enters the band under the ratio "
+            "split exactly as under the block fold and no "
+            "convergence criterion is applied to any member",
+            "verdict_rule": "unchanged from the held-out screen and "
+            "applied to the split-ratio numbers: the real held-out "
+            "at or above the smallest member band value is "
+            "consistent-with-substitution, at or below the largest "
+            "floor's held-out value is not-consistent, strictly "
+            "between is below-held-band; the strings describe "
+            "consistency under this artifact's declared split ratio "
+            "and do not restate the widened band's verdicts",
+            "margin_rule": "the margin is computed from the stored "
+            "rounded values: the real held-out mean minus the "
+            "smallest member band value, rounded to four decimals",
+            "exclusion_rule": "the family's declared exclusion format "
+            "is not re-scoped by this artifact: it keys to the "
+            "declared 36-slot class under the inherited add-one form "
+            "exactly as the held-out screen declared it, so a "
+            "split-ratio verdict is split-geometry evidence and the "
+            "widened band's verdicts stand untouched by this "
+            "artifact's numbers",
+            "truthful_question": "declared in advance: does the "
+            "real's held-out score-half value still stand above the "
+            "band when the climb part shrinks to a quarter of each "
+            "side's counted pairs - a yes extends the separation to "
+            "a smaller search freedom, a no records that the margin "
+            "rode the climb half's size",
+            "corpus_facts": {},
+            "models": {},
+        },
+        "bridge_gate": {},
+        "files": {},
+    }
+    for language in LANGS:
+        name, ebook = REFERENCE_FILES[language]
+        stream = _reference_stream(language)
+        model = _shape_table(language)
+        table = model["table"]
+        full_matrix = _stream_matrix_27(stream)
+        block_held, block_climb, _bcp, _bsp = _block_identity_half_means(
+            stream, table
+        )
+        add_one_held, _acm, _acp, _asp = _identity_half_means(
+            stream, model["add_one_table"]
+        )
+        artifact["declared"]["models"][language] = {
+            "file": name,
+            "ebook": ebook,
+            "clean_identity_mean_nats_per_pair": round(
+                float((full_matrix * table).sum())
+                / float(full_matrix.sum()),
+                4,
+            ),
+            "block_climb_half_mean_nats_per_pair": round(block_climb, 4),
+            "block_score_half_mean_nats_per_pair": round(block_held, 4),
+            "add_one_parity_score_half_mean_nats_per_pair": round(
+                add_one_held, 4
+            ),
+            "pair_types_present": model["pair_types_present"],
+            "total_pairs": model["total_pairs"],
+            "max_abs_entry_delta": model["max_abs_entry_delta"],
+            "max_delta_type": model["max_delta_type"],
+            "mean_entry_delta_over_present": (
+                model["mean_entry_delta_over_present"]
+            ),
+        }
+    for code in FILES:
+        cell: dict = {}
+        for language in LANGS:
+            model = _shape_table(language)
+            facts = _block_cell_facts(
+                code, language, model["table"], model["letter_counts"],
+                split_pairs=_quarter_pairs,
+            )
+            positions = _extended_band_positions(language)
+            members = [
+                _block_band_for(
+                    code, language, seed_index,
+                    model["table"], model["letter_counts"],
+                    split_pairs=_quarter_pairs,
+                    members=_extended_reference_members(language),
+                )
+                for seed_index in positions
+            ]
+            member_values = [
+                member["recovered_best"] for member in members
+            ]
+            floor_max = max(facts["floors_held"])
+            band_min = min(member_values)
+            band_max = max(member_values)
+            if facts["real_held"] >= band_min:
+                verdict = "consistent-with-substitution"
+            elif facts["real_held"] <= floor_max:
+                verdict = "not-consistent"
+            else:
+                verdict = "below-held-band"
+            parity = [
+                bool(value >= facts["anchor"] - 0.0001)
+                for value in facts["plants_held"]
+            ]
+            above_anchor = [
+                round(value - facts["anchor"], 4)
+                for value in facts["plants_held"]
+                if value > facts["anchor"] + 0.0001
+            ]
+            cell[language] = {
+                "real_held_mean_nats": facts["real_held"],
+                "real_climb_mean_nats": facts["real_climb"],
+                "real_sweep_budget_hit": facts["real_hit"],
+                "real_full_exact_mean_nats": facts["real_full"],
+                "real_full_sweep_budget_hit": facts["real_full_hit"],
+                "counted_pairs": facts["counted"],
+                "climb_pairs": facts["climb_pairs"],
+                "score_pairs": facts["score_pairs"],
+                "plant_parity_anchor_mean_nats": facts["anchor"],
+                "plant_climb_identity_mean_nats": facts["anchor_climb"],
+                "self_plants_held_mean_nats": facts["plants_held"],
+                "self_plants_full_exact_mean_nats": facts["plants_full"],
+                "self_plants_at_parity": parity,
+                "self_plants_sweep_budget_hits": facts["plants_hits"],
+                "self_plants_full_sweep_budget_hits": (
+                    facts["plants_full_hits"]
+                ),
+                "machinery_above_anchor_excesses": above_anchor,
+                "floors_held_mean_nats": facts["floors_held"],
+                "floors_full_exact_mean_nats": facts["floors_full"],
+                "floors_sweep_budget_hits": facts["floors_hits"],
+                "floors_full_sweep_budget_hits": (
+                    facts["floors_full_hits"]
+                ),
+                "band": members,
+                "band_min": band_min,
+                "band_max": band_max,
+                "real_margin_over_band_min": round(
+                    facts["real_held"] - band_min, 4
+                ),
+                "verdict": verdict,
+            }
+        artifact["files"][code] = cell
+    artifact["bridge_gate"] = {
+        "status": "verified",
+        "fields_compared": fields,
+    }
+    return artifact
+
+
+def main_split_ratio() -> None:
+    artifact = substitution_homophonic_split_ratio()
+    RATIO_ARTIFACT_PATH.write_text(
+        json.dumps(artifact, indent=2) + "\n"
+    )
+    print(RATIO_ARTIFACT_PATH)
