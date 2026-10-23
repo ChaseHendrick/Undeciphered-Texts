@@ -968,6 +968,95 @@ mapping is published anywhere in this artifact, no recovered
 assignment is stored as a key, plaintext_recovered_percent stays 0,
 the reference prose is modern printed text outside the manuscript's
 century, and nothing here is a reading or a language claim.
+
+Ninth declared measurement, the restart budget, declared after the
+split's ratio held its margins and before any run of it beyond the
+probes it discloses.
+
+The declared design, before the run: the widened band measurement's
+six (file, language) cells re-measured at the top budget with the
+mapped set, streams, seed kinds, machinery, sweep cap, standing block
+fold (the split's ratio's 25/75 variant is not this measurement's
+split), plants, floors, widened band population (seven english and
+eight latin members), reference texts and leave-one-out tables carried
+forward unchanged, and every machinery call's restart count raised
+from the inherited 16 to the declared 48: one rank initialisation
+plus 47 seeded permutations, the extra restarts continuing each
+call's declared machinery kind's permutation stream (restarts 1 to 15
+replay the inherited budget's permutation draws exactly and restarts
+16 to 47 draw the next 32 permutations of the same stream at the same
+declared kind and position), consuming no new seed kind and no new
+position, so only the restart budget's depth changes and every
+recorded inherited-budget value re-prices only if a later restart
+strictly beats the running best beyond 1e-12, ties to the first
+restart. Every machinery call's 48 restarts record their exact
+means at full precision, and each call records family 4's declared
+convergence lens (the restarts agreeing to within 0.0001 mean nats
+per pair) as a recorded status that gates nothing: no verdict,
+margin, membership or exclusion depends on any flag, and band
+membership stays unconditional exactly as the held-out screen
+declared. The truthful question, declared in advance: does the
+real's held-out score-half value still stand above the band when
+every machinery call draws three times the inherited restart budget
+- a yes extends the separation to a deeper search, a no records that
+the margin rode the inherited budget's depth. The family's declared
+exclusion format is not re-scoped by this artifact: it keys to the
+declared 36-slot class under the inherited add-one form exactly as
+the held-out screen declared it, so the verdicts recorded here are
+search-depth evidence and the widened band's verdicts stand
+untouched, and the family stays open unless the declared exclusion
+fires.
+
+Corpus discipline: no new corpus files and no new candidates - the
+band population is the frozen widened band's declared roster and the
+references are the standing references' frozen files, all stored raw
+with their markers and processed by the standing declared
+processing.
+
+Mechanics, declared: the bridge gate first - before the deeper cells
+run, this measurement's full first cell (ZL english: the real, its
+five plants, its five floors and all seven widened band members)
+computed through this measurement's code with the inherited 16
+restarts supplied and every call's restarts recorded must equal the
+frozen widened-band artifact's own first cell field for field; any
+divergence aborts and nothing is written. The band re-scores its same
+members, same encodings and same draws at the same positions under
+the deeper budget; the deepen select rule re-prices the five exact
+climb-half totals (now the best of 48 recorded restarts each) and may
+pick a new best draw; verdict and margin rules are the held-out
+screen's rules applied to the restart-budget numbers; the strings
+describe consistency under this artifact's declared restart budget
+and do not restate the widened band's verdicts.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+bridge gate rehearsed: the restart-budget instrument's full first
+cell through the inherited 16 restarts equals the frozen
+widened-band artifact's first cell field for field (116 fields
+compared, no problem). Probe 2, the first cell's real under the 48
+restart budget ahead of the run: ZL english real_held -4.3747 (climb
+-4.4096, full -4.4282, no cap hit), its best restart index 46 of the
+48 (a late restart wins the climb), the 48 restarts' spread
+0.318299 mean nats per climb pair (the lens' flag false), anchor
+-5.1397, plants -4.6573, -4.7234, -4.6573, -4.7234, -4.7234 (no cap
+hits; restart spreads 0.360728, 0.246894, 0.312352, 0.197159 and
+0.18017, all flags false), floors -5.2332, -5.2353, -5.2441,
+-5.2323, -5.2361 (restart spreads 0.195404, 0.286865, 0.197602,
+0.187249 and 0.283267, all flags false), and the real's full-data
+side call spread 0.278468 (flag false). Probe 3, one band member at
+48 ahead of the run: ZL english member 0 (substref_english2_pg84)
+draws -4.6997, -4.651, -4.6997, -4.651, -4.651, selected draw 1,
+recovered_best -4.651, five-draw spread 0.0487, every draw's restart
+spread 0.222457 to 0.320722 with every flag false. Probe 4: none;
+the split-ratio artifact's and the rest of the widened band's
+members' values at the deeper budget and the five remaining cells
+are unseen until the declared run.
+
+The standing limitations are inherited from the held-out screen: no
+mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays 0,
+the reference prose is modern printed text outside the manuscript's
+century, and nothing here is a reading or a language claim.
 """
 
 from __future__ import annotations
@@ -5377,3 +5466,768 @@ def main_split_ratio() -> None:
         json.dumps(artifact, indent=2) + "\n"
     )
     print(RATIO_ARTIFACT_PATH)
+
+
+# --------------------------------------------------------------------------
+# The restart budget measurement, the ninth declared measurement
+# --------------------------------------------------------------------------
+
+
+RESTART_BUDGET = 48
+CONVERGENCE_TOLERANCE = 0.0001
+RESTART_BUDGET_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes" / "voynich-homophonic-restart-budget.json"
+)
+
+
+def machinery_best_held_recorded(
+    climb_matrix: np.ndarray,
+    score_matrix: np.ndarray,
+    table: np.ndarray,
+    letter_counts: np.ndarray,
+    rng: np.random.Generator,
+    restarts: int = N_RESTARTS,
+) -> tuple[float, float, bool, list[float]]:
+    """The declared held-out machinery with every restart's exact
+    climb-half total recorded.
+
+    The declared held-out machinery otherwise: restart 0 the rank
+    initialisation computed from the climb half, restarts 1 onward one
+    seeded permutation of the 27 letter tokens under the same wrap
+    rule consumed in the same order, the best restart the best exact
+    climb-half total with ties to the first restart, and the chosen
+    assignment priced exactly on the score half. Returns the chosen
+    assignment's mean nats per scored pair, its mean nats per climb
+    pair, whether any climb hit the declared sweep cap, and the
+    restarts' exact climb-half means in restart order at full
+    precision list. No assignment is returned and none is stored: the
+    recovered mapping is never published."""
+    symbols = climb_matrix.shape[0]
+    climb_pairs = climb_matrix.sum()
+    climb_total, sweeps, f_best = _held_climb(
+        climb_matrix, table, _rank_init(climb_matrix, letter_counts)
+    )
+    restart_totals = [float(climb_total) / float(climb_pairs)]
+    cap_hit = sweeps >= SWEEP_CAP
+    for _index in range(restarts - 1):
+        permutation = list(rng.permutation(27))
+        start = [permutation[symbol % 27] for symbol in range(symbols)]
+        score, sweeps, f = _held_climb(climb_matrix, table, start)
+        cap_hit = cap_hit or sweeps >= SWEEP_CAP
+        restart_totals.append(float(score) / float(climb_pairs))
+        if score > climb_total + 1e-12:
+            climb_total = score
+            f_best = f
+    climb_mean = float(climb_total) / float(climb_pairs)
+    held_mean = (
+        float((score_matrix * table[f_best][:, f_best]).sum())
+        / float(score_matrix.sum())
+    )
+    return held_mean, climb_mean, bool(cap_hit), restart_totals
+
+
+def machinery_exact_full_recorded(
+    matrix: np.ndarray,
+    table: np.ndarray,
+    letter_counts: np.ndarray,
+    rng: np.random.Generator,
+    restarts: int = N_RESTARTS,
+) -> tuple[float, bool, list[float]]:
+    """The declared exact full-data climb with every restart's exact
+    total recorded, otherwise the attribution side machinery of the
+    held-out measurement: restart 0 the rank initialisation, restarts
+    1 onward one seeded permutation each under the wrap rule, the best
+    the maximum exact total. Returns the best exact mean nats per
+    counted pair over the unsplit matrix, whether any climb hit the
+    declared sweep cap, and the restarts' exact means in restart order
+    at full precision."""
+    symbols = matrix.shape[0]
+    pairs = matrix.sum()
+    best, sweeps, _assignment = _held_climb(
+        matrix, table, _rank_init(matrix, letter_counts)
+    )
+    restart_totals = [float(best) / float(pairs)]
+    cap_hit = sweeps >= SWEEP_CAP
+    for _index in range(restarts - 1):
+        permutation = list(rng.permutation(27))
+        start = [permutation[symbol % 27] for symbol in range(symbols)]
+        score, sweeps, _assignment = _held_climb(matrix, table, start)
+        cap_hit = cap_hit or sweeps >= SWEEP_CAP
+        restart_totals.append(float(score) / float(pairs))
+        best = max(best, score)
+    return best / pairs, bool(cap_hit), restart_totals
+
+
+def _restart_convergence(totals: list[float]) -> bool:
+    """The declared convergence lens on one machinery call's recorded
+    restarts: family 4's declared agree-to-within-0.0001 precision
+    applied to the restarts' recorded exact means - the flag true when
+    the distance between the best and the worst recorded restart is at
+    most 0.0001 mean nats per pair. A recorded status only: no
+    verdict, margin, membership or exclusion depends on any flag."""
+    return (max(totals) - min(totals)) <= CONVERGENCE_TOLERANCE
+
+
+def _restart_cell_facts(
+    code: str, language: str,
+    table: np.ndarray, letter_counts: np.ndarray,
+    restarts: int = RESTART_BUDGET,
+) -> dict:
+    """Real, plants with their held-out anchor, and floors for one
+    cell under the standing block fold and the declared restart
+    budget, every machinery call's restarts recorded: the block fold's
+    cell facts with the restart count supplied and every call's
+    recorded restart totals and convergence flags added."""
+    real_stream = _homo_real_stream(code)
+    first, second = _kept_pairs(
+        real_stream["event_ids"], real_stream["kept_mask"]
+    )
+    climb_first, climb_second, score_first, score_second = (
+        _block_pairs(first, second)
+    )
+    climb_matrix = _matrix_from_pairs(climb_first, climb_second)
+    score_matrix = _matrix_from_pairs(score_first, score_second)
+    full_matrix = _count_matrix_37(
+        real_stream["event_ids"], real_stream["kept_mask"]
+    )
+    counted = int(full_matrix.sum())
+    climb_pairs = int(climb_matrix.sum())
+    score_pairs = int(score_matrix.sum())
+    real_rng = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["real"], LANG_ID[language], 0)
+    )
+    held_value, climb_value, cap_hit, real_totals = (
+        machinery_best_held_recorded(
+            climb_matrix, score_matrix, table, letter_counts, real_rng,
+            restarts=restarts,
+        )
+    )
+    real_held = round(held_value, 4)
+    real_climb = round(climb_value, 4)
+    real_hit = bool(cap_hit)
+    full_rng = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["real"], LANG_ID[language], 0)
+    )
+    full_value, full_hit, real_full_totals = machinery_exact_full_recorded(
+        full_matrix, table, letter_counts, full_rng, restarts=restarts
+    )
+    real_full = round(full_value, 4)
+    truncated = _truncated_reference(code, language)
+    anchor, anchor_climb, _climb_half, _score_half = (
+        _block_identity_half_means(truncated, table)
+    )
+    anchor = round(anchor, 4)
+    anchor_climb = round(anchor_climb, 4)
+    plants_held = []
+    plants_full = []
+    plants_hits = []
+    plants_full_hits = []
+    plants_totals = []
+    plants_full_totals = []
+    plants_convergence = []
+    plants_full_convergence = []
+    for index in range(N_PLANTS):
+        groups = _partition_groups(truncated, MAPPED_HOMO)
+        rng_enc = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_plant_enc"],
+                  LANG_ID[language], index)
+        )
+        plant = _encode(truncated, groups, rng_enc, MAPPED_HOMO)
+        plant_first, plant_second = _full_pairs(plant)
+        p_climb_first, p_climb_second, p_score_first, p_score_second = (
+            _block_pairs(plant_first, plant_second)
+        )
+        p_climb = _matrix_from_pairs(p_climb_first, p_climb_second)
+        p_score = _matrix_from_pairs(p_score_first, p_score_second)
+        p_full = _full_matrix_37(plant)
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_plant_mach"],
+                  LANG_ID[language], index)
+        )
+        value, _view, hit, totals = machinery_best_held_recorded(
+            p_climb, p_score, table, letter_counts, rng_mach,
+            restarts=restarts,
+        )
+        plants_held.append(round(value, 4))
+        plants_hits.append(bool(hit))
+        plants_totals.append(totals)
+        plants_convergence.append(_restart_convergence(totals))
+        rng_full = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_plant_mach"],
+                  LANG_ID[language], index)
+        )
+        value_full, hit_full, totals_full = (
+            machinery_exact_full_recorded(
+                p_full, table, letter_counts, rng_full,
+                restarts=restarts,
+            )
+        )
+        plants_full.append(round(value_full, 4))
+        plants_full_hits.append(bool(hit_full))
+        plants_full_totals.append(totals_full)
+        plants_full_convergence.append(_restart_convergence(totals_full))
+    floors_held = []
+    floors_full = []
+    floors_hits = []
+    floors_full_hits = []
+    floors_totals = []
+    floors_full_totals = []
+    floors_convergence = []
+    floors_full_convergence = []
+    for index in range(N_FLOORS):
+        rng_perm = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_floor_perm"],
+                  LANG_ID[language], index)
+        )
+        values = real_stream["kept_ids"].copy()
+        rng_perm.shuffle(values)
+        full = real_stream["event_ids"].copy()
+        full[real_stream["kept_mask"]] = values
+        floor_full = _count_matrix_37(full, real_stream["kept_mask"])
+        floor_first, floor_second = _kept_pairs(
+            full, real_stream["kept_mask"]
+        )
+        f_climb_first, f_climb_second, f_score_first, f_score_second = (
+            _block_pairs(floor_first, floor_second)
+        )
+        f_climb = _matrix_from_pairs(f_climb_first, f_climb_second)
+        f_score = _matrix_from_pairs(f_score_first, f_score_second)
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_floor_mach"],
+                  LANG_ID[language], index)
+        )
+        value, _view, hit, totals = machinery_best_held_recorded(
+            f_climb, f_score, table, letter_counts, rng_mach,
+            restarts=restarts,
+        )
+        floors_held.append(round(value, 4))
+        floors_hits.append(bool(hit))
+        floors_totals.append(totals)
+        floors_convergence.append(_restart_convergence(totals))
+        rng_full = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_floor_mach"],
+                  LANG_ID[language], index)
+        )
+        value_full, hit_full, totals_full = machinery_exact_full_recorded(
+            floor_full, table, letter_counts, rng_full, restarts=restarts
+        )
+        floors_full.append(round(value_full, 4))
+        floors_full_hits.append(bool(hit_full))
+        floors_full_totals.append(totals_full)
+        floors_full_convergence.append(_restart_convergence(totals_full))
+    return {
+        "real_held": real_held,
+        "real_climb": real_climb,
+        "real_hit": real_hit,
+        "real_full": real_full,
+        "real_full_hit": bool(full_hit),
+        "counted": counted,
+        "climb_pairs": climb_pairs,
+        "score_pairs": score_pairs,
+        "anchor": anchor,
+        "anchor_climb": anchor_climb,
+        "plants_held": plants_held,
+        "plants_full": plants_full,
+        "plants_hits": plants_hits,
+        "plants_full_hits": plants_full_hits,
+        "floors_held": floors_held,
+        "floors_full": floors_full,
+        "floors_hits": floors_hits,
+        "floors_full_hits": floors_full_hits,
+        "real_totals": real_totals,
+        "real_convergence": _restart_convergence(real_totals),
+        "real_full_totals": real_full_totals,
+        "real_full_convergence": _restart_convergence(real_full_totals),
+        "plants_totals": plants_totals,
+        "plants_convergence": plants_convergence,
+        "plants_full_totals": plants_full_totals,
+        "plants_full_convergence": plants_full_convergence,
+        "floors_totals": floors_totals,
+        "floors_convergence": floors_convergence,
+        "floors_full_totals": floors_full_totals,
+        "floors_full_convergence": floors_full_convergence,
+    }
+
+
+def _restart_band_for(
+    code: str, language: str, seed_index: int,
+    table: np.ndarray, letter_counts: np.ndarray,
+    members: list[tuple[str, int]] | None = None,
+    restarts: int = RESTART_BUDGET,
+) -> dict:
+    """One widened band member under the standing block fold and the
+    declared restart budget, every machinery call's restarts recorded:
+    the block fold's band facts with the restart count supplied, each
+    draw's restart totals and convergence flag recorded."""
+    if members is None:
+        members = _extended_reference_members(language)
+    name, ebook = members[seed_index]
+    truncated = _truncated_reference(code, language, file=name)
+    anchor, anchor_climb, _climb_half, _score_half = (
+        _block_identity_half_means(truncated, table)
+    )
+    anchor = round(anchor, 4)
+    anchor_climb = round(anchor_climb, 4)
+    rng_enc = np.random.default_rng(
+        _seed(CELL_ID[code], KIND_ID["homo_cross_enc"],
+              LANG_ID[language], seed_index)
+    )
+    draws_held = []
+    draws_climb = []
+    climbs_exact = []
+    draws_full = []
+    draw_hits = []
+    draw_full_hits = []
+    climb_totals = []
+    draws_totals = []
+    draws_full_totals = []
+    draws_convergence = []
+    draws_full_convergence = []
+    for _index in range(N_PLANTS):
+        groups = _partition_groups(truncated, MAPPED_HOMO)
+        encoded = _encode(truncated, groups, rng_enc, MAPPED_HOMO)
+        enc_first, enc_second = _full_pairs(encoded)
+        e_climb_first, e_climb_second, e_score_first, e_score_second = (
+            _block_pairs(enc_first, enc_second)
+        )
+        e_climb = _matrix_from_pairs(e_climb_first, e_climb_second)
+        e_score = _matrix_from_pairs(e_score_first, e_score_second)
+        e_full = _full_matrix_37(encoded)
+        rng_mach = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_cross_mach"],
+                  LANG_ID[language], seed_index)
+        )
+        value, climb_view, hit, draw_totals = (
+            machinery_best_held_recorded(
+                e_climb, e_score, table, letter_counts, rng_mach,
+                restarts=restarts,
+            )
+        )
+        rng_full = np.random.default_rng(
+            _seed(CELL_ID[code], KIND_ID["homo_cross_mach"],
+                  LANG_ID[language], seed_index)
+        )
+        value_full, hit_full, draw_full_totals = (
+            machinery_exact_full_recorded(
+                e_full, table, letter_counts, rng_full,
+                restarts=restarts,
+            )
+        )
+        draws_held.append(round(value, 4))
+        draws_climb.append(round(climb_view, 4))
+        climbs_exact.append(float(climb_view))
+        draws_full.append(round(value_full, 4))
+        draw_hits.append(bool(hit))
+        draw_full_hits.append(bool(hit_full))
+        climb_totals.append(climb_view)
+        draws_totals.append(draw_totals)
+        draws_convergence.append(_restart_convergence(draw_totals))
+        draws_full_totals.append(draw_full_totals)
+        draws_full_convergence.append(
+            _restart_convergence(draw_full_totals)
+        )
+    selected = 0
+    best_climb = climb_totals[0]
+    for position, total in enumerate(climb_totals):
+        if total > best_climb + 1e-12:
+            best_climb = total
+            selected = position
+    spread = round(max(draws_held) - min(draws_held), 4)
+    return {
+        "file": name,
+        "ebook": ebook,
+        "plant_length": len(truncated),
+        "anchor": anchor,
+        "anchor_climb": anchor_climb,
+        "draws": draws_held,
+        "draws_climb": draws_climb,
+        "draws_climb_exact": climbs_exact,
+        "draws_full": draws_full,
+        "draw_sweep_budget_hits": draw_hits,
+        "draw_full_sweep_budget_hits": draw_full_hits,
+        "selected_draw_index": selected,
+        "recovered_best": draws_held[selected],
+        "spread": spread,
+        "draws_restart_totals": draws_totals,
+        "draws_convergence": draws_convergence,
+        "draws_full_restart_totals": draws_full_totals,
+        "draws_full_convergence": draws_full_convergence,
+    }
+
+
+def _compare_restart_to_ratio() -> tuple[list[str], int]:
+    """The declared bridge gate: the restart-budget instrument's full
+    first cell (ZL english: the real, its five plants, its five floors
+    and all seven widened band members) computed through this
+    measurement's code with the inherited 16 restarts supplied and
+    every call's restarts recorded must equal the frozen widened-band
+    artifact's own first cell field for field, so the only difference
+    from the frozen widened-band measurement is the restart budget's
+    depth. Any divergence aborts with nothing written."""
+    problems: list[str] = []
+    fields = 0
+    code, language = "ZL", "english"
+    frozen = json.loads(WIDENED_BAND_ARTIFACT_PATH.read_text())
+    stored = frozen["files"][code][language]
+    model = _shape_table(language)
+    facts = _restart_cell_facts(
+        code, language, model["table"], model["letter_counts"],
+        restarts=N_RESTARTS,
+    )
+    for key, cell_key in _CELL_FIELD_MAP.items():
+        fields += 1
+        if facts[key] != stored[cell_key]:
+            problems.append(
+                f"cell/{key}: stored {stored[cell_key]!r} vs fresh "
+                f"{facts[key]!r}"
+            )
+    members = _extended_reference_members(language)
+    for seed_index in _extended_band_positions(language):
+        fresh = _restart_band_for(
+            code, language, seed_index,
+            model["table"], model["letter_counts"],
+            members=members, restarts=N_RESTARTS,
+        )
+        stored_member = stored["band"][seed_index]
+        for key, value in stored_member.items():
+            fields += 1
+            if fresh[key] != value:
+                problems.append(
+                    f"band/{seed_index}/{key}: stored {value!r} vs "
+                    f"fresh {fresh[key]!r}"
+                )
+    return problems, fields
+
+
+def substitution_homophonic_restart_budget() -> dict:
+    """The declared restart budget: the widened band measurement's six
+    (file, language) cells with their real, plants, floors, band
+    population, seeds, machinery, sweep payouts, split, leave-one-out
+    tables and reference texts replayed unchanged, and every machinery
+    call's restart count raised from the inherited 16 to the declared
+    48 with each call's restarts recorded and family 4's declared
+    convergence lens applied, after the bridge gate proves this
+    measurement's code reproduces the frozen widened-band artifact's
+    first cell field for field through the inherited budget."""
+    problems, fields = _compare_restart_to_ratio()
+    if problems:
+        raise RuntimeError(
+            "the bridge gate failed: " + "; ".join(problems[:12])
+        )
+    artifact: dict = {
+        "what": "The declared restart budget: the widened band "
+        "measurement's six (file, language) cells re-measured with the "
+        "mapped set, streams, seeds, machinery, sweep cap, block "
+        "split, plants, floors, band population and leave-one-out "
+        "tables carried forward unchanged, and each machinery call's "
+        "restart count raised from the inherited 16 to the declared "
+        "48, so every side searches three times the inherited depth "
+        "under the same instrument. The bridge gate re-derived the "
+        "frozen widened-band artifact's first cell through the "
+        "inherited budget before the deeper cells ran. The declared "
+        "truthful question: does the real's held-out score-half value "
+        "still stand above the band when every machinery call draws "
+        "three times the inherited restart budget. No mapping is "
+        "published; nothing here is a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "restarts": RESTART_BUDGET,
+            "restarts_inherited": N_RESTARTS,
+            "sweep_cap": SWEEP_CAP,
+            "plants_per_cell": N_PLANTS,
+            "floors": N_FLOORS,
+            "band_positions": {
+                language: len(_extended_reference_members(language))
+                for language in LANGS
+            },
+            "restarts_rule": "the declared restart budget 48 per "
+            "machinery call (one rank initialisation plus 47 seeded "
+            "permutations), up from the inherited 16; the extra "
+            "restarts continue each call's declared machinery kind's "
+            "permutation stream, restarts 1 to 15 replaying the "
+            "inherited budget's permutation draws exactly and "
+            "restarts 16 to 47 drawing the next 32 permutations of "
+            "the same stream at the same declared kind and position, "
+            "consuming no new seed kind and no new position; every "
+            "recorded inherited-budget value re-prices only if a "
+            "later restart strictly beats the running best beyond "
+            "1e-12, ties to the first restart, so the first 16 "
+            "restarts of every call are byte-identical replays of "
+            "the frozen widened band's declared draws and only the "
+            "restart budget's depth changes; deterministic, "
+            "consuming no new seed",
+            "convergence_rule": "every machinery call records its "
+            "restarts at full precision, the exact climb-half means "
+            "for the held-out machinery and the exact full-data means "
+            "for the full side machinery, and each call records a "
+            "declared convergence lens, family 4's declared "
+            "agree-to-within-0.0001 precision applied to the "
+            "restarts' recorded means: a call's flag true when the "
+            "distance between its best and its worst recorded "
+            "restart is at most 0.0001 mean nats per pair. The flags "
+            "are recorded facts; no verdict, margin, membership or "
+            "exclusion depends on any flag, and band membership "
+            "stays unconditional exactly as the held-out screen "
+            "declared",
+            "loo_rule": "the shape measurement's leave-one-out table "
+            "carried forward unchanged: the inherited add-one form is "
+            "log((n_ab + 1) / (N + 729)) with N the standing "
+            "reference stream's total counted pairs; every pair type "
+            "(a, b) present in the reference pair table is scored "
+            "with one occurrence of (a, b) removed from the reference "
+            "counts, log(n_ab / (N + 728)), and a type with no "
+            "counted occurrence keeps the inherited add-one entry "
+            "log(1 / (N + 729)); the letter marginals and rank "
+            "initialisation unchanged, the matrix arithmetic needing "
+            "no re-derivation as the shape measurement declared",
+            "split_rule": "the block fold's split carried unchanged "
+            "from the widened band: the counted pairs of each side, "
+            "in stream order, split at the midpoint, the first "
+            "floor(N/2) pairs the climb half the machinery may "
+            "search and the remaining pairs the score half it may "
+            "never touch; the split's ratio's 25/75 variant is not "
+            "this measurement's split, and every identity anchor's "
+            "halves fold by the standing block rule; deterministic, "
+            "consuming no seed",
+            "measured_facts_rule": "the mapped set, streams, seeds, "
+            "machinery, sweep cap, block split, plants, floors, band "
+            "population and reference texts are the held-out "
+            "screen's, block-fold measurement's and widened band's "
+            "declarations carried unchanged; every machinery call "
+            "climbs the declared 48 restarts by continuing the "
+            "frozen widened-band draws' permutation streams, so "
+            "only the restart budget's depth changes and every "
+            "recorded inherited-budget value re-prices only on "
+            "strict improvement beyond 1e-12, ties to the first "
+            "restart; the per-restart recording is new to this "
+            "artifact at full precision and each call's exact "
+            "full-data side call stays recorded beside its held-out "
+            "value for attribution only",
+            "machinery_rule": "unchanged from the held-out screen, "
+            "recorded: the exact greedy reassignment climb on the "
+            "climb half, exact pricing on the score half, restart 0 "
+            "the rank initialisation from the climb half, restarts "
+            "1 to 47 the seeded permutations of the 27 letter tokens "
+            "under the wrap rule, the best restart the best exact "
+            "climb-half total with ties to the first; every "
+            "restart's exact total recorded; no assignment is "
+            "stored",
+            "seed_kinds": {
+                "real": KIND_ID["real"],
+                "homo_plant": [KIND_ID["homo_plant_enc"],
+                               KIND_ID["homo_plant_mach"]],
+                "homo_floor": [KIND_ID["homo_floor_perm"],
+                               KIND_ID["homo_floor_mach"]],
+                "homo_cross": [KIND_ID["homo_cross_enc"],
+                               KIND_ID["homo_cross_mach"]],
+            },
+            "seed_sharing": "no new seed kinds are consumed: the "
+            "real, plants, floors and band members replay the "
+            "declared draws from the declared kinds at the declared "
+            "positions exactly as the frozen widened band consumed "
+            "them, the extra restarts drawing continuations "
+            "of the same machinery streams, the split consuming no "
+            "seed; consuming none of any other module's declared "
+            "draws",
+            "bridge_gate": "before the deeper cells run, the "
+            "restart-budget instrument's full first cell (ZL "
+            "english: the real, its five plants, its five floors "
+            "and its seven widened band members) is computed through "
+            "this measurement's code with the inherited 16 restarts "
+            "supplied and every call's restarts recorded, and "
+            "compared field for field against the frozen "
+            "widened-band artifact's own first cell; any divergence "
+            "aborts with nothing written",
+            "corpus_source_rule": "no new corpus files: this "
+            "measurement declares no candidates and records no "
+            "corpus roster; the band population is the frozen "
+            "widened band's declared roster and the references are "
+            "the standing references' frozen files, all stored raw "
+            "with their Gutenberg markers and processed by the "
+            "standing declared processing",
+            "band_record_rule": "membership, selection, ties and "
+            "spreads are declared unchanged from the held-out screen "
+            "(a member's band value the held-out value of the draw "
+            "whose exact climb-half total is best, strict beyond "
+            "1e-12, ties to the first draw); each member records "
+            "draws_climb_exact, its five climb-half totals at full "
+            "precision, now the best of each draw's 48 recorded "
+            "restarts, every draw's restart totals at full "
+            "precision and every draw's convergence flag; "
+            "membership unconditional: every band member enters the "
+            "band under the declared restart budget exactly as "
+            "under the inherited budget and no convergence "
+            "criterion is applied to any member",
+            "verdict_rule": "unchanged from the held-out screen and "
+            "applied to the restart-budget numbers: the real "
+            "held-out at or above the smallest member band value is "
+            "consistent-with-substitution, at or below the largest "
+            "floor's held-out value is not-consistent, strictly "
+            "between is below-held-band; the strings describe "
+            "consistency under this artifact's declared restart "
+            "budget and do not restate the widened band's verdicts",
+            "margin_rule": "the margin is computed from the stored "
+            "rounded values: the real held-out mean minus the "
+            "smallest member band value, rounded to four decimals",
+            "exclusion_rule": "the family's declared exclusion format "
+            "is not re-scoped by this artifact: it keys to the "
+            "declared 36-slot class under the inherited add-one form "
+            "exactly as the held-out screen declared it, so a "
+            "restart-budget verdict is search-depth evidence and "
+            "the widened band's verdicts stand untouched by this "
+            "artifact's numbers",
+            "truthful_question": "declared in advance: does the "
+            "real's held-out score-half value still stand above the "
+            "band when every machinery call draws three times the "
+            "inherited restart budget - a yes extends the "
+            "separation to a deeper search, a no records that the "
+            "margin rode the inherited budget's depth",
+            "corpus_facts": {},
+            "models": {},
+        },
+        "bridge_gate": {},
+        "files": {},
+    }
+    for language in LANGS:
+        name, ebook = REFERENCE_FILES[language]
+        stream = _reference_stream(language)
+        model = _shape_table(language)
+        table = model["table"]
+        full_matrix = _stream_matrix_27(stream)
+        block_held, block_climb, _bcp, _bsp = _block_identity_half_means(
+            stream, table
+        )
+        add_one_held, _acm, _acp, _asp = _identity_half_means(
+            stream, model["add_one_table"]
+        )
+        artifact["declared"]["models"][language] = {
+            "file": name,
+            "ebook": ebook,
+            "clean_identity_mean_nats_per_pair": round(
+                float((full_matrix * table).sum())
+                / float(full_matrix.sum()),
+                4,
+            ),
+            "block_climb_half_mean_nats_per_pair": round(block_climb, 4),
+            "block_score_half_mean_nats_per_pair": round(block_held, 4),
+            "add_one_parity_score_half_mean_nats_per_pair": round(
+                add_one_held, 4
+            ),
+            "pair_types_present": model["pair_types_present"],
+            "total_pairs": model["total_pairs"],
+            "max_abs_entry_delta": model["max_abs_entry_delta"],
+            "max_delta_type": model["max_delta_type"],
+            "mean_entry_delta_over_present": (
+                model["mean_entry_delta_over_present"]
+            ),
+        }
+    for code in FILES:
+        cell: dict = {}
+        for language in LANGS:
+            model = _shape_table(language)
+            facts = _restart_cell_facts(
+                code, language, model["table"], model["letter_counts"],
+                restarts=RESTART_BUDGET,
+            )
+            positions = _extended_band_positions(language)
+            members = [
+                _restart_band_for(
+                    code, language, seed_index,
+                    model["table"], model["letter_counts"],
+                    members=_extended_reference_members(language),
+                    restarts=RESTART_BUDGET,
+                )
+                for seed_index in positions
+            ]
+            member_values = [
+                member["recovered_best"] for member in members
+            ]
+            floor_max = max(facts["floors_held"])
+            band_min = min(member_values)
+            band_max = max(member_values)
+            if facts["real_held"] >= band_min:
+                verdict = "consistent-with-substitution"
+            elif facts["real_held"] <= floor_max:
+                verdict = "not-consistent"
+            else:
+                verdict = "below-held-band"
+            parity = [
+                bool(value >= facts["anchor"] - 0.0001)
+                for value in facts["plants_held"]
+            ]
+            above_anchor = [
+                round(value - facts["anchor"], 4)
+                for value in facts["plants_held"]
+                if value > facts["anchor"] + 0.0001
+            ]
+            cell[language] = {
+                "real_held_mean_nats": facts["real_held"],
+                "real_climb_mean_nats": facts["real_climb"],
+                "real_sweep_budget_hit": facts["real_hit"],
+                "real_full_exact_mean_nats": facts["real_full"],
+                "real_full_sweep_budget_hit": facts["real_full_hit"],
+                "counted_pairs": facts["counted"],
+                "climb_pairs": facts["climb_pairs"],
+                "score_pairs": facts["score_pairs"],
+                "plant_parity_anchor_mean_nats": facts["anchor"],
+                "plant_climb_identity_mean_nats": facts["anchor_climb"],
+                "self_plants_held_mean_nats": facts["plants_held"],
+                "self_plants_full_exact_mean_nats": facts["plants_full"],
+                "self_plants_at_parity": parity,
+                "self_plants_sweep_budget_hits": facts["plants_hits"],
+                "self_plants_full_sweep_budget_hits": (
+                    facts["plants_full_hits"]
+                ),
+                "machinery_above_anchor_excesses": above_anchor,
+                "floors_held_mean_nats": facts["floors_held"],
+                "floors_full_exact_mean_nats": facts["floors_full"],
+                "floors_sweep_budget_hits": facts["floors_hits"],
+                "floors_full_sweep_budget_hits": (
+                    facts["floors_full_hits"]
+                ),
+                "real_restart_totals": facts["real_totals"],
+                "real_convergence": facts["real_convergence"],
+                "real_full_restart_totals": facts["real_full_totals"],
+                "real_full_convergence": (
+                    facts["real_full_convergence"]
+                ),
+                "plants_restart_totals": facts["plants_totals"],
+                "plants_convergence": facts["plants_convergence"],
+                "plants_full_restart_totals": (
+                    facts["plants_full_totals"]
+                ),
+                "plants_full_convergence": (
+                    facts["plants_full_convergence"]
+                ),
+                "floors_restart_totals": facts["floors_totals"],
+                "floors_convergence": facts["floors_convergence"],
+                "floors_full_restart_totals": (
+                    facts["floors_full_totals"]
+                ),
+                "floors_full_convergence": (
+                    facts["floors_full_convergence"]
+                ),
+                "band": members,
+                "band_min": band_min,
+                "band_max": band_max,
+                "real_margin_over_band_min": round(
+                    facts["real_held"] - band_min, 4
+                ),
+                "verdict": verdict,
+            }
+        artifact["files"][code] = cell
+    artifact["bridge_gate"] = {
+        "status": "verified",
+        "fields_compared": fields,
+    }
+    return artifact
+
+
+def main_restart_budget() -> None:
+    artifact = substitution_homophonic_restart_budget()
+    RESTART_BUDGET_ARTIFACT_PATH.write_text(
+        json.dumps(artifact, indent=2) + "\n"
+    )
+    print(RESTART_BUDGET_ARTIFACT_PATH)
