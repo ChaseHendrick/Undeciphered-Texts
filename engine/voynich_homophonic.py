@@ -754,6 +754,140 @@ mapping is published anywhere in this artifact, no recovered
 assignment is stored as a key, plaintext_recovered_percent stays 0,
 the reference prose is modern printed text outside the manuscript's
 century, and nothing here is a reading or a language claim.
+
+Seventh declared measurement, the alternate reference corpora,
+declared after the widened band held its margins and before any run
+of it beyond the probes it discloses.
+
+The declared design, before the run: the widened band measurement's
+six (file, language) cells re-scored at the top budget with the
+mapped set, streams, seed kinds, machinery, restart and sweep
+budgets, floors, block split and band population carried forward
+unchanged, and every scored table rebuilt from a single declared
+alternate reference outside the band, one per language: english
+substref_english9_pg76.txt, Adventures of Huckleberry Finn (Twain),
+ebook 76, and latin substref_latin10_pg60772.txt, Evagatorium
+volumen secundum (Fabri), ebook 60772. The leave-one-out form is
+carried exactly onto the alternate reference's counts, present pair
+types log(n_ab / (N + 728)) and absent types the add-one floor
+log(1 / (N + 729)), with the alternate reference's letter marginals
+driving the rank initialisation; each cell's five plants become
+encodings of the declared alternate reference text truncated to the
+declared length, from the declared plant kinds 24 and 25 at the
+declared positions 0 to 4; the real, the floors and every band
+member's encodings are byte-identical replays of the frozen
+artifacts' declared draws. The truthful question, declared in
+advance: does the real's held-out score-half value still stand above
+the band when the scored tables are rebuilt from single alternate
+references outside the band - a yes extends the separation across
+the reference scope, a no records that the margin rode the standing
+references' single choice. The family's declared exclusion format is
+not re-scoped by this artifact: it keys to the declared 36-slot
+class under the inherited add-one form exactly as the held-out
+screen declared it, so the verdicts recorded here are reference
+-scope evidence, the widened band's verdicts stand untouched, and
+the family stays open unless the declared exclusion fires.
+
+Corpus discipline, declared and disclosed before the run. The
+alternate references live outside every standing reference, cross
+reference, widened and extended band membership list, one per
+language, frozen under the declared corpus rules: each candidate
+fetched from the standing members' plain text source in cache form,
+each accepted file stored raw under engine/data with its Gutenberg
+markers and processed by the standing declared processing with no
+new step, a sha256 recorded, and candidates probed in their marker
+spans before acceptance with the sixth measurement's probes (the
+apparatus probe on latin spans, the processed stream and mid-span
+samples). English: substref_english9_pg76.txt, Adventures of
+Huckleberry Finn (Twain), sha256
+d617a37aa7ae1e1a93dcde2634db2bccb86824e31e29a55230bdbf77d6872d59,
+file 622,460 bytes, body 583,036, stream 545,629 tokens (427,847
+letters, 117,782 boundary), all 27 types present; modern printed
+english prose in a vernacular first-person American register, a
+declared register contrast with the standing english reference's
+prose, and the declared design freezes one alternate per language.
+Latin: substref_latin10_pg60772.txt, Evagatorium volumen secundum
+(Fabri), sha256
+579e27d7d1f944ab38355276e566f9e7c5a214754d8614bc9decba94bf0c68b2,
+file 1,223,255 bytes, body 1,202,888, stream 1,138,187 tokens
+(968,923 letters, 169,264 boundary), all 27 types present, 12
+english common-word hits distributed 6 head, then 2 and 4 trailing
+(deciles 6, 0, 0, 0, 0, 0, 0, 0, 2, 4) - the same producer format
+and scaffolding scale as the accepted latin members. One
+circumstance disclosed rather than resolved by another swap:
+pg60772 is volume two of the same printed travel account whose
+volume one, pg58528, is the widened band's latin9 member; the
+remaining probed candidates were rejected with cause or terse in
+form and the design keeps the declared single alternate. Rejected
+with cause, verbatim: pg9090 Germania and Agricola (Tacitus),
+english school commentary interleaved through the span (5,109 hits
+in every decile; mid-span in english: "But _referantur_ is the
+reading of all the MSS., and needs no emendation"); pg66595
+Monumentum Ancyranum: The Deeds of Augustus, the editor's english
+bibliographic apparatus through the span (2,813 hits in every
+decile; mid-span a bibliography list: "enal, Decimus Junius (Juv.)
+=: _Satirae (Sat.)_. =Livius, Titus (Livy)=: _Annales_;"); pg16400
+De M. Terenti Varronis Libris Grammaticis (Varro), a mid-span
+english transcriber note disclosing the fragment fabric:
+"Most fragments have three elements: --original text, shown with
+line numbers; --commentary and testimonia, indented in the same way
+as footnotes; --critical apparatus keyed to line numbers in the
+text" (24 hits, 8 of them at sixth-decile notes of this kind,
+against the accepted members' zero mid-span english). Probed clean
+and not selected by the declared design: pg345 Dracula (Stoker), a
+clean modern english prose span (body 861,410 bytes, stream 806,705
+tokens, all 27 types), the one-per-language design keeping pg76 as
+english's declared alternate; pg20771 Species Plantarum, Sections
+I-III (Linnaeus), inside the standing scaffold scale (49 hits: 14
+in a head sidenote-format transcriber block, 35 trailing) and not
+selected on form: terse nominal taxonomic description rather than
+connected prose, with Linnaeus's own inline citations
+("_T. Scheuchz. gram. 354._") through the descriptions.
+
+Mechanics, declared: the bridge gate first - before the alternate
+cells run, this measurement's full first cell (ZL english: the
+real, its five plants of the standing reference text, its five
+floors and all seven widened band members) computed through this
+measurement's code with the standing reference supplied must equal
+the frozen widened-band artifact's own first cell field for field;
+any divergence aborts and nothing is written. The band re-scores
+its same members, same encodings and same draws under the alternate
+table at the same positions (english 0 to 6, latin 0 to 7); verdict
+and margin rules are the held-out screen's rules applied to the
+reference-scope numbers; the strings describe consistency under
+this artifact's declared reference scope and do not restate the
+widened band's verdicts.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+bridge gate rehearsed: the alternate instrument's full first cell
+through the standing reference equals the frozen widened-band
+artifact's first cell field for field (116 fields compared: the 18
+cell facts and all seven members' 14 record keys each, no
+problem). Probe 2, the alternate references' facts: english file
+622,460 bytes, body 583,036, stream 545,629 tokens (427,847
+letters), all 27 types; latin file 1,223,255 bytes, body 1,202,888,
+stream 1,138,187 tokens (968,923 letters), all 27 types, 12 english
+hits. Probe 3, the alternate tables' facts: english 501 pair types
+present of 729 over 545,628 counted pairs, max entry delta
+0.693145 over add-one at type [1, 12], mean delta over present
+types -0.0824, the reference's full-stream identity -5.0189 nats
+per pair (block halves -5.0386 climb and -4.9993 score, add-one
+parity -5.0181); latin 490 types present over 1,138,186 counted
+pairs, max delta 0.693146 at type [0, 10], mean delta -0.093635,
+full-stream identity -5.116 (block halves -5.1208 and -5.1112,
+add-one parity -5.1153). Probe 4, the first cell's real under the
+alternate tables ahead of the run: ZL english real_held -4.3116
+(climb -4.3127, full -4.3114, no cap hit), anchor -5.0298, plants
+-4.6427 to -4.6997 encodings of the alternate reference text,
+floors -5.185, -5.1849, -5.3511, -5.1847, -5.3442. The band values
+under the alternate tables are unseen until the declared run.
+
+The standing limitations are inherited from the held-out screen: no
+mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays 0,
+the reference prose is modern printed text outside the manuscript's
+century, and nothing here is a reading or a language claim.
 """
 
 from __future__ import annotations
@@ -3317,13 +3451,17 @@ def _block_cell_facts(
     code: str, language: str,
     table: np.ndarray, letter_counts: np.ndarray,
     split_pairs=_block_pairs,
+    reference_file: str | None = None,
 ) -> dict:
     """Real, plants with their held-out anchor, and floors for one
     cell, each under the declared split, the exact reassignment climb
     on the climb half and the exact pricing on the score half, with
     the exact full-data side call recorded beside each score: the
     shape measurement's cell facts with the split supplied instead of
-    the parity rule."""
+    the parity rule. The reference_file parameter supplies a declared
+    reference text outside the standing reference as the source of the
+    anchor and the plants, None meaning the standing reference and
+    every earlier caller unchanged."""
     real_stream = _homo_real_stream(code)
     first, second = _kept_pairs(
         real_stream["event_ids"], real_stream["kept_mask"]
@@ -3356,7 +3494,7 @@ def _block_cell_facts(
         full_matrix, table, letter_counts, full_rng, restarts=N_RESTARTS
     )
     real_full = round(full_value, 4)
-    truncated = _truncated_reference(code, language)
+    truncated = _truncated_reference(code, language, file=reference_file)
     anchor, anchor_climb, _climb_half, _score_half = (
         _block_identity_half_means(truncated, table, split_pairs)
     )
@@ -4311,3 +4449,502 @@ def main_widened_band() -> None:
         json.dumps(artifact, indent=2) + "\n"
     )
     print(WIDENED_BAND_ARTIFACT_PATH)
+
+
+# --------------------------------------------------------------------------
+# The alternate reference measurement, the seventh declared measurement
+# --------------------------------------------------------------------------
+
+
+ALTERNATE_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes" / "voynich-homophonic-alternate-reference.json"
+)
+
+ALTERNATE_REFERENCE_FILES: dict[str, tuple[str, int, str]] = {
+    "english": (
+        "substref_english9_pg76.txt", 76,
+        "Adventures of Huckleberry Finn (Twain)",
+    ),
+    "latin": (
+        "substref_latin10_pg60772.txt", 60772,
+        "Evagatorium volumen secundum (Fabri)",
+    ),
+}
+
+REJECTED_ALTERNATE_CANDIDATES: list[dict] = [
+    {"ebook": 9090, "label": "Germania and Agricola (Tacitus)",
+     "cause": "english school commentary interleaved through the span "
+     "(5,109 english common-word hits in every decile; mid-span in "
+     "english: \"But _referantur_ is the reading of all the MSS., "
+     "and needs no emendation\")"},
+    {"ebook": 66595, "label": "Monumentum Ancyranum: The Deeds of "
+     "Augustus",
+     "cause": "the editor's english bibliographic apparatus runs "
+     "through the span (2,813 english common-word hits in every "
+     "decile; mid-span a bibliography list: \"enal, Decimus Junius "
+     "(Juv.)=: _Satirae (Sat.)_. =Livius, Titus (Livy)=: "
+     "_Annales_;\")"},
+    {"ebook": 16400, "label": "De M. Terenti Varronis Libris "
+     "Grammaticis (Varro)",
+     "cause": "a mid-span transcriber note in english discloses the "
+     "fragment fabric interleaved with the text: \"Most fragments "
+     "have three elements: --original text, shown with line numbers; "
+     "--commentary and testimonia, indented in the same way as "
+     "footnotes; --critical apparatus keyed to line numbers in the "
+     "text\" (24 english hits against the accepted members' zero "
+     "mid-span english, 8 of them at sixth-decile notes of this "
+     "kind)"},
+]
+
+PROBED_NOT_SELECTED_ALTERNATES: list[dict] = [
+    {"ebook": 345, "label": "Dracula (Stoker)",
+     "cause": "probed clean under the declared processing (body "
+     "861,410 bytes, stream 806,705 tokens, all 27 types) and not "
+     "selected: the declared design freezes one alternate reference "
+     "per language and the english alternate declared this "
+     "measurement is pg76"},
+    {"ebook": 20771, "label": "Species Plantarum, Sections I-III "
+     "(Linnaeus)",
+     "cause": "probed inside the standing english scaffold scale (49 "
+     "hits: 14 in a head sidenote-format transcriber block, 35 in a "
+     "trailing english essay: \"Most of their citations would today "
+     "be listed as \"personal communication\".\") and not selected on "
+     "form: the body is terse nominal taxonomic description rather "
+     "than connected prose, with Linnaeus's own inline citations "
+     "(\"_T. Scheuchz. gram. 354._\") through the descriptions, and "
+     "the declared latin alternate bar wants latin prose"},
+]
+
+_ALTERNATE_MODELS: dict[str, dict] = {}
+
+
+def _alternate_table(language: str) -> dict:
+    """The declared leave-one-out form of the alternate reference's
+    bigram table: the shape measurement's leave-one-out form built
+    from the declared alternate reference's stream instead of the
+    standing reference's, with the same inherited add-one backing
+    table and the alternate's letter marginals for the rank
+    initialisation."""
+    if language in _ALTERNATE_MODELS:
+        return _ALTERNATE_MODELS[language]
+    name, _ebook, _label = ALTERNATE_REFERENCE_FILES[language]
+    stream = _reference_stream(language, file=name)
+    add_one, letter_counts = table_from_stream(stream)
+    ids = np.array(stream, dtype=np.int64)
+    matrix = np.zeros((27, 27))
+    np.add.at(matrix, (ids[:-1], ids[1:]), 1.0)
+    total = int(matrix.sum())
+    table = add_one.copy()
+    present = matrix >= 1.0
+    table[present] = np.log(matrix[present] / float(total + 728.0))
+    delta = table - add_one
+    argmax = np.unravel_index(
+        int(np.argmax(np.abs(delta))), delta.shape
+    )
+    model = {
+        "table": table,
+        "letter_counts": letter_counts,
+        "add_one_table": add_one,
+        "pair_types_present": int(present.sum()),
+        "total_pairs": total,
+        "max_abs_entry_delta": round(float(np.abs(delta).max()), 6),
+        "max_delta_type": [int(argmax[0]), int(argmax[1])],
+        "mean_entry_delta_over_present": round(
+            float(delta[present].mean()), 6
+        ),
+    }
+    _ALTERNATE_MODELS[language] = model
+    return model
+
+
+def _compare_alternate_to_widened() -> tuple[list[str], int]:
+    """The declared bridge gate: the alternate instrument's full first
+    cell (ZL english: the real, its five plants, its five floors and
+    all seven widened band members) computed through this
+    measurement's code with the standing reference supplied must equal
+    the frozen widened-band artifact's own first cell field for
+    field, so the only difference from the frozen widened measurement
+    is the scored reference. Any divergence aborts with nothing
+    written."""
+    problems: list[str] = []
+    fields = 0
+    code, language = "ZL", "english"
+    frozen = json.loads(WIDENED_BAND_ARTIFACT_PATH.read_text())
+    stored = frozen["files"][code][language]
+    model = _shape_table(language)
+    facts = _block_cell_facts(
+        code, language, model["table"], model["letter_counts"]
+    )
+    for key, value in facts.items():
+        fields += 1
+        if stored[_CELL_FIELD_MAP[key]] != value:
+            problems.append(
+                f"cell/{key}: stored {stored[_CELL_FIELD_MAP[key]]!r} vs "
+                f"fresh {value!r}"
+            )
+    members = _extended_reference_members(language)
+    for seed_index in _extended_band_positions(language):
+        fresh = _block_band_for(
+            code, language, seed_index,
+            model["table"], model["letter_counts"], members=members,
+        )
+        stored_member = stored["band"][seed_index]
+        for key, value in fresh.items():
+            fields += 1
+            if stored_member[key] != value:
+                problems.append(
+                    f"band/{seed_index}/{key}: stored "
+                    f"{stored_member[key]!r} vs fresh {value!r}"
+                )
+    return problems, fields
+
+
+def substitution_homophonic_alternate_reference() -> dict:
+    """The declared alternate reference corpora: the widened band
+    measurement's six (file, language) cells with their real, plants,
+    floors, split, band population, seeds and machinery replayed
+    unchanged, re-scored under leave-one-out tables rebuilt from
+    single alternate references declared outside the band, one per
+    language, after the bridge gate proves this measurement's code
+    reproduces the frozen widened-band artifact's first cell field
+    for field through the standing reference."""
+    problems, fields = _compare_alternate_to_widened()
+    if problems:
+        raise RuntimeError(
+            "the bridge gate failed: " + "; ".join(problems[:12])
+        )
+    artifact: dict = {
+        "what": "The declared alternate reference corpora: the "
+        "widened band measurement's six (file, language) cells "
+        "re-scored with the mapped set, streams, seeds, machinery, "
+        "restarts, sweep cap, plants, floors, block-fold split and "
+        "band population carried forward unchanged and every scored "
+        "table rebuilt from single declared alternate references "
+        "outside the band (english pg76 Twain, latin pg60772 Fabri "
+        "volumen secundum), so the real is priced against the same "
+        "band under a reference scope no longer the standing "
+        "references' single choice. The bridge gate re-derived the "
+        "frozen widened-band artifact's first cell through the "
+        "standing reference before the alternate cells ran. The "
+        "declared truthful question: does the real's held-out "
+        "score-half value still stand above the band when the "
+        "scored tables are rebuilt from the alternate references. "
+        "No mapping is published; nothing here is a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "restarts": N_RESTARTS,
+            "sweep_cap": SWEEP_CAP,
+            "plants_per_cell": N_PLANTS,
+            "floors": N_FLOORS,
+            "band_positions": {
+                language: len(_extended_reference_members(language))
+                for language in LANGS
+            },
+            "split_rule": "the counted pairs of each side, in stream "
+            "order, split into contiguous blocks at the midpoint: the "
+            "first floor(N/2) pairs the climb half the machinery may "
+            "search, the remaining pairs the score half it may never "
+            "touch; for an odd count the climb half takes the smaller "
+            "first block; the halves share no counted pair and every "
+            "identity anchor's halves fold by the same rule; "
+            "deterministic, consuming no seed",
+            "loo_rule": "the shape measurement's leave-one-out form "
+            "carried exactly onto the declared alternate reference's "
+            "counts: the inherited add-one backing form is "
+            "log((n_ab + 1) / (N + 729)) with N the declared "
+            "alternate reference stream's total counted pairs; every "
+            "pair type (a, b) present in the alternate reference "
+            "pair table is scored with one occurrence of (a, b) "
+            "removed from the alternate reference counts, "
+            "log(n_ab / (N + 728)), and a type with no counted "
+            "occurrence keeps the inherited add-one entry "
+            "log(1 / (N + 729)); the letter marginals are the "
+            "alternate reference's unigram counts and the rank "
+            "initialisation mechanics unchanged, the matrix "
+            "arithmetic needing no re-derivation as the shape "
+            "measurement declared",
+            "measured_facts_rule": "the mapped set, streams, seeds, "
+            "machinery, restarts, sweep cap, floors, split and band "
+            "population are the held-out screen's, block-fold "
+            "measurement's and widened band's declarations carried "
+            "unchanged; the real, the floors and every band member's "
+            "encodings are byte-identical replays of the frozen "
+            "artifacts' declared draws, and each cell's five plants "
+            "are encodings of the declared alternate reference text "
+            "truncated to the same declared length, from the "
+            "declared plant kinds at the declared positions; only "
+            "the scored tables change: every machinery call prices "
+            "its matrices under the declared alternate reference's "
+            "leave-one-out table with the alternate's letter "
+            "marginals for the rank initialisation; each side's "
+            "exact full-data side call is recorded beside its "
+            "held-out value for attribution only",
+            "machinery_rule": "unchanged from the held-out screen: "
+            "the exact greedy reassignment climb on the climb half, "
+            "exact pricing on the score half, restart 0 the rank "
+            "initialisation from the climb half, restarts 1 onward "
+            "the seeded permutations of the 27 letter tokens under "
+            "the wrap rule, the best restart the best exact "
+            "climb-half total with ties to the first; no assignment "
+            "is stored",
+            "seed_kinds": {
+                "real": KIND_ID["real"],
+                "homo_plant": [KIND_ID["homo_plant_enc"],
+                               KIND_ID["homo_plant_mach"]],
+                "homo_floor": [KIND_ID["homo_floor_perm"],
+                               KIND_ID["homo_floor_mach"]],
+                "homo_cross": [KIND_ID["homo_cross_enc"],
+                               KIND_ID["homo_cross_mach"]],
+            },
+            "seed_sharing": "no new seed kinds are consumed: the "
+            "real, floors and band members replay the declared "
+            "draws from the declared kinds at the declared "
+            "positions exactly as the frozen artifacts consumed "
+            "them; each cell's plants consume the declared plant "
+            "kinds 24 and 25 at positions 0 to 4 against the "
+            "alternate reference text, the same kind and position "
+            "consumption the frozen artifacts declared for their "
+            "plants of the standing reference text; the band "
+            "members consume the declared cross kinds at positions "
+            "english 0 to 6 and latin 0 to 7 exactly as the frozen "
+            "widened band consumed them; consuming none of any "
+            "other module's declared draws",
+            "bridge_gate": "before the alternate cells run, the "
+            "alternate instrument's full first cell (ZL english: "
+            "the real, its five plants of the standing reference "
+            "text, its five floors and its seven widened band "
+            "members) is computed through this measurement's code "
+            "with the standing reference supplied and compared "
+            "field for field against the frozen widened-band "
+            "artifact's own first cell; any divergence aborts with "
+            "nothing written",
+            "corpus_source_rule": "the alternate references are "
+            "fetched from the standing members' declared source in "
+            "the same plain text form; each alternate's file is "
+            "stored raw under engine/data with its Gutenberg "
+            "markers and processed by the standing declared "
+            "processing (the body extracted between the markers, "
+            "the ligatures joined, NFD plus casefold, letters to 0 "
+            "to 25 and non-letter runs to the single boundary "
+            "token), with the sha256 recorded below",
+            "corpus_rule": "alternate references are declared per "
+            "language, one each, under the declared corpus rules: "
+            "the english alternate a modern printed english prose "
+            "text outside the band's membership list; the latin "
+            "alternate a latin prose text outside the band's "
+            "membership list keeping the standing members' "
+            "transcriber-note english scaffold scale (0 to 52 "
+            "common-word hits, zero mid-span english in every "
+            "accepted member); candidates interleaving english "
+            "translations, glossed school notes, critical apparatus "
+            "or scholarly bibliographies through the span, or whose "
+            "form is other than connected prose, rejected with "
+            "cause",
+            "same_work_family_rule": "the declared latin alternate "
+            "pg60772 is volume two of the same printed travel "
+            "account whose volume one is widened band member "
+            "pg58528: the circumstance is disclosed and the design "
+            "keeps the declared single alternate rather than "
+            "swapping to another candidate, because the remaining "
+            "probed candidates were rejected with cause or terse in "
+            "form; the reference scope stays a single alternate "
+            "choice outside the band membership list",
+            "rejected_candidates": REJECTED_ALTERNATE_CANDIDATES,
+            "probed_not_selected": PROBED_NOT_SELECTED_ALTERNATES,
+            "band_record_rule": "membership, selection, ties and "
+            "spreads are declared unchanged from the held-out screen "
+            "(a member's band value the held-out value of the draw "
+            "whose exact climb-half total is best, strict beyond "
+            "1e-12, ties to the first draw); each member records "
+            "draws_climb_exact, its five climb-half totals at full "
+            "precision, so the declared selection is re-derivable "
+            "from the stored artifact; membership unconditional: "
+            "every band member enters the band under the alternate "
+            "tables exactly as under the standing tables and no "
+            "convergence criterion is applied to any member",
+            "verdict_rule": "unchanged from the held-out screen and "
+            "applied to the reference-scope numbers: the real "
+            "held-out at or above the smallest member band value is "
+            "consistent-with-substitution, at or below the largest "
+            "floor's held-out value is not-consistent, strictly "
+            "between is below-held-band; the strings describe "
+            "consistency under this artifact's declared reference "
+            "scope and do not restate the widened band's verdicts",
+            "margin_rule": "the margin is computed from the stored "
+            "rounded values: the real held-out mean minus the "
+            "smallest member band value, rounded to four decimals",
+            "exclusion_rule": "the family's declared exclusion format "
+            "is not re-scoped by this artifact: it keys to the "
+            "declared 36-slot class under the inherited add-one form "
+            "exactly as the held-out screen declared it, so an "
+            "alternate-reference verdict is reference-scope evidence "
+            "and the widened band's verdicts stand untouched by this "
+            "artifact's numbers",
+            "truthful_question": "declared in advance: does the "
+            "real's held-out score-half value still stand above the "
+            "band when the scored tables are rebuilt from single "
+            "alternate references outside the band - a yes extends "
+            "the separation across the reference scope, a no "
+            "records that the margin rode the standing references' "
+            "single choice",
+            "corpus_facts": {},
+            "models": {},
+        },
+        "bridge_gate": {},
+        "files": {},
+    }
+    for language in LANGS:
+        name, ebook, _label = ALTERNATE_REFERENCE_FILES[language]
+        stream = _reference_stream(language, file=name)
+        model = _alternate_table(language)
+        table = model["table"]
+        full_matrix = _stream_matrix_27(stream)
+        block_held, block_climb, _bcp, _bsp = _block_identity_half_means(
+            stream, table
+        )
+        add_one_held, _acm, _acp, _asp = _identity_half_means(
+            stream, model["add_one_table"]
+        )
+        artifact["declared"]["models"][language] = {
+            "file": name,
+            "ebook": ebook,
+            "clean_identity_mean_nats_per_pair": round(
+                float((full_matrix * table).sum())
+                / float(full_matrix.sum()),
+                4,
+            ),
+            "block_climb_half_mean_nats_per_pair": round(block_climb, 4),
+            "block_score_half_mean_nats_per_pair": round(block_held, 4),
+            "add_one_parity_score_half_mean_nats_per_pair": round(
+                add_one_held, 4
+            ),
+            "pair_types_present": model["pair_types_present"],
+            "total_pairs": model["total_pairs"],
+            "max_abs_entry_delta": model["max_abs_entry_delta"],
+            "max_delta_type": model["max_delta_type"],
+            "mean_entry_delta_over_present": (
+                model["mean_entry_delta_over_present"]
+            ),
+        }
+    for language in LANGS:
+        name, ebook, label = ALTERNATE_REFERENCE_FILES[language]
+        path = Path(DATA_DIR).resolve().parent / name
+        raw = path.read_bytes()
+        text = raw.decode("utf-8", "replace")
+        start = text.find("START OF THE PROJECT GUTENBERG")
+        end = text.find("END OF THE PROJECT GUTENBERG")
+        body = text[text.find("\n", start):end]
+        if language == "latin":
+            # the apparatus probe is defined on latin spans; english
+            # members are modern english prose and carry no foreign
+            # apparatus category
+            hits: int | None = len(
+                re.findall(r"\b(the|and|with|from)\b", body)
+            )
+        else:
+            hits = None
+        members_stream = _reference_stream(language, file=name)
+        letter_tokens = sum(
+            members_stream.count(i) for i in range(26)
+        )
+        artifact["declared"]["corpus_facts"][language] = [{
+            "file": name,
+            "ebook": ebook,
+            "label": label,
+            "sha256": hashlib.sha256(raw).hexdigest(),
+            "file_bytes": len(raw),
+            "body_bytes": len(body),
+            "stream_length": len(members_stream),
+            "letter_tokens": letter_tokens,
+            "boundary_tokens": len(members_stream) - letter_tokens,
+            "types_present": len(set(members_stream)),
+            "english_scaffold_hits": hits,
+        }]
+    for code in FILES:
+        cell: dict = {}
+        for language in LANGS:
+            name, _ebook, _label = ALTERNATE_REFERENCE_FILES[language]
+            model = _alternate_table(language)
+            facts = _block_cell_facts(
+                code, language, model["table"], model["letter_counts"],
+                reference_file=name,
+            )
+            positions = _extended_band_positions(language)
+            members = [
+                _block_band_for(
+                    code, language, seed_index,
+                    model["table"], model["letter_counts"],
+                    members=_extended_reference_members(language),
+                )
+                for seed_index in positions
+            ]
+            member_values = [
+                member["recovered_best"] for member in members
+            ]
+            floor_max = max(facts["floors_held"])
+            band_min = min(member_values)
+            band_max = max(member_values)
+            if facts["real_held"] >= band_min:
+                verdict = "consistent-with-substitution"
+            elif facts["real_held"] <= floor_max:
+                verdict = "not-consistent"
+            else:
+                verdict = "below-held-band"
+            parity = [
+                bool(value >= facts["anchor"] - 0.0001)
+                for value in facts["plants_held"]
+            ]
+            above_anchor = [
+                round(value - facts["anchor"], 4)
+                for value in facts["plants_held"]
+                if value > facts["anchor"] + 0.0001
+            ]
+            cell[language] = {
+                "real_held_mean_nats": facts["real_held"],
+                "real_climb_mean_nats": facts["real_climb"],
+                "real_sweep_budget_hit": facts["real_hit"],
+                "real_full_exact_mean_nats": facts["real_full"],
+                "real_full_sweep_budget_hit": facts["real_full_hit"],
+                "counted_pairs": facts["counted"],
+                "climb_pairs": facts["climb_pairs"],
+                "score_pairs": facts["score_pairs"],
+                "plant_parity_anchor_mean_nats": facts["anchor"],
+                "plant_climb_identity_mean_nats": facts["anchor_climb"],
+                "self_plants_held_mean_nats": facts["plants_held"],
+                "self_plants_full_exact_mean_nats": facts["plants_full"],
+                "self_plants_at_parity": parity,
+                "self_plants_sweep_budget_hits": facts["plants_hits"],
+                "self_plants_full_sweep_budget_hits": (
+                    facts["plants_full_hits"]
+                ),
+                "machinery_above_anchor_excesses": above_anchor,
+                "floors_held_mean_nats": facts["floors_held"],
+                "floors_full_exact_mean_nats": facts["floors_full"],
+                "floors_sweep_budget_hits": facts["floors_hits"],
+                "floors_full_sweep_budget_hits": (
+                    facts["floors_full_hits"]
+                ),
+                "band": members,
+                "band_min": band_min,
+                "band_max": band_max,
+                "real_margin_over_band_min": round(
+                    facts["real_held"] - band_min, 4
+                ),
+                "verdict": verdict,
+            }
+        artifact["files"][code] = cell
+    artifact["bridge_gate"] = {
+        "status": "verified",
+        "fields_compared": fields,
+    }
+    return artifact
+
+
+def main_alternate_reference() -> None:
+    artifact = substitution_homophonic_alternate_reference()
+    ALTERNATE_ARTIFACT_PATH.write_text(
+        json.dumps(artifact, indent=2) + "\n"
+    )
+    print(ALTERNATE_ARTIFACT_PATH)
