@@ -1057,6 +1057,176 @@ mapping is published anywhere in this artifact, no recovered
 assignment is stored as a key, plaintext_recovered_percent stays 0,
 the reference prose is modern printed text outside the manuscript's
 century, and nothing here is a reading or a language claim.
+
+Tenth declared measurement, the search-free invariant instrument,
+the user-directed new instrument declared after the restart budget
+held its margins at triple the inherited search depth and before any
+run of it beyond the probes it discloses.
+
+The disclosed background, declared in advance: every number the band
+instruments have produced across seven declared changes passes
+through a hill-climb whose exploitation of the declared tables is
+disclosed in every artifact, and the real's margin survived all
+seven. This instrument removes the search entirely: it contains no
+assignment search anywhere, no candidate evaluation, no restarts, no
+sweep cap, no convergence flags, no score table, no split - it prices
+the manuscript's raw pair-count structure directly against the
+simulated encodings' raw pair-count structure, so that no number here
+can ride any search's exploitation or its budget's depth.
+
+The declared design, before the run: for each of the six (file,
+language) cells the instrument records and prices profiles. The real
+side: the manuscript's kept-adjacent mapped pair-count matrix over
+the 37 symbol alphabet (36 glyphs plus the word-boundary mark;
+unmapped events break adjacency and are not counted), its profile
+one per file and shared by both language cells of that file. The
+simulated side: every widened band member's selected-draw encoding,
+replayed byte-identically through the declared partition and encoder
+at the frozen homo_cross_enc kind and position (the selected draw
+read from the frozen restart-budget artifact rather than re-derived,
+because re-derivation is machinery), plus the five plant encodings
+per cell at the standing homo_plant_enc kinds and the five
+destroyed-adjacency floors per cell at the standing
+homo_floor_perm kinds, replayed, not re-derived by any machinery.
+The controls: each cell records the truncated standing reference's
+own plaintext stream profile, computed by the same formulas on its
+own 27-type state (729 types), a control whose width differs by
+declaration and that takes no part in any envelope.
+
+The declared invariant list, fixed in advance, every summary a
+relabeling invariant of a pair-count matrix (invariant under any
+permutation of the symbols, the diagonal mapping to itself): the
+sorted symbol marginals (row sums) stored sorted descending as
+counts and as shares of the profile's own total; the sorted
+pair-count multiset over the full state space (1369 ordered types
+for the 37-symbol profiles, 729 for the plaintext controls) stored
+the same way; the empty type count (types with zero counted
+occurrences); the self-pair share (the diagonal sum over the total);
+the top-k pair concentration at the declared k values 1, 10 and 50
+(the share of the total carried by the k largest pair counts); and
+the pair entropy (the natural entropy of the pair distribution in
+nats per counted pair). Shares and entropy round to the declared 6
+decimals in a closed definition applied to every side. The state
+note declared beside them: the real's profile prices kept-adjacent
+mapped pairs while an encoding's prices every adjacent pair of its
+full stream, the two totals differ for that structural reason and
+every share-valued invariant normalises by its own total, while the
+empty type count is a raw count tied to its own total and recorded
+in that context; the latin band's members are the roster's own
+truncated texts whose totals range from 45,490 to the full standing
+length, standing property of the roster disclosed in every prior
+artifact, so the latin envelopes are size-mixed by the roster's own
+declared construction.
+
+The declared verdict rule, fixed in advance, strict-all: a cell is
+shape-consistent-with-homophonic-encoding only when every declared
+invariant of the real's profile sits inside the closed range of that
+cell's simulated band's profiles - the two vector summaries term by
+term inside the band's per-position envelope, the scalar summaries
+inside [min, max] at the stored rounding - and any outside invariant
+makes the cell shape-outside-analogues, with every outside entry
+recorded by position with its band range so that a miss is audited,
+not summarized. No scalar margin is formed: this instrument's
+question is inside or outside per invariant, and the recorded
+distances are the outside entries' band ranges themselves. A confirm
+is structure evidence under a search-free instrument, not an
+identification: no mapping is published, no assignment is stored,
+and the family's declared exclusion format is not re-scoped by this
+artifact - it keys to the declared 36-slot class under the inherited
+add-one form exactly as the held-out screen declared it, so the band
+instruments' verdicts stand untouched by this artifact's numbers.
+
+Corpus discipline: no new corpus files and no new candidates - the
+band population is the frozen widened band's declared roster, the
+plants and the plaintext controls are the standing references'
+frozen files, all stored raw with their markers and processed by the
+standing declared processing. No score table is built or used: the
+instrument prices count structure only, so the standing add-one and
+leave-one-out tables play no part anywhere in this artifact.
+
+Mechanics, declared: the bridge gate first - before any profile is
+priced, every fact this instrument re-derives fresh that the frozen
+restart-budget artifact already recorded must equal that stored
+value field for field: the six cells' counted pairs, all 45
+members' file, ebook and plant_length records, and the 30 floors'
+pair totals; the plants' totals are verified inside every cell
+instead because their standing source lengths were never stored
+frozen (each cell records its standing source's truncated length
+and a plants_at_source_identity boolean); any divergence aborts and
+nothing is written.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+bridge gate rehearsed: the first declared gate anchored the plants'
+totals against the frozen band's first member's stored length, and
+its latin rows failed - the standing latin reference's own
+truncated length was never stored frozen, so a gate row cannot
+anchor to it; the repair is declared here (the plant totals moved
+into the cells as the plants_at_source_identity identity with the
+standing source lengths recorded as new declared facts, the floors
+and the streams and the members' identity fields keeping the gate)
+and the repaired gate ran at 171 fields compared, no problem.
+Probe 2, the real profiles ahead of the run: ZL events 218,663,
+kept 218,537, unmapped 126, pairs 218,415, state 1369, empty types
+943, self-pair share 0.045162, top shares 0.066625, 0.355937 and
+0.859602 at k 1, 10 and 50, entropy 4.203; its sorted symbol-share
+head 0.157027, 0.110643, 0.088767, 0.078502, 0.078351, 0.063709
+(counts head 34,297, 24,166, 19,388, 17,146, 17,113, 13,915) and
+its sorted pair-share head 0.066625, 0.048339, 0.03671, 0.036028,
+0.030314, 0.029412. GC events 186,708, kept 184,939, unmapped
+1,769, pairs 183,199, empty 645, self 0.009722, top shares
+0.078745, 0.352327, 0.789781, entropy 4.500206; symbol-share head
+0.194281, 0.127681, 0.090726, 0.072604, 0.070595, 0.05684 (counts
+head 35,592, 23,391, 16,621, 13,301, 12,933, 10,413); pair-share
+head 0.078745, 0.043799, 0.031731, 0.031157, 0.030257, 0.02899. IT
+events 220,532, kept 220,532, unmapped 0, pairs 220,531, empty
+1012, self 0.044039, top shares 0.067451, 0.356453, 0.867039,
+entropy 4.180814; symbol-share head 0.165238, 0.110891, 0.087262,
+0.077708, 0.077282, 0.062046 (counts head 36,440, 24,455, 19,244,
+17,137, 17,043, 13,683); pair-share head 0.067451, 0.047998,
+0.037342, 0.035455, 0.030086, 0.029955. Probe 3, the first cell's
+declared verdict ahead of the run, ZL english:
+shape-outside-analogues with every one of the eight invariant tests
+outside - symbol_shares 37 of 37 sorted positions outside (position
+0 real 0.157027 against the band [0.183123, 0.204027]; position 1
+0.110643 against [0.051385, 0.070849]), pair_shares 902 of 1369
+positions outside (position 0 real 0.066625 against
+[0.021142, 0.028199]), empty_type_count 943 against [325, 447],
+self_pair_share 0.045162 against [0.012192, 0.01645], top_1_share
+0.066625 against [0.021142, 0.028199], top_10_share 0.355937
+against [0.140788, 0.173894], top_50_share 0.859602 against
+[0.414205, 0.443301], pair_entropy 4.203 against [5.7732,
+5.904914]; the seven members' totals 218,662 each (their entropies
+5.7732 to 5.904914), the five plants' totals 218,662 each, the five
+floors' totals 218,415 each (the real's own counted pairs). Probe
+4, the plaintext controls recorded not tested: the ZL english
+truncated plaintext stream's profile has 218,662 pairs on 729
+types, empty 260, self 0.019404, top_1 0.033115, top_50 0.567854,
+entropy 5.139035; the ZL latin one has 218,662 pairs, empty 339,
+self 0.013775, top_1 0.026671, top_50 0.569404, entropy 5.06327.
+Probe 5, the first latin cell's declared verdict ahead of the run,
+ZL latin: shape-outside-analogues with every one of the eight
+invariant tests outside - symbol_shares 34 of 37 outside, pair
+shares 838 of 1369 outside, empty_type_count 943 against
+[241, 510], self_pair_share 0.045162 against
+[0.009823, 0.01644], top_1_share 0.066625 against
+[0.021489, 0.034072], top_10_share 0.355937 against
+[0.129611, 0.15643], top_50_share 0.859602 against
+[0.341177, 0.378328], pair_entropy 4.203 against
+[5.923406, 6.050813]; the eight members' totals 45,490 to 218,662
+(the roster's own truncated lengths recorded) with entropies
+5.923406 to 6.050813, the plants' identity true with totals
+218,662 each. Probe 6: none; the four remaining cells are unseen
+until the declared run. The probes' disclosed first-cell verdicts
+do not decide the artifact: the artifact run prices all six cells
+through the same declared code, and the disclosure's honest
+question is recorded over all of them.
+
+The standing limitations are inherited from the held-out screen: no
+mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays 0,
+the reference prose is modern printed text outside the manuscript's
+century, and nothing here is a reading or a language claim.
 """
 
 from __future__ import annotations
@@ -6231,3 +6401,458 @@ def main_restart_budget() -> None:
         json.dumps(artifact, indent=2) + "\n"
     )
     print(RESTART_BUDGET_ARTIFACT_PATH)
+
+
+# --------------------------------------------------------------------------
+# The tenth measurement: the search-free invariant instrument
+# --------------------------------------------------------------------------
+
+SEARCH_FREE_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes" / "voynich-homophonic-search-free.json"
+)
+SEARCH_FREE_TOP_K = (1, 10, 50)
+SEARCH_FREE_SHARES = 6
+
+
+def _profile_facts(matrix: np.ndarray) -> dict:
+    """The declared relabeling-invariant profile of one pair-count
+    matrix, every summary a function of the matrix's count structure
+    alone and invariant under any relabeling of the symbols: the
+    sorted symbol marginals as counts and shares, the sorted
+    pair-count multiset as counts and shares, the empty type count,
+    the self-pair share (the diagonal sum over the total, itself
+    permuted to itself under any relabeling), the top-k pair
+    concentration at the declared k values and the pair entropy in
+    nats per counted pair. Shares and entropy round to the declared
+    6 decimals; the total and the state width are recorded beside
+    them because the real's matrix prices kept-adjacent mapped pairs
+    while an encoding's matrix prices every adjacent pair of its
+    full stream."""
+    total = int(round(matrix.sum()))
+    symbols = matrix.sum(axis=1).astype(np.int64)
+    counts = matrix.astype(np.int64).flatten()
+    sorted_symbols = sorted(int(value) for value in symbols)[::-1]
+    sorted_counts = sorted(int(value) for value in counts)[::-1]
+    positive = np.array([value for value in sorted_counts if value > 0],
+                        dtype=float)
+    shares = positive / total
+    top = {}
+    for k in SEARCH_FREE_TOP_K:
+        top[f"top_{k}_share"] = round(
+            sum(sorted_counts[:k]) / total, SEARCH_FREE_SHARES
+        )
+    return {
+        "total_pairs": total,
+        "state_types": int(matrix.size),
+        "symbol_counts": sorted_symbols,
+        "symbol_shares": [
+            round(value / total, SEARCH_FREE_SHARES)
+            for value in sorted_symbols
+        ],
+        "pair_counts": sorted_counts,
+        "pair_shares": [
+            round(value / total, SEARCH_FREE_SHARES)
+            for value in sorted_counts
+        ],
+        "empty_type_count": sum(
+            1 for value in sorted_counts if value == 0
+        ),
+        "self_pair_share": round(
+            float(np.trace(matrix)) / total, SEARCH_FREE_SHARES
+        ),
+        **top,
+        "pair_entropy": round(
+            -float((shares * np.log(shares)).sum()), SEARCH_FREE_SHARES
+        ),
+    }
+
+
+def _search_free_envelope(
+    real_profile: dict, member_facts: list[dict],
+) -> dict:
+    """The declared inside/outside record for one real profile against
+    its simulated band's profiles: every declared invariant tested
+    inside the band's closed range at the stored rounding, the two
+    vector summaries by position envelope and the scalar summaries by
+    their band's [min, max], with every outside entry recorded with
+    its band range."""
+    record: dict = {}
+    for key in ("symbol_shares", "pair_shares"):
+        vectors = [member["profile"][key] for member in member_facts]
+        value = real_profile[key]
+        lows = [
+            min(vector[position] for vector in vectors)
+            for position in range(len(value))
+        ]
+        highs = [
+            max(vector[position] for vector in vectors)
+            for position in range(len(value))
+        ]
+        outside = [
+            {"position": position, "real": value[position],
+             "band_low": lows[position], "band_high": highs[position]}
+            for position in range(len(value))
+            if value[position] < lows[position]
+            or value[position] > highs[position]
+        ]
+        record[key] = {"inside": not outside, "outside": outside}
+    for key in ("empty_type_count", "self_pair_share", "top_1_share",
+                "top_10_share", "top_50_share", "pair_entropy"):
+        values = [member["profile"][key] for member in member_facts]
+        value = real_profile[key]
+        low, high = min(values), max(values)
+        record[key] = {
+            "inside": low <= value <= high,
+            "real": value, "band_low": low, "band_high": high,
+        }
+    return record
+
+
+def _search_free_cell_facts(code: str, language: str) -> dict:
+    """One cell's search-free facts: the real's own profile, every
+    widened band member's selected-draw encoding profile replayed
+    through the declared encoder at its frozen draw seed, the five
+    plant encodings' profiles, the five destroyed-adjacency floors'
+    profiles and the truncated standing reference's own plaintext
+    control profile, with the inside/outside record and the cell's
+    verdict under the declared strict-all rule. No machinery anywhere:
+    no assignment search, no split, no cap, no convergence flags."""
+    frozen = json.loads(RESTART_BUDGET_ARTIFACT_PATH.read_text())
+    stored_band = frozen["files"][code][language]["band"]
+    real = _homo_real_stream(code)
+    real_matrix = _count_matrix_37(real["event_ids"], real["kept_mask"])
+    real_profile = _profile_facts(real_matrix)
+    members = _extended_reference_members(language)
+    member_facts = []
+    for position in _extended_band_positions(language):
+        name, ebook = members[position]
+        truncated = _truncated_reference(code, language, file=name)
+        groups = _partition_groups(truncated, MAPPED_HOMO)
+        rng_enc = np.random.default_rng(_seed(
+            CELL_ID[code], KIND_ID["homo_cross_enc"],
+            LANG_ID[language], position,
+        ))
+        selected = stored_band[position]["selected_draw_index"]
+        encoded: np.ndarray | None = None
+        for _draw in range(selected + 1):
+            encoded = _encode(truncated, groups, rng_enc, MAPPED_HOMO)
+        member_facts.append({
+            "file": name,
+            "ebook": ebook,
+            "plant_length": len(truncated),
+            "selected_draw_index": selected,
+            "profile": _profile_facts(_full_matrix_37(encoded)),
+        })
+    standing_truncated = _truncated_reference(code, language)
+    standing_groups = _partition_groups(standing_truncated, MAPPED_HOMO)
+    plant_facts = []
+    for index in range(N_PLANTS):
+        rng_enc = np.random.default_rng(_seed(
+            CELL_ID[code], KIND_ID["homo_plant_enc"],
+            LANG_ID[language], index,
+        ))
+        encoded = _encode(
+            standing_truncated, standing_groups, rng_enc, MAPPED_HOMO
+        )
+        plant_facts.append({
+            "index": index,
+            "plant_length": len(standing_truncated),
+            "profile": _profile_facts(_full_matrix_37(encoded)),
+        })
+    floor_facts = []
+    for index in range(N_FLOORS):
+        rng_perm = np.random.default_rng(_seed(
+            CELL_ID[code], KIND_ID["homo_floor_perm"],
+            LANG_ID[language], index,
+        ))
+        values = real["kept_ids"].copy()
+        rng_perm.shuffle(values)
+        full = real["event_ids"].copy()
+        full[real["kept_mask"]] = values
+        floor_facts.append({
+            "index": index,
+            "profile": _profile_facts(
+                _count_matrix_37(full, real["kept_mask"])
+            ),
+        })
+    plaintext = _profile_facts(_stream_matrix_27(standing_truncated))
+    tests = _search_free_envelope(real_profile, member_facts)
+    outside = [key for key, test in tests.items() if not test["inside"]]
+    verdict = (
+        "shape-consistent-with-homophonic-encoding" if not outside
+        else "shape-outside-analogues"
+    )
+    return {
+        "stream_events": real["total_events"],
+        "kept_pairs": int(real_matrix.sum()),
+        "unmapped_events": (
+            real["total_events"] - int(real["kept_mask"].sum())
+        ),
+        "real_profile": real_profile,
+        "standing_plant_length": len(standing_truncated),
+        "plants_at_source_identity": all(
+            plant["profile"]["total_pairs"]
+            == plant["plant_length"] - 1
+            for plant in plant_facts
+        ),
+        "members_profiles": member_facts,
+        "plants_profiles": plant_facts,
+        "floors_profiles": floor_facts,
+        "plaintext_profile": plaintext,
+        "invariants": tests,
+        "outside_invariants": outside,
+        "verdict": verdict,
+    }
+
+
+def _compare_search_free_to_frozen() -> tuple[list[str], int]:
+    """The declared bridge gate: every fact this instrument re-derives
+    fresh that a frozen predecessor artifact already recorded must
+    equal that stored value field for field before any profile is
+    priced - the six cells' counted pairs, all 45 members' file,
+    ebook and plant_length records, and the 30 floors' pair totals
+    (each equal to its cell's counted pairs by the shuffle's
+    structure). The plants' totals are not gate-anchored against a
+    frozen scalar because the standing references' own truncated
+    lengths were never stored frozen; they are verified inside every
+    cell instead (each plant's total equal to its declared source
+    length minus one). The band's selected-draw indexes are read from
+    the frozen restart-budget artifact, not re-derived, because their
+    re-derivation is machinery and this instrument contains none. Any
+    divergence aborts with nothing written."""
+    problems: list[str] = []
+    fields = 0
+    frozen = json.loads(RESTART_BUDGET_ARTIFACT_PATH.read_text())
+    for code in FILES:
+        real = _homo_real_stream(code)
+        matrix = _count_matrix_37(real["event_ids"], real["kept_mask"])
+        for language in LANGS:
+            cell = frozen["files"][code][language]
+            fields += 1
+            if int(matrix.sum()) != cell["counted_pairs"]:
+                problems.append(
+                    f"streams/{code}/{language}: stored "
+                    f"{cell['counted_pairs']} vs fresh "
+                    f"{int(matrix.sum())}"
+                )
+            members = _extended_reference_members(language)
+            for position in _extended_band_positions(language):
+                stored = cell["band"][position]
+                truncated = _truncated_reference(
+                    code, language, file=members[position][0]
+                )
+                for key, value in (
+                    ("file", members[position][0]),
+                    ("ebook", members[position][1]),
+                    ("plant_length", len(truncated)),
+                ):
+                    fields += 1
+                    if stored[key] != value:
+                        problems.append(
+                            f"member/{code}/{language}/{position}/{key}:"
+                            f" stored {stored[key]!r} vs fresh "
+                            f"{value!r}"
+                        )
+            for index in range(N_FLOORS):
+                rng_perm = np.random.default_rng(_seed(
+                    CELL_ID[code], KIND_ID["homo_floor_perm"],
+                    LANG_ID[language], index,
+                ))
+                values = real["kept_ids"].copy()
+                rng_perm.shuffle(values)
+                full = real["event_ids"].copy()
+                full[real["kept_mask"]] = values
+                total = int(
+                    _count_matrix_37(
+                        full, real["kept_mask"]
+                    ).sum()
+                )
+                fields += 1
+                if total != cell["counted_pairs"]:
+                    problems.append(
+                        f"floor/{code}/{language}/{index}: stored "
+                        f"{cell['counted_pairs']} vs fresh {total}"
+                    )
+    return problems, fields
+
+
+def substitution_homophonic_search_free() -> dict:
+    """The declared search-free invariant instrument: the manuscript's
+    raw pair-count profiles priced against the frozen widened band's
+    selected-draw encodings, the plant encodings, the destroyed
+    floors and the plaintext controls, with no assignment search
+    anywhere in the instrument. The bridge gate runs first; any
+    divergence aborts with nothing written."""
+    problems, fields = _compare_search_free_to_frozen()
+    if problems:
+        raise AssertionError(
+            "search-free bridge gate failed: " + "; ".join(problems)
+        )
+    artifact = {
+        "what": "The declared search-free invariant instrument: the "
+        "manuscript's raw pair-count profiles priced against the "
+        "simulated homophonic encodings under the declared partition "
+        "and encoder rule, the destroyed-adjacency floors and the "
+        "plaintext controls, using only relabeling-invariant "
+        "summaries of the pair matrices, so that no number here "
+        "passes through any assignment search. The declared truthful "
+        "question: do the manuscript's raw pair profiles sit inside "
+        "the range of the simulated encodings on every declared "
+        "invariant in every (file, language) cell, or is at least one "
+        "invariant outside. No mapping is published; nothing here is "
+        "a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "invariants": {
+                "sorted_symbol_marginals": "the 37 symbol marginals "
+                "(row sums) as a multiset, stored sorted descending as "
+                "counts and as shares of the profile's own total, the "
+                "two vector summaries envelope-tested by sorted "
+                "position",
+                "sorted_pair_multiset": "the 1369 pair counts as a "
+                "multiset, stored sorted descending as counts and as "
+                "shares of the profile's own total, envelope-tested "
+                "by sorted position",
+                "empty_type_count": "the number of the state space's "
+                "pair types with zero counted occurrences, a scalar "
+                "tested inside the band's [min, max] and recorded "
+                "beside both totals because the count is tied to the "
+                "profile's size",
+                "self_pair_share": "the diagonal sum over the total",
+                "top_k_shares": "the share of the total carried by "
+                "the k largest pair counts, at the declared k values "
+                "1, 10 and 50",
+                "pair_entropy": "the natural entropy of the pair "
+                "distribution over the 1369 types in nats per "
+                "counted pair",
+            },
+            "state_note": "the real's profile prices its "
+            "transcription's kept-adjacent mapped pairs (unmapped "
+            "events break adjacency and are not counted), while an "
+            "encoding's profile prices every adjacent pair of its "
+            "full stream; the two totals are disclosed beside every "
+            "cell and every share-valued invariant normalises by its "
+            "own total; the empty type count is a raw count tied to "
+            "its own total and its verdict position is recorded in "
+            "that context; the latin band's members are the roster's "
+            "own truncated texts (every member's total recorded with "
+            "it), standing property of the roster disclosed in every "
+            "prior artifact, so the latin envelopes are size-mixed "
+            "by the roster's own declared construction",
+            "machinery_rule": "this instrument contains no assignment "
+            "search anywhere: no candidate evaluation, no restarts, "
+            "no sweep cap, no convergence flags; the standing budgets "
+            "are not applicable and no machinery recording appears "
+            "for that reason",
+            "split_rule": "no split applies: a profile uses every "
+            "counted pair of its stream, the real's kept-adjacent "
+            "structure and the encodings' full-stream structure; the "
+            "climb and score halves of the band instruments have no "
+            "counterpart here",
+            "seed_kinds": "the declared encoding and floor kinds "
+            "replay at their frozen positions: the members' selected "
+            "draws through the homo_cross_enc kind at their member "
+            "position, the plants through the homo_plant_enc kind at "
+            "their index and the floors through the homo_floor_perm "
+            "kind at their index; no new seed kind and no new "
+            "position",
+            "seed_sharing": "no machinery streams exist in this "
+            "instrument and none are consumed; every encoding is a "
+            "byte-identical replay of its declared frozen draw from "
+            "the frozen widened band's and the standing cells' own "
+            "seed kinds",
+            "band_record_rule": "the simulated band is the frozen "
+            "widened roster's 45 selected-draw encodings (7 english "
+            "and 8 latin per language cell): each member's profile is "
+            "its selected draw's encoding replayed through the "
+            "declared encoder and partition, the selected draw read "
+            "from the frozen artifact rather than re-derived because "
+            "re-derivation is machinery; membership unconditional "
+            "exactly as declared before",
+            "plants_rule": "the 30 plant encodings (5 per cell, the "
+            "standing first references through the declared partition "
+            "and encoder at the standing kinds) recorded as the "
+            "instrument's own simulated calibration set, each cell "
+            "recording its standing source's truncated length (a "
+            "fact the predecessors never stored frozen, disclosed as "
+            "new here) and a plants_at_source_identity boolean "
+            "checking every plant's total equals its source length "
+            "minus one; no parity rule applies because there is no "
+            "anchor geometry to exceed: the plant's profile is its "
+            "own encoding's matrix",
+            "floors_rule": "the 30 destroyed-adjacency floors "
+            "recorded with their profiles; their declared role is the "
+            "shuffled-structure control recorded beside the verdict, "
+            "not part of any envelope",
+            "plaintext_rule": "each cell records the truncated "
+            "standing reference's own plaintext stream profile "
+            "computed by the same formulas on its own 27-type state "
+            "(729 types), as the prose control beside the verdict; "
+            "its state width differs by declaration and it takes no "
+            "part in any envelope",
+            "verdict_rule": "declared strict-all: a cell is "
+            "shape-consistent-with-homophonic-encoding only when "
+            "every declared invariant of the real's profile sits "
+            "inside the closed range of that cell's simulated band's "
+            "profiles (the two vector summaries term by term inside "
+            "the band's per-position envelope, the scalar summaries "
+            "inside [min, max] at the stored 6-decimal rounding); "
+            "any outside invariant makes the cell "
+            "shape-outside-analogues, and every outside entry is "
+            "recorded with its band range so the miss is audited not "
+            "summarized",
+            "closure_rule": "no scalar margin is formed: this "
+            "instrument's question is inside or outside per "
+            "invariant, and the recorded distances are the outside "
+            "entries' band ranges themselves",
+            "exclusion_rule": "the family's declared exclusion format "
+            "is not re-scoped by this artifact: it keys to the "
+            "declared 36-slot class under the inherited add-one form "
+            "exactly as the held-out screen declared it, so a "
+            "search-free verdict is structure evidence and the band "
+            "instruments' verdicts stand untouched by this "
+            "artifact's numbers",
+            "bridge_gate": "before any profile is priced, every fact "
+            "this instrument re-derives fresh that the frozen "
+            "restart-budget artifact already recorded must equal that "
+            "stored value field for field: the six cells' counted "
+            "pairs, all 45 members' file, ebook and plant_length "
+            "records, and the 30 floors' pair totals; the plants' "
+            "totals are verified inside every cell instead because "
+            "their standing source lengths were never stored frozen; "
+            "the selected-draw indexes are read, not re-derived; any "
+            "divergence aborts with nothing written",
+            "corpus_source_rule": "no new corpus files and no new "
+            "candidates: the band population is the frozen widened "
+            "band's declared roster, the plants and plaintext "
+            "controls are the standing references' frozen files, all "
+            "stored raw with their markers and processed by the "
+            "standing declared processing",
+            "models_rule": "no score table is built or used: the "
+            "instrument prices count structure only, so the standing "
+            "add-one and leave-one-out tables play no part anywhere "
+            "in this artifact",
+            "corpus_facts": {},
+        },
+        "bridge_gate": {
+            "status": "verified",
+            "fields_compared": fields,
+        },
+        "files": {},
+    }
+    for code in FILES:
+        cell = {}
+        for language in LANGS:
+            cell[language] = _search_free_cell_facts(code, language)
+        artifact["files"][code] = cell
+    return artifact
+
+
+def main_search_free() -> None:
+    artifact = substitution_homophonic_search_free()
+    SEARCH_FREE_ARTIFACT_PATH.write_text(
+        json.dumps(artifact, indent=2) + "\n"
+    )
+    print(SEARCH_FREE_ARTIFACT_PATH)
