@@ -1227,6 +1227,164 @@ mapping is published anywhere in this artifact, no recovered
 assignment is stored as a key, plaintext_recovered_percent stays 0,
 the reference prose is modern printed text outside the manuscript's
 century, and nothing here is a reading or a language claim.
+
+Eleventh declared measurement, the boundary-mark re-instrument,
+declared after the search-free instrument answered no in all six
+cells and before any run of it beyond the probes it discloses.
+
+The disclosed background, declared in advance: the search-free
+instrument's eight invariant tests sit outside in every cell, and
+its recorded directions point at two suspects. The boundary mark is
+each profile's most frequent symbol in every cell, and the english
+and latin cells' first sorted positions ran in opposite directions,
+so this instrument isolates the mark's role with one declared
+change: the word-boundary mark's symbol's row and column are
+excluded from every profile's state space on both sides - every
+profile is the mark-excluded block of its pair-count matrix, 1296
+ordered types, and every pair whose first or second symbol is the
+mark is removed from the real's kept-adjacent matrix and from every
+simulated encoding's full-stream matrix the same way. The declared
+question: do the search-free outsides ride the mark's own
+concentration, or does the interior pair structure miss of itself.
+
+The declared design, before the run: the same five sides per cell as
+the search-free instrument, replayed byte-identically at the same
+frozen kinds and positions (the members' selected draws through
+homo_cross_enc at their member position read, not re-derived, from
+the frozen restart-budget artifact; the plants at their
+homo_plant_enc kinds; the floors at their homo_floor_perm kinds;
+the truncated standing reference's plaintext control), with every
+profile reduced to its mark-excluded block, 1296 types, the mark's
+own symbol located in each matrix's own alphabet (36 in every
+simulated encoding's alphabet; the real stream's own last mapped
+position, and the alphabet width is a standing disclosed fact: ZL
+and GC rank to the full 36 glyph slots plus the mark, IT's
+transcription ranks only 23 glyph types plus the mark, so IT's
+block keeps 13 always-empty glyph slots on the real side that the
+simulated encodings' saturated alphabets do not have). Each profile
+records the full width's total beside its block facts so the
+removed carried mass is disclosed and gate-anchored; the real cell
+records boundary_carried_pairs (the full width minus the block) and
+real_full_width_total_pairs beside the excluded profile, with the
+mark's own self-pair count riding in the removed carried mass and
+disclosed at zero in the real's counts ahead of the run. The
+plaintext control's state is the 27 reference letters alone (729
+types), which carries no boundary mark: each control is unchanged
+by the exclusion, its totals gate-anchored against the frozen
+search-free artifact's stored controls, and it takes no part in any
+envelope.
+
+The declared invariant list is the search-free instrument's six
+summaries over the new widths, every summary still a relabeling
+invariant of a pair-count matrix: the 36 sorted mark-excluded
+glyph marginals as counts and shares (glyph occurrences inside
+glyph-pair counts only, the mark's occurrence share not counted
+anywhere), the sorted mark-excluded pair multiset over 1296 ordered
+types as counts and shares, the block's empty type count, the
+block's self-pair share over the profile's glyph-pair total, the
+top-k pair concentration at the declared k values 1, 10 and 50, and
+the pair entropy in nats per counted glyph pair; shares and entropy
+round to the declared 6 decimals in a closed definition applied to
+every side. The state note carries the standing caveats: the
+real's glyph-pair total prices kept-adjacent mark-excluded pairs
+while an encoding's prices every mark-excluded pair of its full
+stream; every share normalises by its own glyph-pair total; the
+empty count is a raw count tied to its own total and the IT cells'
+empty comparisons carry the alphabet-width asymmetry disclosed
+above; the latin envelopes are size-mixed by the roster's own
+declared construction disclosed in every prior artifact.
+
+The declared verdict rule is the search-free instrument's, fixed in
+advance and strict-all with no scalar margin: a cell is
+shape-consistent-with-homophonic-encoding only when every declared
+invariant of the real's block profile sits inside the closed range
+of that cell's simulated band's block profiles - the two vector
+summaries term by term inside the band's per-position envelope over
+36 sorted positions, the scalar summaries inside [min, max] at the
+stored rounding - and any outside invariant makes the cell
+shape-outside-analogues, with every outside entry recorded by
+position with its band range so that a miss is audited, not
+summarized. A confirm here is interior-structure evidence under a
+search-free instrument, not an identification: no mapping is
+published, no assignment is stored, plaintext_recovered_percent
+stays 0, and the family's declared exclusion format is not
+re-scoped by this artifact - it keys to the declared 36-slot class
+under the inherited add-one form exactly as the held-out screen
+declared it.
+
+Corpus discipline is the search-free instrument's: no new corpus
+files and no new candidates, the band population the frozen widened
+band's declared roster, the plants and the plaintext controls the
+standing references' frozen files. No score table is built or used.
+
+Mechanics, declared: the bridge gate first, against two frozen
+sources - the restart-budget artifact's 171 anchor fields exactly
+as the search-free instrument declared them (the six cells' counted
+pairs, all 45 members' file, ebook and plant_length records, and
+the 30 floors' pair totals) and the frozen search-free artifact's
+117 anchor fields (per cell, every full-width profile total this
+instrument re-derives from the same replays - the real's, each
+member's, each plant's, each floor's and the plaintext control's -
+equal to that artifact's stored totals, so every block profile here
+is verified as the declared block of the same encodings that
+artifact measured): 288 fields total; the plants' full-width
+identities are verified inside every cell as well; any divergence
+aborts with nothing written.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+bridge gate rehearsed: the gate ran at 288 fields compared, no
+problem. Probe 2, the boundary mass ahead of the run: ZL alphabet
+37 wide (mark at position 36), kept pairs 218,415, block pairs
+149,799, boundary-carried 68,616, words 34,354, marks 34,353; GC
+alphabet 37 wide (mark at 36), kept pairs 183,199, block pairs
+111,815, boundary-carried 71,384, words 36,232, marks 36,231; IT
+alphabet 24 wide (mark at 23; its transcription's glyph inventory
+holds only 23 ranked glyph types), kept pairs 220,531, block pairs
+147,651, boundary-carried 72,880, words 36,441, marks 36,440; the
+mark's self-pair count 0 in every file's real counts, disclosed
+here because it rides in every removed carried mass. Probe 3, the
+first cell's declared verdict ahead of the run, ZL english:
+shape-outside-analogues with every one of the eight invariant tests
+outside - symbol_shares 35 of 36 sorted positions outside,
+pair_shares 845 of 1296 positions outside, empty_type_count 928
+against [323, 443], self_pair_share 0.065848 against
+[0.020192, 0.026741], top_1_share 0.070481 against
+[0.018196, 0.035886], top_10_share 0.424435 against
+[0.111613, 0.132192], top_50_share 0.893671 against
+[0.318571, 0.345689], pair_entropy 4.010179 against
+[5.947039, 6.102864]; the seven members' block totals 129,435 to
+138,578 (their block entropies 5.947039 to 6.102864), the five
+plants' full-width totals 218,662 each with the identity true, the
+five floors' block totals 155,062 to 155,329 against the real's
+block 149,799. Probe 4, the first latin cell's declared verdict
+ahead of the run, ZL latin: shape-outside-analogues with every one
+of the eight invariant tests outside - symbol_shares 36 of 36,
+pair_shares 784 of 1296, empty_type_count 928 against [240, 503],
+self_pair_share 0.065848 against [0.014311, 0.023974],
+top_1_share 0.070481 against [0.017923, 0.02536], top_10_share
+0.424435 against [0.114705, 0.131916], top_50_share 0.893671
+against [0.300616, 0.336503], pair_entropy 4.010179 against
+[5.980168, 6.104489]; the eight members' block totals 31,635 to
+155,874 (the roster's own truncated lengths reduced) with block
+entropies 5.980168 to 6.104489, the plants' full-width identity
+true, the floors' block totals 155,145 to 155,274. Probe 5, the
+plaintext control recorded unchanged: every control's profile
+equals its frozen search-free counterpart field for field - ZL
+english entropy 5.139035, ZL latin 5.06327, GC english 5.139139,
+GC latin 5.063406, IT english 5.139068, IT latin 5.062979, all on
+their 729-type states, unchanged by the exclusion because the
+state carries no boundary mark. Probe 6: none; the four remaining
+cells are unseen until the declared run. The probes' disclosed
+first-cell verdicts do not decide the artifact: the artifact run
+prices all six cells through the same declared code, and the
+disclosure's honest question is recorded over all of them.
+
+The standing limitations are inherited from the held-out screen: no
+mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays 0,
+the reference prose is modern printed text outside the manuscript's
+century, and nothing here is a reading or a language claim.
 """
 
 from __future__ import annotations
@@ -6856,3 +7014,520 @@ def main_search_free() -> None:
         json.dumps(artifact, indent=2) + "\n"
     )
     print(SEARCH_FREE_ARTIFACT_PATH)
+
+
+SEARCH_FREE_BM_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes"
+    / "voynich-homophonic-boundary-mark.json"
+)
+
+
+def _glyph_block_matrix(matrix: np.ndarray, mark_index: int) -> np.ndarray:
+    """The glyph block of a 37 by 37 pair-count matrix: the word
+    boundary mark's symbol's row and column removed from the state
+    space, wherever that symbol sits in the matrix's alphabet (36 in
+    every simulated encoding's alphabet; the real stream's own last
+    mapped position). Every pair whose first or second symbol is the
+    mark is removed and the state space keeps 1296 ordered types."""
+    return np.delete(
+        np.delete(matrix, mark_index, axis=0), mark_index, axis=1
+    )
+
+
+def _boundary_carried_pairs(matrix: np.ndarray, mark_index: int) -> int:
+    """The pair counts this instrument's exclusion removes: the full
+    matrix's total minus its glyph block's total, the boundary-carried
+    pairs of any profile."""
+    block = _glyph_block_matrix(matrix, mark_index)
+    return int(round(matrix.sum())) - int(round(block.sum()))
+
+
+def _search_free_bm_cell_facts(code: str, language: str) -> dict:
+    """One cell's boundary-mark facts: the same replays the search-free
+    instrument's cell facts replay (the real's kept-adjacent matrix,
+    the band members' selected-draw encodings, the plants, the floors,
+    the plaintext control), with one declared change - every profile
+    is the mark-excluded block of its pair-count matrix (the word
+    boundary mark's symbol's row and column removed, wherever that
+    symbol sits in the matrix's own alphabet), so 1296 ordered types.
+    The real and the floors carry the real stream's own mark position;
+    the members' and plants' encodings carry their own alphabet's last
+    position (symbol 36). The full width's total is recorded beside
+    every profile for the gate's anchor against the frozen search-free
+    artifact; the plaintext control's state is the reference letters
+    alone (27 types, 729), which carries no boundary mark, so it is
+    unchanged by the exclusion and recorded as such. No machinery
+    anywhere."""
+    frozen = json.loads(RESTART_BUDGET_ARTIFACT_PATH.read_text())
+    stored_band = frozen["files"][code][language]["band"]
+    real = _homo_real_stream(code)
+    real_mark = len(real["mapped_chars"]) - 1
+    real_matrix = _count_matrix_37(real["event_ids"], real["kept_mask"])
+    real_profile = _profile_facts(
+        _glyph_block_matrix(real_matrix, real_mark)
+    )
+    members = _extended_reference_members(language)
+    member_facts = []
+    for position in _extended_band_positions(language):
+        name, ebook = members[position]
+        truncated = _truncated_reference(code, language, file=name)
+        groups = _partition_groups(truncated, MAPPED_HOMO)
+        rng_enc = np.random.default_rng(_seed(
+            CELL_ID[code], KIND_ID["homo_cross_enc"],
+            LANG_ID[language], position,
+        ))
+        selected = stored_band[position]["selected_draw_index"]
+        encoded: np.ndarray | None = None
+        for _draw in range(selected + 1):
+            encoded = _encode(truncated, groups, rng_enc, MAPPED_HOMO)
+        full = _full_matrix_37(encoded)
+        member_facts.append({
+            "file": name,
+            "ebook": ebook,
+            "plant_length": len(truncated),
+            "selected_draw_index": selected,
+            "full_width_total_pairs": int(round(full.sum())),
+            "profile": _profile_facts(
+                _glyph_block_matrix(full, MAPPED_HOMO)
+            ),
+        })
+    standing_truncated = _truncated_reference(code, language)
+    standing_groups = _partition_groups(standing_truncated, MAPPED_HOMO)
+    plant_facts = []
+    for index in range(N_PLANTS):
+        rng_enc = np.random.default_rng(_seed(
+            CELL_ID[code], KIND_ID["homo_plant_enc"],
+            LANG_ID[language], index,
+        ))
+        encoded = _encode(
+            standing_truncated, standing_groups, rng_enc, MAPPED_HOMO
+        )
+        full = _full_matrix_37(encoded)
+        plant_facts.append({
+            "index": index,
+            "plant_length": len(standing_truncated),
+            "full_width_total_pairs": int(round(full.sum())),
+            "profile": _profile_facts(
+                _glyph_block_matrix(full, MAPPED_HOMO)
+            ),
+        })
+    floor_facts = []
+    for index in range(N_FLOORS):
+        rng_perm = np.random.default_rng(_seed(
+            CELL_ID[code], KIND_ID["homo_floor_perm"],
+            LANG_ID[language], index,
+        ))
+        values = real["kept_ids"].copy()
+        rng_perm.shuffle(values)
+        full = real["event_ids"].copy()
+        full[real["kept_mask"]] = values
+        floor_full = _count_matrix_37(full, real["kept_mask"])
+        floor_facts.append({
+            "index": index,
+            "full_width_total_pairs": int(round(floor_full.sum())),
+            "profile": _profile_facts(
+                _glyph_block_matrix(floor_full, real_mark)
+            ),
+        })
+    plaintext = _profile_facts(_stream_matrix_27(standing_truncated))
+    tests = _search_free_envelope(real_profile, member_facts)
+    outside = [key for key, test in tests.items() if not test["inside"]]
+    verdict = (
+        "shape-consistent-with-homophonic-encoding" if not outside
+        else "shape-outside-analogues"
+    )
+    return {
+        "stream_events": real["total_events"],
+        "kept_pairs": int(real_matrix.sum()),
+        "unmapped_events": (
+            real["total_events"] - int(real["kept_mask"].sum())
+        ),
+        "boundary_carried_pairs": _boundary_carried_pairs(
+            real_matrix, real_mark
+        ),
+        "real_profile": real_profile,
+        "real_full_width_total_pairs": int(real_matrix.sum()),
+        "standing_plant_length": len(standing_truncated),
+        "plants_at_source_identity": all(
+            plant["full_width_total_pairs"]
+            == plant["plant_length"] - 1
+            for plant in plant_facts
+        ),
+        "members_profiles": member_facts,
+        "plants_profiles": plant_facts,
+        "floors_profiles": floor_facts,
+        "plaintext_profile": plaintext,
+        "invariants": tests,
+        "outside_invariants": outside,
+        "verdict": verdict,
+    }
+
+
+def _compare_search_free_bm_to_frozen() -> tuple[list[str], int]:
+    """The declared bridge gate with two frozen sources: the
+    restart-budget artifact's 171 anchor fields exactly as the
+    search-free instrument declared them (the six cells' counted pairs,
+    all 45 members' file, ebook and plant_length records, and the 30
+    floors' pair totals), and the frozen search-free artifact's 117
+    anchor fields: per cell, every full-width profile total this
+    instrument re-derives from the same replays - the real's, each
+    member's (7 english and 8 latin), each plant's (5), each floor's
+    (5) and the plaintext control's (the 27-type state carries no
+    boundary mark, so its profile is unchanged by declaration) - must
+    equal the frozen search-free artifact's stored totals, so every
+    glyph-block profile here is verified as the declared block of the
+    same encodings that artifact measured. Any divergence aborts with
+    nothing written."""
+    problems, fields = _compare_search_free_to_frozen()
+    frozen_sf = json.loads(SEARCH_FREE_ARTIFACT_PATH.read_text())
+    for code in FILES:
+        real = _homo_real_stream(code)
+        real_total = int(
+            _count_matrix_37(real["event_ids"], real["kept_mask"]).sum()
+        )
+        for language in LANGS:
+            cell = frozen_sf["files"][code][language]
+            fields += 1
+            if real_total != cell["real_profile"]["total_pairs"]:
+                problems.append(
+                    f"real/{code}/{language}: stored "
+                    f"{cell['real_profile']['total_pairs']} vs fresh "
+                    f"{real_total}"
+                )
+            members = _extended_reference_members(language)
+            for position in _extended_band_positions(language):
+                name, _ebook = members[position]
+                truncated = _truncated_reference(code, language, file=name)
+                groups = _partition_groups(truncated, MAPPED_HOMO)
+                rng_enc = np.random.default_rng(_seed(
+                    CELL_ID[code], KIND_ID["homo_cross_enc"],
+                    LANG_ID[language], position,
+                ))
+                selected = cell["members_profiles"][position][
+                    "selected_draw_index"
+                ]
+                encoded: np.ndarray | None = None
+                for _draw in range(selected + 1):
+                    encoded = _encode(
+                        truncated, groups, rng_enc, MAPPED_HOMO
+                    )
+                total = int(round(_full_matrix_37(encoded).sum()))
+                stored = cell["members_profiles"][position]["profile"][
+                    "total_pairs"
+                ]
+                fields += 1
+                if total != stored:
+                    problems.append(
+                        f"member/{code}/{language}/{position}: stored "
+                        f"{stored} vs fresh {total}"
+                    )
+            standing_truncated = _truncated_reference(code, language)
+            standing_groups = _partition_groups(
+                standing_truncated, MAPPED_HOMO
+            )
+            plaintext_total = int(round(
+                _stream_matrix_27(standing_truncated).sum()
+            ))
+            fields += 1
+            if plaintext_total != cell["plaintext_profile"]["total_pairs"]:
+                problems.append(
+                    f"plaintext/{code}/{language}: stored "
+                    f"{cell['plaintext_profile']['total_pairs']} vs "
+                    f"fresh {plaintext_total}"
+                )
+            for index in range(N_PLANTS):
+                rng_enc = np.random.default_rng(_seed(
+                    CELL_ID[code], KIND_ID["homo_plant_enc"],
+                    LANG_ID[language], index,
+                ))
+                encoded = _encode(
+                    standing_truncated, standing_groups, rng_enc,
+                    MAPPED_HOMO,
+                )
+                total = int(round(_full_matrix_37(encoded).sum()))
+                stored = cell["plants_profiles"][index]["profile"][
+                    "total_pairs"
+                ]
+                fields += 1
+                if total != stored:
+                    problems.append(
+                        f"plant/{code}/{language}/{index}: stored "
+                        f"{stored} vs fresh {total}"
+                    )
+            for index in range(N_FLOORS):
+                rng_perm = np.random.default_rng(_seed(
+                    CELL_ID[code], KIND_ID["homo_floor_perm"],
+                    LANG_ID[language], index,
+                ))
+                values = real["kept_ids"].copy()
+                rng_perm.shuffle(values)
+                full = real["event_ids"].copy()
+                full[real["kept_mask"]] = values
+                total = int(round(
+                    _count_matrix_37(full, real["kept_mask"]).sum()
+                ))
+                stored = cell["floors_profiles"][index]["profile"][
+                    "total_pairs"
+                ]
+                fields += 1
+                if total != stored:
+                    problems.append(
+                        f"floor/{code}/{language}/{index}: stored "
+                        f"{stored} vs fresh {total}"
+                    )
+    return problems, fields
+
+
+def substitution_homophonic_boundary_mark() -> dict:
+    """The declared boundary-mark re-instrument: the search-free
+    invariant instrument re-run with the word-boundary mark's symbol
+    excluded from every profile's state space on both sides. The
+    bridge gate runs first; any divergence aborts with nothing
+    written."""
+    problems, fields = _compare_search_free_bm_to_frozen()
+    if problems:
+        raise AssertionError(
+            "boundary-mark bridge gate failed: " + "; ".join(problems)
+        )
+    artifact = {
+        "what": "The declared boundary-mark re-instrument: the "
+        "search-free invariant instrument re-run with the "
+        "word-boundary mark's symbol excluded from every profile's "
+        "state space on both sides, the real's kept-adjacent pair "
+        "matrix and every simulated encoding recomputed with the "
+        "mark's row and column removed from the state space (1296 "
+        "ordered types, boundary-carried pairs removed from both "
+        "sides the same way), priced by the same six "
+        "relabeling-invariant summaries under the same declared "
+        "strict-all verdict rule, with no assignment search anywhere "
+        "in the instrument. The declared truthful question: with the "
+        "boundary mark excluded on both sides, do the manuscript's "
+        "remaining raw pair profiles sit inside the range of the "
+        "simulated encodings' remaining profiles on every declared "
+        "invariant in every (file, language) cell, or is at least one "
+        "invariant outside - the measured test of whether the "
+        "search-free instrument's outsides ride the boundary mark's "
+        "own concentration or the interior pair structure. No "
+        "mapping is published; nothing here is a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "boundary_rule": "the word-boundary mark is each side's "
+            "own mapped alphabet's last position (symbol 36 in every "
+            "simulated encoding's alphabet, and the manuscript "
+            "file's own last mapped position in the real's matrix), "
+            "and its symbol's row and column are excluded from every "
+            "profile's state space on both sides: every profile is "
+            "the mark-excluded block of its pair-count matrix, 1296 "
+            "ordered types, and every pair whose first or second "
+            "symbol is the mark is removed from the real's "
+            "kept-adjacent matrix and from every simulated encoding's "
+            "full-stream matrix the same way; each profile records "
+            "the full width's total beside its block facts so the "
+            "removed carried mass is disclosed and gate-anchored, "
+            "the real cell records boundary_carried_pairs (the full "
+            "width minus the block) and real_full_width_total_pairs "
+            "beside the excluded profile, and no boundary-adjusted "
+            "marginal appears anywhere; the alphabet width is a "
+            "standing disclosure: the ZL and GC real transcriptions "
+            "rank to the full 36 glyph slots plus the mark, while "
+            "the IT real transcription's glyph inventory holds only "
+            "23 ranked glyph types plus the mark, so its mark sits "
+            "at block position 23 and 13 of the block's 36 glyph "
+            "slots are empty by alphabet width alone on the real "
+            "side (the simulated encodings' alphabets are saturated "
+            "at 36 in every cell), a width asymmetry the state note "
+            "carries and the empty type count's interpretation "
+            "rides with, disclosed to audit the miss not to hide "
+            "it",
+            "invariants": {
+                "sorted_symbol_marginals": "the 36 mark-excluded "
+                "glyph marginals (row sums of the mark-excluded "
+                "block) as a multiset, stored sorted descending as "
+                "counts and as shares of the profile's own "
+                "glyph-pair total, the two vector summaries "
+                "envelope-tested by sorted position over 36 "
+                "positions",
+                "sorted_pair_multiset": "the 1296 mark-excluded "
+                "pair counts as a multiset, stored sorted "
+                "descending as counts and as shares of the "
+                "profile's own glyph-pair total, envelope-tested "
+                "by sorted position",
+                "empty_type_count": "the number of the block's "
+                "mark-excluded pair types with zero counted "
+                "occurrences, a scalar tested inside the band's "
+                "[min, max] and recorded beside both totals because "
+                "the count is tied to the profile's size; the IT "
+                "real cells carry the alphabet-width asymmetry "
+                "disclosed in the boundary rule",
+                "self_pair_share": "the block's diagonal sum "
+                "over the profile's glyph-pair total (the mark's "
+                "own self-pair count rides in the removed carried "
+                "mass)",
+                "top_k_shares": "the share of the glyph-pair "
+                "total carried by the k largest mark-excluded "
+                "pair counts, at the declared k values 1, 10 "
+                "and 50",
+                "pair_entropy": "the natural entropy of the "
+                "mark-excluded pair distribution over the 1296 "
+                "types in nats per counted glyph pair",
+            },
+            "state_note": "every profile here is the mark-excluded "
+            "block of the same pair-count matrix its search-free "
+            "counterpart priced: the real's kept-adjacent mapped "
+            "pairs and the encodings' full streams keep their "
+            "structural difference, the two totals differ for that "
+            "reason and every share-valued invariant normalises by "
+            "its own glyph-pair total, while the empty type count is "
+            "a raw count tied to its own total and recorded in that "
+            "context; the boundary mark's exclusion is symmetric on "
+            "both sides by declaration, the plaintext controls' "
+            "state is the 27 reference letters alone (729 types), "
+            "which carries no boundary mark, so each control is "
+            "unchanged by the exclusion and its totals are "
+            "gate-anchored against the frozen search-free artifact; "
+            "the alphabet width disclosure rides on every real "
+            "profile (the boundary rule sets it out: the IT real "
+            "transcription ranks only 23 glyph types plus the mark, "
+            "so 13 of its block's 36 glyph slots are empty by width "
+            "alone while the simulated alphabets are saturated at "
+            "36 in every cell); the latin band's members are the "
+            "roster's own truncated texts whose totals range from "
+            "45,490 to the full standing length, standing property "
+            "of the roster disclosed in every prior artifact, so "
+            "the latin envelopes are size-mixed by the roster's own "
+            "declared construction",
+            "machinery_rule": "this instrument contains no assignment "
+            "search anywhere: no candidate evaluation, no restarts, "
+            "no sweep cap, no convergence flags; the standing budgets "
+            "are not applicable and no machinery recording appears "
+            "for that reason",
+            "split_rule": "no split applies: a profile uses every "
+            "counted pair of its stream after the declared exclusion, "
+            "the real's kept-adjacent glyph-glyph structure and the "
+            "encodings' full-stream glyph-glyph structure; the climb "
+            "and score halves of the band instruments have no "
+            "counterpart here",
+            "seed_kinds": "the declared encoding and floor kinds "
+            "replay at their frozen positions exactly as the "
+            "search-free instrument replayed them: the members' "
+            "selected draws through the homo_cross_enc kind at their "
+            "member position, the plants through the homo_plant_enc "
+            "kind at their index and the floors through the "
+            "homo_floor_perm kind at their index; no new seed kind "
+            "and no new position",
+            "seed_sharing": "no machinery streams exist in this "
+            "instrument and none are consumed; every encoding is a "
+            "byte-identical replay of its declared frozen draw, and "
+            "each glyph-block profile is verified by the gate as the "
+            "declared block of the same full-width encodings the "
+            "frozen search-free artifact measured",
+            "band_record_rule": "the simulated band is the frozen "
+            "widened roster's 45 selected-draw encodings (7 english "
+            "and 8 latin per language cell): each member's profile is "
+            "its selected draw's encoding streaming through the "
+            "declared encoder and partition, then reduced to its "
+            "glyph block, the selected draw read from the frozen "
+            "artifact rather than re-derived because re-derivation is "
+            "machinery; membership unconditional exactly as declared "
+            "before",
+            "plants_rule": "the 30 plant encodings (5 per cell, the "
+            "standing first references through the declared partition "
+            "and encoder at the standing kinds) recorded as the "
+            "instrument's own simulated calibration set, each "
+            "reduced to its glyph block with the full width's total "
+            "recorded beside it, each cell recording its standing "
+            "source's truncated length and a "
+            "plants_at_source_identity boolean checking every "
+            "plant's full-width total equals its source length minus "
+            "one; no parity rule applies because there is no anchor "
+            "geometry to exceed: the plant's profile is its own "
+            "encoding's glyph block",
+            "floors_rule": "the 30 destroyed-adjacency floors "
+            "recorded with their glyph-block profiles and their "
+            "full-width totals; their declared role is the "
+            "shuffled-structure control recorded beside the verdict, "
+            "not part of any envelope",
+            "plaintext_rule": "each cell records the truncated "
+            "standing reference's own plaintext stream profile "
+            "computed by the same formulas on its own 27-type state "
+            "(729 types), as the prose control beside the verdict; "
+            "the state carries no boundary mark, so the control is "
+            "unchanged by the exclusion (every control's totals are "
+            "gate-anchored against the frozen search-free artifact's "
+            "stored controls); its state width differs by "
+            "declaration and it takes no part in any envelope",
+            "verdict_rule": "declared strict-all: a cell is "
+            "shape-consistent-with-homophonic-encoding only when "
+            "every declared invariant of the real's glyph-block "
+            "profile sits inside the closed range of that cell's "
+            "simulated band's glyph-block profiles (the two vector "
+            "summaries term by term inside the band's per-position "
+            "envelope over 36 sorted positions, the scalar summaries "
+            "inside [min, max] at the stored 6-decimal rounding); "
+            "any outside invariant makes the cell "
+            "shape-outside-analogues, and every outside entry is "
+            "recorded with its band range so the miss is audited not "
+            "summarized",
+            "closure_rule": "no scalar margin is formed: this "
+            "instrument's question is inside or outside per "
+            "invariant, and the recorded distances are the outside "
+            "entries' band ranges themselves",
+            "exclusion_rule": "the family's declared exclusion format "
+            "is not re-scoped by this artifact: it keys to the "
+            "declared 36-slot class under the inherited add-one form "
+            "exactly as the held-out screen declared it, so a "
+            "search-free verdict is structure evidence and the band "
+            "instruments' verdicts stand untouched by this "
+            "artifact's numbers",
+            "bridge_gate": "before any profile is priced, every fact "
+            "this instrument re-derives fresh that a frozen "
+            "predecessor already recorded must equal that stored "
+            "value field for field against two frozen sources: the "
+            "restart-budget artifact's 171 anchor fields exactly as "
+            "the search-free instrument declared them (the six "
+            "cells' counted pairs, all 45 members' file, ebook and "
+            "plant_length records, and the 30 floors' pair totals), "
+            "and the frozen search-free artifact's 117 anchor fields "
+            "(per cell: the full-width totals of the real, all 45 "
+            "members, all 30 plants, all 30 floors and the 6 "
+            "plaintext controls re-derived from the same byte-identical "
+            "replays, every one equal to that artifact's stored "
+            "totals); the plants' full-width identities are verified "
+            "inside every cell as well (each plant's full-width "
+            "total equals its declared source length minus one); "
+            "the selected-draw indexes are read, not re-derived; any "
+            "divergence aborts with nothing written",
+            "corpus_source_rule": "no new corpus files and no new "
+            "candidates: the band population is the frozen widened "
+            "band's declared roster, the plants and plaintext "
+            "controls are the standing references' frozen files, all "
+            "stored raw with their markers and processed by the "
+            "standing declared processing",
+            "models_rule": "no score table is built or used: the "
+            "instrument prices count structure only, so the standing "
+            "add-one and leave-one-out tables play no part anywhere "
+            "in this artifact",
+            "corpus_facts": {},
+        },
+        "bridge_gate": {
+            "status": "verified",
+            "fields_compared": fields,
+        },
+        "files": {},
+    }
+    for code in FILES:
+        cell = {}
+        for language in LANGS:
+            cell[language] = _search_free_bm_cell_facts(code, language)
+        artifact["files"][code] = cell
+    return artifact
+
+
+def main_boundary_mark() -> None:
+    artifact = substitution_homophonic_boundary_mark()
+    SEARCH_FREE_BM_ARTIFACT_PATH.write_text(
+        json.dumps(artifact, indent=2) + "\n"
+    )
+    print(SEARCH_FREE_BM_ARTIFACT_PATH)
