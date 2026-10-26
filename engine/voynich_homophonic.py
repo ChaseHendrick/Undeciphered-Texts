@@ -1385,6 +1385,178 @@ mapping is published anywhere in this artifact, no recovered
 assignment is stored as a key, plaintext_recovered_percent stays 0,
 the reference prose is modern printed text outside the manuscript's
 century, and nothing here is a reading or a language claim.
+
+Twelfth declared measurement, the corpus-breadth search-free
+instrument, declared after the boundary-mark re-instrument answered
+no in all six cells and before any run of it beyond the probes it
+discloses.
+
+The disclosed background, declared in advance: the interior miss
+survived the mark's exclusion in every cell (the boundary-mark
+instrument's eight invariant tests outside in five cells, seven of
+eight in the GC latin cell with its self-pair share the recorded
+entry into its band), and the real's recorded directions sit in its
+own pair-count structure's cuts - the concentrated first sorted
+positions, the concentrated top pairs, the shared self-pair mass
+and the low entropy - so the one untested declared axis of the
+search-free design left standing is the roster's own extent. The
+standing bands are seven english and eight latin members of one
+declared roster, and a band's closed ranges are extrema over its
+membership, so this instrument widens the band population across
+the corpus breadth and re-asks the search-free question unchanged
+otherwise. The declared truth about the arithmetic, recorded as
+design: adding members to a band can only widen the band's closed
+ranges and per-position envelopes (each extremum is taken over more
+members), so every widened test is weakly wider than its standing
+counterpart and an inside verdict becomes the easier outcome; the
+only verdict change this design can produce is a cell reporting
+inside under the widened band, and the declared question is
+whether any does. With the band population widened across the
+corpus breadth under the declared draw rules, does the real's
+mark-excluded profile sit inside the extended band's range on every
+declared invariant in every (file, language) cell, or is at least
+one invariant outside - the measured test of whether the interior's
+separation holds as the roster grows.
+
+The declared design, before the run: the boundary-mark
+re-instrument's state space and verdict rule unchanged - every
+profile the mark-excluded block of its pair-count matrix, 1296
+ordered types, the mark's row and column excluded on both sides
+exactly as declared there, the same six relabeling-invariant
+summaries priced under the same declared strict-all no-margin rule
+- with the band population widened: the standing roster's
+selected-draw encodings replayed byte-identically (the selected
+draw read from the frozen restart-budget artifact, not re-derived)
+and the declared breadth members' encodings added at their listed
+positions (english 7 to 11, latin 8 to 10), each breadth member
+taking draw 0 of the declared homo_cross_enc kind at its listed
+position, the stream's first encoding, declared in advance with no
+selection performed and no machinery; the kind's position axis
+extends, no new seed kind is consumed. The roster's declared floor:
+each breadth member's processed stream must reach the standing
+roster's smallest member stream length (45,491 tokens, Vulgata
+Esther), and every accepted candidate clears it. The membership
+stays unconditional at twelve english and eleven latin member
+profiles per cell (the standing seven english and eight latin plus
+the breadth five english and three latin), and the plants, the
+floors and the plaintext controls replay exactly as the
+boundary-mark instrument declared them.
+
+Corpus discipline, declared and disclosed before the run. Five
+declared english slots (an early modern scriptural register, an
+eighteenth century satirical prose register, a verse register, a
+civic polemical register and a scientific non-fiction register) and
+three declared latin slots (classical epic verse, classical prose
+history and classical oratory) fill the new positions; every
+candidate fetched from the standing members' plain text source at
+the declared cache form, probed in its marker span before
+acceptance (the english common-word probe the, and, with, from over
+the body in deciles against the standing transcriber-note scale's 0
+to 52 hits, the processed stream through the declared loader, and
+mid-span samples read), accepted files stored raw under engine/data
+with their Gutenberg markers, processed by the standing declared
+processing with no new step, and a sha256 recorded. The fetch
+verification was rehearsed: the cache serves the standing english2
+marker span byte-identical (447,911 bytes, span sha256
+7f95a6c0484513216cffa7d9e1e0314896faa21cb5a713d65c125a86f1f43695)
+at the same byte counts, with a two-line title capitalization drift
+upstream in the header metadata (the modern prometheus to The
+modern Prometheus, differing bytes at positions 49, 60, 555 and 566
+before the START marker), recorded as metadata drift the marker
+span does not carry, so the standing freeze stands. The accepted
+roster: ebook 10 the King James Version of the Bible, ebook 829
+Gulliver's Travels (Swift), ebook 1041 Shakespeare's Sonnets, ebook
+1404 The Federalist Papers, ebook 1228 On the Origin of Species
+(Darwin); ebook 227 Aeneidos (Virgil), ebook 18837 Commentarii de
+Bello Gallico libri V-VIII (Caesar), ebook 226 Cicero's Orations;
+the rejections and their verbatim causes are recorded in the
+artifact and disclosed here in summary: ebook 21765 an english
+translation carries the marker span (17,181 common-word hits in
+every decile, mid-span in english), ebook 14945 the editor's
+english school notes interleave (3,916), ebook 16564 a bilingual
+edition's render and apparatus (5,083), ebook 20732 a bilingual
+interleave whose title page states the design (4,330), ebook 25861
+an english reader (2,719), ebooks 20771 and 63139 above the
+standing scale (54 and 55 common-word hits, head and trailing
+scaffolding, no mid-span), and ebook 19635 the 404 page again; two
+further english candidates (ebook 3207 Leviathan, ebook 148 the
+Autobiography of Benjamin Franklin) probed clean and are not
+selected by the roster's declared five-slot design, recorded with
+the artifact.
+
+Mechanics, declared: the bridge gate first, against three frozen
+sources - the boundary-mark instrument's 288 anchor fields exactly
+as that instrument declared them (the restart-budget artifact's 171
+anchors and the frozen search-free artifact's 117 full-width
+totals), then per cell the standing rows' mark-excluded profiles
+verified as replay-equal against the frozen boundary-mark
+artifact's stored rows (each standing member's file, ebook,
+plant_length, selected_draw_index, full-width total and block
+profile as one row check each; each plant's block profile; each
+floor's block profile; each plaintext control's profile): 111
+profile checks total, 18 per english cell and 19 per latin cell
+times 3 files, 399 fields all told; the breadth members carry no
+frozen counterpart, their encodings take the declared draw-0 rule
+and their facts ride on the declared roster with sha256 records;
+any divergence aborts with nothing written.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+bridge gate rehearsed: the gate ran at 399 fields compared, no
+problem. Probe 2, the corpus freeze facts ahead of the run: ebook
+10 at 4,455,950 bytes with stream 4,018,128 tokens (letters
+3,225,940, boundary 792,188), ebook 829 at 613,946 bytes with
+stream 564,687 (459,023, 105,664), ebook 1041 at 119,936 bytes
+with stream 91,745 (73,444, 18,301), ebook 1404 at 1,186,849 bytes
+with stream 1,122,186 (929,847, 192,339), ebook 1228 at 970,611
+bytes with stream 906,068 (750,086, 155,982), ebook 227 at 495,876
+bytes with stream 431,388 (367,595, 63,793), ebook 18837 at 255,543
+bytes with stream 225,036 (194,148, 30,888), ebook 226 at 112,390
+bytes with stream 87,917 (74,709, 13,208); every stream clears the
+45,491-token floor with the header-declared token types 27, 27, 27,
+27, 27, 25, 24 and 24, and the fetch verification stands as
+declared above. Probe 3, the first cell's declared verdict ahead of
+the run, ZL english: shape-outside-analogues with every one of the
+eight invariant tests outside - symbol_shares 35 of 36 sorted
+positions outside, pair_shares 834 of 1296 positions outside,
+empty_type_count 928 against [323, 454], self_pair_share 0.065848
+against [0.0187, 0.026741], top_1_share 0.070481 against
+[0.018196, 0.035886], top_10_share 0.424435 against
+[0.106088, 0.148336], top_50_share 0.893671 against
+[0.305696, 0.355739], pair_entropy 4.010179 against
+[5.928491, 6.102864]; the twelve members' full widths 91,744 to
+218,662 (their block totals 55,143 to 144,510, block entropies
+5.928491 to 6.102864), the plants' identity true, the floors' block
+totals 155,062 to 155,329 against the real's block 149,799.
+Probe 4, the first latin cell's declared verdict ahead of the run,
+ZL latin: shape-outside-analogues with every one of the eight
+invariant tests outside - symbol_shares 36 of 36, pair_shares 780
+of 1296, empty_type_count 928 against [240, 503], self_pair_share
+0.065848 against [0.011829, 0.023974], top_1_share 0.070481 against
+[0.013483, 0.02536], top_10_share 0.424435 against
+[0.09782, 0.131916], top_50_share 0.893671 against
+[0.268516, 0.336503], pair_entropy 4.010179 against
+[5.980168, 6.252046]; the eleven members' full widths 45,490 to
+218,662 with block entropies 5.980168 to 6.252046 (the breadth's
+classical members extend the standing latin band's entropy top end
+upward from 6.104489 to 6.252046 while the real's sits at
+4.010179), the plants' identity true, the floors' block totals
+155,145 to 155,274. Probe 5, the plaintext control recorded
+unchanged: every control's profile equals its frozen boundary-mark
+counterpart field for field - ZL english entropy 5.139035, ZL latin
+5.06327, GC english 5.139139, GC latin 5.063406, IT english
+5.139068, IT latin 5.062979, all on their 729-type states.
+Probe 6: none; the four remaining cells are unseen until the
+declared run. The probes' disclosed first-cell verdicts do not
+decide the artifact: the artifact run prices all six cells through
+the same declared code, and the disclosure's honest question is
+recorded over all of them.
+
+The standing limitations are inherited from the held-out screen: no
+mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays 0,
+the reference prose is modern printed text outside the manuscript's
+century, and nothing here is a reading or a language claim.
 """
 
 from __future__ import annotations
@@ -7531,3 +7703,696 @@ def main_boundary_mark() -> None:
         json.dumps(artifact, indent=2) + "\n"
     )
     print(SEARCH_FREE_BM_ARTIFACT_PATH)
+
+
+# --------------------------------------------------------------------------
+# The twelfth declared measurement: the corpus-breadth search-free
+# instrument. Declared in the module docstring before any run beyond
+# the probes it discloses.
+# --------------------------------------------------------------------------
+
+SEARCH_FREE_BREADTH_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes"
+    / "voynich-homophonic-corpus-breadth.json"
+)
+
+BREADTH_REFERENCE_FILES: dict[str, list[tuple[str, int, str]]] = {
+    "english": [
+        ("substref_english10_pg10.txt", 10,
+         "The King James Version of the Bible"),
+        ("substref_english11_pg829.txt", 829,
+         "Gulliver's Travels (Swift)"),
+        ("substref_english12_pg1041.txt", 1041,
+         "Shakespeare's Sonnets"),
+        ("substref_english13_pg1404.txt", 1404,
+         "The Federalist Papers"),
+        ("substref_english14_pg1228.txt", 1228,
+         "On the Origin of Species (Darwin)"),
+    ],
+    "latin": [
+        ("substref_latin11_pg227.txt", 227, "Aeneidos (Virgil)"),
+        ("substref_latin12_pg18837.txt", 18837,
+         "Commentarii de Bello Gallico, libri V-VIII (Caesar)"),
+        ("substref_latin13_pg226.txt", 226, "Cicero's Orations"),
+    ],
+}
+
+REJECTED_BREADTH_CANDIDATES: list[dict] = [
+    {"ebook": 21765, "label": "The Metamorphoses of Ovid, Books I-VII",
+     "cause": "an english translation carries the marker span (the "
+     "header's declared Language English; 17,181 english common-word "
+     "hits in every decile; mid-span in english: \"FABLE V. "
+     "[IV.285-388]\")"},
+    {"ebook": 14945, "label": "Cato Maior de Senectute with "
+     "Introduction and Notes",
+     "cause": "the editor's english school notes interleave through "
+     "the span (3,916 common-word hits in every decile; mid-span in "
+     "english: \"RECORDENTUR: this verb\")"},
+    {"ebook": 16564, "label": "Amphitryo, Asinaria, Aulularia, "
+     "Bacchides, Captivi (Plautus)",
+     "cause": "a bilingual edition: the english render and notes "
+     "interleave through the span (5,083 common-word hits in every "
+     "decile; mid-span the translator's apparatus: \"footnotes are "
+     "collected at the end of each play\")"},
+    {"ebook": 20732, "label": "The Carmina of Caius Valerius Catullus",
+     "cause": "a bilingual interleave: the english render interleaved "
+     "with the latin through the span (4,330 common-word hits in "
+     "every decile; the mid-span title page states the design: "
+     "\"the carmina of caius valerius catullus now first completely "
+     "englished into verse and prose\")"},
+    {"ebook": 25861, "label": "Stories from Aulus Gellius",
+     "cause": "an english reader's prose interleaved through the span "
+     "(2,719 common-word hits; mid-span in english: \"5. The doe used "
+     "to converse with Sertorius and advise him.\")"},
+    {"ebook": 20771, "label": "Species Plantarum, Sections I-III "
+     "(Linnaeus)",
+     "cause": "the english head-and-trailing scaffolding totals 54 "
+     "common-word hits against the standing transcriber-note scale's "
+     "0 to 52 (16 head and 38 trailing, no mid-span hits), so the "
+     "declared bar rejects it: the roster's scale letter is not "
+     "widened by this roster"},
+    {"ebook": 63139, "label": "Fratris Felicis Fabri Evagatorium in "
+     "Terrae Sanctae, Arabiae et Egypti Peregrinationem. Volumen "
+     "Tertium",
+     "cause": "the english scaffolding totals 55 common-word hits "
+     "against the standing transcriber-note scale's 0 to 52 (7 head "
+     "and 48 in a trailing english block, no mid-span hits), the "
+     "declared bar again; also the same printed travel account's "
+     "third volume, both facts declared"},
+    {"ebook": 19635, "label": "Biblia Sacra Vulgata - Psalmi XXII",
+     "cause": "not accessible at the declared fetch source: the cache "
+     "returned the 404 page again this run (the standing record's "
+     "cause from the sixth measurement, reproduced)"},
+]
+
+BREADTH_EXTRA_NOT_SELECTED: list[dict] = [
+    {"ebook": 3207, "label": "Leviathan (Hobbes)", "stream_total": 1162350},
+    {"ebook": 148, "label": "The Autobiography of Benjamin Franklin",
+     "stream_total": 365244},
+]
+
+BREADTH_ROSTER_FLOOR_STREAM = 45491
+
+
+def _breadth_reference_members(language: str) -> list[tuple[str, int]]:
+    """The corpus-breadth band's member texts: the standing widened
+    list first, then the breadth members declared above."""
+    return (
+        [_extended_reference_members(language)[position]
+         for position in _extended_band_positions(language)]
+        + [(name, ebook) for name, ebook, _label in
+           BREADTH_REFERENCE_FILES[language]]
+    )
+
+
+def _breadth_band_positions(language: str) -> tuple[int, ...]:
+    """The corpus-breadth band's positions."""
+    return tuple(range(len(_breadth_reference_members(language))))
+
+
+def _breadth_cell_facts(code: str, language: str) -> dict:
+    """One cell's corpus-breadth facts: the boundary-mark
+    re-instrument's same cell replays (the real's kept-adjacent matrix
+    reduced to its mark-excluded block, the standing widened band's
+    members through their frozen selected draws, the plants, the
+    floors, the plaintext control) with the band population extended
+    by the declared breadth members at their listed positions: each
+    breadth member's profile comes from draw 0 of the declared
+    homo_cross_enc kind at that position, the stream's first encoding,
+    declared in advance with no selection performed. Every profile is
+    the mark-excluded glyph block exactly as the boundary-mark
+    instrument declared it. No machinery anywhere in the instrument."""
+    frozen = json.loads(RESTART_BUDGET_ARTIFACT_PATH.read_text())
+    stored_band = frozen["files"][code][language]["band"]
+    standing_count = len(_extended_reference_members(language))
+    real = _homo_real_stream(code)
+    real_mark = len(real["mapped_chars"]) - 1
+    real_matrix = _count_matrix_37(real["event_ids"], real["kept_mask"])
+    real_profile = _profile_facts(
+        _glyph_block_matrix(real_matrix, real_mark)
+    )
+    members = _breadth_reference_members(language)
+    member_facts = []
+    for position in _breadth_band_positions(language):
+        name, ebook = members[position]
+        truncated = _truncated_reference(code, language, file=name)
+        groups = _partition_groups(truncated, MAPPED_HOMO)
+        rng_enc = np.random.default_rng(_seed(
+            CELL_ID[code], KIND_ID["homo_cross_enc"],
+            LANG_ID[language], position,
+        ))
+        if position < standing_count:
+            selected = stored_band[position]["selected_draw_index"]
+            encoded: np.ndarray | None = None
+            for _draw in range(selected + 1):
+                encoded = _encode(
+                    truncated, groups, rng_enc, MAPPED_HOMO
+                )
+            draws_rule = "standing_frozen_selected"
+            draws_value: int = selected
+        else:
+            encoded = _encode(
+                truncated, groups, rng_enc, MAPPED_HOMO
+            )
+            draws_rule = "breadth_declared_draw_0"
+            draws_value = 0
+        full = _full_matrix_37(encoded)
+        member_facts.append({
+            "file": name,
+            "ebook": ebook,
+            "plant_length": len(truncated),
+            "selected_draw_index": draws_value,
+            "draw_rule": draws_rule,
+            "full_width_total_pairs": int(round(full.sum())),
+            "profile": _profile_facts(
+                _glyph_block_matrix(full, MAPPED_HOMO)
+            ),
+        })
+    standing_truncated = _truncated_reference(code, language)
+    standing_groups = _partition_groups(standing_truncated, MAPPED_HOMO)
+    plant_facts = []
+    for index in range(N_PLANTS):
+        rng_enc = np.random.default_rng(_seed(
+            CELL_ID[code], KIND_ID["homo_plant_enc"],
+            LANG_ID[language], index,
+        ))
+        encoded = _encode(
+            standing_truncated, standing_groups, rng_enc, MAPPED_HOMO
+        )
+        full = _full_matrix_37(encoded)
+        plant_facts.append({
+            "index": index,
+            "plant_length": len(standing_truncated),
+            "full_width_total_pairs": int(round(full.sum())),
+            "profile": _profile_facts(
+                _glyph_block_matrix(full, MAPPED_HOMO)
+            ),
+        })
+    floor_facts = []
+    for index in range(N_FLOORS):
+        rng_perm = np.random.default_rng(_seed(
+            CELL_ID[code], KIND_ID["homo_floor_perm"],
+            LANG_ID[language], index,
+        ))
+        values = real["kept_ids"].copy()
+        rng_perm.shuffle(values)
+        full = real["event_ids"].copy()
+        full[real["kept_mask"]] = values
+        floor_full = _count_matrix_37(full, real["kept_mask"])
+        floor_facts.append({
+            "index": index,
+            "full_width_total_pairs": int(round(floor_full.sum())),
+            "profile": _profile_facts(
+                _glyph_block_matrix(floor_full, real_mark)
+            ),
+        })
+    plaintext = _profile_facts(_stream_matrix_27(standing_truncated))
+    tests = _search_free_envelope(real_profile, member_facts)
+    outside = [key for key, test in tests.items() if not test["inside"]]
+    verdict = (
+        "shape-consistent-with-homophonic-encoding" if not outside
+        else "shape-outside-analogues"
+    )
+    return {
+        "stream_events": real["total_events"],
+        "kept_pairs": int(real_matrix.sum()),
+        "unmapped_events": (
+            real["total_events"] - int(real["kept_mask"].sum())
+        ),
+        "boundary_carried_pairs": _boundary_carried_pairs(
+            real_matrix, real_mark
+        ),
+        "real_profile": real_profile,
+        "real_full_width_total_pairs": int(real_matrix.sum()),
+        "standing_plant_length": len(standing_truncated),
+        "plants_at_source_identity": all(
+            plant["full_width_total_pairs"]
+            == plant["plant_length"] - 1
+            for plant in plant_facts
+        ),
+        "members_profiles": member_facts,
+        "plants_profiles": plant_facts,
+        "floors_profiles": floor_facts,
+        "plaintext_profile": plaintext,
+        "invariants": tests,
+        "outside_invariants": outside,
+        "verdict": verdict,
+    }
+
+
+def _breadth_member_row(
+    code: str, language: str, position: int,
+    standing_count: int,
+) -> dict:
+    """One corpus-breadth member's full-width encoding row: the
+    standing positions through their frozen selected draws, the
+    breadth positions through the declared draw 0 rule."""
+    members = _breadth_reference_members(language)
+    name, ebook = members[position]
+    truncated = _truncated_reference(code, language, file=name)
+    groups = _partition_groups(truncated, MAPPED_HOMO)
+    rng_enc = np.random.default_rng(_seed(
+        CELL_ID[code], KIND_ID["homo_cross_enc"],
+        LANG_ID[language], position,
+    ))
+    if position < standing_count:
+        stored = json.loads(
+            RESTART_BUDGET_ARTIFACT_PATH.read_text()
+        )["files"][code][language]["band"][position]
+        selected = stored["selected_draw_index"]
+        encoded: np.ndarray | None = None
+        for _draw in range(selected + 1):
+            encoded = _encode(truncated, groups, rng_enc, MAPPED_HOMO)
+        draws_rule = "standing_frozen_selected"
+        draws_value: int = selected
+    else:
+        encoded = _encode(truncated, groups, rng_enc, MAPPED_HOMO)
+        draws_rule = "breadth_declared_draw_0"
+        draws_value = 0
+    full = _full_matrix_37(encoded)
+    return {
+        "file": name,
+        "ebook": ebook,
+        "plant_length": len(truncated),
+        "selected_draw_index": draws_value,
+        "draw_rule": draws_rule,
+        "full_width_total_pairs": int(round(full.sum())),
+        "profile": _profile_facts(
+            _glyph_block_matrix(full, MAPPED_HOMO)
+        ),
+    }
+
+
+def _compare_breadth_to_frozen() -> tuple[list[str], int]:
+    """The declared bridge gate, two frozen sources first and the
+    standing profiles verified beside them: the boundary-mark
+    instrument's 288 anchor fields exactly as that instrument declared
+    them (the restart-budget artifact's 171 anchors and the frozen
+    search-free artifact's 117 full-width totals), then per cell the
+    standing rows' mark-excluded profiles verified as dict-equal
+    replays against the frozen boundary-mark artifact's stored rows
+    (each standing member's file, ebook, plant_length, selected_draw
+    index, full-width total and profile; each plant's profile; each
+    floor's profile; each plaintext control's profile), 111 profile
+    checks total (18 per english cell times 3 cells, 19 per latin cell
+    times 3 cells). The breadth members carry no frozen counterpart:
+    their encodings take the declared draw 0 rule and their facts are
+    recorded as declared corpus facts with sha256 records in the
+    artifact. Any divergence aborts with nothing written."""
+    problems, fields = _compare_search_free_bm_to_frozen()
+    frozen_bm = json.loads(SEARCH_FREE_BM_ARTIFACT_PATH.read_text())
+    for code in FILES:
+        for language in LANGS:
+            stored_cell = frozen_bm["files"][code][language]
+            members = _breadth_reference_members(language)
+            standing_count = len(_extended_reference_members(language))
+            for position, stored_row in enumerate(
+                stored_cell["members_profiles"]
+            ):
+                if len(members) <= position:
+                    problems.append(
+                        f"member roster short at "
+                        f"{code}/{language}/{position}"
+                    )
+                    continue
+                fresh_row = _breadth_member_row(
+                    code, language, position, standing_count
+                )
+                fields += 1
+                differing = [
+                    key for key in stored_row
+                    if fresh_row.get(key) != stored_row[key]
+                ]
+                if differing:
+                    problems.append(
+                        f"member/{code}/{language}/{position}: the "
+                        f"standing row's replay does not equal the "
+                        f"stored boundary-mark row ({', '.join(differing)})"
+                    )
+            real = _homo_real_stream(code)
+            real_mark = len(real["mapped_chars"]) - 1
+            standing_truncated = _truncated_reference(code, language)
+            standing_groups = _partition_groups(
+                standing_truncated, MAPPED_HOMO
+            )
+            for index, stored_row in enumerate(
+                stored_cell["plants_profiles"]
+            ):
+                rng_enc = np.random.default_rng(_seed(
+                    CELL_ID[code], KIND_ID["homo_plant_enc"],
+                    LANG_ID[language], index,
+                ))
+                encoded = _encode(
+                    standing_truncated, standing_groups, rng_enc,
+                    MAPPED_HOMO,
+                )
+                fresh_profile = _profile_facts(_glyph_block_matrix(
+                    _full_matrix_37(encoded), MAPPED_HOMO
+                ))
+                fields += 1
+                if fresh_profile != stored_row["profile"]:
+                    problems.append(
+                        f"plant/{code}/{language}/{index}: the block "
+                        f"profile's replay does not equal the stored "
+                        f"boundary-mark profile"
+                    )
+            for index, stored_row in enumerate(
+                stored_cell["floors_profiles"]
+            ):
+                rng_perm = np.random.default_rng(_seed(
+                    CELL_ID[code], KIND_ID["homo_floor_perm"],
+                    LANG_ID[language], index,
+                ))
+                values = real["kept_ids"].copy()
+                rng_perm.shuffle(values)
+                full = real["event_ids"].copy()
+                full[real["kept_mask"]] = values
+                fresh_profile = _profile_facts(_glyph_block_matrix(
+                    _count_matrix_37(full, real["kept_mask"]),
+                    real_mark,
+                ))
+                fields += 1
+                if fresh_profile != stored_row["profile"]:
+                    problems.append(
+                        f"floor/{code}/{language}/{index}: the block "
+                        f"profile's replay does not equal the stored "
+                        f"boundary-mark profile"
+                    )
+            fresh_plaintext = _profile_facts(
+                _stream_matrix_27(standing_truncated)
+            )
+            fields += 1
+            if fresh_plaintext != stored_cell["plaintext_profile"]:
+                problems.append(
+                    f"plaintext/{code}/{language}: the control's "
+                    f"profile does not equal the stored boundary-mark "
+                    f"profile"
+                )
+    return problems, fields
+
+
+def substitution_homophonic_corpus_breadth() -> dict:
+    """The declared corpus-breadth search-free instrument: the
+    boundary-mark re-instrument's state space and summaries against a
+    band population widened across the declared corpus breadth. The
+    bridge gate runs first; any divergence aborts with nothing
+    written."""
+    problems, fields = _compare_breadth_to_frozen()
+    if problems:
+        raise AssertionError(
+            "corpus-breadth bridge gate failed: " + "; ".join(problems)
+        )
+    accepted_facts = []
+    for language in LANGS:
+        for name, ebook, label in BREADTH_REFERENCE_FILES[language]:
+            path = (Path(DATA_DIR).resolve().parent / name)
+            text = path.read_text(encoding="utf-8", errors="replace")
+            start = text.find("START OF THE PROJECT GUTENBERG")
+            end = text.find("END OF THE PROJECT GUTENBERG")
+            body = text[start + len("START OF THE PROJECT GUTENBERG"):end]
+            stream = _reference_stream(language, file=name)
+            letters = sum(1 for value in stream if value != 26)
+            accepted_facts.append({
+                "file": name,
+                "ebook": ebook,
+                "label": label,
+                "language": language,
+                "sha256": hashlib.sha256(
+                    path.read_bytes()
+                ).hexdigest(),
+                "file_bytes": len(path.read_bytes()),
+                "body_bytes": len(body),
+                "stream_total": len(stream),
+                "letters": letters,
+                "boundary": len(stream) - letters,
+                "types_present": len(set(stream)),
+            })
+    artifact = {
+        "what": "The declared corpus-breadth search-free instrument: "
+        "the boundary-mark re-instrument's same six relabeling-invariant "
+        "summaries over the same mark-excluded state space (1296 "
+        "ordered types, the boundary mark's row and column excluded on "
+        "both sides exactly as declared there), recomputed against a "
+        "band population widened across the declared corpus breadth "
+        "(twelve english and eleven latin members per cell, the "
+        "standing roster replayed byte-identically and extended by the "
+        "declared breadth members frozen under the standing corpus "
+        "rules), priced under the same declared strict-all verdict "
+        "rule with no assignment search anywhere in the instrument. "
+        "The declared truthful question: with the band population "
+        "widened across the corpus breadth under the declared draw "
+        "rules, does the real's mark-excluded profile sit inside the "
+        "extended band's range on every declared invariant in every "
+        "(file, language) cell, or is at least one invariant outside - "
+        "the measured test of whether the interior's separation holds "
+        "as the roster grows. No mapping is published; nothing here is "
+        "a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "boundary_rule": "the word-boundary mark's row and column "
+            "are excluded from every profile's state space on both "
+            "sides exactly as the boundary-mark re-instrument declared: "
+            "every profile is the mark-excluded block of its "
+            "pair-count matrix, 1296 ordered types, the mark located in "
+            "each matrix's own alphabet (symbol 36 in every simulated "
+            "encoding and the real file's own last mapped position), "
+            "the full width's total recorded beside every block "
+            "profile, and no boundary-adjusted marginal appears "
+            "anywhere; the standing alphabet-width disclosure carries "
+            "unchanged (the IT real transcription ranks only 23 glyph "
+            "types plus the mark, so 13 of its block's 36 glyph slots "
+            "are empty by width alone on the real side while the "
+            "simulated alphabets are saturated at 36 in every cell)",
+            "corpus_breadth_rule": "the band population widens across "
+            "the declared corpus breadth: five declared english slots "
+            "(an early modern scriptural register, an eighteenth "
+            "century satirical prose register, a verse register, a "
+            "civic polemical register and a scientific non-fiction "
+            "register) and three declared latin slots (classical epic "
+            "verse, classical prose history and classical oratory), "
+            "each filled by the declared roster's accepted candidates: "
+            "ebook 10 the King James Version of the Bible, ebook 829 "
+            "Gulliver's Travels (Swift), ebook 1041 Shakespeare's "
+            "Sonnets, ebook 1404 The Federalist Papers, ebook 1228 On "
+            "the Origin of Species (Darwin); ebook 227 Aeneidos "
+            "(Virgil), ebook 18837 Commentarii de Bello Gallico, libri "
+            "V-VIII (Caesar), ebook 226 Cicero's Orations; the "
+            "standing roster replays first, the breadth members take "
+            "the listed positions english 7 to 11 and latin 8 to 10, "
+            "the declared homo_cross_enc kind's position axis extends, "
+            "no new seed kind; each breadth member's processed stream "
+            "must reach the standing roster's smallest member stream "
+            "length (45,491 tokens, Vulgata Esther) and every accepted "
+            "candidate clears that floor",
+            "corpus_source_rule": "the corpus discipline stands: each "
+            "candidate fetched from the standing members' plain text "
+            "source at the declared cache form, each accepted file "
+            "stored raw with its Gutenberg markers and processed by "
+            "the standing declared processing with no new step, a "
+            "sha256 recorded for every accepted file, candidates "
+            "probed in their marker spans before acceptance (the "
+            "english common-word probe over the body in deciles with "
+            "their head-and-trailing structure read, the processed "
+            "stream through the declared loader, and mid-span samples "
+            "read); the standing fetch verification was rehearsed: the "
+            "cache serves the standing english2 marker span "
+            "byte-identical (447,911 bytes, span sha256 "
+            "7f95a6c0484513216cffa7d9e1e0314896faa21cb5a713d65c125a86f"
+            "1f43695) at the same byte counts, with a two-line title "
+            "capitalization drift upstream in the header metadata "
+            "(the modern prometheus to The modern Prometheus, bytes "
+            "49, 60, 555 and 566), recorded as metadata drift the "
+            "marker span does not carry; the rejected candidates and "
+            "their causes are recorded verbatim in "
+            "rejected_breadth_candidates; two further english "
+            "candidates probed clean and not selected by the roster's "
+            "declared five-slot design (ebook 3207 Leviathan, ebook "
+            "148 The Autobiography of Benjamin Franklin); the "
+            "acceptance bar is the standing scale in every respect: "
+            "no english translation, gloss or apparatus interleaved "
+            "through the body, and the english scaffolding totals "
+            "inside the standing transcriber-note scale's 0 to 52 "
+            "common-word hits",
+            "invariants": {
+                "sorted_symbol_marginals": "the 36 mark-excluded "
+                "glyph marginals as a multiset, stored sorted "
+                "descending as counts and shares, envelope-tested by "
+                "sorted position over 36 positions",
+                "sorted_pair_multiset": "the 1296 mark-excluded pair "
+                "counts as a multiset, stored sorted descending as "
+                "counts and shares, envelope-tested by sorted "
+                "position",
+                "empty_type_count": "the number of the block's "
+                "mark-excluded pair types with zero counted "
+                "occurrences, a scalar inside [min, max]",
+                "self_pair_share": "the block's diagonal sum over the "
+                "profile's glyph-pair total",
+                "top_k_shares": "the share of the glyph-pair total "
+                "carried by the k largest pair counts, at k 1, 10 "
+                "and 50",
+                "pair_entropy": "the natural entropy of the "
+                "mark-excluded pair distribution in nats per counted "
+                "glyph pair",
+            },
+            "state_note": "every profile here is the mark-excluded "
+            "block of the same pair-count matrices the boundary-mark "
+            "instrument priced: the real's kept-adjacent pairs and the "
+            "encodings' full streams keep their structural "
+            "difference, every share-valued invariant normalises by "
+            "its own glyph-pair total, and the empty type count is a "
+            "raw count tied to its own total and recorded in that "
+            "context; the plaintext control's state is the 27 "
+            "reference letters alone (729 types, no boundary mark) "
+            "and takes no part in any envelope; the latin envelopes "
+            "are size-mixed by the roster's own declared construction "
+            "(the roster's member streams run 45,491 tokens upward), "
+            "and the breadth members' declared draw-0 sources sit "
+            "beside the standing members' frozen selected draws by "
+            "declaration",
+            "machinery_rule": "this instrument contains no assignment "
+            "search anywhere: no candidate evaluation, no restarts, "
+            "no sweep cap, no convergence flags; the standing budgets "
+            "are not applicable and no machinery recording appears "
+            "for that reason",
+            "split_rule": "no split applies: a profile uses every "
+            "counted pair of its stream after the declared exclusion; "
+            "the climb and score halves of the band instruments have "
+            "no counterpart here",
+            "seed_kinds": "the standing encoding and floor kinds "
+            "replay at their frozen positions exactly as every "
+            "predecessor declared, and the homo_cross_enc kind's "
+            "position axis extends to the breadth members' listed "
+            "positions (english 7 to 11, latin 8 to 10); no new seed "
+            "kind is consumed",
+            "seed_sharing": "the standing members' encodings are "
+            "byte-identical replays of their declared frozen draws "
+            "with the selected draw read from the frozen restart "
+            "artifact rather than re-derived; the breadth members' "
+            "encodings take the stream's first draw at their listed "
+            "positions, declared in advance with no selection "
+            "performed; every block profile of every row is verified "
+            "by the gate as the declared block of its own replayed "
+            "encoding",
+            "band_record_rule": "the simulated band per language cell "
+            "is the standing widened roster's selected-draw encodings "
+            "(7 english and 8 latin members) plus the declared "
+            "breadth members' draw-0 encodings (5 english and 3 "
+            "latin), so 12 english and 11 latin member profiles per "
+            "cell: each standing member's row carries its frozen "
+            "selected_draw_index and the breadth rows carry the "
+            "declared draw-0 marker, membership unconditional exactly "
+            "as declared before",
+            "plants_rule": "the 30 plant encodings (5 per cell, the "
+            "standing first references at the standing kinds) "
+            "recorded as the instrument's own simulated calibration "
+            "set, each reduced to its glyph block with the full "
+            "width's total beside it, each cell recording its standing "
+            "source's truncated length and the "
+            "plants_at_source_identity boolean; no parity rule "
+            "applies because there is no anchor geometry to exceed",
+            "floors_rule": "the 30 destroyed-adjacency floors "
+            "recorded with their glyph-block profiles and their "
+            "full-width totals; their declared role is the "
+            "shuffled-structure control recorded beside the verdict, "
+            "not part of any envelope",
+            "plaintext_rule": "each cell records the truncated "
+            "standing reference's own plaintext stream profile "
+            "computed by the same formulas on its own 27-type state "
+            "(729 types), as the prose control beside the verdict; "
+            "the state carries no boundary mark and takes no part in "
+            "any envelope",
+            "verdict_rule": "declared strict-all: a cell is "
+            "shape-consistent-with-homophonic-encoding only when "
+            "every declared invariant of the real's glyph-block "
+            "profile sits inside the closed range of that cell's "
+            "widened band's glyph-block profiles (the two vector "
+            "summaries term by term inside the band's per-position "
+            "envelope over 36 sorted positions, the scalar summaries "
+            "inside [min, max] at the stored 6-decimal rounding); any "
+            "outside invariant makes the cell "
+            "shape-outside-analogues, and every outside entry is "
+            "recorded with its band range so the miss is audited not "
+            "summarized",
+            "closure_rule": "no scalar margin is formed: this "
+            "instrument's question is inside or outside per "
+            "invariant, and the recorded distances are the outside "
+            "entries' band ranges themselves",
+            "exclusion_rule": "the family's declared exclusion format "
+            "is not re-scoped by this artifact: it keys to the "
+            "declared 36-slot class under the inherited add-one form "
+            "exactly as the held-out screen declared it, so a "
+            "search-free verdict is structure evidence and the band "
+            "instruments' verdicts stand untouched by this "
+            "artifact's numbers",
+            "bridge_gate": "before any profile is priced, every fact "
+            "this instrument re-derives fresh that a frozen "
+            "predecessor already recorded must equal that stored "
+            "value field for field: the boundary-mark instrument's "
+            "288 anchor fields exactly as that instrument declared "
+            "them (the restart-budget artifact's 171 anchors and the "
+            "frozen search-free artifact's 117 full-width totals), "
+            "then per cell the standing rows' mark-excluded profiles "
+            "verified as replay-equal against the frozen "
+            "boundary-mark artifact's stored rows: each standing "
+            "member's file, ebook, plant_length, selected_draw_index, "
+            "full-width total and block profile, each plant's block "
+            "profile, each floor's block profile and each plaintext "
+            "control's profile, 111 profile checks total (18 per "
+            "english cell and 19 per latin cell times 3 files); the "
+            "breadth members carry no frozen counterpart, their "
+            "encodings take the declared draw-0 rule and their facts "
+            "ride on the declared roster with sha256 records; any "
+            "divergence aborts with nothing written",
+            "models_rule": "no score table is built or used: the "
+            "instrument prices count structure only, so the standing "
+            "add-one and leave-one-out tables play no part anywhere "
+            "in this artifact",
+            "corpus_facts": {
+                "fetch_verification": {
+                    "standing_file": "substref_english2_pg84.txt",
+                    "frozen_sha256": "7810cd483cffcf2cc8a1d8f0d5807931"
+                    "e69d4f48cd14149b8c76f88af82fead3",
+                    "fresh_sha256": "2b97b7f8aad508649481d8dd4f6b54f9b"
+                    "965ddb3ba634e9151c815f537b49e42",
+                    "file_bytes": 448885,
+                    "marker_span_sha256": "7f95a6c0484513216cffa7d9e1e"
+                    "0314896faa21cb5a713d65c125a86f1f43695",
+                    "drift": "the cache's header metadata drifted "
+                    "upstream in the title line's capitalization "
+                    "(the modern prometheus to The modern Prometheus, "
+                    "differing bytes at positions 49, 60, 555 and 566 "
+                    "before the START marker); the marker span is "
+                    "byte-identical, so every declared processing "
+                    "output of the standing freeze is unchanged",
+                },
+                "accepted": accepted_facts,
+                "rejected_breadth_candidates": REJECTED_BREADTH_CANDIDATES,
+                "extras_not_selected": BREADTH_EXTRA_NOT_SELECTED,
+                "roster_floor_stream": BREADTH_ROSTER_FLOOR_STREAM,
+            },
+        },
+        "bridge_gate": {
+            "status": "verified",
+            "fields_compared": fields,
+            "anchor_fields": 288,
+            "profile_equality_checks": fields - 288,
+        },
+        "files": {},
+    }
+    for code in FILES:
+        cell = {}
+        for language in LANGS:
+            cell[language] = _breadth_cell_facts(code, language)
+        artifact["files"][code] = cell
+    return artifact
+
+
+def main_corpus_breadth() -> None:
+    artifact = substitution_homophonic_corpus_breadth()
+    SEARCH_FREE_BREADTH_ARTIFACT_PATH.write_text(
+        json.dumps(artifact, indent=2) + "\n"
+    )
+    print(SEARCH_FREE_BREADTH_ARTIFACT_PATH)
+
