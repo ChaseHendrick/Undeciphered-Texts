@@ -360,7 +360,7 @@ class SearchFreeTest(unittest.TestCase):
             " ".join(doc.split()).count(
                 "nothing here is a reading or a language claim"
             ),
-            11,
+            12,
         )
 
     def test_the_truthful_question(self) -> None:

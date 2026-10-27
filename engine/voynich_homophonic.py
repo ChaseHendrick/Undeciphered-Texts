@@ -1557,6 +1557,182 @@ mapping is published anywhere in this artifact, no recovered
 assignment is stored as a key, plaintext_recovered_percent stays 0,
 the reference prose is modern printed text outside the manuscript's
 century, and nothing here is a reading or a language claim.
+
+Thirteenth declared measurement, the matched-truncation
+interior-shape instrument, declared after the corpus-breadth
+instrument widened every band across the corpus's written registers
+and no cell reported the inside verdict that widening made easier,
+and before any run of it beyond the probes it discloses.
+
+The disclosed background, declared in advance: the interior's
+separation held as the roster grew, but every search-free artifact
+in this family carries its disclosed size caveat - the real's
+profile prices kept-adjacent pairs of a stream whose unmapped
+events break adjacency (126 unmapped events inside ZL's 218,663,
+1,769 inside GC's 186,708, none inside IT's 220,532), while every
+simulated encoding prices a full stream's pairs. The standing band
+encodings sell their summaries on full-stream masses (218,662
+pairs ZL, 186,707 GC, 220,531 IT) while the real prices 218,415,
+183,199 and 220,531 kept-adjacent pairs, so a skeptically read
+inside-or-outside question can be re-asked on the real's own
+scale: cut every simulated encoding to the real's own counted
+pair mass and re-price the same declared question unchanged.
+The declared truth about the arithmetic, recorded as design: this
+cut can move a band's closed ranges both ways - a cut tail removes
+pair mass the standing profile priced, so matched extremes can sit
+below or above their standing counterparts per invariant, and both
+verdict directions are open in this design (a cell can newly
+report inside its matched band, and an invariant standing inside
+can leave its matched band); the artifact records every movement
+and the question is asked over all of them. The
+declared truthful question: with the band's streams matched to
+the real's own counted pair mass under the declared cut, does the
+real's mark-excluded profile sit inside the matched band's range
+on every declared invariant in every (file, language) cell, or is
+at least one invariant outside - the measured test of whether the
+interior's separation is a length artifact of the real's own
+counted mass or holds as the masses match.
+
+The declared design, before the run: the corpus-breadth
+instrument's roster, state space and verdict rule unchanged -
+the same twelve english and eleven latin members per cell, every
+profile still the mark-excluded block of its pair-count matrix
+(1296 ordered types, the mark's row and column excluded on both
+sides exactly as declared there, the same six
+relabeling-invariant summaries priced under the declared
+strict-all no-margin rule, the standing alphabet-width disclosure
+carried) - with every simulated stream cut to the declared basis:
+the cell's real counted pair total + 1 tokens (ZL 218,416, GC
+183,200, IT 220,532), the standing truncated reference's first
+basis tokens, so a cut stream's full width equals the real's
+counted pair total exactly (ZL 218,415, GC 183,199, IT 220,531),
+the same mass the floors already price by construction, while a
+stream at or below the basis stays whole. Each band member's
+encoding and every plant re-runs its frozen chain (the standing
+members' frozen selected-draw counts replayed, the breadth
+members' declared draw 0) over the matched stream, and each row
+carries its standing-basis anchors beside its matched facts
+(file, ebook, plant_length, selected_draw_index, draw_rule, and
+the standing encoding's own full width, gate-anchored to the
+frozen corpus-breadth rows; then matched_length, its matched
+total, the row's full width at exactly matched length - 1, and
+matched_profile). The floors replay unchanged (a floor's shuffled
+kept-adjacency already prices exactly the real's counted pair
+total), the plaintext control records its standing profile and
+its matched cut beside it, the real stands unchanged, and the
+envelope runs the real's unchanged mark-excluded profile against
+the matched band's profiles under the strict-all rule.
+
+The roster's disposition, declared before the run: no new corpus
+files, no re-fetch, no re-probe, no re-hash - the corpus-breadth
+roster's eight accepted files, rejected candidates, sha256
+records, floor and fetch verification stand as that instrument
+declared and recorded them, taken by reference here. The cut's
+disposition of the roster per cell: eleven members cut and the
+Sonnets whole in every english cell of the ZL and GC files, five
+members cut and six whole in every latin cell (the below-basis
+whole members at 45,491, 77,529, 77,572, 87,917, 132,608 and
+143,947 tokens price their standing totals unchanged), the IT
+cells cut nothing anywhere because their real transcriptions
+hold no unmapped events, the plants cut everywhere in the ZL and
+GC cells and nowhere in IT, and the floors never re-cut. The
+removed masses are bounded by the cut's own size: ZL 247 tokens
+of a standing 218,663 (247 of its 218,662 full-width pairs,
+0.11296 percent), GC 3,508 of 186,708 (3,508 of 186,707,
+1.87888 percent), IT 0.
+
+Mechanics, declared: the bridge gate first, against three frozen
+sources - the corpus-breadth instrument's 399 anchor fields
+exactly as that instrument declared them (the boundary-mark
+gate's 288 anchors and the 111 standing profile checks), then
+per cell the frozen corpus-breadth rows' standing replays
+verified against fresh re-derivations (each member row's file,
+ebook, plant_length, selected_draw_index, draw_rule, full-width
+total and block profile one row check each through its declared
+chain; each plant row's index, length, full-width total and
+block profile; each floor row's index, full-width total and
+block profile; each plaintext control's standing profile; each
+cell's real record's eight declared fields), 24 row checks per
+english cell and 23 per latin cell, 540 fields all told; the
+matched facts carry no frozen counterpart and ride on the
+declared roster; any divergence aborts with nothing written.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+bridge gate rehearsed: the gate ran at 540 fields compared, no
+problem. Probe 2, the matched basis ahead of the run: the real's
+counted pair totals 218,415 (ZL), 183,199 (GC) and 220,531 (IT)
+make the bases 218,416, 183,200 and 220,532 tokens; the cut
+takes the standing streams' trailing tokens only - ZL 247 tokens
+of a standing 218,663 (247 of its 218,662 full-width pairs,
+0.11296 percent), GC 3,508 of 186,708 (3,508 of 186,707,
+1.87888 percent), IT 0 (no cut possible, its basis equal to its
+standing length) - and the roster's whole streams sit below the
+bases (the Sonnets' 91,745-token english stream in the ZL and GC
+cells; the latin cells' below-basis members 45,491, 77,529,
+77,572, 87,917, 132,608 and 143,947 tokens), and the floors
+already price the real's own masses exactly (ZL 218,415, GC
+183,199, IT 220,531 full widths). Probe 3, the first cell's
+declared verdict ahead of the run, ZL english:
+shape-outside-analogues with every one of the eight invariant
+tests outside - symbol_shares 35 of 36 sorted positions outside,
+pair_shares 834 of 1296 positions outside, empty_type_count 928
+against [323, 454], self_pair_share 0.065848 against
+[0.018692, 0.026719], top_1_share 0.070481 against
+[0.018187, 0.035877], top_10_share 0.424435 against
+[0.106088, 0.148334], top_50_share 0.893671 against
+[0.305696, 0.355757], pair_entropy 4.010179 against
+[5.928491, 6.102985]; the twelve matched members ran 11 cut and
+the Sonnets whole (matched full widths 91,744 to 218,415 with
+block totals 55,143 to 144,349 and block entropies 5.928491 to
+6.102985), the plants cut 218,662 to 218,415 full widths with
+block totals 137,339 (identity true at both lengths), the
+floors' block totals 155,062 to 155,329 replayed against the
+real's block 149,799 (standing 218,663, basis 218,416), and the
+plaintext control's standing entropy 5.139035 with the matched
+control at 5.13911. Probe 4, the first latin cell's declared
+verdict ahead of the run, ZL latin: shape-outside-analogues
+with every one of the eight invariant tests outside -
+symbol_shares 36 of 36, pair_shares 780 of 1296,
+empty_type_count 928 against [240, 503], self_pair_share
+0.065848 against [0.011829, 0.023974], top_1_share 0.070481
+against [0.013486, 0.02536], top_10_share 0.424435 against
+[0.09782, 0.132009], top_50_share 0.893671 against
+[0.268516, 0.336674], pair_entropy 4.010179 against
+[5.980168, 6.252]; the eleven matched members ran 5 cut and 6
+whole (the below-basis whole members price their totals
+unchanged at 45,490, 77,528, 77,571, 87,916, 132,607 and
+143,946, the cut rows at 218,415) with matched block totals
+31,635 to 158,458 and block entropies 5.980168 to 6.252, the
+plants cut with block totals 150,839 (identity true at both
+lengths), the floors' block totals 155,145 to 155,274, and the
+plaintext control's standing entropy 5.06327 with the matched
+control at 5.063378; the matched bands moved both ways as the
+declared design said they could - the latin entropy ceiling
+eased down from the standing 6.252046 to 6.252 while the ZL
+english cell's top-1 floor eased down (0.018196 to 0.018187)
+and self-pair floor eased down (0.0187 to 0.018692) with its
+top-50 ceiling up (0.355739 to 0.355757) and entropy ceiling up
+(6.102864 to 6.102985), the ZL latin cell's empty-type band
+unchanged [240, 503] and its top-1 floor up a hair (0.013483 to
+0.013486). Probe 5, the plaintext controls recorded ahead: all
+six standing controls' profiles unchanged field for field
+(5.139035, 5.139139 and 5.139068 english, 5.06327, 5.063406 and
+5.062979 latin on their 729-type states) with the matched
+controls re-cut to the bases recorded beside them (5.13911,
+5.139014 and 5.139068 english, 5.063378, 5.063275 and 5.062979
+latin, the IT controls identical by the degenerate case).
+Probe 6: none; the four remaining cells are unseen until the
+declared run. The probes' disclosed first-cell verdicts do not
+decide the artifact: the artifact run prices all six cells
+through the same declared code, and the disclosure's honest
+question is recorded over all of them.
+
+The standing limitations are inherited from the held-out screen: no
+mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays 0,
+the reference prose is modern printed text outside the manuscript's
+century, and nothing here is a reading or a language claim.
 """
 
 from __future__ import annotations
@@ -8395,4 +8571,630 @@ def main_corpus_breadth() -> None:
         json.dumps(artifact, indent=2) + "\n"
     )
     print(SEARCH_FREE_BREADTH_ARTIFACT_PATH)
+
+
+# --------------------------------------------------------------------------
+# The thirteenth declared measurement: the matched-truncation
+# interior-shape instrument. Declared in the module docstring before
+# any run beyond the probes it discloses.
+# --------------------------------------------------------------------------
+
+SEARCH_FREE_MATCHED_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes"
+    / "voynich-homophonic-matched-truncation.json"
+)
+
+MATCHED_REAL_RECORD_KEYS = (
+    "stream_events",
+    "kept_pairs",
+    "unmapped_events",
+    "boundary_carried_pairs",
+    "real_profile",
+    "real_full_width_total_pairs",
+    "standing_plant_length",
+    "plants_at_source_identity",
+)
+
+
+def _compare_matched_to_frozen() -> tuple[list[str], int]:
+    """The declared bridge gate, three frozen sources first and the
+    frozen roster's own rows verified beside them: the corpus-breadth
+    instrument's 399 anchor fields exactly as that instrument declared
+    them (the boundary-mark gate's 288 anchors and the 111 standing
+    profile checks), then per cell the frozen corpus-breadth rows
+    verified where fresh re-derivations replay them: each member row
+    (file, ebook, plant_length, selected_draw_index, draw_rule,
+    full-width total and block profile) replayed through its declared
+    chain, each plant row (index, plant_length, standing full-width
+    total and block profile), each floor row (index, full-width total
+    and block profile), each plaintext control's standing profile, and
+    each cell's real record's eight declared fields, 24 row checks per
+    english cell and 23 per latin cell, 141 row checks total. The
+    matched facts carry no frozen counterpart and ride on the declared
+    roster. Any divergence aborts with nothing written."""
+    problems, fields = _compare_breadth_to_frozen()
+    frozen = json.loads(SEARCH_FREE_BREADTH_ARTIFACT_PATH.read_text())
+    for code in FILES:
+        for language in LANGS:
+            stored_cell = frozen["files"][code][language]
+            members = _breadth_reference_members(language)
+            standing_count = len(_extended_reference_members(language))
+            for position, stored_row in enumerate(
+                stored_cell["members_profiles"]
+            ):
+                if len(members) <= position:
+                    problems.append(
+                        f"member roster short at "
+                        f"{code}/{language}/{position}"
+                    )
+                    continue
+                fresh_row = _breadth_member_row(
+                    code, language, position, standing_count
+                )
+                fields += 1
+                differing = [
+                    key for key in sorted(
+                        set(fresh_row) | set(stored_row)
+                    )
+                    if fresh_row.get(key) != stored_row.get(key)
+                ]
+                if differing:
+                    problems.append(
+                        f"member/{code}/{language}/{position}: the "
+                        f"standing row's replay does not equal the "
+                        f"stored corpus-breadth row ({', '.join(differing)})"
+                    )
+            real = _homo_real_stream(code)
+            real_mark = len(real["mapped_chars"]) - 1
+            real_matrix = _count_matrix_37(real["event_ids"], real["kept_mask"])
+            standing_truncated = _truncated_reference(code, language)
+            standing_groups = _partition_groups(
+                standing_truncated, MAPPED_HOMO
+            )
+            fresh_plants: list[dict] = []
+            for index, stored_row in enumerate(
+                stored_cell["plants_profiles"]
+            ):
+                rng_enc = np.random.default_rng(_seed(
+                    CELL_ID[code], KIND_ID["homo_plant_enc"],
+                    LANG_ID[language], index,
+                ))
+                encoded = _encode(
+                    standing_truncated, standing_groups, rng_enc,
+                    MAPPED_HOMO,
+                )
+                full = _full_matrix_37(encoded)
+                fresh_row = {
+                    "index": index,
+                    "plant_length": len(standing_truncated),
+                    "full_width_total_pairs": int(round(full.sum())),
+                    "profile": _profile_facts(_glyph_block_matrix(
+                        full, MAPPED_HOMO
+                    )),
+                }
+                fresh_plants.append(fresh_row)
+                fields += 1
+                differing = [
+                    key for key in sorted(
+                        set(fresh_row) | set(stored_row)
+                    )
+                    if fresh_row.get(key) != stored_row.get(key)
+                ]
+                if differing:
+                    problems.append(
+                        f"plant/{code}/{language}/{index}: the "
+                        f"standing row's replay does not equal the "
+                        f"stored corpus-breadth row ({', '.join(differing)})"
+                    )
+            for index, stored_row in enumerate(
+                stored_cell["floors_profiles"]
+            ):
+                rng_perm = np.random.default_rng(_seed(
+                    CELL_ID[code], KIND_ID["homo_floor_perm"],
+                    LANG_ID[language], index,
+                ))
+                values = real["kept_ids"].copy()
+                rng_perm.shuffle(values)
+                full = real["event_ids"].copy()
+                full[real["kept_mask"]] = values
+                floor_full = _count_matrix_37(full, real["kept_mask"])
+                fresh_row = {
+                    "index": index,
+                    "full_width_total_pairs": int(round(floor_full.sum())),
+                    "profile": _profile_facts(_glyph_block_matrix(
+                        floor_full, real_mark
+                    )),
+                }
+                fields += 1
+                differing = [
+                    key for key in sorted(
+                        set(fresh_row) | set(stored_row)
+                    )
+                    if fresh_row.get(key) != stored_row.get(key)
+                ]
+                if differing:
+                    problems.append(
+                        f"floor/{code}/{language}/{index}: the "
+                        f"standing row's replay does not equal the "
+                        f"stored corpus-breadth row ({', '.join(differing)})"
+                    )
+            fresh_plaintext = _profile_facts(
+                _stream_matrix_27(standing_truncated)
+            )
+            fields += 1
+            if fresh_plaintext != stored_cell["plaintext_profile"]:
+                differing = [
+                    key for key in sorted(
+                        set(fresh_plaintext)
+                        | set(stored_cell["plaintext_profile"])
+                    )
+                    if fresh_plaintext.get(key)
+                    != stored_cell["plaintext_profile"].get(key)
+                ]
+                problems.append(
+                    f"plaintext/{code}/{language}: the standing "
+                    f"control's profile does not equal the stored "
+                    f"corpus-breadth profile ({', '.join(differing)})"
+                )
+            fresh_real = {
+                "stream_events": real["total_events"],
+                "kept_pairs": int(real_matrix.sum()),
+                "unmapped_events": (
+                    real["total_events"] - int(real["kept_mask"].sum())
+                ),
+                "boundary_carried_pairs": _boundary_carried_pairs(
+                    real_matrix, real_mark
+                ),
+                "real_profile": _profile_facts(
+                    _glyph_block_matrix(real_matrix, real_mark)
+                ),
+                "real_full_width_total_pairs": int(real_matrix.sum()),
+                "standing_plant_length": len(standing_truncated),
+                "plants_at_source_identity": all(
+                    row["full_width_total_pairs"]
+                    == row["plant_length"] - 1
+                    for row in fresh_plants
+                ),
+            }
+            fields += 1
+            differing = [
+                key for key in MATCHED_REAL_RECORD_KEYS
+                if fresh_real.get(key) != stored_cell.get(key)
+            ]
+            if differing:
+                problems.append(
+                    f"real/{code}/{language}: the read cell's fresh "
+                    f"real record does not equal the stored "
+                    f"corpus-breadth real record ({', '.join(differing)})"
+                )
+    return problems, fields
+
+
+def _matched_cell_facts(code: str, language: str) -> dict:
+    """One cell's matched-truncation facts: the corpus-breadth cell's
+    roster replayed with every simulated stream cut to the declared
+    basis, the cell's real counted pair total + 1 tokens: each member's
+    and each plant's frozen draw chain re-run over the matched stream
+    (the standing members' selected-draw counts replayed, the breadth
+    members' declared draw 0), each row carrying its standing-basis
+    anchors beside its matched facts; a stream at or below the basis
+    stays whole; the floors replay unchanged, their full widths
+    already the real's counted pair total by construction; the
+    plaintext control records its standing profile and its matched cut
+    beside it. The envelope runs the real's unchanged mark-excluded
+    profile against the matched band's profiles under the declared
+    strict-all rule. No machinery anywhere in the instrument."""
+    real = _homo_real_stream(code)
+    real_mark = len(real["mapped_chars"]) - 1
+    real_matrix = _count_matrix_37(real["event_ids"], real["kept_mask"])
+    real_profile = _profile_facts(
+        _glyph_block_matrix(real_matrix, real_mark)
+    )
+    basis = int(real_matrix.sum()) + 1
+    standing_truncated = _truncated_reference(code, language)
+    standing_groups = _partition_groups(standing_truncated, MAPPED_HOMO)
+    members = _breadth_reference_members(language)
+    standing_count = len(_extended_reference_members(language))
+    frozen = json.loads(RESTART_BUDGET_ARTIFACT_PATH.read_text())
+    stored_band = frozen["files"][code][language]["band"]
+    member_facts: list[dict] = []
+    for position, (name, ebook) in enumerate(members):
+        reference = _truncated_reference(code, language, file=name)
+        seed = _seed(
+            CELL_ID[code], KIND_ID["homo_cross_enc"],
+            LANG_ID[language], position,
+        )
+        if position < standing_count:
+            selected = stored_band[position]["selected_draw_index"]
+            draws_rule = "standing_frozen_selected"
+            draws_value: int = selected
+        else:
+            draws_rule = "breadth_declared_draw_0"
+            draws_value: int = 0
+        groups = _partition_groups(reference, MAPPED_HOMO)
+        rng_enc = np.random.default_rng(seed)
+        encoded: np.ndarray | None = None
+        for _draw in range(draws_value + 1):
+            encoded = _encode(reference, groups, rng_enc, MAPPED_HOMO)
+        standing_full = _full_matrix_37(encoded)
+        matched_reference = reference[:basis]
+        matched_groups = _partition_groups(matched_reference, MAPPED_HOMO)
+        rng_enc = np.random.default_rng(seed)
+        matched_encoded: np.ndarray | None = None
+        for _draw in range(draws_value + 1):
+            matched_encoded = _encode(
+                matched_reference, matched_groups, rng_enc, MAPPED_HOMO
+            )
+        matched_full = _full_matrix_37(matched_encoded)
+        member_facts.append({
+            "file": name,
+            "ebook": ebook,
+            "plant_length": len(reference),
+            "selected_draw_index": draws_value,
+            "draw_rule": draws_rule,
+            "full_width_total_pairs": int(round(standing_full.sum())),
+            "matched_length": len(matched_reference),
+            "matched_total_pairs": int(round(matched_full.sum())),
+            "matched_profile": _profile_facts(
+                _glyph_block_matrix(matched_full, MAPPED_HOMO)
+            ),
+        })
+    plant_facts: list[dict] = []
+    for index in range(N_PLANTS):
+        seed = _seed(
+            CELL_ID[code], KIND_ID["homo_plant_enc"],
+            LANG_ID[language], index,
+        )
+        rng_enc = np.random.default_rng(seed)
+        encoded = _encode(
+            standing_truncated, standing_groups, rng_enc, MAPPED_HOMO
+        )
+        standing_full = _full_matrix_37(encoded)
+        matched_reference = standing_truncated[:basis]
+        matched_groups = _partition_groups(matched_reference, MAPPED_HOMO)
+        rng_enc = np.random.default_rng(seed)
+        matched_encoded = _encode(
+            matched_reference, matched_groups, rng_enc, MAPPED_HOMO
+        )
+        matched_full = _full_matrix_37(matched_encoded)
+        plant_facts.append({
+            "index": index,
+            "plant_length": len(standing_truncated),
+            "full_width_total_pairs": int(round(standing_full.sum())),
+            "matched_length": len(matched_reference),
+            "matched_total_pairs": int(round(matched_full.sum())),
+            "matched_profile": _profile_facts(
+                _glyph_block_matrix(matched_full, MAPPED_HOMO)
+            ),
+        })
+    floor_facts: list[dict] = []
+    for index in range(N_FLOORS):
+        rng_perm = np.random.default_rng(_seed(
+            CELL_ID[code], KIND_ID["homo_floor_perm"],
+            LANG_ID[language], index,
+        ))
+        values = real["kept_ids"].copy()
+        rng_perm.shuffle(values)
+        full = real["event_ids"].copy()
+        full[real["kept_mask"]] = values
+        floor_full = _count_matrix_37(full, real["kept_mask"])
+        floor_facts.append({
+            "index": index,
+            "full_width_total_pairs": int(round(floor_full.sum())),
+            "profile": _profile_facts(
+                _glyph_block_matrix(floor_full, real_mark)
+            ),
+        })
+    plaintext = _profile_facts(_stream_matrix_27(standing_truncated))
+    plaintext_matched = _profile_facts(
+        _stream_matrix_27(standing_truncated[:basis])
+    )
+    band = [{"profile": row["matched_profile"]} for row in member_facts]
+    tests = _search_free_envelope(real_profile, band)
+    outside = [key for key, test in tests.items() if not test["inside"]]
+    verdict = (
+        "shape-consistent-with-homophonic-encoding" if not outside
+        else "shape-outside-analogues"
+    )
+    return {
+        "stream_events": real["total_events"],
+        "kept_pairs": int(real_matrix.sum()),
+        "unmapped_events": (
+            real["total_events"] - int(real["kept_mask"].sum())
+        ),
+        "boundary_carried_pairs": _boundary_carried_pairs(
+            real_matrix, real_mark
+        ),
+        "real_profile": real_profile,
+        "real_full_width_total_pairs": int(real_matrix.sum()),
+        "standing_plant_length": len(standing_truncated),
+        "plants_at_source_identity": all(
+            plant["full_width_total_pairs"]
+            == plant["plant_length"] - 1
+            for plant in plant_facts
+        ),
+        "match_basis_events": basis,
+        "matched_members_cut": sum(
+            1 for row in member_facts
+            if row["matched_length"] < row["plant_length"]
+        ),
+        "matched_plants_cut": sum(
+            1 for row in plant_facts
+            if row["matched_length"] < row["plant_length"]
+        ),
+        "members_profiles": member_facts,
+        "plants_profiles": plant_facts,
+        "floors_profiles": floor_facts,
+        "plaintext_profile": plaintext,
+        "plaintext_matched_profile": plaintext_matched,
+        "invariants": tests,
+        "outside_invariants": outside,
+        "verdict": verdict,
+    }
+
+
+def substitution_homophonic_matched_truncation() -> dict:
+    """The declared matched-truncation interior-shape instrument: the
+    corpus-breadth instrument's roster, state space and summaries
+    re-priced with every simulated stream cut to the real's own
+    counted pair mass. The bridge gate runs first; any divergence
+    aborts with nothing written."""
+    problems, fields = _compare_matched_to_frozen()
+    if problems:
+        raise AssertionError(
+            "matched-truncation bridge gate failed: "
+            + "; ".join(problems)
+        )
+    artifact = {
+        "what": "The declared matched-truncation interior-shape "
+        "instrument: the corpus-breadth instrument's same state space, "
+        "the same twelve english and eleven latin member roster, the "
+        "same plants, floors and controls, and the same six "
+        "relabeling-invariant summaries over the same mark-excluded "
+        "state space (1296 ordered types, the boundary mark's row and "
+        "column excluded on both sides exactly as declared there), "
+        "re-priced with every simulated stream cut to the real's own "
+        "counted pair mass (each band member's encoding and every "
+        "plant running its frozen chain over the matched stream, cut "
+        "encodings' full widths equal to the real's counted pair "
+        "total and the floors' full widths exactly, streams at or "
+        "below the basis whole, the real and the floors unchanged), "
+        "priced under the same declared strict-all verdict rule with "
+        "no assignment search anywhere in the instrument. The "
+        "declared truthful question: with the band's streams matched "
+        "to the real's own pair mass under the declared cut, does the "
+        "real's mark-excluded profile sit inside the matched band's "
+        "range on every declared invariant in every (file, language) "
+        "cell, or is at least one invariant outside - the measured "
+        "test of whether the interior's separation is a length "
+        "artifact of the real's own counted mass or holds as the "
+        "masses match. No mapping is published; nothing here is a "
+        "reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "boundary_rule": "the word-boundary mark's row and column "
+            "are excluded from every profile's state space on both "
+            "sides exactly as the boundary-mark re-instrument declared: "
+            "every profile is the mark-excluded block of its "
+            "pair-count matrix, 1296 ordered types, the mark located in "
+            "each matrix's own alphabet (symbol 36 in every simulated "
+            "encoding and the real file's own last mapped position), "
+            "the full width's total recorded beside the matched rows' "
+            "block profiles, and no boundary-adjusted marginal appears "
+            "anywhere; the standing alphabet-width disclosure carries "
+            "unchanged (the IT real transcription ranks only 23 glyph "
+            "types plus the mark, so 13 of its block's 36 glyph slots "
+            "are empty by width alone on the real side while the "
+            "simulated alphabets are saturated at 36 in every cell)",
+            "matched_truncation_rule": "the matched truncation, "
+            "declared before the run: the cell's real stream prices "
+            "kept-adjacent pairs only (its unmapped events break "
+            "adjacency), so its counted pair total is ZL 218,415, GC "
+            "183,199 and IT 220,531 pairs; the basis is that total + 1 "
+            "tokens (ZL 218,416, GC 183,200, IT 220,532), and every "
+            "simulated encoding (each band member's encoding and "
+            "every plant's encoding) re-runs its own frozen chain, the "
+            "declared draws of its row's rule, over the matched "
+            "stream, the standing truncated reference's first basis "
+            "tokens, so a cut stream's full width equals the real's "
+            "counted pair total exactly (ZL 218,415, GC 183,199, IT "
+            "220,531), the same mass the floors already price by "
+            "construction, while a stream at or below the basis stays "
+            "whole; the cut takes the trailing tokens only, so the "
+            "removed pair mass is bounded: ZL 247 of the standing "
+            "218,662 full-width pairs (0.11296 percent), GC 3,508 of "
+            "186,707 (1.87888 percent), IT 0; no new corpus files, no "
+            "roster change, no new seed kind and no new selection "
+            "anywhere",
+            "roster_rule": "the corpus-breadth roster stands "
+            "unchanged: the same eight accepted corpus files, the "
+            "same rejected candidates with their verbatim causes, the "
+            "same sha256 records, the roster floor and the fetch "
+            "verification are the corpus-breadth artifact's declared "
+            "facts taken by reference, no corpus file is re-fetched, "
+            "re-probed or re-hashed here, and the roster's streams "
+            "replay through the standing declared processing with no "
+            "new step (the frozen rows' plant_length values "
+            "replay-match under the gate), so no roster position "
+            "changes",
+            "invariants": {
+                "sorted_symbol_marginals": "the 36 mark-excluded "
+                "glyph marginals as a multiset, stored sorted "
+                "descending as counts and shares, envelope-tested by "
+                "sorted position over 36 positions",
+                "sorted_pair_multiset": "the 1296 mark-excluded pair "
+                "counts as a multiset, stored sorted descending as "
+                "counts and shares, envelope-tested by sorted "
+                "position",
+                "empty_type_count": "the number of the block's "
+                "mark-excluded pair types with zero counted "
+                "occurrences, a scalar inside [min, max]",
+                "self_pair_share": "the block's diagonal sum over the "
+                "profile's glyph-pair total",
+                "top_k_shares": "the share of the glyph-pair total "
+                "carried by the k largest pair counts, at k 1, 10 "
+                "and 50",
+                "pair_entropy": "the natural entropy of the "
+                "mark-excluded pair distribution in nats per counted "
+                "glyph pair",
+            },
+            "state_note": "every profile here is the mark-excluded "
+            "block of the same pair-count matrices the boundary-mark "
+            "instrument priced: the real's kept-adjacent pairs and "
+            "the encodings' full streams keep their structural "
+            "difference, every share-valued invariant normalises by "
+            "its own glyph-pair total, and the empty type count is a "
+            "raw count tied to its own total and recorded in that "
+            "context; the plaintext control's state is the 27 "
+            "reference letters alone (729 types, no boundary mark) "
+            "and takes no part in any envelope; the latin envelopes "
+            "stay size-mixed by the roster's own declared "
+            "construction (the below-basis members replay whole, so "
+            "the matched member streams run 45,490 pairs upward), "
+            "and the IT cells carry the declared degenerate case "
+            "exactly: their basis equals the standing truncated "
+            "length because the real transcription holds no unmapped "
+            "events, so every IT matched fact equals its standing "
+            "fact and the IT matched verdict is the corpus-breadth "
+            "verdict replayed",
+            "machinery_rule": "this instrument contains no assignment "
+            "search anywhere: no candidate evaluation, no restarts, "
+            "no sweep cap, no convergence flags; the standing budgets "
+            "are not applicable and no machinery recording appears "
+            "for that reason",
+            "split_rule": "no split applies: a profile uses every "
+            "counted pair of its stream after the declared exclusion; "
+            "the climb and score halves of the band instruments have "
+            "no counterpart here",
+            "seed_kinds": "the standing encoding, plant and floor "
+            "kinds replay at their frozen positions with their frozen "
+            "selected draws exactly as every predecessor declared; "
+            "each matched encoding runs its own frozen chain's "
+            "declared draws over the matched stream from draw 0 "
+            "upward; no new seed is consumed and no draw selection is "
+            "performed",
+            "seed_sharing": "the standing-basis facts (every member "
+            "row's anchors, every plant's standing row, every floor "
+            "row and the standing plaintext control) replay through "
+            "the declared chains and verify against the frozen "
+            "corpus-breadth artifact field for field under the gate; "
+            "the matched facts run the same seeds over the matched "
+            "streams from draw 0 upward; every block profile of every "
+            "matched row is the declared block of its own replayed "
+            "matched encoding",
+            "matched_band_record_rule": "the simulated band per "
+            "language cell stays the corpus-breadth roster's twelve "
+            "english and eleven latin members, unconditional, priced "
+            "at the matched basis: each member row carries its "
+            "standing-basis anchors (file, ebook, plant_length, "
+            "selected_draw_index, draw_rule, and the standing "
+            "encoding's own full width, gate-anchored to the frozen "
+            "corpus-breadth rows) and its matched facts (matched "
+            "length, matched total and matched profile, the row's "
+            "priced profile), the matched total an exact identity, "
+            "matched length - 1, of every row; the standing members "
+            "re-run their frozen selected-draw counts at the matched "
+            "length and the breadth members run their declared draw 0 "
+            "there, and no draw selection is performed anywhere",
+            "plants_rule": "the 30 plant encodings (5 per cell, the "
+            "standing first references at the standing kinds) "
+            "recorded at the matched basis like the band: each row "
+            "carries its standing full width (the standing encoding's "
+            "own, gate-anchored to the frozen corpus-breadth rows), "
+            "its matched length, its matched total (the same exact "
+            "identity) and its matched glyph-block profile; the "
+            "plants_at_source_identity boolean reports the standing "
+            "widths at the standing lengths, and each matched row "
+            "carries the same identity at its matched length; no "
+            "parity rule applies because there is no anchor geometry "
+            "to exceed",
+            "floors_rule": "the 30 destroyed-adjacency floors "
+            "recorded as identical replays: a floor's full width is "
+            "the shuffled kept-adjacency structure's own pair count, "
+            "the real's counted pair total exactly, so the floors "
+            "already sit at the matched scale everywhere and nothing "
+            "here re-cuts them; their glyph-block profiles replay "
+            "under the gate; their declared role is the "
+            "shuffled-structure control recorded beside the verdict, "
+            "not part of any envelope",
+            "plaintext_rule": "each cell records the standing "
+            "truncated reference's own plaintext stream profile "
+            "(replay-verified against the frozen records) and its "
+            "matched control re-cut to the basis beside it "
+            "(plaintext_matched_profile), both computed by the same "
+            "formulas on the 27-type letter state (729 types, no "
+            "boundary mark), as the prose control beside the verdict; "
+            "neither control takes part in any envelope",
+            "verdict_rule": "declared strict-all, unchanged: a cell "
+            "is shape-consistent-with-homophonic-encoding only when "
+            "every declared invariant of the real's glyph-block "
+            "profile sits inside the closed range of that cell's "
+            "matched band's glyph-block profiles (the two vector "
+            "summaries term by term inside the band's per-position "
+            "envelope over 36 sorted positions, the scalar summaries "
+            "inside [min, max] at the stored 6-decimal rounding); any "
+            "outside invariant makes the cell "
+            "shape-outside-analogues, and every outside entry is "
+            "recorded with its band range so the miss is audited not "
+            "summarized",
+            "closure_rule": "no scalar margin is formed: this "
+            "instrument's question is inside or outside per "
+            "invariant, and the recorded distances are the outside "
+            "entries' band ranges themselves",
+            "exclusion_rule": "the family's declared exclusion format "
+            "is not re-scoped by this artifact: it keys to the "
+            "declared 36-slot class under the inherited add-one form "
+            "exactly as the held-out screen declared it, so a "
+            "search-free verdict is structure evidence and the band "
+            "instruments' verdicts stand untouched by this "
+            "artifact's numbers",
+            "bridge_gate": "before any profile is priced, every fact "
+            "this instrument re-derives fresh that a frozen "
+            "predecessor already recorded must equal that stored "
+            "value field for field: the corpus-breadth instrument's "
+            "399 anchor fields exactly as that instrument declared "
+            "them (the boundary-mark gate's 288 anchors and the 111 "
+            "standing profile checks), then per cell the frozen "
+            "corpus-breadth rows' standing replays verified against "
+            "fresh re-derivations: each member row (file, ebook, "
+            "plant_length, selected_draw_index, draw_rule, full-width "
+            "total and block profile) replayed through its declared "
+            "chain, each plant row (index, plant_length, standing "
+            "full-width total and block profile), each floor row "
+            "(index, full-width total and block profile), each "
+            "plaintext control's standing profile, and each cell's "
+            "real record's eight declared fields, 24 row checks per "
+            "english cell and 23 per latin cell, 141 row checks "
+            "total; the matched facts carry no frozen counterpart and "
+            "ride on the declared roster; any divergence aborts with "
+            "nothing written",
+            "models_rule": "no score table is built or used: the "
+            "instrument prices count structure only, so the standing "
+            "add-one and leave-one-out tables play no part anywhere "
+            "in this artifact",
+        },
+        "bridge_gate": {
+            "status": "verified",
+            "fields_compared": fields,
+            "anchor_fields": 399,
+            "breadth_replay_checks": fields - 399,
+        },
+        "files": {},
+    }
+    for code in FILES:
+        cell = {}
+        for language in LANGS:
+            cell[language] = _matched_cell_facts(code, language)
+        artifact["files"][code] = cell
+    return artifact
+
+
+def main_matched_truncation() -> None:
+    artifact = substitution_homophonic_matched_truncation()
+    SEARCH_FREE_MATCHED_ARTIFACT_PATH.write_text(
+        json.dumps(artifact, indent=2) + "\n"
+    )
+    print(SEARCH_FREE_MATCHED_ARTIFACT_PATH)
 
