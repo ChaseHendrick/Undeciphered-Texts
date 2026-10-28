@@ -1873,6 +1873,133 @@ assignment is stored as a key, plaintext_recovered_percent stays
 0, the reference prose is modern printed text outside the
 manuscript's century, and nothing here is a reading or a
 language claim.
+
+Fifteenth declared measurement, the real-at-basis ladder, declared
+after the matched-basis ladder swept the truncation basis over the
+anchor rung and its 75, 50 and 25 percent rungs and read only the
+bands' movements at every descended rung, and before any run of it
+beyond the probes it discloses.
+
+The disclosed background, declared in advance: the matched-basis
+ladder priced the bands' sides of the descending masses and left the
+real's side priced once, so its anchor rung's comparison was
+mass-matched and its descended rungs' were not - the honest next
+question is the real's own side of the sweep: take the real's own
+kept-adjacent pair sequence, cut it to each declared rung's mass like
+every simulated stream, re-price it through the same mark-excluded
+block and the same six summaries, and set it beside each rung's
+re-priced bands, so every rung's comparison is mass-matched on both
+sides for the first time in this family, and the declared question
+becomes whether the real's own descending profile tracks the bands'
+descension or stays apart down the ladder, the question the
+matched-basis ladder disclosed but could not ask.
+
+The declared design, before the run: the matched-basis ladder's
+roster, state space (1296 ordered types, the boundary mark's row and
+column excluded on both sides), six relabeling-invariant summaries,
+strict-all no-margin verdict rule and four declared rungs unchanged -
+the anchor rung the cell's real counted pair total + 1 tokens (ZL
+218,416, GC 183,200, IT 220,532), then floor(p x the anchor basis)
+rungs at p 0.75, 0.50 and 0.25 (ZL 163,812, 109,208 and 54,604; GC
+137,400, 91,600 and 45,800; IT 165,399, 110,266 and 55,133); the
+rung bands the frozen matched-basis ladder's rung facts taken by
+reference, their own measurements verified under that instrument's
+gate and tests, no encoding re-run on the band side anywhere; at
+every rung the real prices its first basis - 1 kept-adjacent pairs
+(the exact ordered pairs _count_matrix_37 counts, ordered along the
+original stream, the unmapped events breaking the adjacency exactly
+as disclosed since the interior instrument) through the same
+mark-excluded block; the declared truth about the arithmetic is the
+family's restated plus one new identity: the real's cut can move its
+own profile both ways exactly as a band's cut moves a band's closed
+ranges both ways, and the real's rung mass equals every one of the
+rung's cut rows' full-width masses exactly - the mass-match identity
+verified against the frozen rung's rows before any envelope is
+formed, a rung's whole rows keeping their standing masses inside
+the envelope, the same disclosed mix the anchor rung carried; the
+anchor rung's re-priced profile is the real's unchanged
+matched-basis ladder profile exactly and every descended rung's is
+fresh; the rung-cell verdicts asked together over all 24.
+
+Mechanics, declared: the bridge gate first, in two stages - the
+matched-basis ladder's gate exactly as that instrument declared it
+(the matched-truncation instrument's 540 anchor and replay fields
+plus the 117 anchor-rung replay checks, 657 fields), then per cell
+the fresh real record verified against the frozen matched-basis
+ladder's cell record (its eight declared fields), the four rung
+bases' identities, and the anchor rung's fresh envelope equal to
+the frozen anchor rung's envelope result, 6 checks per cell, 36
+checks total, 693 fields all told; the three descended rungs'
+envelopes carry no frozen counterpart and ride on the declared rung
+rule, whose mass-match identity aborts on any divergence; any
+divergence aborts with nothing written.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+standing ladder gate rehearsed: the gate ran at 657 fields compared,
+no problem. Probe 2, the real's pair sequences ahead of the run:
+ZL's kept-adjacent pair sequence counts 218,415 ordered pairs, GC's
+183,199 and IT's 220,531, each recounting its _count_matrix_37 matrix
+exactly, each full sequence pricing the frozen real profile exactly
+(at the anchor rung the prefix is the whole sequence), with
+68,616 (ZL), 71,384 (GC) and 72,880 (IT) of those pairs carried by
+the boundary mark's row and column and excluded from every block.
+Probe 3, the first english cell's declared portrait ahead of the
+run, ZL english: every rung's verdict shape-outside-analogues with
+every one of the eight invariant tests outside - the anchor rung's
+re-priced profile the frozen real profile exactly (empty_type_count
+928 against [323, 454], self_pair_share 0.065848 against
+[0.018692, 0.026719], top_1_share 0.070481 against
+[0.018187, 0.035877], top_10_share 0.424435 against
+[0.106088, 0.148334], top_50_share 0.893671 against
+[0.305696, 0.355757], pair_entropy 4.010179 against
+[5.928491, 6.102985]); the 75 percent rung's masses 163,811 pairs
+with the re-priced profile 950 empties, self 0.068229, top_1
+0.073934, top_10 0.418115, top_50 0.892615 and entropy 4.014465
+against its bands; the 50 percent rung's 109,207 pairs, 980
+empties, self 0.073015, top_1 0.076343, top_10 0.432937, top_50
+0.899851 and entropy 3.982947; the 25 percent rung's 54,603 pairs,
+1028 empties, self 0.083007, top_1 0.06476, top_10 0.463045,
+top_50 0.914338 and entropy 3.904198 - the real's own descent
+against its anchor scalars 5 down and 13 up with 0 stayed, the
+vector outsides (symbols, pairs) 35 and 834, 33 and 824, 33 and
+793, 36 and 787 across the four rungs. Probe 4, the first latin
+cell's declared portrait ahead of the run, ZL latin: every rung's
+verdict shape-outside-analogues with every one of the eight
+invariant tests outside, the same re-priced real profile at every
+rung (the real is the same stream and the bands differ by the
+roster's language), members cut 5, 5, 7 and 10 across the
+rungs, the vector outsides 36 and 780, 34 and 779, 32 and 782, 35
+and 746. Probe 5, the honest sweep ahead of the run: all 24
+rung-cell verdicts shape-outside-analogues; GC latin's
+self_pair_share, the family's one standing inside invariant,
+inside at its three upper rungs (0.015928 against
+[0.011979, 0.023941], 0.016822 against [0.012489, 0.023941],
+0.016628 against [0.013329, 0.023837]) and outside at its 25
+percent rung (0.021604 against [0.01295, 0.021521]) - the
+standing inside invariant departs its band exactly where the
+mass-match first deepens; GC english's self_pair_share carries the
+counterpart motion, outside below its band at its three upper
+rungs (0.015928 against [0.018513, 0.027183], 0.016822 against
+[0.018404, 0.027769], 0.016628 against [0.018849, 0.027852]) and
+inside at its 25 percent rung (0.021604 against
+[0.018382, 0.025854]); every other cell's every rung stays
+all-eight-outside; the real's own descents against the anchor
+scalars: ZL english and ZL latin 5 down and 13 up with 0 stayed,
+GC english and GC latin 7 down and 11 up with 0 stayed, IT english
+and IT latin 5 down and 13 up with 0 stayed. Probe 6: none; the
+declared run prices every cell itself through the artifact. The
+probes' disclosed portraits do not decide the artifact: the
+artifact run prices all 24 rung-cells through the same declared
+code, and the disclosure's honest question is recorded over all of
+them.
+
+The standing limitations are inherited from the held-out screen:
+no mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays
+0, the reference prose is modern printed text outside the
+manuscript's century, and nothing here is a reading or a
+language claim.
 """
 
 from __future__ import annotations
@@ -9730,3 +9857,468 @@ def main_ladder() -> None:
         json.dumps(artifact, indent=2) + "\n"
     )
     print(SEARCH_FREE_LADDER_ARTIFACT_PATH)
+
+
+# --------------------------------------------------------------------------
+# The real-at-basis ladder: the fifteenth search-free measurement.
+# --------------------------------------------------------------------------
+
+
+REAL_LADDER_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes"
+    / "voynich-homophonic-real-at-basis-ladder.json"
+)
+
+REAL_LADDER_RUNG_KEYS = (
+    "run", "match_basis_events", "real_rung_kept_pairs",
+    "real_rung_boundary_carried_pairs", "real_rung_profile",
+    "invariants", "outside_invariants", "verdict",
+)
+
+
+def _real_pair_sequence(code: str) -> tuple[np.ndarray, np.ndarray]:
+    """The real's kept-adjacent pair sequence, ordered along the
+    original stream: the exact ordered pairs _count_matrix_37 counts,
+    returned as the ordered first elements and the ordered second
+    elements, one pair per position."""
+    real = _homo_real_stream(code)
+    kept = np.where(real["kept_mask"])[0]
+    values = real["event_ids"][kept]
+    adjacent = kept[1:] == kept[:-1] + 1
+    first = values[:-1][adjacent]
+    second = values[1:][adjacent]
+    return first, second
+
+
+def _real_rung_facts(
+    code: str, language: str, rung: float,
+    frozen: dict | None = None,
+) -> dict:
+    """One rung's real-side facts for one cell: the real's ordered
+    kept-adjacent pair sequence cut to the rung's basis minus 1 pairs
+    and re-priced through the same mark-excluded block and the same
+    six relabeling-invariant summaries, the rung's band the frozen
+    matched-basis ladder's member profiles taken by reference, and
+    the envelope record under the declared strict-all rule.
+
+    The rung's basis is the matched-basis ladder's declared basis,
+    the real counted pair total + 1 tokens at the anchor and floor(
+    rung x the anchor basis) tokens at the descended rungs, and the
+    real's cut prices its first basis - 1 kept-adjacent pairs, the
+    exact full-width mass every one of the rung's cut rows prices.
+    The mass-match identity is verified against the frozen rung's
+    rows before any envelope is formed: every cut member row and
+    every cut plant row prices the mass full width, and at the
+    anchor rung the prefix is the whole pair sequence, its profile
+    the real's unchanged profile exactly. Any divergence aborts."""
+    if frozen is None:
+        frozen = json.loads(SEARCH_FREE_LADDER_ARTIFACT_PATH.read_text())
+    frozen_rung = frozen["files"][code][language]["rungs"][
+        LADDER_RUNGS.index(rung)
+    ]
+    first, second = _real_pair_sequence(code)
+    anchor = len(first) + 1
+    basis = anchor if rung == 1.0 else int(rung * anchor)
+    if basis != frozen_rung["match_basis_events"]:
+        raise AssertionError(
+            f"real-at-basis/{code}/{language}/rung {rung}: the "
+            f"derived basis {basis} does not equal the frozen "
+            f"matched-basis ladder basis "
+            f"{frozen_rung['match_basis_events']}"
+        )
+    mass = basis - 1
+    cut_rows = [
+        row
+        for rows in (
+            frozen_rung["members_profiles"],
+            frozen_rung["plants_profiles"],
+        )
+        for row in rows
+        if row["matched_length"] < row["plant_length"]
+    ]
+    for row in cut_rows:
+        if row["matched_total_pairs"] != mass:
+            raise AssertionError(
+                f"real-at-basis/{code}/{language}/rung {rung}: a cut "
+                f"row prices {row['matched_total_pairs']} pairs, not "
+                f"the mass {mass}"
+            )
+    prefix = np.zeros((37, 37))
+    np.add.at(prefix, (first[:mass], second[:mass]), 1.0)
+    real = _homo_real_stream(code)
+    mark = len(real["mapped_chars"]) - 1
+    profile = _profile_facts(_glyph_block_matrix(prefix, mark))
+    carried = _boundary_carried_pairs(prefix, mark)
+    if profile["total_pairs"] != mass - carried:
+        raise AssertionError(
+            f"real-at-basis/{code}/{language}/rung {rung}: the "
+            f"re-priced block total {profile['total_pairs']} does "
+            f"not equal the mass minus its boundary-carried pairs "
+            f"{mass} - {carried}"
+        )
+    band = [
+        {"profile": row["matched_profile"]}
+        for row in frozen_rung["members_profiles"]
+    ]
+    tests = _search_free_envelope(profile, band)
+    outside = [key for key, test in tests.items() if not test["inside"]]
+    verdict = (
+        "shape-consistent-with-homophonic-encoding" if not outside
+        else "shape-outside-analogues"
+    )
+    return {
+        "run": rung,
+        "match_basis_events": basis,
+        "real_rung_kept_pairs": mass,
+        "real_rung_boundary_carried_pairs": carried,
+        "real_rung_profile": profile,
+        "invariants": tests,
+        "outside_invariants": outside,
+        "verdict": verdict,
+    }
+
+
+def _real_ladder_cell(code: str, language: str, frozen: dict) -> dict:
+    """One cell's real-at-basis facts: the real record derived fresh
+    (the real stream, its kept-adjacent matrix, its mark-excluded
+    profile, the standing truncated reference's own length, and the
+    standing plant encodings re-run through their frozen draw seeds
+    for the plants-at-source identity) and the four declared rungs'
+    real-side facts beside them."""
+    real = _homo_real_stream(code)
+    real_mark = len(real["mapped_chars"]) - 1
+    real_matrix = _count_matrix_37(real["event_ids"], real["kept_mask"])
+    real_profile = _profile_facts(
+        _glyph_block_matrix(real_matrix, real_mark)
+    )
+    standing_truncated = _truncated_reference(code, language)
+    standing_groups = _partition_groups(
+        standing_truncated, MAPPED_HOMO
+    )
+    plant_identity = True
+    for index in range(N_PLANTS):
+        seed = _seed(
+            CELL_ID[code], KIND_ID["homo_plant_enc"],
+            LANG_ID[language], index,
+        )
+        rng_enc = np.random.default_rng(seed)
+        encoded = _encode(
+            standing_truncated, standing_groups, rng_enc, MAPPED_HOMO
+        )
+        standing_full = _full_matrix_37(encoded)
+        if int(round(standing_full.sum())) != len(standing_truncated) - 1:
+            plant_identity = False
+    record = {
+        "stream_events": real["total_events"],
+        "kept_pairs": int(real_matrix.sum()),
+        "unmapped_events": (
+            real["total_events"] - int(real["kept_mask"].sum())
+        ),
+        "boundary_carried_pairs": _boundary_carried_pairs(
+            real_matrix, real_mark
+        ),
+        "real_profile": real_profile,
+        "real_full_width_total_pairs": int(real_matrix.sum()),
+        "standing_plant_length": len(standing_truncated),
+        "plants_at_source_identity": plant_identity,
+    }
+    cell = dict(record)
+    cell["rungs"] = [
+        _real_rung_facts(code, language, rung, frozen)
+        for rung in LADDER_RUNGS
+    ]
+    return cell
+
+
+def _compare_real_ladder_to_frozen() -> tuple[list[str], int]:
+    """The declared bridge gate for the real-at-basis ladder, two
+    stages: the matched-basis ladder's gate exactly as that
+    instrument declared it (the matched-truncation instrument's 540
+    anchor and replay fields plus the 117 anchor-rung replay checks,
+    657 fields), then per cell the fresh real-side record verified
+    against the frozen matched-basis ladder's cell: the record's
+    eight declared fields, the four rung bases' identities, and the
+    anchor rung's fresh envelope equal to the frozen anchor rung's
+    envelope result, 6 checks per cell, 36 checks total, 693 fields
+    compared. The three descended rungs' envelopes carry no frozen
+    counterpart and ride on the declared rung rule, whose mass-match
+    identity aborts on any divergence. Any divergence in any stage
+    aborts with nothing written."""
+    problems, fields = _compare_ladder_to_frozen()
+    frozen = json.loads(SEARCH_FREE_LADDER_ARTIFACT_PATH.read_text())
+    for code in FILES:
+        for language in LANGS:
+            frozen_cell = frozen["files"][code][language]
+            fresh = _real_ladder_cell(code, language, frozen)
+            fields += 1
+            differing = [
+                key for key in MATCHED_REAL_RECORD_KEYS
+                if fresh[key] != frozen_cell[key]
+            ]
+            if differing:
+                problems.append(
+                    f"real-at-basis/record/{code}/{language}: the "
+                    f"fresh real record does not equal the frozen "
+                    f"matched-basis ladder record "
+                    f"({', '.join(differing)})"
+                )
+            for index, rung in enumerate(LADDER_RUNGS):
+                fields += 1
+                if (
+                    fresh["rungs"][index]["match_basis_events"]
+                    != frozen_cell["rungs"][index]["match_basis_events"]
+                ):
+                    problems.append(
+                        f"real-at-basis/basis/{code}/{language}/rung "
+                        f"{rung}: the derived basis does not equal "
+                        f"the frozen rung's basis"
+                    )
+            fresh_anchor = fresh["rungs"][0]
+            frozen_anchor = frozen_cell["rungs"][0]
+            fields += 1
+            differing = [
+                key for key in (
+                    "invariants", "outside_invariants", "verdict",
+                )
+                if fresh_anchor[key] != frozen_anchor[key]
+            ]
+            if fresh_anchor["real_rung_profile"] != (
+                frozen_cell["real_profile"]
+            ):
+                differing.append("real_rung_profile")
+            if differing:
+                problems.append(
+                    f"real-at-basis/anchor/{code}/{language}: the "
+                    f"anchor rung's fresh envelope does not equal "
+                    f"the frozen matched-basis ladder's anchor "
+                    f"envelope ({', '.join(differing)})"
+                )
+    return problems, fields
+
+
+def substitution_homophonic_real_ladder() -> dict:
+    """The declared real-at-basis ladder: the matched-basis ladder's
+    same rungs, bands and strict-all question, with the real's own
+    kept-adjacent pair sequence re-priced at each declared rung. The
+    bridge gate runs first; any divergence aborts with nothing
+    written."""
+    problems, fields = _compare_real_ladder_to_frozen()
+    if problems:
+        raise AssertionError(
+            "real-at-basis ladder bridge gate failed: "
+            + "; ".join(problems)
+        )
+    frozen = json.loads(SEARCH_FREE_LADDER_ARTIFACT_PATH.read_text())
+    artifact = {
+        "what": "The declared real-at-basis ladder: the "
+        "matched-basis ladder's same state space (1296 ordered "
+        "types, the boundary mark's row and column excluded on both "
+        "sides), the same four declared rungs, the same member bands "
+        "re-priced per rung, and the same six relabeling-invariant "
+        "summaries, with the real's own kept-adjacent pair sequence "
+        "re-priced at each rung beside them: its first basis - 1 "
+        "pairs, the exact full-width mass every one of the rung's "
+        "cut rows prices, through the same mark-excluded block. The "
+        "anchor rung's comparison is the matched-basis ladder's own; "
+        "every descended rung's comparison is mass-matched on both "
+        "sides for the first time in this family. The declared "
+        "truthful question: does the real's own descending profile "
+        "track the rung bands' descension or stay apart down the "
+        "ladder in every (file, language) cell. No mapping is "
+        "published; nothing here is a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "boundary_rule": "the word-boundary mark's row and "
+            "column are excluded from every profile's state space "
+            "on both sides exactly as the boundary-mark "
+            "re-instrument declared: every profile is the "
+            "mark-excluded block of its pair-count matrix, 1296 "
+            "ordered types, the mark located in each matrix's own "
+            "alphabet, and the standing alphabet-width disclosure "
+            "carries unchanged (the IT real transcription ranks "
+            "only 23 glyph types plus the mark, so 13 of its "
+            "block's 36 glyph slots are empty by width alone on "
+            "the real side while the simulated alphabets are "
+            "saturated at 36 in every cell)",
+            "real_ladder_rule": "the real's own kept-adjacent pair "
+            "sequence re-priced at the matched-basis ladder's "
+            "declared rungs, recorded as design before any "
+            "pricing: the anchor rung first at the cell's real "
+            "counted pair total + 1 tokens (ZL 218,416, GC 183,200, "
+            "IT 220,532), then floor(p x the anchor basis) rungs "
+            "at p 0.75, 0.50 and 0.25 (ZL 163,812, 109,208 and "
+            "54,604; GC 137,400, 91,600 and 45,800; IT 165,399, "
+            "110,266 and 55,133); at every rung the real prices "
+            "its first basis - 1 kept-adjacent pairs through the "
+            "same mark-excluded block and the same six summaries, "
+            "and the real's cut can move its own profile both ways "
+            "exactly as a band's cut moves a band's closed ranges "
+            "both ways; the anchor rung's re-priced profile is the "
+            "real's unchanged matched-basis ladder profile exactly "
+            "and every descended rung's is fresh",
+            "mass_rule": "the comparison at every rung is "
+            "mass-matched on the paired side by the exact band "
+            "arithmetic the matched-basis ladder priced, and "
+            "mass-matched on the real side by construction: the "
+            "real's rung mass is its rung basis - 1 pairs and "
+            "every one of the rung's cut rows prices its "
+            "match_basis_events - 1 pairs full width, the mass-match "
+            "identity verified against the frozen rung's rows "
+            "before any envelope is formed; a rung's whole rows "
+            "keep their standing masses inside the envelope, the "
+            "same disclosed mix the anchor rung carried, and the "
+            "real's re-priced block total equals the mass minus "
+            "its own boundary-carried pairs exactly",
+            "band_reference_rule": "the rung bands are the frozen "
+            "matched-basis ladder's rung facts taken by reference, "
+            "their own measurements verified under that "
+            "instrument's gate and tests: the anchor rung's "
+            "envelope result is re-derived fresh here and verified "
+            "equal to the frozen anchor rung's, and every "
+            "descended rung's envelope runs the real's fresh "
+            "re-priced profile against the frozen rung's member "
+            "profiles exactly as that instrument stored them",
+            "roster_rule": "the corpus-breadth roster stands "
+            "unchanged: the same eight accepted corpus files, the "
+            "same rejected candidates with their verbatim causes, "
+            "the same sha256 records, the roster floor and the "
+            "fetch verification are the corpus-breadth artifact's "
+            "declared facts taken by reference, no corpus file is "
+            "re-fetched, re-probed or re-hashed here, and no "
+            "encoding is re-run on the band side anywhere: the "
+            "bands are the frozen instrument's own",
+            "invariants": {
+                "sorted_symbol_marginals": "the 36 mark-excluded "
+                "glyph marginals as a multiset, stored sorted "
+                "descending as counts and shares, envelope-tested "
+                "by sorted position over 36 positions",
+                "sorted_pair_multiset": "the 1296 mark-excluded "
+                "pair counts as a multiset, stored sorted "
+                "descending as counts and shares, envelope-tested "
+                "by sorted position",
+                "empty_type_count": "the number of the block's "
+                "mark-excluded pair types with zero counted "
+                "occurrences, a scalar inside [min, max]",
+                "self_pair_share": "the block's diagonal sum over "
+                "the profile's glyph-pair total",
+                "top_k_shares": "the share of the glyph-pair "
+                "total carried by the k largest pair counts, at k "
+                "1, 10 and 50",
+                "pair_entropy": "the natural entropy of the "
+                "mark-excluded pair distribution in nats per "
+                "counted glyph pair",
+            },
+            "state_note": "every band profile here is the frozen "
+            "matched-basis ladder's mark-excluded member profile "
+            "at its rung width, taken by reference; the real's "
+            "profiles are priced fresh at every rung from its own "
+            "ordered kept-adjacent pair sequence, whose "
+            "adjacency is the original stream's with the unmapped "
+            "events breaking it (126 unmapped events inside ZL's "
+            "218,663, 1,769 inside GC's 186,708, none inside IT's "
+            "220,532) exactly as disclosed since the interior "
+            "instrument; the anchor rung's real profile is the "
+            "whole sequence and equals the frozen profile the "
+            "gate verifies; the share-valued invariants "
+            "normalise by their own glyph-pair totals, so the "
+            "real's descending mass prices like the bands' "
+            "descending masses at every rung",
+            "machinery_rule": "this instrument contains no "
+            "assignment search anywhere: no candidate evaluation, "
+            "no restarts, no sweep cap, no convergence flags; the "
+            "standing budgets are not applicable and no machinery "
+            "recording appears for that reason",
+            "split_rule": "no split applies: a profile uses every "
+            "counted pair of its stream after the declared "
+            "exclusion; the climb and score halves of the band "
+            "instruments have no counterpart here",
+            "seed_kinds": "no seed is consumed anywhere in this "
+            "instrument: the real's own sequence needs no "
+            "encoding, the bands are the frozen instrument's "
+            "facts taken by reference, and the standing plant "
+            "encodings replay their frozen declared draws on the "
+            "real-record side only, the same standing encodings "
+            "every predecessor priced",
+            "record_rule": "per cell the artifact records the "
+            "real record once (verified against the frozen "
+            "matched-basis ladder record) and the four declared "
+            "rungs in order (the anchor rung first, then 75, 50 "
+            "and 25 percent), each rung carrying its run "
+            "percentage, its basis, the real's rung mass, the "
+            "rung's boundary-carried pairs, the real's re-priced "
+            "profile, its envelope tests, its outside list and "
+            "its verdict; the rung's member band itself is not "
+            "re-stored here: it stays the frozen instrument's "
+            "declared record",
+            "verdict_rule": "declared strict-all, unchanged, "
+            "priced per rung on the real's re-priced profile: a "
+            "rung-cell is shape-consistent-with-homophonic-"
+            "encoding only when every declared invariant of the "
+            "real's re-priced glyph-block profile sits inside the "
+            "closed range of that rung's matched band's "
+            "glyph-block profiles (the two vector summaries term "
+            "by term inside the band's per-position envelope "
+            "over 36 sorted positions, the scalar summaries "
+            "inside [min, max] at the stored 6-decimal "
+            "rounding); any outside invariant makes the rung-cell "
+            "shape-outside-analogues, every outside entry is "
+            "recorded with its band range so the miss is audited "
+            "not summarized, and the declared question is asked "
+            "over all 24 rung-cell verdicts together",
+            "closure_rule": "no scalar margin is formed: this "
+            "instrument's question is inside or outside per "
+            "invariant per rung, and the recorded distances are "
+            "the outside entries' band ranges themselves",
+            "exclusion_rule": "the family's declared exclusion "
+            "format is not re-scoped by this artifact: it keys "
+            "to the declared 36-slot class under the inherited "
+            "add-one form exactly as the held-out screen "
+            "declared it, so a search-free verdict is structure "
+            "evidence and the band instruments' verdicts stand "
+            "untouched by this artifact's numbers",
+            "bridge_gate_rule": "before any rung is priced, the "
+            "gate verified fresh in two stages: the "
+            "matched-basis ladder's gate exactly as that "
+            "instrument declared it (the matched-truncation "
+            "instrument's 540 anchor and replay fields plus the "
+            "117 anchor-rung replay checks, 657 fields), then "
+            "per cell the fresh real record verified against the "
+            "frozen matched-basis ladder's cell record (its "
+            "eight declared fields), the four rung bases' "
+            "identities, and the anchor rung's fresh envelope "
+            "equal to the frozen anchor rung's envelope result, "
+            "6 checks per cell, 36 checks total, 693 fields "
+            "compared; the three descended rungs' envelopes "
+            "carry no frozen counterpart and ride on the "
+            "declared rung rule, whose mass-match identity "
+            "aborts on any divergence; any divergence aborts "
+            "with nothing written",
+            "models_rule": "no score table is built or used: "
+            "the instrument prices count structure only, so the "
+            "standing add-one and leave-one-out tables play no "
+            "part anywhere in this artifact",
+        },
+        "bridge_gate": {
+            "status": "verified",
+            "fields_compared": fields,
+            "ladder_gate_fields": 657,
+            "real_rung_replay_checks": fields - 657,
+        },
+        "files": {},
+    }
+    for code in FILES:
+        cell = {}
+        for language in LANGS:
+            cell[language] = _real_ladder_cell(code, language, frozen)
+        artifact["files"][code] = cell
+    return artifact
+
+
+def main_real_ladder() -> None:
+    artifact = substitution_homophonic_real_ladder()
+    REAL_LADDER_ARTIFACT_PATH.write_text(
+        json.dumps(artifact, indent=2) + "\n"
+    )
+    print(REAL_LADDER_ARTIFACT_PATH)
