@@ -1733,6 +1733,146 @@ mapping is published anywhere in this artifact, no recovered
 assignment is stored as a key, plaintext_recovered_percent stays 0,
 the reference prose is modern printed text outside the manuscript's
 century, and nothing here is a reading or a language claim.
+
+Fourteenth declared measurement, the matched-basis ladder,
+declared after the matched-truncation instrument cut every
+simulated stream to the real's own counted pair mass and no cell
+reported the inside verdict that matching granted, and before any
+run of it beyond the probes it discloses.
+
+The disclosed background, declared in advance: the matched
+truncation priced one basis - the real's own mass anchor - and its
+verdicts held with the cut's movements recorded both ways, but one
+anchor answers only the question the anchor asks; a band whose
+streams carry a different mass can reprice its closed ranges
+either way, so the honest next question is the ladder: sweep the
+basis at declared rungs, re-price the roster's bands at each rung,
+hold the real's profile unchanged everywhere, and ask whether any
+rung's mass admits the real's interior profile inside on every
+declared invariant or every rung stands outside, with every scalar
+movement against the anchor rung's bands readable and recorded
+both ways.
+
+The declared design, before the run: the matched-truncation
+instrument's roster, state space, six relabeling-invariant
+summaries and strict-all no-margin verdict rule unchanged, with
+the truncation basis swept at declared rungs - the anchor rung
+first, the cell's real counted pair total + 1 tokens (ZL 218,416,
+GC 183,200, IT 220,532), then three descended rungs at floor(p x
+the anchor basis) tokens for p 0.75, 0.50 and 0.25 (ZL 163,812,
+109,208 and 54,604; GC 137,400, 91,600 and 45,800; IT 165,399,
+110,266 and 55,133); at every rung each of the roster's encodings
+re-runs its own frozen chain (the standing members' selected
+draws replayed, the breadth members' declared draw 0) over the
+standing truncated reference's first rung tokens, a stream above
+the rung cut accordingly and a stream at or below it stays whole,
+every cut row pricing its rung basis - 1 pairs full width (the
+exact identity, matched length - 1); the declared truth about the
+arithmetic is the matched-truncation instrument's restated: a cut
+can move a band's closed ranges both ways, both verdict
+directions are open at every rung, and the artifact prices every
+rung's bands beside the anchor rung's so every scalar movement is
+readable both ways; the real is priced once and never re-cut, so
+below the anchor rung the real's full-mass profile is compared
+against bands whose streams price the rung's descending mass and
+the ladder reads the bands' movements, not a mass match, at those
+rungs; the floors replay unchanged (a floor's shuffled
+kept-adjacency already prices exactly the real's counted pair
+total), the standing plant width and the standing plaintext
+profile are recorded once each as rung-independent facts, the
+plaintext control's matched re-cut is recorded per rung beside
+its standing profile, the IT cells are degenerate only at the
+anchor rung (their basis there equals the standing truncated
+length because the real transcription holds no unmapped events)
+and at the lower rungs their streams cut like every other cell's,
+and the rung-cell verdicts are asked together over all 24.
+
+Mechanics, declared: the bridge gate first, in two stages - the
+matched-truncation instrument's gate exactly as that instrument
+declared it (the corpus-breadth instrument's 399 anchor fields
+and the 141 standing-row replay checks, 540 fields), then the
+anchor rung's six cells verified equal to the frozen
+matched-truncation artifact's six cells field for field (each
+anchor member row's matched block, each anchor plant row's
+matched block, each anchor matched plaintext control, each
+anchor's basis with its cut counts, and each anchor's envelope
+result, 20 checks per english cell and 19 per latin cell, 117
+checks total), 657 fields all told; the three descended rungs
+carry no frozen counterpart and ride on the declared rung rule;
+any divergence aborts with nothing written.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+bridge gate rehearsed: the gate ran at 657 fields compared, no
+problem. Probe 2, the rung bases and the roster's cuts ahead of
+the run: the anchors 218,416 (ZL), 183,200 (GC) and 220,532 (IT)
+make the rung bases ZL 218,416, 163,812, 109,208 and 54,604; GC
+183,200, 137,400, 91,600 and 45,800; IT 220,532, 165,399,
+110,266 and 55,133 (anchor, 75, 50 and 25 percent); the members
+cut per rung: ZL english 11, 11, 11, 12 (the Sonnets whole until
+the 25 percent rung cuts it too); ZL latin 5, 5, 7, 10; GC
+english 11, 11, 12, 12; GC latin 5, 6, 7, 10; IT english and IT
+latin 0 at the anchor (the degenerate case, nothing to cut) and
+thereafter 11, 11, 12 english and 5, 7, 10 latin; the plants cut
+5 at every rung in every cell of ZL and GC and 0 at the anchor
+then 5, 5 and 5 in the IT cells; the floors never re-cut. Probe
+3, the first english cell's declared portraits ahead of the run,
+ZL english: every rung's verdict shape-outside-analogues with
+every one of the eight invariant tests outside - the anchor
+rung's bands the matched-truncation artifact's bands exactly
+(empty_type_count 928 against [323, 454], self_pair_share
+0.065848 against [0.018692, 0.026719], top_1_share 0.070481
+against [0.018187, 0.035877], top_10_share 0.424435 against
+[0.106088, 0.148334], top_50_share 0.893671 against
+[0.305696, 0.355757], pair_entropy 4.010179 against
+[5.928491, 6.102985]); the 75 percent rung's bands [318, 464],
+[0.01884, 0.027095], [0.018173, 0.035196], [0.106088, 0.157183],
+[0.305696, 0.368859] and [5.92046, 6.115742]; the 50 percent
+rung's [341, 495], [0.01878, 0.027796], [0.015177, 0.034405],
+[0.100396, 0.157691], [0.305696, 0.370604] and
+[5.90532, 6.108939]; the 25 percent rung's [376, 505],
+[0.018805, 0.027025], [0.014518, 0.03463], [0.100414, 0.160534],
+[0.309486, 0.372217] and [5.883769, 6.098317]; the scalar band
+ends moved against the anchor rung both ways: 4 down and 6 up
+with 2 stayed at 75 percent, 4 down and 7 up with 1 stayed at 50,
+5 down and 7 up with 0 stayed at 25. Probe 4, the first latin
+cell's declared portraits ahead of the run, ZL latin: every
+rung's verdict shape-outside-analogues with every one of the
+eight invariant tests outside - the anchor rung's bands
+[240, 503], [0.011829, 0.023974], [0.013486, 0.02536],
+[0.09782, 0.132009], [0.268516, 0.336674] and [5.980168, 6.252];
+the 75 percent rung's [283, 503], [0.012506, 0.023974],
+[0.01335, 0.02536], [0.097045, 0.134341], [0.268516, 0.339127]
+and [5.980168, 6.254451]; the 50 percent rung's [360, 503],
+[0.013366, 0.024518], [0.013618, 0.025917], [0.09782, 0.132131],
+[0.268516, 0.335977] and [5.980168, 6.250767]; the 25 percent
+rung's [399, 537], [0.013527, 0.021909], [0.013764, 0.025031],
+[0.098316, 0.138755], [0.272333, 0.348076] and
+[5.951767, 6.248471]; the scalar band ends moved against the
+anchor rung 2 down and 5 up with 5 stayed at 75 percent, 2 down
+and 6 up with 4 stayed at 50, 4 down and 8 up with 0 stayed at
+25. Probe 5, the matched plaintext controls recorded ahead at
+the four rungs against their standing profiles: ZL english
+5.13911, 5.13898, 5.138153 and 5.139435 against 5.139035; ZL
+latin 5.063378, 5.063174, 5.068902 and 5.077888 against 5.06327;
+GC english 5.139014, 5.138704, 5.135251 and 5.144321 against
+5.139139; GC latin 5.063275, 5.061239, 5.07202 and 5.078094
+against 5.063406; IT english 5.139068, 5.138764, 5.138225 and
+5.139379 against 5.139068 (identical at the anchor by the
+degenerate case); IT latin 5.062979, 5.063274, 5.068993 and
+5.077053 against 5.062979 (identical at the anchor). Probe 6:
+none; the four remaining cells are unseen until the declared
+run. The probes' disclosed portraits do not decide the artifact:
+the artifact run prices all 24 rung-cells through the same
+declared code, and the disclosure's honest question is recorded
+over all of them.
+
+The standing limitations are inherited from the held-out screen:
+no mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays
+0, the reference prose is modern printed text outside the
+manuscript's century, and nothing here is a reading or a
+language claim.
 """
 
 from __future__ import annotations
@@ -8771,7 +8911,9 @@ def _compare_matched_to_frozen() -> tuple[list[str], int]:
     return problems, fields
 
 
-def _matched_cell_facts(code: str, language: str) -> dict:
+def _matched_cell_facts(
+    code: str, language: str, basis: int | None = None
+) -> dict:
     """One cell's matched-truncation facts: the corpus-breadth cell's
     roster replayed with every simulated stream cut to the declared
     basis, the cell's real counted pair total + 1 tokens: each member's
@@ -8784,14 +8926,18 @@ def _matched_cell_facts(code: str, language: str) -> dict:
     plaintext control records its standing profile and its matched cut
     beside it. The envelope runs the real's unchanged mark-excluded
     profile against the matched band's profiles under the declared
-    strict-all rule. No machinery anywhere in the instrument."""
+    strict-all rule. No machinery anywhere in the instrument. The
+    basis defaults to the anchor (the real counted pair total + 1
+    tokens) so the matched-basis ladder re-prices these same facts at
+    its declared descending rungs."""
     real = _homo_real_stream(code)
     real_mark = len(real["mapped_chars"]) - 1
     real_matrix = _count_matrix_37(real["event_ids"], real["kept_mask"])
     real_profile = _profile_facts(
         _glyph_block_matrix(real_matrix, real_mark)
     )
-    basis = int(real_matrix.sum()) + 1
+    if basis is None:
+        basis = int(real_matrix.sum()) + 1
     standing_truncated = _truncated_reference(code, language)
     standing_groups = _partition_groups(standing_truncated, MAPPED_HOMO)
     members = _breadth_reference_members(language)
@@ -9198,3 +9344,389 @@ def main_matched_truncation() -> None:
     )
     print(SEARCH_FREE_MATCHED_ARTIFACT_PATH)
 
+
+SEARCH_FREE_LADDER_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes"
+    / "voynich-homophonic-matched-basis-ladder.json"
+)
+
+LADDER_RUNGS = (1.0, 0.75, 0.5, 0.25)
+
+LADDER_RUNG_FACT_KEYS = (
+    "match_basis_events", "matched_members_cut",
+    "matched_plants_cut", "members_profiles", "plants_profiles",
+    "plaintext_matched_profile", "invariants",
+    "outside_invariants", "verdict",
+)
+
+
+def _compare_ladder_to_frozen() -> tuple[list[str], int]:
+    """The declared bridge gate for the ladder: the matched-truncation
+    instrument's gate verified fresh first (the corpus-breadth
+    instrument's 399 anchor fields and the 141 standing-row replay
+    checks exactly as that instrument declared them), then the anchor
+    rung's six cells verified equal to the frozen matched-truncation
+    artifact's six cells field for field: each anchor member row's
+    matched block, each anchor plant row's matched block, each anchor
+    matched plaintext control, each anchor's basis with its cut
+    counts, and each anchor's envelope result, 20 checks per english
+    cell and 19 per latin cell, 117 checks total. The three descended
+    rungs carry no frozen counterpart and ride on the declared rung
+    rule. Any divergence aborts with nothing written."""
+    problems, fields = _compare_matched_to_frozen()
+    frozen = json.loads(SEARCH_FREE_MATCHED_ARTIFACT_PATH.read_text())
+    for code in FILES:
+        for language in LANGS:
+            anchor = _matched_cell_facts(code, language)
+            stored_cell = frozen["files"][code][language]
+            for block, rows_key in (
+                ("member", "members_profiles"),
+                ("plant", "plants_profiles"),
+            ):
+                stored_rows = stored_cell[rows_key]
+                fresh_rows = anchor[rows_key]
+                if len(fresh_rows) != len(stored_rows):
+                    problems.append(
+                        f"ladder/{block}/{code}/{language}: row count "
+                        f"{len(fresh_rows)} does not equal the frozen "
+                        f"{len(stored_rows)}"
+                    )
+                    continue
+                for position, (fresh_row, stored_row) in enumerate(
+                    zip(fresh_rows, stored_rows)
+                ):
+                    fields += 1
+                    differing = [
+                        key for key in (
+                            "matched_length", "matched_total_pairs",
+                            "matched_profile",
+                        )
+                        if fresh_row.get(key) != stored_row.get(key)
+                    ]
+                    if differing:
+                        problems.append(
+                            f"ladder/{block}/{code}/{language}/"
+                            f"{position}: the anchor replay's matched "
+                            f"block does not equal the frozen "
+                            f"matched-truncation block "
+                            f"({', '.join(differing)})"
+                        )
+            fields += 1
+            if (
+                anchor["plaintext_matched_profile"]
+                != stored_cell["plaintext_matched_profile"]
+            ):
+                problems.append(
+                    f"ladder/plaintext/{code}/{language}: the anchor "
+                    f"matched control does not equal the frozen "
+                    f"matched-truncation matched control"
+                )
+            fields += 1
+            differing = [
+                key for key in (
+                    "match_basis_events", "matched_members_cut",
+                    "matched_plants_cut",
+                )
+                if anchor.get(key) != stored_cell.get(key)
+            ]
+            if differing:
+                problems.append(
+                    f"ladder/basis/{code}/{language}: the anchor's "
+                    f"basis and cut counts do not equal the frozen "
+                    f"matched-truncation record "
+                    f"({', '.join(differing)})"
+                )
+            fields += 1
+            differing = [
+                key for key in (
+                    "invariants", "outside_invariants", "verdict",
+                )
+                if anchor.get(key) != stored_cell.get(key)
+            ]
+            if differing:
+                problems.append(
+                    f"ladder/verdict/{code}/{language}: the anchor's "
+                    f"envelope result does not equal the frozen "
+                    f"matched-truncation record "
+                    f"({', '.join(differing)})"
+                )
+    return problems, fields
+
+
+def _ladder_rung_facts(code: str, language: str, rung: float) -> dict:
+    """One rung's facts for one cell: the rung's descending basis is
+    floor(rung * the anchor basis), the anchor basis the real counted
+    pair total + 1 tokens, and the rung's facts are the matched cell
+    facts at that basis restricted to the rung-varying record."""
+    real = _homo_real_stream(code)
+    anchor = (
+        int(_count_matrix_37(
+            real["event_ids"], real["kept_mask"]
+        ).sum()) + 1
+    )
+    basis = anchor if rung == 1.0 else int(rung * anchor)
+    facts = _matched_cell_facts(code, language, basis)
+    return {key: facts[key] for key in LADDER_RUNG_FACT_KEYS}
+
+
+def substitution_homophonic_ladder() -> dict:
+    """The declared matched-basis ladder: the matched-truncation
+    instrument's roster, state space and summaries re-priced with the
+    truncation basis swept at declared rungs. The bridge gate runs
+    first; any divergence aborts with nothing written."""
+    problems, fields = _compare_ladder_to_frozen()
+    if problems:
+        raise AssertionError(
+            "matched-basis ladder bridge gate failed: "
+            + "; ".join(problems)
+        )
+    artifact = {
+        "what": "The declared matched-basis ladder: the "
+        "matched-truncation instrument's same state space, the same "
+        "twelve english and eleven latin member roster, the same "
+        "plants and floors, and the same six relabeling-invariant "
+        "summaries over the same mark-excluded state space (1296 "
+        "ordered types), re-priced with the truncation basis swept at "
+        "declared rungs: the real's own mass anchor rung first (the "
+        "matched-truncation artifact's own basis, band streams cut to "
+        "the real's counted pair mass), then 75, 50 and 25 percent "
+        "rungs of it, every band's closed ranges re-priced at each "
+        "rung and every movement recorded against the anchor rung's "
+        "bands both ways. The declared truthful question: does any "
+        "rung's matched band admit the real's mark-excluded profile "
+        "inside on every declared invariant in every (file, "
+        "language) cell, or do every rung's verdicts stand. No "
+        "mapping is published; nothing here is a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "boundary_rule": "the word-boundary mark's row and column "
+            "are excluded from every profile's state space on both "
+            "sides exactly as the boundary-mark re-instrument "
+            "declared: every profile is the mark-excluded block of "
+            "its pair-count matrix, 1296 ordered types, the mark "
+            "located in each matrix's own alphabet, and the standing "
+            "alphabet-width disclosure carries unchanged (the IT "
+            "real transcription ranks only 23 glyph types plus the "
+            "mark, so 13 of its block's 36 glyph slots are empty by "
+            "width alone on the real side while the simulated "
+            "alphabets are saturated at 36 in every cell)",
+            "ladder_rung_rule": "the matched basis swept at declared "
+            "rungs, recorded as design before any pricing: the anchor "
+            "rung is the matched-truncation instrument's basis, the "
+            "cell's real counted pair total + 1 tokens (ZL 218,416, "
+            "GC 183,200, IT 220,532); the three declared rungs "
+            "descend at floor(p x the anchor basis) tokens for p "
+            "0.75, 0.50 and 0.25 (ZL 163,812, 109,208 and "
+            "54,604; GC 137,400, 91,600 and 45,800; IT 165,399, "
+            "110,266 and 55,133); at every rung each of the roster's "
+            "encodings re-runs its own frozen chain over the "
+            "standing truncated reference's first rung tokens, a "
+            "stream above the rung cut accordingly and a stream at "
+            "or below it stays whole, and every cut row prices its "
+            "rung basis - 1 pairs full width (the exact identity, "
+            "matched length - 1); the declared truth about the "
+            "arithmetic is the matched-truncation instrument's "
+            "restated: a cut can move a band's closed ranges both "
+            "ways, both verdict directions are open at every rung, "
+            "and the artifact records each rung's movement counts "
+            "against the anchor rung's bands; the real is priced "
+            "once, unchanged across rungs",
+            "roster_rule": "the corpus-breadth roster stands "
+            "unchanged: the same eight accepted corpus files, the "
+            "same rejected candidates with their verbatim causes, "
+            "the same sha256 records, the roster floor and the "
+            "fetch verification are the corpus-breadth artifact's "
+            "declared facts taken by reference, no corpus file is "
+            "re-fetched, re-probed or re-hashed here, and the "
+            "roster's streams replay through the standing declared "
+            "processing with no new step",
+            "invariants": {
+                "sorted_symbol_marginals": "the 36 mark-excluded "
+                "glyph marginals as a multiset, stored sorted "
+                "descending as counts and shares, envelope-tested by "
+                "sorted position over 36 positions",
+                "sorted_pair_multiset": "the 1296 mark-excluded pair "
+                "counts as a multiset, stored sorted descending as "
+                "counts and shares, envelope-tested by sorted "
+                "position",
+                "empty_type_count": "the number of the block's "
+                "mark-excluded pair types with zero counted "
+                "occurrences, a scalar inside [min, max]",
+                "self_pair_share": "the block's diagonal sum over "
+                "the profile's glyph-pair total",
+                "top_k_shares": "the share of the glyph-pair total "
+                "carried by the k largest pair counts, at k 1, 10 "
+                "and 50",
+                "pair_entropy": "the natural entropy of the "
+                "mark-excluded pair distribution in nats per "
+                "counted glyph pair",
+            },
+            "state_note": "every profile here is the mark-excluded "
+            "block of the same pair-count matrices the boundary-mark "
+            "instrument priced, priced at its own stream's rung "
+            "width: the real is priced once at its own kept-adjacent "
+            "mass and is not re-cut anywhere (its profile is the "
+            "matched-truncation artifact's real profile unchanged), "
+            "so below the anchor rung the real's full-mass profile "
+            "is compared against bands whose streams price the "
+            "rung's descending mass and the ladder reads the bands' "
+            "movements, not a mass match, at those rungs; every "
+            "share-valued invariant normalises by its own "
+            "glyph-pair total; the plaintext control's state is the "
+            "27 reference letters alone (729 types, no boundary "
+            "mark) and takes no part in any envelope; the latin "
+            "envelopes stay size-mixed at every rung by the "
+            "roster's own declared construction; the IT cells are "
+            "degenerate only at the anchor rung (their basis there "
+            "equals the standing truncated length because the real "
+            "transcription holds no unmapped events) and at the "
+            "lower rungs their streams cut like every other cell's, "
+            "so the IT cells' anchor facts equal their matched-truncation "
+            "facts exactly and their lower rungs carry fresh "
+            "descending facts",
+            "machinery_rule": "this instrument contains no assignment "
+            "search anywhere: no candidate evaluation, no restarts, "
+            "no sweep cap, no convergence flags; the standing "
+            "budgets are not applicable and no machinery recording "
+            "appears for that reason",
+            "split_rule": "no split applies: a profile uses every "
+            "counted pair of its stream after the declared "
+            "exclusion; the climb and score halves of the band "
+            "instruments have no counterpart here",
+            "seed_kinds": "the standing encoding, plant and floor "
+            "kinds replay at their frozen positions with their "
+            "frozen selected draws exactly as every predecessor "
+            "declared; each matched encoding runs its own frozen "
+            "chain's declared draws over the rung's stream from "
+            "draw 0 upward; no new seed is consumed and no draw "
+            "selection is performed",
+            "seed_sharing": "the standing-basis facts replay through "
+            "the declared chains and verify against the frozen "
+            "matched-truncation artifact field for field under the "
+            "gate, whose anchor-run band the anchor rung re-derives "
+            "fresh; every rung's matched facts run the same seeds "
+            "over the rung's streams from draw 0 upward; every "
+            "block profile of every rung row is the declared block "
+            "of its own replayed rung encoding",
+            "rung_record_rule": "per cell the artifact records the "
+            "real record once (verified against the frozen "
+            "matched-truncation real record) and four rungs in "
+            "declared order (the anchor rung first, then 75, 50 and "
+            "25 percent), each rung carrying its basis, its cut "
+            "counts, its member and plant matched records, its "
+            "matched plaintext control, its envelope tests, its "
+            "outside list and its verdict; every member row carries "
+            "its standing-basis anchors beside its matched facts at "
+            "every rung, and the floors, the standing plant width "
+            "and the standing plaintext control are recorded once "
+            "at the cell because they are rung-independent facts "
+            "the gate verifies",
+            "plants_rule": "the plant encodings recorded at "
+            "every rung like the band: each rung's rows carry the "
+            "standing full width (the standing encoding's own, "
+            "gate-anchored to the frozen corpus-breadth rows), "
+            "their matched lengths min(plant length, rung), their "
+            "matched totals (the same exact identity, matched "
+            "length - 1) and their matched glyph-block profiles; "
+            "the plants_at_source_identity boolean reports the "
+            "standing widths at the standing lengths",
+            "floors_rule": "the 30 destroyed-adjacency floors "
+            "recorded once at the cell, unchanged across the "
+            "rungs: a floor's full width is the shuffled "
+            "kept-adjacency structure's own pair count, the real's "
+            "counted pair total, so nothing here re-cuts them and "
+            "their glyph-block profiles replay under the gate; "
+            "their declared role is the shuffled-structure control "
+            "recorded beside every rung's verdict, not part of any "
+            "envelope",
+            "plaintext_rule": "each cell records the standing "
+            "truncated reference's own plaintext stream profile "
+            "once and each rung's matched control re-cut to that "
+            "rung beside it, both computed by the same formulas on "
+            "the 27-type letter state, as the prose control beside "
+            "the verdict; neither control takes part in any "
+            "envelope",
+            "verdict_rule": "declared strict-all, unchanged, "
+            "priced per rung: a rung-cell is "
+            "shape-consistent-with-homophonic-encoding only when "
+            "every declared invariant of the real's glyph-block "
+            "profile sits inside the closed range of that rung's "
+            "matched band's glyph-block profiles (the two vector "
+            "summaries term by term inside the band's per-position "
+            "envelope over 36 sorted positions, the scalar "
+            "summaries inside [min, max] at the stored 6-decimal "
+            "rounding); any outside invariant makes the rung-cell "
+            "shape-outside-analogues, every outside entry is "
+            "recorded with its band range so the miss is audited "
+            "not summarized, and the declared question is asked "
+            "over all 24 rung-cell verdicts together",
+            "closure_rule": "no scalar margin is formed: this "
+            "instrument's question is inside or outside per "
+            "invariant per rung, and the recorded distances are "
+            "the outside entries' band ranges themselves",
+            "exclusion_rule": "the family's declared exclusion "
+            "format is not re-scoped by this artifact: it keys to "
+            "the declared 36-slot class under the inherited "
+            "add-one form exactly as the held-out screen declared "
+            "it, so a search-free verdict is structure evidence "
+            "and the band instruments' verdicts stand untouched by "
+            "this artifact's numbers",
+            "bridge_gate": "before any rung is priced, the gate "
+            "verified fresh in two stages: the matched-truncation "
+            "instrument's gate exactly as that instrument declared "
+            "it (the corpus-breadth instrument's 399 anchor fields "
+            "and the 141 standing-row replay checks, 540 fields), "
+            "then the anchor rung's six cells verified equal to "
+            "the frozen matched-truncation artifact's six cells "
+            "field for field: each anchor member row's matched "
+            "block, each anchor plant row's matched block, each "
+            "anchor matched plaintext control, each anchor basis "
+            "with its cut counts, and each anchor envelope "
+            "result, 20 checks per english cell and 19 per latin "
+            "cell, 117 checks total, 657 fields compared; the "
+            "three descended rungs carry no frozen counterpart "
+            "and ride on the declared rung rule; any divergence "
+            "aborts with nothing written",
+            "models_rule": "no score table is built or used: the "
+            "instrument prices count structure only, so the "
+            "standing add-one and leave-one-out tables play no "
+            "part anywhere in this artifact",
+        },
+        "bridge_gate": {
+            "status": "verified",
+            "fields_compared": fields,
+            "anchor_fields": 399,
+            "breadth_replay_checks": fields - 399 - 117,
+            "ladder_replay_checks": 117,
+        },
+        "files": {},
+    }
+    for code in FILES:
+        cell = {}
+        for language in LANGS:
+            anchor = _matched_cell_facts(code, language)
+            record = {
+                key: anchor[key] for key in MATCHED_REAL_RECORD_KEYS
+            }
+            record["floors_profiles"] = anchor["floors_profiles"]
+            record["plaintext_profile"] = anchor["plaintext_profile"]
+            record["rungs"] = [
+                {key: anchor[key] for key in LADDER_RUNG_FACT_KEYS}
+            ]
+            record["rungs"].extend(
+                _ladder_rung_facts(code, language, rung)
+                for rung in LADDER_RUNGS[1:]
+            )
+            cell[language] = record
+        artifact["files"][code] = cell
+    return artifact
+
+
+def main_ladder() -> None:
+    artifact = substitution_homophonic_ladder()
+    SEARCH_FREE_LADDER_ARTIFACT_PATH.write_text(
+        json.dumps(artifact, indent=2) + "\n"
+    )
+    print(SEARCH_FREE_LADDER_ARTIFACT_PATH)
