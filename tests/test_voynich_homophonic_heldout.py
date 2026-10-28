@@ -352,7 +352,7 @@ class DeclaredBookkeepingTest(unittest.TestCase):
         self.assertEqual(28, homo.KIND_ID["homo_cross_enc"])
         self.assertEqual(29, homo.KIND_ID["homo_cross_mach"])
         self.assertEqual(
-            {1, 24, 25, 26, 27, 28, 29}, set(homo.KIND_ID.values()),
+            {1, 24, 25, 26, 27, 28, 29, 30}, set(homo.KIND_ID.values()),
             "the held-out measurement consumes the first screen's kinds "
             "and draws none of its own",
         )

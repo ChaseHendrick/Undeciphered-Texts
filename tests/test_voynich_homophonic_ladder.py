@@ -81,6 +81,7 @@ class LadderTest(unittest.TestCase):
                 "homo_plant_enc": 24, "homo_plant_mach": 25,
                 "homo_floor_perm": 26, "homo_floor_mach": 27,
                 "homo_cross_enc": 28, "homo_cross_mach": 29,
+                "homo_cut_geom": 30,
             },
         )
         self.assertEqual(
