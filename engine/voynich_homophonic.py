@@ -2000,6 +2000,145 @@ assignment is stored as a key, plaintext_recovered_percent stays
 0, the reference prose is modern printed text outside the
 manuscript's century, and nothing here is a reading or a
 language claim.
+
+Sixteenth declared measurement, the cut-geometry attribution
+instrument, declared after the real-at-basis ladder mass-matched
+every rung's comparison on both sides and read the real's own
+descent, and before any run of it beyond the probes it discloses.
+
+The disclosed background, declared in advance: the real-at-basis
+ladder left one question open - its descended rungs showed the
+real's concentration deepening as its mass is cut, and a similar
+deepening appears in every cut sequence, so the ladder's record
+cannot tell whether the real's deepening is a function of the
+mass alone or of the real's own ordering; the honest next
+question is attribution: take the real's own kept-adjacent pair
+sequence, cut it at the same frozen rung masses under declared
+geometries that differ only in which positions the cut keeps
+(the standing prefix cut the real-at-basis ladder priced, a
+suffix cut keeping the last mass positions, and declared seeded
+random submasses keeping a seed's first mass positions of a
+declared permutation), re-price every geometry row through the
+same mark-excluded block and the same six summaries, and price
+every row against the same frozen rung bands under the same
+strict-all rule, so same-mass cuts that differ only in geometry
+can be compared row against row: do they re-price the real the
+same way, so the deepening is mass alone, or do they disagree,
+so the real's own ordering carries it.
+
+The declared design, before the run: the real-at-basis ladder's
+roster, state space (1296 ordered types, the boundary mark's row
+and column excluded on both sides), six relabeling-invariant
+summaries, strict-all no-margin verdict rule and four declared
+rungs unchanged; the rung bands the frozen matched-basis
+ladder's rung member profiles taken by reference, no encoding
+re-run on the band side anywhere, and the real-at-basis
+ladder's own rung records re-derived fresh and verified field
+for field against its frozen artifact in the gate; the real's
+own kept-adjacent pair sequence cut at each rung's mass (the
+rung's basis - 1 pairs, the exact full-width mass every one of
+the frozen rung's cut rows prices) under six declared
+geometries recorded as design before any pricing: the prefix
+cut prices the sequence's first mass positions (the
+real-at-basis ladder's own row, verified in the gate), the
+suffix cut prices the sequence's last mass positions, and each
+of four random rows prices a declared seed's permutation of the
+sequence's positions at its first mass positions; the declared
+new seed kind homo_cut_geom (id 30), positions 0 to 3, per file
+with the language slot fixed at 0 because the real's side is
+identical for both languages of a file, each seed one
+np.random.default_rng(_seed(CELL_ID, KIND_ID["homo_cut_geom"],
+0, index)) permutation of the sequence's positions, so one
+seed's rung submasses are nested subsets across the rungs and
+no selection is performed over seeds; every row prices its
+rung's mass exactly (the mass-match identity, enforced in code
+on every row before any envelope is formed); a random submass
+of the real's own pair multiset samples the multiset's relative
+frequencies with sampling noise alone, so its expected profile
+is the whole sequence's profile and not the prefix cut's, and
+this is the declared attribution arithmetic the row verdicts
+are read against; at the anchor rung every geometry's submass
+is the whole sequence and its profile the frozen real-at-basis
+ladder's whole-sequence profile exactly (the degenerate
+identity, enforced in the row builder); the rung-cell verdicts
+asked over all 144 geometry rung-cells together (24 rung-cells
+times the six geometries, the anchor rung's 24 the declared
+degenerate identity cases).
+
+Mechanics, declared: the bridge gate first, in two stages - the
+real-at-basis ladder's gate exactly as that instrument declared
+it (the matched-basis ladder's 657 fields plus the
+real-at-basis ladder's 36 per-cell checks, 693 fields), then
+per cell the fresh real-at-basis rung records verified against
+the frozen real-at-basis ladder artifact's rungs field for
+field (each rung's mass, its boundary-carried pairs, its
+prefix profile, its envelope result and its verdict, 5 checks
+per rung, 20 per cell, 120 checks total), 813 fields all
+told; the suffix and random rows carry no frozen counterpart
+and ride on the declared geometry rule, whose mass-match and
+degenerate anchor identities abort on any divergence; any
+divergence aborts with nothing written.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+cut-geometry gate rehearsed: the gate ran at 0 problems, 813
+fields compared. Probe 2, the degenerate anchor identity: ZL,
+GC and IT each price the frozen whole-sequence profile exactly
+for all six geometries at the anchor rung (anchor degenerate
+identity for all six geometries True per file). Probe 3, the
+declared nesting: seed 0's rung submasses nested subsets True
+per file. Probe 4, the first english cell's declared portraits
+ahead of the run, ZL english, every geometry row against its
+rung's frozen band: at the anchor rung every geometry's row is
+the degenerate identity (68,616 carried, 928 empties, self
+0.065848, top_1 0.070481, top_10 0.424435, top_50 0.893671,
+entropy 4.010179, every row verdict shape-outside-analogues
+with all eight tests outside); at the 75 percent rung (mass
+163,811) the suffix row carries 52,045 pairs and prices 942
+empties, self 0.060009, top_1 0.072428, top_10 0.415296,
+top_50 0.888714 and entropy 4.031522, and the four random rows
+carry 51,362 to 51,568 pairs and price 946 to 950 empties,
+self 0.065567 to 0.066341, top_1 0.069977 to 0.070957, top_10
+0.42441 to 0.425183, top_50 0.893071 to 0.893971 and entropy
+4.007986 to 4.009743; at the 50 percent rung (mass 109,207)
+the suffix row carries 34,516 pairs and prices 963 empties,
+self 0.058642, top_1 0.064586, top_10 0.419354, top_50
+0.890629 and entropy 4.024671, and the four random rows carry
+34,184 to 34,384 pairs and price 971 to 979 empties, self
+0.065835 to 0.066272, top_1 0.07024 to 0.070757, top_10
+0.423537 to 0.425658, top_50 0.892854 to 0.894713 and entropy
+4.005017 to 4.009556; at the 25 percent rung (mass 54,603)
+the suffix row carries 17,176 pairs and prices 1,020 empties,
+self 0.058701, top_1 0.060117, top_10 0.448099, top_50
+0.900713 and entropy 3.97606, and the four random rows carry
+16,984 to 17,266 pairs and price 1,005 to 1,013 empties, self
+0.065402 to 0.067815, top_1 0.071013 to 0.071633, top_10
+0.424298 to 0.428514, top_50 0.892359 to 0.894601 and entropy
+3.998056 to 4.009569; every probed row verdict
+shape-outside-analogues with all eight tests outside. The
+probes' disclosed attribution arithmetic, recorded before the
+run: the random rows' scalars stay at the anchor's neighborhood
+down the whole ladder (self near 0.066, entropy near 4.0 nats)
+while the prefix row's self rises 0.065848, 0.068229, 0.073015
+and 0.083007 down the rungs with entropy 4.010179, 4.014465,
+3.982947 and 3.904198, and the suffix row's self falls to
+0.060009, 0.058642 and 0.058701 with entropy 4.031522, 4.024671
+and 3.97606 - same-mass cuts already disagreeing in both
+directions away from the mass-only expectation at this cell,
+which is exactly what the declared question prices, and the
+artifact run asks it over all 144 geometry rung-cells. Probe 5:
+none; the five remaining cells are unseen until the declared
+run. The probes' disclosed portraits do not decide the
+artifact: the artifact run prices all 144 geometry rung-cells
+through the same declared code, and the disclosure's honest
+question is recorded over all of them.
+
+The standing limitations are inherited from the held-out screen:
+no mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays
+0, the reference prose is modern printed text outside the
+manuscript's century, and nothing here is a reading or a
+language claim.
 """
 
 from __future__ import annotations
@@ -2045,7 +2184,8 @@ N_RESTARTS = 16        # inherited from the substitution family
 KIND_ID = {"real": 1,
            "homo_plant_enc": 24, "homo_plant_mach": 25,
            "homo_floor_perm": 26, "homo_floor_mach": 27,
-           "homo_cross_enc": 28, "homo_cross_mach": 29}
+           "homo_cross_enc": 28, "homo_cross_mach": 29,
+           "homo_cut_geom": 30}
 
 HOMO_ARTIFACT_PATH = (
     Path(DATA_DIR).resolve().parent.parent.parent
@@ -10322,3 +10462,440 @@ def main_real_ladder() -> None:
         json.dumps(artifact, indent=2) + "\n"
     )
     print(REAL_LADDER_ARTIFACT_PATH)
+
+
+# --------------------------------------------------------------------------
+# The sixteenth declared measurement, the cut-geometry attribution
+# instrument: the real's own kept-adjacent pair sequence cut at the
+# declared rung masses under declared geometries (the standing prefix
+# cut, a suffix cut, and declared seeded random submasses of the same
+# masses), every geometry's re-priced profile priced against the same
+# frozen rung bands under the same strict-all rule.
+# --------------------------------------------------------------------------
+
+N_CUT_SEEDS = 4
+
+CUT_GEOM_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes"
+    / "voynich-homophonic-cut-geometry-attribution.json"
+)
+
+CUT_GEOM_RUNG_KEYS = (
+    "real_rung_kept_pairs",
+    "real_rung_boundary_carried_pairs",
+    "real_rung_profile",
+    "invariants",
+    "verdict",
+)
+
+
+def _real_geometry_row(
+    code: str, language: str, rung: float, geometry: str,
+    seed_index: int | None, frozen_m15: dict, frozen_mb: dict,
+) -> dict:
+    """One cut-geometry row for one cell at one rung: the real's
+    ordered kept-adjacent pair sequence cut to the rung's mass under
+    the declared geometry (the standing prefix cut, a suffix cut, or
+    a declared seeded random submass of the same mass), re-priced
+    through the same mark-excluded block and the same six
+    relabeling-invariant summaries, and envelope-tested against the
+    rung's frozen band (the frozen matched-basis ladder's member
+    profiles at the rung width, the same bands the real-at-basis
+    ladder priced) under the declared strict-all rule.
+
+    The declared geometry rule: the prefix cut prices the sequence's
+    first mass positions (the real-at-basis ladder's own row,
+    verified in the gate), the suffix cut prices its last mass
+    positions, and a random row prices the declared seed's
+    permutation of the sequence's positions at its first mass
+    positions, so one seed's rung submasses are nested subsets. The
+    declared seed kind is homo_cut_geom, positions 0 to 3, per file
+    with the language slot fixed at 0 because the real's side is
+    identical for both languages of a file. Every row prices the
+    rung's mass exactly (the mass-match identity, enforced in code),
+    and at the anchor rung every geometry's submass is the whole
+    sequence, its profile the frozen real-at-basis ladder's
+    whole-sequence profile exactly (the degenerate identity,
+    enforced here). Any divergence aborts."""
+    frozen_rung = frozen_m15["files"][code][language]["rungs"][
+        LADDER_RUNGS.index(rung)
+    ]
+    frozen_mb_rung = frozen_mb["files"][code][language]["rungs"][
+        LADDER_RUNGS.index(rung)
+    ]
+    first, second = _real_pair_sequence(code)
+    total = len(first)
+    anchor = total + 1
+    basis = anchor if rung == 1.0 else int(rung * anchor)
+    mass = basis - 1
+    if mass != frozen_rung["real_rung_kept_pairs"]:
+        raise AssertionError(
+            f"cut-geometry/{code}/{language}/rung {rung}: the "
+            f"derived mass {mass} does not equal the frozen "
+            f"real-at-basis ladder rung mass "
+            f"{frozen_rung['real_rung_kept_pairs']}"
+        )
+    if geometry == "prefix":
+        take = np.arange(mass)
+    elif geometry == "suffix":
+        take = np.arange(total - mass, total)
+    elif geometry == "random":
+        seed = _seed(
+            CELL_ID[code], KIND_ID["homo_cut_geom"], 0, seed_index
+        )
+        rng = np.random.default_rng(seed)
+        take = rng.permutation(total)[:mass]
+    else:
+        raise AssertionError(f"cut-geometry: unknown geometry {geometry}")
+    if len(take) != mass:
+        raise AssertionError(
+            f"cut-geometry/{code}/{language}/rung {rung}: the "
+            f"{geometry} row prices {len(take)} pairs, not the rung's "
+            f"mass {mass}"
+        )
+    sub_first = first[take]
+    sub_second = second[take]
+    matrix = np.zeros((37, 37))
+    np.add.at(matrix, (sub_first, sub_second), 1.0)
+    real = _homo_real_stream(code)
+    mark = len(real["mapped_chars"]) - 1
+    profile = _profile_facts(_glyph_block_matrix(matrix, mark))
+    carried = _boundary_carried_pairs(matrix, mark)
+    if profile["total_pairs"] != mass - carried:
+        raise AssertionError(
+            f"cut-geometry/{code}/{language}/rung {rung}: the "
+            f"{geometry} row's re-priced block total "
+            f"{profile['total_pairs']} does not equal the mass minus "
+            f"its boundary-carried pairs {mass} - {carried}"
+        )
+    if rung == 1.0 and profile != frozen_rung["real_rung_profile"]:
+        raise AssertionError(
+            f"cut-geometry/{code}/{language}/rung {rung}: the "
+            f"{geometry} row's anchor profile is not the degenerate "
+            f"whole-sequence identity (the frozen real-at-basis "
+            f"ladder's whole-sequence profile)"
+        )
+    band = [
+        {"profile": row["matched_profile"]}
+        for row in frozen_mb_rung["members_profiles"]
+    ]
+    tests = _search_free_envelope(profile, band)
+    outside = [key for key, test in tests.items() if not test["inside"]]
+    verdict = (
+        "shape-consistent-with-homophonic-encoding" if not outside
+        else "shape-outside-analogues"
+    )
+    row = {
+        "geometry": geometry,
+        "run": rung,
+        "cut_mass_pairs": mass,
+        "boundary_carried_pairs": carried,
+        "profile": profile,
+        "invariants": tests,
+        "outside_invariants": outside,
+        "verdict": verdict,
+    }
+    if seed_index is not None:
+        row["seed_index"] = seed_index
+    return row
+
+
+def _compare_cut_geometry_to_frozen() -> tuple[list[str], int]:
+    """The declared bridge gate for the cut-geometry attribution
+    instrument, two stages: the real-at-basis ladder's gate exactly
+    as that instrument declared it (the matched-basis ladder's 657
+    fields plus the real-at-basis ladder's 36 per-cell checks, 693
+    fields), then per cell the fresh real-at-basis rung records
+    verified against the frozen real-at-basis ladder artifact's rungs
+    field for field (each rung's mass, its boundary-carried pairs,
+    its prefix profile, its envelope result and its verdict, 5 checks
+    per rung, 20 per cell, 120 checks total), 813 fields all told.
+    The suffix and random rows carry no frozen counterpart and ride
+    on the declared geometry rule, whose mass-match and degenerate
+    anchor identities abort on any divergence. Any divergence in any
+    stage aborts with nothing written."""
+    problems, fields = _compare_real_ladder_to_frozen()
+    frozen_m15 = json.loads(REAL_LADDER_ARTIFACT_PATH.read_text())
+    frozen_mb = json.loads(SEARCH_FREE_LADDER_ARTIFACT_PATH.read_text())
+    for code in FILES:
+        for language in LANGS:
+            frozen_cell = frozen_m15["files"][code][language]
+            fresh = _real_ladder_cell(code, language, frozen_mb)
+            for index, rung in enumerate(LADDER_RUNGS):
+                frozen_rung = frozen_cell["rungs"][index]
+                fresh_rung = fresh["rungs"][index]
+                for key in CUT_GEOM_RUNG_KEYS:
+                    fields += 1
+                    if fresh_rung[key] != frozen_rung[key]:
+                        problems.append(
+                            f"cut-geometry/rung/{code}/{language}/"
+                            f"rung {rung}: the fresh {key} does not "
+                            f"equal the frozen real-at-basis ladder "
+                            f"rung's"
+                        )
+    return problems, fields
+
+
+def substitution_homophonic_cut_geometry() -> dict:
+    """The declared cut-geometry attribution instrument: the
+    real-at-basis ladder's same rungs, bands and strict-all question,
+    with the real's own kept-adjacent pair sequence cut at each
+    declared rung's mass under the declared geometries (the standing
+    prefix cut, a suffix cut, and the declared seeded random
+    submasses of the same masses). The bridge gate runs first; any
+    divergence aborts with nothing written."""
+    problems, fields = _compare_cut_geometry_to_frozen()
+    if problems:
+        raise AssertionError(
+            "cut-geometry bridge gate failed: " + "; ".join(problems)
+        )
+    frozen_m15 = json.loads(REAL_LADDER_ARTIFACT_PATH.read_text())
+    frozen_mb = json.loads(SEARCH_FREE_LADDER_ARTIFACT_PATH.read_text())
+    artifact = {
+        "what": "The declared cut-geometry attribution instrument: "
+        "the real-at-basis ladder's same state space (1296 ordered "
+        "types, the boundary mark's row and column excluded on both "
+        "sides), the same four declared rungs, the same frozen rung "
+        "bands, and the same six relabeling-invariant summaries, "
+        "with the real's own kept-adjacent pair sequence cut at each "
+        "rung's mass under six declared geometries: the standing "
+        "prefix cut the real-at-basis ladder priced, a suffix cut of "
+        "the same mass, and four declared seeded random submasses of "
+        "the same mass, every row re-priced through the same "
+        "mark-excluded block and priced against its rung's frozen "
+        "band under the declared strict-all rule. The declared "
+        "truthful question: do same-mass cuts that differ only in "
+        "geometry re-price the real the same way, so the real's "
+        "deepening concentration is a function of mass alone, or do "
+        "they disagree, so the real's own ordering carries it, in "
+        "every (file, language) cell at every descended rung. No "
+        "mapping is published; nothing here is a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "boundary_rule": "the word-boundary mark's row and "
+            "column are excluded from every profile's state space "
+            "on both sides exactly as the boundary-mark "
+            "re-instrument declared: every profile is the "
+            "mark-excluded block of its pair-count matrix, 1296 "
+            "ordered types, the mark located in each matrix's own "
+            "alphabet, and the standing alphabet-width disclosure "
+            "carries unchanged (the IT real transcription ranks "
+            "only 23 glyph types plus the mark, so 13 of its "
+            "block's 36 glyph slots are empty by width alone on "
+            "the real side while the simulated alphabets are "
+            "saturated at 36 in every cell)",
+            "cut_geometry_rule": "the real's own kept-adjacent pair "
+            "sequence cut to each rung's mass under six declared "
+            "geometries, recorded as design before any pricing: "
+            "the prefix cut prices the sequence's first mass "
+            "positions (the real-at-basis ladder's own row, "
+            "verified against that artifact in the gate), the "
+            "suffix cut prices the sequence's last mass positions, "
+            "and each of the four random rows prices a declared "
+            "seed's permutation of the sequence's positions at its "
+            "first mass positions, so one seed's rung submasses "
+            "are nested subsets; the real's cut under any geometry "
+            "can move its own profile both ways, every direction "
+            "is open per geometry and per rung, and every row is "
+            "recorded with no selection performed",
+            "mass_rule": "every geometry row prices its rung's "
+            "mass exactly (the rung's basis - 1 pairs, the exact "
+            "full-width mass every one of the frozen rung's cut "
+            "rows prices), the mass-match identity enforced in "
+            "code on every row before any envelope is formed; a "
+            "random submass of the real's own pair multiset "
+            "samples the multiset's relative frequencies with "
+            "sampling noise alone, so its expected profile is the "
+            "whole sequence's profile and not the prefix cut's, "
+            "and this is the declared attribution arithmetic the "
+            "row verdicts are read against",
+            "band_reference_rule": "the rung bands are the frozen "
+            "matched-basis ladder's rung member profiles taken by "
+            "reference, the same bands the real-at-basis ladder "
+            "priced: its own gate and tests verified them under "
+            "that instrument, the real-at-basis ladder's rung "
+            "records are re-derived fresh here and verified field "
+            "for field against the frozen real-at-basis ladder "
+            "artifact in the gate, and every geometry row's "
+            "envelope runs against the frozen rung's member "
+            "profiles exactly as that instrument stored them",
+            "roster_rule": "the corpus-breadth roster stands "
+            "unchanged: the same eight accepted corpus files, the "
+            "same rejected candidates with their verbatim causes, "
+            "the same sha256 records, the roster floor and the "
+            "fetch verification are the corpus-breadth artifact's "
+            "declared facts taken by reference, no corpus file is "
+            "re-fetched, re-probed or re-hashed here, and no "
+            "encoding is re-run on the band side anywhere: the "
+            "bands are the frozen instrument's own",
+            "invariants": {
+                "sorted_symbol_marginals": "the 36 mark-excluded "
+                "glyph marginals as a multiset, stored sorted "
+                "descending as counts and shares, envelope-tested "
+                "by sorted position over 36 positions",
+                "sorted_pair_multiset": "the 1296 mark-excluded "
+                "pair counts as a multiset, stored sorted "
+                "descending as counts and shares, envelope-tested "
+                "by sorted position",
+                "empty_type_count": "the number of the block's "
+                "mark-excluded pair types with zero counted "
+                "occurrences, a scalar inside [min, max]",
+                "self_pair_share": "the block's diagonal sum over "
+                "the profile's glyph-pair total",
+                "top_k_shares": "the share of the glyph-pair "
+                "total carried by the k largest pair counts, at k "
+                "1, 10 and 50",
+                "pair_entropy": "the natural entropy of the "
+                "mark-excluded pair distribution in nats per "
+                "counted glyph pair",
+            },
+            "state_note": "every band profile here is the frozen "
+            "matched-basis ladder's mark-excluded member profile "
+            "at its rung width, taken by reference; the real's "
+            "geometry rows are priced fresh at every rung from its "
+            "own ordered kept-adjacent pair sequence, whose "
+            "adjacency is the original stream's with the unmapped "
+            "events breaking it (126 unmapped events inside ZL's "
+            "218,663, 1,769 inside GC's 186,708, none inside IT's "
+            "220,532) exactly as disclosed since the interior "
+            "instrument; the real's side is identical for both "
+            "languages of a file, so the geometry rows are per "
+            "file and the cells price the same rows against their "
+            "own bands; the anchor rung's mass is the whole "
+            "sequence, every geometry's anchor submass is the "
+            "whole sequence, and every geometry's anchor profile "
+            "is the frozen whole-sequence profile exactly (the "
+            "degenerate identity, enforced in the row builder and "
+            "verified in the probes)",
+            "machinery_rule": "this instrument contains no "
+            "assignment search anywhere: no candidate evaluation, "
+            "no restarts, no sweep cap, no convergence flags; the "
+            "standing budgets are not applicable and no machinery "
+            "recording appears for that reason",
+            "split_rule": "no split applies: a profile uses every "
+            "counted pair of its declared submass after the "
+            "declared exclusion; the climb and score halves of "
+            "the band instruments have no counterpart here",
+            "seed_kinds": "the declared new seed kind homo_cut_geom "
+            "(id 30), positions 0 to 3, per file with the language "
+            "slot fixed at 0 because the real's side is identical "
+            "for both languages of a file: each seed index derives "
+            "one declared permutation of the real's pair-sequence "
+            "positions and the rung's submass is that permutation's "
+            "first mass positions, so one seed's rung submasses "
+            "are nested subsets and no selection is performed over "
+            "seeds; the bands and the prefix rows consume no seed "
+            "(the prefix rows are the frozen real-at-basis "
+            "ladder's own rows verified in the gate, and the "
+            "band side is the frozen instruments' facts taken by "
+            "reference)",
+            "record_rule": "per cell the artifact records the "
+            "real-at-basis ladder's cell record re-derived fresh "
+            "(verified against the frozen real-at-basis ladder "
+            "artifact in the gate) and the four declared rungs in "
+            "order (the anchor rung first, then 75, 50 and 25 "
+            "percent), each rung carrying the prefix row's full "
+            "real-at-basis record (its run percentage, its basis, "
+            "the real's rung mass, the rung's boundary-carried "
+            "pairs, the re-priced profile, its envelope tests, "
+            "its outside list and its verdict) and a geometries "
+            "list of the five fresh rows (the suffix cut first, "
+            "then the four random seeds in declared order), each "
+            "row carrying its geometry, its seed index when "
+            "random, its cut mass, its boundary-carried pairs, "
+            "its re-priced profile, its envelope tests, its "
+            "outside list and its verdict; the rung's member band "
+            "itself is not re-stored here: it stays the frozen "
+            "instrument's declared record",
+            "verdict_rule": "declared strict-all, unchanged, "
+            "priced per geometry row per rung: a geometry rung-cell "
+            "is shape-consistent-with-homophonic-encoding only "
+            "when every declared invariant of that row's "
+            "re-priced glyph-block profile sits inside the closed "
+            "range of its rung's matched band's glyph-block "
+            "profiles (the two vector summaries term by term "
+            "inside the band's per-position envelope over 36 "
+            "sorted positions, the scalar summaries inside "
+            "[min, max] at the stored 6-decimal rounding); any "
+            "outside invariant makes the row shape-outside-"
+            "analogues, every outside entry is recorded with its "
+            "band range so the miss is audited not summarized, "
+            "and the declared question is asked over all 144 "
+            "geometry rung-cell verdicts together (24 rung-cells "
+            "times the six geometries, the anchor rung's 24 the "
+            "declared degenerate identity cases)",
+            "closure_rule": "no scalar margin is formed: this "
+            "instrument's question is inside or outside per "
+            "invariant per geometry row per rung, and the "
+            "recorded distances are the outside entries' band "
+            "ranges themselves",
+            "exclusion_rule": "the family's declared exclusion "
+            "format is not re-scoped by this artifact: it keys "
+            "to the declared 36-slot class under the inherited "
+            "add-one form exactly as the held-out screen "
+            "declared it, so a search-free verdict is structure "
+            "evidence and the band instruments' verdicts stand "
+            "untouched by this artifact's numbers",
+            "bridge_gate_rule": "before any rung is priced, the "
+            "gate verified fresh in two stages: the real-at-basis "
+            "ladder's gate exactly as that instrument declared it "
+            "(the matched-basis ladder's 657 fields plus the "
+            "real-at-basis ladder's 36 per-cell checks, 693 "
+            "fields), then per cell the fresh real-at-basis rung "
+            "records verified against the frozen real-at-basis "
+            "ladder artifact's rungs field for field (each "
+            "rung's mass, its boundary-carried pairs, its prefix "
+            "profile, its envelope result and its verdict, 5 "
+            "checks per rung, 20 per cell, 120 checks total), "
+            "813 fields all told; the suffix and random rows "
+            "carry no frozen counterpart and ride on the "
+            "declared geometry rule, whose mass-match and "
+            "degenerate anchor identities abort on any "
+            "divergence; any divergence aborts with nothing "
+            "written",
+            "models_rule": "no score table is built or used: "
+            "the instrument prices count structure only, so the "
+            "standing add-one and leave-one-out tables play no "
+            "part anywhere in this artifact",
+        },
+        "bridge_gate": {
+            "status": "verified",
+            "fields_compared": fields,
+            "ladder_gate_fields": 693,
+            "geometry_replay_checks": fields - 693,
+        },
+        "files": {},
+    }
+    for code in FILES:
+        cell = {}
+        for language in LANGS:
+            fresh = _real_ladder_cell(code, language, frozen_mb)
+            for index, rung in enumerate(LADDER_RUNGS):
+                rung_record = fresh["rungs"][index]
+                rows = [
+                    _real_geometry_row(
+                        code, language, rung, "suffix", None,
+                        frozen_m15, frozen_mb,
+                    )
+                ]
+                for seed_index in range(N_CUT_SEEDS):
+                    rows.append(
+                        _real_geometry_row(
+                            code, language, rung, "random",
+                            seed_index, frozen_m15, frozen_mb,
+                        )
+                    )
+                rung_record["geometries"] = rows
+            cell[language] = fresh
+        artifact["files"][code] = cell
+    return artifact
+
+
+def main_cut_geometry() -> None:
+    artifact = substitution_homophonic_cut_geometry()
+    CUT_GEOM_ARTIFACT_PATH.write_text(
+        json.dumps(artifact, indent=2) + "\n"
+    )
+    print(CUT_GEOM_ARTIFACT_PATH)
