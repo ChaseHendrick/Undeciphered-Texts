@@ -2139,6 +2139,129 @@ assignment is stored as a key, plaintext_recovered_percent stays
 0, the reference prose is modern printed text outside the
 manuscript's century, and nothing here is a reading or a
 language claim.
+
+Seventeenth declared measurement, the stream-position instrument,
+declared after the cut-geometry attribution instrument attributed
+the real-at-basis ladder's deepening to the real's own ordering
+and located the ordering effect in the stream's opening pairs,
+and before any run of it beyond the probes it discloses.
+
+The disclosed background, declared in advance: the cut-geometry
+instrument held the mass fixed and moved only the cut's geometry,
+and the geometry turned out to carry the deepening: in ZL english
+the prefix cut's self-pair share rises 0.065848, 0.068229,
+0.073015 and 0.083007 down the rungs while the suffix cut's falls
+to 0.060009, 0.058642 and 0.058701 and the four seeded random
+cuts hold the whole-sequence neighborhood (0.065402 to 0.067815
+at the 25 percent rung), so same-mass cuts disagree in both
+directions while the random rows sit exactly where sampling noise
+alone puts them, and every geometry's row priced shape-outside-
+analogues against its frozen rung band (all 144 geometry
+rung-cells), so the separation the search-free instruments found
+is in the counts and the deepening the mass-matched ladder
+measured is in the ordering. What that record leaves open is
+position within the stream: is the real's concentration a smooth
+function of stream position, or do particular spans of the stream
+carry it? The honest next question is the span question, not more
+mass-matched cuts: divide the real's own kept-adjacent pair
+sequence into four declared equal-count consecutive segments,
+price each segment's profile fresh, record the four segment
+profiles beside each other and beside the whole-sequence profile,
+and answer by which segments' scalars sit above the whole-sequence
+values and which below.
+
+The declared design, before the run: the corpus-breadth roster,
+the state space (1296 ordered types, the boundary mark's row and
+column excluded on both sides) and the six relabeling-invariant
+summaries unchanged; the real's own ordered kept-adjacent pair
+sequence divided into four declared equal-count consecutive
+segments, the boundaries placed by the standing basis arithmetic
+the rungs already use - the first three boundaries sit at
+int(quarter x the anchor basis) positions with the anchor basis
+the kept pair total + 1, at the quarters 0.25, 0.5 and 0.75, and
+the last boundary is the sequence's end; every file's kept pair
+total is three over a multiple of four, so each file's first
+three segments are the same size and the remainder lands on the
+last segment, the four sizes being, for ZL, 54,604, 54,604,
+54,604 and 54,603 kept-adjacent pairs, for GC 45,800, 45,800,
+45,800 and 45,799, and for IT 55,133, 55,133, 55,133 and 55,132;
+each segment prices every kept-adjacent pair of its own
+consecutive interval, no pair dropped, no pair synthesized, so
+the four segments partition the whole sequence exactly, and each
+segment's profile is priced fresh through the same mark-excluded
+block (the segment's own matrix carries its own mark's row and
+column excluded) and the same six summaries; the four segment
+profiles are recorded beside each other and beside the
+whole-sequence profile, the real's side identical for both
+languages of a file, so every cell prices the same segment
+records; no band is loaded, no envelope is formed, no rung band
+side, no verdict and no scalar margin is produced anywhere: the
+declared question is answered by direction, and each segment
+records, for each of the six scalar summaries it shares with the
+whole profile (the empty type count, the self-pair share, the
+top-k shares at k 1, 10 and 50, and the pair entropy), whether
+its value sits above, below or equal to the whole sequence's
+value at the stored 6-decimal rounding, every entry recorded and
+no selection performed over anything.
+
+Mechanics, declared: the bridge gate first, per cell: the fresh
+whole-sequence profile verified field for field against the
+frozen real-at-basis ladder's anchor profile, the four boundaries
+recomputed from the declared rule and verified, the four segment
+sizes verified, each segment's block-total identity verified (the
+segment's profile total equals its own kept pairs minus its own
+boundary-carried pairs, the standing identity), the two partition
+verified (the four segments' block totals sum to the whole
+profile's block total, and their boundary-carried counts sum to
+the whole's), the four segments' kept pairs' sum verified against
+the whole's, and the whole's own block-total identity verified,
+17 fields per cell, 102 fields all told; any divergence
+aborts with nothing written.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+stream-position gate rehearsed: the gate ran at 0 problems, 102
+fields compared. Probe 2, the declared boundaries and sizes per
+file, printed in order: ZL's end positions 54,604, 109,208,
+163,812 and 218,415 give the four sizes 54,604, 54,604, 54,604
+and 54,603; GC's 45,800, 91,600, 137,400 and 183,199 give
+45,800, 45,800, 45,800 and 45,799; IT's 55,133, 110,266, 165,399
+and 220,531 give 55,133, 55,133, 55,133 and 55,132. Probe 3, the
+partition identities per file: the four segments' kept pairs sum
+to the whole's (218,415, 183,199 and 220,531), their block totals
+sum to the whole's (149,799, 111,815 and 147,651) and their
+boundary-carried counts sum to the whole's (68,616, 71,384 and
+72,880), all True per the probe. Probe 4, the first file's
+declared portraits ahead of the run, beside the whole-sequence
+profile (kept 218,415, carried 68,616, empties 928, self
+0.065848, top_1 0.070481, top_10 0.424435, top_50 0.893671,
+entropy 4.010179): the opening segment (54,604 pairs, 16,571
+carried) prices empties 1,028, self 0.083007, top_1 0.06476,
+top_10 0.463045, top_50 0.914338 and entropy 3.904198 (above,
+above, below, above, above and below); the second segment (54,604
+pairs, 17,529 carried) prices empties 1,015, self 0.062765,
+top_1 0.088227, top_10 0.437141, top_50 0.891247 and entropy
+4.005492 (above, below, above, above, below and below); the
+third segment (54,604 pairs, 17,340 carried) prices empties
+1,007, self 0.058582, top_1 0.069075, top_10 0.397112, top_50
+0.88721 and entropy 4.051398 (above, below, below, below, below
+and above); the closing segment (54,603 pairs, 17,176 carried)
+prices empties 1,020, self 0.058701, top_1 0.060117, top_10
+0.448099, top_50 0.900713 and entropy 3.97606 (above, below,
+below, above, above and below) - the directions already fan out
+in both directions per summary, and the artifact run records
+them for every cell. Probe 5: none; the remaining files are
+unseen until the declared run. The probes' disclosed portraits do
+not decide the artifact: the artifact run prices every segment of
+every cell through the same declared code, and the disclosure's
+honest question is recorded over all of them.
+
+The standing limitations are inherited from the held-out screen:
+no mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays
+0, the reference prose is modern printed text outside the
+manuscript's century, and nothing here is a reading or a
+language claim.
 """
 
 from __future__ import annotations
@@ -10899,3 +11022,448 @@ def main_cut_geometry() -> None:
         json.dumps(artifact, indent=2) + "\n"
     )
     print(CUT_GEOM_ARTIFACT_PATH)
+
+
+# --------------------------------------------------------------------------
+# The seventeenth declared measurement, the stream-position instrument:
+# the real's own kept-adjacent pair sequence divided into four declared
+# equal-count consecutive segments, each segment's profile priced fresh
+# through the same mark-excluded block and the same six summaries, the
+# four segment profiles recorded beside each other and beside the
+# whole-sequence profile, no bands, no envelopes and no margin formed.
+# --------------------------------------------------------------------------
+
+STREAM_QUARTERS = (0.25, 0.5, 0.75, 1.0)
+
+STREAM_POS_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes"
+    / "voynich-homophonic-stream-positions.json"
+)
+
+STREAM_SCALARS = (
+    "empty_type_count", "self_pair_share", "top_1_share",
+    "top_10_share", "top_50_share", "pair_entropy",
+)
+
+
+def _stream_bounds(total: int) -> list[int]:
+    """The declared segment boundaries for one file's kept pair
+    sequence of the given total: the standing basis arithmetic the
+    rungs already use, applied at the four quarters - the first three
+    boundaries sit at int(quarter x the anchor basis) positions with
+    the anchor basis the kept pair total + 1, and the last boundary
+    is the sequence's end. Every file's kept pair total is three over
+    a multiple of four, so the first three segments come out the same
+    size and the remainder lands on the last segment."""
+    if total % 4 != 3:
+        raise AssertionError(
+            f"stream-position: the kept pair total {total} is not "
+            f"three over a multiple of four"
+        )
+    anchor = total + 1
+    bounds = [int(q * anchor) for q in STREAM_QUARTERS[:-1]]
+    bounds.append(total)
+    for earlier, later in zip(bounds, bounds[1:]):
+        if later <= earlier:
+            raise AssertionError(
+                f"stream-position: the declared boundaries {bounds} "
+                f"are not increasing for the total {total}"
+            )
+    return bounds
+
+
+def _direction_vs_whole(
+    profile: dict, whole_profile: dict,
+) -> dict:
+    """The declared direction device for one segment profile against
+    the whole sequence's profile: for each of the six scalar
+    summaries the two profiles share, whether the segment's value
+    sits above, below or equal to the whole sequence's value at the
+    stored 6-decimal rounding. Every entry is recorded; no margin is
+    formed."""
+    record = {}
+    for key in STREAM_SCALARS:
+        value = profile[key]
+        base = whole_profile[key]
+        record[key] = (
+            "above" if value > base
+            else "below" if value < base else "equal"
+        )
+    return record
+
+
+def _stream_position_profiles(code: str) -> dict:
+    """One file's declared stream-position records: the real's ordered
+    kept-adjacent pair sequence divided into four declared equal-count
+    consecutive segments by the declared boundaries, each segment's
+    own pairs priced fresh through the same mark-excluded block and
+    the same six relabeling-invariant summaries, the four segment
+    profiles recorded beside each other and beside the whole
+    sequence's profile priced fresh the same way. No band is loaded,
+    no envelope is formed and no margin is produced anywhere in this
+    builder; the direction device is the artifact's answer format.
+    Every segment's block-total identity (its profile total equals
+    its own kept pairs minus its own boundary-carried pairs) is
+    enforced here and the whole profile's identity too; any
+    divergence aborts."""
+    first, second = _real_pair_sequence(code)
+    total = int(len(first))
+    real = _homo_real_stream(code)
+    mark = len(real["mapped_chars"]) - 1
+    bounds = _stream_bounds(total)
+
+    whole_matrix = np.zeros((37, 37))
+    np.add.at(whole_matrix, (first, second), 1.0)
+    whole_profile = _profile_facts(
+        _glyph_block_matrix(whole_matrix, mark)
+    )
+    whole_carried = _boundary_carried_pairs(whole_matrix, mark)
+    if whole_profile["total_pairs"] != total - whole_carried:
+        raise AssertionError(
+            f"stream-position/{code}: the whole profile's block "
+            f"total {whole_profile['total_pairs']} does not equal "
+            f"the kept pairs {total} minus the whole's "
+            f"boundary-carried pairs {whole_carried}"
+        )
+
+    segments = []
+    previous = 0
+    for index, bound in enumerate(bounds):
+        take = np.arange(previous, bound)
+        size = int(len(take))
+        matrix = np.zeros((37, 37))
+        np.add.at(matrix, (first[take], second[take]), 1.0)
+        profile = _profile_facts(_glyph_block_matrix(matrix, mark))
+        carried = _boundary_carried_pairs(matrix, mark)
+        if profile["total_pairs"] != size - carried:
+            raise AssertionError(
+                f"stream-position/{code}/segment {index}: the "
+                f"segment's block total {profile['total_pairs']} "
+                f"does not equal its kept pairs {size} minus its "
+                f"boundary-carried pairs {carried}"
+            )
+        segments.append({
+            "segment": index,
+            "first_position": previous,
+            "end_position": bound,
+            "pairs": size,
+            "boundary_carried_pairs": carried,
+            "profile": profile,
+            "direction": _direction_vs_whole(profile, whole_profile),
+        })
+        previous = bound
+
+    size_sum = sum(segment["pairs"] for segment in segments)
+    if size_sum != total:
+        raise AssertionError(
+            f"stream-position/{code}: the four segments price "
+            f"{size_sum} pairs, not the whole sequence's {total}"
+        )
+    total_sum = sum(
+        segment["profile"]["total_pairs"] for segment in segments
+    )
+    if total_sum != whole_profile["total_pairs"]:
+        raise AssertionError(
+            f"stream-position/{code}: the four segments' block "
+            f"totals sum to {total_sum}, not the whole profile's "
+            f"{whole_profile['total_pairs']}"
+        )
+    carried_sum = sum(
+        segment["boundary_carried_pairs"] for segment in segments
+    )
+    if carried_sum != whole_carried:
+        raise AssertionError(
+            f"stream-position/{code}: the four segments' "
+            f"boundary-carried pairs sum to {carried_sum}, not the "
+            f"whole's {whole_carried}"
+        )
+    return {
+        "kept_pairs": total,
+        "boundaries": bounds,
+        "whole_profile": whole_profile,
+        "whole_boundary_carried_pairs": whole_carried,
+        "segments": segments,
+    }
+
+
+def _compare_stream_positions_to_frozen() -> tuple[list[str], int]:
+    """The declared bridge gate for the stream-position instrument,
+    per cell: the fresh whole-sequence profile verified field for
+    field against the frozen real-at-basis ladder's anchor profile,
+    the four boundaries recomputed from the declared rule and
+    verified, the four segment sizes verified, each segment's
+    block-total identity verified, the two partition identities
+    verified (the four segments' block totals and their
+    boundary-carried counts against the whole's), the four segments'
+    kept pairs' sum verified against the whole's, and the whole's
+    own block-total identity verified, 17 fields per cell, 102
+    fields all told. Any divergence aborts with nothing written."""
+    frozen_m15 = json.loads(REAL_LADDER_ARTIFACT_PATH.read_text())
+    problems: list[str] = []
+    fields = 0
+    for code in FILES:
+        for language in LANGS:
+            fresh = _stream_position_profiles(code)
+            frozen_profile = frozen_m15["files"][code][language][
+                "rungs"
+            ][0]["real_rung_profile"]
+            total = fresh["kept_pairs"]
+            first, second = _real_pair_sequence(code)
+            if total != int(len(first)):
+                raise AssertionError(
+                    f"stream-position/{code}: the fresh kept pair "
+                    f"total does not equal the sequence's length"
+                )
+            fields += 1
+            if fresh["whole_profile"] != frozen_profile:
+                problems.append(
+                    f"stream-position/whole/{code}/{language}: the "
+                    f"fresh whole profile does not equal the frozen "
+                    f"real-at-basis ladder's anchor profile"
+                )
+            declared_bounds = _stream_bounds(total)
+            for index in range(4):
+                fields += 1
+                if fresh["boundaries"][index] != declared_bounds[index]:
+                    problems.append(
+                        f"stream-position/{code}/{language}/segment "
+                        f"{index}: the boundary does not equal the "
+                        f"declared rule's"
+                    )
+            previous = 0
+            for index in range(4):
+                segment = fresh["segments"][index]
+                fields += 1
+                if segment["pairs"] != fresh["boundaries"][index] - previous:
+                    problems.append(
+                        f"stream-position/{code}/{language}/segment "
+                        f"{index}: the segment's pairs do not equal "
+                        f"its declared interval's width"
+                    )
+                previous = fresh["boundaries"][index]
+            for index in range(4):
+                segment = fresh["segments"][index]
+                fields += 1
+                if (
+                    segment["profile"]["total_pairs"]
+                    != segment["pairs"]
+                    - segment["boundary_carried_pairs"]
+                ):
+                    problems.append(
+                        f"stream-position/{code}/{language}/segment "
+                        f"{index}: the segment's block total does "
+                        f"not equal its kept pairs minus its "
+                        f"boundary-carried pairs"
+                    )
+            fields += 1
+            size_sum = sum(
+                segment["pairs"] for segment in fresh["segments"]
+            )
+            if size_sum != total:
+                problems.append(
+                    f"stream-position/{code}/{language}: the four "
+                    f"segments' pairs do not sum to the whole "
+                    f"sequence's"
+                )
+            fields += 1
+            total_sum = sum(
+                segment["profile"]["total_pairs"]
+                for segment in fresh["segments"]
+            )
+            if total_sum != fresh["whole_profile"]["total_pairs"]:
+                problems.append(
+                    f"stream-position/{code}/{language}: the four "
+                    f"segments' block totals do not sum to the "
+                    f"whole profile's"
+                )
+            fields += 1
+            carried_sum = sum(
+                segment["boundary_carried_pairs"]
+                for segment in fresh["segments"]
+            )
+            if carried_sum != fresh["whole_boundary_carried_pairs"]:
+                problems.append(
+                    f"stream-position/{code}/{language}: the four "
+                    f"segments' boundary-carried pairs do not sum "
+                    f"to the whole's"
+                )
+            fields += 1
+            if fresh["whole_profile"]["total_pairs"] != (
+                total - fresh["whole_boundary_carried_pairs"]
+            ):
+                problems.append(
+                    f"stream-position/{code}/{language}: the whole "
+                    f"profile's block total does not equal the kept "
+                    f"pairs minus the whole's boundary-carried pairs"
+                )
+    return problems, fields
+
+
+def substitution_homophonic_stream_positions() -> dict:
+    """The declared stream-position instrument: the real's own
+    kept-adjacent pair sequence divided into four declared
+    equal-count consecutive segments, each segment's profile priced
+    fresh through the same mark-excluded block and the same six
+    summaries, the four segment profiles recorded beside each other
+    and beside the whole-sequence profile, no bands and no envelopes.
+    The bridge gate runs first; any divergence aborts with nothing
+    written."""
+    problems, fields = _compare_stream_positions_to_frozen()
+    if problems:
+        raise AssertionError(
+            "stream-position bridge gate failed: " + "; ".join(problems)
+        )
+    artifact = {
+        "what": "The declared stream-position instrument: the "
+        "state space 1296 ordered types with the boundary mark's row "
+        "and column excluded on both sides and the same six "
+        "relabeling-invariant summaries, with the real's own "
+        "kept-adjacent pair sequence divided into four declared "
+        "equal-count consecutive segments, each segment's profile "
+        "priced fresh, the four segment profiles recorded beside "
+        "each other and beside the whole-sequence profile, no bands "
+        "and no envelopes. The declared truthful question: is the "
+        "real's concentration a smooth function of stream position, "
+        "or do particular spans of the stream carry it, answered by "
+        "which segments' scalars sit above the whole-sequence values "
+        "and which below, the span effect the cut-geometry "
+        "instrument attributed to the stream's opening pairs. No "
+        "mapping is published; nothing here is a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "boundary_rule": "the word-boundary mark's row and "
+            "column are excluded from every profile's state space "
+            "on both sides exactly as the boundary-mark "
+            "re-instrument declared: every profile is the "
+            "mark-excluded block of its pair-count matrix, 1296 "
+            "ordered types, the mark located in each matrix's own "
+            "alphabet, and the standing alphabet-width disclosure "
+            "carries unchanged (the IT real transcription ranks "
+            "only 23 glyph types plus the mark, so 13 of its "
+            "block's 36 glyph slots are empty by width alone on "
+            "the real side)",
+            "partition_rule": "the real's own ordered kept-adjacent "
+            "pair sequence divided into four declared equal-count "
+            "consecutive segments, the boundaries placed by the "
+            "standing basis arithmetic the rungs already use (the "
+            "first three boundaries at int(quarter x the anchor "
+            "basis) positions with the anchor basis the kept pair "
+            "total + 1, at the quarters 0.25, 0.5 and 0.75, the "
+            "last boundary the sequence's end); every file's kept "
+            "pair total is three over a multiple of four, so each "
+            "file's first three segments are the same size and the "
+            "remainder lands on the last segment; each segment "
+            "prices every kept-adjacent pair of its own consecutive "
+            "interval, no pair dropped, no pair synthesized, and "
+            "the four segments partition the whole sequence exactly",
+            "summary_rule": "each profile is priced fresh through "
+            "the same mark-excluded block and the same six "
+            "relabeling-invariant summaries the standing "
+            "instruments declare, each segment's own matrix "
+            "carrying its own mark's row and column excluded; no "
+            "profile is compared to any simulated profile anywhere "
+            "in this artifact",
+            "no_band_rule": "no rung band is loaded, no envelope is "
+            "formed, no verdict and no scalar margin is produced "
+            "anywhere in this artifact: the declared question is "
+            "answered by direction, and the frozen rung bands stay "
+            "the frozen instruments' declared records, untouched "
+            "here",
+            "direction_rule": "each segment records, for each of "
+            "the six scalar summaries it shares with the whole "
+            "profile (the empty type count, the self-pair share, "
+            "the top-k shares at k 1, 10 and 50, and the pair "
+            "entropy), whether its value sits above, below or equal "
+            "to the whole sequence's value at the stored 6-decimal "
+            "rounding, every entry recorded and no selection "
+            "performed over anything",
+            "roster_rule": "the corpus-breadth roster stands "
+            "unchanged: the same eight accepted corpus files, the "
+            "same rejected candidates with their verbatim causes, "
+            "the same sha256 records, the roster floor and the "
+            "fetch verification are the corpus-breadth artifact's "
+            "declared facts taken by reference, no corpus file is "
+            "re-fetched, re-probed or re-hashed here, and no "
+            "encoding is re-run anywhere: this instrument prices "
+            "the real's own side only",
+            "state_note": "the real's kept-adjacency is real "
+            "adjacency with 126 unmapped events inside ZL's "
+            "218,663, 1,769 inside GC's 186,708, none inside IT's "
+            "220,532, exactly as disclosed since the interior "
+            "instrument; the real's side is identical for both "
+            "languages of a file, so every cell prices the same "
+            "segment records; the whole-sequence profile is priced "
+            "fresh here and verified field for field against the "
+            "frozen real-at-basis ladder's anchor profile in the "
+            "gate",
+            "machinery_rule": "this instrument contains no "
+            "assignment search anywhere: no candidate evaluation, "
+            "no restarts, no sweep cap, no convergence flags, and "
+            "no seed of any kind: the segments are the declared "
+            "consecutive quarters and every profile is priced fresh "
+            "from the real's own pair sequence, so the standing "
+            "budgets and the seed-kind registry play no part here",
+            "split_rule": "no split applies: a profile uses every "
+            "counted pair of its declared segment after the "
+            "declared exclusion; the climb and score halves of the "
+            "band instruments have no counterpart here",
+            "record_rule": "per cell the artifact records the kept "
+            "pair total, the four declared boundaries, the whole "
+            "sequence's profile priced fresh with its "
+            "boundary-carried pairs, and the four segment records "
+            "in order, each carrying its segment index, its first "
+            "and end positions, its kept-adjacent pairs, its own "
+            "boundary-carried pairs, its fresh profile (the block "
+            "total, both vector summaries as counts and shares, "
+            "the empty type count, the self-pair share, the top-k "
+            "shares and the pair entropy) and its direction record "
+            "against the whole profile's six scalar summaries, "
+            "every entry recorded",
+            "closure_rule": "no scalar margin is formed: this "
+            "instrument's question is direction per scalar summary "
+            "per segment, and the record answers it entry by entry",
+            "exclusion_rule": "the family's declared exclusion "
+            "format is not re-scoped by this artifact: it keys to "
+            "the declared 36-slot class under the inherited "
+            "add-one form exactly as the held-out screen declared "
+            "it, so a search-free verdict is structure evidence and "
+            "the band instruments' verdicts stand untouched by "
+            "this artifact's numbers",
+            "gate_rule": "before any segment is recorded, the "
+            "gate verified fresh per cell: the whole profile "
+            "against the frozen real-at-basis ladder's anchor "
+            "profile, the four boundaries from the declared rule, "
+            "the four segment sizes, each segment's block-total "
+            "identity, the two partition identities, the four "
+            "segments' kept pairs' sum and the whole's own "
+            "identity, 17 fields per cell, 102 fields all told; "
+            "any divergence aborts with nothing written",
+            "models_rule": "no score table is built or used: the "
+            "instrument prices count structure only, so the "
+            "standing add-one and leave-one-out tables play no "
+            "part anywhere in this artifact",
+        },
+        "bridge_gate": {
+            "status": "verified",
+            "fields_compared": fields,
+            "per_cell_fields": 17,
+        },
+        "files": {},
+    }
+    for code in FILES:
+        artifact["files"][code] = {}
+        for language in LANGS:
+            artifact["files"][code][language] = (
+                _stream_position_profiles(code)
+            )
+    return artifact
+
+
+def main_stream_positions() -> None:
+    artifact = substitution_homophonic_stream_positions()
+    STREAM_POS_ARTIFACT_PATH.write_text(
+        json.dumps(artifact, indent=2) + "\n"
+    )
+    print(STREAM_POS_ARTIFACT_PATH)
