@@ -37,19 +37,33 @@ def _collapse(text: str) -> str:
 
 
 def _fetch(url: str, attempts: int = 3) -> str:
-    """Download a cited page. A transfer cut off midway is tried again, at most three times in all."""
-    request = urllib.request.Request(
-        url,
-        headers={"User-Agent": "undeciphered-texts-known-language-reader/1.0"},
-    )
+    """Download a cited page. A transfer cut off midway is continued from the bytes received, at most three times in all."""
+    base = {"User-Agent": "undeciphered-texts-known-language-reader/1.0"}
+    data = b""
     for attempt in range(attempts):
+        headers = dict(base)
+        if data:
+            headers["Range"] = f"bytes={len(data)}-"
+        request = urllib.request.Request(url, headers=headers)
+        ranged = False
         try:
             with urllib.request.urlopen(request, timeout=45) as response:
-                return response.read().decode("utf-8")
-        except (http.client.IncompleteRead, ConnectionError, urllib.error.URLError):
+                ranged = response.getcode() == 206
+                chunk = response.read()
+        except (http.client.IncompleteRead, ConnectionError, urllib.error.URLError) as exc:
             if attempt == attempts - 1:
                 raise
+            partial = getattr(exc, "partial", b"") or b""
+            if ranged and partial:
+                data += partial
+            elif partial:
+                data = partial
             time.sleep(2 * (attempt + 1))
+            continue
+        if ranged:
+            data += chunk
+            return data.decode("utf-8")
+        return chunk.decode("utf-8")
     raise AssertionError("unreachable")
 
 
