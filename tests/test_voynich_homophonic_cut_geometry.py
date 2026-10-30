@@ -1518,7 +1518,7 @@ class CutGeometryAttributionTest(unittest.TestCase):
             " ".join(doc.split()).count(
                 "nothing here is a reading or a language claim"
             ),
-             16,
+             17,
         )
 
     def test_the_truthful_question(self) -> None:
