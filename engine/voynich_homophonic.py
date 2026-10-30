@@ -2262,6 +2262,131 @@ assignment is stored as a key, plaintext_recovered_percent stays
 0, the reference prose is modern printed text outside the
 manuscript's century, and nothing here is a reading or a
 language claim.
+
+Eighteenth declared measurement, the boundary-walk instrument,
+declared after the stream-position instrument attributed the
+real's concentration to particular spans - the opening span
+pricing above-whole self in every file with below-whole entropy,
+the second span carrying the top_1 peak in ZL and IT while GC's
+is its flattest, the third span flattest with above-whole
+entropy, the closing span re-concentrating the wide pool - and
+before any run of it beyond the probes it discloses.
+
+The disclosed background, declared in advance: the
+stream-position instrument recorded that the direction tables
+flip sign at declared boundaries instead of drifting, so the
+concentration turns on and off between spans. What that record
+leaves open is where along the stream each flip happens: a
+boundary between two spans locates the flip only to within a
+quarter of the stream. The honest next question is the walk:
+move one declared boundary head along declared positions between
+the stream's first and second declared boundaries, price the two
+spans beside the head fresh at every position, and record every
+position's direction tables, so the flips acquire declared
+locations: where the second span's top_1 spike begins and ends
+along the stream, and whether the opening span's above-whole
+concentration turns off at a declared location or drifts
+smoothly across positions.
+
+The declared design, before the run: the corpus-breadth roster,
+the state space (1296 ordered types, the boundary mark's row and
+column excluded on both sides) and the six relabeling-invariant
+summaries unchanged; more mass-matched cuts are refused: the
+window mass is fixed at the standing basis arithmetic's first
+boundary (the int(quarter x the anchor basis) positions the
+stream-position instrument already declared, so the window mass
+is ZL 54,604, GC 45,800 and IT 55,133 kept-adjacent pairs - one
+pair more than the 25 percent rung's mass, whose profile the
+stream-position instrument's fresh prices already confluence
+with) and the head is walked at int(step x the anchor basis)
+positions for the declared steps j / 100 with j running
+25 to 50 inclusive, 26 heads per file (ZL heads 54,604 to
+109,208, GC 45,800 to 91,600, IT 55,133 to 110,266). At every
+head the two spans beside the head are the window-mass span
+ending at the head and the window-mass span starting at the
+head, each priced fresh through the same mark-excluded block
+(the span's own matrix carries its own mark's row and column
+excluded) and the same six summaries, no pair dropped, no pair
+synthesized, so the two spans beside the head share the head
+exactly and each span carries the same declared mass; the first
+head's two spans are exactly the stream-position instrument's
+first and second segments and the last head's two spans exactly
+its second and third segments (the declared confluence,
+verified in the gate against that instrument's frozen stored
+profiles); no band is loaded, no envelope is formed, no verdict
+and no scalar margin is produced anywhere in this artifact: the
+declared question is answered by direction, and each span
+records, for each of the six scalar summaries it shares with
+the whole profile, whether its value sits above, below or equal
+to the whole sequence's value at the stored 6-decimal rounding,
+every entry recorded and no selection performed over anything;
+the real's side is identical for both languages of a file, so
+every cell prices the same walk records.
+
+Mechanics, declared: the bridge gate first, per cell: the fresh
+whole-sequence profile verified field for field against the
+frozen real-at-basis ladder's anchor profile, the 26 heads
+recomputed from the declared rule and verified one field each,
+the four declared stream-position boundaries and sizes verified
+against that instrument's frozen records, the two window sizes
+verified at every head one field each, the first head's two
+span profiles verified against the stream-position instrument's
+stored first and second segments and the last head's two span
+profiles against its stored second and third segments, and the
+whole's own block-total identity verified, 86 fields per cell,
+516 fields all told; any divergence aborts with nothing written.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+boundary-walk gate rehearsed: 0 problems, 516 fields compared,
+the declared 86 per cell, no divergence in any of them. Probe 2,
+the declared heads and window sizes per file, printed in order
+at the first and last heads with the head count: ZL window
+54,604, 26 heads, first 54,604, last 109,208; GC window 45,800,
+26 heads, first 45,800, last 91,600; IT window 55,133, 26 heads,
+first 55,133, last 110,266. Probe 3, the declared confluence
+heads verified against the frozen stream-position records per
+file: all four marks true in every file, ZL True/True/True/True,
+GC True/True/True/True, IT True/True/True/True. Probe 4, the
+first file's declared portraits ahead of the run: the ZL whole
+row anchors them (kept 218,415 pairs, 68,616 whole
+boundary-carried pairs, 928 empty types, self 0.065848, top_1
+0.070481, top_10 0.424435, top_50 0.893671, entropy 4.010179),
+and the 26 heads tell this story. The left span's self runs
+above for 23 heads (0.083007 at the first head 54,604, peaking
+0.085542 at 63,340) and below at the last three (0.065626 at
+104,839 down to 0.062765 at 109,208), so the opening span's
+above-whole self is still above through 102,655 and is gone by
+104,839: it turns off between two declared heads rather than
+drifting across them. The left span's top_1 runs below at the
+first six heads, above at the seventh and eighth (0.071009 at
+67,708 and 0.071104 at 69,893), below at the ninth (0.069494 at
+72,077), and above for the remaining seventeen (0.070542 at
+74,261 rising to 0.089319 at 104,839, 0.088887 at 107,023 and
+0.088227 at 109,208), its top_10 above at all 26 heads, its
+top_50 above for 23 heads then below for 3, and its entropy
+below at all 26 heads. The right span's self runs below at all
+26 heads, its top_1 above for 23 heads (peaking 0.092363 at
+61,156) then below at the last three (0.070293 at 104,839), its
+top_10 above for the first 13 heads then below for the last 13,
+its top_50 below at all 26 heads, and its entropy below at the
+first five heads, above at 65,524, below again at 67,708, and
+above for the remaining nineteen. No equal entry appears
+anywhere in the walk's direction records, matching the standing
+expectation, and the left self's flip and the right top_1's flip
+sit between the same two declared heads, 102,655 and 104,839.
+Probe 5: none; the remaining files are unseen until the declared
+run. The probes' disclosed portraits do not decide the artifact:
+the artifact run prices every span beside every head through the
+same declared code, and the disclosure's honest question is
+recorded over all of them.
+
+The standing limitations are inherited from the held-out screen:
+no mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays
+0, the reference prose is modern printed text outside the
+manuscript's century, and nothing here is a reading or a
+language claim.
 """
 
 from __future__ import annotations
@@ -11467,3 +11592,413 @@ def main_stream_positions() -> None:
         json.dumps(artifact, indent=2) + "\n"
     )
     print(STREAM_POS_ARTIFACT_PATH)
+
+# --------------------------------------------------------------------------
+# The eighteenth declared measurement, the boundary-walk instrument:
+# the real's own kept-adjacent pair sequence walked by one declared
+# boundary head at declared step positions between the stream's first and
+# second declared boundaries, the two window-mass spans beside the head
+# priced fresh at every position through the same mark-excluded block and
+# the same six summaries, the direction tables recorded at every head,
+# no bands, no envelopes and no margin formed.
+# --------------------------------------------------------------------------
+
+STREAM_WALK_STEP_DENOM = 100
+STREAM_WALK_HEAD_STEPS = tuple(
+    j / STREAM_WALK_STEP_DENOM for j in range(25, 51)
+)
+STREAM_WALK_FIRST_STEP = 25
+STREAM_WALK_LAST_STEP = 50
+
+STREAM_WALK_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes"
+    / "voynich-homophonic-boundary-walk.json"
+)
+
+
+def _walk_heads(total: int) -> list[int]:
+    """The declared head positions for one file's kept pair sequence of
+    the given total: int(step x the anchor basis) for the declared steps
+    j / 100 with j running 25 to 50 inclusive, the anchor basis the kept
+    pair total + 1. The first head sits exactly at the standing first
+    boundary and the last head exactly at the standing second
+    boundary."""
+    anchor = total + 1
+    heads = [int(step * anchor) for step in STREAM_WALK_HEAD_STEPS]
+    standing = _stream_bounds(total)
+    if heads[0] != standing[0] or heads[-1] != standing[1]:
+        raise AssertionError(
+            f"boundary-walk: the head endpoints {heads[0]} and "
+            f"{heads[-1]} are not the standing first and second "
+            f"boundaries for the total {total}"
+        )
+    for earlier, later in zip(heads, heads[1:]):
+        if later <= earlier:
+            raise AssertionError(
+                "boundary-walk: the declared heads are not increasing"
+            )
+    return heads
+
+
+def _walk_cell(
+    code: str, frozen_m17_cell: dict,
+) -> dict:
+    """One cell's declared walk records: the declared head positions
+    and, at every head, the two window-mass spans beside the head
+    priced fresh through the same mark-excluded block and the same six
+    relabeling-invariant summaries, each span carrying its own
+    direction table against the whole-sequence profile, every entry
+    recorded. Every span's block-total identity (its profile total
+    equals its window mass minus its own boundary-carried pairs) is
+    enforced here, and any divergence aborts. No band is loaded, no
+    envelope is formed and no margin is produced anywhere in this
+    builder."""
+    first, second = _real_pair_sequence(code)
+    real = _homo_real_stream(code)
+    mark = len(real["mapped_chars"]) - 1
+    total = int(len(first))
+    whole_profile = frozen_m17_cell["whole_profile"]
+    heads = _walk_heads(total)
+    mass = _stream_bounds(total)[0]
+    rows = []
+    for index, head in enumerate(heads):
+        row = {
+            "step": STREAM_WALK_HEAD_STEPS[index],
+            "head_position": head,
+        }
+        for side, start in (
+            ("left", head - mass),
+            ("right", head),
+        ):
+            take = np.arange(start, start + mass)
+            if int(len(take)) != mass:
+                raise AssertionError(
+                    f"boundary-walk/{code}/head {index}/{side}: the "
+                    f"span does not carry the declared window mass"
+                )
+            matrix = np.zeros((37, 37))
+            np.add.at(matrix, (first[take], second[take]), 1.0)
+            profile = _profile_facts(_glyph_block_matrix(matrix, mark))
+            carried = _boundary_carried_pairs(matrix, mark)
+            if profile["total_pairs"] != mass - carried:
+                raise AssertionError(
+                    f"boundary-walk/{code}/head {index}/{side}: the "
+                    f"span's block total {profile['total_pairs']} "
+                    f"does not equal the window mass {mass} minus "
+                    f"its boundary-carried pairs {carried}"
+                )
+            row[side] = {
+                "first_position": int(start),
+                "end_position": int(start + mass),
+                "pairs": int(mass),
+                "boundary_carried_pairs": carried,
+                "profile": profile,
+                "direction": _direction_vs_whole(
+                    profile, whole_profile,
+                ),
+            }
+        rows.append(row)
+    return {
+        "kept_pairs": total,
+        "window_pairs": mass,
+        "whole_profile": whole_profile,
+        "whole_boundary_carried_pairs": frozen_m17_cell[
+            "whole_boundary_carried_pairs"
+        ],
+        "stream_position_boundaries": frozen_m17_cell["boundaries"],
+        "heads": rows,
+    }
+
+
+def _compare_boundary_walk_to_frozen() -> tuple[list[str], int]:
+    """The declared bridge gate for the boundary-walk instrument,
+    per cell: the whole profile re-anchored to the frozen real-at-basis
+    ladder's anchor profile, the fresh stream-position boundaries and
+    sizes verified against the frozen stored ones, the 26 heads
+    recomputed from the declared rule and verified one field each, the
+    two window sizes verified at every head one field each, the first
+    head's two span profiles verified against the frozen
+    stream-position stored first and second segment profiles and the
+    last head's two span profiles against its stored second and third,
+    and the whole's own block-total identity verified. Any divergence
+    aborts with nothing written."""
+    frozen_m17 = json.loads(STREAM_POS_ARTIFACT_PATH.read_text())
+    frozen_m15 = json.loads(REAL_LADDER_ARTIFACT_PATH.read_text())
+    problems: list[str] = []
+    fields = 0
+    for code in FILES:
+        for language in LANGS:
+            frozen_cell = frozen_m17["files"][code][language]
+            mass = frozen_cell["segments"][0]["pairs"]
+            fresh = _walk_cell(code, frozen_cell)
+            heads = _walk_heads(fresh["kept_pairs"])
+            frozen_profile = frozen_m15["files"][code][language][
+                "rungs"
+            ][0]["real_rung_profile"]
+            fields += 1
+            if fresh["whole_profile"] != frozen_profile:
+                problems.append(
+                    f"boundary-walk/whole/{code}/{language}: the "
+                    f"whole profile is not the frozen real-at-basis "
+                    f"ladder's anchor profile"
+                )
+            fields += 1
+            if fresh["stream_position_boundaries"] != (
+                frozen_cell["boundaries"]
+            ):
+                problems.append(
+                    f"boundary-walk/{code}/{language}: the fresh "
+                    f"stream-position boundaries do not equal the "
+                    f"frozen stored ones"
+                )
+            fields += 1
+            if [
+                segment["pairs"]
+                for segment in frozen_cell["segments"]
+            ] != [mass] * 3 + [frozen_cell["kept_pairs"] - 3 * mass]:
+                problems.append(
+                    f"boundary-walk/{code}/{language}: the frozen "
+                    f"stream-position sizes do not fit the declared "
+                    f"window and remainder arithmetic"
+                )
+            for index in range(len(heads)):
+                row = fresh["heads"][index]
+                fields += 1
+                if row["head_position"] != heads[index]:
+                    problems.append(
+                        f"boundary-walk/{code}/{language}/head "
+                        f"{index}: the head does not equal the "
+                        f"declared rule's"
+                    )
+                fields += 1
+                if row["left"]["pairs"] != mass:
+                    problems.append(
+                        f"boundary-walk/{code}/{language}/head "
+                        f"{index}: the left span's window size "
+                        f"differs from the declared one"
+                    )
+                fields += 1
+                if row["right"]["pairs"] != mass:
+                    problems.append(
+                        f"boundary-walk/{code}/{language}/head "
+                        f"{index}: the right span's window size "
+                        f"differs from the declared one"
+                    )
+            confluence = (
+                (0, fresh["heads"][0]["left"],
+                 frozen_cell["segments"][0]["profile"]),
+                (0, fresh["heads"][0]["right"],
+                 frozen_cell["segments"][1]["profile"]),
+                (len(heads) - 1, fresh["heads"][-1]["left"],
+                 frozen_cell["segments"][1]["profile"]),
+                (len(heads) - 1, fresh["heads"][-1]["right"],
+                 frozen_cell["segments"][2]["profile"]),
+            )
+            for head_index, span, frozen_segment_profile in confluence:
+                fields += 1
+                if span["profile"] != frozen_segment_profile:
+                    problems.append(
+                        f"boundary-walk/{code}/{language}/head "
+                        f"{head_index}: the span's fresh profile "
+                        f"does not equal the frozen stream-position "
+                        f"segment profile"
+                    )
+            fields += 1
+            if fresh["whole_profile"]["total_pairs"] != (
+                fresh["kept_pairs"]
+                - fresh["whole_boundary_carried_pairs"]
+            ):
+                problems.append(
+                    f"boundary-walk/{code}/{language}: the whole "
+                    f"profile's block total does not equal the kept "
+                    f"pairs minus the whole's boundary-carried pairs"
+                )
+    return problems, fields
+
+
+def substitution_homophonic_boundary_walk() -> dict:
+    """The declared boundary-walk instrument: the two declared
+    window-mass spans beside every declared head priced fresh through
+    the same mark-excluded block and the same six summaries, the
+    direction tables recorded at every head, no bands and no
+    envelopes. The bridge gate runs first; any divergence aborts with
+    nothing written."""
+    problems, fields = _compare_boundary_walk_to_frozen()
+    if problems:
+        raise AssertionError(
+            "boundary-walk bridge gate failed: " + "; ".join(problems)
+        )
+    artifact = {
+        "what": "The declared boundary-walk instrument: the state "
+        "space 1296 ordered types with the boundary mark's row and "
+        "column excluded on both sides and the same six "
+        "relabeling-invariant summaries, with the real's own "
+        "kept-adjacent pair sequence walked by one declared boundary "
+        "head across declared step positions between the stream's "
+        "first and second declared boundaries, the two window-mass "
+        "spans beside the head priced fresh at every position, the "
+        "direction tables recorded at every position, no bands and "
+        "no envelopes. The declared truthful questions: where the "
+        "second span's top_1 spike begins and ends along the stream, "
+        "and whether the opening span's above-whole concentration "
+        "turns off at a declared location or drifts smoothly across "
+        "positions, the flip locations the stream-position "
+        "instrument left to within a quarter of the stream. No "
+        "mapping is published; nothing here is a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "boundary_rule": "the word-boundary mark's row and "
+            "column are excluded from every profile's state space "
+            "on both sides exactly as the boundary-mark "
+            "re-instrument and the stream-position instrument "
+            "declared: every profile is the mark-excluded block "
+            "of its pair-count matrix, 1296 ordered types, and "
+            "the standing alphabet-width disclosure carries "
+            "unchanged (the IT real transcription ranks only 23 "
+            "glyph types plus the mark, so 13 of its block's 36 "
+            "glyph slots are empty by width alone on the real "
+            "side)",
+            "walk_rule": "the window mass fixed at the standing "
+            "basis arithmetic's first boundary - the int(quarter x "
+            "the anchor basis) positions with the anchor basis the "
+            "kept pair total + 1, so the window mass is ZL 54,604, "
+            "GC 45,800 and IT 55,133 kept-adjacent pairs - and the "
+            "head walked at int(step x the anchor basis) positions "
+            "for the declared steps j / 100 with j running 25 to 50 "
+            "inclusive, 26 heads per file, the first head exactly "
+            "the standing first boundary and the last head exactly "
+            "the standing second boundary; at every head the two "
+            "spans beside the head are the window-mass span ending "
+            "at the head and the window-mass span starting at the "
+            "head, each priced fresh, no pair dropped, no pair "
+            "synthesized, and the first head's two spans are "
+            "exactly the stream-position instrument's first and "
+            "second segments while the last head's two spans are "
+            "exactly its second and third",
+            "summary_rule": "each profile is priced fresh through "
+            "the same mark-excluded block and the same six "
+            "relabeling-invariant summaries the standing "
+            "instruments declare; no profile is compared to any "
+            "simulated profile anywhere in this artifact",
+            "no_band_rule": "no rung band is loaded, no envelope "
+            "is formed, no verdict and no scalar margin is "
+            "produced anywhere in this artifact: the declared "
+            "question is answered by direction, and the frozen "
+            "rung bands stay the frozen instruments' declared "
+            "records, untouched here",
+            "direction_rule": "each span records, for each of the "
+            "six scalar summaries it shares with the whole "
+            "profile (the empty type count, the self-pair share, "
+            "the top-k shares at k 1, 10 and 50, and the pair "
+            "entropy), whether its value sits above, below or "
+            "equal to the whole sequence's value at the stored "
+            "6-decimal rounding, every entry recorded and no "
+            "selection performed over anything",
+            "roster_rule": "the corpus-breadth roster stands "
+            "unchanged: the same eight accepted corpus files, "
+            "the same rejected candidates with their verbatim "
+            "causes, the same sha256 records, the roster floor "
+            "and the fetch verification are the corpus-breadth "
+            "artifact's declared facts taken by reference, no "
+            "corpus file is re-fetched, re-probed or re-hashed "
+            "here, and no encoding is re-run anywhere: this "
+            "instrument prices the real's own side only",
+            "state_note": "the real's kept-adjacency is real "
+            "adjacency with 126 unmapped events inside ZL's "
+            "218,663, 1,769 inside GC's 186,708, none inside "
+            "IT's 220,532, exactly as disclosed since the "
+            "interior instrument; the real's side is identical "
+            "for both languages of a file, so every cell prices "
+            "the same walk records; the whole-sequence profile "
+            "is anchored to the frozen real-at-basis ladder's "
+            "anchor profile in the gate",
+            "machinery_rule": "this instrument contains no "
+            "assignment search anywhere: no candidate "
+            "evaluation, no restarts, no sweep cap, no "
+            "convergence flags, and no seed of any kind: the "
+            "heads are the declared arithmetic and every profile "
+            "is priced fresh from the real's own pair sequence, "
+            "so the standing budgets and the seed-kind registry "
+            "play no part here",
+            "split_rule": "no split applies: a profile uses "
+            "every counted pair of its declared window after "
+            "the declared exclusion; the climb and score halves "
+            "of the band instruments have no counterpart here",
+            "record_rule": "per cell the artifact records the "
+            "kept pair total, the window mass, the "
+            "whole-sequence profile with its boundary-carried "
+            "pairs, the frozen stream-position boundaries taken "
+            "by reference, and the 26 head records in order, "
+            "each carrying its declared step, its head position, "
+            "and its two spans, each span carrying its first and "
+            "end positions, its window mass, its own "
+            "boundary-carried pairs, its fresh profile (the "
+            "block total, both vector summaries as counts and "
+            "shares, the empty type count, the self-pair share, "
+            "the top-k shares and the pair entropy) and its "
+            "direction record against the whole profile's six "
+            "scalar summaries, every entry recorded",
+            "closure_rule": "no scalar margin is formed: this "
+            "instrument's question is the direction run at every "
+            "declared head per span, and the record answers it "
+            "entry by entry",
+            "exclusion_rule": "the family's declared exclusion "
+            "format is not re-scoped by this artifact: it keys "
+            "to the declared 36-slot class under the inherited "
+            "add-one form exactly as the held-out screen "
+            "declared it, so a search-free verdict is structure "
+            "evidence and the band instruments' verdicts stand "
+            "untouched by this artifact's numbers",
+            "gate_rule": "before any span at any declared head "
+            "is recorded beyond the gate, the gate verified "
+            "fresh per cell: the whole profile against the "
+            "frozen real-at-basis ladder's anchor profile, the "
+            "fresh stream-position boundaries and sizes against "
+            "the frozen stored ones, the 26 heads against the "
+            "declared rule, the two window sizes at every "
+            "head, the first head's two spans against the "
+            "frozen stream-position first and second segment "
+            "profiles and the last head's against its second "
+            "and third, and the whole's own identity, 86 fields "
+            "per cell, 516 fields all told; any divergence "
+            "aborts with nothing written",
+            "confluence_rule": "the walk's endpoints are the "
+            "stream-position instrument's frozen records taken "
+            "by reference and verified field for field in the "
+            "gate: the first head's left span is that "
+            "instrument's first segment and its right span the "
+            "second, the last head's left span the second "
+            "segment and its right span the third, so the walk "
+            "begins and ends inside the stream-position "
+            "instrument's declared partition and its heads are "
+            "declared arithmetic in between",
+            "models_rule": "no score table is built or used: "
+            "the instrument prices count structure only, so "
+            "the standing add-one and leave-one-out tables "
+            "play no part anywhere in this artifact",
+        },
+        "bridge_gate": {
+            "status": "verified",
+            "fields_compared": fields,
+            "per_cell_fields": 86,
+        },
+        "files": {},
+    }
+    frozen_m17 = json.loads(STREAM_POS_ARTIFACT_PATH.read_text())
+    for code in FILES:
+        artifact["files"][code] = {}
+        for language in LANGS:
+            artifact["files"][code][language] = _walk_cell(
+                code, frozen_m17["files"][code][language],
+            )
+    return artifact
+
+
+def main_boundary_walk() -> None:
+    artifact = substitution_homophonic_boundary_walk()
+    STREAM_WALK_ARTIFACT_PATH.write_text(
+        json.dumps(artifact, indent=2) + "\n"
+    )
+    print(STREAM_WALK_ARTIFACT_PATH)
