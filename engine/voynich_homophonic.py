@@ -2485,6 +2485,166 @@ assignment is stored as a key, plaintext_recovered_percent stays
 0, the reference prose is modern printed text outside the
 manuscript's century, and nothing here is a reading or a
 language claim.
+
+Twentieth declared measurement, the switch walk instrument, declared
+after the finer-resolution walk instrument walked the eleven declared
+thousandth heads inside each located gap and read its seven tracked
+flips' turns off the recorded direction tables - not one of its 792
+direction entries records equal, and every tracked turn landed
+between two consecutive declared thousandth heads, two flips turning
+together across one band in ZL (the left self and the right top_1)
+and again in IT (the left self and the left top_50), none splitting
+and none drifting at that declared resolution - and before any run of
+it beyond the probes it discloses.
+
+The disclosed background, declared in advance: the finer-resolution
+walk instrument re-walked the boundary-walk instrument's three
+located gaps at the declared thousandth steps and recorded the
+direction tables at every head. What that record leaves open is the
+position inside each switch: the fine walk prices nothing between two
+consecutive thousandth heads, so each flip's location is only as fine
+as a thousandth of the stream, and the two files whose paired flips
+share one switch band (ZL's left self and right top_1 across the
+104,621 to 104,839 band, IT's left self and left top_50 across the
+106,296 to 106,516 band) could turn apart at finer positions or
+together. The honest next question is the switch walk: re-walk the
+same declared head at declared finer steps across each of the five
+located switch bands, price the two spans beside the head fresh at
+every finer position, and record every position's direction tables,
+so each tracked flip acquires a finer declared location: at which
+finer position it turns, whether it turns once or splits into more
+than one turn, whether the shared bands' paired flips stay together
+or separate, or whether any of them drifts smoothly across the band.
+
+The declared design, before the run: the corpus-breadth roster, the
+state space (1296 ordered types, the boundary mark's row and column
+excluded on both sides) and the six relabeling-invariant summaries
+unchanged; more mass-matched cuts are refused: the window mass is
+fixed at the standing basis arithmetic's first boundary (the
+int(quarter x the anchor basis) positions, so the window mass is ZL
+54,604, GC 45,800 and IT 55,133 kept-adjacent pairs) and the head is
+walked at int(step x the anchor basis) positions for the declared
+steps j / 10000 with j running over the five declared switch bands
+exactly as the finer-resolution walk instrument located them: ZL j
+4700 to 4710 inclusive and j 4790 to 4800 inclusive, GC j 4370 to
+4380 inclusive, IT j 4820 to 4830 inclusive and j 4890 to 4900
+inclusive, 11 heads per switch band, the first and last heads of
+each band exactly the finer-resolution walk instrument's stored
+heads at that band's two boundary thousandth steps (the declared
+confluence, matched by head position and verified in the gate
+against that instrument's frozen stored head records, no float step
+equality asserted anywhere). The tracked flips are the side and
+summary direction records the frozen finer-walk artifact records as
+changing across each band's two boundary heads, computed
+mechanically from the frozen stored directions and listed in the
+artifact band by band, no hand selection performed over them; at
+every finer head the two spans beside the head are the window-mass
+span ending at the head and the window-mass span starting at the
+head, each priced fresh through the same mark-excluded block (the
+span's own matrix carries its own mark's row and column excluded)
+and the same six summaries, no pair dropped, no pair synthesized, so
+the two spans beside the head share the head exactly and each span
+carries the same declared mass; no band is loaded, no envelope is
+formed, no verdict and no scalar margin is produced anywhere in this
+artifact: the declared question is answered by direction, and each
+span records, for each of the six scalar summaries it shares with
+the whole profile, whether its value sits above, below or equal to
+the whole sequence's value at the stored 6-decimal rounding, every
+entry recorded and no selection performed over anything; the real's
+side is identical for both languages of a file, so every cell prices
+the same switch-walk records.
+
+Mechanics, declared: the bridge gate first, per cell: the fresh
+whole-sequence profile verified field for field against the frozen
+real-at-basis ladder's anchor profile, the fresh window mass
+verified against the frozen finer-walk record, and the whole's own
+block-total identity verified; then per switch band the 11 heads
+recomputed from the declared rule and verified one field each, the
+two window sizes verified at every head one field each, the four
+endpoint span profiles verified field for field against the frozen
+finer-walk instrument's stored profiles at the band's two boundary
+steps, and the two endpoint head positions verified against the
+frozen stored head positions by position: 81 fields per ZL or IT
+cell (two switch bands), 42 fields per GC cell (one switch band),
+408 fields all told; any divergence aborts with nothing written.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+switch-walk gate rehearsed: 0 problems, 408 fields compared, the
+declared 81 per ZL or IT cell and 42 per GC cell, no divergence in
+any of them. Probe 2, the declared
+bands and window sizes per file, printed in order at the first and
+last heads with the head count: ZL band j 4700 to 4710, window
+54,604, 11 heads, first 102,655, last 102,873; ZL band j 4790 to
+4800, window 54,604, 11 heads, first 104,621, last 104,839; GC band
+j 4370 to 4380, window 45,800, 11 heads, first 80,058, last 80,241;
+IT band j 4820 to 4830, window 55,133, 11 heads, first 106,296,
+last 106,516; IT band j 4890 to 4900, window 55,133, 11 heads,
+first 107,840, last 108,060. Probe 3,
+the tracked flips per band as the mechanical rule computes them
+from the frozen finer-walk records: ZL band j 4700 to 4710, 1
+tracked flip: left top_50 above to below; ZL band j 4790 to 4800,
+2 tracked flips: left self above to below and right top_1 above to
+below; GC band j 4370 to 4380, 1 tracked flip: left self above to
+below; IT band j 4820 to 4830, 2 tracked flips: left self above to
+below and left top_50 above to below; IT band j 4890 to 4900, 1
+tracked flip: right top_1 above to below. Probe 4,
+the declared confluence heads verified against the frozen
+finer-walk records per band: every band's endpoint positions and
+span profiles all true in every file, ZL, GC and IT, and the six
+fresh cells' direction records total 1,320 entries, none equal. Probe 5, the
+first file's declared portraits ahead of the run:
+the ZL whole row anchors them (kept 218,415 pairs, 68,616 whole
+boundary-carried pairs, 928 empty types, self 0.065848, top_1
+0.070481, top_10 0.424435, top_50 0.893671, entropy 4.010179), and
+the two switch bands' 22 finer heads tell this story. In the first
+band (j 4700 to 4710, heads 102,655 to 102,873) the left span's
+top_50 runs above at the band's first ten heads (0.893832 at
+102,655 through 0.893692 at 102,852) and below at the last
+(0.893639 at 102,873), so its tracked flip turns once, between j
+4709 and j 4710, at the band's closing step; the left span's self
+holds above across the band (0.067744 at 102,655 through 0.067641
+at 102,873), its top_1 above (0.087480 through 0.087618), its
+top_10 above (0.437639 through 0.437663), its empties above at
+1,015 at every step and its entropy below (3.991647 through
+3.991904), while the right span's empties hold above at 1,004 at
+every step, its self runs below (0.055391 through 0.055547), its
+top_1 above (0.071656 through 0.071432), its top_10 below (0.389460
+through 0.389445), its top_50 below (0.883967 through 0.883791) and
+its entropy above (4.080312 through 4.080280). In the second band
+(j 4790 to 4800, heads 104,621 to 104,839) the two tracked flips
+separate: the right span's top_1 turns first, above only at the
+band's first head (0.070487 at 104,621) and below at the remaining
+heads (0.070460 at 104,643 through 0.070293 at 104,839), so it
+turns between j 4790 and j 4791; the left span's self holds above
+two heads (0.065864 at 104,621 and 0.065886 at 104,643) and turns
+between j 4791 and j 4792, below from 0.065811 at 104,664 down to
+0.065626 at 104,839, one declared ten-thousandth step behind the
+right top_1; the left span's top_1 holds above across the band
+(0.089100 at 104,621 through 0.089319 at 104,839), its top_10 above
+(0.440394 through 0.440176), its top_50 below (0.893494 through
+0.893005), its entropy below (3.990789 through 3.992262) and its
+empties above (1,015 at the band's opening head and 1,016 at its
+closing head), while the right span's empties hold above at 1,004
+at every step, its self runs below (0.056443 through 0.056520), its
+top_10 below (0.390153 through 0.390122), its top_50 below (0.883804
+through 0.883948) and its entropy above (4.077394 through
+4.076501). No equal entry appears anywhere in the ZL switch walk's
+direction records: the gap's three tracked flips each turn once at
+the finer steps, none splitting and none drifting, and the two
+flips that shared the second band at the finer walk's thousandth
+steps separate, the right top_1 turning one declared ten-thousandth
+step before the left self. Probe 6: none; the remaining files are
+unseen until the declared run. The probes' disclosed portraits do
+not decide the artifact: the artifact run prices every span beside
+every finer head through the same declared code, and the
+disclosure's honest question is recorded over all of them.
+
+The standing limitations are inherited from the held-out screen: no
+mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays 0,
+the reference prose is modern printed text outside the manuscript's
+century, and nothing here is a reading or a language claim.
 """
 
 from __future__ import annotations
@@ -12594,3 +12754,530 @@ def main_finer_walk() -> None:
         json.dumps(artifact, indent=2) + "\n"
     )
     print(FINE_WALK_ARTIFACT_PATH)
+
+
+# --------------------------------------------------------------------------
+# The switch-walk instrument: the real's own kept-adjacent pair sequence
+# re-walked by one declared boundary head at the declared finer steps
+# j / 10000 across the five switch bands the finer-resolution walk
+# instrument located, the two window-mass spans beside the head priced
+# fresh at every finer position through the same mark-excluded block and
+# the same six summaries, the direction tables recorded at every finer
+# head, no bands, no envelopes and no margin formed.
+# --------------------------------------------------------------------------
+
+SWITCH_WALK_STEP_DENOM = 10000
+
+# (lower, upper) declared steps j / 10000 per file: the five switch bands
+# the finer-resolution walk instrument located, each spanning two
+# consecutive finer-walk thousandth steps, 11 heads per band.
+SWITCH_WALK_SWITCH_STEPS = {
+    "ZL": ((4700, 4710), (4790, 4800)),
+    "GC": ((4370, 4380),),
+    "IT": ((4820, 4830), (4890, 4900)),
+}
+
+SWITCH_WALK_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes"
+    / "voynich-homophonic-switch-walk.json"
+)
+
+
+def _switch_walk_steps(lower: int, upper: int) -> tuple[float, ...]:
+    """The declared finer steps for one switch band: j / 10000 with j
+    running lower to upper inclusive."""
+    return tuple(j / SWITCH_WALK_STEP_DENOM for j in range(lower, upper + 1))
+
+
+def _switch_walk_rows(
+    frozen_cell: dict, lower: int, upper: int,
+) -> tuple[dict, dict]:
+    """The frozen finer-walk head rows at one switch band's two boundary
+    thousandth steps: the endpoint records the switch walk's confluence
+    anchors to, matched by head position with no float step equality
+    asserted anywhere. The band's endpoint arithmetic is the finer-walk
+    instrument's declared int(step x the anchor basis) form, so the
+    band's two boundary positions sit among that instrument's stored
+    head positions."""
+    anchor = frozen_cell["kept_pairs"] + 1
+    steps = _switch_walk_steps(lower, upper)
+    lower_head = int(steps[0] * anchor)
+    upper_head = int(steps[-1] * anchor)
+    lower_row = None
+    upper_row = None
+    for row in frozen_cell["heads"]:
+        if row["head_position"] == lower_head:
+            lower_row = row
+        if row["head_position"] == upper_head:
+            upper_row = row
+    if lower_row is None or upper_row is None:
+        raise AssertionError(
+            "switch-walk: the frozen finer-walk cell does not "
+            "record the band's boundary positions among its stored "
+            "head positions"
+        )
+    return lower_row, upper_row
+
+
+def _switch_walk_flips(
+    frozen_cell: dict, lower: int, upper: int,
+) -> list[dict]:
+    """The declared tracked flips for one switch band: exactly the side
+    and summary direction records the frozen finer-walk cell records as
+    changing across the band's two boundary heads, computed mechanically
+    from the frozen stored directions, no hand selection performed over
+    them."""
+    lower_row, upper_row = _switch_walk_rows(frozen_cell, lower, upper)
+    tracked = []
+    for side in ("left", "right"):
+        for key in STREAM_SCALARS:
+            at_lower = lower_row[side]["direction"][key]
+            at_upper = upper_row[side]["direction"][key]
+            if at_lower != at_upper:
+                tracked.append(
+                    {
+                        "side": side,
+                        "summary": key,
+                        "at_lower": at_lower,
+                        "at_upper": at_upper,
+                        "lower": lower,
+                        "upper": upper,
+                        "lower_position": lower_row["head_position"],
+                        "upper_position": upper_row["head_position"],
+                    }
+                )
+    return tracked
+
+
+def _switch_walk_heads(total: int, lower: int, upper: int) -> list[int]:
+    """The declared finer head positions for one file's kept pair
+    sequence of the given total: int(step x the anchor basis) for the
+    declared steps j / 10000 with j running lower to upper inclusive,
+    the anchor basis the kept pair total + 1. The band lands inside the
+    finer-walk instrument's located switch and must increase."""
+    anchor = total + 1
+    steps = _switch_walk_steps(lower, upper)
+    heads = [int(step * anchor) for step in steps]
+    for earlier, later in zip(heads, heads[1:]):
+        if later <= earlier:
+            raise AssertionError(
+                "switch-walk: the declared finer heads are not "
+                "increasing"
+            )
+    return heads
+
+
+def _switch_walk_cell(code: str, frozen_m19_cell: dict) -> dict:
+    """One cell's declared switch-walk records: the declared finer head
+    positions inside the file's located switch bands (ZL two, GC one,
+    IT two) and, at every head, the two window-mass spans beside the
+    head priced fresh through the same mark-excluded block and the same
+    six relabeling-invariant summaries, each span carrying its own
+    direction table against the whole-sequence profile, every entry
+    recorded. Every span's block-total identity (its profile total
+    equals its window mass minus its own boundary-carried pairs) is
+    enforced here, and any divergence aborts. No rung band is loaded,
+    no envelope is formed and no margin is produced anywhere in this
+    builder."""
+    bands = SWITCH_WALK_SWITCH_STEPS[code]
+    first, second = _real_pair_sequence(code)
+    real = _homo_real_stream(code)
+    mark = len(real["mapped_chars"]) - 1
+    total = int(len(first))
+    whole_profile = frozen_m19_cell["whole_profile"]
+    mass = _stream_bounds(total)[0]
+    anchor = total + 1
+    switches = []
+    tracked = []
+    for lower, upper in bands:
+        steps = _switch_walk_steps(lower, upper)
+        heads = _switch_walk_heads(total, lower, upper)
+        rows = []
+        for index, head in enumerate(heads):
+            row = {
+                "step": steps[index],
+                "head_j": lower + index,
+                "head_position": head,
+            }
+            for side, start in (
+                ("left", head - mass),
+                ("right", head),
+            ):
+                take = np.arange(start, start + mass)
+                if int(len(take)) != mass:
+                    raise AssertionError(
+                        f"switch-walk/{code}/band {lower}/{side}: the "
+                        f"span does not carry the declared window mass"
+                    )
+                matrix = np.zeros((37, 37))
+                np.add.at(matrix, (first[take], second[take]), 1.0)
+                profile = _profile_facts(_glyph_block_matrix(matrix, mark))
+                carried = _boundary_carried_pairs(matrix, mark)
+                if profile["total_pairs"] != mass - carried:
+                    raise AssertionError(
+                        f"switch-walk/{code}/band {lower}/{side}: the "
+                        f"span's block total {profile['total_pairs']} "
+                        f"does not equal the window mass {mass} minus "
+                        f"its boundary-carried pairs {carried}"
+                    )
+                row[side] = {
+                    "first_position": int(start),
+                    "end_position": int(start + mass),
+                    "pairs": int(mass),
+                    "boundary_carried_pairs": carried,
+                    "profile": profile,
+                    "direction": _direction_vs_whole(
+                        profile, whole_profile,
+                    ),
+                }
+            rows.append(row)
+        switches.append({"lower": lower, "upper": upper, "heads": rows})
+        tracked.extend(_switch_walk_flips(frozen_m19_cell, lower, upper))
+    return {
+        "kept_pairs": total,
+        "window_pairs": mass,
+        "whole_profile": whole_profile,
+        "whole_boundary_carried_pairs": frozen_m19_cell[
+            "whole_boundary_carried_pairs"
+        ],
+        "tracked_flips": tracked,
+        "switches": switches,
+    }
+
+
+def _compare_switch_walk_to_frozen() -> tuple[list[str], int]:
+    """The declared bridge gate for the switch-walk instrument, per
+    cell: the whole profile re-anchored to the frozen real-at-basis
+    ladder's anchor profile, the fresh window mass verified against the
+    frozen finer-walk record, and the whole's own block-total identity
+    verified; then per switch band the 11 heads recomputed from the
+    declared rule and verified one field each, the two window sizes
+    verified at every head one field each, the four endpoint span
+    profiles verified field for field against the frozen finer-walk
+    instrument's stored profiles at the band's two boundary steps, and
+    the two endpoint head positions verified against the frozen stored
+    head positions by position. Any divergence aborts with nothing
+    written."""
+    frozen_m19 = json.loads(FINE_WALK_ARTIFACT_PATH.read_text())
+    frozen_m15 = json.loads(REAL_LADDER_ARTIFACT_PATH.read_text())
+    problems: list[str] = []
+    fields = 0
+    for code in FILES:
+        for language in LANGS:
+            frozen_cell = frozen_m19["files"][code][language]
+            fresh = _switch_walk_cell(code, frozen_cell)
+            frozen_profile = frozen_m15["files"][code][language][
+                "rungs"
+            ][0]["real_rung_profile"]
+            fields += 1
+            if fresh["whole_profile"] != frozen_profile:
+                problems.append(
+                    f"switch-walk/whole/{code}/{language}: the whole "
+                    f"profile is not the frozen real-at-basis "
+                    f"ladder's anchor profile"
+                )
+            fields += 1
+            if fresh["window_pairs"] != frozen_cell["window_pairs"]:
+                problems.append(
+                    f"switch-walk/{code}/{language}: the fresh window "
+                    f"mass does not equal the frozen finer-walk "
+                    f"instrument's"
+                )
+            fields += 1
+            if fresh["whole_profile"]["total_pairs"] != (
+                fresh["kept_pairs"]
+                - fresh["whole_boundary_carried_pairs"]
+            ):
+                problems.append(
+                    f"switch-walk/{code}/{language}: the whole "
+                    f"profile's block total does not equal the kept "
+                    f"pairs minus the whole's boundary-carried pairs"
+                )
+            for band_index, band in enumerate(fresh["switches"]):
+                lower, upper = SWITCH_WALK_SWITCH_STEPS[code][band_index]
+                rows = band["heads"]
+                for index in range(len(rows)):
+                    row = rows[index]
+                    fields += 1
+                    if row["head_position"] != _switch_walk_heads(
+                        fresh["kept_pairs"], lower, upper,
+                    )[index]:
+                        problems.append(
+                            f"switch-walk/{code}/{language}/band "
+                            f"{band_index}/head {index}: the head "
+                            f"does not equal the declared rule's"
+                        )
+                    fields += 1
+                    if row["left"]["pairs"] != fresh["window_pairs"]:
+                        problems.append(
+                            f"switch-walk/{code}/{language}/band "
+                            f"{band_index}/head {index}: the left "
+                            f"span's window size differs from the "
+                            f"declared one"
+                        )
+                    fields += 1
+                    if row["right"]["pairs"] != fresh["window_pairs"]:
+                        problems.append(
+                            f"switch-walk/{code}/{language}/band "
+                            f"{band_index}/head {index}: the right "
+                            f"span's window size differs from the "
+                            f"declared one"
+                        )
+                lower_row, upper_row = _switch_walk_rows(
+                    frozen_cell, lower, upper,
+                )
+                confluence = (
+                    (0, rows[0]["left"]["profile"],
+                     lower_row["left"]["profile"]),
+                    (0, rows[0]["right"]["profile"],
+                     lower_row["right"]["profile"]),
+                    (len(rows) - 1, rows[-1]["left"]["profile"],
+                     upper_row["left"]["profile"]),
+                    (len(rows) - 1, rows[-1]["right"]["profile"],
+                     upper_row["right"]["profile"]),
+                )
+                for head_index, span_profile, frozen_row_profile in (
+                    confluence
+                ):
+                    fields += 1
+                    if span_profile != frozen_row_profile:
+                        problems.append(
+                            f"switch-walk/{code}/{language}/band "
+                            f"{band_index}/head {head_index}: the "
+                            f"endpoint span's fresh profile does not "
+                            f"equal the frozen finer-walk instrument's "
+                            f"stored profile"
+                        )
+                fields += 1
+                if rows[0]["head_position"] != (
+                    lower_row["head_position"]
+                ):
+                    problems.append(
+                        f"switch-walk/{code}/{language}/band "
+                        f"{band_index}: the band's first head is not "
+                        f"the frozen finer-walk instrument's lower "
+                        f"boundary head"
+                    )
+                fields += 1
+                if rows[-1]["head_position"] != (
+                    upper_row["head_position"]
+                ):
+                    problems.append(
+                        f"switch-walk/{code}/{language}/band "
+                        f"{band_index}: the band's last head is not "
+                        f"the frozen finer-walk instrument's upper "
+                        f"boundary head"
+                    )
+    return problems, fields
+
+
+def substitution_homophonic_switch_walk() -> dict:
+    """The declared switch-walk instrument: the two declared window-mass
+    spans beside every declared finer head priced fresh through the
+    same mark-excluded block and the same six summaries, the direction
+    tables recorded at every finer head, no rung bands and no
+    envelopes. The bridge gate runs first; any divergence aborts with
+    nothing written."""
+    problems, fields = _compare_switch_walk_to_frozen()
+    if problems:
+        raise AssertionError(
+            "switch-walk bridge gate failed: " + "; ".join(problems)
+        )
+    artifact = {
+        "what": "The declared switch-walk instrument: the state space "
+        "1296 ordered types with the boundary mark's row and column "
+        "excluded on both sides and the same six relabeling-invariant "
+        "summaries, with the real's own kept-adjacent pair sequence "
+        "walked by one declared boundary head at the declared finer "
+        "steps j / 10000 across the five switch bands the "
+        "finer-resolution walk instrument located (ZL j 4700 to 4710 "
+        "and j 4790 to 4800, GC j 4370 to 4380, IT j 4820 to 4830 and "
+        "j 4890 to 4900), the two window-mass spans beside the head "
+        "priced fresh at every finer position, the direction tables "
+        "recorded at every finer position, no rung bands and no "
+        "envelopes. The declared truthful question: at which declared "
+        "ten-thousandth position each tracked direction flip turns - "
+        "the tracked flips exactly the frozen finer-walk direction "
+        "records that change across each switch band's two boundary "
+        "heads, computed mechanically - and whether each turns once or "
+        "splits into more than one turn, whether the shared bands' "
+        "paired flips stay together or separate, or whether any of "
+        "them drifts smoothly inside its band. No mapping is "
+        "published; nothing here is a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "boundary_rule": "the word-boundary mark's row and "
+            "column are excluded from every profile's state space "
+            "on both sides exactly as the boundary-mark "
+            "re-instrument and the standing walk instruments "
+            "declared: every profile is the mark-excluded block "
+            "of its pair-count matrix, 1296 ordered types, and "
+            "the standing alphabet-width disclosure carries "
+            "unchanged (the IT real transcription ranks only 23 "
+            "glyph types plus the mark, so 13 of its block's 36 "
+            "glyph slots are empty by width alone on the real "
+            "side)",
+            "walk_rule": "the window mass fixed at the standing "
+            "basis arithmetic's first boundary - the int(quarter x "
+            "the anchor basis) positions with the anchor basis the "
+            "kept pair total + 1, so the window mass is ZL 54,604, "
+            "GC 45,800 and IT 55,133 kept-adjacent pairs - and the "
+            "head walked at int(step x the anchor basis) positions "
+            "for the declared steps j / 10000 with j running over "
+            "the five declared switch bands exactly as the "
+            "finer-resolution walk instrument located them: ZL j "
+            "4700 to 4710 inclusive and j 4790 to 4800 inclusive, "
+            "GC j 4370 to 4380 inclusive, IT j 4820 to 4830 "
+            "inclusive and j 4890 to 4900 inclusive, 11 heads per "
+            "band, the first and last heads of each band exactly "
+            "the finer-resolution walk instrument's stored heads "
+            "at the band's two boundary thousandth steps matched "
+            "by head position; at every finer head the two spans "
+            "beside the head are the window-mass span ending at "
+            "the head and the window-mass span starting at the "
+            "head, each priced fresh, no pair dropped, no pair "
+            "synthesized",
+            "tracked_rule": "the tracked flips are exactly the "
+            "side and summary direction records the frozen "
+            "finer-walk artifact records as changing across each "
+            "switch band's two boundary heads, computed "
+            "mechanically from the frozen stored directions and "
+            "listed in the artifact band by band, no hand "
+            "selection performed over them, and the switch walk's "
+            "direction tables are recorded at every finer head so "
+            "each tracked flip's finer location is read off the "
+            "recorded entries",
+            "summary_rule": "each profile is priced fresh through "
+            "the same mark-excluded block and the same six "
+            "relabeling-invariant summaries the standing "
+            "instruments declare; no profile is compared to any "
+            "simulated profile anywhere in this artifact",
+            "no_band_rule": "no rung band is loaded, no envelope "
+            "is formed, no verdict and no scalar margin is "
+            "produced anywhere in this artifact: the declared "
+            "question is answered by direction, and the frozen "
+            "rung bands stay the frozen instruments' declared "
+            "records, untouched here",
+            "direction_rule": "each span records, for each of the "
+            "six scalar summaries it shares with the whole "
+            "profile (the empty type count, the self-pair share, "
+            "the top-k shares at k 1, 10 and 50, and the pair "
+            "entropy), whether its value sits above, below or "
+            "equal to the whole sequence's value at the stored "
+            "6-decimal rounding, every entry recorded and no "
+            "selection performed over anything",
+            "roster_rule": "the corpus-breadth roster stands "
+            "unchanged: the same eight accepted corpus files, "
+            "the same rejected candidates with their verbatim "
+            "causes, the same sha256 records, the roster floor "
+            "and the fetch verification are the corpus-breadth "
+            "artifact's declared facts taken by reference, no "
+            "corpus file is re-fetched, re-probed or re-hashed "
+            "here, and no encoding is re-run anywhere: this "
+            "instrument prices the real's own side only",
+            "state_note": "the real's kept-adjacency is real "
+            "adjacency with 126 unmapped events inside ZL's "
+            "218,663, 1,769 inside GC's 186,708, none inside "
+            "IT's 220,532, exactly as disclosed since the "
+            "interior instrument; the real's side is identical "
+            "for both languages of a file, so every cell prices "
+            "the same switch-walk records; the whole-sequence "
+            "profile is anchored to the frozen real-at-basis "
+            "ladder's anchor profile in the gate",
+            "machinery_rule": "this instrument contains no "
+            "assignment search anywhere: no candidate "
+            "evaluation, no restarts, no sweep cap, no "
+            "convergence flags, and no seed of any kind: the "
+            "switch bands' heads are the declared arithmetic and "
+            "every profile is priced fresh from the real's own "
+            "pair sequence, so the standing budgets and the "
+            "seed-kind registry play no part here",
+            "split_rule": "no split applies: a profile uses "
+            "every counted pair of its declared window after "
+            "the declared exclusion; the climb and score halves "
+            "of the band instruments have no counterpart here",
+            "record_rule": "per cell the artifact records the "
+            "kept pair total, the window mass, the whole-"
+            "sequence profile with its boundary-carried pairs, "
+            "the mechanical tracked-flip list band by band, and "
+            "each declared switch band in order, each carrying "
+            "its lower and upper declared steps and its 11 head "
+            "records, each head carrying its declared step, its "
+            "declared head index j, and its head position, and "
+            "its two spans, each span carrying its first and "
+            "end positions, its window mass, its own "
+            "boundary-carried pairs, its fresh profile (the "
+            "block total, both vector summaries as counts and "
+            "shares, the empty type count, the self-pair share, "
+            "the top-k shares and the pair entropy) and its "
+            "direction record against the whole profile's six "
+            "scalar summaries, every entry recorded",
+            "closure_rule": "no scalar margin is formed: this "
+            "instrument's question is the direction run at every "
+            "declared finer head per span, and the record "
+            "answers it entry by entry",
+            "exclusion_rule": "the family's declared exclusion "
+            "format is not re-scoped by this artifact: it keys "
+            "to the declared 36-slot class under the inherited "
+            "add-one form exactly as the held-out screen "
+            "declared it, so a search-free verdict is structure "
+            "evidence and the band instruments' verdicts stand "
+            "untouched by this artifact's numbers",
+            "gate_rule": "before any span at any declared finer "
+            "head is recorded beyond the gate, the gate verified "
+            "fresh per cell: the whole profile against the "
+            "frozen real-at-basis ladder's anchor profile, the "
+            "fresh window mass against the frozen finer-walk "
+            "record, the whole's own identity, and per switch "
+            "band the 11 heads against the declared rule, the "
+            "two window sizes at every head, the four endpoint "
+            "span profiles against the frozen finer-walk "
+            "instrument's stored profiles at the band's two "
+            "boundary steps and the two endpoint head positions "
+            "against the frozen stored head positions by "
+            "position, 81 fields per ZL or IT cell (two switch "
+            "bands), 42 fields per GC cell (one switch band), "
+            "408 fields all told; any divergence aborts with "
+            "nothing written",
+            "confluence_rule": "the switch walk's endpoints are "
+            "the finer-resolution walk instrument's frozen head "
+            "records taken by reference and matched by head "
+            "position, no float step equality asserted anywhere, "
+            "and verified field for field in the gate: each "
+            "band's first head is that instrument's stored head "
+            "at the band's lower boundary thousandth step and "
+            "each band's last head its stored head at the upper "
+            "boundary thousandth step, so the switch walk begins "
+            "and ends inside the finer-resolution walk "
+            "instrument's declared records and its heads are "
+            "declared arithmetic in between",
+            "models_rule": "no score table is built or used: "
+            "the instrument prices count structure only, so "
+            "the standing add-one and leave-one-out tables "
+            "play no part anywhere in this artifact",
+        },
+        "bridge_gate": {
+            "status": "verified",
+            "fields_compared": fields,
+            "per_cell_fields": {"ZL": 81, "GC": 42, "IT": 81},
+        },
+        "files": {},
+    }
+    frozen_m19 = json.loads(FINE_WALK_ARTIFACT_PATH.read_text())
+    for code in FILES:
+        artifact["files"][code] = {}
+        for language in LANGS:
+            artifact["files"][code][language] = _switch_walk_cell(
+                code, frozen_m19["files"][code][language],
+            )
+    return artifact
+
+
+def main_switch_walk() -> None:
+    artifact = substitution_homophonic_switch_walk()
+    SWITCH_WALK_ARTIFACT_PATH.write_text(
+        json.dumps(artifact, indent=2) + "\n"
+    )
+    print(SWITCH_WALK_ARTIFACT_PATH)
