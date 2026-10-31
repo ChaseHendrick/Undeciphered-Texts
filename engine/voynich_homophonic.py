@@ -2387,6 +2387,104 @@ assignment is stored as a key, plaintext_recovered_percent stays
 0, the reference prose is modern printed text outside the
 manuscript's century, and nothing here is a reading or a
 language claim.
+
+Nineteenth declared measurement, the finer-resolution walk
+instrument, declared after the boundary-walk instrument located
+the direction flips in gaps between consecutive declared
+hundredth heads - not one of its 1,872 direction entries records
+equal, and its flips turn between two consecutive heads for most
+of the tracked records rather than drifting across them - and
+before any run of it beyond the probes it discloses.
+
+The disclosed background, declared in advance: the
+boundary-walk instrument walked the declared hundredth heads
+between the stream's first and second boundaries and recorded
+the direction tables at every head. What that record leaves
+open is the position inside each gap: the walk prices nothing
+between two consecutive hundredth heads, so each flip's
+location is only as fine as a hundredth of the stream. The
+honest next question is the finer walk: re-walk the same
+declared head at declared finer steps inside the located gaps,
+price the two spans beside the head fresh at every finer
+position, and record every position's direction tables, so
+each tracked flip acquires a finer declared location: at which
+finer position it turns, whether it turns once or splits into
+more than one turn, or whether any of them drifts smoothly
+across the gap.
+
+The declared design, before the run: the corpus-breadth roster,
+the state space (1296 ordered types, the boundary mark's row and
+column excluded on both sides) and the six relabeling-invariant
+summaries unchanged; more mass-matched cuts are refused: the
+window mass is fixed at the standing basis arithmetic's first
+boundary (the int(quarter x the anchor basis) positions, so the
+window mass is ZL 54,604, GC 45,800 and IT 55,133 kept-adjacent
+pairs) and the head is walked at int(step x the anchor basis)
+positions for the declared steps j / 1000 with j running over
+the three declared gaps exactly as the boundary-walk instrument
+located them: ZL j 470 to 480 inclusive, GC j 430 to 440
+inclusive, IT j 480 to 490 inclusive, 11 heads per file, the
+first and last heads of each gap exactly the boundary-walk
+instrument's recorded heads at that gap's two hundredth steps
+(the declared confluence, verified in the gate against that
+instrument's frozen stored head records). The tracked flips are
+the side and summary direction records the frozen boundary-walk
+artifact records as changing across each gap's two hundredth
+steps, computed mechanically from the frozen stored directions
+and listed in the artifact, no hand selection performed over
+them; at every finer head the two spans beside the head are the
+window-mass span ending at the head and the window-mass span
+starting at the head, each priced fresh through the same
+mark-excluded block (the span's own matrix carries its own
+mark's row and column excluded) and the same six summaries, no
+pair dropped, no pair synthesized, so the two spans beside the
+head share the head exactly and each span carries the same
+declared mass; no band is loaded, no envelope is formed, no
+verdict and no scalar margin is produced anywhere in this
+artifact: the declared question is answered by direction, and
+each span records, for each of the six scalar summaries it
+shares with the whole profile, whether its value sits above,
+below or equal to the whole sequence's value at the stored
+6-decimal rounding, every entry recorded and no selection
+performed over anything; the real's side is identical for both
+languages of a file, so every cell prices the same fine-walk
+records.
+
+Mechanics, declared: the bridge gate first, per cell: the fresh
+whole-sequence profile verified field for field against the
+frozen real-at-basis ladder's anchor profile, the fresh window
+mass verified against the frozen boundary-walk record, the 11
+heads recomputed from the declared rule and verified one field
+each, the two window sizes verified at every head one field
+each, the four endpoint span profiles verified field for field
+against the frozen boundary-walk instrument's stored profiles at
+the gap's two hundredth steps, the two endpoint head positions
+verified against the frozen stored head positions, and the
+whole's own block-total identity verified, 42 fields per cell,
+252 fields all told; any divergence aborts with nothing written.
+
+Pre-run probes, disclosed verbatim, on frozen data through the
+declared implementation before the artifact run. Probe 1, the
+fine-walk gate rehearsed: 0 problems, 252 fields compared, the declared 42 per cell, no divergence in any of them.. Probe 2, the declared
+heads and window sizes per file, printed in order at the first
+and last heads with the head count: ZL gap j 470 to 480, window 54,604, 11 heads, first 102,655, last 104,839; GC gap j 430 to 440, window 45,800, 11 heads, first 78,776, last 80,608; IT gap j 480 to 490, window 55,133, 11 heads, first 105,855, last 108,060.. Probe 3,
+the tracked flips per file as the mechanical rule computes them
+from the frozen boundary-walk records: ZL 3 tracked flips: left self above to below, left top_50 above to below, right top_1 above to below; GC 1 tracked flip: left self above to below; IT 3 tracked flips: left self above to below, left top_50 above to below, right top_1 above to below.. Probe 4,
+the declared confluence heads verified against the frozen
+boundary-walk records per file: all four endpoint marks true in every file, ZL True/True/True/True, GC True/True/True/True, IT True/True/True/True.. Probe 5, the
+first file's declared portraits ahead of the run:
+the ZL whole row anchors them (kept 218,415 pairs, 68,616 whole boundary-carried pairs, 928 empty types, self 0.065848, top_1 0.070481, top_10 0.424435, top_50 0.893671, entropy 4.010179), and the 11 finer heads tell this story. The left span's self runs above for the first ten heads (0.067744 at the first head 102,655 down to 0.065864 at 104,621) and below at the last head (0.065626 at 104,839), so the tracked flip turns at the gap's last switch, between 104,621 and 104,839, rather than drifting across the gap. The left span's top_50 runs above at the first head (0.893832) and below at the remaining ten (0.893639 at 102,873 through 0.893005 at 104,839), so its tracked flip turns at the gap's first switch, between 102,655 and 102,873. The right span's top_1 runs above for the first ten heads (0.071656 at 102,655 through 0.070487 at 104,621) and below at the last head (0.070293 at 104,839), so its tracked flip lands between the same two heads that close the left self's run. The left span's top_1 runs above at all 11 heads (0.087480 at 102,655 and 0.089319 at 104,839), its top_10 above at all 11 and its entropy below at all 11; the right span's self runs below at all 11 heads, its top_10 below at all 11, its top_50 below at all 11 and its entropy above at all 11. No equal entry appears anywhere in the ZL fine walk's direction records, and the gap's three tracked flips turn at exactly two declared finer switches, the first switch and the last switch, none splitting and none drifting. Probe 6: none; the remaining files are unseen
+until the declared run. The probes' disclosed portraits do not
+decide the artifact: the artifact run prices every span beside
+every finer head through the same declared code, and the
+disclosure's honest question is recorded over all of them.
+
+The standing limitations are inherited from the held-out screen:
+no mapping is published anywhere in this artifact, no recovered
+assignment is stored as a key, plaintext_recovered_percent stays
+0, the reference prose is modern printed text outside the
+manuscript's century, and nothing here is a reading or a
+language claim.
 """
 
 from __future__ import annotations
@@ -12002,3 +12100,497 @@ def main_boundary_walk() -> None:
         json.dumps(artifact, indent=2) + "\n"
     )
     print(STREAM_WALK_ARTIFACT_PATH)
+
+
+# --------------------------------------------------------------------------
+# The finer-resolution walk instrument: the real's own kept-adjacent pair
+# sequence re-walked by one declared boundary head at the declared finer
+# steps j / 1000 inside the three gaps the boundary-walk instrument
+# located its flips in, the two window-mass spans beside the head priced
+# fresh at every finer position through the same mark-excluded block and
+# the same six summaries, the direction tables recorded at every finer
+# head, no bands, no envelopes and no margin formed.
+# --------------------------------------------------------------------------
+
+FINE_WALK_STEP_DENOM = 1000
+
+# (lower, upper) declared steps j / 1000 per file: the three gaps the
+# boundary-walk instrument located, each spanning two consecutive
+# boundary-walk hundredth steps.
+FINE_WALK_GAP_STEPS = {
+    "ZL": (470, 480),
+    "GC": (430, 440),
+    "IT": (480, 490),
+}
+
+FINE_WALK_ARTIFACT_PATH = (
+    Path(DATA_DIR).resolve().parent.parent.parent
+    / "docs" / "research-notes"
+    / "voynich-homophonic-finer-walk.json"
+)
+
+
+def _fine_walk_steps(lower: int, upper: int) -> tuple[float, ...]:
+    """The declared finer steps for one gap: j / 1000 with j running
+    lower to upper inclusive."""
+    return tuple(j / FINE_WALK_STEP_DENOM for j in range(lower, upper + 1))
+
+
+def _fine_walk_rows(
+    frozen_cell: dict, lower: int, upper: int,
+) -> tuple[dict, dict]:
+    """The frozen boundary-walk head rows at a gap's two hundredth
+    steps: the endpoint records the finer walk's confluence anchors
+    to. The hundredth step's arithmetic is the boundary-walk
+    instrument's own, so the gap's endpoint steps sit inside that
+    instrument's declared head steps."""
+    lower_step = lower / FINE_WALK_STEP_DENOM
+    upper_step = upper / FINE_WALK_STEP_DENOM
+    lower_row = None
+    upper_row = None
+    for row in frozen_cell["heads"]:
+        if row["step"] == lower_step:
+            lower_row = row
+        if row["step"] == upper_step:
+            upper_row = row
+    if lower_row is None or upper_row is None:
+        raise AssertionError(
+            "finer-walk: the frozen boundary-walk cell does not "
+            "record the gap's hundredth steps among its declared "
+            "head steps"
+        )
+    return lower_row, upper_row
+
+
+def _tracked_flips(
+    frozen_cell: dict, lower: int, upper: int,
+) -> list[dict]:
+    """The declared tracked flips for one gap: exactly the side and
+    summary direction records the frozen boundary-walk cell records
+    as changing across the gap's two hundredth steps, computed
+    mechanically from the frozen stored directions, no hand
+    selection performed over them."""
+    lower_row, upper_row = _fine_walk_rows(frozen_cell, lower, upper)
+    tracked = []
+    for side in ("left", "right"):
+        for key in STREAM_SCALARS:
+            at_lower = lower_row[side]["direction"][key]
+            at_upper = upper_row[side]["direction"][key]
+            if at_lower != at_upper:
+                tracked.append(
+                    {
+                        "side": side,
+                        "summary": key,
+                        "at_lower": at_lower,
+                        "at_upper": at_upper,
+                    }
+                )
+    return tracked
+
+
+def _fine_walk_heads(total: int, lower: int, upper: int) -> list[int]:
+    """The declared finer head positions for one file's kept pair
+    sequence of the given total: int(step x the anchor basis) for
+    the declared steps j / 1000 with j running lower to upper
+    inclusive, the anchor basis the kept pair total + 1. The first
+    and last heads sit exactly at the gap's two hundredth steps'
+    positions."""
+    anchor = total + 1
+    steps = _fine_walk_steps(lower, upper)
+    heads = [int(step * anchor) for step in steps]
+    for earlier, later in zip(heads, heads[1:]):
+        if later <= earlier:
+            raise AssertionError(
+                "finer-walk: the declared finer heads are not "
+                "increasing"
+            )
+    return heads
+
+
+def _fine_walk_cell(code: str, frozen_m18_cell: dict) -> dict:
+    """One cell's declared fine-walk records: the declared finer head
+    positions inside the file's located gap and, at every head, the
+    two window-mass spans beside the head priced fresh through the
+    same mark-excluded block and the same six relabeling-invariant
+    summaries, each span carrying its own direction table against
+    the whole-sequence profile, every entry recorded. Every span's
+    block-total identity (its profile total equals its window mass
+    minus its own boundary-carried pairs) is enforced here, and any
+    divergence aborts. No band is loaded, no envelope is formed and
+    no margin is produced anywhere in this builder."""
+    lower, upper = FINE_WALK_GAP_STEPS[code]
+    steps = _fine_walk_steps(lower, upper)
+    first, second = _real_pair_sequence(code)
+    real = _homo_real_stream(code)
+    mark = len(real["mapped_chars"]) - 1
+    total = int(len(first))
+    whole_profile = frozen_m18_cell["whole_profile"]
+    heads = _fine_walk_heads(total, lower, upper)
+    mass = _stream_bounds(total)[0]
+    rows = []
+    for index, head in enumerate(heads):
+        row = {
+            "step": steps[index],
+            "head_position": head,
+        }
+        for side, start in (
+            ("left", head - mass),
+            ("right", head),
+        ):
+            take = np.arange(start, start + mass)
+            if int(len(take)) != mass:
+                raise AssertionError(
+                    f"finer-walk/{code}/head {index}/{side}: the "
+                    f"span does not carry the declared window mass"
+                )
+            matrix = np.zeros((37, 37))
+            np.add.at(matrix, (first[take], second[take]), 1.0)
+            profile = _profile_facts(_glyph_block_matrix(matrix, mark))
+            carried = _boundary_carried_pairs(matrix, mark)
+            if profile["total_pairs"] != mass - carried:
+                raise AssertionError(
+                    f"finer-walk/{code}/head {index}/{side}: the "
+                    f"span's block total {profile['total_pairs']} "
+                    f"does not equal the window mass {mass} minus "
+                    f"its boundary-carried pairs {carried}"
+                )
+            row[side] = {
+                "first_position": int(start),
+                "end_position": int(start + mass),
+                "pairs": int(mass),
+                "boundary_carried_pairs": carried,
+                "profile": profile,
+                "direction": _direction_vs_whole(
+                    profile, whole_profile,
+                ),
+            }
+        rows.append(row)
+    return {
+        "kept_pairs": total,
+        "window_pairs": mass,
+        "gap_steps": {"lower": lower, "upper": upper},
+        "whole_profile": whole_profile,
+        "whole_boundary_carried_pairs": frozen_m18_cell[
+            "whole_boundary_carried_pairs"
+        ],
+        "tracked_flips": _tracked_flips(frozen_m18_cell, lower, upper),
+        "heads": rows,
+    }
+
+
+def _compare_finer_walk_to_frozen() -> tuple[list[str], int]:
+    """The declared bridge gate for the finer-resolution walk
+    instrument, per cell: the whole profile re-anchored to the frozen
+    real-at-basis ladder's anchor profile, the fresh window mass
+    verified against the frozen boundary-walk record, the 11 finer
+    heads recomputed from the declared rule and verified one field
+    each, the two window sizes verified at every head one field each,
+    the four endpoint span profiles verified field for field against
+    the frozen boundary-walk instrument's stored profiles at the
+    gap's two hundredth steps, the two endpoint head positions
+    verified against the frozen stored head positions, and the
+    whole's own block-total identity verified. Any divergence aborts
+    with nothing written."""
+    frozen_m18 = json.loads(STREAM_WALK_ARTIFACT_PATH.read_text())
+    frozen_m15 = json.loads(REAL_LADDER_ARTIFACT_PATH.read_text())
+    problems: list[str] = []
+    fields = 0
+    for code in FILES:
+        for language in LANGS:
+            frozen_cell = frozen_m18["files"][code][language]
+            lower, upper = FINE_WALK_GAP_STEPS[code]
+            fresh = _fine_walk_cell(code, frozen_cell)
+            heads = _fine_walk_heads(fresh["kept_pairs"], lower, upper)
+            mass = _stream_bounds(fresh["kept_pairs"])[0]
+            frozen_profile = frozen_m15["files"][code][language][
+                "rungs"
+            ][0]["real_rung_profile"]
+            fields += 1
+            if fresh["whole_profile"] != frozen_profile:
+                problems.append(
+                    f"finer-walk/whole/{code}/{language}: the whole "
+                    f"profile is not the frozen real-at-basis "
+                    f"ladder's anchor profile"
+                )
+            fields += 1
+            if fresh["window_pairs"] != frozen_cell["window_pairs"]:
+                problems.append(
+                    f"finer-walk/{code}/{language}: the fresh window "
+                    f"mass does not equal the frozen boundary-walk "
+                    f"instrument's"
+                )
+            for index in range(len(heads)):
+                row = fresh["heads"][index]
+                fields += 1
+                if row["head_position"] != heads[index]:
+                    problems.append(
+                        f"finer-walk/{code}/{language}/head "
+                        f"{index}: the head does not equal the "
+                        f"declared rule's"
+                    )
+                fields += 1
+                if row["left"]["pairs"] != mass:
+                    problems.append(
+                        f"finer-walk/{code}/{language}/head "
+                        f"{index}: the left span's window size "
+                        f"differs from the declared one"
+                    )
+                fields += 1
+                if row["right"]["pairs"] != mass:
+                    problems.append(
+                        f"finer-walk/{code}/{language}/head "
+                        f"{index}: the right span's window size "
+                        f"differs from the declared one"
+                    )
+            lower_row, upper_row = _fine_walk_rows(
+                frozen_cell, lower, upper,
+            )
+            confluence = (
+                (0, fresh["heads"][0]["left"]["profile"],
+                 lower_row["left"]["profile"]),
+                (0, fresh["heads"][0]["right"]["profile"],
+                 lower_row["right"]["profile"]),
+                (len(heads) - 1, fresh["heads"][-1]["left"]["profile"],
+                 upper_row["left"]["profile"]),
+                (len(heads) - 1,
+                 fresh["heads"][-1]["right"]["profile"],
+                 upper_row["right"]["profile"]),
+            )
+            for head_index, span_profile, frozen_row_profile in (
+                confluence
+            ):
+                fields += 1
+                if span_profile != frozen_row_profile:
+                    problems.append(
+                        f"finer-walk/{code}/{language}/head "
+                        f"{head_index}: the endpoint span's fresh "
+                        f"profile does not equal the frozen "
+                        f"boundary-walk instrument's stored profile"
+                    )
+            fields += 1
+            if fresh["heads"][0]["head_position"] != (
+                lower_row["head_position"]
+            ):
+                problems.append(
+                    f"finer-walk/{code}/{language}: the gap's first "
+                    f"head is not the frozen boundary-walk "
+                    f"instrument's lower endpoint head"
+                )
+            fields += 1
+            if fresh["heads"][-1]["head_position"] != (
+                upper_row["head_position"]
+            ):
+                problems.append(
+                    f"finer-walk/{code}/{language}: the gap's last "
+                    f"head is not the frozen boundary-walk "
+                    f"instrument's upper endpoint head"
+                )
+            fields += 1
+            if fresh["whole_profile"]["total_pairs"] != (
+                fresh["kept_pairs"]
+                - fresh["whole_boundary_carried_pairs"]
+            ):
+                problems.append(
+                    f"finer-walk/{code}/{language}: the whole "
+                    f"profile's block total does not equal the kept "
+                    f"pairs minus the whole's boundary-carried pairs"
+                )
+    return problems, fields
+
+
+def substitution_homophonic_finer_walk() -> dict:
+    """The declared finer-resolution walk instrument: the two declared
+    window-mass spans beside every declared finer head priced fresh
+    through the same mark-excluded block and the same six summaries,
+    the direction tables recorded at every finer head, no bands and no
+    envelopes. The bridge gate runs first; any divergence aborts with
+    nothing written."""
+    problems, fields = _compare_finer_walk_to_frozen()
+    if problems:
+        raise AssertionError(
+            "finer-walk bridge gate failed: " + "; ".join(problems)
+        )
+    artifact = {
+        "what": "The declared finer-resolution walk instrument: the "
+        "state space 1296 ordered types with the boundary mark's row "
+        "and column excluded on both sides and the same six "
+        "relabeling-invariant summaries, with the real's own "
+        "kept-adjacent pair sequence walked by one declared boundary "
+        "head at the declared finer steps j / 1000 inside the three "
+        "gaps the boundary-walk instrument located its flips in (ZL "
+        "j 470 to 480, GC j 430 to 440, IT j 480 to 490), the two "
+        "window-mass spans beside the head priced fresh at every "
+        "finer position, the direction tables recorded at every "
+        "finer position, no bands and no envelopes. The declared "
+        "truthful questions: at which finer declared position each "
+        "tracked direction flip turns - the tracked flips exactly "
+        "the frozen boundary-walk direction records that change "
+        "across each gap, computed mechanically - or whether any of "
+        "them splits into more than one turn or drifts smoothly "
+        "inside its gap. No mapping is published; nothing here is "
+        "a reading.",
+        "declared": {
+            "base_seed": BASE_SEED,
+            "mapped": MAPPED_HOMO,
+            "boundary_rule": "the word-boundary mark's row and "
+            "column are excluded from every profile's state space "
+            "on both sides exactly as the boundary-mark "
+            "re-instrument and the standing walk instruments "
+            "declared: every profile is the mark-excluded block "
+            "of its pair-count matrix, 1296 ordered types, and "
+            "the standing alphabet-width disclosure carries "
+            "unchanged (the IT real transcription ranks only 23 "
+            "glyph types plus the mark, so 13 of its block's 36 "
+            "glyph slots are empty by width alone on the real "
+            "side)",
+            "walk_rule": "the window mass fixed at the standing "
+            "basis arithmetic's first boundary - the int(quarter x "
+            "the anchor basis) positions with the anchor basis the "
+            "kept pair total + 1, so the window mass is ZL 54,604, "
+            "GC 45,800 and IT 55,133 kept-adjacent pairs - and the "
+            "head walked at int(step x the anchor basis) positions "
+            "for the declared steps j / 1000 with j running over "
+            "the three declared gaps exactly as the boundary-walk "
+            "instrument located them: ZL j 470 to 480 inclusive, "
+            "GC j 430 to 440 inclusive, IT j 480 to 490 inclusive, "
+            "11 heads per file, the first and last heads of each "
+            "gap exactly the boundary-walk instrument's recorded "
+            "heads at that gap's two hundredth steps; at every "
+            "finer head the two spans beside the head are the "
+            "window-mass span ending at the head and the "
+            "window-mass span starting at the head, each priced "
+            "fresh, no pair dropped, no pair synthesized",
+            "tracked_rule": "the tracked flips are exactly the "
+            "side and summary direction records the frozen "
+            "boundary-walk artifact records as changing across "
+            "each gap's two hundredth steps, computed "
+            "mechanically from the frozen stored directions and "
+            "listed in the artifact, no hand selection performed "
+            "over them, and the fine walk's direction tables are "
+            "recorded at every finer head so each tracked flip's "
+            "finer location is read off the recorded entries",
+            "summary_rule": "each profile is priced fresh through "
+            "the same mark-excluded block and the same six "
+            "relabeling-invariant summaries the standing "
+            "instruments declare; no profile is compared to any "
+            "simulated profile anywhere in this artifact",
+            "no_band_rule": "no rung band is loaded, no envelope "
+            "is formed, no verdict and no scalar margin is "
+            "produced anywhere in this artifact: the declared "
+            "question is answered by direction, and the frozen "
+            "rung bands stay the frozen instruments' declared "
+            "records, untouched here",
+            "direction_rule": "each span records, for each of the "
+            "six scalar summaries it shares with the whole "
+            "profile (the empty type count, the self-pair share, "
+            "the top-k shares at k 1, 10 and 50, and the pair "
+            "entropy), whether its value sits above, below or "
+            "equal to the whole sequence's value at the stored "
+            "6-decimal rounding, every entry recorded and no "
+            "selection performed over anything",
+            "roster_rule": "the corpus-breadth roster stands "
+            "unchanged: the same eight accepted corpus files, "
+            "the same rejected candidates with their verbatim "
+            "causes, the same sha256 records, the roster floor "
+            "and the fetch verification are the corpus-breadth "
+            "artifact's declared facts taken by reference, no "
+            "corpus file is re-fetched, re-probed or re-hashed "
+            "here, and no encoding is re-run anywhere: this "
+            "instrument prices the real's own side only",
+            "state_note": "the real's kept-adjacency is real "
+            "adjacency with 126 unmapped events inside ZL's "
+            "218,663, 1,769 inside GC's 186,708, none inside "
+            "IT's 220,532, exactly as disclosed since the "
+            "interior instrument; the real's side is identical "
+            "for both languages of a file, so every cell prices "
+            "the same fine-walk records; the whole-sequence "
+            "profile is anchored to the frozen real-at-basis "
+            "ladder's anchor profile in the gate",
+            "machinery_rule": "this instrument contains no "
+            "assignment search anywhere: no candidate "
+            "evaluation, no restarts, no sweep cap, no "
+            "convergence flags, and no seed of any kind: the "
+            "finer heads are the declared arithmetic and every "
+            "profile is priced fresh from the real's own pair "
+            "sequence, so the standing budgets and the seed-kind "
+            "registry play no part here",
+            "split_rule": "no split applies: a profile uses "
+            "every counted pair of its declared window after "
+            "the declared exclusion; the climb and score halves "
+            "of the band instruments have no counterpart here",
+            "record_rule": "per cell the artifact records the "
+            "kept pair total, the window mass, the declared "
+            "gap's steps, the whole-sequence profile with its "
+            "boundary-carried pairs, the mechanical tracked-flip "
+            "list, and the 11 head records in order, each "
+            "carrying its declared step, its head position, and "
+            "its two spans, each span carrying its first and "
+            "end positions, its window mass, its own "
+            "boundary-carried pairs, its fresh profile (the "
+            "block total, both vector summaries as counts and "
+            "shares, the empty type count, the self-pair share, "
+            "the top-k shares and the pair entropy) and its "
+            "direction record against the whole profile's six "
+            "scalar summaries, every entry recorded",
+            "closure_rule": "no scalar margin is formed: this "
+            "instrument's question is the direction run at every "
+            "declared finer head per span, and the record "
+            "answers it entry by entry",
+            "exclusion_rule": "the family's declared exclusion "
+            "format is not re-scoped by this artifact: it keys "
+            "to the declared 36-slot class under the inherited "
+            "add-one form exactly as the held-out screen "
+            "declared it, so a search-free verdict is structure "
+            "evidence and the band instruments' verdicts stand "
+            "untouched by this artifact's numbers",
+            "gate_rule": "before any span at any declared finer "
+            "head is recorded beyond the gate, the gate verified "
+            "fresh per cell: the whole profile against the "
+            "frozen real-at-basis ladder's anchor profile, the "
+            "fresh window mass against the frozen boundary-walk "
+            "record, the 11 heads against the declared rule, "
+            "the two window sizes at every head, the four "
+            "endpoint span profiles against the frozen "
+            "boundary-walk instrument's stored profiles at the "
+            "gap's two hundredth steps, the two endpoint head "
+            "positions against the frozen stored head "
+            "positions, and the whole's own identity, 42 fields "
+            "per cell, 252 fields all told; any divergence "
+            "aborts with nothing written",
+            "confluence_rule": "the fine walk's endpoints are "
+            "the boundary-walk instrument's frozen head records "
+            "taken by reference and verified field for field in "
+            "the gate: each gap's first head is that "
+            "instrument's recorded lower hundredth head and "
+            "each gap's last head its recorded upper hundredth "
+            "head, so the fine walk begins and ends inside the "
+            "boundary-walk instrument's declared records and "
+            "its heads are declared arithmetic in between",
+            "models_rule": "no score table is built or used: "
+            "the instrument prices count structure only, so "
+            "the standing add-one and leave-one-out tables "
+            "play no part anywhere in this artifact",
+        },
+        "bridge_gate": {
+            "status": "verified",
+            "fields_compared": fields,
+            "per_cell_fields": 42,
+        },
+        "files": {},
+    }
+    frozen_m18 = json.loads(STREAM_WALK_ARTIFACT_PATH.read_text())
+    for code in FILES:
+        artifact["files"][code] = {}
+        for language in LANGS:
+            artifact["files"][code][language] = _fine_walk_cell(
+                code, frozen_m18["files"][code][language],
+            )
+    return artifact
+
+
+def main_finer_walk() -> None:
+    artifact = substitution_homophonic_finer_walk()
+    FINE_WALK_ARTIFACT_PATH.write_text(
+        json.dumps(artifact, indent=2) + "\n"
+    )
+    print(FINE_WALK_ARTIFACT_PATH)
